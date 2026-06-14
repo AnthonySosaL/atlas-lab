@@ -7,7 +7,7 @@ import type { Experiment } from "@/lib/data";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn, fmtMetric, headlineMetrics } from "@/lib/utils";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, pick } from "@/lib/i18n";
 
 const STATUS_FILTERS: { key: "todos" | Experiment["status"]; tkey: string }[] = [
   { key: "todos", tkey: "filter.all" },
@@ -17,7 +17,7 @@ const STATUS_FILTERS: { key: "todos" | Experiment["status"]; tkey: string }[] = 
 ];
 
 export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const families = React.useMemo(
     () => ["todas", ...Array.from(new Set(experiments.map((e) => e.family).filter(Boolean)))],
     [experiments]
@@ -31,7 +31,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
       (e) =>
         (family === "todas" || e.family === family) &&
         (status === "todos" || e.status === status) &&
-        (q === "" || (e.name + e.description).toLowerCase().includes(q.toLowerCase()))
+        (q === "" || (pick(e.name, locale) + pick(e.description, locale)).toLowerCase().includes(q.toLowerCase()))
     )
     .sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
 
@@ -110,8 +110,8 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                     </div>
                     <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
                   </div>
-                  <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{e.name}</h3>
-                  <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{e.description}</p>
+                  <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{pick(e.name, locale)}</h3>
+                  <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{pick(e.description, locale)}</p>
                   {metrics.length > 0 && (
                     <div className="flex flex-wrap gap-x-4 gap-y-1 border-t pt-3">
                       {metrics.map((m) => (

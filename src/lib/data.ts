@@ -3,16 +3,18 @@ import path from "path";
 
 const DATA = path.join(process.cwd(), "public", "data");
 
+export type Loc = { es: string; en: string; pt: string };
+
 export type Experiment = {
   id: string;
   v: number | null;
-  analysis: string;
-  name: string;
+  analysis: Loc;
+  name: Loc;
   family: string;
   date: string;
-  description: string;
+  description: Loc;
   params: Record<string, unknown>;
-  verdict: string;
+  verdict: Loc;
   notes: string;
   metrics: Record<string, number | string>;
   status: "survived" | "died" | "neutral";
@@ -30,7 +32,13 @@ export type Summary = {
   generated_at: string;
 };
 
-export type RoadmapChapter = { title: string; emoji: string; items: string[] };
+export type RoadmapChapter = {
+  title: string;
+  emoji: string;
+  items: string[];
+  title_i18n: Loc;
+  items_i18n: { es: string[]; en: string[]; pt: string[] };
+};
 export type Serie = { name: string; x: string[]; y: (number | null)[] };
 
 async function readJSON<T>(file: string, fallback: T): Promise<T> {

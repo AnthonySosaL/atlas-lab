@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import type { RoadmapChapter } from "@/lib/data";
+import { useI18n, pick } from "@/lib/i18n";
 
 /** Renderiza **negrita** y `código` simples dentro de un item del roadmap. */
 function RichText({ text }: { text: string }) {
@@ -21,6 +22,7 @@ function RichText({ text }: { text: string }) {
 }
 
 export function RoadmapTimeline({ chapters }: { chapters: RoadmapChapter[] }) {
+  const { locale } = useI18n();
   return (
     <div className="relative">
       {/* riel vertical */}
@@ -41,9 +43,9 @@ export function RoadmapTimeline({ chapters }: { chapters: RoadmapChapter[] }) {
               {ch.emoji || "•"}
             </div>
 
-            <h3 className="mb-3 text-lg font-semibold tracking-tight">{ch.title}</h3>
+            <h3 className="mb-3 text-lg font-semibold tracking-tight">{pick(ch.title_i18n, locale) || ch.title}</h3>
             <ul className="space-y-2">
-              {ch.items.map((it, j) => (
+              {(ch.items_i18n?.[locale] ?? ch.items).map((it, j) => (
                 <li key={j} className="text-sm leading-relaxed text-muted-foreground">
                   <RichText text={it} />
                 </li>

@@ -2,18 +2,34 @@
  {
   "id": "20260613_200850_vol-targeting-vs-leverage-fijo-bot-live",
   "v": 57,
-  "analysis": "El upgrade del bot vivo: ¿mejora el vol-targeting al leverage fijo? A igual exposición media y con la señal macro rezagada (honesto), recorta el drawdown en las crisis que importan (COVID −10.3%→−9.0%, 2022 −13.9%→−10.9%). Pero ambas versiones hacen ~0% ejecutable: mejora el RIESGO, no el RETORNO. Preparado como flag, sin tocar el bot en producción.",
-  "name": "vol-targeting vs leverage fijo (bot live)",
+  "analysis": {
+   "es": "El upgrade del bot vivo: ¿mejora el vol-targeting al leverage fijo? A igual exposición media y con la señal macro rezagada (honesto), recorta el drawdown en las crisis que importan (COVID −10.3%→−9.0%, 2022 −13.9%→−10.9%). Pero ambas versiones hacen ~0% ejecutable: mejora el RIESGO, no el RETORNO. Preparado como flag, sin tocar el bot en producción.",
+   "en": "Live bot upgrade: does vol-targeting beat fixed leverage? At equal average exposure and with the lagged macro signal (honest), it cuts drawdown in the crises that matter (COVID −10.3%→−9.0%, 2022 −13.9%→−10.9%). But both versions make ~0% executable: it improves RISK, not RETURN. Staged as a flag, without touching the production bot.",
+   "pt": "Upgrade do bot vivo: o vol-targeting supera a alavancagem fixa? Com a mesma exposição média e o sinal macro defasado (honesto), reduz o drawdown nas crises que importam (COVID −10,3%→−9,0%, 2022 −13,9%→−10,9%). Mas ambas as versões fazem ~0% executável: melhora o RISCO, não o RETORNO. Preparado como flag, sem tocar o bot em produção."
+  },
+  "name": {
+   "es": "vol-targeting vs leverage fijo (bot live)",
+   "en": "vol-targeting vs fixed leverage (live bot)",
+   "pt": "vol-targeting vs alavancagem fixa (bot live)"
+  },
   "family": "bot-upgrade",
   "date": "2026-06-13T20:08:50",
-  "description": "Compara la config viva (lev fijo 2.0) contra leverage dinamico por volatilidad a igual exposicion media, filtro macro rezagado 1 dia.",
+  "description": {
+   "es": "Compara la config viva (lev fijo 2.0) contra leverage dinamico por volatilidad a igual exposicion media, filtro macro rezagado 1 dia.",
+   "en": "Compares the live config (fixed leverage 2.0) against dynamic volatility-based leverage at equal average exposure, macro filter lagged 1 day.",
+   "pt": "Compara a configuração em produção (alavancagem fixa 2,0) contra alavancagem dinâmica por volatilidade com a mesma exposição média, filtro macro defasado 1 dia."
+  },
   "params": {
    "target_vol": 0.095,
    "cap": 3.0,
    "vol_win": 60,
    "macro_lag": 1
   },
-  "verdict": "UPGRADE: menor DD a igual exposicion",
+  "verdict": {
+   "es": "UPGRADE: menor DD a igual exposicion",
+   "en": "UPGRADE: lower DD at equal exposure",
+   "pt": "UPGRADE: menor DD a igual exposição"
+  },
   "notes": "#57 honesto: lag-1 macro, ex-ante, COVID+2022 incluidos.",
   "metrics": {
    "CAGR": 0.003999651039675145,
@@ -33,13 +49,29 @@
  {
   "id": "extra-v56",
   "v": 56,
-  "analysis": "Sentimiento probado de 4 formas (VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off, todo junto). Las 4 NO superan la base rate en dirección (0.55-0.58 < 0.613) y el nulo les gana → el sentimiento no predice dirección. El famoso '+30%' no se reproduce sin leakage.",
-  "name": "sentimiento probado de 4 formas",
+  "analysis": {
+   "es": "Sentimiento probado de 4 formas (VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off, todo junto). Las 4 NO superan la base rate en dirección (0.55-0.58 < 0.613) y el nulo les gana → el sentimiento no predice dirección. El famoso '+30%' no se reproduce sin leakage.",
+   "en": "Sentiment tested 4 ways (VIX-fear, VIX/VIX3M term structure, cross-asset risk-on/off, all together). All 4 FAIL to beat the base rate for direction (0.55-0.58 < 0.613) and the null model beats them → sentiment does not predict direction. The famous '+30%' doesn't reproduce without leakage.",
+   "pt": "Sentimento testado de 4 formas (VIX-medo, estrutura de prazos VIX/VIX3M, cross-asset risk-on/off, tudo junto). As 4 NÃO superam a base rate em direção (0,55-0,58 < 0,613) e o nulo as supera → o sentimento não prevê direção. O famoso '+30%' não se reproduz sem leakage."
+  },
+  "name": {
+   "es": "sentimiento probado de 4 formas",
+   "en": "sentiment tested 4 ways",
+   "pt": "sentimento testado de 4 formas"
+  },
   "family": "sentimiento",
   "date": "2026-06-13T19:30:00",
-  "description": "VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off y todo junto (SPY 2010-2026, OOS+nulo).",
+  "description": {
+   "es": "VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off y todo junto (SPY 2010-2026, OOS+nulo).",
+   "en": "VIX-fear, VIX/VIX3M term structure, cross-asset risk-on/off, and all together (SPY 2010-2026, OOS+null).",
+   "pt": "VIX-medo, estrutura de prazo VIX/VIX3M, cross-asset risk-on/off e tudo junto (SPY 2010-2026, OOS+nulo)."
+  },
   "params": {},
-  "verdict": "no sirvió (dirección)",
+  "verdict": {
+   "es": "no sirvió (dirección)",
+   "en": "did not work (direction)",
+   "pt": "não serviu (direção)"
+  },
   "notes": "",
   "metrics": {
    "acc_dir": 0.57,
@@ -55,13 +87,29 @@
  {
   "id": "extra-v55",
   "v": 55,
-  "analysis": "Navaja de Occam aplicada a la vol: ¿aporta el ML sobre un EWMA de una línea? No. El EWMA clásico predijo la volatilidad mejor (R² 0.225 vs 0.113 del ML). Conclusión honesta: para forecast de vol, desplegar lo simple.",
-  "name": "EWMA clásico vs ML (vol)",
+  "analysis": {
+   "es": "Navaja de Occam aplicada a la vol: ¿aporta el ML sobre un EWMA de una línea? No. El EWMA clásico predijo la volatilidad mejor (R² 0.225 vs 0.113 del ML). Conclusión honesta: para forecast de vol, desplegar lo simple.",
+   "en": "Occam's razor applied to vol: does ML improve on a one-line EWMA? No. The classic EWMA predicted volatility better (R² 0.225 vs 0.113 for ML). Honest conclusion: for vol forecasting, deploy the simple approach.",
+   "pt": "Navalha de Occam aplicada à vol: o ML melhora sobre um EWMA de uma linha? Não. O EWMA clássico previu a volatilidade melhor (R² 0,225 vs 0,113 do ML). Conclusão honesta: para previsão de vol, implantar o simples."
+  },
+  "name": {
+   "es": "EWMA clásico vs ML (vol)",
+   "en": "Classic EWMA vs ML (vol)",
+   "pt": "EWMA clássico vs ML (vol)"
+  },
   "family": "volatilidad",
   "date": "2026-06-13T19:15:00",
-  "description": "Navaja de Occam: ¿aporta el ML sobre un EWMA de una línea para predecir la volatilidad?",
+  "description": {
+   "es": "Navaja de Occam: ¿aporta el ML sobre un EWMA de una línea para predecir la volatilidad?",
+   "en": "Occam's razor: does ML add anything over a one-line EWMA for predicting volatility?",
+   "pt": "Navalha de Occam: o ML acrescenta algo sobre um EWMA de uma linha para prever a volatilidade?"
+  },
   "params": {},
-  "verdict": "el simple basta",
+  "verdict": {
+   "es": "el simple basta",
+   "en": "simple suffices",
+   "pt": "o simples basta"
+  },
   "notes": "",
   "metrics": {
    "R2_EWMA": 0.225,
@@ -75,13 +123,29 @@
  {
   "id": "extra-v54",
   "v": 54,
-  "analysis": "¿Es predecible el volumen o el rango? El volumen no (R²≈0, es tick-volume exógeno), pero el RANGO sí (R² 0.15-0.27 en índices/energía). Confirma la señal de volatilidad por otra puerta; útil para timing de ejecución, no para dirección.",
-  "name": "predicción de volumen y rango",
+  "analysis": {
+   "es": "¿Es predecible el volumen o el rango? El volumen no (R²≈0, es tick-volume exógeno), pero el RANGO sí (R² 0.15-0.27 en índices/energía). Confirma la señal de volatilidad por otra puerta; útil para timing de ejecución, no para dirección.",
+   "en": "Is volume or range predictable? Volume no (R²≈0, it's exogenous tick-volume), but RANGE yes (R² 0.15-0.27 in indices/energy). Confirms the volatility signal through another door; useful for execution timing, not for direction.",
+   "pt": "O volume ou o rango é previsível? Volume não (R²≈0, é tick-volume exógeno), mas o RANGO sim (R² 0,15-0,27 em índices/energia). Confirma o sinal de volatilidade por outra via; útil para timing de execução, não para direção."
+  },
+  "name": {
+   "es": "predicción de volumen y rango",
+   "en": "volume and range prediction",
+   "pt": "previsão de volume e rango"
+  },
   "family": "volatilidad",
   "date": "2026-06-13T19:00:00",
-  "description": "¿Es predecible el volumen o el rango? Señal no-direccional para timing de ejecución.",
+  "description": {
+   "es": "¿Es predecible el volumen o el rango? Señal no-direccional para timing de ejecución.",
+   "en": "Is volume or range predictable? Non-directional signal for execution timing.",
+   "pt": "O volume ou o rango é previsível? Sinal não-direcional para timing de execução."
+  },
   "params": {},
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "",
   "metrics": {
    "R2_volumen": -0.003,
@@ -95,13 +159,29 @@
  {
   "id": "extra-v53",
   "v": 53,
-  "analysis": "Vol-breakout 'direction-agnostic': operar la expansión (rompa arriba o abajo) cuando se predice alta vol. Falló (−0.44 vs Buy&Hold +0.65). Aunque sepas que VIENE un movimiento, sigues necesitando la dirección — y eso está muerto. Monetizar vol pura requeriría opciones.",
-  "name": "vol-breakout direction-agnostic",
+  "analysis": {
+   "es": "Vol-breakout 'direction-agnostic': operar la expansión (rompa arriba o abajo) cuando se predice alta vol. Falló (−0.44 vs Buy&Hold +0.65). Aunque sepas que VIENE un movimiento, sigues necesitando la dirección — y eso está muerto. Monetizar vol pura requeriría opciones.",
+   "en": "Vol-breakout 'direction-agnostic': trade the expansion (break up or down) when high vol is predicted. Failed (−0.44 vs Buy&Hold +0.65). Even if you know a MOVE IS COMING, you still need the direction — and that is dead. Monetizing pure vol would require options.",
+   "pt": "Vol-breakout 'direction-agnostic': operar a expansão (rompa para cima ou para baixo) quando se prevê alta vol. Falhou (−0,44 vs Buy&Hold +0,65). Mesmo sabendo que UM MOVIMENTO VEM, ainda é preciso a direção — e isso está morto. Monetizar vol pura exigiria opções."
+  },
+  "name": {
+   "es": "vol-breakout direction-agnostic",
+   "en": "vol-breakout direction-agnostic",
+   "pt": "vol-breakout direction-agnostic"
+  },
   "family": "volatilidad",
   "date": "2026-06-13T18:45:00",
-  "description": "Operar la expansión (breakout arriba o abajo) cuando se predice alta volatilidad.",
+  "description": {
+   "es": "Operar la expansión (breakout arriba o abajo) cuando se predice alta volatilidad.",
+   "en": "Trading the expansion (breakout up or down) when high volatility is predicted.",
+   "pt": "Operar a expansão (breakout para cima ou para baixo) quando se prevê alta volatilidade."
+  },
   "params": {},
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "",
   "metrics": {
    "Sharpe_gate_vol": -0.44,
@@ -115,13 +195,29 @@
  {
   "id": "extra-v52",
   "v": 52,
-  "analysis": "Vol-targeting: dimensionar la posición por volatilidad. Recorta el MaxDD de −68% (leverage fijo) a −20%, clavando el objetivo de vol. Y la navaja de Occam: un EWMA simple predice la vol mejor que el ML (R² 0.225 vs 0.113). El único entregable real de la tanda: control de riesgo, no alpha.",
-  "name": "vol-targeting (control de drawdown)",
+  "analysis": {
+   "es": "Vol-targeting: dimensionar la posición por volatilidad. Recorta el MaxDD de −68% (leverage fijo) a −20%, clavando el objetivo de vol. Y la navaja de Occam: un EWMA simple predice la vol mejor que el ML (R² 0.225 vs 0.113). El único entregable real de la tanda: control de riesgo, no alpha.",
+   "en": "Vol-targeting: sizing positions by volatility. Cuts MaxDD from −68% (fixed leverage) to −20%, nailing the vol target. And Occam's razor: a simple EWMA predicts vol better than ML (R² 0.225 vs 0.113). The only real deliverable of the batch: risk control, not alpha.",
+   "pt": "Vol-targeting: dimensionar a posição pela volatilidade. Reduz o MaxDD de −68% (alavancagem fixa) para −20%, acertando o alvo de vol. E a navalha de Occam: um EWMA simples prediz a vol melhor do que o ML (R² 0,225 vs 0,113). O único entregável real da rodada: controle de risco, não alpha."
+  },
+  "name": {
+   "es": "vol-targeting (control de drawdown)",
+   "en": "vol-targeting (drawdown control)",
+   "pt": "vol-targeting (controle de drawdown)"
+  },
   "family": "volatilidad",
   "date": "2026-06-13T18:30:00",
-  "description": "Dimensionar la posición por volatilidad: el único entregable real de la tanda (control de riesgo).",
+  "description": {
+   "es": "Dimensionar la posición por volatilidad: el único entregable real de la tanda (control de riesgo).",
+   "en": "Sizing positions by volatility: the only real deliverable of the batch (risk control).",
+   "pt": "Dimensionar a posição pela volatilidade: o único entregável real da rodada (controle de risco)."
+  },
   "params": {},
-  "verdict": "sirvió (riesgo, no alpha)",
+  "verdict": {
+   "es": "sirvió (riesgo, no alpha)",
+   "en": "worked (risk, not alpha)",
+   "pt": "serviu (risco, não alpha)"
+  },
   "notes": "",
   "metrics": {
    "MaxDD_leverage_fijo": -0.685,
@@ -138,13 +234,29 @@
  {
   "id": "extra-v51",
   "v": 51,
-  "analysis": "Re-test del enfoque más publicitado (swing 5 días + clasificación RSI/MACD/BB/volumen + gating híbrido). Accuracy 0.516 (≈ azar), y el modelo NULO (etiquetas barajadas, +0.36) le ganó al real (+0.15): la 'predicción' era solo beta. Pero apareció lo importante: la VOLATILIDAD sí se predice (R² 0.27 en SP500, 0.40 en WTI).",
-  "name": "swing + clasificación + sentimiento (re-test)",
+  "analysis": {
+   "es": "Re-test del enfoque más publicitado (swing 5 días + clasificación RSI/MACD/BB/volumen + gating híbrido). Accuracy 0.516 (≈ azar), y el modelo NULO (etiquetas barajadas, +0.36) le ganó al real (+0.15): la 'predicción' era solo beta. Pero apareció lo importante: la VOLATILIDAD sí se predice (R² 0.27 en SP500, 0.40 en WTI).",
+   "en": "Re-test of the most publicized approach (5-day swing + RSI/MACD/BB/volume classification + hybrid gating). Accuracy 0.516 (≈ chance), and the NULL model (shuffled labels, +0.36) beat the real one (+0.15): the 'prediction' was just beta. But the important finding emerged: VOLATILITY IS predictable (R² 0.27 in SP500, 0.40 in WTI).",
+   "pt": "Re-teste da abordagem mais divulgada (swing 5 dias + classificação RSI/MACD/BB/volume + gating híbrido). Accuracy 0,516 (≈ acaso), e o modelo NULO (rótulos embaralhados, +0,36) superou o real (+0,15): a 'previsão' era apenas beta. Mas o importante emergiu: a VOLATILIDADE É previsível (R² 0,27 no SP500, 0,40 no WTI)."
+  },
+  "name": {
+   "es": "swing + clasificación + sentimiento (re-test)",
+   "en": "swing + classification + sentiment (re-test)",
+   "pt": "swing + classificação + sentimento (re-test)"
+  },
   "family": "volatilidad",
   "date": "2026-06-13T18:00:00",
-  "description": "Re-test honesto del enfoque del research (swing 5d, RSI/MACD/BB/volumen + gating híbrido) con test nulo.",
+  "description": {
+   "es": "Re-test honesto del enfoque del research (swing 5d, RSI/MACD/BB/volumen + gating híbrido) con test nulo.",
+   "en": "Honest re-test of the research approach (5-day swing, RSI/MACD/BB/volume + hybrid gating) with null test.",
+   "pt": "Re-teste honesto da abordagem do research (swing 5d, RSI/MACD/BB/volume + gating híbrido) com teste nulo."
+  },
   "params": {},
-  "verdict": "no sirvió (dirección)",
+  "verdict": {
+   "es": "no sirvió (dirección)",
+   "en": "did not work (direction)",
+   "pt": "não serviu (direção)"
+  },
   "notes": "",
   "metrics": {
    "accuracy_dir": 0.516,
@@ -162,16 +274,32 @@
  {
   "id": "20260610_142844_cierre-11-clases-probadas-v50",
   "v": 50,
-  "analysis": "Cierre de las fronteras matemáticas: 50 experimentos, 11 clases de estrategia, ninguna pasa el triple test (OOS + ejecutable + Deflated Sharpe). La ventaja de los quants no está en la matemática (es pública y la probamos): está en los DATOS (tick/order flow), los COSTES (acceso directo) y la AMPLITUD (miles de instrumentos).",
-  "name": "CIERRE: 11 clases probadas v50",
+  "analysis": {
+   "es": "Cierre de las fronteras matemáticas: 50 experimentos, 11 clases de estrategia, ninguna pasa el triple test (OOS + ejecutable + Deflated Sharpe). La ventaja de los quants no está en la matemática (es pública y la probamos): está en los DATOS (tick/order flow), los COSTES (acceso directo) y la AMPLITUD (miles de instrumentos).",
+   "en": "Closing the mathematical frontiers: 50 experiments, 11 strategy classes, none passes the triple test (OOS + executable + Deflated Sharpe). The quant advantage is not in the mathematics (it's public and we tested it): it's in the DATA (tick/order flow), COSTS (direct market access), and BREADTH (thousands of instruments).",
+   "pt": "Fechamento das fronteiras matemáticas: 50 experimentos, 11 classes de estratégia, nenhuma passa o teste triplo (OOS + executável + Deflated Sharpe). A vantagem dos quants não está na matemática (é pública e a testamos): está nos DADOS (tick/order flow), nos CUSTOS (acesso direto ao mercado) e na AMPLITUDE (milhares de instrumentos)."
+  },
+  "name": {
+   "es": "CIERRE: 11 clases probadas v50",
+   "en": "CLOSURE: 11 classes tested v50",
+   "pt": "FECHAMENTO: 11 classes testadas v50"
+  },
   "family": "quant",
   "date": "2026-06-10T14:28:44",
-  "description": "Programa completo (49 experimentos, 11 clases): ML precio, TSMOM, intradia sesion, sizing/fondeo, regimen macro (manual+4 IA), carry, COT, pairs cointegracion, stat-arb PCA, momentum cross-sectional, turn-of-month. NINGUNA clase produce edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe) con datos retail y costes CFD. La ventaja institucional no esta en la matematica (es publica) sino en DATOS (tick/order flow), COSTES (acceso directo) y AMPLITUD (miles de instrumentos) - inaccesibles al retail.",
+  "description": {
+   "es": "Programa completo (49 experimentos, 11 clases): ML precio, TSMOM, intradia sesion, sizing/fondeo, regimen macro (manual+4 IA), carry, COT, pairs cointegracion, stat-arb PCA, momentum cross-sectional, turn-of-month. NINGUNA clase produce edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe) con datos retail y costes CFD. La ventaja institucional no esta en la matematica (es publica) sino en DATOS (tick/order flow), COSTES (acceso directo) y AMPLITUD (miles de instrumentos) - inaccesibles al retail.",
+   "en": "Full program (49 experiments, 11 classes): ML price, TSMOM, intraday session, sizing/funding, macro regime (manual+4 AI), carry, COT, pairs cointegration, PCA stat-arb, cross-sectional momentum, turn-of-month. NONE produces a deployable edge passing the triple test (temporal OOS + executable lag + Deflated Sharpe) with retail data and CFD costs.",
+   "pt": "Programa completo (49 experimentos, 11 classes): ML preço, TSMOM, intradiário de sessão, sizing/fondeo, regime macro (manual+4 IA), carry, COT, pairs cointegração, stat-arb PCA, momentum cross-sectional, turn-of-month. NENHUMA classe produz edge implantável que passe o teste triplo (OOS temporal + lag executável + Deflated Sharpe) com dados retail e custos CFD."
+  },
   "params": {
    "experimentos": 49,
    "clases": 11
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Veredicto #40 confirmado y extendido a las clases quant institucionales. Valor real: framework + infra + conocimiento; bot demo x2 midiendo; opcion 'fondo personal' x1-2 abierta.",
   "metrics": {
    "Sharpe Ratio": 0.38325894465504506,
@@ -185,15 +313,31 @@
  {
   "id": "20260610_142756_turn-of-month-indices-v49",
   "v": 49,
-  "analysis": "Efecto turn-of-month (calendario): comprar índices en los últimos/primeros días del mes. Murió. Los efectos de calendario, si existieron, ya están arbitrados.",
-  "name": "Turn-of-month indices v49",
+  "analysis": {
+   "es": "Efecto turn-of-month (calendario): comprar índices en los últimos/primeros días del mes. Murió. Los efectos de calendario, si existieron, ya están arbitrados.",
+   "en": "Turn-of-month calendar effect: buy indices in the last/first days of the month. Died. Calendar effects, if they ever existed, are already arbitraged away.",
+   "pt": "Efeito turn-of-month (calendário): comprar índices nos últimos/primeiros dias do mês. Morreu. Os efeitos de calendário, se existiram, já foram arbitrados."
+  },
+  "name": {
+   "es": "Turn-of-month indices v49",
+   "en": "Turn-of-month indices v49",
+   "pt": "Turn-of-month índices v49"
+  },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
-  "description": "Efecto calendario documentado: long indices solo en ultimos 2 + primeros 3 dias del mes. (Solo 2014-24 tiene indices: validacion limitada.) Motor ejecutable (kill-switch, lag), lev x2.",
+  "description": {
+   "es": "Efecto calendario documentado: long indices solo en ultimos 2 + primeros 3 dias del mes. (Solo 2014-24 tiene indices: validacion limitada.) Motor ejecutable (kill-switch, lag), lev x2.",
+   "en": "Documented calendar effect: long indices only in the last 2 + first 3 days of the month. (Only 2014-24 has indices: limited validation.) Executable engine (kill-switch, lag), x2 leverage.",
+   "pt": "Efeito calendário documentado: long índices apenas nos últimos 2 + primeiros 3 dias do mês. (Apenas 2014-24 tem índices: validação limitada.) Motor executável (kill-switch, lag), alavancagem x2."
+  },
   "params": {
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2014-2024: Sh -1.63 vivo False",
   "metrics": {
    "Total Return [%]": -10.861191993916542,
@@ -210,15 +354,31 @@
  {
   "id": "20260610_142756_momentum-cross-sectional-v48",
   "v": 48,
-  "analysis": "Momentum cross-sectional (Jegadeesh-Titman): largo el top, corto el bottom del basket por momentum relativo. Murió en ambos períodos. Otro clásico académico que no sobrevive a CFDs.",
-  "name": "Momentum cross-sectional v48",
+  "analysis": {
+   "es": "Momentum cross-sectional (Jegadeesh-Titman): largo el top, corto el bottom del basket por momentum relativo. Murió en ambos períodos. Otro clásico académico que no sobrevive a CFDs.",
+   "en": "Cross-sectional momentum (Jegadeesh-Titman): long the top, short the bottom of the basket by relative momentum. Died in both periods. Another academic classic that doesn't survive CFD costs.",
+   "pt": "Momentum cross-sectional (Jegadeesh-Titman): long no topo, short no fundo do basket por momentum relativo. Morreu em ambos os períodos. Mais um clássico acadêmico que não sobrevive aos CFDs."
+  },
+  "name": {
+   "es": "Momentum cross-sectional v48",
+   "en": "Cross-sectional momentum v48",
+   "pt": "Momentum cross-sectional v48"
+  },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
-  "description": "Jegadeesh-Titman cross-sectional: long top-3 / short bottom-3 por retorno 90d, suavizado mensual. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+  "description": {
+   "es": "Jegadeesh-Titman cross-sectional: long top-3 / short bottom-3 por retorno 90d, suavizado mensual. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+   "en": "Jegadeesh-Titman cross-sectional: long top-3 / short bottom-3 by 90d return, monthly smoothing. Market-neutral. Executable engine (kill-switch, lag), x2 leverage.",
+   "pt": "Jegadeesh-Titman cross-sectional: long top-3 / short bottom-3 por retorno de 90 dias, suavização mensal. Market-neutral. Motor executável (kill-switch, lag), alavancagem x2."
+  },
   "params": {
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013: Sh -0.42 vivo False; 2014-2024: Sh -0.41 vivo False",
   "metrics": {
    "Total Return [%]": -10.23561595494722,
@@ -235,15 +395,31 @@
  {
   "id": "20260610_142756_stat-arb-pca-residual-v47",
   "v": 47,
-  "analysis": "Stat-arb por PCA (Avellaneda & Lee 2010): operar el residuo de cada activo contra los factores comunes. La técnica institucional por excelencia… murió a nivel retail. Sin datos tick ni acceso directo, los residuos no pagan los costes.",
-  "name": "Stat-arb PCA residual v47",
+  "analysis": {
+   "es": "Stat-arb por PCA (Avellaneda & Lee 2010): operar el residuo de cada activo contra los factores comunes. La técnica institucional por excelencia… murió a nivel retail. Sin datos tick ni acceso directo, los residuos no pagan los costes.",
+   "en": "Stat-arb via PCA (Avellaneda & Lee 2010): trade each asset's residual against the common factors. The institutional technique par excellence… died at retail level. Without tick data or direct market access, residuals don't cover costs.",
+   "pt": "Stat-arb por PCA (Avellaneda & Lee 2010): operar o resíduo de cada ativo contra os fatores comuns. A técnica institucional por excelência… morreu a nível retail. Sem dados de tick nem acesso direto, os resíduos não cobrem os custos."
+  },
+  "name": {
+   "es": "Stat-arb PCA residual v47",
+   "en": "Stat-arb PCA residual v47",
+   "pt": "Stat-arb PCA residual v47"
+  },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
-  "description": "Avellaneda & Lee 2010: reversion de residuos vs factor comun (PC1 aprox). Long residuos hundidos / short estirados (|z|>1.5). Motor ejecutable (kill-switch, lag), lev x2.",
+  "description": {
+   "es": "Avellaneda & Lee 2010: reversion de residuos vs factor comun (PC1 aprox). Long residuos hundidos / short estirados (|z|>1.5). Motor ejecutable (kill-switch, lag), lev x2.",
+   "en": "Avellaneda & Lee 2010: reversion of each asset's residual vs. the common factor (approx PC1). Long sunken residuals / short stretched ones (|z|>1.5). Executable engine (kill-switch, lag), x2 leverage.",
+   "pt": "Avellaneda & Lee 2010: reversão de resíduos de cada ativo vs. o fator comum (aprox PC1). Long resíduos afundados / short esticados (|z|>1,5). Motor executável (kill-switch, lag), alavancagem x2."
+  },
   "params": {
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013: Sh -0.69 vivo False; 2014-2024: Sh -0.58 vivo False",
   "metrics": {
    "Total Return [%]": -10.075824702234303,
@@ -260,15 +436,31 @@
  {
   "id": "20260610_142755_pairs-cointegracion-v46",
   "v": 46,
-  "analysis": "Pairs trading por cointegración (Engle-Granger) sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100…). La reversión del spread murió a costes y granularidad retail. La relación existe; el edge neto, no.",
-  "name": "Pairs cointegracion v46",
+  "analysis": {
+   "es": "Pairs trading por cointegración (Engle-Granger) sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100…). La reversión del spread murió a costes y granularidad retail. La relación existe; el edge neto, no.",
+   "en": "Pairs trading via cointegration (Engle-Granger) on 6 related pairs (Brent-WTI, gold-silver, SP500-NAS100…). Spread reversion died on costs and retail granularity. The relationship exists; the net edge does not.",
+   "pt": "Pairs trading por cointegração (Engle-Granger) em 6 pares relacionados (Brent-WTI, ouro-prata, SP500-NAS100…). A reversão do spread morreu em custos e granularidade retail. A relação existe; o edge líquido, não."
+  },
+  "name": {
+   "es": "Pairs cointegracion v46",
+   "en": "Pairs cointegration v46",
+   "pt": "Pairs cointegração v46"
+  },
   "family": "quant",
   "date": "2026-06-10T14:27:55",
-  "description": "Engle-Granger rolling 250d sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD): entra |z|>2, sale |z|<0.5. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+  "description": {
+   "es": "Engle-Granger rolling 250d sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD): entra |z|>2, sale |z|<0.5. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+   "en": "Engle-Granger rolling 250d on 6 related pairs (Brent-WTI, gold-silver, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD): enter |z|>2, exit |z|<0.5. Market-neutral. Executable engine (kill-switch, lag), x2 leverage.",
+   "pt": "Engle-Granger rolling 250d em 6 pares relacionados (Brent-WTI, ouro-prata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD): entra |z|>2, sai |z|<0,5. Market-neutral. Motor executável (kill-switch, lag), alavancagem x2."
+  },
   "params": {
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013: Sh -1.04 vivo False; 2014-2024: Sh -1.21 vivo False",
   "metrics": {
    "Total Return [%]": -10.846936759444603,
@@ -285,11 +477,23 @@
  {
   "id": "20260610_142118_cot-contrarian-extremos-v45",
   "v": 45,
-  "analysis": "Posicionamiento COT: estrategia contraria en los extremos (cuando los especuladores están muy largos, vender). Murió en ambos períodos. El 'smart money' del COT no anticipa el retorno a horizontes operables para retail.",
-  "name": "COT contrarian extremos v45",
+  "analysis": {
+   "es": "Posicionamiento COT: estrategia contraria en los extremos (cuando los especuladores están muy largos, vender). Murió en ambos períodos. El 'smart money' del COT no anticipa el retorno a horizontes operables para retail.",
+   "en": "COT positioning: contrarian strategy at extremes (when speculators are very long, sell). Died in both periods. The COT 'smart money' doesn't anticipate returns at actionable horizons for retail.",
+   "pt": "Posicionamento COT: estratégia contrarian nos extremos (quando especuladores estão muito comprados, vender). Morreu em ambos os períodos. O 'dinheiro inteligente' do COT não antecipa o retorno em horizontes operáveis para o retail."
+  },
+  "name": {
+   "es": "COT contrarian extremos v45",
+   "en": "COT contrarian extremes v45",
+   "pt": "COT contrarian extremos v45"
+  },
   "family": "cot",
   "date": "2026-06-10T14:21:18",
-  "description": "Posicionamiento non-commercial CFTC (API publica): contrarian en extremos (percentil>90 del net/OI rolling 2y -> corto; <10 -> largo), lag 3 dias, long/short risk-parity ejecutable, 7 pares FX.",
+  "description": {
+   "es": "Posicionamiento non-commercial CFTC (API publica): contrarian en extremos (percentil>90 del net/OI rolling 2y -> corto; <10 -> largo), lag 3 dias, long/short risk-parity ejecutable, 7 pares FX.",
+   "en": "Non-commercial CFTC positioning (public API): contrarian at extremes (percentile>90 of rolling 2y net/OI → short; <10 → long), 3-day lag, long/short risk-parity executable, 7 FX pairs.",
+   "pt": "Posicionamento não-comercial CFTC (API pública): contrarian nos extremos (percentil>90 do net/OI rolling 2a → short; <10 → long), lag 3 dias, long/short risk-parity executável, 7 pares FX."
+  },
   "params": {
    "percentiles": [
     0.1,
@@ -299,7 +503,11 @@
    "lag_dias": 3,
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013: Sh -1.37 vivo False; 2014-2024: Sh -0.28 vivo False",
   "metrics": {
    "Sharpe 14-24": -0.2833245294353685,
@@ -316,13 +524,29 @@
  {
   "id": "extra-v44",
   "v": 44,
-  "analysis": "Paso de datos: descarga del posicionamiento COT (CFTC, 40 años) vía API pública, que habilitó la prueba contrarian de #45.",
-  "name": "posicionamiento COT (datos)",
+  "analysis": {
+   "es": "Paso de datos: descarga del posicionamiento COT (CFTC, 40 años) vía API pública, que habilitó la prueba contrarian de #45.",
+   "en": "Data step: download of COT positioning (CFTC, 40 years) via public API, which enabled the contrarian test in #45.",
+   "pt": "Passo de dados: download do posicionamento COT (CFTC, 40 anos) via API pública, que habilitou o teste contrarian em #45."
+  },
+  "name": {
+   "es": "posicionamiento COT (datos)",
+   "en": "COT positioning (data)",
+   "pt": "Posicionamento COT (dados)"
+  },
   "family": "datos",
   "date": "2026-06-10T14:21:00",
-  "description": "Descarga del posicionamiento COT (CFTC, 40 años) vía API pública para la prueba contrarian #45.",
+  "description": {
+   "es": "Descarga del posicionamiento COT (CFTC, 40 años) vía API pública para la prueba contrarian #45.",
+   "en": "Download of COT positioning (CFTC, 40 years) via public API to enable the contrarian test in #45.",
+   "pt": "Download do posicionamento COT (CFTC, 40 anos) via API pública para habilitar o teste contrarian no #45."
+  },
   "params": {},
-  "verdict": "paso de datos",
+  "verdict": {
+   "es": "paso de datos",
+   "en": "data step",
+   "pt": "passo de dados"
+  },
   "notes": "",
   "metrics": {
    "años": 40,
@@ -336,11 +560,23 @@
  {
   "id": "20260610_142006_carry-trend-combo-v43",
   "v": 43,
-  "analysis": "Combo carry + tendencia + filtro macro, intentando rescatar el carry. Tampoco sobrevivió 2014-2024. Combinar dos factores débiles no crea uno fuerte.",
-  "name": "Carry+Trend combo v43",
+  "analysis": {
+   "es": "Combo carry + tendencia + filtro macro, intentando rescatar el carry. Tampoco sobrevivió 2014-2024. Combinar dos factores débiles no crea uno fuerte.",
+   "en": "Carry + trend + macro filter combo, trying to rescue carry. Also failed in 2014-2024. Combining two weak factors doesn't create a strong one.",
+   "pt": "Combo carry + tendência + filtro macro, tentando resgatar o carry. Também não sobreviveu a 2014-2024. Combinar dois fatores fracos não cria um forte."
+  },
+  "name": {
+   "es": "Carry+Trend combo v43",
+   "en": "Carry+Trend combo v43",
+   "pt": "Combo Carry+Trend v43"
+  },
   "family": "carry",
   "date": "2026-06-10T14:20:06",
-  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Combo: posicion solo donde carry y momentum coinciden (Koijen et al.).",
+  "description": {
+   "es": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Combo: posicion solo donde carry y momentum coinciden (Koijen et al.).",
+   "en": "CARRY factor (FRED rate differential, 1-month lag) on 7 FX pairs, long/short risk-parity, executable engine with kill-switch. Combo: position only where carry and momentum agree (Koijen et al.).",
+   "pt": "Fator CARRY (diferencial de taxas FRED, lag 1 mês) em 7 pares FX, long/short risk-parity, motor executável com kill-switch. Combo: posição apenas onde carry e momentum coincidem (Koijen et al.)."
+  },
   "params": {
    "lev": 2.0,
    "variantes": [
@@ -348,7 +584,11 @@
    ],
    "mejor": "carry∧trend+filtro"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
   "metrics": {
    "Total Return [%]": -10.015421103460021,
@@ -366,11 +606,23 @@
  {
   "id": "20260610_142006_carry-fx-ejecutable-v42",
   "v": 42,
-  "analysis": "Carry FX ejecutable: largo de las divisas con mayor tasa, corto de las menores (diferencial FRED, rezagado 1 mes). El carry puro murió en ambos períodos — sus crashes coinciden con todo lo demás. Factor decaído tras 2008, con las tasas G10 en ~0 una década.",
-  "name": "Carry FX ejecutable v42",
+  "analysis": {
+   "es": "Carry FX ejecutable: largo de las divisas con mayor tasa, corto de las menores (diferencial FRED, rezagado 1 mes). El carry puro murió en ambos períodos — sus crashes coinciden con todo lo demás. Factor decaído tras 2008, con las tasas G10 en ~0 una década.",
+   "en": "Executable FX carry: long high-rate currencies, short low-rate ones (FRED differential, lagged 1 month). Pure carry died in both periods — its crashes coincide with everything else. Factor decayed post-2008, with G10 rates at ~0 for a decade.",
+   "pt": "Carry FX executável: long nas divisas com taxa mais alta, short nas mais baixas (diferencial FRED, defasado 1 mês). O carry puro morreu em ambos os períodos — seus crashes coincidem com tudo o mais. Fator decaiu após 2008, com as taxas G10 em ~0 por uma década."
+  },
+  "name": {
+   "es": "Carry FX ejecutable v42",
+   "en": "Executable FX carry v42",
+   "pt": "Carry FX executável v42"
+  },
   "family": "carry",
   "date": "2026-06-10T14:20:06",
-  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Solo y con filtro macro.",
+  "description": {
+   "es": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Solo y con filtro macro.",
+   "en": "CARRY factor (FRED rate differential, 1-month lag) on 7 FX pairs, long/short risk-parity, executable engine with kill-switch. Solo and with macro filter.",
+   "pt": "Fator CARRY (diferencial de taxas FRED, lag 1 mês) em 7 pares FX, long/short risk-parity, motor executável com kill-switch. Sozinho e com filtro macro."
+  },
   "params": {
    "lev": 2.0,
    "variantes": [
@@ -379,7 +631,11 @@
    ],
    "mejor": "carry puro"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2007-2013|carry puro: Sh -3.07 vivo False; 2007-2013|carry+filtro: Sh 0.05 vivo True; 2014-2024|carry puro: Sh -1.94 vivo False; 2014-2024|carry+filtro: Sh -0.81 vivo False",
   "metrics": {
    "Total Return [%]": -10.223290777253858,
@@ -397,13 +653,29 @@
  {
   "id": "extra-v41",
   "v": 41,
-  "analysis": "Paso de datos: descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry. La infraestructura que hizo posible probar el carry con rigor en #42-43.",
-  "name": "tasas FRED (datos de carry)",
+  "analysis": {
+   "es": "Paso de datos: descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry. La infraestructura que hizo posible probar el carry con rigor en #42-43.",
+   "en": "Data step: download and integration of FRED rates (8 currencies, 1956-2026) to build the carry factor. The infrastructure that made it possible to rigorously test carry in #42-43.",
+   "pt": "Passo de dados: download e integração de taxas FRED (8 moedas, 1956-2026) para construir o fator carry. A infraestrutura que tornou possível testar o carry com rigor em #42-43."
+  },
+  "name": {
+   "es": "tasas FRED (datos de carry)",
+   "en": "FRED rates (carry data)",
+   "pt": "Taxas FRED (dados de carry)"
+  },
   "family": "datos",
   "date": "2026-06-10T14:20:00",
-  "description": "Descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry.",
+  "description": {
+   "es": "Descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry.",
+   "en": "Download and integration of FRED rates (8 currencies, 1956-2026) to build the carry factor.",
+   "pt": "Download e integração de taxas FRED (8 moedas, 1956-2026) para construir o fator carry."
+  },
   "params": {},
-  "verdict": "paso de datos",
+  "verdict": {
+   "es": "paso de datos",
+   "en": "data step",
+   "pt": "passo de dados"
+  },
   "notes": "",
   "metrics": {
    "monedas": 8,
@@ -417,16 +689,32 @@
  {
   "id": "20260610_141058_veredicto-final-40-experimentos-v40",
   "v": 40,
-  "analysis": "Veredicto tras 40 experimentos: con datos retail (precio + macro gratis) y rebalanceo diario, NO existe un edge desplegable que pase challenges con expectativa real. El ~7% de aprobación del sector es matemática, no solo indisciplina. Decisión: el bot demo baja a x2 como instrumento de MEDICIÓN, y cero dinero en challenges con esta clase de estrategia.",
-  "name": "VEREDICTO FINAL 40 experimentos v40",
+  "analysis": {
+   "es": "Veredicto tras 40 experimentos: con datos retail (precio + macro gratis) y rebalanceo diario, NO existe un edge desplegable que pase challenges con expectativa real. El ~7% de aprobación del sector es matemática, no solo indisciplina. Decisión: el bot demo baja a x2 como instrumento de MEDICIÓN, y cero dinero en challenges con esta clase de estrategia.",
+   "en": "Verdict after 40 experiments: with retail data (price + free macro) and daily rebalancing, there is NO deployable edge that passes challenges with a real positive expectation. The ~7% industry approval rate is mathematics, not just indiscipline. Decision: demo bot drops to x2 as a MEASUREMENT instrument, and zero money in challenges with this strategy class.",
+   "pt": "Veredicto após 40 experimentos: com dados retail (preço + macro grátis) e rebalanceamento diário, NÃO existe um edge implantável que passe challenges com expectativa positiva real. Os ~7% de aprovação do setor são matemática, não apenas indisciplina. Decisão: bot demo ajustado a x2 como instrumento de MEDIÇÃO, e zero dinheiro em challenges com esta classe de estratégia."
+  },
+  "name": {
+   "es": "VEREDICTO FINAL 40 experimentos v40",
+   "en": "FINAL VERDICT 40 experiments v40",
+   "pt": "VEREDICTO FINAL 40 experimentos v40"
+  },
   "family": "risk",
   "date": "2026-06-10T14:10:58",
-  "description": "Consolidacion: (1) precio-solo sin edge (#1-8). (2) El dinero del fondeo es sizing, pero el limite de 1 mes lo mata (#9-17). (3) El filtro macro Sharpe 1.23 era en gran parte clarividencia same-day (#27). (4) La version EJECUTABLE sobrevive solo a x<=2 con Sharpe ~0.4 y ~2%/año (#28-36), tarda 2.3 AÑOS de mediana en pasar un challenge (#37) y su Sharpe NO supera el Deflated Sharpe test tras ~40 intentos (DSR 0.35, #38). (5) EV nominal +$1.7k pero impracticable (#39). CONCLUSION: con datos retail y rebalanceo diario NO existe un edge desplegable que pase challenges con expectativa positiva real. El ~7% de aprobacion del sector refleja esta matematica.",
+  "description": {
+   "es": "Consolidacion: (1) precio-solo sin edge (#1-8). (2) El dinero del fondeo es sizing, pero el limite de 1 mes lo mata (#9-17). (3) El filtro macro Sharpe 1.23 era en gran parte clarividencia same-day (#27). (4) La version EJECUTABLE sobrevive solo a x<=2 con Sharpe ~0.4 y ~2%/año (#28-36), tarda 2.3 AÑOS de mediana en pasar un challenge (#37) y su Sharpe NO supera el Deflated Sharpe test tras ~40 intentos (DSR 0.35, #38). (5) EV nominal +$1.7k pero impracticable (#39). CONCLUSION: con datos retail y rebalanceo diario NO existe un edge desplegable que pase challenges con expectativa positiva real. El ~7% de aprobacion del sector refleja esta matematica.",
+   "en": "Consolidation: (1) price-only without edge (#1-8). (2) Prop firm funding money is sizing, but the 1-month limit kills it (#9-17). (3) The macro filter Sharpe 1.23 was largely same-day clairvoyance (#27). (4) The EXECUTABLE version survives only at x≤2 with Sharpe ~0.4 and ~2%/year (#28-36), takes a median of 2.3 YEARS to pass a challenge (#37), and its Sharpe doesn't pass the Deflated Sharpe test after ~40 attempts (DSR 0.35, #38). (5) Nominal EV +$1.7k but impractical (#39).",
+   "pt": "Consolidação: (1) preço-só sem edge (#1-8). (2) O dinheiro do fondeo é sizing, mas o limite de 1 mês o mata (#9-17). (3) O filtro macro Sharpe 1,23 era em grande parte clarividência same-day (#27). (4) A versão EXECUTÁVEL sobrevive apenas a x≤2 com Sharpe ~0,4 e ~2%/ano (#28-36), demora mediana de 2,3 ANOS para passar um challenge (#37) e seu Sharpe NÃO supera o teste Deflated Sharpe após ~40 tentativas (DSR 0,35, #38). (5) EV nominal +$1,7k, mas impraticável (#39)."
+  },
   "params": {
    "experimentos_totales": 40,
    "config_final": "basket+filtro VIX28/cw40, phi 0.5, kill 3%, x2"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "LO QUE SI VALE: framework de validacion que cazo 6+ ilusiones (incluida la nuestra), infra completa (bot+MCP+dashboard+simulador), y el conocimiento exacto de por que falla. Bot demo ajustado a x2 (config ejecutable) como instrumento de MEDICION (phi real, slippage real, swaps). Direcciones genuinas futuras: carry/tasas FRED, posicionamiento COT, o usar el basket+filtro a x1-2 como inversion personal de largo plazo (fuera de reglas prop).",
   "metrics": {
    "Sharpe ejecutable": 0.383,
@@ -444,17 +732,33 @@
  {
   "id": "20260610_140955_ev-del-negocio-ejecutable-v39",
   "v": 39,
-  "analysis": "Valor esperado del negocio con la versión ejecutable y honesta: impracticable (CAGR 1.9%, mediana 2.3 años para pasar). Los números nominales positivos se evaporan al medir el tiempo real.",
-  "name": "EV del negocio ejecutable v39",
+  "analysis": {
+   "es": "Valor esperado del negocio con la versión ejecutable y honesta: impracticable (CAGR 1.9%, mediana 2.3 años para pasar). Los números nominales positivos se evaporan al medir el tiempo real.",
+   "en": "Expected value of the business with the executable and honest version: impractical (CAGR 1.9%, median 2.3 years to pass). The nominally positive numbers evaporate when measuring real time.",
+   "pt": "Valor esperado do negócio com a versão executável e honesta: impraticável (CAGR 1,9%, mediana 2,3 anos para passar). Os números nominalmente positivos se evaporam ao medir o tempo real."
+  },
+  "name": {
+   "es": "EV del negocio ejecutable v39",
+   "en": "EV of executable business v39",
+   "pt": "EV do negócio executável v39"
+  },
   "family": "risk",
   "date": "2026-06-10T14:09:55",
-  "description": "EV por intento con los numeros EJECUTABLES (no los clarividentes): P(pasar) sin limite + cobro esperado de la fase fondeada (CAGR*split*2y).",
+  "description": {
+   "es": "EV por intento con los numeros EJECUTABLES (no los clarividentes): P(pasar) sin limite + cobro esperado de la fase fondeada (CAGR*split*2y).",
+   "en": "EV per attempt with EXECUTABLE numbers (not clairvoyant): P(pass) with no limit + expected payout from funded phase (CAGR*split*2y).",
+   "pt": "EV por tentativa com os números EXECUTÁVEIS (não os clarividentes): P(passar) sem limite + payout esperado da fase fondeada (CAGR*split*2a)."
+  },
   "params": {
    "fee": 500.0,
    "split": 0.8,
    "lev": 2.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Comparar con los numeros clarividentes de #17 (~82% / ~5 meses / +$9k): la version ejecutable da 69% / 2.3 años / $1,668.",
   "metrics": {
    "P pasar (%)": 69.5,
@@ -472,16 +776,32 @@
  {
   "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
   "v": 38,
-  "analysis": "El juez final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por haber probado 40+ configuraciones. El mejor sistema ejecutable (Sharpe 0.38) dio DSR = 0.35 → NO se distingue del mejor resultado que daría el puro azar tras tantos intentos. La prueba estadística de que no había edge.",
-  "name": "Deflated Sharpe del ejecutable v38",
+  "analysis": {
+   "es": "El juez final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por haber probado 40+ configuraciones. El mejor sistema ejecutable (Sharpe 0.38) dio DSR = 0.35 → NO se distingue del mejor resultado que daría el puro azar tras tantos intentos. La prueba estadística de que no había edge.",
+   "en": "The final judge: Deflated Sharpe Ratio (Bailey & López de Prado), correcting for having tested 40+ configurations. The best executable system (Sharpe 0.38) gave DSR = 0.35 → NOT distinguishable from the best result pure chance would yield after so many attempts. The statistical proof that there was no edge.",
+   "pt": "O juiz final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por ter testado 40+ configurações. O melhor sistema executável (Sharpe 0,38) deu DSR = 0,35 → NÃO distinguível do melhor resultado que o puro acaso daria após tantas tentativas. A prova estatística de que não havia edge."
+  },
+  "name": {
+   "es": "Deflated Sharpe del ejecutable v38",
+   "en": "Deflated Sharpe of executable v38",
+   "pt": "Deflated Sharpe do executável v38"
+  },
   "family": "risk",
   "date": "2026-06-10T14:09:55",
-  "description": "Bailey & Lopez de Prado: tras probar ~40 configuraciones, el mejor Sharpe esperado SOLO POR AZAR se compara con el observado. DSR>0.95 = edge real.",
+  "description": {
+   "es": "Bailey & Lopez de Prado: tras probar ~40 configuraciones, el mejor Sharpe esperado SOLO POR AZAR se compara con el observado. DSR>0.95 = edge real.",
+   "en": "Bailey & López de Prado: after testing ~40 configurations, the best expected Sharpe BY CHANCE ALONE is compared to the observed one. DSR>0.95 = real edge.",
+   "pt": "Bailey & López de Prado: após testar ~40 configurações, o melhor Sharpe esperado POR PURO ACASO é comparado ao observado. DSR>0,95 = edge real."
+  },
   "params": {
    "N_trials": 40,
    "T_dias": 5609
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
   "metrics": {
    "Sharpe observado": 0.383,
@@ -499,11 +819,23 @@
  {
   "id": "20260610_140954_p-pasar-ejecutable-v37",
   "v": 37,
-  "analysis": "Probabilidad real de pasar con la versión ejecutable. 8.6% en 1 año; 69% sin límite de tiempo pero con una mediana de 2.3 AÑOS. Traducción: técnicamente posible, prácticamente inviable como fuente de ingresos.",
-  "name": "P(pasar) ejecutable v37",
+  "analysis": {
+   "es": "Probabilidad real de pasar con la versión ejecutable. 8.6% en 1 año; 69% sin límite de tiempo pero con una mediana de 2.3 AÑOS. Traducción: técnicamente posible, prácticamente inviable como fuente de ingresos.",
+   "en": "Real probability of passing with the executable version. 8.6% in 1 year; 69% with no time limit but with a median of 2.3 YEARS. Translation: technically possible, practically unviable as an income source.",
+   "pt": "Probabilidade real de passar com a versão executável. 8,6% em 1 ano; 69% sem limite de tempo, mas com mediana de 2,3 ANOS. Tradução: tecnicamente possível, praticamente inviável como fonte de renda."
+  },
+  "name": {
+   "es": "P(pasar) ejecutable v37",
+   "en": "P(pass) executable v37",
+   "pt": "P(passar) executável v37"
+  },
   "family": "risk",
   "date": "2026-06-10T14:09:54",
-  "description": "Monte Carlo del challenge (objetivo 10%, DD 10%, daily 5%) con los retornos EJECUTABLES (lag honesto + kill-switch, x2). Sin limite de tiempo incluido.",
+  "description": {
+   "es": "Monte Carlo del challenge (objetivo 10%, DD 10%, daily 5%) con los retornos EJECUTABLES (lag honesto + kill-switch, x2). Sin limite de tiempo incluido.",
+   "en": "Monte Carlo of the challenge (target 10%, DD 10%, daily 5%) with EXECUTABLE returns (honest lag + kill-switch, x2). No time limit included.",
+   "pt": "Monte Carlo do challenge (objetivo 10%, DD 10%, diário 5%) com retornos EXECUTÁVEIS (lag honesto + kill-switch, x2). Sem limite de tempo incluído."
+  },
   "params": {
    "lev": 2.0,
    "horizontes": [
@@ -512,7 +844,11 @@
     2000
    ]
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "Sharpe ejecutable 0.38. 252d: 8.6% (med 191.0); 504d: 29.4% (med 325.0); 2000d: 69.5% (med 572.0)",
   "metrics": {
    "P pasar 1y (%)": 8.575000000000001,
@@ -530,11 +866,23 @@
  {
   "id": "20260610_140835_calidad-intrinseca-sin-reglas-prop-v36",
   "v": 36,
-  "analysis": "¿Cuál es la calidad INTRÍNSECA del sistema sin las reglas prop que lo protegen? A x3+ se autodestruye igual (MaxDD −38% a −94%). Reveló un techo intrínseco: las reglas de la prop firm enmascaraban la fragilidad real de la estrategia.",
-  "name": "Calidad intrinseca sin reglas prop v36",
+  "analysis": {
+   "es": "¿Cuál es la calidad INTRÍNSECA del sistema sin las reglas prop que lo protegen? A x3+ se autodestruye igual (MaxDD −38% a −94%). Reveló un techo intrínseco: las reglas de la prop firm enmascaraban la fragilidad real de la estrategia.",
+   "en": "What is the INTRINSIC quality of the system without the prop rules that protect it? At x3+ it self-destructs anyway (MaxDD −38% to −94%). Revealed an intrinsic ceiling: the prop firm rules were masking the real fragility of the strategy.",
+   "pt": "Qual é a qualidade INTRÍNSECA do sistema sem as regras prop que o protegem? A x3+ ele se autodestrói mesmo (MaxDD −38% a −94%). Revelou um teto intrínseco: as regras da prop firm mascaravam a fragilidade real da estratégia."
+  },
+  "name": {
+   "es": "Calidad intrinseca sin reglas prop v36",
+   "en": "Intrinsic quality without prop rules v36",
+   "pt": "Qualidade intrínseca sem regras prop v36"
+  },
   "family": "bot",
   "date": "2026-06-10T14:08:35",
-  "description": "La estrategia ejecutable SIN daily-loss/max-DD del prop firm: ¿la estrategia es mala o las reglas son el cuello de botella? Si el MaxDD intrinseco >>10%, las reglas del challenge son incompatibles con esta clase de estrategia a ese leverage.",
+  "description": {
+   "es": "La estrategia ejecutable SIN daily-loss/max-DD del prop firm: ¿la estrategia es mala o las reglas son el cuello de botella? Si el MaxDD intrinseco >>10%, las reglas del challenge son incompatibles con esta clase de estrategia a ese leverage.",
+   "en": "The executable strategy WITHOUT the prop firm daily-loss/max-DD rules: is the strategy bad or are the rules the bottleneck? If intrinsic MaxDD >>10%, the challenge rules are incompatible with this strategy class at that leverage.",
+   "pt": "A estratégia executável SEM as regras de daily-loss/max-DD da prop firm: a estratégia é ruim ou as regras são o gargalo? Se o MaxDD intrínseco >>10%, as regras do challenge são incompatíveis com esta classe de estratégia nessa alavancagem."
+  },
   "params": {
    "filtro": "VIX28/cw40",
    "phi": 0.5,
@@ -544,7 +892,11 @@
     4
    ]
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "[2014-2024] x2.0: Sh 0.40, CAGR +2.2%, MaxDD -9.8% | [2014-2024] x3.0: Sh -0.15, CAGR -1.9%, MaxDD -38.5% | [2014-2024] x4.0: Sh -1.44, CAGR -20.1%, MaxDD -94.2% | [2007-2013] x2.0: Sh 0.37, CAGR +1.4%, MaxDD -8.0% | [2007-2013] x3.0: Sh -0.05, CAGR -0.6%, MaxDD -22.3% | [2007-2013] x4.0: Sh -1.07, CAGR -11.5%, MaxDD -73.2%",
   "metrics": {
    "Total Trades": 0,
@@ -558,16 +910,32 @@
  {
   "id": "20260610_140833_curva-de-tasas-como-filtro-v35",
   "v": 35,
-  "analysis": "Probar la curva de tasas (term spread TNX-IRX) como filtro adicional. No aportó. Otra fuente macro descartada con rigor.",
-  "name": "Curva de tasas como filtro v35",
+  "analysis": {
+   "es": "Probar la curva de tasas (term spread TNX-IRX) como filtro adicional. No aportó. Otra fuente macro descartada con rigor.",
+   "en": "Testing the yield curve (term spread TNX-IRX) as an additional filter. It didn't add value. Another macro source ruled out with rigor.",
+   "pt": "Testar a curva de juros (term spread TNX-IRX) como filtro adicional. Não contribuiu. Outra fonte macro descartada com rigor."
+  },
+  "name": {
+   "es": "Curva de tasas como filtro v35",
+   "en": "Yield curve as filter v35",
+   "pt": "Curva de juros como filtro v35"
+  },
   "family": "bot",
   "date": "2026-06-10T14:08:33",
-  "description": "Añadir term-spread invertido (TNX-IRX<0) como condicion extra de risk-off (hint de feature importance #24). Reactivo ejecutable x2.",
+  "description": {
+   "es": "Añadir term-spread invertido (TNX-IRX<0) como condicion extra de risk-off (hint de feature importance #24). Reactivo ejecutable x2.",
+   "en": "Add inverted term-spread (TNX-IRX<0) as an extra risk-off condition (feature importance hint from #24). Reactive executable x2.",
+   "pt": "Adicionar term-spread invertido (TNX-IRX<0) como condição extra de risk-off (dica de feature importance do #24). Reativo executável x2."
+  },
   "params": {
    "regla": "term<0 => flat",
    "base": "VIX28/cw40"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "{'2014-2024|sin curva': 'Sh 0.40', '2014-2024|con curva': 'Sh 0.31', '2007-2013|sin curva': 'Sh 0.37', '2007-2013|con curva': 'Sh 0.37'}",
   "metrics": {
    "Mejora ambos periodos": "False",
@@ -584,11 +952,23 @@
  {
   "id": "20260610_140720_graduado-vix-14-ejecutable-v34",
   "v": 34,
-  "analysis": "Leverage graduado pero en versión ejecutable (lag-1). Solo aguanta hasta ~x2.5; más allá, la protección rezagada no alcanza. Coherente con la frontera de riesgo de toda la serie.",
-  "name": "Graduado VIX<14 ejecutable v34",
+  "analysis": {
+   "es": "Leverage graduado pero en versión ejecutable (lag-1). Solo aguanta hasta ~x2.5; más allá, la protección rezagada no alcanza. Coherente con la frontera de riesgo de toda la serie.",
+   "en": "Graduated leverage but in the executable version (lag-1). Only holds to ~x2.5; beyond that, the lagged protection doesn't reach in time. Consistent with the risk boundary of the whole series.",
+   "pt": "Alavancagem graduada, mas na versão executável (lag-1). Só aguenta até ~x2,5; além disso, a proteção defasada não alcança a tempo. Consistente com a fronteira de risco de toda a série."
+  },
+  "name": {
+   "es": "Graduado VIX<14 ejecutable v34",
+   "en": "Graduated VIX<14 executable v34",
+   "pt": "Graduado VIX<14 executável v34"
+  },
   "family": "bot",
   "date": "2026-06-10T14:07:20",
-  "description": "Sobre el mejor #33 (filtro (28, 40)): x_alto solo con VIX(ayer)<14, x1.5 resto. Apalancarse lejos de los crashes, ejecutable y con lag honesto.",
+  "description": {
+   "es": "Sobre el mejor #33 (filtro (28, 40)): x_alto solo con VIX(ayer)<14, x1.5 resto. Apalancarse lejos de los crashes, ejecutable y con lag honesto.",
+   "en": "On the best #33 filter (28, 40): high leverage only with VIX(yesterday)<14, x1.5 otherwise. Lever up far from crashes, executable with honest lag.",
+   "pt": "Sobre o melhor #33 (filtro (28, 40)): alavancagem alta apenas com VIX(ontem)<14, x1,5 caso contrário. Alavancar longe dos crashes, executável com lag honesto."
+  },
   "params": {
    "filtro": "(28, 40)",
    "hi_grid": [
@@ -599,7 +979,11 @@
    "mejor_hi": 2.5,
    "low": 1.5
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "hi x2.5: Sh 0.42|0.30 vivo True|True; hi x3.0: Sh -0.60|0.21 vivo False|True; hi x4.0: Sh -1.24|-0.03 vivo False|True",
   "metrics": {
    "Total Return [%]": 29.368535923164373,
@@ -617,17 +1001,33 @@
  {
   "id": "20260610_140718_disparo-temprano-del-filtro-v33",
   "v": 33,
-  "analysis": "¿Y si el filtro dispara más temprano? No ayuda: el disparo anticipado genera whipsaw (entras y sales en falsas alarmas) y empeora el resultado. El timing tiene un punto óptimo, no 'cuanto antes mejor'.",
-  "name": "Disparo temprano del filtro v33",
+  "analysis": {
+   "es": "¿Y si el filtro dispara más temprano? No ayuda: el disparo anticipado genera whipsaw (entras y sales en falsas alarmas) y empeora el resultado. El timing tiene un punto óptimo, no 'cuanto antes mejor'.",
+   "en": "What if the filter triggers earlier? It doesn't help: earlier triggering generates whipsaw (enters and exits on false alarms) and worsens the result. Timing has an optimal point, not 'the sooner the better'.",
+   "pt": "E se o filtro disparar mais cedo? Não ajuda: o disparo antecipado gera whipsaw (entra e sai em alarmes falsos) e piora o resultado. O timing tem um ponto ótimo, não 'quanto mais cedo melhor'."
+  },
+  "name": {
+   "es": "Disparo temprano del filtro v33",
+   "en": "Early filter trigger v33",
+   "pt": "Disparo antecipado do filtro v33"
+  },
   "family": "bot",
   "date": "2026-06-10T14:07:18",
-  "description": "Reactivo ejecutable (phi 0.5, x2): bajar el umbral del VIX dispara ANTES (dia de disparo mas chico). Grilla VIX 22/24/28 x creditMA 40/60.",
+  "description": {
+   "es": "Reactivo ejecutable (phi 0.5, x2): bajar el umbral del VIX dispara ANTES (dia de disparo mas chico). Grilla VIX 22/24/28 x creditMA 40/60.",
+   "en": "Reactive executable (phi 0.5, x2): lowering the VIX threshold triggers EARLIER (smaller trigger day). VIX 22/24/28 x creditMA 40/60 grid.",
+   "pt": "Reativo executável (phi 0,5, x2): baixar o limiar do VIX dispara ANTES (dia de disparo menor). Grade VIX 22/24/28 x creditMA 40/60."
+  },
   "params": {
    "mejor": "(28, 40)",
    "phi": 0.5,
    "lev": 2.0
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "VIX22/cw40: Sh 0.16|0.29 vivo True|True; VIX22/cw60: Sh 0.22|0.36 vivo True|True; VIX24/cw40: Sh 0.31|0.40 vivo True|True; VIX24/cw60: Sh 0.33|0.39 vivo True|True; VIX28/cw40: Sh 0.40|0.37 vivo True|True; VIX28/cw60: Sh 0.37|0.34 vivo True|True",
   "metrics": {
    "Total Return [%]": 31.1962010621746,
@@ -644,17 +1044,33 @@
  {
   "id": "20260610_140603_validacion-ejecutable-reactivo-v32",
   "v": 32,
-  "analysis": "Validación del filtro reactivo con gaps reales y un trough conservador. Confirmó la supervivencia: Sharpe ~0.40, ~2%/año a x2. Real y ejecutable… pero modesto, muy lejos de lo que un challenge corto necesita.",
-  "name": "Validacion ejecutable-reactivo v32",
+  "analysis": {
+   "es": "Validación del filtro reactivo con gaps reales y un trough conservador. Confirmó la supervivencia: Sharpe ~0.40, ~2%/año a x2. Real y ejecutable… pero modesto, muy lejos de lo que un challenge corto necesita.",
+   "en": "Validation of the reactive filter with real gaps and a conservative trough. Confirmed survival: Sharpe ~0.40, ~2%/year at x2. Real and executable… but modest, far from what a short challenge needs.",
+   "pt": "Validação do filtro reativo com gaps reais e um trough conservador. Confirmou a sobrevivência: Sharpe ~0,40, ~2%/ano a x2. Real e executável… mas modesto, muito longe do que um challenge curto precisa."
+  },
+  "name": {
+   "es": "Validacion ejecutable-reactivo v32",
+   "en": "Executable-reactive validation v32",
+   "pt": "Validação executável-reativo v32"
+  },
   "family": "bot",
   "date": "2026-06-10T14:06:03",
-  "description": "Validacion completa del mejor config reactivo (phi=0.5, x1.5, cap 3%): por año 2007-2024, 6 crisis. Si aguanta, ESTE es el candidato de produccion (requiere implementar el monitor intradia en el bot).",
+  "description": {
+   "es": "Validacion completa del mejor config reactivo (phi=0.5, x1.5, cap 3%): por año 2007-2024, 6 crisis. Si aguanta, ESTE es el candidato de produccion (requiere implementar el monitor intradia en el bot).",
+   "en": "Full validation of the best reactive config (phi=0.5, x1.5, 3% cap): year by year 2007-2024, 6 crises. If it holds, THIS is the production candidate (requires implementing the intraday monitor in the bot).",
+   "pt": "Validação completa da melhor configuração reativa (phi=0,5, x1,5, cap 3%): por ano 2007-2024, 6 crises. Se aguentar, ESTE é o candidato de produção (requer implementar o monitor intradiário no bot)."
+  },
   "params": {
    "phi": 0.5,
    "lev": 1.5,
    "cap": 0.03
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "phi es un supuesto a MEDIR en el forward test demo (reaccion real del monitor).",
   "metrics": {
    "Total Return [%]": 21.644224036310746,
@@ -672,18 +1088,34 @@
  {
   "id": "20260610_140602_filtro-reactivo-intradia-v31",
   "v": 31,
-  "analysis": "Si el problema es reaccionar tarde, ¿y un filtro REACTIVO intradía? Un monitor que aplana a media sesión (φ = la fracción del día que alcanzas a cubrir), implementable con un poll de VIX cada 15 min. Fue la primera configuración ejecutable que sobrevivió 2007-2024 — pero solo a x≤2.",
-  "name": "Filtro reactivo intradia v31",
+  "analysis": {
+   "es": "Si el problema es reaccionar tarde, ¿y un filtro REACTIVO intradía? Un monitor que aplana a media sesión (φ = la fracción del día que alcanzas a cubrir), implementable con un poll de VIX cada 15 min. Fue la primera configuración ejecutable que sobrevivió 2007-2024 — pero solo a x≤2.",
+   "en": "If the problem is reacting too late, what about a REACTIVE intraday filter? A monitor that flattens mid-session (φ = the fraction of the day you can cover), implementable with a 15-min VIX poll. It was the first executable configuration that survived 2007-2024 — but only at x≤2.",
+   "pt": "Se o problema é reagir tarde, que tal um filtro REATIVO intradiário? Um monitor que aplana no meio da sessão (φ = a fração do dia que consegue cobrir), implementável com um poll de VIX a cada 15 min. Foi a primeira configuração executável que sobreviveu a 2007-2024 — mas apenas a x≤2."
+  },
+  "name": {
+   "es": "Filtro reactivo intradia v31",
+   "en": "Intraday reactive filter v31",
+   "pt": "Filtro reativo intradiário v31"
+  },
   "family": "bot",
   "date": "2026-06-10T14:06:02",
-  "description": "Bot que monitorea el filtro en TIEMPO REAL y aplana al disparo (ejecutable: poll de VIX cada 15min). phi=fraccion del movimiento del dia de disparo que se come. Kill-switch 3% activo. Grilla phi x lev, ambos periodos.",
+  "description": {
+   "es": "Bot que monitorea el filtro en TIEMPO REAL y aplana al disparo (ejecutable: poll de VIX cada 15min). phi=fraccion del movimiento del dia de disparo que se come. Kill-switch 3% activo. Grilla phi x lev, ambos periodos.",
+   "en": "Bot that monitors the filter in REAL TIME and flattens on trigger (executable: VIX poll every 15 min). phi = fraction of the trigger day's move that gets taken. Active 3% kill-switch. phi x leverage grid, both periods.",
+   "pt": "Bot que monitora o filtro em TEMPO REAL e aplana ao disparo (executável: poll de VIX a cada 15 min). phi = fração do movimento do dia de disparo que é absorvida. Kill-switch 3% ativo. Grade phi x alavancagem, ambos os períodos."
+  },
   "params": {
    "mejor_phi": 0.5,
    "mejor_lev": 1.5,
    "cap": 0.03,
    "slip": 0.002
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "phi0.5/x1.5: Sh 0.37|0.34 vivo True|True; phi0.5/x2.0: Sh 0.37|0.34 vivo True|True; phi0.5/x3.0: Sh -1.11|-0.47 vivo False|False; phi0.75/x1.5: Sh 0.20|0.19 vivo True|True; phi0.75/x2.0: Sh 0.18|0.19 vivo True|True; phi0.75/x3.0: Sh -1.04|-0.59 vivo False|False",
   "metrics": {
    "Total Return [%]": 21.644224036310746,
@@ -700,13 +1132,29 @@
  {
   "id": "extra-v30",
   "v": 30,
-  "analysis": "Kill-switch combinado con menor leverage. Sobrevive algo más, pero el retorno cae tanto que deja de servir para pasar un challenge. Trade-off sin salida.",
-  "name": "kill-switch + leverage bajo",
+  "analysis": {
+   "es": "Kill-switch combinado con menor leverage. Sobrevive algo más, pero el retorno cae tanto que deja de servir para pasar un challenge. Trade-off sin salida.",
+   "en": "Kill-switch combined with lower leverage. Survives a bit more, but return drops so much it no longer works to pass a challenge. A trade-off with no exit.",
+   "pt": "Kill-switch combinado com menor alavancagem. Sobrevive um pouco mais, mas o retorno cai tanto que deixa de servir para passar um challenge. Trade-off sem saída."
+  },
+  "name": {
+   "es": "kill-switch + leverage bajo",
+   "en": "kill-switch + low leverage",
+   "pt": "kill-switch + alavancagem baixa"
+  },
   "family": "ejecutable",
   "date": "2026-06-10T14:02:00",
-  "description": "Kill-switch combinado con menor apalancamiento para sobrevivir el crash.",
+  "description": {
+   "es": "Kill-switch combinado con menor apalancamiento para sobrevivir el crash.",
+   "en": "Kill-switch combined with lower leverage to survive the crash.",
+   "pt": "Kill-switch combinado com menor alavancagem para sobreviver ao crash."
+  },
   "params": {},
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "",
   "metrics": {
    "sobrevive": "parcial",
@@ -720,13 +1168,29 @@
  {
   "id": "extra-v29",
   "v": 29,
-  "analysis": "Variante del kill-switch con disparo más temprano. Mismo desenlace: el daño de los primeros días ya estaba hecho cuando reaccionaba.",
-  "name": "kill-switch disparo temprano",
+  "analysis": {
+   "es": "Variante del kill-switch con disparo más temprano. Mismo desenlace: el daño de los primeros días ya estaba hecho cuando reaccionaba.",
+   "en": "Kill-switch variant with earlier trigger. Same outcome: the damage from the first days was already done when it reacted.",
+   "pt": "Variante do kill-switch com disparo antecipado. Mesmo desfecho: o dano dos primeiros dias já estava feito quando reagia."
+  },
+  "name": {
+   "es": "kill-switch disparo temprano",
+   "en": "kill-switch early trigger",
+   "pt": "kill-switch disparo antecipado"
+  },
   "family": "ejecutable",
   "date": "2026-06-10T14:01:00",
-  "description": "Variante con el kill-switch disparando antes para reaccionar más rápido al crash.",
+  "description": {
+   "es": "Variante con el kill-switch disparando antes para reaccionar más rápido al crash.",
+   "en": "Variant with the kill-switch triggering earlier to react faster to the crash.",
+   "pt": "Variante com o kill-switch disparando antes para reagir mais rápido ao crash."
+  },
   "params": {},
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "",
   "metrics": {
    "sobrevive": "False"
@@ -739,13 +1203,29 @@
  {
   "id": "extra-v28",
   "v": 28,
-  "analysis": "Lag-1 + kill-switch intradía (aplanar a ~−3% del día). Murió: en un crash sostenido el drawdown se acumula durante la primera semana, antes de que el kill-switch marque diferencia.",
-  "name": "lag-1 + kill-switch",
+  "analysis": {
+   "es": "Lag-1 + kill-switch intradía (aplanar a ~−3% del día). Murió: en un crash sostenido el drawdown se acumula durante la primera semana, antes de que el kill-switch marque diferencia.",
+   "en": "Lag-1 + intraday kill-switch (flatten at ~−3% of the day). Died: in a sustained crash the drawdown accumulates during the first week, before the kill-switch makes a difference.",
+   "pt": "Lag-1 + kill-switch intradiário (aplanar a ~−3% do dia). Morreu: num crash sustentado o drawdown se acumula durante a primeira semana, antes de o kill-switch fazer diferença."
+  },
+  "name": {
+   "es": "lag-1 + kill-switch",
+   "en": "lag-1 + kill-switch",
+   "pt": "lag-1 + kill-switch"
+  },
   "family": "ejecutable",
   "date": "2026-06-10T14:00:00",
-  "description": "Versión ejecutable (señales rezagadas 1 día) con kill-switch intradía que aplana a ~−3% del día.",
+  "description": {
+   "es": "Versión ejecutable (señales rezagadas 1 día) con kill-switch intradía que aplana a ~−3% del día.",
+   "en": "Executable version (signals lagged 1 day) with intraday kill-switch that flattens at ~−3% of the day.",
+   "pt": "Versão executável (sinais defasados 1 dia) com kill-switch intradiário que aplana a ~−3% do dia."
+  },
   "params": {},
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "",
   "metrics": {
    "sobrevive": "False",
@@ -759,18 +1239,34 @@
  {
   "id": "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
   "v": 27,
-  "analysis": "LA prueba de fuego. Al rezagar TODAS las señales 1 día (la única versión que un bot real puede ejecutar: decide a las 17:30 y aplica al día siguiente), la re-entrada Y EL PROPIO BASELINE murieron en ambos períodos. El Sharpe 1.23 del filtro estaba inflado por usar el VIX del cierre del MISMO día. Mecanismo de muerte: un día de crash a x3-4 rompe el límite diario del 5% antes de poder reaccionar. Este experimento cambió todo el veredicto.",
-  "name": "Prueba de fuego lag-1 re-entrada v27",
+  "analysis": {
+   "es": "LA prueba de fuego. Al rezagar TODAS las señales 1 día (la única versión que un bot real puede ejecutar: decide a las 17:30 y aplica al día siguiente), la re-entrada Y EL PROPIO BASELINE murieron en ambos períodos. El Sharpe 1.23 del filtro estaba inflado por usar el VIX del cierre del MISMO día. Mecanismo de muerte: un día de crash a x3-4 rompe el límite diario del 5% antes de poder reaccionar. Este experimento cambió todo el veredicto.",
+   "en": "THE fire test. When ALL signals are lagged 1 day (the only version a real bot can execute: decides at 17:30 and applies the next day), the re-entry AND THE BASELINE ITSELF died in both periods. The Sharpe 1.23 was inflated by using the SAME-day VIX close. Death mechanism: one crash day at x3-4 breaks the 5% daily limit before the filter can react. This experiment changed the entire verdict.",
+   "pt": "O teste de fogo. Ao defasar TODOS os sinais 1 dia (a única versão que um bot real pode executar: decide às 17:30 e aplica no dia seguinte), a re-entrada E O PRÓPRIO BASELINE morreram em ambos os períodos. O Sharpe 1,23 estava inflado por usar o fechamento do VIX do MESMO dia. Mecanismo de morte: um dia de crash a x3-4 quebra o limite diário de 5% antes de poder reagir. Este experimento mudou todo o veredicto."
+  },
+  "name": {
+   "es": "Prueba de fuego lag-1 re-entrada v27",
+   "en": "Lag-1 fire test re-entry v27",
+   "pt": "Teste de fogo lag-1 re-entrada v27"
+  },
   "family": "bot",
   "date": "2026-06-10T13:51:43",
-  "description": "Verificacion anti-lookahead de #26: manual y cooling decididos con datos de AYER (t-1). Si el salto de Sharpe sobrevive, la re-entrada panico-enfriandose es real. Incluye baseline igualmente rezagado para comparacion justa.",
+  "description": {
+   "es": "Verificacion anti-lookahead de #26: manual y cooling decididos con datos de AYER (t-1). Si el salto de Sharpe sobrevive, la re-entrada panico-enfriandose es real. Incluye baseline igualmente rezagado para comparacion justa.",
+   "en": "Anti-lookahead check of #26: manual and cooling decided with YESTERDAY's data (t-1). If the Sharpe jump survives, the panic-cooling-off re-entry is real. Includes equally lagged baseline for fair comparison.",
+   "pt": "Verificação anti-lookahead do #26: manual e cooling decididos com dados de ONTEM (t-1). Se o salto de Sharpe sobreviver, a re-entrada pânico-esfriando é real. Inclui baseline igualmente defasado para comparação justa."
+  },
   "params": {
    "lag": 1,
    "cooling": 0.9,
    "lev_reentrada": 2.0,
    "lev_on": 3.0
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2014-2024: baseline lag1: Sharpe -0.17 vivo False | reentry lag1 (0.9/x2): Sharpe -1.00 vivo False | reentry lag1 (0.8/x2): Sharpe -0.79 vivo False /// 2007-2013: baseline lag1: Sharpe -0.46 vivo False | reentry lag1 (0.9/x2): Sharpe -0.76 vivo False | reentry lag1 (0.8/x2): Sharpe -0.75 vivo False",
   "metrics": {
    "Total Return [%]": -10.03206878926206,
@@ -790,16 +1286,32 @@
  {
   "id": "20260610_135036_re-entrada-panico-enfriandose-v26",
   "v": 26,
-  "analysis": "Re-entrada 'pánico enfriándose': volver al mercado cuando el VIX baja desde su máximo reciente. Marcó un Sharpe 2.12 espectacular en TODA la grilla… demasiado bueno. Era lookahead: usaba información del mismo día. Una de las ilusiones más peligrosas, porque pasaba todos los tests menos el de ejecutabilidad.",
-  "name": "Re-entrada panico enfriandose v26",
+  "analysis": {
+   "es": "Re-entrada 'pánico enfriándose': volver al mercado cuando el VIX baja desde su máximo reciente. Marcó un Sharpe 2.12 espectacular en TODA la grilla… demasiado bueno. Era lookahead: usaba información del mismo día. Una de las ilusiones más peligrosas, porque pasaba todos los tests menos el de ejecutabilidad.",
+   "en": "Re-entry 'panic cooling off': returning to the market when VIX drops from its recent peak. Showed a spectacular Sharpe 2.12 across the ENTIRE grid… too good. It was lookahead: it used same-day information. One of the most dangerous illusions, because it passed all tests except executability.",
+   "pt": "Re-entrada 'pânico esfriando': voltar ao mercado quando o VIX cai desde seu máximo recente. Marcou Sharpe 2,12 espetacular em TODA a grade… bom demais. Era lookahead: usava informação do mesmo dia. Uma das ilusões mais perigosas, porque passava em todos os testes exceto o de executabilidade."
+  },
+  "name": {
+   "es": "Re-entrada panico enfriandose v26",
+   "en": "Re-entry panic cooling off v26",
+   "pt": "Re-entrada pânico esfriando v26"
+  },
   "family": "bot",
   "date": "2026-06-10T13:50:36",
-  "description": "Regla a priori: en risk-off manual, re-entrar a leverage reducido cuando VIX < cooling*max10d (panico enfriandose). Grilla cooling x lev. Objetivo: recuperar parte del ~50% de tiempo flat.",
+  "description": {
+   "es": "Regla a priori: en risk-off manual, re-entrar a leverage reducido cuando VIX < cooling*max10d (panico enfriandose). Grilla cooling x lev. Objetivo: recuperar parte del ~50% de tiempo flat.",
+   "en": "A priori rule: in manual risk-off, re-enter at reduced leverage when VIX < cooling*max10d (panic cooling off). Cooling x leverage grid. Goal: recover part of the ~50% flat time.",
+   "pt": "Regra a priori: em risk-off manual, re-entrar com alavancagem reduzida quando VIX < cooling*max10d (pânico esfriando). Grade cooling x alavancagem. Objetivo: recuperar parte do ~50% de tempo flat."
+  },
   "params": {
    "grilla": "cooling 0.7/0.8/0.9 x lev 1.5/2.0",
    "mejor": "(0.9, 2.0)"
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "mejor combo cooling=0.9 lev=2.0 | 2014-24 Sharpe 2.12 (base 1.23); 2007-13 Sharpe 1.53 (base 1.06). Grilla completa en stdout/registro.",
   "metrics": {
    "Total Return [%]": 1226.739881464346,
@@ -818,17 +1330,33 @@
  {
   "id": "20260610_134940_ml-sizing-con-proteccion-manual-v25",
   "v": 25,
-  "analysis": "ML para el SIZING (no para la dirección), manteniendo la protección manual intacta. Sobrevivió ambos períodos pero NO aportó (1.20/1.04 vs 1.23/1.06): las features macro no tienen señal de retorno más allá del on/off que ya daba el filtro simple.",
-  "name": "ML sizing con proteccion manual v25",
+  "analysis": {
+   "es": "ML para el SIZING (no para la dirección), manteniendo la protección manual intacta. Sobrevivió ambos períodos pero NO aportó (1.20/1.04 vs 1.23/1.06): las features macro no tienen señal de retorno más allá del on/off que ya daba el filtro simple.",
+   "en": "ML for SIZING (not direction), keeping manual protection intact. Survived both periods but did NOT add value (1.20/1.04 vs 1.23/1.06): macro features have no return signal at 10d beyond the on/off already given by the simple filter.",
+   "pt": "ML para SIZING (não direção), mantendo a proteção manual intacta. Sobreviveu ambos os períodos, mas NÃO contribuiu (1,20/1,04 vs 1,23/1,06): as features macro não têm sinal de retorno a 10d além do on/off que o filtro simples já fornecia."
+  },
+  "name": {
+   "es": "ML sizing con proteccion manual v25",
+   "en": "ML sizing with manual protection v25",
+   "pt": "ML sizing com proteção manual v25"
+  },
   "family": "ml",
   "date": "2026-06-10T13:49:40",
-  "description": "El filtro manual manda (flat en risk-off, intocable); el ML modula el leverage 2x-4x SOLO en dias risk-on segun P(fwd 10d > +0.5%) walk-forward. El ML no puede reventarnos, solo aportar o no. Vara: manual x3 fijo.",
+  "description": {
+   "es": "El filtro manual manda (flat en risk-off, intocable); el ML modula el leverage 2x-4x SOLO en dias risk-on segun P(fwd 10d > +0.5%) walk-forward. El ML no puede reventarnos, solo aportar o no. Vara: manual x3 fijo.",
+   "en": "Manual filter commands (flat in risk-off, untouchable); ML modulates leverage 2x-4x ONLY on risk-on days based on P(fwd 10d > +0.5%) walk-forward. ML cannot blow us up, it can only add value or not. Benchmark: manual x3 fixed.",
+   "pt": "O filtro manual comanda (flat em risk-off, intocável); o ML modula a alavancagem 2x-4x APENAS em dias risk-on conforme P(fwd 10d > +0,5%) walk-forward. O ML não pode nos explodir, só pode contribuir ou não. Vara: manual x3 fixo."
+  },
   "params": {
    "lev": "2+2*p_good, flat si manual",
    "label": "fwd10d>+0.5%",
    "refit": 126
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "2014-24: manual x3 fijo: Sharpe 1.23 vivo True | ML sizing 2+2p: Sharpe 1.20 vivo True /// 2007-13: manual x3 fijo: Sharpe 1.06 vivo True | ML sizing 2+2p: Sharpe 1.04 vivo True",
   "metrics": {
    "Total Return [%]": 203.83962176760969,
@@ -847,17 +1375,33 @@
  {
   "id": "20260610_134831_regimen-supervisado-v2-residual-v24",
   "v": 24,
-  "analysis": "Segunda versión del régimen supervisado (residual, con balanceo de clases y umbral adaptativo). Mismo resultado: murió. Reforzó que el problema no era el tuning, era la naturaleza del fenómeno.",
-  "name": "Regimen supervisado v2 residual v24",
+  "analysis": {
+   "es": "Segunda versión del régimen supervisado (residual, con balanceo de clases y umbral adaptativo). Mismo resultado: murió. Reforzó que el problema no era el tuning, era la naturaleza del fenómeno.",
+   "en": "Second version of supervised regime (residual, with class balancing and adaptive threshold). Same result: died. Reinforced that the problem wasn't tuning — it was the nature of the phenomenon.",
+   "pt": "Segunda versão do regime supervisado (residual, com balanceamento de classes e limiar adaptativo). Mesmo resultado: morreu. Reforçou que o problema não era o ajuste, era a natureza do fenômeno."
+  },
+  "name": {
+   "es": "Regimen supervisado v2 residual v24",
+   "en": "Supervised regime v2 residual v24",
+   "pt": "Regime supervisado v2 residual v24"
+  },
   "family": "ml",
   "date": "2026-06-10T13:48:31",
-  "description": "v2 del regimen supervisado: filtro manual como FEATURE (residual learning), balanceo de clases, umbral adaptativo (perc.75 propio), sin-señal=flat. Walk-forward + embargo. Vara: manual 1.23/1.06.",
+  "description": {
+   "es": "v2 del regimen supervisado: filtro manual como FEATURE (residual learning), balanceo de clases, umbral adaptativo (perc.75 propio), sin-señal=flat. Walk-forward + embargo. Vara: manual 1.23/1.06.",
+   "en": "v2 of supervised regime: manual filter as FEATURE (residual learning), class balancing, adaptive threshold (own 75th percentile), no-signal=flat. Walk-forward + embargo. Benchmark: manual 1.23/1.06.",
+   "pt": "v2 do regime supervisado: filtro manual como FEATURE (aprendizado residual), balanceamento de classes, limiar adaptativo (percentil 75 próprio), sem sinal=flat. Walk-forward + embargo. Vara: manual 1,23/1,06."
+  },
   "params": {
    "modelo": "XGB d3 n200 spw",
    "umbral": "perc75 rolling 500",
    "features+": "manual_filter"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML v2: Sharpe -1.34 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML v2: Sharpe 0.21 vivo True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60",
   "metrics": {
    "Total Return [%]": -7.042222057941105,
@@ -875,11 +1419,23 @@
  {
   "id": "20260610_134700_regimen-supervisado-xgb-walk-forward-v23",
   "v": 23,
-  "analysis": "Régimen supervisado: XGBoost con features macro y walk-forward para aprender los umbrales. Murió en el COVID. Los crashes son eventos rarísimos (~2 ejemplos por ventana) y cada crisis es distinta: no hay suficientes ejemplos para que un modelo los aprenda.",
-  "name": "Regimen supervisado XGB walk-forward v23",
+  "analysis": {
+   "es": "Régimen supervisado: XGBoost con features macro y walk-forward para aprender los umbrales. Murió en el COVID. Los crashes son eventos rarísimos (~2 ejemplos por ventana) y cada crisis es distinta: no hay suficientes ejemplos para que un modelo los aprenda.",
+   "en": "Supervised regime: XGBoost with macro features and walk-forward to learn thresholds. Died in COVID. Crashes are extremely rare events (~2 examples per window) and every crisis is different: there aren't enough examples for a model to learn them.",
+   "pt": "Regime supervisado: XGBoost com features macro e walk-forward para aprender os limiares. Morreu no COVID. Os crashes são eventos raríssimos (~2 exemplos por janela) e cada crise é diferente: não há exemplos suficientes para que um modelo os aprenda."
+  },
+  "name": {
+   "es": "Regimen supervisado XGB walk-forward v23",
+   "en": "Supervised regime XGB walk-forward v23",
+   "pt": "Regime supervisado XGB walk-forward v23"
+  },
   "family": "ml",
   "date": "2026-06-10T13:47:00",
-  "description": "XGBoost walk-forward (refit 126d, embargo 10d, features de t-1) aprende a predecir periodos malos (fwd 10d < -1%) con features macro forward-looking (VIX, credito, curva TNX-IRX, DXY, vol/mom del basket). Flat si p>umbral. Comparado contra el filtro manual en 2014-24 y OOS 2007-13.",
+  "description": {
+   "es": "XGBoost walk-forward (refit 126d, embargo 10d, features de t-1) aprende a predecir periodos malos (fwd 10d < -1%) con features macro forward-looking (VIX, credito, curva TNX-IRX, DXY, vol/mom del basket). Flat si p>umbral. Comparado contra el filtro manual en 2014-24 y OOS 2007-13.",
+   "en": "XGBoost walk-forward (refit 126d, embargo 10d, t-1 features) learns to predict bad periods (fwd 10d < -1%) with macro forward-looking features (VIX, credit, curve TNX-IRX, DXY, basket vol/mom). Flat if p>threshold. Compared vs manual filter in 2014-24 and OOS 2007-13.",
+   "pt": "XGBoost walk-forward (refit 126d, embargo 10d, features de t-1) aprende a prever períodos ruins (fwd 10d < -1%) com features macro forward-looking (VIX, crédito, curva TNX-IRX, DXY, vol/mom do basket). Flat se p>limiar. Comparado ao filtro manual em 2014-24 e OOS 2007-13."
+  },
   "params": {
    "modelo": "XGBClassifier d3 n200",
    "label": "fwd10d<-1%",
@@ -888,7 +1444,11 @@
    "embargo": 10,
    "mejor_variante": "ML p>0.5"
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML p>0.4: Sharpe -2.33 vivo False | ML p>0.5: Sharpe -2.31 vivo False | ML p>0.6: Sharpe -2.31 vivo False | ML graduado 3(1-p): Sharpe -2.44 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML p>0.4: Sharpe -0.59 vivo False | ML p>0.5: Sharpe -0.59 vivo False | ML p>0.6: Sharpe -0.59 vivo False | ML graduado 3(1-p): Sharpe 0.33 vivo True",
   "metrics": {
    "Total Return [%]": -10.36743071171492,
@@ -907,11 +1467,23 @@
  {
   "id": "20260610_134200_hmm-regime-detection-ia-v22",
   "v": 22,
-  "analysis": "¿Y si una IA aprende el régimen mejor que las reglas a mano? Un HMM gaussiano (Hamilton) de 2 estados, sin lookahead. Perdió: solo reventó (Sharpe −2.31). Lección clave: el edge está en los DATOS forward-looking (VIX = volatilidad implícita, crédito), no en la sofisticación del algoritmo — un modelo sobre volatilidad realizada llega tarde.",
-  "name": "HMM regime detection (IA) v22",
+  "analysis": {
+   "es": "¿Y si una IA aprende el régimen mejor que las reglas a mano? Un HMM gaussiano (Hamilton) de 2 estados, sin lookahead. Perdió: solo reventó (Sharpe −2.31). Lección clave: el edge está en los DATOS forward-looking (VIX = volatilidad implícita, crédito), no en la sofisticación del algoritmo — un modelo sobre volatilidad realizada llega tarde.",
+   "en": "What if an AI learns the regime better than manual rules? A 2-state Gaussian HMM (Hamilton), no lookahead. It lost: blew up in both periods (Sharpe −2.31). Key lesson: the edge is in the FORWARD-LOOKING DATA (VIX = implied vol, credit), not algorithmic sophistication — a model on realized volatility arrives too late.",
+   "pt": "E se uma IA aprender o regime melhor do que as regras manuais? Um HMM gaussiano de 2 estados (Hamilton), sem lookahead. Perdeu: explodiu em ambos os períodos (Sharpe −2,31). Lição chave: o edge está nos DADOS FORWARD-LOOKING (VIX = volatilidade implícita, crédito), não na sofisticação do algoritmo — um modelo sobre volatilidade realizada chega tarde."
+  },
+  "name": {
+   "es": "HMM regime detection (IA) v22",
+   "en": "HMM regime detection (AI) v22",
+   "pt": "HMM detecção de regime (IA) v22"
+  },
   "family": "ml",
   "date": "2026-06-10T13:42:00",
-  "description": "Hidden Markov Model gaussiano 2 estados (Hamilton 1989) aprende los regimenes del mercado sin umbrales a mano, sobre [retorno basket, dlogVIX]. Sin lookahead (refit expandiente cada 126d, prob filtrada con datos hasta t-1). Flat en estado de alta varianza, x3 en calma. Comparado contra el filtro manual en 2014-2024 y en OOS puro 2007-2013.",
+  "description": {
+   "es": "Hidden Markov Model gaussiano 2 estados (Hamilton 1989) aprende los regimenes del mercado sin umbrales a mano, sobre [retorno basket, dlogVIX]. Sin lookahead (refit expandiente cada 126d, prob filtrada con datos hasta t-1). Flat en estado de alta varianza, x3 en calma. Comparado contra el filtro manual en 2014-2024 y en OOS puro 2007-2013.",
+   "en": "Gaussian 2-state Hidden Markov Model (Hamilton 1989) learns market regimes without manual thresholds, on [basket return, dlogVIX]. No lookahead (expanding refit every 126 days, filtered probability with data up to t-1). Flat in high-variance state, x3 in calm. Compared vs manual filter in 2014-2024 and pure OOS 2007-2013.",
+   "pt": "Hidden Markov Model gaussiano de 2 estados (Hamilton 1989) aprende os regimes do mercado sem limiares manuais, sobre [retorno basket, dlogVIX]. Sem lookahead (refit expansivo a cada 126 dias, probabilidade filtrada com dados até t-1). Flat no estado de alta variância, x3 na calma. Comparado ao filtro manual em 2014-2024 e OOS puro 2007-2013."
+  },
   "params": {
    "modelo": "GaussianHMM 2 estados",
    "features": [
@@ -922,7 +1494,11 @@
    "refit_dias": 126,
    "lev": 3
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "2014-24: filtro manual: Sharpe 1.23, ret +267%, vivo True | HMM (IA): Sharpe -2.31, ret -10%, vivo False | HMM OR manual: Sharpe 0.98, ret +151%, vivo True /// OOS 2007-13: filtro manual: Sharpe 1.06, ret +85%, vivo True | HMM (IA): Sharpe -0.54, ret -12%, vivo False | HMM OR manual: Sharpe 1.03, ret +75%, vivo True",
   "metrics": {
    "Total Return [%]": -10.36743071171492,
@@ -941,11 +1517,23 @@
  {
   "id": "20260610_022556_oos-temporal-2007-2013-anti-overfit-v21",
   "v": 21,
-  "analysis": "La prueba anti-overfit definitiva: congelar las reglas de 2014-2024 y aplicarlas SIN tocar a 2007-2013 (datos jamás vistos, con la crisis de 2008). El filtro sobrevivió 2008 con todos los años positivos (Sharpe 1.06, degradación sana desde 1.23). El edge generaliza a ~18 años y 6 crisis: no está sobreentrenado.",
-  "name": "OOS temporal 2007-2013 (anti-overfit) v21",
+  "analysis": {
+   "es": "La prueba anti-overfit definitiva: congelar las reglas de 2014-2024 y aplicarlas SIN tocar a 2007-2013 (datos jamás vistos, con la crisis de 2008). El filtro sobrevivió 2008 con todos los años positivos (Sharpe 1.06, degradación sana desde 1.23). El edge generaliza a ~18 años y 6 crisis: no está sobreentrenado.",
+   "en": "The definitive anti-overfit test: freeze the 2014-2024 rules and apply them WITHOUT changes to 2007-2013 (never-seen data, including the 2008 crisis). The filter survived 2008 with every year positive (Sharpe 1.06, healthy degradation from 1.23). The edge generalizes across ~18 years and 6 crises: it is not overfitted.",
+   "pt": "O teste anti-overfit definitivo: congelar as regras de 2014-2024 e aplicá-las SEM alterações a 2007-2013 (dados jamais vistos, com a crise de 2008). O filtro sobreviveu a 2008 com todos os anos positivos (Sharpe 1,06, degradação saudável desde 1,23). O edge generaliza para ~18 anos e 6 crises: não está sobreajustado."
+  },
+  "name": {
+   "es": "OOS temporal 2007-2013 (anti-overfit) v21",
+   "en": "Temporal OOS 2007-2013 (anti-overfit) v21",
+   "pt": "OOS temporal 2007-2013 (anti-overfit) v21"
+  },
   "family": "bot",
   "date": "2026-06-10T02:25:56",
-  "description": "Out-of-sample temporal PURO: reglas fijadas en 2014-2024 aplicadas sin cambios a 2007-2013 (crisis 2008-09, euro 2011). Basket reducido a lo existente (7 FX + oro). Test definitivo de sobreentrenamiento pedido por el usuario.",
+  "description": {
+   "es": "Out-of-sample temporal PURO: reglas fijadas en 2014-2024 aplicadas sin cambios a 2007-2013 (crisis 2008-09, euro 2011). Basket reducido a lo existente (7 FX + oro). Test definitivo de sobreentrenamiento pedido por el usuario.",
+   "en": "Pure temporal out-of-sample: rules fixed in 2014-2024 applied without changes to 2007-2013 (2008-09 crisis, euro 2011). Basket reduced to what existed (7 FX + gold). The definitive overfit test, requested by the user.",
+   "pt": "Out-of-sample temporal PURO: regras fixadas em 2014-2024 aplicadas sem alterações a 2007-2013 (crise 2008-09, euro 2011). Basket reduzido ao que existia (7 FX + ouro). Teste definitivo de sobreajuste, solicitado pelo usuário."
+  },
   "params": {
    "periodo": "2007-2013",
    "instrumentos": [
@@ -961,7 +1549,11 @@
    "lev": 3,
    "reglas": "identicas a #16 (VIX>28/spike/credito<MA60)"
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "Comparativa en el mismo periodo: SIN filtro x3: vivo=False, ret=-11%, Sharpe=-0.59, MaxDD=-15.6% | CON filtro x3 (baseline): vivo=True, ret=+85%, Sharpe=1.06, MaxDD=-10.8% | #19 estricto (VIX<14: x5): vivo=True, ret=+96%, Sharpe=1.07, MaxDD=-12.7%",
   "metrics": {
    "Total Return [%]": 84.559569815447,
@@ -979,16 +1571,32 @@
  {
   "id": "20260609_210757_trend-long-short-filtrado-v20",
   "v": 20,
-  "analysis": "Trend long/short: añadir cortos según el signo del momentum. Reventó — los cortos restan en un basket con sesgo alcista de largo plazo. El long-only filtrado le gana.",
-  "name": "Trend long-short filtrado v20",
+  "analysis": {
+   "es": "Trend long/short: añadir cortos según el signo del momentum. Reventó — los cortos restan en un basket con sesgo alcista de largo plazo. El long-only filtrado le gana.",
+   "en": "Trend long/short: adding shorts based on momentum sign. Blew up — shorts subtract in a basket with a long-term bullish bias. Long-only filtered beats it.",
+   "pt": "Trend long/short: adicionar shorts pelo sinal do momentum. Explodiu — os shorts subtraem num basket com viés de alta de longo prazo. O long-only filtrado supera."
+  },
+  "name": {
+   "es": "Trend long-short filtrado v20",
+   "en": "Trend long-short filtered v20",
+   "pt": "Trend long-short filtrado v20"
+  },
   "family": "bot",
   "date": "2026-06-09T21:07:57",
-  "description": "Pesos risk-parity multiplicados por el SIGNO del momentum 120d (permite cortos), con filtro macro x3. ¿Ayudan los cortos en años bajistas? Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "description": {
+   "es": "Pesos risk-parity multiplicados por el SIGNO del momentum 120d (permite cortos), con filtro macro x3. ¿Ayudan los cortos en años bajistas? Periodo 2014-2024 (4 crisis), reglas FTMO.",
+   "en": "Risk-parity weights multiplied by 120-day momentum sign (allows shorts), with macro filter x3. Do shorts help in bearish years? Period 2014-2024 (4 crises), FTMO rules.",
+   "pt": "Pesos risk-parity multiplicados pelo sinal do momentum de 120 dias (permite shorts), com filtro macro x3. Os shorts ajudam em anos de baixa? Período 2014-2024 (4 crises), regras FTMO."
+  },
   "params": {
    "momentum": "signo 120d",
    "lev": 3
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=0.38. Por año: 2014: +0.0%, 2015: +14.6%, 2016: -3.5%, 2017: -7.5%, 2018: +3.2%, 2019: -4.5%, 2020: +18.9%, 2021: +10.7%, 2022: +4.6%",
   "metrics": {
    "Total Return [%]": 39.29330835290372,
@@ -1006,17 +1614,33 @@
  {
   "id": "20260609_210756_leverage-graduado-por-vix-v19",
   "v": 19,
-  "analysis": "Leverage graduado por VIX: subir el apalancamiento solo cuando hay calma estricta. Fue el mejor Sharpe in-sample (1.39 vs 1.23 del baseline), pero la grilla mostró una frontera dura: solo aguanta con VIX<14; con VIX<16 ya muere a x6. Candidato de upgrade, pero MaxDD ~15% → solo para firms de drawdown estático, nunca trailing.",
-  "name": "Leverage graduado por VIX v19",
+  "analysis": {
+   "es": "Leverage graduado por VIX: subir el apalancamiento solo cuando hay calma estricta. Fue el mejor Sharpe in-sample (1.39 vs 1.23 del baseline), pero la grilla mostró una frontera dura: solo aguanta con VIX<14; con VIX<16 ya muere a x6. Candidato de upgrade, pero MaxDD ~15% → solo para firms de drawdown estático, nunca trailing.",
+   "en": "VIX-graduated leverage: raise leverage only in strict calm. It was the best in-sample Sharpe (1.39 vs 1.23 baseline), but the grid showed a hard boundary: only holds with VIX<14; at VIX<16 it already dies at x6. Upgrade candidate, but MaxDD ~15% → only for static-drawdown firms, never trailing.",
+   "pt": "Alavancagem graduada por VIX: elevar a alavancagem apenas na calma estrita. Foi o melhor Sharpe in-sample (1,39 vs 1,23 do baseline), mas a grade mostrou uma fronteira rígida: só aguenta com VIX<14; com VIX<16 já morre a x6. Candidato de upgrade, mas MaxDD ~15% → apenas para firms de drawdown estático, nunca trailing."
+  },
+  "name": {
+   "es": "Leverage graduado por VIX v19",
+   "en": "VIX-graduated leverage v19",
+   "pt": "Alavancagem graduada por VIX v19"
+  },
   "family": "bot",
   "date": "2026-06-09T21:07:56",
-  "description": "Risk-on: x5 si VIX<16 (mercado muy calmo), x3 si no; risk-off flat. Acelera el challenge solo cuando el riesgo de crash es minimo. Umbrales a priori. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "description": {
+   "es": "Risk-on: x5 si VIX<16 (mercado muy calmo), x3 si no; risk-off flat. Acelera el challenge solo cuando el riesgo de crash es minimo. Umbrales a priori. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+   "en": "Risk-on: x5 if VIX<16 (very calm market), x3 otherwise; risk-off flat. Accelerates the challenge only when crash risk is minimal. A priori thresholds. Period 2014-2024 (4 crises), FTMO rules.",
+   "pt": "Risk-on: x5 se VIX<16 (mercado muito calmo), x3 caso contrário; risk-off flat. Acelera o challenge apenas quando o risco de crash é mínimo. Limiares a priori. Período 2014-2024 (4 crises), regras FTMO."
+  },
   "params": {
    "vix_calmo": 16,
    "lev_calmo": 5,
    "lev_normal": 3
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=True, Sharpe=1.39. Por año: 2014: -2.6%, 2015: -2.1%, 2016: +41.4%, 2017: +38.8%, 2018: +9.0%, 2019: +28.5%, 2020: +23.7%, 2021: +25.3%, 2022: +11.6%, 2023: +12.3%, 2024: +33.9%, 2025: +0.0%",
   "metrics": {
    "Total Return [%]": 591.5043550651397,
@@ -1034,17 +1658,33 @@
  {
   "id": "20260609_210755_rotacion-defensiva-oro-yen-v18",
   "v": 18,
-  "analysis": "Variante: rotar a refugios (oro + yen) en vez de quedar flat cuando hay riesgo. Reventó en 2014 — los 'refugios' también caen en ciertos shocks. Confirmó que en risk-off lo correcto es simplemente NO estar en el mercado.",
-  "name": "Rotacion defensiva oro+yen v18",
+  "analysis": {
+   "es": "Variante: rotar a refugios (oro + yen) en vez de quedar flat cuando hay riesgo. Reventó en 2014 — los 'refugios' también caen en ciertos shocks. Confirmó que en risk-off lo correcto es simplemente NO estar en el mercado.",
+   "en": "Variant: rotate to safe havens (gold + yen) instead of staying flat when there's risk. Blew up in 2014 — 'safe havens' also fall in certain shocks. Confirmed that in risk-off the right move is simply to NOT be in the market.",
+   "pt": "Variante: rotar para refúgios (ouro + iene) em vez de ficar flat quando há risco. Explodiu em 2014 — os 'refúgios' também caem em certos choques. Confirmou que em risk-off o correto é simplesmente NÃO estar no mercado."
+  },
+  "name": {
+   "es": "Rotacion defensiva oro+yen v18",
+   "en": "Defensive rotation gold+yen v18",
+   "pt": "Rotação defensiva ouro+iene v18"
+  },
   "family": "bot",
   "date": "2026-06-09T21:07:55",
-  "description": "En risk-off rota a refugios (50% oro, 50% yen via short USDJPY) a x2 en vez de quedar flat; en risk-on igual que #16 (risk parity x3). Flight-to-quality clasico. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "description": {
+   "es": "En risk-off rota a refugios (50% oro, 50% yen via short USDJPY) a x2 en vez de quedar flat; en risk-on igual que #16 (risk parity x3). Flight-to-quality clasico. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+   "en": "In risk-off, rotate to safe havens (50% gold, 50% yen via short USDJPY) at x2 instead of going flat; risk-on same as #16 (risk parity x3). Classic flight-to-quality. Period 2014-2024 (4 crises), FTMO rules.",
+   "pt": "Em risk-off, rota para refúgios (50% ouro, 50% iene via short USDJPY) a x2 em vez de ficar flat; risk-on igual ao #16 (risk parity x3). Flight-to-quality clássico. Período 2014-2024 (4 crises), regras FTMO."
+  },
   "params": {
    "defensa": "XAU 0.5 / JPY 0.5",
    "lev_on": 3,
    "lev_off": 2
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=-1.52. Por año: 2014: -3.6%",
   "metrics": {
    "Total Return [%]": -4.004100347618866,
@@ -1062,18 +1702,34 @@
  {
   "id": "20260608_164506_dinero-real-con-filtro-macro-v17",
   "v": 17,
-  "analysis": "El factor decisivo para el dinero: el LÍMITE DE TIEMPO del challenge. A 30 días el filtro es demasiado lento (P pasar 1-6%), pero SIN límite de tiempo a x4 da ~82% de pasar. Clave operativa: usar firms sin límite temporal, donde el bot grindea a +10% sin reventar.",
-  "name": "Dinero real con filtro macro v17",
+  "analysis": {
+   "es": "El factor decisivo para el dinero: el LÍMITE DE TIEMPO del challenge. A 30 días el filtro es demasiado lento (P pasar 1-6%), pero SIN límite de tiempo a x4 da ~82% de pasar. Clave operativa: usar firms sin límite temporal, donde el bot grindea a +10% sin reventar.",
+   "en": "The decisive factor for money: the challenge TIME LIMIT. At 30 days the filter is too slow (P pass 1-6%), but WITHOUT a time limit at x4 it gives ~82% probability of passing. Key operational insight: use firms with no time limit, where the bot grinds to +10% without blowing up.",
+   "pt": "O fator decisivo para o dinheiro: o LIMITE DE TEMPO do challenge. A 30 dias o filtro é lento demais (P passar 1-6%), mas SEM limite de tempo a x4 dá ~82% de probabilidade de passar. Insight operacional chave: usar firms sem limite de tempo, onde o bot grinda para +10% sem explodir."
+  },
+  "name": {
+   "es": "Dinero real con filtro macro v17",
+   "en": "Real money with macro filter v17",
+   "pt": "Dinheiro real com filtro macro v17"
+  },
   "family": "risk",
   "date": "2026-06-08T16:45:06",
-  "description": "EV del negocio (challenge 30d + fase fondeada) usando los retornos del bot CON el filtro de regimen macro (validado en #16), comparado contra sin filtro. Limite de challenge REALISTA de 30 dias (corregido tras feedback del usuario).",
+  "description": {
+   "es": "EV del negocio (challenge 30d + fase fondeada) usando los retornos del bot CON el filtro de regimen macro (validado en #16), comparado contra sin filtro. Limite de challenge REALISTA de 30 dias (corregido tras feedback del usuario).",
+   "en": "EV of the business (30-day challenge + funded phase) using the bot returns WITH the macro regime filter (validated in #16), compared to without filter. REALISTIC 30-day challenge limit (corrected after user feedback).",
+   "pt": "EV do negócio (challenge 30d + fase fondeada) usando os retornos do bot COM o filtro de regime macro (validado em #16), comparado ao sem filtro. Limite de challenge REALISTA de 30 dias (corrigido após feedback do usuário)."
+  },
   "params": {
    "challenge_lev": 3,
    "funded_lev": 2,
    "challenge_days": 30,
    "fee": 500.0
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "CON filtro: P(pasar 30d)=1%, EV/intento=$-429 (vs sin filtro $-127). El filtro reduce busts -> la fase fondeada sobrevive mas -> mas cobros. Sigue siendo beta cronometrada y un solo camino; falta forward test live.",
   "metrics": {
    "P pasar 30d (%)": 1.0,
@@ -1091,18 +1747,34 @@
  {
   "id": "20260608_160317_validacion-filtro-macro-multi-crisis-v16",
   "v": 16,
-  "analysis": "Validación del filtro 2014-2024 (4 crisis). Sharpe 1.23, +267%, y los años de crisis (2020, 2022) salieron POSITIVOS. La grilla de sensibilidad (9 combinaciones) sobrevivió toda con Sharpe 1.04-1.47 → robusto, no curve-fit. El mejor resultado de la investigación… hasta la prueba de fuego del #27.",
-  "name": "Validacion filtro macro multi-crisis v16",
+  "analysis": {
+   "es": "Validación del filtro 2014-2024 (4 crisis). Sharpe 1.23, +267%, y los años de crisis (2020, 2022) salieron POSITIVOS. La grilla de sensibilidad (9 combinaciones) sobrevivió toda con Sharpe 1.04-1.47 → robusto, no curve-fit. El mejor resultado de la investigación… hasta la prueba de fuego del #27.",
+   "en": "Validation of the filter 2014-2024 (4 crises). Sharpe 1.23, +267%, and crisis years (2020, 2022) came out POSITIVE. The sensitivity grid (9 combinations) all survived with Sharpe 1.04-1.47 → robust, not curve-fit. The best result of the research… until the stress test in #27.",
+   "pt": "Validação do filtro 2014-2024 (4 crises). Sharpe 1,23, +267%, e os anos de crise (2020, 2022) saíram POSITIVOS. A grade de sensibilidade (9 combinações) sobreviveu toda com Sharpe 1,04-1,47 → robusto, não curve-fit. O melhor resultado da investigação… até o teste de fogo do #27."
+  },
+  "name": {
+   "es": "Validacion filtro macro multi-crisis v16",
+   "en": "Macro filter validation multi-crisis v16",
+   "pt": "Validação filtro macro multi-crise v16"
+  },
   "family": "bot",
   "date": "2026-06-08T16:03:17",
-  "description": "Validacion del filtro macro (#15) en 2014-2024 con 4 estres (2015,2018,2020,2022). Mismas reglas a priori, basket completo. Desglose por año para ver si el edge es consistente o solo dodgeo el COVID. x3 leverage.",
+  "description": {
+   "es": "Validacion del filtro macro (#15) en 2014-2024 con 4 estres (2015,2018,2020,2022). Mismas reglas a priori, basket completo. Desglose por año para ver si el edge es consistente o solo dodgeo el COVID. x3 leverage.",
+   "en": "Validation of the macro filter (#15) in 2014-2024 with 4 stress events (2015, 2018, 2020, 2022). Same a priori rules, full basket. Year-by-year breakdown to check whether the edge is consistent or just COVID dodging. x3 leverage.",
+   "pt": "Validação do filtro macro (#15) em 2014-2024 com 4 estresses (2015, 2018, 2020, 2022). Mesmas regras a priori, basket completo. Detalhamento por ano para ver se o edge é consistente ou apenas desvio do COVID. x3 alavancagem."
+  },
   "params": {
    "leverage": 3,
    "periodo": "2014-2024",
    "vix_level": 28,
    "credit_win": 60
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "Sharpe 1.23, ret 267.3%, años positivos 75%, flat 1465 dias. Si los años son consistentemente positivos (no solo 2020), el filtro macro es un edge real.",
   "metrics": {
    "Total Return [%]": 267.26677844634423,
@@ -1121,11 +1793,23 @@
  {
   "id": "20260608_160139_bot-filtro-macro-regimen-v15",
   "v": 15,
-  "analysis": "La opción que faltaba: datos que NO están en el precio. Filtro de régimen macro (VIX + crédito HYG/LQD de Yahoo) que pone el bot en flat ante señal de riesgo cross-asset. Con el filtro, el bot SOBREVIVE el COVID a x4 (Sharpe 1.38) donde antes reventaba — el primer candidato real de toda la investigación.",
-  "name": "Bot + filtro macro regimen v15",
+  "analysis": {
+   "es": "La opción que faltaba: datos que NO están en el precio. Filtro de régimen macro (VIX + crédito HYG/LQD de Yahoo) que pone el bot en flat ante señal de riesgo cross-asset. Con el filtro, el bot SOBREVIVE el COVID a x4 (Sharpe 1.38) donde antes reventaba — el primer candidato real de toda la investigación.",
+   "en": "The missing option: data NOT in the price. Macro regime filter (VIX + credit HYG/LQD from Yahoo) that puts the bot flat on cross-asset risk signals. With the filter, the bot SURVIVES COVID at x4 (Sharpe 1.38) where it previously blew up — the first real edge candidate of the entire research.",
+   "pt": "A opção que faltava: dados que NÃO estão no preço. Filtro de regime macro (VIX + crédito HYG/LQD do Yahoo) que coloca o bot em flat ante sinal de risco cross-asset. Com o filtro, o bot SOBREVIVE o COVID a x4 (Sharpe 1,38) onde antes explodia — o primeiro candidato real de edge de toda a investigação."
+  },
+  "name": {
+   "es": "Bot + filtro macro regimen v15",
+   "en": "Bot + macro regime filter v15",
+   "pt": "Bot + filtro de regime macro v15"
+  },
   "family": "bot",
   "date": "2026-06-08T16:01:39",
-  "description": "Bot con FILTRO DE REGIMEN macro (VIX + credito HYG/LQD): se pone FLAT cuando hay senal de riesgo (VIX>28, spike de VIX, o credito deteriorandose). DATOS DISTINTOS al precio. Leverage x4, basket 2019-2024.",
+  "description": {
+   "es": "Bot con FILTRO DE REGIMEN macro (VIX + credito HYG/LQD): se pone FLAT cuando hay senal de riesgo (VIX>28, spike de VIX, o credito deteriorandose). DATOS DISTINTOS al precio. Leverage x4, basket 2019-2024.",
+   "en": "Bot with a MACRO REGIME FILTER (VIX + credit HYG/LQD): goes FLAT when there is a cross-asset risk signal (VIX>28, VIX spike, or deteriorating credit). DIFFERENT DATA from price. Leverage x4, basket 2019-2024.",
+   "pt": "Bot com FILTRO DE REGIME MACRO (VIX + crédito HYG/LQD): vai a FLAT quando há sinal de risco cross-asset (VIX>28, spike de VIX, ou crédito se deteriorando). DADOS DIFERENTES do preço. Alavancagem x4, basket 2019-2024."
+  },
   "params": {
    "leverage": 4,
    "vix_level": 28,
@@ -1133,7 +1817,11 @@
    "credit_win": 60,
    "flat_days": 878
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "Filtro macro A PRIORI (no optimizado). El bot SIN filtro reventaba en COVID a x2+. Datos: VIX y credito (HYG/LQD) de Yahoo. Primer intento de salir del precio-solo.",
   "metrics": {
    "Total Return [%]": 190.43886571493823,
@@ -1152,11 +1840,23 @@
  {
   "id": "20260607_214233_bot-atlas-vol-target-paper-v14",
   "v": 14,
-  "analysis": "Se intentó proteger con volatility targeting… y reventó PEOR (−21.6%). Causa: la volatilidad rezagada estaba baja justo antes del gap súbito, así que el sistema puso MÁS leverage entrando al crash. Lección que marcó el diseño del bot actual.",
-  "name": "Bot ATLAS vol-target paper v14",
+  "analysis": {
+   "es": "Se intentó proteger con volatility targeting… y reventó PEOR (−21.6%). Causa: la volatilidad rezagada estaba baja justo antes del gap súbito, así que el sistema puso MÁS leverage entrando al crash. Lección que marcó el diseño del bot actual.",
+   "en": "Tried to protect with volatility targeting… and it blew up WORSE (−21.6%). Cause: lagged volatility was low just before the sudden gap, so the system put MORE leverage going into the crash. Lesson that shaped the current bot design.",
+   "pt": "Tentou-se proteger com volatility targeting… e explodiu PIOR (−21,6%). Causa: a volatilidade defasada estava baixa logo antes do gap súbito, então o sistema colocou MAIS alavancagem entrando no crash. Lição que moldou o design atual do bot."
+  },
+  "name": {
+   "es": "Bot ATLAS vol-target paper v14",
+   "en": "Bot ATLAS vol-target paper v14",
+   "pt": "Bot ATLAS vol-target paper v14"
+  },
   "family": "bot",
   "date": "2026-06-07T21:42:33",
-  "description": "Forward-test en papel del bot con VOLATILITY TARGETING (leverage dinamico = vol objetivo / vol realizada -> baja exposicion en crashes) + risk-parity long + reglas FTMO, sobre el basket 2019-2024. Un solo camino historico real.",
+  "description": {
+   "es": "Forward-test en papel del bot con VOLATILITY TARGETING (leverage dinamico = vol objetivo / vol realizada -> baja exposicion en crashes) + risk-parity long + reglas FTMO, sobre el basket 2019-2024. Un solo camino historico real.",
+   "en": "Paper forward-test of the bot with VOLATILITY TARGETING (dynamic leverage = target vol / realized vol → lower exposure in crashes) + risk-parity long + FTMO rules, on the basket 2019-2024. A single real historical path.",
+   "pt": "Forward-test em papel do bot com VOLATILITY TARGETING (alavancagem dinâmica = vol alvo / vol realizada → menor exposição em crashes) + risk-parity long + regras FTMO, no basket 2019-2024. Um único caminho histórico real."
+  },
   "params": {
    "target_vol": 0.095,
    "max_leverage": 4.0,
@@ -1181,7 +1881,11 @@
    "vol_window": 60,
    "max_dd": 0.1
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Vol targeting: leverage medio x3.15. Sobrevivio=False (daily_loss), retorno -14.2%, Sharpe -0.91, MaxDD -21.6%. Compara con v13 (sin vol targeting, reventó en COVID). Modulo en D:\\ATLAS\\bot\\; falta adaptador MT5.",
   "metrics": {
    "Total Return [%]": -14.177774854869273,
@@ -1200,11 +1904,23 @@
  {
   "id": "20260607_214022_bot-atlas-paper-run-funded-v13",
   "v": 13,
-  "analysis": "Primer bot desplegable a datos reales. A x2 REVENTÓ en el COVID (MaxDD −15%): el Monte Carlo no reproducía un crash sostenido y correlacionado. La teoría sobrevivía; la realidad no.",
-  "name": "Bot ATLAS paper-run funded v13",
+  "analysis": {
+   "es": "Primer bot desplegable a datos reales. A x2 REVENTÓ en el COVID (MaxDD −15%): el Monte Carlo no reproducía un crash sostenido y correlacionado. La teoría sobrevivía; la realidad no.",
+   "en": "First deployable bot on real data. At x2 it BLEW UP in COVID (MaxDD −15%): the Monte Carlo didn't reproduce a sustained, correlated crash. The theory survived; reality did not.",
+   "pt": "Primeiro bot implantável em dados reais. A x2 EXPLODIU no COVID (MaxDD −15%): o Monte Carlo não reproduzia um crash sustentado e correlacionado. A teoria sobrevivia; a realidade não."
+  },
+  "name": {
+   "es": "Bot ATLAS paper-run funded v13",
+   "en": "Bot ATLAS paper-run funded v13",
+   "pt": "Bot ATLAS paper-run funded v13"
+  },
   "family": "bot",
   "date": "2026-06-07T21:40:22",
-  "description": "Forward-test en papel del bot desplegable (estrategia risk-parity long + gestion de riesgo FTMO) sobre el basket 2019-2024 en modo fondeado x2. Un solo camino historico real (no Monte Carlo): valida la logica antes de conectar MT5.",
+  "description": {
+   "es": "Forward-test en papel del bot desplegable (estrategia risk-parity long + gestion de riesgo FTMO) sobre el basket 2019-2024 en modo fondeado x2. Un solo camino historico real (no Monte Carlo): valida la logica antes de conectar MT5.",
+   "en": "Paper forward-test of the deployable bot (risk-parity long strategy + FTMO risk management) on the basket 2019-2024 in funded mode x2. A single real historical path (no Monte Carlo): validates logic before connecting MT5.",
+   "pt": "Forward-test em papel do bot implantável (estratégia risk-parity long + gestão de risco FTMO) no basket 2019-2024 em modo fondeado x2. Um único caminho histórico real (não Monte Carlo): valida a lógica antes de conectar o MT5."
+  },
   "params": {
    "leverage": 2.0,
    "instrumentos": [
@@ -1228,7 +1944,11 @@
    "max_dd": 0.1,
    "daily_loss": 0.05
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Sobrevivio=False (max_drawdown), retorno -10.3%, Sharpe -0.95, MaxDD -15.3%. Modulo desplegable listo en D:\\ATLAS\\bot\\; falta el adaptador MT5 (stub en broker.py).",
   "metrics": {
    "Total Return [%]": -10.29808704185199,
@@ -1246,11 +1966,23 @@
  {
   "id": "20260607_212532_stress-test-por-regimen-v12",
   "v": 12,
-  "analysis": "Prueba de estrés por régimen (historia 2006-2024). El EV se mantiene positivo en TODAS las crisis (2008, COVID, 2022) pero se desploma a ≈breakeven en un bear sostenido. Resiliente pero dependiente del régimen; y el bootstrap subestima los drawdowns largos, así que un bear real sería peor.",
-  "name": "Stress test por regimen v12",
+  "analysis": {
+   "es": "Prueba de estrés por régimen (historia 2006-2024). El EV se mantiene positivo en TODAS las crisis (2008, COVID, 2022) pero se desploma a ≈breakeven en un bear sostenido. Resiliente pero dependiente del régimen; y el bootstrap subestima los drawdowns largos, así que un bear real sería peor.",
+   "en": "Stress test by regime (2006-2024 history). EV stays positive in ALL crises (2008, COVID, 2022) but collapses to ≈breakeven in a sustained bear market. Resilient but regime-dependent; and the block bootstrap underestimates long drawdowns, so a real bear would be worse.",
+   "pt": "Teste de estresse por regime (histórico 2006-2024). O EV se mantém positivo em TODAS as crises (2008, COVID, 2022), mas despenca para ≈breakeven num bear sustentado. Resiliente, mas dependente do regime; e o bootstrap de blocos subestima os drawdowns longos, então um bear real seria pior."
+  },
+  "name": {
+   "es": "Stress test por regimen v12",
+   "en": "Stress test by regime v12",
+   "pt": "Stress test por regime v12"
+  },
   "family": "risk",
   "date": "2026-06-07T21:25:32",
-  "description": "Re-corre el EV (challenge x4 + fondeo x2) sobre ventanas de mercado feo (crisis 2008, USD 2014-15, COVID 2020, bear 2022) vs el total. La prueba de fuego: ¿sobrevive el EV en crisis o es solo beta alcista?",
+  "description": {
+   "es": "Re-corre el EV (challenge x4 + fondeo x2) sobre ventanas de mercado feo (crisis 2008, USD 2014-15, COVID 2020, bear 2022) vs el total. La prueba de fuego: ¿sobrevive el EV en crisis o es solo beta alcista?",
+   "en": "Re-runs the EV (challenge x4 + funded x2) on bad-market windows (2008 crisis, USD/commodities 2014-15, COVID 2020, bear 2022) vs. total. The stress test: does EV survive in crises or is it just bullish beta?",
+   "pt": "Re-executa o EV (challenge x4 + fondeado x2) em janelas de mercado ruim (crise 2008, USD/commodities 2014-15, COVID 2020, bear 2022) vs. total. O teste de estresse: o EV sobrevive em crises ou é apenas beta de alta?"
+  },
   "params": {
    "challenge_lev": 4,
    "funded_lev": 2,
@@ -1262,7 +1994,11 @@
     "Full 2006-2024"
    ]
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "Si el EV cae a negativo en crisis, el algoritmo es beta alcista y NO se arriesga dinero sin un edge robusto. Si aguanta, el sizing+diversificacion da resiliencia real.",
   "metrics": {
    "EV crisis 2008 ($)": 1229.0,
@@ -1279,11 +2015,23 @@
  {
   "id": "20260607_211742_ev-real-prop-firm-challenge-fondeo-v11",
   "v": 11,
-  "analysis": "EV del negocio completo (challenge + fase fondeada con sizing dual: agresivo para pasar, conservador para ordeñar). Dio EV ≈ +$5,900/intento. Honestidad: ese número es solo BETA del basket en un periodo alcista — es levantar beta largo con capital de la prop firm, no alpha.",
-  "name": "EV real prop firm (challenge+fondeo) v11",
+  "analysis": {
+   "es": "EV del negocio completo (challenge + fase fondeada con sizing dual: agresivo para pasar, conservador para ordeñar). Dio EV ≈ +$5,900/intento. Honestidad: ese número es solo BETA del basket en un periodo alcista — es levantar beta largo con capital de la prop firm, no alpha.",
+   "en": "EV of the full business (challenge + funded phase with dual sizing: aggressive to pass, conservative to milk). Gave EV ≈ +$5,900/attempt. Honesty: that number is only BETA of the basket in a bullish period — it's leveraging long beta with the prop firm's capital, not alpha.",
+   "pt": "EV do negócio completo (challenge + fase fondeada com sizing dual: agressivo para passar, conservador para ordenhar). Deu EV ≈ +$5.900/tentativa. Honestidade: esse número é apenas BETA do basket num período de alta — é alavancar beta longo com o capital da prop firm, não alpha."
+  },
+  "name": {
+   "es": "EV real prop firm (challenge+fondeo) v11",
+   "en": "Real EV prop firm (challenge+funded) v11",
+   "pt": "EV real prop firm (challenge+funded) v11"
+  },
   "family": "risk",
   "date": "2026-06-07T21:17:42",
-  "description": "Monte Carlo de la fase FONDEADA (reglas FTMO: DD 10%, perdida diaria 5%, split 80%, retiro mensual) combinado con P(pasar) y el fee, para el EV REAL por intento segun el sizing en la cuenta fondeada. Responde: ¿se gana dinero operando prop firms?",
+  "description": {
+   "es": "Monte Carlo de la fase FONDEADA (reglas FTMO: DD 10%, perdida diaria 5%, split 80%, retiro mensual) combinado con P(pasar) y el fee, para el EV REAL por intento segun el sizing en la cuenta fondeada. Responde: ¿se gana dinero operando prop firms?",
+   "en": "Monte Carlo of the FUNDED phase (FTMO rules: 10% DD, 5% daily loss, 80% split, monthly withdrawal) combined with P(pass) and the fee, for the REAL EV per attempt based on funded account sizing. Answers: does trading prop firms make money?",
+   "pt": "Monte Carlo da fase FONDEADA (regras FTMO: DD 10%, perda diária 5%, split 80%, retirada mensal) combinado com P(passar) e a taxa, para o EV REAL por tentativa conforme o sizing na conta fondeada. Responde: ganha-se dinheiro operando prop firms?"
+  },
   "params": {
    "account": 100000.0,
    "fee": 500.0,
@@ -1298,7 +2046,11 @@
     4
    ]
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "P(pasar)=47.9%. Mejor EV/intento=$5,919 con funded x2. Honesto: usa solo BETA del basket 2019-24 (período alcista) -> optimista; en mercado feo cae. Pero muestra la mecanica real: el dinero esta en sobrevivir la fase fondeada con sizing conservador para cobrar varios payouts. Sin alfa, todo depende del beta + sizing.",
   "metrics": {
    "P pasar (%)": 47.9,
@@ -1316,11 +2068,23 @@
  {
   "id": "20260607_211610_risk-parity-sizing-optimo-v10",
   "v": 10,
-  "analysis": "¿Mejora el risk parity la probabilidad de pasar? No: se topa en ~45-48%, igual que equal-weight. Lo que manda es la volatilidad total para alcanzar el objetivo a tiempo, no la sofisticación del sizing.",
-  "name": "Risk parity + sizing optimo v10",
+  "analysis": {
+   "es": "¿Mejora el risk parity la probabilidad de pasar? No: se topa en ~45-48%, igual que equal-weight. Lo que manda es la volatilidad total para alcanzar el objetivo a tiempo, no la sofisticación del sizing.",
+   "en": "Does risk parity improve the probability of passing? No: it caps at ~45-48%, same as equal-weight. What matters is total volatility to hit the target in time, not the sophistication of sizing.",
+   "pt": "O risk parity melhora a probabilidade de passar? Não: trava em ~45-48%, igual ao equal-weight. O que importa é a volatilidade total para atingir o objetivo a tempo, não a sofisticação do sizing."
+  },
+  "name": {
+   "es": "Risk parity + sizing optimo v10",
+   "en": "Risk parity + optimal sizing v10",
+   "pt": "Risk parity + sizing ótimo v10"
+  },
   "family": "risk",
   "date": "2026-06-07T21:16:10",
-  "description": "Sistema base risk-parity (pesos inversos a la vol, sin lookahead) + barrido de leverage en el simulador de challenge para maximizar P(pasar). Compara vs equal-weight (#9). Incluye EV ilustrativo por intento. Objetivo: cobrar de prop firms.",
+  "description": {
+   "es": "Sistema base risk-parity (pesos inversos a la vol, sin lookahead) + barrido de leverage en el simulador de challenge para maximizar P(pasar). Compara vs equal-weight (#9). Incluye EV ilustrativo por intento. Objetivo: cobrar de prop firms.",
+   "en": "Base risk-parity system (inverse-vol weights, no lookahead) + leverage sweep in the challenge simulator to maximize P(pass). Compares vs equal-weight (#9). Includes illustrative EV per attempt. Goal: earn from prop firms.",
+   "pt": "Sistema base risk-parity (pesos inversos à vol, sem lookahead) + varredura de alavancagem no simulador de challenge para maximizar P(passar). Compara vs equal-weight (#9). Inclui EV ilustrativo por tentativa. Objetivo: ganhar de prop firms."
+  },
   "params": {
    "weighting": "risk_parity_60d",
    "leverages": [
@@ -1336,7 +2100,11 @@
    "daily_loss": 0.05,
    "max_dd": 0.1
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "RP mejor P(pasar)=46.0% a x6 (Sharpe RP 0.58 vs EW 0.70). EV ilustrativo/intento=$3,410 (OPTIMISTA: asume cobrar un payout en la fase fondeada; modelar esa fase es el siguiente paso). El dinero = sizing + disciplina, no alfa.",
   "metrics": {
    "P pasar (%)": 46.0,
@@ -1355,11 +2123,23 @@
  {
   "id": "20260607_210548_simulador-prop-firm-cartera-v9",
   "v": 9,
-  "analysis": "Giro estratégico: si no hay alpha, ¿qué decide pasar un fondeo? Un simulador Monte Carlo de las reglas FTMO reveló que pasar es 90% SIZING + disciplina. Una cartera diversificada bien dimensionada pasa ~48% de las veces, y ~38% incluso en mercado plano sin edge — vs el ~7% real que falla por comportamiento.",
-  "name": "Simulador prop-firm (cartera) v9",
+  "analysis": {
+   "es": "Giro estratégico: si no hay alpha, ¿qué decide pasar un fondeo? Un simulador Monte Carlo de las reglas FTMO reveló que pasar es 90% SIZING + disciplina. Una cartera diversificada bien dimensionada pasa ~48% de las veces, y ~38% incluso en mercado plano sin edge — vs el ~7% real que falla por comportamiento.",
+   "en": "Strategic pivot: if there's no alpha, what decides passing a challenge? A Monte Carlo simulator of FTMO rules revealed that passing is 90% SIZING + discipline. A well-sized diversified portfolio passes ~48% of the time, and ~38% even in a flat market with no edge — vs the ~7% real rate that fails due to behavior.",
+   "pt": "Pivô estratégico: se não há alpha, o que decide passar um challenge? Um simulador Monte Carlo das regras FTMO revelou que passar é 90% SIZING + disciplina. Uma carteira diversificada bem dimensionada passa ~48% das vezes, e ~38% mesmo em mercado plano sem edge — vs os ~7% reais que falham por comportamento."
+  },
+  "name": {
+   "es": "Simulador prop-firm (cartera) v9",
+   "en": "Prop-firm simulator (portfolio) v9",
+   "pt": "Simulador prop-firm (carteira) v9"
+  },
   "family": "risk",
   "date": "2026-06-07T21:05:48",
-  "description": "Monte Carlo del challenge tipo FTMO (objetivo 10%, perdida diaria 5%, drawdown max 10%, 60 dias) sobre una cartera diversificada equal-weight, barriendo el leverage. Reformula el proyecto hacia el objetivo real: probabilidad de PASAR bajo reglas reales, no buscar alfa magica.",
+  "description": {
+   "es": "Monte Carlo del challenge tipo FTMO (objetivo 10%, perdida diaria 5%, drawdown max 10%, 60 dias) sobre una cartera diversificada equal-weight, barriendo el leverage. Reformula el proyecto hacia el objetivo real: probabilidad de PASAR bajo reglas reales, no buscar alfa magica.",
+   "en": "Monte Carlo of an FTMO-style challenge (target 10%, daily loss 5%, max drawdown 10%, 60 days) on a diversified equal-weight portfolio, sweeping leverage. Reformulates the project toward the real objective: probability of PASSING under real rules, not hunting magic alpha.",
+   "pt": "Monte Carlo de um challenge tipo FTMO (objetivo 10%, perda diária 5%, drawdown máx 10%, 60 dias) numa carteira diversificada equal-weight, varrendo a alavancagem. Reformula o projeto em direção ao objetivo real: probabilidade de PASSAR sob regras reais, não buscar alpha mágico."
+  },
   "params": {
    "profit_target": 0.1,
    "daily_loss": 0.05,
@@ -1376,7 +2156,11 @@
    "n_sims": 4000,
    "block": 5
   },
-  "verdict": "sirvió",
+  "verdict": {
+   "es": "sirvió",
+   "en": "worked",
+   "pt": "serviu"
+  },
   "notes": "Mejor P(pasar)=47.9% con leverage x4. Estrategia base Sharpe 0.70. Honesto: sin alfa real, pasar depende de agresividad vs reglas de DD. Recordatorio: ~7% de los traders cobran (FPFX).",
   "metrics": {
    "P pasar (%)": 47.9,
@@ -1395,11 +2179,23 @@
  {
   "id": "20260607_205914_meta-labeling-reversion-sesion-v8",
   "v": 8,
-  "analysis": "Meta-labeling para filtrar solo las mejores reversiones del #7. Falló: fuera de muestra el gross era −1.41, y el desglose por año mostró el Sharpe cambiando de signo cada año. Ese '+0.20' era ruido que promedió positivo, no un edge — ilusión cazada.",
-  "name": "Meta-labeling reversion sesion v8",
+  "analysis": {
+   "es": "Meta-labeling para filtrar solo las mejores reversiones del #7. Falló: fuera de muestra el gross era −1.41, y el desglose por año mostró el Sharpe cambiando de signo cada año. Ese '+0.20' era ruido que promedió positivo, no un edge — ilusión cazada.",
+   "en": "Meta-labeling to filter only the best reversions from #7. Failed: out-of-sample gross was −1.41, and the year-by-year breakdown showed Sharpe flipping sign every year. That '+0.20' was noise that averaged positive, not an edge — illusion caught.",
+   "pt": "Meta-labeling para filtrar apenas as melhores reversões do #7. Falhou: fora da amostra o gross era −1,41, e o detalhamento por ano mostrou o Sharpe mudando de sinal todo ano. Esse '+0,20' era ruído que deu média positiva, não um edge — ilusão caçada."
+  },
+  "name": {
+   "es": "Meta-labeling reversion sesion v8",
+   "en": "Meta-labeling session reversion v8",
+   "pt": "Meta-labeling reversão de sessão v8"
+  },
   "family": "intraday",
   "date": "2026-06-07T20:59:14",
-  "description": "Meta-labeling (Lopez de Prado) sobre la reversion de sesion #7: XGBoost binario predice que reversiones seran net-positivas (features conocidas en la entrada) y solo operamos las de alta conviccion (p>0.5). Split cronologico, OOS, costes.",
+  "description": {
+   "es": "Meta-labeling (Lopez de Prado) sobre la reversion de sesion #7: XGBoost binario predice que reversiones seran net-positivas (features conocidas en la entrada) y solo operamos las de alta conviccion (p>0.5). Split cronologico, OOS, costes.",
+   "en": "Meta-labeling (López de Prado) on session reversion #7: binary XGBoost predicts which reversions will be net-positive (features known at entry) and only trades high-conviction ones (p>0.5). Chronological split, OOS, costs.",
+   "pt": "Meta-labeling (López de Prado) sobre a reversão de sessão #7: XGBoost binário prevê quais reversões serão net-positivas (features conhecidas na entrada) e só opera as de alta convicção (p>0,5). Split cronológico, OOS, custos."
+  },
   "params": {
    "features": [
     "rel_range",
@@ -1415,7 +2211,11 @@
    "test": 369,
    "seleccionados": 189
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Sharpe seleccionados=-4.142 (sin filtro -3.997; gross sel -1.411), PSR=0.000, 189/369 trades. Meta-labeling AFML 2018: el ML elige los mejores trades para que el edge sobreviva a los costes.",
   "metrics": {
    "Total Return [%]": -5.039320347349707,
@@ -1436,11 +2236,23 @@
  {
   "id": "20260607_205435_reversion-de-sesion-fade-v7",
   "v": 7,
-  "analysis": "Si el FX revierte, probemos la reversión (fade de sesión). Apareció un edge REAL antes de costos (Sharpe +0.20)… pero neto fue −1.99: 1553 operaciones lo enterraron. El muro no era la falta de señal, eran los costos.",
-  "name": "Reversion de sesion (fade) v7",
+  "analysis": {
+   "es": "Si el FX revierte, probemos la reversión (fade de sesión). Apareció un edge REAL antes de costos (Sharpe +0.20)… pero neto fue −1.99: 1553 operaciones lo enterraron. El muro no era la falta de señal, eran los costos.",
+   "en": "If FX reverts, let's try reversion (session fade). A REAL edge appeared before costs (Sharpe +0.20)… but net it was −1.99: 1553 trades buried it. The wall wasn't a lack of signal — it was costs.",
+   "pt": "Se o FX reverte, vamos tentar a reversão (fade de sessão). Um edge REAL apareceu antes dos custos (Sharpe +0,20)… mas líquido foi −1,99: 1553 operações o enterraram. O obstáculo não era falta de sinal — eram os custos."
+  },
+  "name": {
+   "es": "Reversion de sesion (fade) v7",
+   "en": "Session reversion (fade) v7",
+   "pt": "Reversão de sessão (fade) v7"
+  },
   "family": "intraday",
   "date": "2026-06-07T20:54:35",
-  "description": "Mean-reversion intradia: fade del toque del rango asiatico hacia el medio. Motivado por #6 (el breakout pierde significativo -> EUR/USD revierte). TP=medio del rango, SL=0.5x mas alla. EUR/USD M1, costes, parametros fijos.",
+  "description": {
+   "es": "Mean-reversion intradia: fade del toque del rango asiatico hacia el medio. Motivado por #6 (el breakout pierde significativo -> EUR/USD revierte). TP=medio del rango, SL=0.5x mas alla. EUR/USD M1, costes, parametros fijos.",
+   "en": "Intraday mean-reversion: fade the touch of the Asian range toward the midpoint. Motivated by #6 (breakout loses → EUR/USD reverts). TP=range midpoint, SL=0.5x beyond. EUR/USD M1, costs, fixed parameters.",
+   "pt": "Reversão intradiária: fade do toque do rango asiático em direção ao ponto médio. Motivado pelo #6 (breakout perde → EUR/USD reverte). TP=meio do rango, SL=0,5x além. EUR/USD M1, custos, parâmetros fixos."
+  },
   "params": {
    "asia_end": 7,
    "sess_end": 16,
@@ -1450,7 +2262,11 @@
    "slippage": 2e-05,
    "trades": 1553
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Sharpe=-1.987 (sin costes 0.200), win=50.3%, PSR=0.000. Test de la hipotesis de reversion intradia en FX majors.",
   "metrics": {
    "Total Return [%]": -22.53616431947566,
@@ -1470,11 +2286,23 @@
  {
   "id": "20260607_205310_orb-sesion-londres-ny-v6",
   "v": 6,
-  "analysis": "Edge intradía de sesión: breakout de los rangos de apertura de Londres/NY en M1. Perdió significativo (Sharpe −0.96, PSR 0.009). El FX no rompe, revierte intradía (al revés que los índices) — Zarattini & Aziz 2023.",
-  "name": "ORB sesion Londres-NY v6",
+  "analysis": {
+   "es": "Edge intradía de sesión: breakout de los rangos de apertura de Londres/NY en M1. Perdió significativo (Sharpe −0.96, PSR 0.009). El FX no rompe, revierte intradía (al revés que los índices) — Zarattini & Aziz 2023.",
+   "en": "Intraday session edge: breakout of London/NY opening ranges on M1. Lost significantly (Sharpe −0.96, PSR 0.009). FX doesn't break out, it reverts intraday (opposite to indices) — Zarattini & Aziz 2023.",
+   "pt": "Edge intradiário de sessão: breakout dos rangos de abertura de Londres/NY em M1. Perdeu significativo (Sharpe −0,96, PSR 0,009). O FX não faz breakout, reverte intradiariamente (ao contrário dos índices) — Zarattini & Aziz 2023."
+  },
+  "name": {
+   "es": "ORB sesion Londres-NY v6",
+   "en": "ORB London-NY session v6",
+   "pt": "ORB sessão Londres-NY v6"
+  },
   "family": "intraday",
   "date": "2026-06-07T20:53:10",
-  "description": "Opening Range Breakout: rango asiatico (00:00-07:00 UTC), breakout en la sesion Londres/NY (07:00-16:00), SL al lado opuesto, TP=1x rango, salida por tiempo. 1 trade/dia, EUR/USD M1, costes incluidos. Parametros fijos a priori.",
+  "description": {
+   "es": "Opening Range Breakout: rango asiatico (00:00-07:00 UTC), breakout en la sesion Londres/NY (07:00-16:00), SL al lado opuesto, TP=1x rango, salida por tiempo. 1 trade/dia, EUR/USD M1, costes incluidos. Parametros fijos a priori.",
+   "en": "Opening Range Breakout: Asian range (00:00-07:00 UTC), breakout in London/NY session (07:00-16:00), SL at opposite side, TP=1x range, time exit. 1 trade/day, EUR/USD M1, costs included. Parameters fixed a priori.",
+   "pt": "Opening Range Breakout: rango asiático (00:00-07:00 UTC), breakout na sessão Londres/NY (07:00-16:00), SL no lado oposto, TP=1x rango, saída por tempo. 1 trade/dia, EUR/USD M1, custos incluídos. Parâmetros fixos a priori."
+  },
   "params": {
    "asia_end": 7,
    "sess_end": 16,
@@ -1483,7 +2311,11 @@
    "slippage": 2e-05,
    "trades": 1553
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "Sharpe=-0.955 vs Buy&Hold -0.212. Win=49.9%, PSR=0.009. Edge intradia de sesion (volatility expansion al abrir Londres/NY). Primer enfoque NO direccional-por-ML: estructura horaria del mercado.",
   "metrics": {
    "Total Return [%]": -19.10160574360833,
@@ -1503,11 +2335,23 @@
  {
   "id": "20260607_204455_tsmom-cartera-15-activos-v5",
   "v": 5,
-  "analysis": "La literatura dice que el momentum necesita DIVERSIFICACIÓN: TSMOM sobre 15 instrumentos con volatility scaling. El MCPT p=0.003 parecía prometedor… hasta ver que el Sharpe SIN costos era −0.003 (cero edge) y que el Buy&Hold del basket (Sharpe 0.39) le ganaba. El p bajo era artefacto del turnover, no alpha — una de las ilusiones cazadas.",
-  "name": "TSMOM cartera 15 activos v5",
+  "analysis": {
+   "es": "La literatura dice que el momentum necesita DIVERSIFICACIÓN: TSMOM sobre 15 instrumentos con volatility scaling. El MCPT p=0.003 parecía prometedor… hasta ver que el Sharpe SIN costos era −0.003 (cero edge) y que el Buy&Hold del basket (Sharpe 0.39) le ganaba. El p bajo era artefacto del turnover, no alpha — una de las ilusiones cazadas.",
+   "en": "The literature says momentum needs DIVERSIFICATION: TSMOM on 15 instruments with volatility scaling. The MCPT p=0.003 looked promising… until seeing that the Sharpe WITHOUT costs was −0.003 (zero edge) and the basket Buy&Hold (Sharpe 0.39) beat the strategy. The low p-value was a turnover artifact, not alpha — one of the illusions caught.",
+   "pt": "A literatura diz que o momentum precisa de DIVERSIFICAÇÃO: TSMOM em 15 instrumentos com volatility scaling. O MCPT p=0,003 parecia promissor… até ver que o Sharpe SEM custos era −0,003 (zero edge) e que o Buy&Hold do basket (Sharpe 0,39) superava a estratégia. O p baixo era artefato do turnover, não alpha — uma das ilusões caçadas."
+  },
+  "name": {
+   "es": "TSMOM cartera 15 activos v5",
+   "en": "TSMOM portfolio 15 assets v5",
+   "pt": "TSMOM carteira 15 ativos v5"
+  },
   "family": "trend",
   "date": "2026-06-07T20:44:55",
-  "description": "Time-series momentum DE CARTERA (Moskowitz et al. 2012) sobre 15 instrumentos (FX majors + metales + indices + energia) con VOLATILITY SCALING (risk parity). Señal = signo del retorno de 120 dias; tamaño ~ target_vol/vol_realizada. Costes incluidos.",
+  "description": {
+   "es": "Time-series momentum DE CARTERA (Moskowitz et al. 2012) sobre 15 instrumentos (FX majors + metales + indices + energia) con VOLATILITY SCALING (risk parity). Señal = signo del retorno de 120 dias; tamaño ~ target_vol/vol_realizada. Costes incluidos.",
+   "en": "Portfolio time-series momentum (Moskowitz et al. 2012) on 15 instruments (FX majors + metals + indices + energy) with VOLATILITY SCALING (risk parity). Signal = sign of 120-day return; size ~ target_vol/realized_vol. Costs included.",
+   "pt": "Time-series momentum de carteira (Moskowitz et al. 2012) em 15 instrumentos (FX majors + metais + índices + energia) com VOLATILITY SCALING (risk parity). Sinal = sinal do retorno de 120 dias; tamanho ~ target_vol/vol_realizada. Custos incluídos."
+  },
   "params": {
    "instrumentos": [
     "AUDUSD",
@@ -1533,7 +2377,11 @@
    "cost_rate": 0.0002,
    "bars": 1754
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "Sharpe=-0.105, PSR=0.391, MCPT p=0.003, MaxDD=-14.8%. Fuente: Moskowitz, Ooi & Pedersen (2012) + critica de volatility scaling. Diversificacion + vol scaling = lo que la literatura valida.",
   "metrics": {
    "Total Return [%]": -4.125217317824181,
@@ -1555,11 +2403,23 @@
  {
   "id": "20260607_152309_time-series-momentum-diario-v4",
   "v": 4,
-  "analysis": "Cambio de palanca: Time-Series Momentum diario (Moskowitz et al. 2012). Bajar a diario sí resolvió los costos (solo 75 trades), pero la señal volvió a ser ~aleatoria (PSR 0.47, p=0.58, Sharpe≈0). El momentum clásico tampoco vive en EUR/USD solo.",
-  "name": "Time-Series Momentum diario v4",
+  "analysis": {
+   "es": "Cambio de palanca: Time-Series Momentum diario (Moskowitz et al. 2012). Bajar a diario sí resolvió los costos (solo 75 trades), pero la señal volvió a ser ~aleatoria (PSR 0.47, p=0.58, Sharpe≈0). El momentum clásico tampoco vive en EUR/USD solo.",
+   "en": "Lever change: daily Time-Series Momentum (Moskowitz et al. 2012). Going daily did solve the cost problem (only 75 trades), but the signal was again ~random (PSR 0.47, p=0.58, Sharpe≈0). Classic momentum also doesn't survive on EUR/USD alone.",
+   "pt": "Mudança de abordagem: Time-Series Momentum diário (Moskowitz et al. 2012). Ir para frequência diária resolveu os custos (apenas 75 trades), mas o sinal voltou a ser ~aleatório (PSR 0,47, p=0,58, Sharpe≈0). O momentum clássico também não vive em EUR/USD isolado."
+  },
+  "name": {
+   "es": "Time-Series Momentum diario v4",
+   "en": "Daily Time-Series Momentum v4",
+   "pt": "Time-Series Momentum diário v4"
+  },
   "family": "trend",
   "date": "2026-06-07T15:23:09",
-  "description": "Time-series momentum (Moskowitz, Ooi & Pedersen 2012) a frecuencia DIARIA: long/short por el signo del retorno de los ultimos 120 dias. Cambio de palanca para atacar el problema de costes (muy pocos trades). Con costes reales.",
+  "description": {
+   "es": "Time-series momentum (Moskowitz, Ooi & Pedersen 2012) a frecuencia DIARIA: long/short por el signo del retorno de los ultimos 120 dias. Cambio de palanca para atacar el problema de costes (muy pocos trades). Con costes reales.",
+   "en": "Time-series momentum (Moskowitz, Ooi & Pedersen 2012) at DAILY frequency: long/short by the sign of the last 120-day return. Frequency change to tackle the cost problem (very few trades). With real costs.",
+   "pt": "Time-series momentum (Moskowitz, Ooi & Pedersen 2012) à frequência DIÁRIA: long/short pelo sinal do retorno dos últimos 120 dias. Mudança de frequência para atacar o problema de custos (poucos trades). Com custos reais."
+  },
   "params": {
    "estrategia": "TSMOM",
    "frecuencia": "diaria",
@@ -1568,7 +2428,11 @@
    "slippage": 2e-05,
    "bars": 1877
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "PSR=0.473, MCPT p=0.585, trades=75. Fuente: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Caveat: la literatura dice que el volatility scaling aporta gran parte del edge (lo probaremos en la siguiente). Lookback fijo a priori, no ajustado.",
   "metrics": {
    "Start": "2019-01-01 00:00:00+00:00",
@@ -1608,11 +2472,23 @@
  {
   "id": "20260607_151624_ml-meta-labeling-sma-xgboost-v3",
   "v": 3,
-  "analysis": "Meta-labeling canónico (AFML 2018): una SMA da la señal primaria y XGBoost decide cuáles tomar. La señal filtrada salió ~aleatoria (PSR 0.51, p=0.48) y el Sharpe neto −3.28 por costos. Confirmó que filtrar ruido sigue dando ruido.",
-  "name": "ML Meta-labeling SMA+XGBoost v3",
+  "analysis": {
+   "es": "Meta-labeling canónico (AFML 2018): una SMA da la señal primaria y XGBoost decide cuáles tomar. La señal filtrada salió ~aleatoria (PSR 0.51, p=0.48) y el Sharpe neto −3.28 por costos. Confirmó que filtrar ruido sigue dando ruido.",
+   "en": "Canonical meta-labeling (AFML 2018): an SMA gives the primary signal and XGBoost decides which to take. The filtered signal was ~random (PSR 0.51, p=0.48) and net Sharpe was −3.28 due to costs. Confirmed that filtering noise still gives noise.",
+   "pt": "Meta-labeling canônico (AFML 2018): uma SMA dá o sinal primário e o XGBoost decide quais tomar. O sinal filtrado saiu ~aleatório (PSR 0,51, p=0,48) e o Sharpe líquido foi −3,28 devido aos custos. Confirmou que filtrar ruído continua dando ruído."
+  },
+  "name": {
+   "es": "ML Meta-labeling SMA+XGBoost v3",
+   "en": "ML Meta-labeling SMA+XGBoost v3",
+   "pt": "ML Meta-labeling SMA+XGBoost v3"
+  },
   "family": "ml",
   "date": "2026-06-07T15:16:24",
-  "description": "Meta-labeling (Lopez de Prado): primario = cruce SMA 20/50 (direccion); secundario = XGBoost binario que decide si tomar o saltar cada señal. Backtest OOS con costes. El ML filtra, no predice direccion.",
+  "description": {
+   "es": "Meta-labeling (Lopez de Prado): primario = cruce SMA 20/50 (direccion); secundario = XGBoost binario que decide si tomar o saltar cada señal. Backtest OOS con costes. El ML filtra, no predice direccion.",
+   "en": "Meta-labeling (López de Prado): primary = SMA 20/50 crossover (direction); secondary = binary XGBoost that decides whether to take or skip each signal. OOS backtest with costs. ML filters, does not predict direction.",
+   "pt": "Meta-labeling (López de Prado): primário = cruzamento SMA 20/50 (direção); secundário = XGBoost binário que decide se toma ou pula cada sinal. Backtest OOS com custos. O ML filtra, não prevê direção."
+  },
   "params": {
    "primario": "SMA 20/50",
    "secundario": "XGBoost",
@@ -1623,7 +2499,11 @@
    "embargo": 24,
    "oos_bars": 11200
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "PSR=0.510, MCPT p=0.483, trades=1173. Enfoque canonico de meta-labeling (AFML 2018): el ML decide CUANDO operar el sistema base, no la direccion.",
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
@@ -1663,11 +2543,23 @@
  {
   "id": "20260607_151500_ml-xgboost-filtro-conviccion-v2",
   "v": 2,
-  "analysis": "Se añadió un filtro de convicción (operar solo si la probabilidad del modelo > 0.5). En vez de mejorar, hundió el resultado a Sharpe −4.79 con 1822 operaciones: ~33% del capital se fue en costos y la 'confianza' del modelo se invertía fuera de muestra. Más trades = más costos, no más edge.",
-  "name": "ML XGBoost + filtro conviccion v2",
+  "analysis": {
+   "es": "Se añadió un filtro de convicción (operar solo si la probabilidad del modelo > 0.5). En vez de mejorar, hundió el resultado a Sharpe −4.79 con 1822 operaciones: ~33% del capital se fue en costos y la 'confianza' del modelo se invertía fuera de muestra. Más trades = más costos, no más edge.",
+   "en": "A conviction filter was added (trade only if model probability > 0.5). Instead of improving, it crashed the result to Sharpe −4.79 with 1822 trades: ~33% of capital went to costs and the model's 'confidence' inverted out-of-sample. More trades = more costs, not more edge.",
+   "pt": "Foi adicionado um filtro de convicção (opera só se probabilidade do modelo > 0,5). Em vez de melhorar, afundou o resultado para Sharpe −4,79 com 1822 trades: ~33% do capital foi para custos e a 'confiança' do modelo se inverteu fora da amostra. Mais trades = mais custos, não mais edge."
+  },
+  "name": {
+   "es": "ML XGBoost + filtro conviccion v2",
+   "en": "ML XGBoost + conviction filter v2",
+   "pt": "ML XGBoost + filtro de convicção v2"
+  },
   "family": "ml",
   "date": "2026-06-07T15:15:00",
-  "description": "Igual que v1 pero solo opera cuando la prob de la clase ganadora > 0.5 (umbral fijo a priori, no ajustado en test). Reduce drasticamente el nº de trades.",
+  "description": {
+   "es": "Igual que v1 pero solo opera cuando la prob de la clase ganadora > 0.5 (umbral fijo a priori, no ajustado en test). Reduce drasticamente el nº de trades.",
+   "en": "Same as v1 but only trades when the winning class probability > 0.5 (fixed threshold, not tuned on test). Drastically reduces trade count.",
+   "pt": "Igual ao v1, mas só opera quando a probabilidade da classe vencedora > 0,5 (limiar fixo, não ajustado no teste). Reduz drasticamente o número de trades."
+  },
   "params": {
    "model": "XGBoost",
    "conviccion": 0.5,
@@ -1678,7 +2570,11 @@
    "embargo": 24,
    "oos_bars": 11200
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "PSR=0.140, MCPT p=0.860, trades=1822. Idea: menos trades = menos costes (evidencia FX 2024 + meta-labeling Lopez de Prado). Umbral 0.5 FIJO para no autoengañarnos ajustando parametros en el test.",
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
@@ -1718,11 +2614,23 @@
  {
   "id": "20260607_151319_ml-xgboost-triple-barrier-v1",
   "v": 1,
-  "analysis": "Primer modelo de ML real: XGBoost con etiquetado triple-barrera (López de Prado) prediciendo dirección en cada barra. Fuera de muestra resultó indistinguible de lanzar una moneda (MCPT p=0.78, PSR 0.19). Lección temprana y dura: no hay señal direccional en el precio H1 con features OHLCV simples.",
-  "name": "ML XGBoost triple-barrier v1",
+  "analysis": {
+   "es": "Primer modelo de ML real: XGBoost con etiquetado triple-barrera (López de Prado) prediciendo dirección en cada barra. Fuera de muestra resultó indistinguible de lanzar una moneda (MCPT p=0.78, PSR 0.19). Lección temprana y dura: no hay señal direccional en el precio H1 con features OHLCV simples.",
+   "en": "First real ML model: XGBoost with triple-barrier labeling (López de Prado) predicting direction on each bar. Out-of-sample it was indistinguishable from a coin flip (MCPT p=0.78, PSR 0.19). An early and harsh lesson: there is no directional signal in H1 price with simple OHLCV features.",
+   "pt": "Primeiro modelo de ML real: XGBoost com etiquetado triple-barrier (López de Prado) prevendo direção em cada barra. Fora da amostra foi indistinguível de jogar uma moeda (MCPT p=0,78, PSR 0,19). Lição precoce e dura: não há sinal direcional no preço H1 com features OHLCV simples."
+  },
+  "name": {
+   "es": "ML XGBoost triple-barrier v1",
+   "en": "ML XGBoost triple-barrier v1",
+   "pt": "ML XGBoost triple-barrier v1"
+  },
   "family": "ml",
   "date": "2026-06-07T15:13:19",
-  "description": "XGBoost multiclase sobre etiquetas triple-barrera (Lopez de Prado, AFML 2018) con features de dominio sin lookahead. Split cronologico purgado (embargo=24). Backtest SOLO out-of-sample con costes reales (0.7 pip + slippage).",
+  "description": {
+   "es": "XGBoost multiclase sobre etiquetas triple-barrera (Lopez de Prado, AFML 2018) con features de dominio sin lookahead. Split cronologico purgado (embargo=24). Backtest SOLO out-of-sample con costes reales (0.7 pip + slippage).",
+   "en": "XGBoost multiclass on triple-barrier labels (López de Prado, AFML 2018) with domain features, no lookahead. Chronological purged split (embargo=24). Backtest out-of-sample only, with real costs (0.7 pip + slippage).",
+   "pt": "XGBoost multiclasse com rótulos triple-barrier (López de Prado, AFML 2018) e features de domínio, sem lookahead. Split cronológico purgado (embargo=24). Backtest apenas out-of-sample, com custos reais (0,7 pip + slippage)."
+  },
   "params": {
    "model": "XGBoost",
    "n_estimators": 400,
@@ -1735,7 +2643,11 @@
    "embargo": 24,
    "oos_bars": 11200
   },
-  "verdict": "no sirvió",
+  "verdict": {
+   "es": "no sirvió",
+   "en": "did not work",
+   "pt": "não serviu"
+  },
   "notes": "PRIMERA prueba ML real. PSR=0.192 (prob. de que el SR>0). MCPT p=0.778 (p bajo => la señal NO es suerte). Fuentes: triple-barrera + purged CV (Lopez de Prado 2018); features de dominio (evidencia FX 2024). Raw, sin filtro de costes aun. [Veredicto: OOS aleatorio - MCPT p=0.78, PSR 0.19.]",
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
@@ -1775,11 +2687,23 @@
  {
   "id": "20260607_144908_baseline-sma-20-50",
   "v": 0,
-  "analysis": "El punto de partida: un cruce de medias (SMA 20/50) largo/corto en EUR/USD con costos reales. Dio Sharpe 0.245 y le ganó al Buy&Hold (−9.7%), pero los costos se comieron casi todo el edge. Sirve solo como vara mínima: cualquier modelo de ML tenía que superar esto.",
-  "name": "Baseline SMA 20/50",
+  "analysis": {
+   "es": "El punto de partida: un cruce de medias (SMA 20/50) largo/corto en EUR/USD con costos reales. Dio Sharpe 0.245 y le ganó al Buy&Hold (−9.7%), pero los costos se comieron casi todo el edge. Sirve solo como vara mínima: cualquier modelo de ML tenía que superar esto.",
+   "en": "The starting point: an SMA 20/50 long/short crossover on EUR/USD with real costs. Sharpe 0.245, beating Buy&Hold (−9.7%), but costs consumed almost all the edge. Serves only as the minimum benchmark: every ML model had to beat this.",
+   "pt": "O ponto de partida: um cruzamento SMA 20/50 long/short em EUR/USD com custos reais. Sharpe 0,245, superando o Buy&Hold (−9,7%), mas os custos consumiram quase todo o edge. Serve apenas como vara mínima: qualquer modelo de ML precisava superar isso."
+  },
+  "name": {
+   "es": "Baseline SMA 20/50",
+   "en": "Baseline SMA 20/50",
+   "pt": "Baseline SMA 20/50"
+  },
   "family": "baseline",
   "date": "2026-06-07T14:49:08",
-  "description": "Cruce de medias SMA 20/50 long/short sobre EUR/USD H1 (2019-2024), parametros fijos, con costes (0.7 pip fees + slippage).",
+  "description": {
+   "es": "Cruce de medias SMA 20/50 long/short sobre EUR/USD H1 (2019-2024), parametros fijos, con costes (0.7 pip fees + slippage).",
+   "en": "SMA 20/50 long/short crossover on EUR/USD H1 (2019-2024), fixed parameters, with real costs (0.7 pip fees + slippage).",
+   "pt": "Cruzamento SMA 20/50 long/short em EUR/USD H1 (2019-2024), parâmetros fixos, com custos reais (0,7 pip de taxa + slippage)."
+  },
   "params": {
    "timeframe": "H1",
    "fast": 20,
@@ -1790,7 +2714,11 @@
    "symbol": "EURUSD",
    "period": "2019-2024"
   },
-  "verdict": "parcial",
+  "verdict": {
+   "es": "parcial",
+   "en": "partial",
+   "pt": "parcial"
+  },
   "notes": "Le gana al Buy&Hold pero Sharpe 0.245 (flojo) y los costes se comen casi todo el edge (~$1273 en 822 trades). Sirve como vara minima para el ML.",
   "metrics": {
    "Start": "2019-01-01 22:00:00+00:00",

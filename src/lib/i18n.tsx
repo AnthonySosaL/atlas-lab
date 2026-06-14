@@ -280,6 +280,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
 export const useI18n = () => React.useContext(I18nContext);
 
+export function pick(loc: { es: string; en: string; pt: string } | undefined, locale: Locale) {
+  if (!loc) return "";
+  return loc[locale] || loc.es || "";
+}
+
 /** Texto traducible usable dentro de componentes de servidor. */
 export function Tr({ k }: { k: string }) {
   const { t } = useI18n();
