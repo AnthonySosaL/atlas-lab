@@ -1,0 +1,19 @@
+{
+ "total": 47,
+ "families": [
+  "baseline",
+  "bot",
+  "bot-upgrade",
+  "carry",
+  "cot",
+  "intraday",
+  "ml",
+  "quant",
+  "risk",
+  "trend"
+ ],
+ "n_families": 10,
+ "survived": 12,
+ "died": 27,
+ "generated_at": "2026-06-14T00:31:20"
+}

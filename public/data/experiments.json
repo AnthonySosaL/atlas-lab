@@ -1,0 +1,1508 @@
+[
+ {
+  "id": "20260613_200850_vol-targeting-vs-leverage-fijo-bot-live",
+  "name": "vol-targeting vs leverage fijo (bot live)",
+  "family": "bot-upgrade",
+  "date": "2026-06-13T20:08:50",
+  "description": "Compara la config viva (lev fijo 2.0) contra leverage dinamico por volatilidad a igual exposicion media, filtro macro rezagado 1 dia.",
+  "params": {
+   "target_vol": 0.095,
+   "cap": 3.0,
+   "vol_win": 60,
+   "macro_lag": 1
+  },
+  "verdict": "UPGRADE: menor DD a igual exposicion",
+  "notes": "#57 honesto: lag-1 macro, ex-ante, COVID+2022 incluidos.",
+  "metrics": {
+   "CAGR": 0.003999651039675145,
+   "Sharpe": 0.09682342498275064,
+   "MaxDD": -0.17337260842452562,
+   "peor_dia": -0.03658183460238662,
+   "peor_anio": -0.09872698099767008,
+   "anios_pos": 0.5833333333333334,
+   "dias_viola_5pct": "0",
+   "lev_medio": 1.964446316059461
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142844_cierre-11-clases-probadas-v50",
+  "name": "CIERRE: 11 clases probadas v50",
+  "family": "quant",
+  "date": "2026-06-10T14:28:44",
+  "description": "Programa completo (49 experimentos, 11 clases): ML precio, TSMOM, intradia sesion, sizing/fondeo, regimen macro (manual+4 IA), carry, COT, pairs cointegracion, stat-arb PCA, momentum cross-sectional, turn-of-month. NINGUNA clase produce edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe) con datos retail y costes CFD. La ventaja institucional no esta en la matematica (es publica) sino en DATOS (tick/order flow), COSTES (acceso directo) y AMPLITUD (miles de instrumentos) - inaccesibles al retail.",
+  "params": {
+   "experimentos": 49,
+   "clases": 11
+  },
+  "verdict": "no sirvió",
+  "notes": "Veredicto #40 confirmado y extendido a las clases quant institucionales. Valor real: framework + infra + conocimiento; bot demo x2 midiendo; opcion 'fondo personal' x1-2 abierta.",
+  "metrics": {
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142756_momentum-cross-sectional-v48",
+  "name": "Momentum cross-sectional v48",
+  "family": "quant",
+  "date": "2026-06-10T14:27:56",
+  "description": "Jegadeesh-Titman cross-sectional: long top-3 / short bottom-3 por retorno 90d, suavizado mensual. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+  "params": {
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013: Sh -0.42 vivo False; 2014-2024: Sh -0.41 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.23561595494722,
+   "Sharpe Ratio": -0.4097628108757106,
+   "Max Drawdown [%]": -28.066638965974132,
+   "Sobrevive todos": false,
+   "Total Trades": 156
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142756_stat-arb-pca-residual-v47",
+  "name": "Stat-arb PCA residual v47",
+  "family": "quant",
+  "date": "2026-06-10T14:27:56",
+  "description": "Avellaneda & Lee 2010: reversion de residuos vs factor comun (PC1 aprox). Long residuos hundidos / short estirados (|z|>1.5). Motor ejecutable (kill-switch, lag), lev x2.",
+  "params": {
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013: Sh -0.69 vivo False; 2014-2024: Sh -0.58 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.075824702234303,
+   "Sharpe Ratio": -0.5801682128641215,
+   "Max Drawdown [%]": -12.186630340016503,
+   "Sobrevive todos": false,
+   "Total Trades": 876
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142756_turn-of-month-indices-v49",
+  "name": "Turn-of-month indices v49",
+  "family": "quant",
+  "date": "2026-06-10T14:27:56",
+  "description": "Efecto calendario documentado: long indices solo en ultimos 2 + primeros 3 dias del mes. (Solo 2014-24 tiene indices: validacion limitada.) Motor ejecutable (kill-switch, lag), lev x2.",
+  "params": {
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-2024: Sh -1.63 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.861191993916542,
+   "Sharpe Ratio": -1.625140127346075,
+   "Max Drawdown [%]": -13.39382655153708,
+   "Sobrevive todos": false,
+   "Total Trades": 179
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142755_pairs-cointegracion-v46",
+  "name": "Pairs cointegracion v46",
+  "family": "quant",
+  "date": "2026-06-10T14:27:55",
+  "description": "Engle-Granger rolling 250d sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD): entra |z|>2, sale |z|<0.5. Market-neutral. Motor ejecutable (kill-switch, lag), lev x2.",
+  "params": {
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013: Sh -1.04 vivo False; 2014-2024: Sh -1.21 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.846936759444603,
+   "Sharpe Ratio": -1.2132718048307147,
+   "Max Drawdown [%]": -13.845973930557909,
+   "Sobrevive todos": false,
+   "Total Trades": 484
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142118_cot-contrarian-extremos-v45",
+  "name": "COT contrarian extremos v45",
+  "family": "cot",
+  "date": "2026-06-10T14:21:18",
+  "description": "Posicionamiento non-commercial CFTC (API publica): contrarian en extremos (percentil>90 del net/OI rolling 2y -> corto; <10 -> largo), lag 3 dias, long/short risk-parity ejecutable, 7 pares FX.",
+  "params": {
+   "percentiles": [
+    0.1,
+    0.9
+   ],
+   "ventana": "104w",
+   "lag_dias": 3,
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013: Sh -1.37 vivo False; 2014-2024: Sh -0.28 vivo False",
+  "metrics": {
+   "Sharpe 14-24": -0.2833245294353685,
+   "Sharpe 07-13": -1.3667950561793976,
+   "Sobrevive ambos": false,
+   "Sharpe Ratio": -0.2833245294353685,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142006_carry-fx-ejecutable-v42",
+  "name": "Carry FX ejecutable v42",
+  "family": "carry",
+  "date": "2026-06-10T14:20:06",
+  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Solo y con filtro macro.",
+  "params": {
+   "lev": 2.0,
+   "variantes": [
+    "carry puro",
+    "carry+filtro"
+   ],
+   "mejor": "carry puro"
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013|carry puro: Sh -3.07 vivo False; 2007-2013|carry+filtro: Sh 0.05 vivo True; 2014-2024|carry puro: Sh -1.94 vivo False; 2014-2024|carry+filtro: Sh -0.81 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.223290777253858,
+   "Sharpe Ratio": -1.9387653864028964,
+   "Max Drawdown [%]": -14.163814303624921,
+   "Sharpe OOS 07-13": -3.069729868880367,
+   "Sobrevive ambos": false,
+   "Total Trades": 243
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_142006_carry-trend-combo-v43",
+  "name": "Carry+Trend combo v43",
+  "family": "carry",
+  "date": "2026-06-10T14:20:06",
+  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Combo: posicion solo donde carry y momentum coinciden (Koijen et al.).",
+  "params": {
+   "lev": 2.0,
+   "variantes": [
+    "carry∧trend+filtro"
+   ],
+   "mejor": "carry∧trend+filtro"
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.015421103460021,
+   "Sharpe Ratio": -0.5555286553865391,
+   "Max Drawdown [%]": -13.549462322926075,
+   "Sharpe OOS 07-13": 0.18087815162683282,
+   "Sobrevive ambos": false,
+   "Total Trades": 1266
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_141058_veredicto-final-40-experimentos-v40",
+  "name": "VEREDICTO FINAL 40 experimentos v40",
+  "family": "risk",
+  "date": "2026-06-10T14:10:58",
+  "description": "Consolidacion: (1) precio-solo sin edge (#1-8). (2) El dinero del fondeo es sizing, pero el limite de 1 mes lo mata (#9-17). (3) El filtro macro Sharpe 1.23 era en gran parte clarividencia same-day (#27). (4) La version EJECUTABLE sobrevive solo a x<=2 con Sharpe ~0.4 y ~2%/año (#28-36), tarda 2.3 AÑOS de mediana en pasar un challenge (#37) y su Sharpe NO supera el Deflated Sharpe test tras ~40 intentos (DSR 0.35, #38). (5) EV nominal +$1.7k pero impracticable (#39). CONCLUSION: con datos retail y rebalanceo diario NO existe un edge desplegable que pase challenges con expectativa positiva real. El ~7% de aprobacion del sector refleja esta matematica.",
+  "params": {
+   "experimentos_totales": 40,
+   "config_final": "basket+filtro VIX28/cw40, phi 0.5, kill 3%, x2"
+  },
+  "verdict": "no sirvió",
+  "notes": "LO QUE SI VALE: framework de validacion que cazo 6+ ilusiones (incluida la nuestra), infra completa (bot+MCP+dashboard+simulador), y el conocimiento exacto de por que falla. Bot demo ajustado a x2 (config ejecutable) como instrumento de MEDICION (phi real, slippage real, swaps). Direcciones genuinas futuras: carry/tasas FRED, posicionamiento COT, o usar el basket+filtro a x1-2 como inversion personal de largo plazo (fuera de reglas prop).",
+  "metrics": {
+   "Sharpe ejecutable": 0.383,
+   "DSR": 0.353,
+   "P pasar 1y (%)": 8.6,
+   "Mediana años para pasar": 2.3,
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
+  "name": "Deflated Sharpe del ejecutable v38",
+  "family": "risk",
+  "date": "2026-06-10T14:09:55",
+  "description": "Bailey & Lopez de Prado: tras probar ~40 configuraciones, el mejor Sharpe esperado SOLO POR AZAR se compara con el observado. DSR>0.95 = edge real.",
+  "params": {
+   "N_trials": 40,
+   "T_dias": 5609
+  },
+  "verdict": "no sirvió",
+  "notes": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
+  "metrics": {
+   "Sharpe observado": 0.383,
+   "E[max] por azar": 0.464,
+   "DSR": 0.353,
+   "Significativo": false,
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140955_ev-del-negocio-ejecutable-v39",
+  "name": "EV del negocio ejecutable v39",
+  "family": "risk",
+  "date": "2026-06-10T14:09:55",
+  "description": "EV por intento con los numeros EJECUTABLES (no los clarividentes): P(pasar) sin limite + cobro esperado de la fase fondeada (CAGR*split*2y).",
+  "params": {
+   "fee": 500.0,
+   "split": 0.8,
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "Comparar con los numeros clarividentes de #17 (~82% / ~5 meses / +$9k): la version ejecutable da 69% / 2.3 años / $1,668.",
+  "metrics": {
+   "P pasar (%)": 69.5,
+   "Años para pasar (mediana)": 2.3,
+   "CAGR ejecutable (%)": 1.95,
+   "EV intento ($)": 1668.0,
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140954_p-pasar-ejecutable-v37",
+  "name": "P(pasar) ejecutable v37",
+  "family": "risk",
+  "date": "2026-06-10T14:09:54",
+  "description": "Monte Carlo del challenge (objetivo 10%, DD 10%, daily 5%) con los retornos EJECUTABLES (lag honesto + kill-switch, x2). Sin limite de tiempo incluido.",
+  "params": {
+   "lev": 2.0,
+   "horizontes": [
+    252,
+    504,
+    2000
+   ]
+  },
+  "verdict": "parcial",
+  "notes": "Sharpe ejecutable 0.38. 252d: 8.6% (med 191.0); 504d: 29.4% (med 325.0); 2000d: 69.5% (med 572.0)",
+  "metrics": {
+   "P pasar 1y (%)": 8.575000000000001,
+   "P pasar 2y (%)": 29.375,
+   "P pasar sin limite (%)": 69.475,
+   "Mediana dias (sin limite)": 572.0,
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140835_calidad-intrinseca-sin-reglas-prop-v36",
+  "name": "Calidad intrinseca sin reglas prop v36",
+  "family": "bot",
+  "date": "2026-06-10T14:08:35",
+  "description": "La estrategia ejecutable SIN daily-loss/max-DD del prop firm: ¿la estrategia es mala o las reglas son el cuello de botella? Si el MaxDD intrinseco >>10%, las reglas del challenge son incompatibles con esta clase de estrategia a ese leverage.",
+  "params": {
+   "filtro": "VIX28/cw40",
+   "phi": 0.5,
+   "levs": [
+    2,
+    3,
+    4
+   ]
+  },
+  "verdict": "parcial",
+  "notes": "[2014-2024] x2.0: Sh 0.40, CAGR +2.2%, MaxDD -9.8% | [2014-2024] x3.0: Sh -0.15, CAGR -1.9%, MaxDD -38.5% | [2014-2024] x4.0: Sh -1.44, CAGR -20.1%, MaxDD -94.2% | [2007-2013] x2.0: Sh 0.37, CAGR +1.4%, MaxDD -8.0% | [2007-2013] x3.0: Sh -0.05, CAGR -0.6%, MaxDD -22.3% | [2007-2013] x4.0: Sh -1.07, CAGR -11.5%, MaxDD -73.2%",
+  "metrics": {
+   "Total Trades": 0,
+   "Sharpe Ratio": 0
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140833_curva-de-tasas-como-filtro-v35",
+  "name": "Curva de tasas como filtro v35",
+  "family": "bot",
+  "date": "2026-06-10T14:08:33",
+  "description": "Añadir term-spread invertido (TNX-IRX<0) como condicion extra de risk-off (hint de feature importance #24). Reactivo ejecutable x2.",
+  "params": {
+   "regla": "term<0 => flat",
+   "base": "VIX28/cw40"
+  },
+  "verdict": "no sirvió",
+  "notes": "{'2014-2024|sin curva': 'Sh 0.40', '2014-2024|con curva': 'Sh 0.31', '2007-2013|sin curva': 'Sh 0.37', '2007-2013|con curva': 'Sh 0.37'}",
+  "metrics": {
+   "Mejora ambos periodos": "False",
+   "Sh con curva 14-24": 0.3068285123034975,
+   "Sh sin curva 14-24": 0.4013889014169609,
+   "Sharpe Ratio": 0.3068285123034975,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140720_graduado-vix-14-ejecutable-v34",
+  "name": "Graduado VIX<14 ejecutable v34",
+  "family": "bot",
+  "date": "2026-06-10T14:07:20",
+  "description": "Sobre el mejor #33 (filtro (28, 40)): x_alto solo con VIX(ayer)<14, x1.5 resto. Apalancarse lejos de los crashes, ejecutable y con lag honesto.",
+  "params": {
+   "filtro": "(28, 40)",
+   "hi_grid": [
+    2.5,
+    3,
+    4
+   ],
+   "mejor_hi": 2.5,
+   "low": 1.5
+  },
+  "verdict": "sirvió",
+  "notes": "hi x2.5: Sh 0.42|0.30 vivo True|True; hi x3.0: Sh -0.60|0.21 vivo False|True; hi x4.0: Sh -1.24|-0.03 vivo False|True",
+  "metrics": {
+   "Total Return [%]": 29.368535923164373,
+   "Sharpe Ratio": 0.41774488861670517,
+   "Max Drawdown [%]": -11.162143942098513,
+   "Sharpe OOS 07-13": 0.29660548554092525,
+   "Sharpe base #33": -0.02733256094455309,
+   "Total Trades": 3203
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140718_disparo-temprano-del-filtro-v33",
+  "name": "Disparo temprano del filtro v33",
+  "family": "bot",
+  "date": "2026-06-10T14:07:18",
+  "description": "Reactivo ejecutable (phi 0.5, x2): bajar el umbral del VIX dispara ANTES (dia de disparo mas chico). Grilla VIX 22/24/28 x creditMA 40/60.",
+  "params": {
+   "mejor": "(28, 40)",
+   "phi": 0.5,
+   "lev": 2.0
+  },
+  "verdict": "parcial",
+  "notes": "VIX22/cw40: Sh 0.16|0.29 vivo True|True; VIX22/cw60: Sh 0.22|0.36 vivo True|True; VIX24/cw40: Sh 0.31|0.40 vivo True|True; VIX24/cw60: Sh 0.33|0.39 vivo True|True; VIX28/cw40: Sh 0.40|0.37 vivo True|True; VIX28/cw60: Sh 0.37|0.34 vivo True|True",
+  "metrics": {
+   "Total Return [%]": 31.1962010621746,
+   "Sharpe Ratio": 0.4013889014169609,
+   "Max Drawdown [%]": -9.817677879615783,
+   "Sharpe OOS 07-13": 0.36533721231132593,
+   "Total Trades": 3203
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140603_validacion-ejecutable-reactivo-v32",
+  "name": "Validacion ejecutable-reactivo v32",
+  "family": "bot",
+  "date": "2026-06-10T14:06:03",
+  "description": "Validacion completa del mejor config reactivo (phi=0.5, x1.5, cap 3%): por año 2007-2024, 6 crisis. Si aguanta, ESTE es el candidato de produccion (requiere implementar el monitor intradia en el bot).",
+  "params": {
+   "phi": 0.5,
+   "lev": 1.5,
+   "cap": 0.03
+  },
+  "verdict": "sirvió",
+  "notes": "phi es un supuesto a MEDIR en el forward test demo (reaccion real del monitor).",
+  "metrics": {
+   "Total Return [%]": 21.644224036310746,
+   "Sharpe Ratio": 0.3711481525234038,
+   "Max Drawdown [%]": -10.206546592165267,
+   "Sharpe OOS 07-13": 0.33654301242688794,
+   "Anos positivos (%)": 61.0,
+   "Total Trades": 3203
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140602_filtro-reactivo-intradia-v31",
+  "name": "Filtro reactivo intradia v31",
+  "family": "bot",
+  "date": "2026-06-10T14:06:02",
+  "description": "Bot que monitorea el filtro en TIEMPO REAL y aplana al disparo (ejecutable: poll de VIX cada 15min). phi=fraccion del movimiento del dia de disparo que se come. Kill-switch 3% activo. Grilla phi x lev, ambos periodos.",
+  "params": {
+   "mejor_phi": 0.5,
+   "mejor_lev": 1.5,
+   "cap": 0.03,
+   "slip": 0.002
+  },
+  "verdict": "parcial",
+  "notes": "phi0.5/x1.5: Sh 0.37|0.34 vivo True|True; phi0.5/x2.0: Sh 0.37|0.34 vivo True|True; phi0.5/x3.0: Sh -1.11|-0.47 vivo False|False; phi0.75/x1.5: Sh 0.20|0.19 vivo True|True; phi0.75/x2.0: Sh 0.18|0.19 vivo True|True; phi0.75/x3.0: Sh -1.04|-0.59 vivo False|False",
+  "metrics": {
+   "Total Return [%]": 21.644224036310746,
+   "Sharpe Ratio": 0.3711481525234038,
+   "Max Drawdown [%]": -10.206546592165267,
+   "Sharpe OOS 07-13": 0.33654301242688794,
+   "Total Trades": 3203
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
+  "name": "Prueba de fuego lag-1 re-entrada v27",
+  "family": "bot",
+  "date": "2026-06-10T13:51:43",
+  "description": "Verificacion anti-lookahead de #26: manual y cooling decididos con datos de AYER (t-1). Si el salto de Sharpe sobrevive, la re-entrada panico-enfriandose es real. Incluye baseline igualmente rezagado para comparacion justa.",
+  "params": {
+   "lag": 1,
+   "cooling": 0.9,
+   "lev_reentrada": 2.0,
+   "lev_on": 3.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-2024: baseline lag1: Sharpe -0.17 vivo False | reentry lag1 (0.9/x2): Sharpe -1.00 vivo False | reentry lag1 (0.8/x2): Sharpe -0.79 vivo False /// 2007-2013: baseline lag1: Sharpe -0.46 vivo False | reentry lag1 (0.9/x2): Sharpe -0.76 vivo False | reentry lag1 (0.8/x2): Sharpe -0.75 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.03206878926206,
+   "Sharpe Ratio": -1.0001135333381441,
+   "Max Drawdown [%]": -12.63842288449788,
+   "Sharpe baseline lag1": -0.17188568088782205,
+   "Sharpe OOS 07-13": -0.7630098236159247,
+   "Baseline OOS lag1": -0.4615456174223203,
+   "Sobrevivio ambos": false,
+   "Total Trades": 241
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_135036_re-entrada-panico-enfriandose-v26",
+  "name": "Re-entrada panico enfriandose v26",
+  "family": "bot",
+  "date": "2026-06-10T13:50:36",
+  "description": "Regla a priori: en risk-off manual, re-entrar a leverage reducido cuando VIX < cooling*max10d (panico enfriandose). Grilla cooling x lev. Objetivo: recuperar parte del ~50% de tiempo flat.",
+  "params": {
+   "grilla": "cooling 0.7/0.8/0.9 x lev 1.5/2.0",
+   "mejor": "(0.9, 2.0)"
+  },
+  "verdict": "sirvió",
+  "notes": "mejor combo cooling=0.9 lev=2.0 | 2014-24 Sharpe 2.12 (base 1.23); 2007-13 Sharpe 1.53 (base 1.06). Grilla completa en stdout/registro.",
+  "metrics": {
+   "Total Return [%]": 1226.739881464346,
+   "Sharpe Ratio": 2.121356020074753,
+   "Max Drawdown [%]": -10.170182113145964,
+   "Sharpe baseline": 1.2260745484520246,
+   "Sharpe OOS 07-13": 1.5313988966910204,
+   "Sobrevivio ambos": true,
+   "Total Trades": 3204
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_134940_ml-sizing-con-proteccion-manual-v25",
+  "name": "ML sizing con proteccion manual v25",
+  "family": "ml",
+  "date": "2026-06-10T13:49:40",
+  "description": "El filtro manual manda (flat en risk-off, intocable); el ML modula el leverage 2x-4x SOLO en dias risk-on segun P(fwd 10d > +0.5%) walk-forward. El ML no puede reventarnos, solo aportar o no. Vara: manual x3 fijo.",
+  "params": {
+   "lev": "2+2*p_good, flat si manual",
+   "label": "fwd10d>+0.5%",
+   "refit": 126
+  },
+  "verdict": "parcial",
+  "notes": "2014-24: manual x3 fijo: Sharpe 1.23 vivo True | ML sizing 2+2p: Sharpe 1.20 vivo True /// 2007-13: manual x3 fijo: Sharpe 1.06 vivo True | ML sizing 2+2p: Sharpe 1.04 vivo True",
+  "metrics": {
+   "Total Return [%]": 203.83962176760969,
+   "Sharpe Ratio": 1.201685434512525,
+   "Max Drawdown [%]": -11.473631722014865,
+   "Sharpe manual (vara)": 1.2260745484520246,
+   "Sharpe OOS 07-13": 1.0440100422948184,
+   "Sobrevivio ambos": true,
+   "Total Trades": 3204
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_134831_regimen-supervisado-v2-residual-v24",
+  "name": "Regimen supervisado v2 residual v24",
+  "family": "ml",
+  "date": "2026-06-10T13:48:31",
+  "description": "v2 del regimen supervisado: filtro manual como FEATURE (residual learning), balanceo de clases, umbral adaptativo (perc.75 propio), sin-señal=flat. Walk-forward + embargo. Vara: manual 1.23/1.06.",
+  "params": {
+   "modelo": "XGB d3 n200 spw",
+   "umbral": "perc75 rolling 500",
+   "features+": "manual_filter"
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML v2: Sharpe -1.34 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML v2: Sharpe 0.21 vivo True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60",
+  "metrics": {
+   "Total Return [%]": -7.042222057941105,
+   "Sharpe Ratio": -1.344307218629578,
+   "Max Drawdown [%]": -11.346011419135237,
+   "Sharpe OOS 07-13": 0.21376857579421504,
+   "Sobrevivio ambos": false,
+   "Total Trades": 89
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_134700_regimen-supervisado-xgb-walk-forward-v23",
+  "name": "Regimen supervisado XGB walk-forward v23",
+  "family": "ml",
+  "date": "2026-06-10T13:47:00",
+  "description": "XGBoost walk-forward (refit 126d, embargo 10d, features de t-1) aprende a predecir periodos malos (fwd 10d < -1%) con features macro forward-looking (VIX, credito, curva TNX-IRX, DXY, vol/mom del basket). Flat si p>umbral. Comparado contra el filtro manual en 2014-24 y OOS 2007-13.",
+  "params": {
+   "modelo": "XGBClassifier d3 n200",
+   "label": "fwd10d<-1%",
+   "burn": 750,
+   "refit": 126,
+   "embargo": 10,
+   "mejor_variante": "ML p>0.5"
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML p>0.4: Sharpe -2.33 vivo False | ML p>0.5: Sharpe -2.31 vivo False | ML p>0.6: Sharpe -2.31 vivo False | ML graduado 3(1-p): Sharpe -2.44 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML p>0.4: Sharpe -0.59 vivo False | ML p>0.5: Sharpe -0.59 vivo False | ML p>0.6: Sharpe -0.59 vivo False | ML graduado 3(1-p): Sharpe 0.33 vivo True",
+  "metrics": {
+   "Total Return [%]": -10.36743071171492,
+   "Sharpe Ratio": -2.3140291436098788,
+   "Max Drawdown [%]": -11.105405932694767,
+   "Sharpe manual (vara)": 1.2260745484520246,
+   "Sharpe OOS 07-13": -0.5910897669181001,
+   "Sobrevivio ambos": false,
+   "Total Trades": 81
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_134200_hmm-regime-detection-ia-v22",
+  "name": "HMM regime detection (IA) v22",
+  "family": "ml",
+  "date": "2026-06-10T13:42:00",
+  "description": "Hidden Markov Model gaussiano 2 estados (Hamilton 1989) aprende los regimenes del mercado sin umbrales a mano, sobre [retorno basket, dlogVIX]. Sin lookahead (refit expandiente cada 126d, prob filtrada con datos hasta t-1). Flat en estado de alta varianza, x3 en calma. Comparado contra el filtro manual en 2014-2024 y en OOS puro 2007-2013.",
+  "params": {
+   "modelo": "GaussianHMM 2 estados",
+   "features": [
+    "ret_basket",
+    "dlogVIX"
+   ],
+   "burn": 500,
+   "refit_dias": 126,
+   "lev": 3
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-24: filtro manual: Sharpe 1.23, ret +267%, vivo True | HMM (IA): Sharpe -2.31, ret -10%, vivo False | HMM OR manual: Sharpe 0.98, ret +151%, vivo True /// OOS 2007-13: filtro manual: Sharpe 1.06, ret +85%, vivo True | HMM (IA): Sharpe -0.54, ret -12%, vivo False | HMM OR manual: Sharpe 1.03, ret +75%, vivo True",
+  "metrics": {
+   "Total Return [%]": -10.36743071171492,
+   "Sharpe Ratio": -2.3140291436098788,
+   "Max Drawdown [%]": -11.105405932694767,
+   "Sharpe OOS 2007-13": -0.5442751422403336,
+   "Ret OOS 2007-13 [%]": -11.860718524038472,
+   "Sobrevivio ambos": false,
+   "Total Trades": 81
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_022556_oos-temporal-2007-2013-anti-overfit-v21",
+  "name": "OOS temporal 2007-2013 (anti-overfit) v21",
+  "family": "bot",
+  "date": "2026-06-10T02:25:56",
+  "description": "Out-of-sample temporal PURO: reglas fijadas en 2014-2024 aplicadas sin cambios a 2007-2013 (crisis 2008-09, euro 2011). Basket reducido a lo existente (7 FX + oro). Test definitivo de sobreentrenamiento pedido por el usuario.",
+  "params": {
+   "periodo": "2007-2013",
+   "instrumentos": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD",
+    "USDCAD",
+    "USDCHF",
+    "NZDUSD",
+    "XAUUSD"
+   ],
+   "lev": 3,
+   "reglas": "identicas a #16 (VIX>28/spike/credito<MA60)"
+  },
+  "verdict": "sirvió",
+  "notes": "Comparativa en el mismo periodo: SIN filtro x3: vivo=False, ret=-11%, Sharpe=-0.59, MaxDD=-15.6% | CON filtro x3 (baseline): vivo=True, ret=+85%, Sharpe=1.06, MaxDD=-10.8% | #19 estricto (VIX<14: x5): vivo=True, ret=+96%, Sharpe=1.07, MaxDD=-12.7%",
+  "metrics": {
+   "Total Return [%]": 84.559569815447,
+   "Sharpe Ratio": 1.0574086725090652,
+   "Max Drawdown [%]": -10.8165085942309,
+   "Anos positivos (%)": 100.0,
+   "Sobrevivio": true,
+   "Total Trades": 2406
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260609_210757_trend-long-short-filtrado-v20",
+  "name": "Trend long-short filtrado v20",
+  "family": "bot",
+  "date": "2026-06-09T21:07:57",
+  "description": "Pesos risk-parity multiplicados por el SIGNO del momentum 120d (permite cortos), con filtro macro x3. ¿Ayudan los cortos en años bajistas? Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "params": {
+   "momentum": "signo 120d",
+   "lev": 3
+  },
+  "verdict": "no sirvió",
+  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=0.38. Por año: 2014: +0.0%, 2015: +14.6%, 2016: -3.5%, 2017: -7.5%, 2018: +3.2%, 2019: -4.5%, 2020: +18.9%, 2021: +10.7%, 2022: +4.6%",
+  "metrics": {
+   "Total Return [%]": 39.29330835290372,
+   "Sharpe Ratio": 0.3811268962645925,
+   "Max Drawdown [%]": -18.518241492823563,
+   "Anos positivos (%)": 56.0,
+   "Sobrevivio": false,
+   "Total Trades": 2529
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260609_210756_leverage-graduado-por-vix-v19",
+  "name": "Leverage graduado por VIX v19",
+  "family": "bot",
+  "date": "2026-06-09T21:07:56",
+  "description": "Risk-on: x5 si VIX<16 (mercado muy calmo), x3 si no; risk-off flat. Acelera el challenge solo cuando el riesgo de crash es minimo. Umbrales a priori. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "params": {
+   "vix_calmo": 16,
+   "lev_calmo": 5,
+   "lev_normal": 3
+  },
+  "verdict": "sirvió",
+  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=True, Sharpe=1.39. Por año: 2014: -2.6%, 2015: -2.1%, 2016: +41.4%, 2017: +38.8%, 2018: +9.0%, 2019: +28.5%, 2020: +23.7%, 2021: +25.3%, 2022: +11.6%, 2023: +12.3%, 2024: +33.9%, 2025: +0.0%",
+  "metrics": {
+   "Total Return [%]": 591.5043550651397,
+   "Sharpe Ratio": 1.3919778175331383,
+   "Max Drawdown [%]": -17.210598883781547,
+   "Anos positivos (%)": 75.0,
+   "Sobrevivio": true,
+   "Total Trades": 3204
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260609_210755_rotacion-defensiva-oro-yen-v18",
+  "name": "Rotacion defensiva oro+yen v18",
+  "family": "bot",
+  "date": "2026-06-09T21:07:55",
+  "description": "En risk-off rota a refugios (50% oro, 50% yen via short USDJPY) a x2 en vez de quedar flat; en risk-on igual que #16 (risk parity x3). Flight-to-quality clasico. Periodo 2014-2024 (4 crisis), reglas FTMO.",
+  "params": {
+   "defensa": "XAU 0.5 / JPY 0.5",
+   "lev_on": 3,
+   "lev_off": 2
+  },
+  "verdict": "no sirvió",
+  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=-1.52. Por año: 2014: -3.6%",
+  "metrics": {
+   "Total Return [%]": -4.004100347618866,
+   "Sharpe Ratio": -1.5209526067857992,
+   "Max Drawdown [%]": -10.930683645668571,
+   "Anos positivos (%)": 0.0,
+   "Sobrevivio": false,
+   "Total Trades": 24
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260608_164506_dinero-real-con-filtro-macro-v17",
+  "name": "Dinero real con filtro macro v17",
+  "family": "risk",
+  "date": "2026-06-08T16:45:06",
+  "description": "EV del negocio (challenge 30d + fase fondeada) usando los retornos del bot CON el filtro de regimen macro (validado en #16), comparado contra sin filtro. Limite de challenge REALISTA de 30 dias (corregido tras feedback del usuario).",
+  "params": {
+   "challenge_lev": 3,
+   "funded_lev": 2,
+   "challenge_days": 30,
+   "fee": 500.0
+  },
+  "verdict": "parcial",
+  "notes": "CON filtro: P(pasar 30d)=1%, EV/intento=$-429 (vs sin filtro $-127). El filtro reduce busts -> la fase fondeada sobrevive mas -> mas cobros. Sigue siendo beta cronometrada y un solo camino; falta forward test live.",
+  "metrics": {
+   "P pasar 30d (%)": 1.0,
+   "EV intento ($)": -429.0,
+   "EV sin filtro ($)": -127.0,
+   "E cobro fondeada ($)": 12322.0,
+   "P algun payout (%)": 99.0,
+   "Total Trades": 0
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260608_160317_validacion-filtro-macro-multi-crisis-v16",
+  "name": "Validacion filtro macro multi-crisis v16",
+  "family": "bot",
+  "date": "2026-06-08T16:03:17",
+  "description": "Validacion del filtro macro (#15) en 2014-2024 con 4 estres (2015,2018,2020,2022). Mismas reglas a priori, basket completo. Desglose por año para ver si el edge es consistente o solo dodgeo el COVID. x3 leverage.",
+  "params": {
+   "leverage": 3,
+   "periodo": "2014-2024",
+   "vix_level": 28,
+   "credit_win": 60
+  },
+  "verdict": "sirvió",
+  "notes": "Sharpe 1.23, ret 267.3%, años positivos 75%, flat 1465 dias. Si los años son consistentemente positivos (no solo 2020), el filtro macro es un edge real.",
+  "metrics": {
+   "Total Return [%]": 267.26677844634423,
+   "Sharpe Ratio": 1.226074548452023,
+   "Max Drawdown [%]": -12.451723034394558,
+   "Anos positivos (%)": 75.0,
+   "Sobrevivio": true,
+   "Dias flat": 1465,
+   "Total Trades": 3204
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260608_160139_bot-filtro-macro-regimen-v15",
+  "name": "Bot + filtro macro regimen v15",
+  "family": "bot",
+  "date": "2026-06-08T16:01:39",
+  "description": "Bot con FILTRO DE REGIMEN macro (VIX + credito HYG/LQD): se pone FLAT cuando hay senal de riesgo (VIX>28, spike de VIX, o credito deteriorandose). DATOS DISTINTOS al precio. Leverage x4, basket 2019-2024.",
+  "params": {
+   "leverage": 4,
+   "vix_level": 28,
+   "vix_spike": 0.5,
+   "credit_win": 60,
+   "flat_days": 878
+  },
+  "verdict": "sirvió",
+  "notes": "Filtro macro A PRIORI (no optimizado). El bot SIN filtro reventaba en COVID a x2+. Datos: VIX y credito (HYG/LQD) de Yahoo. Primer intento de salir del precio-solo.",
+  "metrics": {
+   "Total Return [%]": 190.43886571493823,
+   "Sharpe Ratio": 1.3840137062885562,
+   "Max Drawdown [%]": -13.428233812485836,
+   "Sobrevivio": true,
+   "Dias flat (risk-off)": 878,
+   "Leverage": 4,
+   "Total Trades": 1816
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_214233_bot-atlas-vol-target-paper-v14",
+  "name": "Bot ATLAS vol-target paper v14",
+  "family": "bot",
+  "date": "2026-06-07T21:42:33",
+  "description": "Forward-test en papel del bot con VOLATILITY TARGETING (leverage dinamico = vol objetivo / vol realizada -> baja exposicion en crashes) + risk-parity long + reglas FTMO, sobre el basket 2019-2024. Un solo camino historico real.",
+  "params": {
+   "target_vol": 0.095,
+   "max_leverage": 4.0,
+   "leverage_medio": 3.15,
+   "instrumentos": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD",
+    "USDCAD",
+    "USDCHF",
+    "NZDUSD",
+    "XAUUSD",
+    "XAGUSD",
+    "SP500",
+    "NAS100",
+    "DAX",
+    "FTSE100",
+    "BRENT",
+    "WTI"
+   ],
+   "vol_window": 60,
+   "max_dd": 0.1
+  },
+  "verdict": "no sirvió",
+  "notes": "Vol targeting: leverage medio x3.15. Sobrevivio=False (daily_loss), retorno -14.2%, Sharpe -0.91, MaxDD -21.6%. Compara con v13 (sin vol targeting, reventó en COVID). Modulo en D:\\ATLAS\\bot\\; falta adaptador MT5.",
+  "metrics": {
+   "Total Return [%]": -14.177774854869273,
+   "Sharpe Ratio": -0.9109711245362379,
+   "Max Drawdown [%]": -21.57861133253055,
+   "Sobrevivio": false,
+   "Razon fin": "daily_loss",
+   "Leverage medio": 3.15,
+   "Total Trades": 313
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_214022_bot-atlas-paper-run-funded-v13",
+  "name": "Bot ATLAS paper-run funded v13",
+  "family": "bot",
+  "date": "2026-06-07T21:40:22",
+  "description": "Forward-test en papel del bot desplegable (estrategia risk-parity long + gestion de riesgo FTMO) sobre el basket 2019-2024 en modo fondeado x2. Un solo camino historico real (no Monte Carlo): valida la logica antes de conectar MT5.",
+  "params": {
+   "leverage": 2.0,
+   "instrumentos": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD",
+    "USDCAD",
+    "USDCHF",
+    "NZDUSD",
+    "XAUUSD",
+    "XAGUSD",
+    "SP500",
+    "NAS100",
+    "DAX",
+    "FTSE100",
+    "BRENT",
+    "WTI"
+   ],
+   "vol_window": 60,
+   "max_dd": 0.1,
+   "daily_loss": 0.05
+  },
+  "verdict": "no sirvió",
+  "notes": "Sobrevivio=False (max_drawdown), retorno -10.3%, Sharpe -0.95, MaxDD -15.3%. Modulo desplegable listo en D:\\ATLAS\\bot\\; falta el adaptador MT5 (stub en broker.py).",
+  "metrics": {
+   "Total Return [%]": -10.29808704185199,
+   "Sharpe Ratio": -0.9533432067552183,
+   "Max Drawdown [%]": -15.322229302207301,
+   "Sobrevivio": false,
+   "Razon fin": "max_drawdown",
+   "Total Trades": 313
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_212532_stress-test-por-regimen-v12",
+  "name": "Stress test por regimen v12",
+  "family": "risk",
+  "date": "2026-06-07T21:25:32",
+  "description": "Re-corre el EV (challenge x4 + fondeo x2) sobre ventanas de mercado feo (crisis 2008, USD 2014-15, COVID 2020, bear 2022) vs el total. La prueba de fuego: ¿sobrevive el EV en crisis o es solo beta alcista?",
+  "params": {
+   "challenge_lev": 4,
+   "funded_lev": 2,
+   "ventanas": [
+    "Crisis 2008",
+    "USD/commod 2014-15",
+    "COVID 2020",
+    "Bear 2022",
+    "Full 2006-2024"
+   ]
+  },
+  "verdict": "sirvió",
+  "notes": "Si el EV cae a negativo en crisis, el algoritmo es beta alcista y NO se arriesga dinero sin un edge robusto. Si aguanta, el sizing+diversificacion da resiliencia real.",
+  "metrics": {
+   "EV crisis 2008 ($)": 1229.0,
+   "EV bear 2022 ($)": 2147.0,
+   "EV full ($)": 4241.0,
+   "Regimenes malos EV>0 (%)": 100.0,
+   "Total Trades": 0
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_211742_ev-real-prop-firm-challenge-fondeo-v11",
+  "name": "EV real prop firm (challenge+fondeo) v11",
+  "family": "risk",
+  "date": "2026-06-07T21:17:42",
+  "description": "Monte Carlo de la fase FONDEADA (reglas FTMO: DD 10%, perdida diaria 5%, split 80%, retiro mensual) combinado con P(pasar) y el fee, para el EV REAL por intento segun el sizing en la cuenta fondeada. Responde: ¿se gana dinero operando prop firms?",
+  "params": {
+   "account": 100000.0,
+   "fee": 500.0,
+   "split": 0.8,
+   "max_dd": 0.1,
+   "daily_loss": 0.05,
+   "challenge_lev": 4,
+   "funded_levs": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "verdict": "sirvió",
+  "notes": "P(pasar)=47.9%. Mejor EV/intento=$5,919 con funded x2. Honesto: usa solo BETA del basket 2019-24 (período alcista) -> optimista; en mercado feo cae. Pero muestra la mecanica real: el dinero esta en sobrevivir la fase fondeada con sizing conservador para cobrar varios payouts. Sin alfa, todo depende del beta + sizing.",
+  "metrics": {
+   "P pasar (%)": 47.9,
+   "Mejor EV intento ($)": 5919.0,
+   "Mejor funded leverage": 2,
+   "E cobro fondeada ($)": 13402.0,
+   "P algun payout (%)": 79.0,
+   "Total Trades": 0
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_211610_risk-parity-sizing-optimo-v10",
+  "name": "Risk parity + sizing optimo v10",
+  "family": "risk",
+  "date": "2026-06-07T21:16:10",
+  "description": "Sistema base risk-parity (pesos inversos a la vol, sin lookahead) + barrido de leverage en el simulador de challenge para maximizar P(pasar). Compara vs equal-weight (#9). Incluye EV ilustrativo por intento. Objetivo: cobrar de prop firms.",
+  "params": {
+   "weighting": "risk_parity_60d",
+   "leverages": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "fee": 500.0,
+   "payout": 8000.0,
+   "profit_target": 0.1,
+   "daily_loss": 0.05,
+   "max_dd": 0.1
+  },
+  "verdict": "sirvió",
+  "notes": "RP mejor P(pasar)=46.0% a x6 (Sharpe RP 0.58 vs EW 0.70). EV ilustrativo/intento=$3,410 (OPTIMISTA: asume cobrar un payout en la fase fondeada; modelar esa fase es el siguiente paso). El dinero = sizing + disciplina, no alfa.",
+  "metrics": {
+   "P pasar (%)": 46.0,
+   "Mejor leverage": 6,
+   "EV ilustrativo intento ($)": 3410.0,
+   "Sharpe Ratio": 0.585,
+   "Sharpe equal-weight": 0.702,
+   "P bust DD (%)": 23.0,
+   "Total Trades": 0
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_210548_simulador-prop-firm-cartera-v9",
+  "name": "Simulador prop-firm (cartera) v9",
+  "family": "risk",
+  "date": "2026-06-07T21:05:48",
+  "description": "Monte Carlo del challenge tipo FTMO (objetivo 10%, perdida diaria 5%, drawdown max 10%, 60 dias) sobre una cartera diversificada equal-weight, barriendo el leverage. Reformula el proyecto hacia el objetivo real: probabilidad de PASAR bajo reglas reales, no buscar alfa magica.",
+  "params": {
+   "profit_target": 0.1,
+   "daily_loss": 0.05,
+   "max_dd": 0.1,
+   "max_days": 60,
+   "leverages": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8
+   ],
+   "n_sims": 4000,
+   "block": 5
+  },
+  "verdict": "sirvió",
+  "notes": "Mejor P(pasar)=47.9% con leverage x4. Estrategia base Sharpe 0.70. Honesto: sin alfa real, pasar depende de agresividad vs reglas de DD. Recordatorio: ~7% de los traders cobran (FPFX).",
+  "metrics": {
+   "P pasar (%)": 47.9,
+   "Mejor leverage": 4,
+   "Vol anual base (%)": 9.4,
+   "Sharpe base": 0.702,
+   "P bust drawdown (%)": 16.6,
+   "Total Trades": 0,
+   "Sharpe Ratio": 0.702
+  },
+  "status": "survived",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_205914_meta-labeling-reversion-sesion-v8",
+  "name": "Meta-labeling reversion sesion v8",
+  "family": "intraday",
+  "date": "2026-06-07T20:59:14",
+  "description": "Meta-labeling (Lopez de Prado) sobre la reversion de sesion #7: XGBoost binario predice que reversiones seran net-positivas (features conocidas en la entrada) y solo operamos las de alta conviccion (p>0.5). Split cronologico, OOS, costes.",
+  "params": {
+   "features": [
+    "rel_range",
+    "range_z",
+    "entry_hour",
+    "dow",
+    "side",
+    "prev_day_ret",
+    "aclose_pos"
+   ],
+   "umbral": 0.5,
+   "train": 854,
+   "test": 369,
+   "seleccionados": 189
+  },
+  "verdict": "no sirvió",
+  "notes": "Sharpe seleccionados=-4.142 (sin filtro -3.997; gross sel -1.411), PSR=0.000, 189/369 trades. Meta-labeling AFML 2018: el ML elige los mejores trades para que el edge sobreviva a los costes.",
+  "metrics": {
+   "Total Return [%]": -5.039320347349707,
+   "Sharpe Ratio": -4.141704830297103,
+   "Max Drawdown [%]": -5.212114176144588,
+   "Win Rate [%]": 48.148148148148145,
+   "Profit Factor": 0.5621117754615824,
+   "Total Trades": 189,
+   "PSR": 0.00019620627881447412,
+   "Sharpe sin filtro": -3.996749720268369,
+   "Sharpe gross sel": -1.4109240221793902
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_205435_reversion-de-sesion-fade-v7",
+  "name": "Reversion de sesion (fade) v7",
+  "family": "intraday",
+  "date": "2026-06-07T20:54:35",
+  "description": "Mean-reversion intradia: fade del toque del rango asiatico hacia el medio. Motivado por #6 (el breakout pierde significativo -> EUR/USD revierte). TP=medio del rango, SL=0.5x mas alla. EUR/USD M1, costes, parametros fijos.",
+  "params": {
+   "asia_end": 7,
+   "sess_end": 16,
+   "tp": "medio",
+   "sl_mult": 0.5,
+   "fees": 7e-05,
+   "slippage": 2e-05,
+   "trades": 1553
+  },
+  "verdict": "no sirvió",
+  "notes": "Sharpe=-1.987 (sin costes 0.200), win=50.3%, PSR=0.000. Test de la hipotesis de reversion intradia en FX majors.",
+  "metrics": {
+   "Total Return [%]": -22.53616431947566,
+   "Sharpe Ratio": -1.9873271888414723,
+   "Max Drawdown [%]": -22.81084770033308,
+   "Win Rate [%]": 50.289761751448815,
+   "Profit Factor": 0.7483788764693908,
+   "Total Trades": 1553,
+   "PSR": 5.862697483452895e-07,
+   "Sharpe sin costes": 0.19971323091032103
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_205310_orb-sesion-londres-ny-v6",
+  "name": "ORB sesion Londres-NY v6",
+  "family": "intraday",
+  "date": "2026-06-07T20:53:10",
+  "description": "Opening Range Breakout: rango asiatico (00:00-07:00 UTC), breakout en la sesion Londres/NY (07:00-16:00), SL al lado opuesto, TP=1x rango, salida por tiempo. 1 trade/dia, EUR/USD M1, costes incluidos. Parametros fijos a priori.",
+  "params": {
+   "asia_end": 7,
+   "sess_end": 16,
+   "tp_mult": 1.0,
+   "fees": 7e-05,
+   "slippage": 2e-05,
+   "trades": 1553
+  },
+  "verdict": "no sirvió",
+  "notes": "Sharpe=-0.955 vs Buy&Hold -0.212. Win=49.9%, PSR=0.009. Edge intradia de sesion (volatility expansion al abrir Londres/NY). Primer enfoque NO direccional-por-ML: estructura horaria del mercado.",
+  "metrics": {
+   "Total Return [%]": -19.10160574360833,
+   "Sharpe Ratio": -0.9551501548592031,
+   "Max Drawdown [%]": -20.41231867955482,
+   "Win Rate [%]": 49.90341274951706,
+   "Profit Factor": 0.8694987177720664,
+   "Total Trades": 1553,
+   "PSR": 0.008824041002018662,
+   "Benchmark Sharpe": -0.211613324254889
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_204455_tsmom-cartera-15-activos-v5",
+  "name": "TSMOM cartera 15 activos v5",
+  "family": "trend",
+  "date": "2026-06-07T20:44:55",
+  "description": "Time-series momentum DE CARTERA (Moskowitz et al. 2012) sobre 15 instrumentos (FX majors + metales + indices + energia) con VOLATILITY SCALING (risk parity). Señal = signo del retorno de 120 dias; tamaño ~ target_vol/vol_realizada. Costes incluidos.",
+  "params": {
+   "instrumentos": [
+    "AUDUSD",
+    "BRENT",
+    "DAX",
+    "EURUSD",
+    "FTSE100",
+    "GBPUSD",
+    "NAS100",
+    "NZDUSD",
+    "SP500",
+    "USDCAD",
+    "USDCHF",
+    "USDJPY",
+    "WTI",
+    "XAGUSD",
+    "XAUUSD"
+   ],
+   "lookback": 120,
+   "vol_win": 60,
+   "target_vol_anual": 0.1,
+   "clip": 3.0,
+   "cost_rate": 0.0002,
+   "bars": 1754
+  },
+  "verdict": "parcial",
+  "notes": "Sharpe=-0.105, PSR=0.391, MCPT p=0.003, MaxDD=-14.8%. Fuente: Moskowitz, Ooi & Pedersen (2012) + critica de volatility scaling. Diversificacion + vol scaling = lo que la literatura valida.",
+  "metrics": {
+   "Total Return [%]": -4.125217317824181,
+   "Sharpe Ratio": -0.10470604761837544,
+   "Sortino Ratio": -0.13491979336454496,
+   "Calmar Ratio": -0.04066973954494474,
+   "Max Drawdown [%]": -14.837080945354685,
+   "Profit Factor": 0.9808362639319962,
+   "Total Trades": 953,
+   "CAGR [%]": -0.6034202176548376,
+   "PSR": 0.391117351006322,
+   "MCPT p": 0.0033222591362126247
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_152309_time-series-momentum-diario-v4",
+  "name": "Time-Series Momentum diario v4",
+  "family": "trend",
+  "date": "2026-06-07T15:23:09",
+  "description": "Time-series momentum (Moskowitz, Ooi & Pedersen 2012) a frecuencia DIARIA: long/short por el signo del retorno de los ultimos 120 dias. Cambio de palanca para atacar el problema de costes (muy pocos trades). Con costes reales.",
+  "params": {
+   "estrategia": "TSMOM",
+   "frecuencia": "diaria",
+   "lookback_dias": 120,
+   "fees": 7e-05,
+   "slippage": 2e-05,
+   "bars": 1877
+  },
+  "verdict": "no sirvió",
+  "notes": "PSR=0.473, MCPT p=0.585, trades=75. Fuente: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Caveat: la literatura dice que el volatility scaling aporta gran parte del edge (lo probaremos en la siguiente). Lookback fijo a priori, no ajustado.",
+  "metrics": {
+   "Start": "2019-01-01 00:00:00+00:00",
+   "End": "2024-12-31 00:00:00+00:00",
+   "Period": "1877 days 00:00:00",
+   "Start Value": 10000.0,
+   "End Value": 9574.767943123266,
+   "Total Return [%]": -4.252320568767336,
+   "Benchmark Return [%]": -9.672634628136601,
+   "Max Gross Exposure [%]": 100.0,
+   "Total Fees Paid": 99.94461616867599,
+   "Max Drawdown [%]": 13.94118294673396,
+   "Max Drawdown Duration": "863 days 00:00:00",
+   "Total Trades": "75",
+   "Total Closed Trades": "74",
+   "Total Open Trades": "1",
+   "Open Trade PnL": 270.0929582524614,
+   "Win Rate [%]": 25.675675675675674,
+   "Best Trade [%]": 11.928723658366716,
+   "Worst Trade [%]": -2.248624818147383,
+   "Avg Winning Trade [%]": 1.5303112783625057,
+   "Avg Losing Trade [%]": -0.6394726025209098,
+   "Avg Winning Trade Duration": "54 days 07:34:44.210526316",
+   "Avg Losing Trade Duration": "12 days 09:09:49.090909090",
+   "Profit Factor": 0.7937958275018084,
+   "Expectancy": -9.396283988232163,
+   "Sharpe Ratio": -0.08289311423313855,
+   "Calmar Ratio": -0.06035636351488809,
+   "Omega Ratio": 0.987634000670397,
+   "Sortino Ratio": -0.11687283779368283
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_151624_ml-meta-labeling-sma-xgboost-v3",
+  "name": "ML Meta-labeling SMA+XGBoost v3",
+  "family": "ml",
+  "date": "2026-06-07T15:16:24",
+  "description": "Meta-labeling (Lopez de Prado): primario = cruce SMA 20/50 (direccion); secundario = XGBoost binario que decide si tomar o saltar cada señal. Backtest OOS con costes. El ML filtra, no predice direccion.",
+  "params": {
+   "primario": "SMA 20/50",
+   "secundario": "XGBoost",
+   "pt_mult": 2.0,
+   "sl_mult": 2.0,
+   "max_h": 24,
+   "train_frac": 0.7,
+   "embargo": 24,
+   "oos_bars": 11200
+  },
+  "verdict": "no sirvió",
+  "notes": "PSR=0.510, MCPT p=0.483, trades=1173. Enfoque canonico de meta-labeling (AFML 2018): el ML decide CUANDO operar el sistema base, no la direccion.",
+  "metrics": {
+   "Start": "2023-03-16 00:00:00+00:00",
+   "End": "2024-12-31 21:00:00+00:00",
+   "Period": "466 days 16:00:00",
+   "Start Value": 10000.0,
+   "End Value": 8095.527059464057,
+   "Total Return [%]": -19.04472940535943,
+   "Benchmark Return [%]": -2.237121677132803,
+   "Max Gross Exposure [%]": 100.0,
+   "Total Fees Paid": 1473.5552205144518,
+   "Max Drawdown [%]": 20.113159551785014,
+   "Max Drawdown Duration": "460 days 11:00:00",
+   "Total Trades": "1173",
+   "Total Closed Trades": "1173",
+   "Total Open Trades": "0",
+   "Open Trade PnL": 0.0,
+   "Win Rate [%]": 41.77323103154305,
+   "Best Trade [%]": 1.2790602183572561,
+   "Worst Trade [%]": -0.919419831026073,
+   "Avg Winning Trade [%]": 0.10769434367993617,
+   "Avg Losing Trade [%]": -0.10797906312837847,
+   "Avg Winning Trade Duration": "0 days 04:05:52.653061224",
+   "Avg Losing Trade Duration": "0 days 03:39:10.805270863",
+   "Profit Factor": 0.7127451932238549,
+   "Expectancy": -1.623591594659815,
+   "Sharpe Ratio": -3.2785313390579147,
+   "Calmar Ratio": -0.7572894478516099,
+   "Omega Ratio": 0.847428919180628,
+   "Sortino Ratio": -4.656270413909681
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_151500_ml-xgboost-filtro-conviccion-v2",
+  "name": "ML XGBoost + filtro conviccion v2",
+  "family": "ml",
+  "date": "2026-06-07T15:15:00",
+  "description": "Igual que v1 pero solo opera cuando la prob de la clase ganadora > 0.5 (umbral fijo a priori, no ajustado en test). Reduce drasticamente el nº de trades.",
+  "params": {
+   "model": "XGBoost",
+   "conviccion": 0.5,
+   "pt_mult": 2.0,
+   "sl_mult": 2.0,
+   "max_h": 24,
+   "train_frac": 0.7,
+   "embargo": 24,
+   "oos_bars": 11200
+  },
+  "verdict": "no sirvió",
+  "notes": "PSR=0.140, MCPT p=0.860, trades=1822. Idea: menos trades = menos costes (evidencia FX 2024 + meta-labeling Lopez de Prado). Umbral 0.5 FIJO para no autoengañarnos ajustando parametros en el test.",
+  "metrics": {
+   "Start": "2023-03-16 00:00:00+00:00",
+   "End": "2024-12-31 21:00:00+00:00",
+   "Period": "466 days 16:00:00",
+   "Start Value": 10000.0,
+   "End Value": 6614.800087777851,
+   "Total Return [%]": -33.851999122221486,
+   "Benchmark Return [%]": -2.237121677132803,
+   "Max Gross Exposure [%]": 100.0,
+   "Total Fees Paid": 2096.5675766565682,
+   "Max Drawdown [%]": 35.376361940072925,
+   "Max Drawdown Duration": "438 days 21:00:00",
+   "Total Trades": "1822",
+   "Total Closed Trades": "1822",
+   "Total Open Trades": "0",
+   "Open Trade PnL": 0.0,
+   "Win Rate [%]": 45.828759604829855,
+   "Best Trade [%]": 1.2193194145129835,
+   "Worst Trade [%]": -1.3240077773781702,
+   "Avg Winning Trade [%]": 0.10291381407122036,
+   "Avg Losing Trade [%]": -0.1286571294549641,
+   "Avg Winning Trade Duration": "0 days 04:11:55.688622754",
+   "Avg Losing Trade Duration": "0 days 04:14:13.495440729",
+   "Profit Factor": 0.6766685055335027,
+   "Expectancy": -1.8579582394194265,
+   "Sharpe Ratio": -4.791357581298171,
+   "Calmar Ratio": -0.7807479928070472,
+   "Omega Ratio": 0.8294060491762123,
+   "Sortino Ratio": -6.550147026158585
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_151319_ml-xgboost-triple-barrier-v1",
+  "name": "ML XGBoost triple-barrier v1",
+  "family": "ml",
+  "date": "2026-06-07T15:13:19",
+  "description": "XGBoost multiclase sobre etiquetas triple-barrera (Lopez de Prado, AFML 2018) con features de dominio sin lookahead. Split cronologico purgado (embargo=24). Backtest SOLO out-of-sample con costes reales (0.7 pip + slippage).",
+  "params": {
+   "model": "XGBoost",
+   "n_estimators": 400,
+   "max_depth": 4,
+   "lr": 0.05,
+   "pt_mult": 2.0,
+   "sl_mult": 2.0,
+   "max_h": 24,
+   "train_frac": 0.7,
+   "embargo": 24,
+   "oos_bars": 11200
+  },
+  "verdict": "no sirvió",
+  "notes": "PRIMERA prueba ML real. PSR=0.192 (prob. de que el SR>0). MCPT p=0.778 (p bajo => la señal NO es suerte). Fuentes: triple-barrera + purged CV (Lopez de Prado 2018); features de dominio (evidencia FX 2024). Raw, sin filtro de costes aun. [Veredicto: OOS aleatorio - MCPT p=0.78, PSR 0.19.]",
+  "metrics": {
+   "Start": "2023-03-16 00:00:00+00:00",
+   "End": "2024-12-31 21:00:00+00:00",
+   "Period": "466 days 16:00:00",
+   "Start Value": 10000.0,
+   "End Value": 6381.201003054246,
+   "Total Return [%]": -36.18798996945754,
+   "Benchmark Return [%]": -2.237121677132803,
+   "Max Gross Exposure [%]": 100.0,
+   "Total Fees Paid": 2327.341469674584,
+   "Max Drawdown [%]": 38.299597589065975,
+   "Max Drawdown Duration": "457 days 06:00:00",
+   "Total Trades": "2040",
+   "Total Closed Trades": "2039",
+   "Total Open Trades": "1",
+   "Open Trade PnL": -1.8688447920682956,
+   "Win Rate [%]": 46.39529180971064,
+   "Best Trade [%]": 1.1585129326676256,
+   "Worst Trade [%]": -1.9897108669187233,
+   "Avg Winning Trade [%]": 0.11753564487123266,
+   "Avg Losing Trade [%]": -0.14242708579059532,
+   "Avg Winning Trade Duration": "0 days 05:17:18.900634249",
+   "Avg Losing Trade Duration": "0 days 05:35:40.896614821",
+   "Profit Factor": 0.7174255136189434,
+   "Expectancy": -1.773874522880626,
+   "Sharpe Ratio": -4.4307021751216284,
+   "Calmar Ratio": -0.7735600580957812,
+   "Omega Ratio": 0.8624645644189616,
+   "Sortino Ratio": -6.053226030625485
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260607_144908_baseline-sma-20-50",
+  "name": "Baseline SMA 20/50",
+  "family": "baseline",
+  "date": "2026-06-07T14:49:08",
+  "description": "Cruce de medias SMA 20/50 long/short sobre EUR/USD H1 (2019-2024), parametros fijos, con costes (0.7 pip fees + slippage).",
+  "params": {
+   "timeframe": "H1",
+   "fast": 20,
+   "slow": 50,
+   "fees": 7e-05,
+   "slippage": 2e-05,
+   "init_cash": 10000,
+   "symbol": "EURUSD",
+   "period": "2019-2024"
+  },
+  "verdict": "parcial",
+  "notes": "Le gana al Buy&Hold pero Sharpe 0.245 (flojo) y los costes se comen casi todo el edge (~$1273 en 822 trades). Sirve como vara minima para el ML.",
+  "metrics": {
+   "Start": "2019-01-01 22:00:00+00:00",
+   "End": "2024-12-31 21:00:00+00:00",
+   "Period": "1559 days 15:00:00",
+   "Start Value": 10000.0,
+   "End Value": 10788.782648233137,
+   "Total Return [%]": 7.8878264823313655,
+   "Benchmark Return [%]": -9.667905694291756,
+   "Max Gross Exposure [%]": 100.0,
+   "Total Fees Paid": 1273.2002948999052,
+   "Max Drawdown [%]": 14.78030233254124,
+   "Max Drawdown Duration": "399 days 14:00:00",
+   "Total Trades": "822",
+   "Total Closed Trades": "821",
+   "Total Open Trades": "1",
+   "Open Trade PnL": 41.939083708005185,
+   "Win Rate [%]": 37.028014616321556,
+   "Best Trade [%]": 3.388468611688648,
+   "Worst Trade [%]": -1.6655802270389364,
+   "Avg Winning Trade [%]": 0.538604982231693,
+   "Avg Losing Trade [%]": -0.30022217788825134,
+   "Avg Winning Trade Duration": "3 days 04:03:21.315789473",
+   "Avg Losing Trade Duration": "1 days 03:31:06.150870406",
+   "Profit Factor": 1.043145416028294,
+   "Expectancy": 0.909675474452051,
+   "Sharpe Ratio": 0.24505309601788008,
+   "Calmar Ratio": 0.12128865448628738,
+   "Omega Ratio": 1.0082498805895528,
+   "Sortino Ratio": 0.34989304148857414
+  },
+  "status": "neutral",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ }
+]
