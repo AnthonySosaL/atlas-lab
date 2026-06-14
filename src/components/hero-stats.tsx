@@ -6,38 +6,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X, MousePointerClick } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
-type Illusion = { title: string; body: string; exp?: string };
+type Illusion = { exp?: string };
 
+// El contenido (título/cuerpo) viene del diccionario i18n por índice (ill.N.t / ill.N.b)
 const ILLUSIONS: Illusion[] = [
-  {
-    title: "Clarividencia del VIX",
-    body: "El filtro macro daba Sharpe 1.23 y sobrevivía 4 crisis… porque usaba el cierre del VIX del MISMO día para esquivar el crash de ese día. Al rezagarlo 1 día (lo único ejecutable) murió.",
-    exp: "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
-  },
-  {
-    title: "El espejismo de Sharpe 2.1",
-    body: "La re-entrada 'pánico enfriándose' marcaba Sharpe 2.12 en toda la grilla. Era lookahead puro: la versión ejecutable se desplomó.",
-    exp: "20260610_135036_re-entrada-panico-enfriandose-v26",
-  },
-  {
-    title: "La reversión de +0.20",
-    body: "Un edge de reversión de sesión aparecía con Sharpe +0.20 antes de costos. El desglose por año mostró que cambiaba de signo cada año: ruido que promedió positivo.",
-    exp: "20260607_205914_meta-labeling-reversion-sesion-v8",
-  },
-  {
-    title: "El p-valor de 0.003",
-    body: "El TSMOM de cartera daba un MCPT p=0.003 (parecía señal real). Era artefacto del turnover: sin costos el Sharpe era −0.003, cero edge.",
-    exp: "20260607_204455_tsmom-cartera-15-activos-v5",
-  },
-  {
-    title: "El modelo nulo que ganó",
-    body: "La clasificación de dirección parecía acertar… hasta que un modelo entrenado con etiquetas BARAJADAS rindió igual o mejor. La 'predicción' era solo beta del mercado.",
-  },
-  {
-    title: "Deflated Sharpe 0.35",
-    body: "Tras 40+ intentos, el mejor sistema ejecutable tenía Sharpe 0.38. El Deflated Sharpe (0.35) reveló que no se distinguía del mejor resultado por puro azar.",
-    exp: "20260610_140955_deflated-sharpe-del-ejecutable-v38",
-  },
+  { exp: "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27" },
+  { exp: "20260610_135036_re-entrada-panico-enfriandose-v26" },
+  { exp: "20260607_205914_meta-labeling-reversion-sesion-v8" },
+  { exp: "20260607_204455_tsmom-cartera-15-activos-v5" },
+  {},
+  { exp: "20260610_140955_deflated-sharpe-del-ejecutable-v38" },
 ];
 
 export function HeroStats({
@@ -124,13 +102,13 @@ export function HeroStats({
                       <div className="font-medium">
                         {il.exp ? (
                           <Link href={`/exp/${il.exp}`} className="hover:text-primary hover:underline">
-                            {il.title}
+                            {t(`ill.${i + 1}.t`)}
                           </Link>
                         ) : (
-                          il.title
+                          t(`ill.${i + 1}.t`)
                         )}
                       </div>
-                      <p className="mt-0.5 text-sm text-muted-foreground">{il.body}</p>
+                      <p className="mt-0.5 text-sm text-muted-foreground">{t(`ill.${i + 1}.b`)}</p>
                     </div>
                   </li>
                 ))}
