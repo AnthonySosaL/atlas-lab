@@ -248,7 +248,7 @@
  {
   "id": "20260610_141058_veredicto-final-40-experimentos-v40",
   "v": 40,
-  "analysis": "",
+  "analysis": "Veredicto tras 40 experimentos: con datos retail (precio + macro gratis) y rebalanceo diario, NO existe un edge desplegable que pase challenges con expectativa real. El ~7% de aprobación del sector es matemática, no solo indisciplina. Decisión: el bot demo baja a x2 como instrumento de MEDICIÓN, y cero dinero en challenges con esta clase de estrategia.",
   "name": "VEREDICTO FINAL 40 experimentos v40",
   "family": "risk",
   "date": "2026-06-10T14:10:58",
@@ -275,7 +275,7 @@
  {
   "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
   "v": 38,
-  "analysis": "",
+  "analysis": "El juez final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por haber probado 40+ configuraciones. El mejor sistema ejecutable (Sharpe 0.38) dio DSR = 0.35 → NO se distingue del mejor resultado que daría el puro azar tras tantos intentos. La prueba estadística de que no había edge.",
   "name": "Deflated Sharpe del ejecutable v38",
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -302,7 +302,7 @@
  {
   "id": "20260610_140955_ev-del-negocio-ejecutable-v39",
   "v": 39,
-  "analysis": "",
+  "analysis": "Valor esperado del negocio con la versión ejecutable y honesta: impracticable (CAGR 1.9%, mediana 2.3 años para pasar). Los números nominales positivos se evaporan al medir el tiempo real.",
   "name": "EV del negocio ejecutable v39",
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -330,7 +330,7 @@
  {
   "id": "20260610_140954_p-pasar-ejecutable-v37",
   "v": 37,
-  "analysis": "",
+  "analysis": "Probabilidad real de pasar con la versión ejecutable. 8.6% en 1 año; 69% sin límite de tiempo pero con una mediana de 2.3 AÑOS. Traducción: técnicamente posible, prácticamente inviable como fuente de ingresos.",
   "name": "P(pasar) ejecutable v37",
   "family": "risk",
   "date": "2026-06-10T14:09:54",
@@ -361,7 +361,7 @@
  {
   "id": "20260610_140835_calidad-intrinseca-sin-reglas-prop-v36",
   "v": 36,
-  "analysis": "",
+  "analysis": "¿Cuál es la calidad INTRÍNSECA del sistema sin las reglas prop que lo protegen? A x3+ se autodestruye igual (MaxDD −38% a −94%). Reveló un techo intrínseco: las reglas de la prop firm enmascaraban la fragilidad real de la estrategia.",
   "name": "Calidad intrinseca sin reglas prop v36",
   "family": "bot",
   "date": "2026-06-10T14:08:35",
@@ -389,7 +389,7 @@
  {
   "id": "20260610_140833_curva-de-tasas-como-filtro-v35",
   "v": 35,
-  "analysis": "",
+  "analysis": "Probar la curva de tasas (term spread TNX-IRX) como filtro adicional. No aportó. Otra fuente macro descartada con rigor.",
   "name": "Curva de tasas como filtro v35",
   "family": "bot",
   "date": "2026-06-10T14:08:33",
@@ -415,7 +415,7 @@
  {
   "id": "20260610_140720_graduado-vix-14-ejecutable-v34",
   "v": 34,
-  "analysis": "",
+  "analysis": "Leverage graduado pero en versión ejecutable (lag-1). Solo aguanta hasta ~x2.5; más allá, la protección rezagada no alcanza. Coherente con la frontera de riesgo de toda la serie.",
   "name": "Graduado VIX<14 ejecutable v34",
   "family": "bot",
   "date": "2026-06-10T14:07:20",
@@ -448,7 +448,7 @@
  {
   "id": "20260610_140718_disparo-temprano-del-filtro-v33",
   "v": 33,
-  "analysis": "",
+  "analysis": "¿Y si el filtro dispara más temprano? No ayuda: el disparo anticipado genera whipsaw (entras y sales en falsas alarmas) y empeora el resultado. El timing tiene un punto óptimo, no 'cuanto antes mejor'.",
   "name": "Disparo temprano del filtro v33",
   "family": "bot",
   "date": "2026-06-10T14:07:18",
@@ -475,7 +475,7 @@
  {
   "id": "20260610_140603_validacion-ejecutable-reactivo-v32",
   "v": 32,
-  "analysis": "",
+  "analysis": "Validación del filtro reactivo con gaps reales y un trough conservador. Confirmó la supervivencia: Sharpe ~0.40, ~2%/año a x2. Real y ejecutable… pero modesto, muy lejos de lo que un challenge corto necesita.",
   "name": "Validacion ejecutable-reactivo v32",
   "family": "bot",
   "date": "2026-06-10T14:06:03",
@@ -503,7 +503,7 @@
  {
   "id": "20260610_140602_filtro-reactivo-intradia-v31",
   "v": 31,
-  "analysis": "",
+  "analysis": "Si el problema es reaccionar tarde, ¿y un filtro REACTIVO intradía? Un monitor que aplana a media sesión (φ = la fracción del día que alcanzas a cubrir), implementable con un poll de VIX cada 15 min. Fue la primera configuración ejecutable que sobrevivió 2007-2024 — pero solo a x≤2.",
   "name": "Filtro reactivo intradia v31",
   "family": "bot",
   "date": "2026-06-10T14:06:02",
@@ -531,7 +531,7 @@
  {
   "id": "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
   "v": 27,
-  "analysis": "",
+  "analysis": "LA prueba de fuego. Al rezagar TODAS las señales 1 día (la única versión que un bot real puede ejecutar: decide a las 17:30 y aplica al día siguiente), la re-entrada Y EL PROPIO BASELINE murieron en ambos períodos. El Sharpe 1.23 del filtro estaba inflado por usar el VIX del cierre del MISMO día. Mecanismo de muerte: un día de crash a x3-4 rompe el límite diario del 5% antes de poder reaccionar. Este experimento cambió todo el veredicto.",
   "name": "Prueba de fuego lag-1 re-entrada v27",
   "family": "bot",
   "date": "2026-06-10T13:51:43",
@@ -562,7 +562,7 @@
  {
   "id": "20260610_135036_re-entrada-panico-enfriandose-v26",
   "v": 26,
-  "analysis": "",
+  "analysis": "Re-entrada 'pánico enfriándose': volver al mercado cuando el VIX baja desde su máximo reciente. Marcó un Sharpe 2.12 espectacular en TODA la grilla… demasiado bueno. Era lookahead: usaba información del mismo día. Una de las ilusiones más peligrosas, porque pasaba todos los tests menos el de ejecutabilidad.",
   "name": "Re-entrada panico enfriandose v26",
   "family": "bot",
   "date": "2026-06-10T13:50:36",
@@ -590,7 +590,7 @@
  {
   "id": "20260610_134940_ml-sizing-con-proteccion-manual-v25",
   "v": 25,
-  "analysis": "",
+  "analysis": "ML para el SIZING (no para la dirección), manteniendo la protección manual intacta. Sobrevivió ambos períodos pero NO aportó (1.20/1.04 vs 1.23/1.06): las features macro no tienen señal de retorno más allá del on/off que ya daba el filtro simple.",
   "name": "ML sizing con proteccion manual v25",
   "family": "ml",
   "date": "2026-06-10T13:49:40",
@@ -619,7 +619,7 @@
  {
   "id": "20260610_134831_regimen-supervisado-v2-residual-v24",
   "v": 24,
-  "analysis": "",
+  "analysis": "Segunda versión del régimen supervisado (residual, con balanceo de clases y umbral adaptativo). Mismo resultado: murió. Reforzó que el problema no era el tuning, era la naturaleza del fenómeno.",
   "name": "Regimen supervisado v2 residual v24",
   "family": "ml",
   "date": "2026-06-10T13:48:31",
@@ -647,7 +647,7 @@
  {
   "id": "20260610_134700_regimen-supervisado-xgb-walk-forward-v23",
   "v": 23,
-  "analysis": "",
+  "analysis": "Régimen supervisado: XGBoost con features macro y walk-forward para aprender los umbrales. Murió en el COVID. Los crashes son eventos rarísimos (~2 ejemplos por ventana) y cada crisis es distinta: no hay suficientes ejemplos para que un modelo los aprenda.",
   "name": "Regimen supervisado XGB walk-forward v23",
   "family": "ml",
   "date": "2026-06-10T13:47:00",
@@ -679,7 +679,7 @@
  {
   "id": "20260610_134200_hmm-regime-detection-ia-v22",
   "v": 22,
-  "analysis": "",
+  "analysis": "¿Y si una IA aprende el régimen mejor que las reglas a mano? Un HMM gaussiano (Hamilton) de 2 estados, sin lookahead. Perdió: solo reventó (Sharpe −2.31). Lección clave: el edge está en los DATOS forward-looking (VIX = volatilidad implícita, crédito), no en la sofisticación del algoritmo — un modelo sobre volatilidad realizada llega tarde.",
   "name": "HMM regime detection (IA) v22",
   "family": "ml",
   "date": "2026-06-10T13:42:00",
@@ -713,7 +713,7 @@
  {
   "id": "20260610_022556_oos-temporal-2007-2013-anti-overfit-v21",
   "v": 21,
-  "analysis": "",
+  "analysis": "La prueba anti-overfit definitiva: congelar las reglas de 2014-2024 y aplicarlas SIN tocar a 2007-2013 (datos jamás vistos, con la crisis de 2008). El filtro sobrevivió 2008 con todos los años positivos (Sharpe 1.06, degradación sana desde 1.23). El edge generaliza a ~18 años y 6 crisis: no está sobreentrenado.",
   "name": "OOS temporal 2007-2013 (anti-overfit) v21",
   "family": "bot",
   "date": "2026-06-10T02:25:56",
@@ -751,7 +751,7 @@
  {
   "id": "20260609_210757_trend-long-short-filtrado-v20",
   "v": 20,
-  "analysis": "",
+  "analysis": "Trend long/short: añadir cortos según el signo del momentum. Reventó — los cortos restan en un basket con sesgo alcista de largo plazo. El long-only filtrado le gana.",
   "name": "Trend long-short filtrado v20",
   "family": "bot",
   "date": "2026-06-09T21:07:57",
@@ -778,7 +778,7 @@
  {
   "id": "20260609_210756_leverage-graduado-por-vix-v19",
   "v": 19,
-  "analysis": "",
+  "analysis": "Leverage graduado por VIX: subir el apalancamiento solo cuando hay calma estricta. Fue el mejor Sharpe in-sample (1.39 vs 1.23 del baseline), pero la grilla mostró una frontera dura: solo aguanta con VIX<14; con VIX<16 ya muere a x6. Candidato de upgrade, pero MaxDD ~15% → solo para firms de drawdown estático, nunca trailing.",
   "name": "Leverage graduado por VIX v19",
   "family": "bot",
   "date": "2026-06-09T21:07:56",
@@ -806,7 +806,7 @@
  {
   "id": "20260609_210755_rotacion-defensiva-oro-yen-v18",
   "v": 18,
-  "analysis": "",
+  "analysis": "Variante: rotar a refugios (oro + yen) en vez de quedar flat cuando hay riesgo. Reventó en 2014 — los 'refugios' también caen en ciertos shocks. Confirmó que en risk-off lo correcto es simplemente NO estar en el mercado.",
   "name": "Rotacion defensiva oro+yen v18",
   "family": "bot",
   "date": "2026-06-09T21:07:55",
