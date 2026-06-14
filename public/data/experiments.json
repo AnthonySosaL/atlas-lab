@@ -1,7 +1,8 @@
 [
  {
   "id": "20260613_200850_vol-targeting-vs-leverage-fijo-bot-live",
-  "v": null,
+  "v": 57,
+  "analysis": "",
   "name": "vol-targeting vs leverage fijo (bot live)",
   "family": "bot-upgrade",
   "date": "2026-06-13T20:08:50",
@@ -32,6 +33,7 @@
  {
   "id": "20260610_142844_cierre-11-clases-probadas-v50",
   "v": 50,
+  "analysis": "",
   "name": "CIERRE: 11 clases probadas v50",
   "family": "quant",
   "date": "2026-06-10T14:28:44",
@@ -54,6 +56,7 @@
  {
   "id": "20260610_142756_momentum-cross-sectional-v48",
   "v": 48,
+  "analysis": "",
   "name": "Momentum cross-sectional v48",
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -78,6 +81,7 @@
  {
   "id": "20260610_142756_stat-arb-pca-residual-v47",
   "v": 47,
+  "analysis": "",
   "name": "Stat-arb PCA residual v47",
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -102,6 +106,7 @@
  {
   "id": "20260610_142756_turn-of-month-indices-v49",
   "v": 49,
+  "analysis": "",
   "name": "Turn-of-month indices v49",
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -126,6 +131,7 @@
  {
   "id": "20260610_142755_pairs-cointegracion-v46",
   "v": 46,
+  "analysis": "",
   "name": "Pairs cointegracion v46",
   "family": "quant",
   "date": "2026-06-10T14:27:55",
@@ -150,6 +156,7 @@
  {
   "id": "20260610_142118_cot-contrarian-extremos-v45",
   "v": 45,
+  "analysis": "",
   "name": "COT contrarian extremos v45",
   "family": "cot",
   "date": "2026-06-10T14:21:18",
@@ -180,6 +187,7 @@
  {
   "id": "20260610_142006_carry-fx-ejecutable-v42",
   "v": 42,
+  "analysis": "",
   "name": "Carry FX ejecutable v42",
   "family": "carry",
   "date": "2026-06-10T14:20:06",
@@ -210,6 +218,7 @@
  {
   "id": "20260610_142006_carry-trend-combo-v43",
   "v": 43,
+  "analysis": "",
   "name": "Carry+Trend combo v43",
   "family": "carry",
   "date": "2026-06-10T14:20:06",
@@ -239,6 +248,7 @@
  {
   "id": "20260610_141058_veredicto-final-40-experimentos-v40",
   "v": 40,
+  "analysis": "",
   "name": "VEREDICTO FINAL 40 experimentos v40",
   "family": "risk",
   "date": "2026-06-10T14:10:58",
@@ -265,6 +275,7 @@
  {
   "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
   "v": 38,
+  "analysis": "",
   "name": "Deflated Sharpe del ejecutable v38",
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -291,6 +302,7 @@
  {
   "id": "20260610_140955_ev-del-negocio-ejecutable-v39",
   "v": 39,
+  "analysis": "",
   "name": "EV del negocio ejecutable v39",
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -318,6 +330,7 @@
  {
   "id": "20260610_140954_p-pasar-ejecutable-v37",
   "v": 37,
+  "analysis": "",
   "name": "P(pasar) ejecutable v37",
   "family": "risk",
   "date": "2026-06-10T14:09:54",
@@ -348,6 +361,7 @@
  {
   "id": "20260610_140835_calidad-intrinseca-sin-reglas-prop-v36",
   "v": 36,
+  "analysis": "",
   "name": "Calidad intrinseca sin reglas prop v36",
   "family": "bot",
   "date": "2026-06-10T14:08:35",
@@ -375,6 +389,7 @@
  {
   "id": "20260610_140833_curva-de-tasas-como-filtro-v35",
   "v": 35,
+  "analysis": "",
   "name": "Curva de tasas como filtro v35",
   "family": "bot",
   "date": "2026-06-10T14:08:33",
@@ -400,6 +415,7 @@
  {
   "id": "20260610_140720_graduado-vix-14-ejecutable-v34",
   "v": 34,
+  "analysis": "",
   "name": "Graduado VIX<14 ejecutable v34",
   "family": "bot",
   "date": "2026-06-10T14:07:20",
@@ -432,6 +448,7 @@
  {
   "id": "20260610_140718_disparo-temprano-del-filtro-v33",
   "v": 33,
+  "analysis": "",
   "name": "Disparo temprano del filtro v33",
   "family": "bot",
   "date": "2026-06-10T14:07:18",
@@ -458,6 +475,7 @@
  {
   "id": "20260610_140603_validacion-ejecutable-reactivo-v32",
   "v": 32,
+  "analysis": "",
   "name": "Validacion ejecutable-reactivo v32",
   "family": "bot",
   "date": "2026-06-10T14:06:03",
@@ -485,6 +503,7 @@
  {
   "id": "20260610_140602_filtro-reactivo-intradia-v31",
   "v": 31,
+  "analysis": "",
   "name": "Filtro reactivo intradia v31",
   "family": "bot",
   "date": "2026-06-10T14:06:02",
@@ -512,6 +531,7 @@
  {
   "id": "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
   "v": 27,
+  "analysis": "",
   "name": "Prueba de fuego lag-1 re-entrada v27",
   "family": "bot",
   "date": "2026-06-10T13:51:43",
@@ -542,6 +562,7 @@
  {
   "id": "20260610_135036_re-entrada-panico-enfriandose-v26",
   "v": 26,
+  "analysis": "",
   "name": "Re-entrada panico enfriandose v26",
   "family": "bot",
   "date": "2026-06-10T13:50:36",
@@ -569,6 +590,7 @@
  {
   "id": "20260610_134940_ml-sizing-con-proteccion-manual-v25",
   "v": 25,
+  "analysis": "",
   "name": "ML sizing con proteccion manual v25",
   "family": "ml",
   "date": "2026-06-10T13:49:40",
@@ -597,6 +619,7 @@
  {
   "id": "20260610_134831_regimen-supervisado-v2-residual-v24",
   "v": 24,
+  "analysis": "",
   "name": "Regimen supervisado v2 residual v24",
   "family": "ml",
   "date": "2026-06-10T13:48:31",
@@ -624,6 +647,7 @@
  {
   "id": "20260610_134700_regimen-supervisado-xgb-walk-forward-v23",
   "v": 23,
+  "analysis": "",
   "name": "Regimen supervisado XGB walk-forward v23",
   "family": "ml",
   "date": "2026-06-10T13:47:00",
@@ -655,6 +679,7 @@
  {
   "id": "20260610_134200_hmm-regime-detection-ia-v22",
   "v": 22,
+  "analysis": "",
   "name": "HMM regime detection (IA) v22",
   "family": "ml",
   "date": "2026-06-10T13:42:00",
@@ -688,6 +713,7 @@
  {
   "id": "20260610_022556_oos-temporal-2007-2013-anti-overfit-v21",
   "v": 21,
+  "analysis": "",
   "name": "OOS temporal 2007-2013 (anti-overfit) v21",
   "family": "bot",
   "date": "2026-06-10T02:25:56",
@@ -725,6 +751,7 @@
  {
   "id": "20260609_210757_trend-long-short-filtrado-v20",
   "v": 20,
+  "analysis": "",
   "name": "Trend long-short filtrado v20",
   "family": "bot",
   "date": "2026-06-09T21:07:57",
@@ -751,6 +778,7 @@
  {
   "id": "20260609_210756_leverage-graduado-por-vix-v19",
   "v": 19,
+  "analysis": "",
   "name": "Leverage graduado por VIX v19",
   "family": "bot",
   "date": "2026-06-09T21:07:56",
@@ -778,6 +806,7 @@
  {
   "id": "20260609_210755_rotacion-defensiva-oro-yen-v18",
   "v": 18,
+  "analysis": "",
   "name": "Rotacion defensiva oro+yen v18",
   "family": "bot",
   "date": "2026-06-09T21:07:55",
@@ -805,6 +834,7 @@
  {
   "id": "20260608_164506_dinero-real-con-filtro-macro-v17",
   "v": 17,
+  "analysis": "El factor decisivo para el dinero: el LÍMITE DE TIEMPO del challenge. A 30 días el filtro es demasiado lento (P pasar 1-6%), pero SIN límite de tiempo a x4 da ~82% de pasar. Clave operativa: usar firms sin límite temporal, donde el bot grindea a +10% sin reventar.",
   "name": "Dinero real con filtro macro v17",
   "family": "risk",
   "date": "2026-06-08T16:45:06",
@@ -833,6 +863,7 @@
  {
   "id": "20260608_160317_validacion-filtro-macro-multi-crisis-v16",
   "v": 16,
+  "analysis": "Validación del filtro 2014-2024 (4 crisis). Sharpe 1.23, +267%, y los años de crisis (2020, 2022) salieron POSITIVOS. La grilla de sensibilidad (9 combinaciones) sobrevivió toda con Sharpe 1.04-1.47 → robusto, no curve-fit. El mejor resultado de la investigación… hasta la prueba de fuego del #27.",
   "name": "Validacion filtro macro multi-crisis v16",
   "family": "bot",
   "date": "2026-06-08T16:03:17",
@@ -862,6 +893,7 @@
  {
   "id": "20260608_160139_bot-filtro-macro-regimen-v15",
   "v": 15,
+  "analysis": "La opción que faltaba: datos que NO están en el precio. Filtro de régimen macro (VIX + crédito HYG/LQD de Yahoo) que pone el bot en flat ante señal de riesgo cross-asset. Con el filtro, el bot SOBREVIVE el COVID a x4 (Sharpe 1.38) donde antes reventaba — el primer candidato real de toda la investigación.",
   "name": "Bot + filtro macro regimen v15",
   "family": "bot",
   "date": "2026-06-08T16:01:39",
@@ -892,6 +924,7 @@
  {
   "id": "20260607_214233_bot-atlas-vol-target-paper-v14",
   "v": 14,
+  "analysis": "Se intentó proteger con volatility targeting… y reventó PEOR (−21.6%). Causa: la volatilidad rezagada estaba baja justo antes del gap súbito, así que el sistema puso MÁS leverage entrando al crash. Lección que marcó el diseño del bot actual.",
   "name": "Bot ATLAS vol-target paper v14",
   "family": "bot",
   "date": "2026-06-07T21:42:33",
@@ -939,6 +972,7 @@
  {
   "id": "20260607_214022_bot-atlas-paper-run-funded-v13",
   "v": 13,
+  "analysis": "Primer bot desplegable a datos reales. A x2 REVENTÓ en el COVID (MaxDD −15%): el Monte Carlo no reproducía un crash sostenido y correlacionado. La teoría sobrevivía; la realidad no.",
   "name": "Bot ATLAS paper-run funded v13",
   "family": "bot",
   "date": "2026-06-07T21:40:22",
@@ -984,6 +1018,7 @@
  {
   "id": "20260607_212532_stress-test-por-regimen-v12",
   "v": 12,
+  "analysis": "Prueba de estrés por régimen (historia 2006-2024). El EV se mantiene positivo en TODAS las crisis (2008, COVID, 2022) pero se desploma a ≈breakeven en un bear sostenido. Resiliente pero dependiente del régimen; y el bootstrap subestima los drawdowns largos, así que un bear real sería peor.",
   "name": "Stress test por regimen v12",
   "family": "risk",
   "date": "2026-06-07T21:25:32",
@@ -1016,6 +1051,7 @@
  {
   "id": "20260607_211742_ev-real-prop-firm-challenge-fondeo-v11",
   "v": 11,
+  "analysis": "EV del negocio completo (challenge + fase fondeada con sizing dual: agresivo para pasar, conservador para ordeñar). Dio EV ≈ +$5,900/intento. Honestidad: ese número es solo BETA del basket en un periodo alcista — es levantar beta largo con capital de la prop firm, no alpha.",
   "name": "EV real prop firm (challenge+fondeo) v11",
   "family": "risk",
   "date": "2026-06-07T21:17:42",
@@ -1052,6 +1088,7 @@
  {
   "id": "20260607_211610_risk-parity-sizing-optimo-v10",
   "v": 10,
+  "analysis": "¿Mejora el risk parity la probabilidad de pasar? No: se topa en ~45-48%, igual que equal-weight. Lo que manda es la volatilidad total para alcanzar el objetivo a tiempo, no la sofisticación del sizing.",
   "name": "Risk parity + sizing optimo v10",
   "family": "risk",
   "date": "2026-06-07T21:16:10",
@@ -1090,6 +1127,7 @@
  {
   "id": "20260607_210548_simulador-prop-firm-cartera-v9",
   "v": 9,
+  "analysis": "Giro estratégico: si no hay alpha, ¿qué decide pasar un fondeo? Un simulador Monte Carlo de las reglas FTMO reveló que pasar es 90% SIZING + disciplina. Una cartera diversificada bien dimensionada pasa ~48% de las veces, y ~38% incluso en mercado plano sin edge — vs el ~7% real que falla por comportamiento.",
   "name": "Simulador prop-firm (cartera) v9",
   "family": "risk",
   "date": "2026-06-07T21:05:48",
@@ -1129,6 +1167,7 @@
  {
   "id": "20260607_205914_meta-labeling-reversion-sesion-v8",
   "v": 8,
+  "analysis": "Meta-labeling para filtrar solo las mejores reversiones del #7. Falló: fuera de muestra el gross era −1.41, y el desglose por año mostró el Sharpe cambiando de signo cada año. Ese '+0.20' era ruido que promedió positivo, no un edge — ilusión cazada.",
   "name": "Meta-labeling reversion sesion v8",
   "family": "intraday",
   "date": "2026-06-07T20:59:14",
@@ -1169,6 +1208,7 @@
  {
   "id": "20260607_205435_reversion-de-sesion-fade-v7",
   "v": 7,
+  "analysis": "Si el FX revierte, probemos la reversión (fade de sesión). Apareció un edge REAL antes de costos (Sharpe +0.20)… pero neto fue −1.99: 1553 operaciones lo enterraron. El muro no era la falta de señal, eran los costos.",
   "name": "Reversion de sesion (fade) v7",
   "family": "intraday",
   "date": "2026-06-07T20:54:35",
@@ -1202,6 +1242,7 @@
  {
   "id": "20260607_205310_orb-sesion-londres-ny-v6",
   "v": 6,
+  "analysis": "Edge intradía de sesión: breakout de los rangos de apertura de Londres/NY en M1. Perdió significativo (Sharpe −0.96, PSR 0.009). El FX no rompe, revierte intradía (al revés que los índices) — Zarattini & Aziz 2023.",
   "name": "ORB sesion Londres-NY v6",
   "family": "intraday",
   "date": "2026-06-07T20:53:10",
@@ -1234,6 +1275,7 @@
  {
   "id": "20260607_204455_tsmom-cartera-15-activos-v5",
   "v": 5,
+  "analysis": "La literatura dice que el momentum necesita DIVERSIFICACIÓN: TSMOM sobre 15 instrumentos con volatility scaling. El MCPT p=0.003 parecía prometedor… hasta ver que el Sharpe SIN costos era −0.003 (cero edge) y que el Buy&Hold del basket (Sharpe 0.39) le ganaba. El p bajo era artefacto del turnover, no alpha — una de las ilusiones cazadas.",
   "name": "TSMOM cartera 15 activos v5",
   "family": "trend",
   "date": "2026-06-07T20:44:55",
@@ -1285,6 +1327,7 @@
  {
   "id": "20260607_152309_time-series-momentum-diario-v4",
   "v": 4,
+  "analysis": "Cambio de palanca: Time-Series Momentum diario (Moskowitz et al. 2012). Bajar a diario sí resolvió los costos (solo 75 trades), pero la señal volvió a ser ~aleatoria (PSR 0.47, p=0.58, Sharpe≈0). El momentum clásico tampoco vive en EUR/USD solo.",
   "name": "Time-Series Momentum diario v4",
   "family": "trend",
   "date": "2026-06-07T15:23:09",
@@ -1337,6 +1380,7 @@
  {
   "id": "20260607_151624_ml-meta-labeling-sma-xgboost-v3",
   "v": 3,
+  "analysis": "Meta-labeling canónico (AFML 2018): una SMA da la señal primaria y XGBoost decide cuáles tomar. La señal filtrada salió ~aleatoria (PSR 0.51, p=0.48) y el Sharpe neto −3.28 por costos. Confirmó que filtrar ruido sigue dando ruido.",
   "name": "ML Meta-labeling SMA+XGBoost v3",
   "family": "ml",
   "date": "2026-06-07T15:16:24",
@@ -1391,6 +1435,7 @@
  {
   "id": "20260607_151500_ml-xgboost-filtro-conviccion-v2",
   "v": 2,
+  "analysis": "Se añadió un filtro de convicción (operar solo si la probabilidad del modelo > 0.5). En vez de mejorar, hundió el resultado a Sharpe −4.79 con 1822 operaciones: ~33% del capital se fue en costos y la 'confianza' del modelo se invertía fuera de muestra. Más trades = más costos, no más edge.",
   "name": "ML XGBoost + filtro conviccion v2",
   "family": "ml",
   "date": "2026-06-07T15:15:00",
@@ -1445,6 +1490,7 @@
  {
   "id": "20260607_151319_ml-xgboost-triple-barrier-v1",
   "v": 1,
+  "analysis": "Primer modelo de ML real: XGBoost con etiquetado triple-barrera (López de Prado) prediciendo dirección en cada barra. Fuera de muestra resultó indistinguible de lanzar una moneda (MCPT p=0.78, PSR 0.19). Lección temprana y dura: no hay señal direccional en el precio H1 con features OHLCV simples.",
   "name": "ML XGBoost triple-barrier v1",
   "family": "ml",
   "date": "2026-06-07T15:13:19",
@@ -1500,7 +1546,8 @@
  },
  {
   "id": "20260607_144908_baseline-sma-20-50",
-  "v": null,
+  "v": 0,
+  "analysis": "El punto de partida: un cruce de medias (SMA 20/50) largo/corto en EUR/USD con costos reales. Dio Sharpe 0.245 y le ganó al Buy&Hold (−9.7%), pero los costos se comieron casi todo el edge. Sirve solo como vara mínima: cualquier modelo de ML tenía que superar esto.",
   "name": "Baseline SMA 20/50",
   "family": "baseline",
   "date": "2026-06-07T14:49:08",

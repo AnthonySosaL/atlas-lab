@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { Mail, FlaskConical } from "lucide-react";
+import { Mail, Phone, MapPin, FileText, FlaskConical } from "lucide-react";
 
-const GITHUB = "https://github.com/AnthonySosaL";
 const EMAIL = "anthonysosa44@gmail.com";
-// LinkedIn pendiente: cuando Anthony pase su URL, ponerla aqui y aparece como primer link.
-const LINKEDIN = ""; // p.ej. "https://www.linkedin.com/in/tu-usuario"
+const PHONE = "+593 099 582 2812";
+const GITHUB = "https://github.com/AnthonySosaL";
+const LINKEDIN = "https://www.linkedin.com/in/anthony-sosa-942475187/";
+const CV = "https://curricula-fawn.vercel.app/";
+const LOCATION = "Pichincha, Ecuador";
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -13,7 +15,6 @@ function GithubIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
@@ -23,15 +24,18 @@ function LinkedinIcon({ className }: { className?: string }) {
 }
 
 const links = [
-  ...(LINKEDIN ? [{ href: LINKEDIN, label: "LinkedIn", Icon: LinkedinIcon }] : []),
-  { href: GITHUB, label: "GitHub", Icon: GithubIcon },
-  { href: `mailto:${EMAIL}`, label: "Email", Icon: Mail },
+  { href: `mailto:${EMAIL}`, label: EMAIL, sub: "Email", Icon: Mail },
+  { href: `tel:${PHONE.replace(/\s/g, "")}`, label: PHONE, sub: "Teléfono", Icon: Phone },
+  { href: GITHUB, label: "github.com/AnthonySosaL", sub: "GitHub", Icon: GithubIcon },
+  { href: LINKEDIN, label: "anthony-sosa", sub: "LinkedIn", Icon: LinkedinIcon },
+  { href: CV, label: "curricula-fawn.vercel.app", sub: "Currículum", Icon: FileText },
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t bg-muted/30">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1fr_1.3fr]">
+        {/* Marca */}
         <div>
           <div className="flex items-center gap-2 font-semibold tracking-tight">
             <span className="grid size-7 place-items-center rounded-md bg-primary text-primary-foreground">
@@ -39,32 +43,46 @@ export function SiteFooter() {
             </span>
             ATLAS <span className="text-primary">Lab</span>
           </div>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground">
             Construido por <span className="font-medium text-foreground">Anthony Sosa</span> —
             ingeniero de sistemas · Python · full-stack · IA.
           </p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            ¿Un proyecto en mente? Escríbeme y conversamos.
+          <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+            <MapPin className="size-3.5" /> {LOCATION}
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          {links.map((l) => (
-            <Link
-              key={l.label}
-              href={l.href}
-              target={l.href.startsWith("http") ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:border-primary/40 hover:bg-muted"
-            >
-              <l.Icon className="size-4" />
-              {l.label}
-            </Link>
-          ))}
+        {/* Hablemos */}
+        <div>
+          <h3 className="text-lg font-semibold tracking-tight">Hablemos</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            ¿Tienes un proyecto en mente o quieres trabajar juntos? Contáctame.
+          </p>
+          <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
+            {links.map((l) => (
+              <Link
+                key={l.sub}
+                href={l.href}
+                target={l.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 rounded-lg border bg-card p-3 transition-colors hover:border-primary/40"
+              >
+                <span className="grid size-9 shrink-0 place-items-center rounded-md bg-primary/10 text-primary">
+                  <l.Icon className="size-4" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-xs text-muted-foreground">{l.sub}</span>
+                  <span className="block truncate text-sm font-medium group-hover:text-primary">
+                    {l.label}
+                  </span>
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Anthony Sosa · ATLAS Lab · datos generados desde el laboratorio
+        © {new Date().getFullYear()} Anthony Sosa · ATLAS Lab
       </div>
     </footer>
   );

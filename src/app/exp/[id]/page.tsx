@@ -75,6 +75,14 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
         </Card>
       )}
 
+      {/* Análisis (curado, por experimento) */}
+      {exp.analysis && (
+        <Card className="mt-6 p-5">
+          <div className="mb-2 text-sm font-medium">Análisis</div>
+          <p className="text-sm leading-relaxed text-muted-foreground">{exp.analysis}</p>
+        </Card>
+      )}
+
       {/* Métricas */}
       {metrics.length > 0 && (
         <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border sm:grid-cols-4">
