@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, Phone, MapPin, FileText, FlaskConical } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const EMAIL = "anthonysosa44@gmail.com";
 const PHONE = "+593 099 582 2812";
@@ -32,6 +35,7 @@ const links = [
 ];
 
 export function SiteFooter() {
+  const { t } = useI18n();
   return (
     <footer className="border-t bg-muted/30">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1fr_1.3fr]">
@@ -44,8 +48,8 @@ export function SiteFooter() {
             ATLAS <span className="text-primary">Lab</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
-            Construido por <span className="font-medium text-foreground">Anthony Sosa</span> —
-            ingeniero de sistemas · Python · full-stack · IA.
+            {t("footer.by")} <span className="font-medium text-foreground">Anthony Sosa</span> —{" "}
+            {t("footer.role")}
           </p>
           <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted-foreground">
             <MapPin className="size-3.5" /> {LOCATION}
@@ -54,10 +58,8 @@ export function SiteFooter() {
 
         {/* Hablemos */}
         <div>
-          <h3 className="text-lg font-semibold tracking-tight">Hablemos</h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            ¿Tienes un proyecto en mente o quieres trabajar juntos? Contáctame.
-          </p>
+          <h3 className="text-lg font-semibold tracking-tight">{t("footer.talk")}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{t("footer.talkSub")}</p>
           <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
             {links.map((l) => (
               <Link

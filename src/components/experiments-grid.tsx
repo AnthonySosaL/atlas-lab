@@ -7,21 +7,17 @@ import type { Experiment } from "@/lib/data";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn, fmtMetric, headlineMetrics } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n";
 
-const STATUS_LABEL: Record<Experiment["status"], string> = {
-  survived: "sobrevivió",
-  died: "murió",
-  neutral: "neutro",
-};
-
-const STATUS_FILTERS: { key: "todos" | Experiment["status"]; label: string }[] = [
-  { key: "todos", label: "Todos" },
-  { key: "survived", label: "Sobrevivió" },
-  { key: "neutral", label: "Neutro" },
-  { key: "died", label: "Murió" },
+const STATUS_FILTERS: { key: "todos" | Experiment["status"]; tkey: string }[] = [
+  { key: "todos", tkey: "filter.all" },
+  { key: "survived", tkey: "filter.survived" },
+  { key: "neutral", tkey: "filter.neutral" },
+  { key: "died", tkey: "filter.died" },
 ];
 
 export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) {
+  const { t } = useI18n();
   const families = React.useMemo(
     () => ["todas", ...Array.from(new Set(experiments.map((e) => e.family).filter(Boolean)))],
     [experiments]
@@ -46,7 +42,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Buscar experimento…"
+            placeholder={t("exp.search")}
             className="h-9 w-full rounded-md border bg-card px-3 text-sm outline-none focus:ring-2 focus:ring-ring sm:max-w-xs"
           />
           {/* filtro por estado */}
@@ -62,7 +58,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                     : "text-muted-foreground hover:bg-muted"
                 )}
               >
-                {s.label}
+                {t(s.tkey)}
               </button>
             ))}
           </div>
@@ -78,7 +74,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                 family === f ? "border-foreground/40 bg-muted font-medium" : "text-muted-foreground hover:bg-muted"
               )}
             >
-              {f}
+              {f === "todas" ? t("families.all") : f}
             </button>
           ))}
         </div>
@@ -112,7 +108,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                       )}
                       {e.family && <Badge variant="muted">{e.family}</Badge>}
                     </div>
-                    <Badge variant={e.status}>{STATUS_LABEL[e.status]}</Badge>
+                    <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
                   </div>
                   <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{e.name}</h3>
                   <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{e.description}</p>

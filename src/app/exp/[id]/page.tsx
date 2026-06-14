@@ -6,13 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { EquityChart } from "@/components/equity-chart";
 import { fmtMetric } from "@/lib/utils";
+import { Tr } from "@/lib/i18n";
 
 export async function generateStaticParams() {
   const all = await getExperiments();
   return all.map((e) => ({ id: e.id }));
 }
-
-const STATUS_LABEL = { survived: "sobrevivió", died: "murió", neutral: "neutro" } as const;
 
 function metricTone(key: string, value: number | string) {
   if (typeof value !== "number") return "";
@@ -45,12 +44,12 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
         href="/"
         className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> Volver a experimentos
+        <ArrowLeft className="size-4" /> <Tr k="detail.back" />
       </Link>
 
       <div className="mb-2 flex flex-wrap items-center gap-2">
         {exp.family && <Badge variant="muted">{exp.family}</Badge>}
-        <Badge variant={exp.status}>{STATUS_LABEL[exp.status]}</Badge>
+        <Badge variant={exp.status}><Tr k={`status.${exp.status}`} /></Badge>
         {exp.date && <span className="text-xs text-muted-foreground">{exp.date.slice(0, 10)}</span>}
       </div>
       <h1 className="text-3xl font-bold tracking-tight">
@@ -65,7 +64,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           <Lightbulb className="size-5 shrink-0 text-primary" />
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-primary">
-              Lección clave
+              <Tr k="detail.lesson" />
             </div>
             {exp.verdict && exp.verdict !== exp.notes && (
               <p className="mt-1 text-sm font-medium">{exp.verdict}</p>
@@ -78,7 +77,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
       {/* Análisis (curado, por experimento) */}
       {exp.analysis && (
         <Card className="mt-6 p-5">
-          <div className="mb-2 text-sm font-medium">Análisis</div>
+          <div className="mb-2 text-sm font-medium"><Tr k="detail.analysis" /></div>
           <p className="text-sm leading-relaxed text-muted-foreground">{exp.analysis}</p>
         </Card>
       )}
@@ -100,7 +99,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
       {/* Gráfico de equity (estilo TradingView) */}
       {series.length > 0 && (
         <Card className="mt-8 p-5">
-          <div className="mb-3 text-sm font-medium">Curva de equity</div>
+          <div className="mb-3 text-sm font-medium"><Tr k="detail.equity" /></div>
           <EquityChart series={series} />
         </Card>
       )}
@@ -108,7 +107,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
       {/* Parámetros */}
       {paramEntries.length > 0 && (
         <Card className="mt-8 p-5">
-          <div className="mb-3 text-sm font-medium">Parámetros</div>
+          <div className="mb-3 text-sm font-medium"><Tr k="detail.params" /></div>
           <dl className="grid grid-cols-1 gap-x-8 sm:grid-cols-2">
             {paramEntries.map(([k, v]) => (
               <div key={k} className="flex items-center justify-between border-b py-2 text-sm">
@@ -124,7 +123,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
       {related.length > 0 && (
         <section className="mt-10">
           <h2 className="mb-4 text-sm font-medium text-muted-foreground">
-            Relacionados · familia <span className="text-foreground">{exp.family}</span>
+            <Tr k="detail.related" /> <span className="text-foreground">{exp.family}</span>
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((e) => (
@@ -138,7 +137,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
                   <div className="min-w-0">
                     <div className="line-clamp-2 text-sm font-medium">{e.name}</div>
                     <Badge variant={e.status} className="mt-1.5">
-                      {STATUS_LABEL[e.status]}
+                      <Tr k={`status.${e.status}`} />
                     </Badge>
                   </div>
                 </Card>

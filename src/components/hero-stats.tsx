@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, MousePointerClick } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 type Illusion = { title: string; body: string; exp?: string };
 
@@ -48,6 +49,7 @@ export function HeroStats({
   survived: number;
   died: number;
 }) {
+  const { t } = useI18n();
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -57,9 +59,9 @@ export function HeroStats({
   }, []);
 
   const stats: { label: string; value: React.ReactNode }[] = [
-    { label: "experimentos", value: total },
-    { label: "clases de estrategia", value: 11 },
-    { label: "sobrevivieron / murieron", value: `${survived} / ${died}` },
+    { label: t("stats.experiments"), value: total },
+    { label: t("stats.classes"), value: 11 },
+    { label: t("stats.survivedDied"), value: `${survived} / ${died}` },
   ];
 
   return (
@@ -78,7 +80,7 @@ export function HeroStats({
         >
           <div className="tabular text-3xl font-bold text-primary">{ILLUSIONS.length}</div>
           <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
-            ilusiones cazadas
+            {t("stats.illusions")}
             <MousePointerClick className="size-3 opacity-0 transition-opacity group-hover:opacity-100" />
           </div>
         </button>
@@ -102,7 +104,7 @@ export function HeroStats({
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mb-1 flex items-start justify-between">
-                <h3 className="text-lg font-semibold">Las 6 ilusiones cazadas</h3>
+                <h3 className="text-lg font-semibold">{t("illusions.title")}</h3>
                 <button
                   onClick={() => setOpen(false)}
                   className="rounded-md p-1 text-muted-foreground hover:bg-muted"
@@ -111,10 +113,7 @@ export function HeroStats({
                   <X className="size-4" />
                 </button>
               </div>
-              <p className="mb-5 text-sm text-muted-foreground">
-                Estrategias que <em>parecían</em> desplegables y resultaron ser espejismos —
-                detectadas antes de arriesgar un dólar.
-              </p>
+              <p className="mb-5 text-sm text-muted-foreground">{t("illusions.subtitle")}</p>
               <ol className="space-y-4">
                 {ILLUSIONS.map((il, i) => (
                   <li key={i} className="flex gap-3">

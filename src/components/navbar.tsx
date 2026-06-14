@@ -5,17 +5,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, FlaskConical } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 
 const LINKS = [
-  { href: "/", label: "Experimentos" },
-  { href: "/roadmap", label: "Roadmap" },
-  { href: "/bot", label: "Bot en vivo" },
+  { href: "/", key: "nav.experiments" },
+  { href: "/roadmap", key: "nav.roadmap" },
+  { href: "/bot", key: "nav.bot" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
+  const { t } = useI18n();
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -40,17 +43,19 @@ export function Navbar() {
                   active && "text-foreground"
                 )}
               >
-                {l.label}
+                {t(l.key)}
                 {active && (
                   <span className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-primary" />
                 )}
               </Link>
             );
           })}
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Button variant="ghost" size="icon" aria-label="Menú" onClick={() => setOpen((v) => !v)}>
             {open ? <X /> : <Menu />}
@@ -71,7 +76,7 @@ export function Navbar() {
                   pathname === l.href && "text-foreground"
                 )}
               >
-                {l.label}
+                {t(l.key)}
               </Link>
             ))}
           </div>

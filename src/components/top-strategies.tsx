@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useI18n } from "@/lib/i18n";
 
 type Top = {
   v: number;
@@ -48,16 +49,17 @@ const TOP: Top[] = [
 ];
 
 export function TopStrategies() {
+  const { t } = useI18n();
   return (
     <section className="pb-16">
       <div className="mb-1 flex items-baseline gap-3">
-        <h2 className="text-xl font-semibold tracking-tight">Top 3 hallazgos</h2>
-        <span className="text-sm text-muted-foreground">lo que más prometió — y su letra pequeña</span>
+        <h2 className="text-xl font-semibold tracking-tight">{t("top.heading")}</h2>
+        <span className="text-sm text-muted-foreground">{t("top.subtitle")}</span>
       </div>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
-        {TOP.map((t, i) => (
+        {TOP.map((s, i) => (
           <motion.div
-            key={t.id}
+            key={s.id}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -65,29 +67,29 @@ export function TopStrategies() {
           >
             <Card className="flex h-full flex-col p-5">
               <div className="mb-3 flex items-center justify-between">
-                <span className="tabular text-2xl font-bold text-primary">#{t.v}</span>
+                <span className="tabular text-2xl font-bold text-primary">#{s.v}</span>
                 <span className="grid size-7 place-items-center rounded-full border text-xs font-bold text-muted-foreground">
                   {i + 1}
                 </span>
               </div>
-              <h3 className="font-semibold leading-snug">{t.title}</h3>
+              <h3 className="font-semibold leading-snug">{s.title}</h3>
 
-              <p className="mt-3 text-sm text-muted-foreground">{t.finding}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{s.finding}</p>
 
               <div className="mt-3 rounded-md bg-muted/60 p-3 text-xs text-muted-foreground">
-                <span className="font-semibold text-foreground">La letra pequeña: </span>
-                {t.caveat}
+                <span className="font-semibold text-foreground">{t("top.caveat")} </span>
+                {s.caveat}
               </div>
               <div className="mt-2 text-xs text-muted-foreground">
-                <span className="font-semibold text-foreground">Siguiente investigación: </span>
-                {t.next}
+                <span className="font-semibold text-foreground">{t("top.next")} </span>
+                {s.next}
               </div>
 
               <Link
-                href={`/exp/${t.id}`}
+                href={`/exp/${s.id}`}
                 className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
               >
-                Ver experimento <ArrowUpRight className="size-4" />
+                {t("top.cta")} <ArrowUpRight className="size-4" />
               </Link>
             </Card>
           </motion.div>
