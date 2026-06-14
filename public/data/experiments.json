@@ -2,7 +2,7 @@
  {
   "id": "20260613_200850_vol-targeting-vs-leverage-fijo-bot-live",
   "v": 57,
-  "analysis": "",
+  "analysis": "El upgrade del bot vivo: ¿mejora el vol-targeting al leverage fijo? A igual exposición media y con la señal macro rezagada (honesto), recorta el drawdown en las crisis que importan (COVID −10.3%→−9.0%, 2022 −13.9%→−10.9%). Pero ambas versiones hacen ~0% ejecutable: mejora el RIESGO, no el RETORNO. Preparado como flag, sin tocar el bot en producción.",
   "name": "vol-targeting vs leverage fijo (bot live)",
   "family": "bot-upgrade",
   "date": "2026-06-13T20:08:50",
@@ -31,9 +31,138 @@
   "has_trades_csv": true
  },
  {
+  "id": "extra-v56",
+  "v": 56,
+  "analysis": "Sentimiento probado de 4 formas (VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off, todo junto). Las 4 NO superan la base rate en dirección (0.55-0.58 < 0.613) y el nulo les gana → el sentimiento no predice dirección. El famoso '+30%' no se reproduce sin leakage.",
+  "name": "sentimiento probado de 4 formas",
+  "family": "sentimiento",
+  "date": "2026-06-13T19:30:00",
+  "description": "VIX-miedo, estructura de plazos VIX/VIX3M, cross-asset risk-on/off y todo junto (SPY 2010-2026, OOS+nulo).",
+  "params": {},
+  "verdict": "no sirvió (dirección)",
+  "notes": "",
+  "metrics": {
+   "acc_dir": 0.57,
+   "base_rate": 0.613,
+   "R2_vol_VIX": 0.395,
+   "R2_vol_precio": 0.378
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v55",
+  "v": 55,
+  "analysis": "Navaja de Occam aplicada a la vol: ¿aporta el ML sobre un EWMA de una línea? No. El EWMA clásico predijo la volatilidad mejor (R² 0.225 vs 0.113 del ML). Conclusión honesta: para forecast de vol, desplegar lo simple.",
+  "name": "EWMA clásico vs ML (vol)",
+  "family": "volatilidad",
+  "date": "2026-06-13T19:15:00",
+  "description": "Navaja de Occam: ¿aporta el ML sobre un EWMA de una línea para predecir la volatilidad?",
+  "params": {},
+  "verdict": "el simple basta",
+  "notes": "",
+  "metrics": {
+   "R2_EWMA": 0.225,
+   "R2_ML": 0.113
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v54",
+  "v": 54,
+  "analysis": "¿Es predecible el volumen o el rango? El volumen no (R²≈0, es tick-volume exógeno), pero el RANGO sí (R² 0.15-0.27 en índices/energía). Confirma la señal de volatilidad por otra puerta; útil para timing de ejecución, no para dirección.",
+  "name": "predicción de volumen y rango",
+  "family": "volatilidad",
+  "date": "2026-06-13T19:00:00",
+  "description": "¿Es predecible el volumen o el rango? Señal no-direccional para timing de ejecución.",
+  "params": {},
+  "verdict": "parcial",
+  "notes": "",
+  "metrics": {
+   "R2_volumen": -0.003,
+   "R2_rango": 0.15
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v53",
+  "v": 53,
+  "analysis": "Vol-breakout 'direction-agnostic': operar la expansión (rompa arriba o abajo) cuando se predice alta vol. Falló (−0.44 vs Buy&Hold +0.65). Aunque sepas que VIENE un movimiento, sigues necesitando la dirección — y eso está muerto. Monetizar vol pura requeriría opciones.",
+  "name": "vol-breakout direction-agnostic",
+  "family": "volatilidad",
+  "date": "2026-06-13T18:45:00",
+  "description": "Operar la expansión (breakout arriba o abajo) cuando se predice alta volatilidad.",
+  "params": {},
+  "verdict": "no sirvió",
+  "notes": "",
+  "metrics": {
+   "Sharpe_gate_vol": -0.44,
+   "Sharpe_BuyHold": 0.65
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v52",
+  "v": 52,
+  "analysis": "Vol-targeting: dimensionar la posición por volatilidad. Recorta el MaxDD de −68% (leverage fijo) a −20%, clavando el objetivo de vol. Y la navaja de Occam: un EWMA simple predice la vol mejor que el ML (R² 0.225 vs 0.113). El único entregable real de la tanda: control de riesgo, no alpha.",
+  "name": "vol-targeting (control de drawdown)",
+  "family": "volatilidad",
+  "date": "2026-06-13T18:30:00",
+  "description": "Dimensionar la posición por volatilidad: el único entregable real de la tanda (control de riesgo).",
+  "params": {},
+  "verdict": "sirvió (riesgo, no alpha)",
+  "notes": "",
+  "metrics": {
+   "MaxDD_leverage_fijo": -0.685,
+   "MaxDD_voltarget": -0.2,
+   "Sharpe": 0.7,
+   "R2_vol_EWMA": 0.225,
+   "R2_vol_ML": 0.113
+  },
+  "status": "survived",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v51",
+  "v": 51,
+  "analysis": "Re-test del enfoque más publicitado (swing 5 días + clasificación RSI/MACD/BB/volumen + gating híbrido). Accuracy 0.516 (≈ azar), y el modelo NULO (etiquetas barajadas, +0.36) le ganó al real (+0.15): la 'predicción' era solo beta. Pero apareció lo importante: la VOLATILIDAD sí se predice (R² 0.27 en SP500, 0.40 en WTI).",
+  "name": "swing + clasificación + sentimiento (re-test)",
+  "family": "volatilidad",
+  "date": "2026-06-13T18:00:00",
+  "description": "Re-test honesto del enfoque del research (swing 5d, RSI/MACD/BB/volumen + gating híbrido) con test nulo.",
+  "params": {},
+  "verdict": "no sirvió (dirección)",
+  "notes": "",
+  "metrics": {
+   "accuracy_dir": 0.516,
+   "Sharpe_ML": 0.15,
+   "Sharpe_BuyHold": 0.37,
+   "Sharpe_nulo": 0.36,
+   "R2_vol_SP500": 0.27,
+   "R2_vol_WTI": 0.4
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "20260610_142844_cierre-11-clases-probadas-v50",
   "v": 50,
-  "analysis": "",
+  "analysis": "Cierre de las fronteras matemáticas: 50 experimentos, 11 clases de estrategia, ninguna pasa el triple test (OOS + ejecutable + Deflated Sharpe). La ventaja de los quants no está en la matemática (es pública y la probamos): está en los DATOS (tick/order flow), los COSTES (acceso directo) y la AMPLITUD (miles de instrumentos).",
   "name": "CIERRE: 11 clases probadas v50",
   "family": "quant",
   "date": "2026-06-10T14:28:44",
@@ -54,9 +183,34 @@
   "has_trades_csv": true
  },
  {
+  "id": "20260610_142756_turn-of-month-indices-v49",
+  "v": 49,
+  "analysis": "Efecto turn-of-month (calendario): comprar índices en los últimos/primeros días del mes. Murió. Los efectos de calendario, si existieron, ya están arbitrados.",
+  "name": "Turn-of-month indices v49",
+  "family": "quant",
+  "date": "2026-06-10T14:27:56",
+  "description": "Efecto calendario documentado: long indices solo en ultimos 2 + primeros 3 dias del mes. (Solo 2014-24 tiene indices: validacion limitada.) Motor ejecutable (kill-switch, lag), lev x2.",
+  "params": {
+   "lev": 2.0
+  },
+  "verdict": "no sirvió",
+  "notes": "2014-2024: Sh -1.63 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.861191993916542,
+   "Sharpe Ratio": -1.625140127346075,
+   "Max Drawdown [%]": -13.39382655153708,
+   "Sobrevive todos": false,
+   "Total Trades": 179
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
   "id": "20260610_142756_momentum-cross-sectional-v48",
   "v": 48,
-  "analysis": "",
+  "analysis": "Momentum cross-sectional (Jegadeesh-Titman): largo el top, corto el bottom del basket por momentum relativo. Murió en ambos períodos. Otro clásico académico que no sobrevive a CFDs.",
   "name": "Momentum cross-sectional v48",
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -81,7 +235,7 @@
  {
   "id": "20260610_142756_stat-arb-pca-residual-v47",
   "v": 47,
-  "analysis": "",
+  "analysis": "Stat-arb por PCA (Avellaneda & Lee 2010): operar el residuo de cada activo contra los factores comunes. La técnica institucional por excelencia… murió a nivel retail. Sin datos tick ni acceso directo, los residuos no pagan los costes.",
   "name": "Stat-arb PCA residual v47",
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -104,34 +258,9 @@
   "has_trades_csv": true
  },
  {
-  "id": "20260610_142756_turn-of-month-indices-v49",
-  "v": 49,
-  "analysis": "",
-  "name": "Turn-of-month indices v49",
-  "family": "quant",
-  "date": "2026-06-10T14:27:56",
-  "description": "Efecto calendario documentado: long indices solo en ultimos 2 + primeros 3 dias del mes. (Solo 2014-24 tiene indices: validacion limitada.) Motor ejecutable (kill-switch, lag), lev x2.",
-  "params": {
-   "lev": 2.0
-  },
-  "verdict": "no sirvió",
-  "notes": "2014-2024: Sh -1.63 vivo False",
-  "metrics": {
-   "Total Return [%]": -10.861191993916542,
-   "Sharpe Ratio": -1.625140127346075,
-   "Max Drawdown [%]": -13.39382655153708,
-   "Sobrevive todos": false,
-   "Total Trades": 179
-  },
-  "status": "died",
-  "has_equity": true,
-  "has_trades_chart": true,
-  "has_trades_csv": true
- },
- {
   "id": "20260610_142755_pairs-cointegracion-v46",
   "v": 46,
-  "analysis": "",
+  "analysis": "Pairs trading por cointegración (Engle-Granger) sobre 6 pares relacionados (Brent-WTI, oro-plata, SP500-NAS100…). La reversión del spread murió a costes y granularidad retail. La relación existe; el edge neto, no.",
   "name": "Pairs cointegracion v46",
   "family": "quant",
   "date": "2026-06-10T14:27:55",
@@ -156,7 +285,7 @@
  {
   "id": "20260610_142118_cot-contrarian-extremos-v45",
   "v": 45,
-  "analysis": "",
+  "analysis": "Posicionamiento COT: estrategia contraria en los extremos (cuando los especuladores están muy largos, vender). Murió en ambos períodos. El 'smart money' del COT no anticipa el retorno a horizontes operables para retail.",
   "name": "COT contrarian extremos v45",
   "family": "cot",
   "date": "2026-06-10T14:21:18",
@@ -185,9 +314,59 @@
   "has_trades_csv": true
  },
  {
+  "id": "extra-v44",
+  "v": 44,
+  "analysis": "Paso de datos: descarga del posicionamiento COT (CFTC, 40 años) vía API pública, que habilitó la prueba contrarian de #45.",
+  "name": "posicionamiento COT (datos)",
+  "family": "datos",
+  "date": "2026-06-10T14:21:00",
+  "description": "Descarga del posicionamiento COT (CFTC, 40 años) vía API pública para la prueba contrarian #45.",
+  "params": {},
+  "verdict": "paso de datos",
+  "notes": "",
+  "metrics": {
+   "años": 40,
+   "fuente": "CFTC"
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "20260610_142006_carry-trend-combo-v43",
+  "v": 43,
+  "analysis": "Combo carry + tendencia + filtro macro, intentando rescatar el carry. Tampoco sobrevivió 2014-2024. Combinar dos factores débiles no crea uno fuerte.",
+  "name": "Carry+Trend combo v43",
+  "family": "carry",
+  "date": "2026-06-10T14:20:06",
+  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Combo: posicion solo donde carry y momentum coinciden (Koijen et al.).",
+  "params": {
+   "lev": 2.0,
+   "variantes": [
+    "carry∧trend+filtro"
+   ],
+   "mejor": "carry∧trend+filtro"
+  },
+  "verdict": "no sirvió",
+  "notes": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
+  "metrics": {
+   "Total Return [%]": -10.015421103460021,
+   "Sharpe Ratio": -0.5555286553865391,
+   "Max Drawdown [%]": -13.549462322926075,
+   "Sharpe OOS 07-13": 0.18087815162683282,
+   "Sobrevive ambos": false,
+   "Total Trades": 1266
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
   "id": "20260610_142006_carry-fx-ejecutable-v42",
   "v": 42,
-  "analysis": "",
+  "analysis": "Carry FX ejecutable: largo de las divisas con mayor tasa, corto de las menores (diferencial FRED, rezagado 1 mes). El carry puro murió en ambos períodos — sus crashes coinciden con todo lo demás. Factor decaído tras 2008, con las tasas G10 en ~0 una década.",
   "name": "Carry FX ejecutable v42",
   "family": "carry",
   "date": "2026-06-10T14:20:06",
@@ -216,34 +395,24 @@
   "has_trades_csv": true
  },
  {
-  "id": "20260610_142006_carry-trend-combo-v43",
-  "v": 43,
-  "analysis": "",
-  "name": "Carry+Trend combo v43",
-  "family": "carry",
-  "date": "2026-06-10T14:20:06",
-  "description": "Factor CARRY (diferencial de tasas FRED, lag 1 mes) sobre 7 pares FX, long/short risk-parity, motor ejecutable con kill-switch. Combo: posicion solo donde carry y momentum coinciden (Koijen et al.).",
-  "params": {
-   "lev": 2.0,
-   "variantes": [
-    "carry∧trend+filtro"
-   ],
-   "mejor": "carry∧trend+filtro"
-  },
-  "verdict": "no sirvió",
-  "notes": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
+  "id": "extra-v41",
+  "v": 41,
+  "analysis": "Paso de datos: descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry. La infraestructura que hizo posible probar el carry con rigor en #42-43.",
+  "name": "tasas FRED (datos de carry)",
+  "family": "datos",
+  "date": "2026-06-10T14:20:00",
+  "description": "Descarga e integración de tasas FRED (8 monedas, 1956-2026) para construir el factor carry.",
+  "params": {},
+  "verdict": "paso de datos",
+  "notes": "",
   "metrics": {
-   "Total Return [%]": -10.015421103460021,
-   "Sharpe Ratio": -0.5555286553865391,
-   "Max Drawdown [%]": -13.549462322926075,
-   "Sharpe OOS 07-13": 0.18087815162683282,
-   "Sobrevive ambos": false,
-   "Total Trades": 1266
+   "monedas": 8,
+   "desde": 1956
   },
-  "status": "died",
-  "has_equity": true,
-  "has_trades_chart": true,
-  "has_trades_csv": true
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
  },
  {
   "id": "20260610_141058_veredicto-final-40-experimentos-v40",
@@ -273,33 +442,6 @@
   "has_trades_csv": true
  },
  {
-  "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
-  "v": 38,
-  "analysis": "El juez final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por haber probado 40+ configuraciones. El mejor sistema ejecutable (Sharpe 0.38) dio DSR = 0.35 → NO se distingue del mejor resultado que daría el puro azar tras tantos intentos. La prueba estadística de que no había edge.",
-  "name": "Deflated Sharpe del ejecutable v38",
-  "family": "risk",
-  "date": "2026-06-10T14:09:55",
-  "description": "Bailey & Lopez de Prado: tras probar ~40 configuraciones, el mejor Sharpe esperado SOLO POR AZAR se compara con el observado. DSR>0.95 = edge real.",
-  "params": {
-   "N_trials": 40,
-   "T_dias": 5609
-  },
-  "verdict": "no sirvió",
-  "notes": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
-  "metrics": {
-   "Sharpe observado": 0.383,
-   "E[max] por azar": 0.464,
-   "DSR": 0.353,
-   "Significativo": false,
-   "Sharpe Ratio": 0.38325894465504506,
-   "Total Trades": 0
-  },
-  "status": "died",
-  "has_equity": true,
-  "has_trades_chart": true,
-  "has_trades_csv": true
- },
- {
   "id": "20260610_140955_ev-del-negocio-ejecutable-v39",
   "v": 39,
   "analysis": "Valor esperado del negocio con la versión ejecutable y honesta: impracticable (CAGR 1.9%, mediana 2.3 años para pasar). Los números nominales positivos se evaporan al medir el tiempo real.",
@@ -319,6 +461,33 @@
    "Años para pasar (mediana)": 2.3,
    "CAGR ejecutable (%)": 1.95,
    "EV intento ($)": 1668.0,
+   "Sharpe Ratio": 0.38325894465504506,
+   "Total Trades": 0
+  },
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": true,
+  "has_trades_csv": true
+ },
+ {
+  "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
+  "v": 38,
+  "analysis": "El juez final: Deflated Sharpe Ratio (Bailey & López de Prado), que corrige por haber probado 40+ configuraciones. El mejor sistema ejecutable (Sharpe 0.38) dio DSR = 0.35 → NO se distingue del mejor resultado que daría el puro azar tras tantos intentos. La prueba estadística de que no había edge.",
+  "name": "Deflated Sharpe del ejecutable v38",
+  "family": "risk",
+  "date": "2026-06-10T14:09:55",
+  "description": "Bailey & Lopez de Prado: tras probar ~40 configuraciones, el mejor Sharpe esperado SOLO POR AZAR se compara con el observado. DSR>0.95 = edge real.",
+  "params": {
+   "N_trials": 40,
+   "T_dias": 5609
+  },
+  "verdict": "no sirvió",
+  "notes": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
+  "metrics": {
+   "Sharpe observado": 0.383,
+   "E[max] por azar": 0.464,
+   "DSR": 0.353,
+   "Significativo": false,
    "Sharpe Ratio": 0.38325894465504506,
    "Total Trades": 0
   },
@@ -527,6 +696,65 @@
   "has_equity": true,
   "has_trades_chart": true,
   "has_trades_csv": true
+ },
+ {
+  "id": "extra-v30",
+  "v": 30,
+  "analysis": "Kill-switch combinado con menor leverage. Sobrevive algo más, pero el retorno cae tanto que deja de servir para pasar un challenge. Trade-off sin salida.",
+  "name": "kill-switch + leverage bajo",
+  "family": "ejecutable",
+  "date": "2026-06-10T14:02:00",
+  "description": "Kill-switch combinado con menor apalancamiento para sobrevivir el crash.",
+  "params": {},
+  "verdict": "no sirvió",
+  "notes": "",
+  "metrics": {
+   "sobrevive": "parcial",
+   "retorno": "demasiado bajo"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v29",
+  "v": 29,
+  "analysis": "Variante del kill-switch con disparo más temprano. Mismo desenlace: el daño de los primeros días ya estaba hecho cuando reaccionaba.",
+  "name": "kill-switch disparo temprano",
+  "family": "ejecutable",
+  "date": "2026-06-10T14:01:00",
+  "description": "Variante con el kill-switch disparando antes para reaccionar más rápido al crash.",
+  "params": {},
+  "verdict": "no sirvió",
+  "notes": "",
+  "metrics": {
+   "sobrevive": "False"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v28",
+  "v": 28,
+  "analysis": "Lag-1 + kill-switch intradía (aplanar a ~−3% del día). Murió: en un crash sostenido el drawdown se acumula durante la primera semana, antes de que el kill-switch marque diferencia.",
+  "name": "lag-1 + kill-switch",
+  "family": "ejecutable",
+  "date": "2026-06-10T14:00:00",
+  "description": "Versión ejecutable (señales rezagadas 1 día) con kill-switch intradía que aplana a ~−3% del día.",
+  "params": {},
+  "verdict": "no sirvió",
+  "notes": "",
+  "metrics": {
+   "sobrevive": "False",
+   "causa": "DD acumulado 1a semana"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
  },
  {
   "id": "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27",
