@@ -30,7 +30,11 @@
    "en": "UPGRADE: lower DD at equal exposure",
    "pt": "UPGRADE: menor DD a igual exposição"
   },
-  "notes": "#57 honesto: lag-1 macro, ex-ante, COVID+2022 incluidos.",
+  "notes": {
+   "es": "#57 honesto: lag-1 macro, ex-ante, COVID+2022 incluidos.",
+   "en": "#57 honest: lag-1 macro, ex-ante, COVID+2022 included.",
+   "pt": "#57 honesto: lag-1 macro, ex-ante, COVID+2022 incluídos."
+  },
   "metrics": {
    "CAGR": 0.003999651039675145,
    "Sharpe": 0.09682342498275064,
@@ -72,7 +76,11 @@
    "en": "did not work (direction)",
    "pt": "não serviu (direção)"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "acc_dir": 0.57,
    "base_rate": 0.613,
@@ -110,7 +118,11 @@
    "en": "simple suffices",
    "pt": "o simples basta"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "R2_EWMA": 0.225,
    "R2_ML": 0.113
@@ -146,7 +158,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "R2_volumen": -0.003,
    "R2_rango": 0.15
@@ -167,7 +183,7 @@
   "name": {
    "es": "vol-breakout direction-agnostic",
    "en": "vol-breakout direction-agnostic",
-   "pt": "vol-breakout direction-agnostic"
+   "pt": "vol-breakout sem direção"
   },
   "family": "volatilidad",
   "date": "2026-06-13T18:45:00",
@@ -182,7 +198,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "Sharpe_gate_vol": -0.44,
    "Sharpe_BuyHold": 0.65
@@ -218,7 +238,11 @@
    "en": "worked (risk, not alpha)",
    "pt": "serviu (risco, não alpha)"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "MaxDD_leverage_fijo": -0.685,
    "MaxDD_voltarget": -0.2,
@@ -257,7 +281,11 @@
    "en": "did not work (direction)",
    "pt": "não serviu (direção)"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "accuracy_dir": 0.516,
    "Sharpe_ML": 0.15,
@@ -300,7 +328,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Veredicto #40 confirmado y extendido a las clases quant institucionales. Valor real: framework + infra + conocimiento; bot demo x2 midiendo; opcion 'fondo personal' x1-2 abierta.",
+  "notes": {
+   "es": "Veredicto #40 confirmado y extendido a las clases quant institucionales. Valor real: framework + infra + conocimiento; bot demo x2 midiendo; opcion 'fondo personal' x1-2 abierta.",
+   "en": "Verdict #40 confirmed and extended to institutional quant classes. Real value: framework + infra + knowledge; demo bot x2 measuring; 'personal fund' option x1-2 open.",
+   "pt": "Veredicto #40 confirmado e estendido às classes quant institucionais. Valor real: framework + infra + conhecimento; bot demo x2 medindo; opção 'fundo pessoal' x1-2 aberta."
+  },
   "metrics": {
    "Sharpe Ratio": 0.38325894465504506,
    "Total Trades": 0
@@ -338,7 +370,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2014-2024: Sh -1.63 vivo False",
+  "notes": {
+   "es": "2014-2024: Sh -1.63 vivo False",
+   "en": "2014-2024: Sh -1.63 live False",
+   "pt": "2014-2024: Sh -1,63 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.861191993916542,
    "Sharpe Ratio": -1.625140127346075,
@@ -379,7 +415,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013: Sh -0.42 vivo False; 2014-2024: Sh -0.41 vivo False",
+  "notes": {
+   "es": "2007-2013: Sh -0.42 vivo False; 2014-2024: Sh -0.41 vivo False",
+   "en": "2007-2013: Sh -0.42 live False; 2014-2024: Sh -0.41 live False",
+   "pt": "2007-2013: Sh -0,42 vivo False; 2014-2024: Sh -0,41 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.23561595494722,
    "Sharpe Ratio": -0.4097628108757106,
@@ -403,7 +443,7 @@
   "name": {
    "es": "Stat-arb PCA residual v47",
    "en": "Stat-arb PCA residual v47",
-   "pt": "Stat-arb PCA residual v47"
+   "pt": "Stat-arb resíduo PCA v47"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -420,7 +460,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013: Sh -0.69 vivo False; 2014-2024: Sh -0.58 vivo False",
+  "notes": {
+   "es": "2007-2013: Sh -0.69 vivo False; 2014-2024: Sh -0.58 vivo False",
+   "en": "2007-2013: Sh -0.69 live False; 2014-2024: Sh -0.58 live False",
+   "pt": "2007-2013: Sh -0,69 vivo False; 2014-2024: Sh -0,58 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.075824702234303,
    "Sharpe Ratio": -0.5801682128641215,
@@ -461,7 +505,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013: Sh -1.04 vivo False; 2014-2024: Sh -1.21 vivo False",
+  "notes": {
+   "es": "2007-2013: Sh -1.04 vivo False; 2014-2024: Sh -1.21 vivo False",
+   "en": "2007-2013: Sh -1.04 live False; 2014-2024: Sh -1.21 live False",
+   "pt": "2007-2013: Sh -1,04 vivo False; 2014-2024: Sh -1,21 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.846936759444603,
    "Sharpe Ratio": -1.2132718048307147,
@@ -508,7 +556,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013: Sh -1.37 vivo False; 2014-2024: Sh -0.28 vivo False",
+  "notes": {
+   "es": "2007-2013: Sh -1.37 vivo False; 2014-2024: Sh -0.28 vivo False",
+   "en": "2007-2013: Sh -1.37 live False; 2014-2024: Sh -0.28 live False",
+   "pt": "2007-2013: Sh -1,37 vivo False; 2014-2024: Sh -0,28 vivo False"
+  },
   "metrics": {
    "Sharpe 14-24": -0.2833245294353685,
    "Sharpe 07-13": -1.3667950561793976,
@@ -547,7 +599,11 @@
    "en": "data step",
    "pt": "passo de dados"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "años": 40,
    "fuente": "CFTC"
@@ -589,7 +645,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
+  "notes": {
+   "es": "2007-2013|carry∧trend+filtro: Sh 0.18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0.56 vivo False",
+   "en": "2007-2013|carry∧trend+filter: Sh 0.18 live True; 2014-2024|carry∧trend+filter: Sh -0.56 live False",
+   "pt": "2007-2013|carry∧trend+filtro: Sh 0,18 vivo True; 2014-2024|carry∧trend+filtro: Sh -0,56 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.015421103460021,
    "Sharpe Ratio": -0.5555286553865391,
@@ -636,7 +696,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2007-2013|carry puro: Sh -3.07 vivo False; 2007-2013|carry+filtro: Sh 0.05 vivo True; 2014-2024|carry puro: Sh -1.94 vivo False; 2014-2024|carry+filtro: Sh -0.81 vivo False",
+  "notes": {
+   "es": "2007-2013|carry puro: Sh -3.07 vivo False; 2007-2013|carry+filtro: Sh 0.05 vivo True; 2014-2024|carry puro: Sh -1.94 vivo False; 2014-2024|carry+filtro: Sh -0.81 vivo False",
+   "en": "2007-2013|pure carry: Sh -3.07 live False; 2007-2013|carry+filter: Sh 0.05 live True; 2014-2024|pure carry: Sh -1.94 live False; 2014-2024|carry+filter: Sh -0.81 live False",
+   "pt": "2007-2013|carry puro: Sh -3,07 vivo False; 2007-2013|carry+filtro: Sh 0,05 vivo True; 2014-2024|carry puro: Sh -1,94 vivo False; 2014-2024|carry+filtro: Sh -0,81 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.223290777253858,
    "Sharpe Ratio": -1.9387653864028964,
@@ -676,7 +740,11 @@
    "en": "data step",
    "pt": "passo de dados"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "monedas": 8,
    "desde": 1956
@@ -715,7 +783,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "LO QUE SI VALE: framework de validacion que cazo 6+ ilusiones (incluida la nuestra), infra completa (bot+MCP+dashboard+simulador), y el conocimiento exacto de por que falla. Bot demo ajustado a x2 (config ejecutable) como instrumento de MEDICION (phi real, slippage real, swaps). Direcciones genuinas futuras: carry/tasas FRED, posicionamiento COT, o usar el basket+filtro a x1-2 como inversion personal de largo plazo (fuera de reglas prop).",
+  "notes": {
+   "es": "LO QUE SI VALE: framework de validacion que cazo 6+ ilusiones (incluida la nuestra), infra completa (bot+MCP+dashboard+simulador), y el conocimiento exacto de por que falla. Bot demo ajustado a x2 (config ejecutable) como instrumento de MEDICION (phi real, slippage real, swaps). Direcciones genuinas futuras: carry/tasas FRED, posicionamiento COT, o usar el basket+filtro a x1-2 como inversion personal de largo plazo (fuera de reglas prop).",
+   "en": "WHAT DOES HAVE VALUE: validation framework that caught 6+ illusions (including ours), complete infrastructure (bot+MCP+dashboard+simulator), and the exact knowledge of why it fails. Demo bot adjusted to x2 (executable config) as MEASUREMENT instrument (real phi, real slippage, swaps). Genuine future directions: carry/FRED rates, COT positioning, or using the basket+filter at x1-2 as long-term personal investment (outside prop rules).",
+   "pt": "O QUE TEM VALOR: framework de validação que capturou 6+ ilusões (incluindo a nossa), infraestrutura completa (bot+MCP+dashboard+simulador), e o conhecimento exato do por que falha. Bot demo ajustado a x2 (configuração executável) como instrumento de MEDIÇÃO (phi real, slippage real, swaps). Direções futuras genuínas: carry/taxas FRED, posicionamento COT, ou usar o basket+filtro a x1-2 como investimento pessoal de longo prazo (fora das regras prop)."
+  },
   "metrics": {
    "Sharpe ejecutable": 0.383,
    "DSR": 0.353,
@@ -759,7 +831,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Comparar con los numeros clarividentes de #17 (~82% / ~5 meses / +$9k): la version ejecutable da 69% / 2.3 años / $1,668.",
+  "notes": {
+   "es": "Comparar con los numeros clarividentes de #17 (~82% / ~5 meses / +$9k): la version ejecutable da 69% / 2.3 años / $1,668.",
+   "en": "Compare with the clairvoyant numbers from #17 (~82% / ~5 months / +$9k): the executable version gives 69% / 2.3 years / $1,668.",
+   "pt": "Comparar com os números clarividentes do #17 (~82% / ~5 meses / +$9k): a versão executável dá 69% / 2,3 anos / $1.668."
+  },
   "metrics": {
    "P pasar (%)": 69.5,
    "Años para pasar (mediana)": 2.3,
@@ -802,7 +878,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
+  "notes": {
+   "es": "DSR=0.353: NO distinguible del mejor resultado por azar tras la busqueda.",
+   "en": "DSR=0.353: NOT distinguishable from the best result by chance after the search.",
+   "pt": "DSR=0,353: NÃO distinguível do melhor resultado por acaso após a busca."
+  },
   "metrics": {
    "Sharpe observado": 0.383,
    "E[max] por azar": 0.464,
@@ -849,7 +929,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "Sharpe ejecutable 0.38. 252d: 8.6% (med 191.0); 504d: 29.4% (med 325.0); 2000d: 69.5% (med 572.0)",
+  "notes": {
+   "es": "Sharpe ejecutable 0.38. 252d: 8.6% (med 191.0); 504d: 29.4% (med 325.0); 2000d: 69.5% (med 572.0)",
+   "en": "Executable Sharpe 0.38. 252d: 8.6% (med 191.0); 504d: 29.4% (med 325.0); 2000d: 69.5% (med 572.0)",
+   "pt": "Sharpe executável 0,38. 252d: 8,6% (med 191,0); 504d: 29,4% (med 325,0); 2000d: 69,5% (med 572,0)"
+  },
   "metrics": {
    "P pasar 1y (%)": 8.575000000000001,
    "P pasar 2y (%)": 29.375,
@@ -897,7 +981,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "[2014-2024] x2.0: Sh 0.40, CAGR +2.2%, MaxDD -9.8% | [2014-2024] x3.0: Sh -0.15, CAGR -1.9%, MaxDD -38.5% | [2014-2024] x4.0: Sh -1.44, CAGR -20.1%, MaxDD -94.2% | [2007-2013] x2.0: Sh 0.37, CAGR +1.4%, MaxDD -8.0% | [2007-2013] x3.0: Sh -0.05, CAGR -0.6%, MaxDD -22.3% | [2007-2013] x4.0: Sh -1.07, CAGR -11.5%, MaxDD -73.2%",
+  "notes": {
+   "es": "[2014-2024] x2.0: Sh 0.40, CAGR +2.2%, MaxDD -9.8% | [2014-2024] x3.0: Sh -0.15, CAGR -1.9%, MaxDD -38.5% | [2014-2024] x4.0: Sh -1.44, CAGR -20.1%, MaxDD -94.2% | [2007-2013] x2.0: Sh 0.37, CAGR +1.4%, MaxDD -8.0% | [2007-2013] x3.0: Sh -0.05, CAGR -0.6%, MaxDD -22.3% | [2007-2013] x4.0: Sh -1.07, CAGR -11.5%, MaxDD -73.2%",
+   "en": "[2014-2024] x2.0: Sh 0.40, CAGR +2.2%, MaxDD -9.8% | [2014-2024] x3.0: Sh -0.15, CAGR -1.9%, MaxDD -38.5% | [2014-2024] x4.0: Sh -1.44, CAGR -20.1%, MaxDD -94.2% | [2007-2013] x2.0: Sh 0.37, CAGR +1.4%, MaxDD -8.0% | [2007-2013] x3.0: Sh -0.05, CAGR -0.6%, MaxDD -22.3% | [2007-2013] x4.0: Sh -1.07, CAGR -11.5%, MaxDD -73.2%",
+   "pt": "[2014-2024] x2,0: Sh 0,40, CAGR +2,2%, MaxDD -9,8% | [2014-2024] x3,0: Sh -0,15, CAGR -1,9%, MaxDD -38,5% | [2014-2024] x4,0: Sh -1,44, CAGR -20,1%, MaxDD -94,2% | [2007-2013] x2,0: Sh 0,37, CAGR +1,4%, MaxDD -8,0% | [2007-2013] x3,0: Sh -0,05, CAGR -0,6%, MaxDD -22,3% | [2007-2013] x4,0: Sh -1,07, CAGR -11,5%, MaxDD -73,2%"
+  },
   "metrics": {
    "Total Trades": 0,
    "Sharpe Ratio": 0
@@ -936,7 +1024,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "{'2014-2024|sin curva': 'Sh 0.40', '2014-2024|con curva': 'Sh 0.31', '2007-2013|sin curva': 'Sh 0.37', '2007-2013|con curva': 'Sh 0.37'}",
+  "notes": {
+   "es": "{'2014-2024|sin curva': 'Sh 0.40', '2014-2024|con curva': 'Sh 0.31', '2007-2013|sin curva': 'Sh 0.37', '2007-2013|con curva': 'Sh 0.37'}",
+   "en": "{'2014-2024|without curve': 'Sh 0.40', '2014-2024|with curve': 'Sh 0.31', '2007-2013|without curve': 'Sh 0.37', '2007-2013|with curve': 'Sh 0.37'}",
+   "pt": "{'2014-2024|sem curva': 'Sh 0,40', '2014-2024|com curva': 'Sh 0,31', '2007-2013|sem curva': 'Sh 0,37', '2007-2013|com curva': 'Sh 0,37'}"
+  },
   "metrics": {
    "Mejora ambos periodos": "False",
    "Sh con curva 14-24": 0.3068285123034975,
@@ -984,7 +1076,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "hi x2.5: Sh 0.42|0.30 vivo True|True; hi x3.0: Sh -0.60|0.21 vivo False|True; hi x4.0: Sh -1.24|-0.03 vivo False|True",
+  "notes": {
+   "es": "hi x2.5: Sh 0.42|0.30 vivo True|True; hi x3.0: Sh -0.60|0.21 vivo False|True; hi x4.0: Sh -1.24|-0.03 vivo False|True",
+   "en": "high x2.5: Sh 0.42|0.30 live True|True; high x3.0: Sh -0.60|0.21 live False|True; high x4.0: Sh -1.24|-0.03 live False|True",
+   "pt": "alto x2,5: Sh 0,42|0,30 vivo True|True; alto x3,0: Sh -0,60|0,21 vivo False|True; alto x4,0: Sh -1,24|-0,03 vivo False|True"
+  },
   "metrics": {
    "Total Return [%]": 29.368535923164373,
    "Sharpe Ratio": 0.41774488861670517,
@@ -1028,7 +1124,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "VIX22/cw40: Sh 0.16|0.29 vivo True|True; VIX22/cw60: Sh 0.22|0.36 vivo True|True; VIX24/cw40: Sh 0.31|0.40 vivo True|True; VIX24/cw60: Sh 0.33|0.39 vivo True|True; VIX28/cw40: Sh 0.40|0.37 vivo True|True; VIX28/cw60: Sh 0.37|0.34 vivo True|True",
+  "notes": {
+   "es": "VIX22/cw40: Sh 0.16|0.29 vivo True|True; VIX22/cw60: Sh 0.22|0.36 vivo True|True; VIX24/cw40: Sh 0.31|0.40 vivo True|True; VIX24/cw60: Sh 0.33|0.39 vivo True|True; VIX28/cw40: Sh 0.40|0.37 vivo True|True; VIX28/cw60: Sh 0.37|0.34 vivo True|True",
+   "en": "VIX22/cw40: Sh 0.16|0.29 live True|True; VIX22/cw60: Sh 0.22|0.36 live True|True; VIX24/cw40: Sh 0.31|0.40 live True|True; VIX24/cw60: Sh 0.33|0.39 live True|True; VIX28/cw40: Sh 0.40|0.37 live True|True; VIX28/cw60: Sh 0.37|0.34 live True|True",
+   "pt": "VIX22/cw40: Sh 0,16|0,29 vivo True|True; VIX22/cw60: Sh 0,22|0,36 vivo True|True; VIX24/cw40: Sh 0,31|0,40 vivo True|True; VIX24/cw60: Sh 0,33|0,39 vivo True|True; VIX28/cw40: Sh 0,40|0,37 vivo True|True; VIX28/cw60: Sh 0,37|0,34 vivo True|True"
+  },
   "metrics": {
    "Total Return [%]": 31.1962010621746,
    "Sharpe Ratio": 0.4013889014169609,
@@ -1071,7 +1171,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "phi es un supuesto a MEDIR en el forward test demo (reaccion real del monitor).",
+  "notes": {
+   "es": "phi es un supuesto a MEDIR en el forward test demo (reaccion real del monitor).",
+   "en": "phi is an assumption to MEASURE in the demo forward test (real monitor reaction).",
+   "pt": "phi é uma suposição a MEDIR no forward test demo (reação real do monitor)."
+  },
   "metrics": {
    "Total Return [%]": 21.644224036310746,
    "Sharpe Ratio": 0.3711481525234038,
@@ -1116,7 +1220,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "phi0.5/x1.5: Sh 0.37|0.34 vivo True|True; phi0.5/x2.0: Sh 0.37|0.34 vivo True|True; phi0.5/x3.0: Sh -1.11|-0.47 vivo False|False; phi0.75/x1.5: Sh 0.20|0.19 vivo True|True; phi0.75/x2.0: Sh 0.18|0.19 vivo True|True; phi0.75/x3.0: Sh -1.04|-0.59 vivo False|False",
+  "notes": {
+   "es": "phi0.5/x1.5: Sh 0.37|0.34 vivo True|True; phi0.5/x2.0: Sh 0.37|0.34 vivo True|True; phi0.5/x3.0: Sh -1.11|-0.47 vivo False|False; phi0.75/x1.5: Sh 0.20|0.19 vivo True|True; phi0.75/x2.0: Sh 0.18|0.19 vivo True|True; phi0.75/x3.0: Sh -1.04|-0.59 vivo False|False",
+   "en": "phi0.5/x1.5: Sh 0.37|0.34 live True|True; phi0.5/x2.0: Sh 0.37|0.34 live True|True; phi0.5/x3.0: Sh -1.11|-0.47 live False|False; phi0.75/x1.5: Sh 0.20|0.19 live True|True; phi0.75/x2.0: Sh 0.18|0.19 live True|True; phi0.75/x3.0: Sh -1.04|-0.59 live False|False",
+   "pt": "phi0,5/x1,5: Sh 0,37|0,34 vivo True|True; phi0,5/x2,0: Sh 0,37|0,34 vivo True|True; phi0,5/x3,0: Sh -1,11|-0,47 vivo False|False; phi0,75/x1,5: Sh 0,20|0,19 vivo True|True; phi0,75/x2,0: Sh 0,18|0,19 vivo True|True; phi0,75/x3,0: Sh -1,04|-0,59 vivo False|False"
+  },
   "metrics": {
    "Total Return [%]": 21.644224036310746,
    "Sharpe Ratio": 0.3711481525234038,
@@ -1155,7 +1263,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "sobrevive": "parcial",
    "retorno": "demasiado bajo"
@@ -1191,7 +1303,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "sobrevive": "False"
   },
@@ -1226,7 +1342,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "",
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
   "metrics": {
    "sobrevive": "False",
    "causa": "DD acumulado 1a semana"
@@ -1267,7 +1387,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2014-2024: baseline lag1: Sharpe -0.17 vivo False | reentry lag1 (0.9/x2): Sharpe -1.00 vivo False | reentry lag1 (0.8/x2): Sharpe -0.79 vivo False /// 2007-2013: baseline lag1: Sharpe -0.46 vivo False | reentry lag1 (0.9/x2): Sharpe -0.76 vivo False | reentry lag1 (0.8/x2): Sharpe -0.75 vivo False",
+  "notes": {
+   "es": "2014-2024: baseline lag1: Sharpe -0.17 vivo False | reentry lag1 (0.9/x2): Sharpe -1.00 vivo False | reentry lag1 (0.8/x2): Sharpe -0.79 vivo False /// 2007-2013: baseline lag1: Sharpe -0.46 vivo False | reentry lag1 (0.9/x2): Sharpe -0.76 vivo False | reentry lag1 (0.8/x2): Sharpe -0.75 vivo False",
+   "en": "2014-2024: baseline lag1: Sharpe -0.17 live False | reentry lag1 (0.9/x2): Sharpe -1.00 live False | reentry lag1 (0.8/x2): Sharpe -0.79 live False /// 2007-2013: baseline lag1: Sharpe -0.46 live False | reentry lag1 (0.9/x2): Sharpe -0.76 live False | reentry lag1 (0.8/x2): Sharpe -0.75 live False",
+   "pt": "2014-2024: baseline lag1: Sharpe -0,17 vivo False | reentry lag1 (0,9/x2): Sharpe -1,00 vivo False | reentry lag1 (0,8/x2): Sharpe -0,79 vivo False /// 2007-2013: baseline lag1: Sharpe -0,46 vivo False | reentry lag1 (0,9/x2): Sharpe -0,76 vivo False | reentry lag1 (0,8/x2): Sharpe -0,75 vivo False"
+  },
   "metrics": {
    "Total Return [%]": -10.03206878926206,
    "Sharpe Ratio": -1.0001135333381441,
@@ -1312,7 +1436,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "mejor combo cooling=0.9 lev=2.0 | 2014-24 Sharpe 2.12 (base 1.23); 2007-13 Sharpe 1.53 (base 1.06). Grilla completa en stdout/registro.",
+  "notes": {
+   "es": "mejor combo cooling=0.9 lev=2.0 | 2014-24 Sharpe 2.12 (base 1.23); 2007-13 Sharpe 1.53 (base 1.06). Grilla completa en stdout/registro.",
+   "en": "Best combo cooling=0.9 lev=2.0 | 2014-24 Sharpe 2.12 (base 1.23); 2007-13 Sharpe 1.53 (base 1.06). Full grid in stdout/log.",
+   "pt": "Melhor combo cooling=0,9 lev=2,0 | 2014-24 Sharpe 2,12 (base 1,23); 2007-13 Sharpe 1,53 (base 1,06). Grade completa em stdout/registro."
+  },
   "metrics": {
    "Total Return [%]": 1226.739881464346,
    "Sharpe Ratio": 2.121356020074753,
@@ -1357,7 +1485,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "2014-24: manual x3 fijo: Sharpe 1.23 vivo True | ML sizing 2+2p: Sharpe 1.20 vivo True /// 2007-13: manual x3 fijo: Sharpe 1.06 vivo True | ML sizing 2+2p: Sharpe 1.04 vivo True",
+  "notes": {
+   "es": "2014-24: manual x3 fijo: Sharpe 1.23 vivo True | ML sizing 2+2p: Sharpe 1.20 vivo True /// 2007-13: manual x3 fijo: Sharpe 1.06 vivo True | ML sizing 2+2p: Sharpe 1.04 vivo True",
+   "en": "2014-24: manual x3 fixed: Sharpe 1.23 live True | ML sizing 2+2p: Sharpe 1.20 live True /// 2007-13: manual x3 fixed: Sharpe 1.06 live True | ML sizing 2+2p: Sharpe 1.04 live True",
+   "pt": "2014-24: manual x3 fixo: Sharpe 1,23 vivo True | ML sizing 2+2p: Sharpe 1,20 vivo True /// 2007-13: manual x3 fixo: Sharpe 1,06 vivo True | ML sizing 2+2p: Sharpe 1,04 vivo True"
+  },
   "metrics": {
    "Total Return [%]": 203.83962176760969,
    "Sharpe Ratio": 1.201685434512525,
@@ -1402,7 +1534,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML v2: Sharpe -1.34 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML v2: Sharpe 0.21 vivo True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60",
+  "notes": {
+   "es": "2014-24: manual: Sharpe 1.23 vivo True | ML v2: Sharpe -1.34 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML v2: Sharpe 0.21 vivo True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60",
+   "en": "2014-24: manual: Sharpe 1.23 live True | ML v2: Sharpe -1.34 live False /// 2007-13: manual: Sharpe 1.06 live True | ML v2: Sharpe 0.21 live True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60",
+   "pt": "2014-24: manual: Sharpe 1,23 vivo True | ML v2: Sharpe -1,34 vivo False /// 2007-13: manual: Sharpe 1,06 vivo True | ML v2: Sharpe 0,21 vivo True /// top features: term_spread, vix, dxy_mom60, vix_vs_ma60"
+  },
   "metrics": {
    "Total Return [%]": -7.042222057941105,
    "Sharpe Ratio": -1.344307218629578,
@@ -1449,7 +1585,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2014-24: manual: Sharpe 1.23 vivo True | ML p>0.4: Sharpe -2.33 vivo False | ML p>0.5: Sharpe -2.31 vivo False | ML p>0.6: Sharpe -2.31 vivo False | ML graduado 3(1-p): Sharpe -2.44 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML p>0.4: Sharpe -0.59 vivo False | ML p>0.5: Sharpe -0.59 vivo False | ML p>0.6: Sharpe -0.59 vivo False | ML graduado 3(1-p): Sharpe 0.33 vivo True",
+  "notes": {
+   "es": "2014-24: manual: Sharpe 1.23 vivo True | ML p>0.4: Sharpe -2.33 vivo False | ML p>0.5: Sharpe -2.31 vivo False | ML p>0.6: Sharpe -2.31 vivo False | ML graduado 3(1-p): Sharpe -2.44 vivo False /// 2007-13: manual: Sharpe 1.06 vivo True | ML p>0.4: Sharpe -0.59 vivo False | ML p>0.5: Sharpe -0.59 vivo False | ML p>0.6: Sharpe -0.59 vivo False | ML graduado 3(1-p): Sharpe 0.33 vivo True",
+   "en": "2014-24: manual: Sharpe 1.23 live True | ML p>0.4: Sharpe -2.33 live False | ML p>0.5: Sharpe -2.31 live False | ML p>0.6: Sharpe -2.31 live False | ML graduated 3(1-p): Sharpe -2.44 live False /// 2007-13: manual: Sharpe 1.06 live True | ML p>0.4: Sharpe -0.59 live False | ML p>0.5: Sharpe -0.59 live False | ML p>0.6: Sharpe -0.59 live False | ML graduated 3(1-p): Sharpe 0.33 live True",
+   "pt": "2014-24: manual: Sharpe 1,23 vivo True | ML p>0,4: Sharpe -2,33 vivo False | ML p>0,5: Sharpe -2,31 vivo False | ML p>0,6: Sharpe -2,31 vivo False | ML graduado 3(1-p): Sharpe -2,44 vivo False /// 2007-13: manual: Sharpe 1,06 vivo True | ML p>0,4: Sharpe -0,59 vivo False | ML p>0,5: Sharpe -0,59 vivo False | ML p>0,6: Sharpe -0,59 vivo False | ML graduado 3(1-p): Sharpe 0,33 vivo True"
+  },
   "metrics": {
    "Total Return [%]": -10.36743071171492,
    "Sharpe Ratio": -2.3140291436098788,
@@ -1499,7 +1639,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "2014-24: filtro manual: Sharpe 1.23, ret +267%, vivo True | HMM (IA): Sharpe -2.31, ret -10%, vivo False | HMM OR manual: Sharpe 0.98, ret +151%, vivo True /// OOS 2007-13: filtro manual: Sharpe 1.06, ret +85%, vivo True | HMM (IA): Sharpe -0.54, ret -12%, vivo False | HMM OR manual: Sharpe 1.03, ret +75%, vivo True",
+  "notes": {
+   "es": "2014-24: filtro manual: Sharpe 1.23, ret +267%, vivo True | HMM (IA): Sharpe -2.31, ret -10%, vivo False | HMM OR manual: Sharpe 0.98, ret +151%, vivo True /// OOS 2007-13: filtro manual: Sharpe 1.06, ret +85%, vivo True | HMM (IA): Sharpe -0.54, ret -12%, vivo False | HMM OR manual: Sharpe 1.03, ret +75%, vivo True",
+   "en": "2014-24: manual filter: Sharpe 1.23, ret +267%, live True | HMM (AI): Sharpe -2.31, ret -10%, live False | HMM OR manual: Sharpe 0.98, ret +151%, live True /// OOS 2007-13: manual filter: Sharpe 1.06, ret +85%, live True | HMM (AI): Sharpe -0.54, ret -12%, live False | HMM OR manual: Sharpe 1.03, ret +75%, live True",
+   "pt": "2014-24: filtro manual: Sharpe 1,23, ret +267%, vivo True | HMM (IA): Sharpe -2,31, ret -10%, vivo False | HMM OU manual: Sharpe 0,98, ret +151%, vivo True /// OOS 2007-13: filtro manual: Sharpe 1,06, ret +85%, vivo True | HMM (IA): Sharpe -0,54, ret -12%, vivo False | HMM OU manual: Sharpe 1,03, ret +75%, vivo True"
+  },
   "metrics": {
    "Total Return [%]": -10.36743071171492,
    "Sharpe Ratio": -2.3140291436098788,
@@ -1554,7 +1698,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "Comparativa en el mismo periodo: SIN filtro x3: vivo=False, ret=-11%, Sharpe=-0.59, MaxDD=-15.6% | CON filtro x3 (baseline): vivo=True, ret=+85%, Sharpe=1.06, MaxDD=-10.8% | #19 estricto (VIX<14: x5): vivo=True, ret=+96%, Sharpe=1.07, MaxDD=-12.7%",
+  "notes": {
+   "es": "Comparativa en el mismo periodo: SIN filtro x3: vivo=False, ret=-11%, Sharpe=-0.59, MaxDD=-15.6% | CON filtro x3 (baseline): vivo=True, ret=+85%, Sharpe=1.06, MaxDD=-10.8% | #19 estricto (VIX<14: x5): vivo=True, ret=+96%, Sharpe=1.07, MaxDD=-12.7%",
+   "en": "Comparison in the same period: WITHOUT filter x3: live=False, ret=-11%, Sharpe=-0.59, MaxDD=-15.6% | WITH filter x3 (baseline): live=True, ret=+85%, Sharpe=1.06, MaxDD=-10.8% | #19 strict (VIX<14: x5): live=True, ret=+96%, Sharpe=1.07, MaxDD=-12.7%",
+   "pt": "Comparativa no mesmo período: SEM filtro x3: vivo=False, ret=-11%, Sharpe=-0,59, MaxDD=-15,6% | COM filtro x3 (baseline): vivo=True, ret=+85%, Sharpe=1,06, MaxDD=-10,8% | #19 estrito (VIX<14: x5): vivo=True, ret=+96%, Sharpe=1,07, MaxDD=-12,7%"
+  },
   "metrics": {
    "Total Return [%]": 84.559569815447,
    "Sharpe Ratio": 1.0574086725090652,
@@ -1597,7 +1745,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=0.38. Por año: 2014: +0.0%, 2015: +14.6%, 2016: -3.5%, 2017: -7.5%, 2018: +3.2%, 2019: -4.5%, 2020: +18.9%, 2021: +10.7%, 2022: +4.6%",
+  "notes": {
+   "es": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=0.38. Por año: 2014: +0.0%, 2015: +14.6%, 2016: -3.5%, 2017: -7.5%, 2018: +3.2%, 2019: -4.5%, 2020: +18.9%, 2021: +10.7%, 2022: +4.6%",
+   "en": "vs baseline #16 (Sharpe 1.23, +267%). Survived=False, Sharpe=0.38. By year: 2014: +0.0%, 2015: +14.6%, 2016: -3.5%, 2017: -7.5%, 2018: +3.2%, 2019: -4.5%, 2020: +18.9%, 2021: +10.7%, 2022: +4.6%",
+   "pt": "vs baseline #16 (Sharpe 1,23, +267%). Sobreviveu=False, Sharpe=0,38. Por ano: 2014: +0,0%, 2015: +14,6%, 2016: -3,5%, 2017: -7,5%, 2018: +3,2%, 2019: -4,5%, 2020: +18,9%, 2021: +25,3%, 2022: +4,6%"
+  },
   "metrics": {
    "Total Return [%]": 39.29330835290372,
    "Sharpe Ratio": 0.3811268962645925,
@@ -1641,7 +1793,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=True, Sharpe=1.39. Por año: 2014: -2.6%, 2015: -2.1%, 2016: +41.4%, 2017: +38.8%, 2018: +9.0%, 2019: +28.5%, 2020: +23.7%, 2021: +25.3%, 2022: +11.6%, 2023: +12.3%, 2024: +33.9%, 2025: +0.0%",
+  "notes": {
+   "es": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=True, Sharpe=1.39. Por año: 2014: -2.6%, 2015: -2.1%, 2016: +41.4%, 2017: +38.8%, 2018: +9.0%, 2019: +28.5%, 2020: +23.7%, 2021: +25.3%, 2022: +11.6%, 2023: +12.3%, 2024: +33.9%, 2025: +0.0%",
+   "en": "vs baseline #16 (Sharpe 1.23, +267%). Survived=True, Sharpe=1.39. By year: 2014: -2.6%, 2015: -2.1%, 2016: +41.4%, 2017: +38.8%, 2018: +9.0%, 2019: +28.5%, 2020: +23.7%, 2021: +25.3%, 2022: +11.6%, 2023: +12.3%, 2024: +33.9%, 2025: +0.0%",
+   "pt": "vs baseline #16 (Sharpe 1,23, +267%). Sobreviveu=True, Sharpe=1,39. Por ano: 2014: -2,6%, 2015: -2,1%, 2016: +41,4%, 2017: +38,8%, 2018: +9,0%, 2019: +28,5%, 2020: +23,7%, 2021: +25,3%, 2022: +11,6%, 2023: +12,3%, 2024: +33,9%, 2025: +0,0%"
+  },
   "metrics": {
    "Total Return [%]": 591.5043550651397,
    "Sharpe Ratio": 1.3919778175331383,
@@ -1685,7 +1841,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=-1.52. Por año: 2014: -3.6%",
+  "notes": {
+   "es": "vs baseline #16 (Sharpe 1.23, +267%). Sobrevive=False, Sharpe=-1.52. Por año: 2014: -3.6%",
+   "en": "vs baseline #16 (Sharpe 1.23, +267%). Survived=False, Sharpe=-1.52. By year: 2014: -3.6%",
+   "pt": "vs baseline #16 (Sharpe 1,23, +267%). Sobreviveu=False, Sharpe=-1,52. Por ano: 2014: -3,6%"
+  },
   "metrics": {
    "Total Return [%]": -4.004100347618866,
    "Sharpe Ratio": -1.5209526067857992,
@@ -1730,7 +1890,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "CON filtro: P(pasar 30d)=1%, EV/intento=$-429 (vs sin filtro $-127). El filtro reduce busts -> la fase fondeada sobrevive mas -> mas cobros. Sigue siendo beta cronometrada y un solo camino; falta forward test live.",
+  "notes": {
+   "es": "CON filtro: P(pasar 30d)=1%, EV/intento=$-429 (vs sin filtro $-127). El filtro reduce busts -> la fase fondeada sobrevive mas -> mas cobros. Sigue siendo beta cronometrada y un solo camino; falta forward test live.",
+   "en": "WITH filter: P(pass 30d)=1%, EV/attempt=$-429 (vs without filter $-127). Filter reduces busts → funded phase survives longer → more payouts. Still timed beta and a single path; live forward test still missing.",
+   "pt": "COM filtro: P(passar 30d)=1%, EV/tentativa=$-429 (vs sem filtro $-127). Filtro reduz busts → fase fondeada sobrevive mais → mais cobros. Ainda é beta cronometrada e um único caminho; falta forward test live."
+  },
   "metrics": {
    "P pasar 30d (%)": 1.0,
    "EV intento ($)": -429.0,
@@ -1775,7 +1939,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "Sharpe 1.23, ret 267.3%, años positivos 75%, flat 1465 dias. Si los años son consistentemente positivos (no solo 2020), el filtro macro es un edge real.",
+  "notes": {
+   "es": "Sharpe 1.23, ret 267.3%, años positivos 75%, flat 1465 dias. Si los años son consistentemente positivos (no solo 2020), el filtro macro es un edge real.",
+   "en": "Sharpe 1.23, ret 267.3%, positive years 75%, flat 1465 days. If years are consistently positive (not just 2020), the macro filter is a real edge.",
+   "pt": "Sharpe 1,23, ret 267,3%, anos positivos 75%, flat 1465 dias. Se os anos forem consistentemente positivos (não apenas 2020), o filtro macro é um edge real."
+  },
   "metrics": {
    "Total Return [%]": 267.26677844634423,
    "Sharpe Ratio": 1.226074548452023,
@@ -1822,7 +1990,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "Filtro macro A PRIORI (no optimizado). El bot SIN filtro reventaba en COVID a x2+. Datos: VIX y credito (HYG/LQD) de Yahoo. Primer intento de salir del precio-solo.",
+  "notes": {
+   "es": "Filtro macro A PRIORI (no optimizado). El bot SIN filtro reventaba en COVID a x2+. Datos: VIX y credito (HYG/LQD) de Yahoo. Primer intento de salir del precio-solo.",
+   "en": "Macro filter A PRIORI (not optimized). Bot WITHOUT filter blew up in COVID at x2+. Data: VIX and credit (HYG/LQD) from Yahoo. First attempt to go beyond price-only.",
+   "pt": "Filtro macro A PRIORI (não otimizado). Bot SEM filtro explodia no COVID a x2+. Dados: VIX e crédito (HYG/LQD) do Yahoo. Primeira tentativa de sair do preço-só."
+  },
   "metrics": {
    "Total Return [%]": 190.43886571493823,
    "Sharpe Ratio": 1.3840137062885562,
@@ -1886,7 +2058,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Vol targeting: leverage medio x3.15. Sobrevivio=False (daily_loss), retorno -14.2%, Sharpe -0.91, MaxDD -21.6%. Compara con v13 (sin vol targeting, reventó en COVID). Modulo en D:\\ATLAS\\bot\\; falta adaptador MT5.",
+  "notes": {
+   "es": "Vol targeting: leverage medio x3.15. Sobrevivio=False (daily_loss), retorno -14.2%, Sharpe -0.91, MaxDD -21.6%. Compara con v13 (sin vol targeting, reventó en COVID). Modulo en D:\\ATLAS\\bot\\; falta adaptador MT5.",
+   "en": "Vol targeting: mean leverage x3.15. Survived=False (daily_loss), return -14.2%, Sharpe -0.91, MaxDD -21.6%. Compare with v13 (without vol targeting, blew up in COVID). Module at D:\\ATLAS\\bot\\; MT5 adapter still missing.",
+   "pt": "Vol targeting: alavancagem média x3,15. Sobreviveu=False (daily_loss), retorno -14,2%, Sharpe -0,91, MaxDD -21,6%. Comparar com v13 (sem vol targeting, explodiu no COVID). Módulo em D:\\ATLAS\\bot\\; adaptador MT5 ainda ausente."
+  },
   "metrics": {
    "Total Return [%]": -14.177774854869273,
    "Sharpe Ratio": -0.9109711245362379,
@@ -1912,7 +2088,7 @@
   "name": {
    "es": "Bot ATLAS paper-run funded v13",
    "en": "Bot ATLAS paper-run funded v13",
-   "pt": "Bot ATLAS paper-run funded v13"
+   "pt": "Bot ATLAS paper-run fondeado v13"
   },
   "family": "bot",
   "date": "2026-06-07T21:40:22",
@@ -1949,7 +2125,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Sobrevivio=False (max_drawdown), retorno -10.3%, Sharpe -0.95, MaxDD -15.3%. Modulo desplegable listo en D:\\ATLAS\\bot\\; falta el adaptador MT5 (stub en broker.py).",
+  "notes": {
+   "es": "Sobrevivio=False (max_drawdown), retorno -10.3%, Sharpe -0.95, MaxDD -15.3%. Modulo desplegable listo en D:\\ATLAS\\bot\\; falta el adaptador MT5 (stub en broker.py).",
+   "en": "Survived=False (max_drawdown), return -10.3%, Sharpe -0.95, MaxDD -15.3%. Deployable module ready at D:\\ATLAS\\bot\\; MT5 adapter still missing (stub in broker.py).",
+   "pt": "Sobreviveu=False (max_drawdown), retorno -10,3%, Sharpe -0,95, MaxDD -15,3%. Módulo implantável pronto em D:\\ATLAS\\bot\\; falta o adaptador MT5 (stub em broker.py)."
+  },
   "metrics": {
    "Total Return [%]": -10.29808704185199,
    "Sharpe Ratio": -0.9533432067552183,
@@ -1999,7 +2179,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "Si el EV cae a negativo en crisis, el algoritmo es beta alcista y NO se arriesga dinero sin un edge robusto. Si aguanta, el sizing+diversificacion da resiliencia real.",
+  "notes": {
+   "es": "Si el EV cae a negativo en crisis, el algoritmo es beta alcista y NO se arriesga dinero sin un edge robusto. Si aguanta, el sizing+diversificacion da resiliencia real.",
+   "en": "If EV goes negative in crises, the algorithm is bullish beta and NO money should be risked without a robust edge. If it holds, sizing+diversification gives real resilience.",
+   "pt": "Se o EV cair para negativo em crises, o algoritmo é beta de alta e NÃO se arrisca dinheiro sem um edge robusto. Se aguentar, sizing+diversificação dá resiliência real."
+  },
   "metrics": {
    "EV crisis 2008 ($)": 1229.0,
    "EV bear 2022 ($)": 2147.0,
@@ -2051,7 +2235,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "P(pasar)=47.9%. Mejor EV/intento=$5,919 con funded x2. Honesto: usa solo BETA del basket 2019-24 (período alcista) -> optimista; en mercado feo cae. Pero muestra la mecanica real: el dinero esta en sobrevivir la fase fondeada con sizing conservador para cobrar varios payouts. Sin alfa, todo depende del beta + sizing.",
+  "notes": {
+   "es": "P(pasar)=47.9%. Mejor EV/intento=$5,919 con funded x2. Honesto: usa solo BETA del basket 2019-24 (período alcista) -> optimista; en mercado feo cae. Pero muestra la mecanica real: el dinero esta en sobrevivir la fase fondeada con sizing conservador para cobrar varios payouts. Sin alfa, todo depende del beta + sizing.",
+   "en": "P(pass)=47.9%. Best EV/attempt=$5,919 with funded x2. Honest: uses only BETA of the basket 2019-24 (bullish period) → optimistic; in a bad market it falls. But shows the real mechanics: money is in surviving the funded phase with conservative sizing to collect multiple payouts. Without alpha, everything depends on beta + sizing.",
+   "pt": "P(passar)=47,9%. Melhor EV/tentativa=$5.919 com fondeado x2. Honesto: usa apenas BETA do basket 2019-24 (período de alta) → otimista; em mercado ruim cai. Mas mostra a mecânica real: o dinheiro está em sobreviver à fase fondeada com sizing conservador para cobrar vários payouts. Sem alpha, tudo depende do beta + sizing."
+  },
   "metrics": {
    "P pasar (%)": 47.9,
    "Mejor EV intento ($)": 5919.0,
@@ -2105,7 +2293,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "RP mejor P(pasar)=46.0% a x6 (Sharpe RP 0.58 vs EW 0.70). EV ilustrativo/intento=$3,410 (OPTIMISTA: asume cobrar un payout en la fase fondeada; modelar esa fase es el siguiente paso). El dinero = sizing + disciplina, no alfa.",
+  "notes": {
+   "es": "RP mejor P(pasar)=46.0% a x6 (Sharpe RP 0.58 vs EW 0.70). EV ilustrativo/intento=$3,410 (OPTIMISTA: asume cobrar un payout en la fase fondeada; modelar esa fase es el siguiente paso). El dinero = sizing + disciplina, no alfa.",
+   "en": "RP best P(pass)=46.0% at x6 (Sharpe RP 0.58 vs EW 0.70). Illustrative EV/attempt=$3,410 (OPTIMISTIC: assumes collecting a payout in the funded phase; modeling that phase is next). Money = sizing + discipline, not alpha.",
+   "pt": "RP melhor P(passar)=46,0% a x6 (Sharpe RP 0,58 vs EW 0,70). EV ilustrativo/tentativa=$3.410 (OTIMISTA: assume cobrar um payout na fase fondeada; modelar essa fase é o próximo passo). Dinheiro = sizing + disciplina, não alpha."
+  },
   "metrics": {
    "P pasar (%)": 46.0,
    "Mejor leverage": 6,
@@ -2161,7 +2353,11 @@
    "en": "worked",
    "pt": "serviu"
   },
-  "notes": "Mejor P(pasar)=47.9% con leverage x4. Estrategia base Sharpe 0.70. Honesto: sin alfa real, pasar depende de agresividad vs reglas de DD. Recordatorio: ~7% de los traders cobran (FPFX).",
+  "notes": {
+   "es": "Mejor P(pasar)=47.9% con leverage x4. Estrategia base Sharpe 0.70. Honesto: sin alfa real, pasar depende de agresividad vs reglas de DD. Recordatorio: ~7% de los traders cobran (FPFX).",
+   "en": "Best P(pass)=47.9% at leverage x4. Base strategy Sharpe 0.70. Honest: without real alpha, passing depends on aggressiveness vs DD rules. Reminder: ~7% of traders get paid (FPFX).",
+   "pt": "Melhor P(passar)=47,9% a alavancagem x4. Sharpe da estratégia base 0,70. Honesto: sem alpha real, passar depende da agressividade vs regras de DD. Lembrete: ~7% dos traders recebem (FPFX)."
+  },
   "metrics": {
    "P pasar (%)": 47.9,
    "Mejor leverage": 4,
@@ -2216,7 +2412,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Sharpe seleccionados=-4.142 (sin filtro -3.997; gross sel -1.411), PSR=0.000, 189/369 trades. Meta-labeling AFML 2018: el ML elige los mejores trades para que el edge sobreviva a los costes.",
+  "notes": {
+   "es": "Sharpe seleccionados=-4.142 (sin filtro -3.997; gross sel -1.411), PSR=0.000, 189/369 trades. Meta-labeling AFML 2018: el ML elige los mejores trades para que el edge sobreviva a los costes.",
+   "en": "Sharpe selected=-4.142 (no filter -3.997; gross selected -1.411), PSR=0.000, 189/369 trades. Meta-labeling AFML 2018: ML picks the best trades so the edge survives costs.",
+   "pt": "Sharpe selecionados=-4,142 (sem filtro -3,997; gross sel -1,411), PSR=0,000, 189/369 trades. Meta-labeling AFML 2018: o ML escolhe os melhores trades para que o edge sobreviva aos custos."
+  },
   "metrics": {
    "Total Return [%]": -5.039320347349707,
    "Sharpe Ratio": -4.141704830297103,
@@ -2267,7 +2467,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Sharpe=-1.987 (sin costes 0.200), win=50.3%, PSR=0.000. Test de la hipotesis de reversion intradia en FX majors.",
+  "notes": {
+   "es": "Sharpe=-1.987 (sin costes 0.200), win=50.3%, PSR=0.000. Test de la hipotesis de reversion intradia en FX majors.",
+   "en": "Sharpe=-1.987 (without costs +0.200), win=50.3%, PSR=0.000. Test of the intraday reversion hypothesis in FX majors.",
+   "pt": "Sharpe=-1,987 (sem custos +0,200), win=50,3%, PSR=0,000. Teste da hipótese de reversão intradiária em FX majors."
+  },
   "metrics": {
    "Total Return [%]": -22.53616431947566,
    "Sharpe Ratio": -1.9873271888414723,
@@ -2316,7 +2520,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "Sharpe=-0.955 vs Buy&Hold -0.212. Win=49.9%, PSR=0.009. Edge intradia de sesion (volatility expansion al abrir Londres/NY). Primer enfoque NO direccional-por-ML: estructura horaria del mercado.",
+  "notes": {
+   "es": "Sharpe=-0.955 vs Buy&Hold -0.212. Win=49.9%, PSR=0.009. Edge intradia de sesion (volatility expansion al abrir Londres/NY). Primer enfoque NO direccional-por-ML: estructura horaria del mercado.",
+   "en": "Sharpe=-0.955 vs Buy&Hold -0.212. Win=49.9%, PSR=0.009. Intraday session edge (volatility expansion at London/NY open). First NON-ML-directional approach: market hourly structure.",
+   "pt": "Sharpe=-0,955 vs Buy&Hold -0,212. Win=49,9%, PSR=0,009. Edge intradiário de sessão (expansão de volatilidade na abertura de Londres/NY). Primeira abordagem NÃO direcional-por-ML: estrutura horária do mercado."
+  },
   "metrics": {
    "Total Return [%]": -19.10160574360833,
    "Sharpe Ratio": -0.9551501548592031,
@@ -2382,7 +2590,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "Sharpe=-0.105, PSR=0.391, MCPT p=0.003, MaxDD=-14.8%. Fuente: Moskowitz, Ooi & Pedersen (2012) + critica de volatility scaling. Diversificacion + vol scaling = lo que la literatura valida.",
+  "notes": {
+   "es": "Sharpe=-0.105, PSR=0.391, MCPT p=0.003, MaxDD=-14.8%. Fuente: Moskowitz, Ooi & Pedersen (2012) + critica de volatility scaling. Diversificacion + vol scaling = lo que la literatura valida.",
+   "en": "Sharpe=-0.105, PSR=0.391, MCPT p=0.003, MaxDD=-14.8%. Source: Moskowitz, Ooi & Pedersen (2012) + volatility scaling critique. Diversification + vol scaling = what the literature validates.",
+   "pt": "Sharpe=-0,105, PSR=0,391, MCPT p=0,003, MaxDD=-14,8%. Fonte: Moskowitz, Ooi & Pedersen (2012) + crítica ao volatility scaling. Diversificação + vol scaling = o que a literatura valida."
+  },
   "metrics": {
    "Total Return [%]": -4.125217317824181,
    "Sharpe Ratio": -0.10470604761837544,
@@ -2433,7 +2645,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "PSR=0.473, MCPT p=0.585, trades=75. Fuente: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Caveat: la literatura dice que el volatility scaling aporta gran parte del edge (lo probaremos en la siguiente). Lookback fijo a priori, no ajustado.",
+  "notes": {
+   "es": "PSR=0.473, MCPT p=0.585, trades=75. Fuente: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Caveat: la literatura dice que el volatility scaling aporta gran parte del edge (lo probaremos en la siguiente). Lookback fijo a priori, no ajustado.",
+   "en": "PSR=0.473, MCPT p=0.585, trades=75. Source: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Caveat: the literature says volatility scaling contributes much of the edge (to be tested next). Lookback fixed a priori, not adjusted.",
+   "pt": "PSR=0,473, MCPT p=0,585, trades=75. Fonte: Moskowitz, Ooi & Pedersen (2012) 'Time Series Momentum'. Ressalva: a literatura diz que o volatility scaling contribui com grande parte do edge (a testar a seguir). Lookback fixo a priori, não ajustado."
+  },
   "metrics": {
    "Start": "2019-01-01 00:00:00+00:00",
    "End": "2024-12-31 00:00:00+00:00",
@@ -2504,7 +2720,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "PSR=0.510, MCPT p=0.483, trades=1173. Enfoque canonico de meta-labeling (AFML 2018): el ML decide CUANDO operar el sistema base, no la direccion.",
+  "notes": {
+   "es": "PSR=0.510, MCPT p=0.483, trades=1173. Enfoque canonico de meta-labeling (AFML 2018): el ML decide CUANDO operar el sistema base, no la direccion.",
+   "en": "PSR=0.510, MCPT p=0.483, trades=1173. Canonical meta-labeling approach (AFML 2018): ML decides WHEN to trade the base system, not the direction.",
+   "pt": "PSR=0,510, MCPT p=0,483, trades=1173. Abordagem canônica de meta-labeling (AFML 2018): o ML decide QUANDO operar o sistema base, não a direção."
+  },
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
    "End": "2024-12-31 21:00:00+00:00",
@@ -2575,7 +2795,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "PSR=0.140, MCPT p=0.860, trades=1822. Idea: menos trades = menos costes (evidencia FX 2024 + meta-labeling Lopez de Prado). Umbral 0.5 FIJO para no autoengañarnos ajustando parametros en el test.",
+  "notes": {
+   "es": "PSR=0.140, MCPT p=0.860, trades=1822. Idea: menos trades = menos costes (evidencia FX 2024 + meta-labeling Lopez de Prado). Umbral 0.5 FIJO para no autoengañarnos ajustando parametros en el test.",
+   "en": "PSR=0.140, MCPT p=0.860, trades=1822. Idea: fewer trades = fewer costs (FX 2024 evidence + meta-labeling López de Prado). Threshold 0.5 FIXED to avoid fooling ourselves tuning parameters on the test.",
+   "pt": "PSR=0,140, MCPT p=0,860, trades=1822. Ideia: menos trades = menos custos (evidência FX 2024 + meta-labeling López de Prado). Limiar 0,5 FIXO para não nos enganarmos ajustando parâmetros no teste."
+  },
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
    "End": "2024-12-31 21:00:00+00:00",
@@ -2622,7 +2846,7 @@
   "name": {
    "es": "ML XGBoost triple-barrier v1",
    "en": "ML XGBoost triple-barrier v1",
-   "pt": "ML XGBoost triple-barrier v1"
+   "pt": "ML XGBoost barreira tripla v1"
   },
   "family": "ml",
   "date": "2026-06-07T15:13:19",
@@ -2648,7 +2872,11 @@
    "en": "did not work",
    "pt": "não serviu"
   },
-  "notes": "PRIMERA prueba ML real. PSR=0.192 (prob. de que el SR>0). MCPT p=0.778 (p bajo => la señal NO es suerte). Fuentes: triple-barrera + purged CV (Lopez de Prado 2018); features de dominio (evidencia FX 2024). Raw, sin filtro de costes aun. [Veredicto: OOS aleatorio - MCPT p=0.78, PSR 0.19.]",
+  "notes": {
+   "es": "PRIMERA prueba ML real. PSR=0.192 (prob. de que el SR>0). MCPT p=0.778 (p bajo => la señal NO es suerte). Fuentes: triple-barrera + purged CV (Lopez de Prado 2018); features de dominio (evidencia FX 2024). Raw, sin filtro de costes aun. [Veredicto: OOS aleatorio - MCPT p=0.78, PSR 0.19.]",
+   "en": "FIRST real ML test. PSR=0.192 (prob. SR>0). MCPT p=0.778 (high p => signal IS luck). Sources: triple-barrier + purged CV (López de Prado 2018); domain features (FX evidence 2024). Raw, no cost filter yet. [Verdict: OOS random - MCPT p=0.78, PSR 0.19.]",
+   "pt": "PRIMEIRO teste ML real. PSR=0,192 (prob. SR>0). MCPT p=0,778 (p alto => sinal É sorte). Fontes: triple-barrier + purged CV (López de Prado 2018); features de domínio (evidência FX 2024). Bruto, sem filtro de custos ainda. [Veredicto: OOS aleatório - MCPT p=0,78, PSR 0,19.]"
+  },
   "metrics": {
    "Start": "2023-03-16 00:00:00+00:00",
    "End": "2024-12-31 21:00:00+00:00",
@@ -2719,7 +2947,11 @@
    "en": "partial",
    "pt": "parcial"
   },
-  "notes": "Le gana al Buy&Hold pero Sharpe 0.245 (flojo) y los costes se comen casi todo el edge (~$1273 en 822 trades). Sirve como vara minima para el ML.",
+  "notes": {
+   "es": "Le gana al Buy&Hold pero Sharpe 0.245 (flojo) y los costes se comen casi todo el edge (~$1273 en 822 trades). Sirve como vara minima para el ML.",
+   "en": "Beats Buy&Hold but Sharpe 0.245 (weak) and costs eat up almost all the edge (~$1273 in 822 trades). Serves as minimum benchmark for ML.",
+   "pt": "Supera o Buy&Hold mas Sharpe 0,245 (fraco) e os custos consomem quase todo o edge (~$1273 em 822 trades). Serve como vara mínima para o ML."
+  },
   "metrics": {
    "Start": "2019-01-01 22:00:00+00:00",
    "End": "2024-12-31 21:00:00+00:00",

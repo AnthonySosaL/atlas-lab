@@ -17,6 +17,33 @@ export function fmtMetric(key: string, value: number | string): string {
   return Number.isInteger(value) ? String(value) : value.toFixed(3);
 }
 
+const METRIC_LABELS: Record<string, { en: string; pt: string }> = {
+  peor_dia:   { en: "Worst day",      pt: "Pior dia" },
+  peor_anio:  { en: "Worst year",     pt: "Pior ano" },
+  anios_pos:  { en: "Positive yrs",   pt: "Anos pos." },
+  lev_medio:  { en: "Mean lev.",      pt: "Alav. média" },
+  sobrevive:  { en: "Survived",       pt: "Sobreviveu" },
+  flat_days:  { en: "Flat days",      pt: "Dias planos" },
+  n_trades:   { en: "Trades",         pt: "Trades" },
+  win_rate:   { en: "Win rate",       pt: "Win rate" },
+  sharpe:     { en: "Sharpe",         pt: "Sharpe" },
+  cagr:       { en: "CAGR",           pt: "CAGR" },
+  maxdd:      { en: "MaxDD",          pt: "MaxDD" },
+  psr:        { en: "PSR",            pt: "PSR" },
+  dsr:        { en: "DSR",            pt: "DSR" },
+  r2_vol:     { en: "R² vol",         pt: "R² vol" },
+  acc:        { en: "Accuracy",       pt: "Acurácia" },
+};
+
+export function metricLabel(key: string, locale: "es" | "en" | "pt"): string {
+  if (locale === "es") return key;
+  const k = key.toLowerCase();
+  for (const [slug, tr] of Object.entries(METRIC_LABELS)) {
+    if (k.includes(slug)) return tr[locale] ?? key;
+  }
+  return key;
+}
+
 /** Métricas destacadas para mostrar en las tarjetas, según existan. */
 export function headlineMetrics(m: Record<string, number | string>) {
   const order = ["Sharpe", "CAGR", "MaxDD", "acc", "r2_vol", "PSR", "DSR"];

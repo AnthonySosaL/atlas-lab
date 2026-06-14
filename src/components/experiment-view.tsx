@@ -6,7 +6,7 @@ import type { Experiment, Serie } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { EquityChart } from "@/components/equity-chart";
-import { fmtMetric } from "@/lib/utils";
+import { fmtMetric, metricLabel } from "@/lib/utils";
 import { useI18n, pick } from "@/lib/i18n";
 
 function metricTone(key: string, value: number | string) {
@@ -31,7 +31,8 @@ export function ExperimentView({
   const metrics = Object.entries(exp.metrics);
   const paramEntries = Object.entries(exp.params ?? {});
   const verdictTxt = pick(exp.verdict, locale);
-  const lesson = exp.notes || verdictTxt;
+  const notesTxt = pick(exp.notes, locale);
+  const lesson = notesTxt || verdictTxt;
   const analysisText = pick(exp.analysis, locale);
 
   return (
@@ -44,7 +45,7 @@ export function ExperimentView({
       </Link>
 
       <div className="mb-2 flex flex-wrap items-center gap-2">
-        {exp.family && <Badge variant="muted">{exp.family}</Badge>}
+        {exp.family && <Badge variant="muted">{t(`fam.${exp.family}`)}</Badge>}
         <Badge variant={exp.status}>{t(`status.${exp.status}`)}</Badge>
         {exp.date && <span className="text-xs text-muted-foreground">{exp.date.slice(0, 10)}</span>}
       </div>
@@ -61,7 +62,7 @@ export function ExperimentView({
             <div className="text-xs font-semibold uppercase tracking-wide text-primary">
               {t("detail.lesson")}
             </div>
-            {verdictTxt && verdictTxt !== exp.notes && (
+            {verdictTxt && verdictTxt !== notesTxt && (
               <p className="mt-1 text-sm font-medium">{verdictTxt}</p>
             )}
             <p className="mt-1 text-sm text-muted-foreground">{lesson}</p>
@@ -80,7 +81,7 @@ export function ExperimentView({
         <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border sm:grid-cols-4">
           {metrics.map(([k, v]) => (
             <div key={k} className="bg-card p-4">
-              <div className="text-xs text-muted-foreground">{k}</div>
+              <div className="text-xs text-muted-foreground">{metricLabel(k, locale)}</div>
               <div className={`tabular mt-1 text-xl font-semibold ${metricTone(k, v)}`}>
                 {fmtMetric(k, v)}
               </div>

@@ -15,7 +15,7 @@ export type Experiment = {
   description: Loc;
   params: Record<string, unknown>;
   verdict: Loc;
-  notes: string;
+  notes: Loc;
   metrics: Record<string, number | string>;
   status: "survived" | "died" | "neutral";
   has_equity: boolean;

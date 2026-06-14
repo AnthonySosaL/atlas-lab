@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import type { Experiment } from "@/lib/data";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { cn, fmtMetric, headlineMetrics } from "@/lib/utils";
+import { cn, fmtMetric, headlineMetrics, metricLabel } from "@/lib/utils";
 import { useI18n, pick } from "@/lib/i18n";
 
 const STATUS_FILTERS: { key: "todos" | Experiment["status"]; tkey: string }[] = [
@@ -74,7 +74,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                 family === f ? "border-foreground/40 bg-muted font-medium" : "text-muted-foreground hover:bg-muted"
               )}
             >
-              {f === "todas" ? t("families.all") : f}
+              {f === "todas" ? t("families.all") : t(`fam.${f}`)}
             </button>
           ))}
         </div>
@@ -106,7 +106,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                           #{e.v}
                         </span>
                       )}
-                      {e.family && <Badge variant="muted">{e.family}</Badge>}
+                      {e.family && <Badge variant="muted">{t(`fam.${e.family}`)}</Badge>}
                     </div>
                     <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
                   </div>
@@ -116,7 +116,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                     <div className="flex flex-wrap gap-x-4 gap-y-1 border-t pt-3">
                       {metrics.map((m) => (
                         <div key={m.key} className="text-xs">
-                          <span className="text-muted-foreground">{m.key}: </span>
+                          <span className="text-muted-foreground">{metricLabel(m.key, locale)}: </span>
                           <span className="tabular font-medium">{fmtMetric(m.key, m.value)}</span>
                         </div>
                       ))}
