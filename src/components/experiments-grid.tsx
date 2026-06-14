@@ -14,39 +14,68 @@ const STATUS_LABEL: Record<Experiment["status"], string> = {
   neutral: "neutro",
 };
 
+const STATUS_FILTERS: { key: "todos" | Experiment["status"]; label: string }[] = [
+  { key: "todos", label: "Todos" },
+  { key: "survived", label: "Sobrevivió" },
+  { key: "neutral", label: "Neutro" },
+  { key: "died", label: "Murió" },
+];
+
 export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) {
   const families = React.useMemo(
     () => ["todas", ...Array.from(new Set(experiments.map((e) => e.family).filter(Boolean)))],
     [experiments]
   );
   const [family, setFamily] = React.useState("todas");
+  const [status, setStatus] = React.useState<"todos" | Experiment["status"]>("todos");
   const [q, setQ] = React.useState("");
 
-  const filtered = experiments.filter(
-    (e) =>
-      (family === "todas" || e.family === family) &&
-      (q === "" || (e.name + e.description).toLowerCase().includes(q.toLowerCase()))
-  );
+  const filtered = experiments
+    .filter(
+      (e) =>
+        (family === "todas" || e.family === family) &&
+        (status === "todos" || e.status === status) &&
+        (q === "" || (e.name + e.description).toLowerCase().includes(q.toLowerCase()))
+    )
+    .sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
 
   return (
     <div>
-      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Buscar experimento…"
-          className="h-9 w-full rounded-md border bg-card px-3 text-sm outline-none focus:ring-2 focus:ring-ring sm:max-w-xs"
-        />
+      <div className="mb-5 flex flex-col gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Buscar experimento…"
+            className="h-9 w-full rounded-md border bg-card px-3 text-sm outline-none focus:ring-2 focus:ring-ring sm:max-w-xs"
+          />
+          {/* filtro por estado */}
+          <div className="flex flex-wrap gap-1.5">
+            {STATUS_FILTERS.map((s) => (
+              <button
+                key={s.key}
+                onClick={() => setStatus(s.key)}
+                className={cn(
+                  "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                  status === s.key
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-muted"
+                )}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* filtro por familia */}
         <div className="flex flex-wrap gap-1.5">
           {families.map((f) => (
             <button
               key={f}
               onClick={() => setFamily(f)}
               className={cn(
-                "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
-                family === f
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-muted"
+                "rounded-full border px-2.5 py-1 text-xs transition-colors",
+                family === f ? "border-foreground/40 bg-muted font-medium" : "text-muted-foreground hover:bg-muted"
               )}
             >
               {f}
@@ -59,7 +88,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
         className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
         animate="show"
-        variants={{ show: { transition: { staggerChildren: 0.04 } } }}
+        variants={{ show: { transition: { staggerChildren: 0.03 } } }}
       >
         {filtered.map((e) => {
           const metrics = headlineMetrics(e.metrics);
@@ -68,14 +97,21 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
               key={e.id}
               variants={{
                 hidden: { opacity: 0, y: 14 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+                show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
               }}
               whileHover={{ y: -4 }}
             >
               <Link href={`/exp/${e.id}`}>
-                <Card className="h-full p-5 transition-shadow hover:shadow-md hover:border-primary/40">
+                <Card className="h-full p-5 transition-shadow hover:border-primary/40 hover:shadow-md">
                   <div className="mb-3 flex items-center justify-between gap-2">
-                    {e.family && <Badge variant="muted">{e.family}</Badge>}
+                    <div className="flex items-center gap-2">
+                      {e.v != null && (
+                        <span className="tabular rounded-md bg-foreground/5 px-1.5 py-0.5 text-xs font-bold text-muted-foreground">
+                          #{e.v}
+                        </span>
+                      )}
+                      {e.family && <Badge variant="muted">{e.family}</Badge>}
+                    </div>
                     <Badge variant={e.status}>{STATUS_LABEL[e.status]}</Badge>
                   </div>
                   <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{e.name}</h3>

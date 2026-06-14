@@ -1,16 +1,28 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Activity, FlaskConical, ShieldCheck } from "lucide-react";
 
 export const metadata = {
   title: "Bot en vivo — ATLAS Lab",
-  description: "Forward test en demo MetaTrader 5.",
+  description: "Forward test en cuenta demo. En pruebas y desarrollo.",
 };
 
-const facts = [
-  { k: "Broker", v: "Pepperstone (demo)" },
-  { k: "Estrategia", v: "Basket 15 · risk parity · filtro macro" },
-  { k: "Leverage", v: "fijo 2.0 (instrumento de medición)" },
-  { k: "Régimen", v: "VIX + crédito → flat en risk-off" },
+const points = [
+  {
+    icon: FlaskConical,
+    title: "En pruebas y desarrollo",
+    body: "El sistema corre en una cuenta demo como forward test. Estamos recogiendo datos reales de ejecución antes de cualquier decisión.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Riesgo cero",
+    body: "Cuenta de práctica, $0 en juego. El objetivo de esta fase es medir comportamiento en vivo, no generar ingresos.",
+  },
+  {
+    icon: Activity,
+    title: "Seguimiento continuo",
+    body: "El bot rebalancea de forma automática y registra cada paso. Los resultados se evaluarán al cierre del periodo de prueba.",
+  },
 ];
 
 export default function BotPage() {
@@ -18,29 +30,31 @@ export default function BotPage() {
     <div className="mx-auto max-w-3xl px-4 py-12">
       <div className="mb-3 flex items-center gap-2">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Bot en vivo</h1>
-        <Badge variant="muted">snapshot</Badge>
+        <Badge variant="default">en desarrollo</Badge>
       </div>
-      <p className="mt-2 mb-8 max-w-2xl text-muted-foreground">
-        El bot corre en una cuenta <strong>demo</strong> de MetaTrader 5 como forward test ($0 en
-        riesgo). Es un <strong>instrumento de medición</strong>, no una fuente de ingresos: los 57
-        experimentos demostraron que no hay alpha desplegable con datos retail.
+      <p className="mt-2 mb-10 max-w-2xl text-muted-foreground">
+        Una estrategia propia corriendo en vivo sobre una cuenta de práctica. Esta página es una
+        bitácora del proceso — el detalle del sistema se mantiene reservado mientras está en
+        evaluación.
       </p>
 
-      <Card className="p-5">
-        <div className="mb-4 text-sm font-medium">Configuración actual</div>
-        <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-md border bg-border sm:grid-cols-2">
-          {facts.map((f) => (
-            <div key={f.k} className="bg-card p-4">
-              <dt className="text-xs text-muted-foreground">{f.k}</dt>
-              <dd className="mt-1 text-sm font-medium">{f.v}</dd>
+      <div className="grid gap-4 sm:grid-cols-1">
+        {points.map((p) => (
+          <Card key={p.title} className="flex items-start gap-4 p-5">
+            <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+              <p.icon className="size-5" />
+            </span>
+            <div>
+              <div className="font-medium">{p.title}</div>
+              <p className="mt-1 text-sm text-muted-foreground">{p.body}</p>
             </div>
-          ))}
-        </dl>
-        <p className="mt-4 text-xs text-muted-foreground">
-          Los datos en vivo (equity, posiciones) viven en el bot local; esta página es un snapshot.
-          Una función serverless en Python podría exponerlos en tiempo real más adelante.
-        </p>
-      </Card>
+          </Card>
+        ))}
+      </div>
+
+      <p className="mt-8 text-center text-xs text-muted-foreground">
+        Una reseña de resultados se publicará cuando concluya la fase de pruebas.
+      </p>
     </div>
   );
 }

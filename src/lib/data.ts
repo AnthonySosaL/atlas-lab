@@ -5,6 +5,7 @@ const DATA = path.join(process.cwd(), "public", "data");
 
 export type Experiment = {
   id: string;
+  v: number | null;
   name: string;
   family: string;
   date: string;

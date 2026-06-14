@@ -47,7 +47,10 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           <span className="text-xs text-muted-foreground">{exp.date.slice(0, 10)}</span>
         )}
       </div>
-      <h1 className="text-3xl font-bold tracking-tight">{exp.name}</h1>
+      <h1 className="text-3xl font-bold tracking-tight">
+        {exp.v != null && <span className="text-primary">#{exp.v} · </span>}
+        {exp.name}
+      </h1>
       <p className="mt-3 max-w-3xl text-muted-foreground">{exp.description}</p>
 
       {/* Métricas */}

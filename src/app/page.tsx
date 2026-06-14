@@ -1,15 +1,10 @@
 import { getExperiments, getSummary } from "@/lib/data";
 import { ExperimentsGrid } from "@/components/experiments-grid";
+import { HeroStats } from "@/components/hero-stats";
+import { TopStrategies } from "@/components/top-strategies";
 
 export default async function Home() {
   const [experiments, summary] = await Promise.all([getExperiments(), getSummary()]);
-
-  const stats = [
-    { label: "experimentos registrados", value: summary.total },
-    { label: "sobrevivieron / murieron", value: `${summary.survived} / ${summary.died}` },
-    { label: "gastado en challenges", value: "$0" },
-    { label: "ilusiones cazadas", value: 6 },
-  ];
 
   return (
     <div className="mx-auto max-w-6xl px-4">
@@ -20,7 +15,7 @@ export default async function Home() {
           Laboratorio cuantitativo · código abierto
         </div>
         <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-          57 experimentos honestos buscando{" "}
+          {summary.total} experimentos honestos buscando{" "}
           <span className="text-primary">alpha de trading retail</span>.
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
@@ -28,15 +23,13 @@ export default async function Home() {
           ejecutables y Deflated Sharpe. Esta es la conclusión —y cómo muere cada ilusión.
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-card p-5">
-              <div className="tabular text-3xl font-bold">{s.value}</div>
-              <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
-            </div>
-          ))}
+        <div className="mt-10">
+          <HeroStats total={summary.total} survived={summary.survived} died={summary.died} />
         </div>
       </section>
+
+      {/* Top 3 */}
+      <TopStrategies />
 
       {/* Experimentos */}
       <section className="pb-24">
