@@ -1,5 +1,211 @@
 [
  {
+  "id": "extra-v68",
+  "v": 68,
+  "analysis": {
+   "es": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas.",
+   "en": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas.",
+   "pt": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas."
+  },
+  "name": {
+   "es": "Estacionalidad (dia de semana, turn-of-month)",
+   "en": "Estacionalidad (dia de semana, turn-of-month)",
+   "pt": "Estacionalidad (dia de semana, turn-of-month)"
+  },
+  "family": "estacionalidad",
+  "date": "2026-06-15T12:00:00",
+  "description": {
+   "es": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month.",
+   "en": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month.",
+   "pt": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio",
+   "en": "no sirvio",
+   "pt": "no sirvio"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "turn_of_month": "+5 bps",
+   "resto_del_mes": "+4 bps",
+   "dia_semana": "plano"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v67",
+  "v": 67,
+  "analysis": {
+   "es": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio.",
+   "en": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio.",
+   "pt": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio."
+  },
+  "name": {
+   "es": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)",
+   "en": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)",
+   "pt": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)"
+  },
+  "family": "cross-asset",
+  "date": "2026-06-15T11:30:00",
+  "description": {
+   "es": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD.",
+   "en": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD.",
+   "pt": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio",
+   "en": "no sirvio",
+   "pt": "no sirvio"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "corr_petroleo_CAD_lag1": 0.007,
+   "corr_oro_AUD_lag1": -0.005,
+   "Sharpe": "~0"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v66",
+  "v": 66,
+  "analysis": {
+   "es": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión.",
+   "en": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión.",
+   "pt": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión."
+  },
+  "name": {
+   "es": "Captura de anomalias (|z|>2 -> reversion)",
+   "en": "Captura de anomalias (|z|>2 -> reversion)",
+   "pt": "Captura de anomalias (|z|>2 -> reversion)"
+  },
+  "family": "reversion",
+  "date": "2026-06-15T11:00:00",
+  "description": {
+   "es": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta.",
+   "en": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta.",
+   "pt": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio",
+   "en": "no sirvio",
+   "pt": "no sirvio"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "Sharpe": -0.21,
+   "dias_con_señal": "61%"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v65",
+  "v": 65,
+  "analysis": {
+   "es": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable.",
+   "en": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable.",
+   "pt": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable."
+  },
+  "name": {
+   "es": "Reversion corto plazo (z-score 5d) en indices",
+   "en": "Reversion corto plazo (z-score 5d) en indices",
+   "pt": "Reversion corto plazo (z-score 5d) en indices"
+  },
+  "family": "reversion",
+  "date": "2026-06-15T10:30:00",
+  "description": {
+   "es": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias.",
+   "en": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias.",
+   "pt": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio",
+   "en": "no sirvio",
+   "pt": "no sirvio"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "SP500_Sharpe": 0.21,
+   "NAS100_Sharpe": 0.48,
+   "vs_BuyHold": "siempre peor"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v64",
+  "v": 64,
+  "analysis": {
+   "es": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren.",
+   "en": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren.",
+   "pt": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren."
+  },
+  "name": {
+   "es": "VRP — Volatility Risk Premium",
+   "en": "VRP — Volatility Risk Premium",
+   "pt": "VRP — Volatility Risk Premium"
+  },
+  "family": "vol-premium",
+  "date": "2026-06-15T10:00:00",
+  "description": {
+   "es": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos.",
+   "en": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos.",
+   "pt": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos."
+  },
+  "params": {},
+  "verdict": {
+   "es": "sirvio (edge real, con cola de riesgo)",
+   "en": "sirvio (edge real, con cola de riesgo)",
+   "pt": "sirvio (edge real, con cola de riesgo)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "Sharpe": 1.56,
+   "dias_prima_positiva": "82%",
+   "skew": -16.4,
+   "peor_dia": "-28.6 sigmas",
+   "ref_BuyHold_SP500": 0.8
+  },
+  "status": "survived",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v63",
   "v": 63,
   "analysis": {
