@@ -1,6 +1,7 @@
 {
- "total": 57,
+ "total": 63,
  "families": [
+  "anomalia",
   "baseline",
   "bot",
   "bot-upgrade",
@@ -8,16 +9,18 @@
   "cot",
   "datos",
   "ejecutable",
+  "forward-test",
   "intraday",
   "ml",
   "quant",
+  "regime-switch",
   "risk",
   "sentimiento",
   "trend",
   "volatilidad"
  ],
- "n_families": 14,
+ "n_families": 17,
  "survived": 13,
- "died": 33,
- "generated_at": "2026-06-14T09:59:29"
+ "died": 37,
+ "generated_at": "2026-06-15T13:54:30"
 }
