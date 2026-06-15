@@ -1,5 +1,50 @@
 [
  {
+  "id": "extra-v69",
+  "v": 69,
+  "analysis": {
+   "es": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales.",
+   "en": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales.",
+   "pt": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales."
+  },
+  "name": {
+   "es": "VRP protegido (tail-hedged)",
+   "en": "VRP protegido (tail-hedged)",
+   "pt": "VRP protegido (tail-hedged)"
+  },
+  "family": "vol-premium",
+  "date": "2026-06-15T13:00:00",
+  "description": {
+   "es": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos.",
+   "en": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos.",
+   "pt": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos."
+  },
+  "params": {},
+  "verdict": {
+   "es": "sirvio (el mejor candidato; requiere cuenta de opciones)",
+   "en": "sirvio (el mejor candidato; requiere cuenta de opciones)",
+   "pt": "sirvio (el mejor candidato; requiere cuenta de opciones)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "Sharpe": 1.85,
+   "CAGR_ideal": "+18.4%",
+   "CAGR_realista": "~+9%",
+   "años_positivos": "92%",
+   "peor_año": "-6%",
+   "MaxDD": "-32%",
+   "peor_dia_vs_a_pelo": "-7.8% (vs -27%)"
+  },
+  "status": "survived",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v68",
   "v": 68,
   "analysis": {
