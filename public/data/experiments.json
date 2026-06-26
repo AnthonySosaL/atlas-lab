@@ -1,5 +1,47 @@
 [
  {
+  "id": "extra-v70",
+  "v": 70,
+  "analysis": {
+   "es": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha.",
+   "en": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha.",
+   "pt": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha."
+  },
+  "name": {
+   "es": "Gestion de riesgo por estrategia (no todo el capital)",
+   "en": "Gestion de riesgo por estrategia (no todo el capital)",
+   "pt": "Gestion de riesgo por estrategia (no todo el capital)"
+  },
+  "family": "risk-mgmt",
+  "date": "2026-06-25T14:00:00",
+  "description": {
+   "es": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?",
+   "en": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?",
+   "pt": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?"
+  },
+  "params": {},
+  "verdict": {
+   "es": "parcial (depende de la estrategia)",
+   "en": "parcial (depende de la estrategia)",
+   "pt": "parcial (depende de la estrategia)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "bot_sin_gestion": "Sharpe 0.17",
+   "bot_con_gestion": "Sharpe -0.02",
+   "VRP_sin_gestion": "Sharpe 1.36 (MaxDD -62%)",
+   "VRP_con_gestion": "Sharpe 3.38 (MaxDD -26%)"
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v69",
   "v": 69,
   "analysis": {
