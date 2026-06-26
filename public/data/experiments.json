@@ -1,5 +1,48 @@
 [
  {
+  "id": "extra-v71",
+  "v": 71,
+  "analysis": {
+   "es": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa.",
+   "en": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa.",
+   "pt": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa."
+  },
+  "name": {
+   "es": "Overnight con costos reales + OOS (validacion)",
+   "en": "Overnight con costos reales + OOS (validacion)",
+   "pt": "Overnight con costos reales + OOS (validacion)"
+  },
+  "family": "anomalia",
+  "date": "2026-06-25T15:00:00",
+  "description": {
+   "es": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?",
+   "en": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?",
+   "pt": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?"
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio (real pero los costos del trading diario lo matan)",
+   "en": "no sirvio (real pero los costos del trading diario lo matan)",
+   "pt": "no sirvio (real pero los costos del trading diario lo matan)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "oro_gross": "Sharpe +0.99",
+   "oro_neto": "Sharpe -3.11 (-4.7%/año)",
+   "costo_oro": "2.5 bps/dia",
+   "DSR_gross": 1.0,
+   "OOS_oro_neto": "Sharpe -7.34"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v70",
   "v": 70,
   "analysis": {
