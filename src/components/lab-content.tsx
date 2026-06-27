@@ -19,6 +19,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [busy, setBusy] = React.useState(false);
   const [log, setLog] = React.useState("");
   const logRef = React.useRef<HTMLPreElement>(null);
+  const stateRef = React.useRef(initial.state);
+  const liveUntilRef = React.useRef(0); // sigue refrescando aunque el estado parpadee
+
+  React.useEffect(() => {
+    stateRef.current = data.state;
+  }, [data.state]);
 
   React.useEffect(() => {
     const h = window.location.hostname;
@@ -37,7 +43,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const fetchLog = React.useCallback(async () => {
     try {
       const r = await fetch(`/data/lab.log?t=${Date.now()}`, { cache: "no-store" });
-      if (r.ok) setLog(await r.text());
+      if (r.ok) {
+        const txt = await r.text();
+        if (txt.trim()) setLog(txt); // no pisar "iniciando..." con vacio
+      }
     } catch {
       /* sin log aun */
     }
@@ -48,19 +57,23 @@ export function LabContent({ data: initial }: { data: LabData }) {
     if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
   }, [log]);
 
-  // mientras corre: refresca tabla + consola cada 1.5s
+  // un solo intervalo SIEMPRE montado: refresca si corre o dentro de la ventana viva
   React.useEffect(() => {
-    if (data.state !== "running") return;
     const id = setInterval(() => {
-      refresh();
-      fetchLog();
+      if (stateRef.current === "running" || Date.now() < liveUntilRef.current) {
+        refresh();
+        fetchLog();
+      }
     }, 1500);
     return () => clearInterval(id);
-  }, [data.state, refresh, fetchLog]);
+  }, [refresh, fetchLog]);
 
   const act = async (action: "start" | "stop") => {
     setBusy(true);
-    if (action === "start") setLog(t("lab.starting") + "\n");
+    if (action === "start") {
+      setLog(t("lab.starting") + "\n");
+      liveUntilRef.current = Date.now() + 25000; // 25s de refresco garantizado
+    }
     try {
       await fetch("/api/lab", {
         method: "POST",
@@ -68,10 +81,8 @@ export function LabContent({ data: initial }: { data: LabData }) {
         body: JSON.stringify({ action }),
       });
       setData((d) => ({ ...d, state: action === "start" ? "running" : "stopped" }));
-      setTimeout(() => {
-        refresh();
-        fetchLog();
-      }, 800);
+      if (action === "stop") liveUntilRef.current = Date.now() + 3000;
+      setTimeout(fetchLog, 800);
     } finally {
       setBusy(false);
     }
