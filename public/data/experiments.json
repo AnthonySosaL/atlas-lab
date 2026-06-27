@@ -4,26 +4,26 @@
   "v": 71,
   "analysis": {
    "es": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa.",
-   "en": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa.",
-   "pt": "Triple test al efecto overnight con costos REALES del broker. El efecto es estadísticamente REAL en bruto (oro Sharpe 0.99, Deflated Sharpe 1.00 — no es azar). PERO capturarlo exige entrar al cierre y salir a la apertura CADA día, y el spread+swap reales (oro 2.5 bps/día, petróleo 4.5-4.7 bps/día) lo destruyen: neto −4.7% a −8.0% al año. Hasta el oro (el más barato) pasa de +0.99 gross a −3.11 neto. Es el mismo muro que mató a todas las estrategias de alta frecuencia (#6, #7, #65): el edge existe, pero los costos del trading frecuente lo entierran. Confirma el foso institucional: ellos tienen ejecución barata; el retail no. CIERRA el último hilo accesible — investigación completa."
+   "en": "Triple test on the overnight effect with REAL broker costs. The effect is statistically REAL gross (gold Sharpe 0.99, Deflated Sharpe 1.00 — not chance). BUT capturing it requires entering at close and exiting at open EVERY day, and real spread+swap (gold 2.5 bps/day, oil 4.5-4.7 bps/day) destroy it: net −4.7% to −8.0% per year. Even gold (the cheapest) goes from +0.99 gross to −3.11 net. Same wall that killed all high-frequency strategies (#6, #7, #65): the edge exists, but frequent trading costs bury it. Confirms the institutional moat: they have cheap execution; retail doesn't. CLOSES the last accessible thread — research complete.",
+   "pt": "Triple test ao efeito overnight com custos REAIS do broker. O efeito é estatisticamente REAL em bruto (ouro Sharpe 0,99, Deflated Sharpe 1,00 — não é acaso). MAS capturá-lo exige entrar no fechamento e sair na abertura CADA dia, e o spread+swap reais (ouro 2,5 bps/dia, petróleo 4,5-4,7 bps/dia) o destroem: líquido −4,7% a −8,0% ao ano. Até o ouro (o mais barato) vai de +0,99 bruto a −3,11 líquido. Mesmo muro que matou todas as estratégias de alta frequência (#6, #7, #65): o edge existe, mas os custos do trading frequente o enterram. Confirma o fosso institucional: eles têm execução barata; o varejo não. FECHA o último fio acessível — pesquisa completa."
   },
   "name": {
    "es": "Overnight con costos reales + OOS (validacion)",
-   "en": "Overnight con costos reales + OOS (validacion)",
-   "pt": "Overnight con costos reales + OOS (validacion)"
+   "en": "Overnight with real costs + OOS (validation)",
+   "pt": "Overnight com custos reais + OOS (validação)"
   },
   "family": "anomalia",
   "date": "2026-06-25T15:00:00",
   "description": {
    "es": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?",
-   "en": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?",
-   "pt": "El efecto overnight (#63) con spread+swap REALES del broker, OOS 2007-13 y Deflated Sharpe. ¿Sobrevive a los costos?"
+   "en": "The overnight effect (#63) with REAL broker spread+swap, OOS 2007-13 and Deflated Sharpe. Does it survive costs?",
+   "pt": "O efeito overnight (#63) com spread+swap REAIS do broker, OOS 2007-13 e Deflated Sharpe. Sobrevive aos custos?"
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (real pero los costos del trading diario lo matan)",
-   "en": "no sirvio (real pero los costos del trading diario lo matan)",
-   "pt": "no sirvio (real pero los costos del trading diario lo matan)"
+   "en": "did not work (real but daily trading costs kill it)",
+   "pt": "não serviu (real mas os custos do trading diário matam)"
   },
   "notes": {
    "es": "",
@@ -47,26 +47,26 @@
   "v": 70,
   "analysis": {
    "es": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha.",
-   "en": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha.",
-   "pt": "A cada estrategia, gestión de riesgo INDIVIDUAL (vol-targeting 10% + throttle por drawdown) en vez de meter todo el capital. Lección clave: la gestión de riesgo NO es magia universal — depende de la estrategia. En las de BETA (bot, basket) no ayuda, incluso EMPEORA: el vol-target se agranda en la calma (justo antes del crash) y el throttle whipsea. En el VRP es TRANSFORMADORA (Sharpe 1.36→3.38, drawdown −62%→−26%) porque ahí el peligro ES la volatilidad y dimensionar por vol ataca el riesgo exacto. La verdad de fondo: la gestión de riesgo controla CUÁNTO pierdes, no SI tienes edge — no convierte beta en alpha."
+   "en": "Individual risk management for each strategy (vol-targeting 10% + drawdown throttle) instead of going all-in. Key lesson: risk management is NOT universal magic — it depends on the strategy. On BETA strategies (bot, basket) it doesn't help, even WORSENS: vol-target scales up in calm (right before the crash) and the throttle whipsaws. On VRP it's TRANSFORMATIVE (Sharpe 1.36→3.38, drawdown −62%→−26%) because there the danger IS volatility and sizing by vol attacks the exact risk. The bottom line: risk management controls HOW MUCH you lose, not WHETHER you have edge — it doesn't turn beta into alpha.",
+   "pt": "Gestão de risco INDIVIDUAL para cada estratégia (vol-targeting 10% + throttle por drawdown) em vez de entrar com todo o capital. Lição-chave: a gestão de risco NÃO é magia universal — depende da estratégia. Nas de BETA (bot, basket) não ajuda, até PIORA: o vol-target se agranda na calma (justo antes do crash) e o throttle faz whipsaw. No VRP é TRANSFORMADORA (Sharpe 1,36→3,38, drawdown −62%→−26%) porque ali o perigo É a volatilidade e dimensionar por vol ataca o risco exato. A verdade de fundo: a gestão de risco controla QUANTO se perde, não SE há edge — não converte beta em alpha."
   },
   "name": {
    "es": "Gestion de riesgo por estrategia (no todo el capital)",
-   "en": "Gestion de riesgo por estrategia (no todo el capital)",
-   "pt": "Gestion de riesgo por estrategia (no todo el capital)"
+   "en": "Per-strategy risk management (not whole capital)",
+   "pt": "Gestão de risco por estratégia (não todo o capital)"
   },
   "family": "risk-mgmt",
   "date": "2026-06-25T14:00:00",
   "description": {
    "es": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?",
-   "en": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?",
-   "pt": "A cada estrategia por separado: vol-targeting + throttle por drawdown en vez de meter todo el capital de golpe. ¿Mejora cada una?"
+   "en": "Individual vol-targeting + drawdown throttle for each strategy instead of going all-in. Does it improve each one?",
+   "pt": "Vol-targeting + throttle por drawdown individual para cada estratégia em vez de entrar com todo o capital. Melhora cada uma?"
   },
   "params": {},
   "verdict": {
    "es": "parcial (depende de la estrategia)",
-   "en": "parcial (depende de la estrategia)",
-   "pt": "parcial (depende de la estrategia)"
+   "en": "partial (depends on the strategy)",
+   "pt": "parcial (depende da estratégia)"
   },
   "notes": {
    "es": "",
@@ -89,26 +89,26 @@
   "v": 69,
   "analysis": {
    "es": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales.",
-   "en": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales.",
-   "pt": "La versión SEGURA del VRP: vender la prima de vol Y comprar un put lejano barato (cuesta ~12% de la prima) que topa la pérdida. Sorpresa honesta: no solo deja de liquidar (peor día −7.8% vs −27% a pelo), sino que el Sharpe SUBE a 1.85 (quitar la bomba baja la volatilidad). CAGR backtest +18.4%, vol 9%, 92% de años positivos, peor año −6% (2018), MaxDD −32%. En dinero (realista, mitad del backtest por fricciones): $10k → ~$900/año; $50k → ~$4,600/año. NO es 'hacerse rico': es ~9-18% anual con capital real, aguantando caídas de −32%, y requiere una cuenta de OPCIONES (no el bot CFD). Lo más prometedor de los 69 experimentos, pero falta el triple test (OOS + Deflated Sharpe) con datos de opciones reales."
+   "en": "The SAFE version of VRP: sell the vol premium AND buy a cheap far-OTM put (~12% of the premium) that caps the loss. Honest surprise: not only does it stop blowing up (worst day −7.8% vs −27% unhedged), but Sharpe RISES to 1.85 (removing the bomb lowers volatility). Backtest CAGR +18.4%, vol 9%, 92% positive years, worst year −6% (2018), MaxDD −32%. In real money (realistic, half the backtest for frictions): $10k → ~$900/yr; $50k → ~$4,600/yr. It's NOT 'get rich quick': it's ~9-18% annual with real capital, enduring −32% drawdowns, and requires an OPTIONS account (not the CFD bot). The most promising of 69 experiments, but still needs the triple test (OOS + Deflated Sharpe) with real options data.",
+   "pt": "A versão SEGURA do VRP: vender o prêmio de vol E comprar um put distante barato (~12% do prêmio) que limita a perda. Surpresa honesta: não só deixa de liquidar (pior dia −7,8% vs −27% a descoberto), mas o Sharpe SOBE para 1,85 (tirar a bomba reduz a volatilidade). CAGR backtest +18,4%, vol 9%, 92% de anos positivos, pior ano −6% (2018), MaxDD −32%. Em dinheiro real (realista, metade do backtest por fricções): $10k → ~$900/ano; $50k → ~$4.600/ano. NÃO é 'ficar rico rápido': são ~9-18% ao ano com capital real, aguentando drawdowns de −32%, e exige conta de OPÇÕES (não o bot CFD). O mais promissor dos 69 experimentos, mas falta o triple test (OOS + Deflated Sharpe) com dados reais de opções."
   },
   "name": {
    "es": "VRP protegido (tail-hedged)",
-   "en": "VRP protegido (tail-hedged)",
+   "en": "Tail-hedged VRP (protected)",
    "pt": "VRP protegido (tail-hedged)"
   },
   "family": "vol-premium",
   "date": "2026-06-15T13:00:00",
   "description": {
    "es": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos.",
-   "en": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos.",
-   "pt": "VRP con cobertura barata de cola: vender vol + comprar un put lejano. Riesgo definido: ya no liquida, e incluso mejora el Sharpe. Lo mas prometedor de los 69 experimentos."
+   "en": "VRP with cheap tail hedge: sell vol + buy a far OTM put. Defined risk: no more blowups, and even improves the Sharpe. The most promising of 69 experiments.",
+   "pt": "VRP com cobertura barata de cauda: vender vol + comprar um put distante. Risco definido: não liquida mais, e até melhora o Sharpe. O mais promissor dos 69 experimentos."
   },
   "params": {},
   "verdict": {
    "es": "sirvio (el mejor candidato; requiere cuenta de opciones)",
-   "en": "sirvio (el mejor candidato; requiere cuenta de opciones)",
-   "pt": "sirvio (el mejor candidato; requiere cuenta de opciones)"
+   "en": "worked (best candidate; requires options account)",
+   "pt": "serviu (melhor candidato; requer conta de opções)"
   },
   "notes": {
    "es": "",
@@ -134,26 +134,26 @@
   "v": 68,
   "analysis": {
    "es": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas.",
-   "en": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas.",
-   "pt": "Estacionalidad en SP500 (día de semana, turn-of-month). Retornos casi planos por día (+3 a +9 bps, ruido); turn-of-month +5 vs +4 bps = sin efecto real. Las anomalías de calendario, si existieron, ya están arbitradas."
+   "en": "Seasonality on SP500 (day of week, turn-of-month). Returns nearly flat by day (+3 to +9 bps, noise); turn-of-month +5 vs +4 bps = no real effect. Calendar anomalies, if they ever existed, are already arbitraged.",
+   "pt": "Estacionalidade no SP500 (dia da semana, turn-of-month). Retornos quase planos por dia (+3 a +9 bps, ruído); turn-of-month +5 vs +4 bps = sem efeito real. Anomalias de calendário, se existiram, já estão arbitradas."
   },
   "name": {
    "es": "Estacionalidad (dia de semana, turn-of-month)",
-   "en": "Estacionalidad (dia de semana, turn-of-month)",
-   "pt": "Estacionalidad (dia de semana, turn-of-month)"
+   "en": "Seasonality (day-of-week, turn-of-month)",
+   "pt": "Estacionalidade (dia da semana, turn-of-month)"
   },
   "family": "estacionalidad",
   "date": "2026-06-15T12:00:00",
   "description": {
    "es": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month.",
-   "en": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month.",
-   "pt": "Efectos de calendario en SP500: retorno por dia de la semana y turn-of-month."
+   "en": "Calendar effects on SP500: return by day of the week and turn-of-month.",
+   "pt": "Efeitos de calendário no SP500: retorno por dia da semana e turn-of-month."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -175,26 +175,26 @@
   "v": 67,
   "analysis": {
    "es": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio.",
-   "en": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio.",
-   "pt": "Lead-lag cross-asset: ¿el retorno rezagado del petróleo predice al CAD? ¿el oro al AUD? Correlaciones rezagadas ~0 (0.007, −0.005), Sharpe ~0. No hay relación de adelanto explotable a 1 día — los mercados ya arbitraron cualquier lead-lag obvio."
+   "en": "Cross-asset lead-lag: does lagged oil return predict CAD? Does gold predict AUD? Lagged correlations ~0 (0.007, −0.005), Sharpe ~0. No exploitable lead relationship at 1 day — markets already arbitraged any obvious lead-lag.",
+   "pt": "Lead-lag cross-asset: o retorno defasado do petróleo prevê o CAD? O ouro prevê o AUD? Correlações defasadas ~0 (0,007, −0,005), Sharpe ~0. Sem relação de avanço explorável a 1 dia — os mercados já arbitraram qualquer lead-lag óbvio."
   },
   "name": {
    "es": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)",
-   "en": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)",
-   "pt": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)"
+   "en": "Cross-asset lead-lag (oil→CAD, gold→AUD)",
+   "pt": "Lead-lag cross-asset (petróleo→CAD, ouro→AUD)"
   },
   "family": "cross-asset",
   "date": "2026-06-15T11:30:00",
   "description": {
    "es": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD.",
-   "en": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD.",
-   "pt": "¿El retorno rezagado de un activo predice a otro relacionado? Petroleo->CAD, oro->AUD."
+   "en": "Does the lagged return of one asset predict another? Oil→CAD, gold→AUD.",
+   "pt": "O retorno defasado de um ativo prevê outro? Petróleo→CAD, ouro→AUD."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -216,26 +216,26 @@
   "v": 66,
   "analysis": {
    "es": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión.",
-   "en": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión.",
-   "pt": "CAPTURA DE ANOMALÍAS (idea del usuario): detectar extremos |z|>2 y apostar a su reversión en toda la cesta. Sharpe −0.21 incluso SIN costos. Los extremos no revierten de forma fiable aquí (61% de días con señal = demasiados); con costos sería peor. Buena intuición, pero sin edge en estos activos — los extremos a veces son el inicio de una tendencia, no una reversión."
+   "en": "ANOMALY CAPTURE (user's idea): detect |z|>2 extremes and bet on their reversion across the basket. Sharpe −0.21 even WITHOUT costs. Extremes don't revert reliably here (61% of days with signal = too many); with costs it'd be worse. Good intuition, but no edge in these assets — extremes can be the start of a trend, not a reversion.",
+   "pt": "CAPTURA DE ANOMALIAS (ideia do usuário): detectar extremos |z|>2 e apostar na reversão em toda a cesta. Sharpe −0,21 mesmo SEM custos. Os extremos não revertem de forma confiável aqui (61% dos dias com sinal = demais); com custos seria pior. Boa intuição, mas sem edge nesses ativos — extremos podem ser o início de uma tendência, não uma reversão."
   },
   "name": {
    "es": "Captura de anomalias (|z|>2 -> reversion)",
-   "en": "Captura de anomalias (|z|>2 -> reversion)",
-   "pt": "Captura de anomalias (|z|>2 -> reversion)"
+   "en": "Anomaly capture (|z|>2 → reversion)",
+   "pt": "Captura de anomalias (|z|>2 → reversão)"
   },
   "family": "reversion",
   "date": "2026-06-15T11:00:00",
   "description": {
    "es": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta.",
-   "en": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta.",
-   "pt": "Idea del usuario: detectar extremos estadisticos |z|>2 y apostar a su reversion, en toda la cesta."
+   "en": "User's idea: detect statistical extremes |z|>2 and bet on their reversion across the basket.",
+   "pt": "Ideia do usuário: detectar extremos estatísticos |z|>2 e apostar na reversão em toda a cesta."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -256,26 +256,26 @@
   "v": 65,
   "analysis": {
    "es": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable.",
-   "en": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable.",
-   "pt": "Reversión de corto plazo (z-score 5d) en índices: comprar sobreventa, vender sobrecompra. Gross da Sharpe 0.02-0.48, SIEMPRE peor que comprar y aguantar — y hace muchísimos trades, así que los costos la entierran. No hay edge de reversión explotable."
+   "en": "Short-term reversion (5d z-score) in indices: buy oversold, sell overbought. Gross Sharpe 0.02-0.48, ALWAYS worse than buy-and-hold — and generates too many trades, so costs bury it. No exploitable reversion edge.",
+   "pt": "Reversão de curto prazo (z-score 5d) em índices: comprar sobrevendido, vender sobrecomprado. Sharpe bruto 0,02-0,48, SEMPRE pior que buy-and-hold — e gera trades demais, então os custos enterram. Sem edge de reversão explorável."
   },
   "name": {
    "es": "Reversion corto plazo (z-score 5d) en indices",
-   "en": "Reversion corto plazo (z-score 5d) en indices",
-   "pt": "Reversion corto plazo (z-score 5d) en indices"
+   "en": "Short-term reversion (5d z-score) in indices",
+   "pt": "Reversão de curto prazo (z-score 5d) em índices"
   },
   "family": "reversion",
   "date": "2026-06-15T10:30:00",
   "description": {
    "es": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias.",
-   "en": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias.",
-   "pt": "Comprar sobreventa / vender sobrecompra en indices con z-score de 5 dias."
+   "en": "Buy oversold / sell overbought in indices using a 5-day z-score.",
+   "pt": "Comprar sobrevendido / vender sobrecomprado em índices com z-score de 5 dias."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -297,26 +297,26 @@
   "v": 64,
   "analysis": {
    "es": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren.",
-   "en": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren.",
-   "pt": "FRONTERA VRP — la ÚNICA estrategia con edge REAL de los 68 experimentos. Vender volatilidad (cobrar la prima de varianza: VIX implícito − realizado) da Sharpe +1.56 (el doble del mercado), positiva el 82% de los días. PERO el skew −16.4 y el peor día de −28σ son la trampa: es exactamente lo que mató al XIV en el 'Volmageddon' de 2018. NO es alpha gratis — es el PAGO por asumir riesgo de cola (vendes seguro contra crashes). Real y vendible (lo hacen los fondos de vol), pero exige opciones + cobertura de cola estricta; sin gestionar, revienta a cero. La verdad de fondo de toda la investigación: el único edge persistente no es PREDECIR el mercado, es COBRAR por aguantar un riesgo que otros no quieren."
+   "en": "VRP FRONTIER — the ONLY strategy with a REAL edge in 68 experiments. Selling volatility (harvesting the variance premium: implied VIX − realized) yields Sharpe +1.56 (double the market), positive 82% of days. BUT the skew −16.4 and worst day of −28σ are the trap: it's exactly what killed XIV in the 2018 'Volmageddon'. It's NOT free alpha — it's the PAYMENT for bearing tail risk (you sell insurance against crashes). Real and tradeable (vol funds do it), but requires options + strict tail hedging; unmanaged, it blows up to zero. The bottom-line truth of the whole research: the only persistent edge isn't PREDICTING the market, it's GETTING PAID to bear a risk others won't.",
+   "pt": "FRONTEIRA VRP — a ÚNICA estratégia com edge REAL dos 68 experimentos. Vender volatilidade (colher o prêmio de variância: VIX implícito − realizado) rende Sharpe +1,56 (o dobro do mercado), positiva 82% dos dias. MAS o skew −16,4 e o pior dia de −28σ são a armadilha: é exatamente o que matou o XIV no 'Volmageddon' de 2018. NÃO é alpha grátis — é o PAGAMENTO por assumir risco de cauda (você vende seguro contra crashes). Real e negociável (fundos de vol fazem), mas exige opções + hedge de cauda estrito; sem gerenciar, explode a zero. A verdade final de toda a pesquisa: o único edge persistente não é PREVER o mercado, é COBRAR para aguentar um risco que outros não querem."
   },
   "name": {
    "es": "VRP — Volatility Risk Premium",
    "en": "VRP — Volatility Risk Premium",
-   "pt": "VRP — Volatility Risk Premium"
+   "pt": "VRP — Prêmio de Risco de Volatilidade"
   },
   "family": "vol-premium",
   "date": "2026-06-15T10:00:00",
   "description": {
    "es": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos.",
-   "en": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos.",
-   "pt": "Vender volatilidad (cobrar la prima de varianza): VIX implicito vs realizado. El unico edge REAL de los 68 experimentos."
+   "en": "Selling volatility (harvesting the variance premium): implied VIX vs realized. The only REAL edge in 68 experiments.",
+   "pt": "Vender volatilidade (colher o prêmio de variância): VIX implícito vs realizado. O único edge REAL dos 68 experimentos."
   },
   "params": {},
   "verdict": {
    "es": "sirvio (edge real, con cola de riesgo)",
-   "en": "sirvio (edge real, con cola de riesgo)",
-   "pt": "sirvio (edge real, con cola de riesgo)"
+   "en": "worked (real edge, with tail risk)",
+   "pt": "serviu (edge real, com risco de cauda)"
   },
   "notes": {
    "es": "",
@@ -340,26 +340,26 @@
   "v": 63,
   "analysis": {
    "es": "FRONTERA NUEVA: descomponer el retorno diario en NOCTURNO (cierre→apertura) e INTRADÍA (apertura→cierre). En índices domina el intradía (SP500 Sharpe 0.84 vs nocturno −0.33) — lo OPUESTO a la anomalía clásica de acciones US. Pero hallazgo real: oro y petróleo tienen el retorno casi todo NOCTURNO (oro overnight Sharpe 0.99; Brent +149% nocturno vs −72% intradía). Patrón de sesión específico por clase de activo. Falta validar con costos (swaps+spread) y OOS, pero es una frontera viva que merece seguir.",
-   "en": "FRONTERA NUEVA: descomponer el retorno diario en NOCTURNO (cierre→apertura) e INTRADÍA (apertura→cierre). En índices domina el intradía (SP500 Sharpe 0.84 vs nocturno −0.33) — lo OPUESTO a la anomalía clásica de acciones US. Pero hallazgo real: oro y petróleo tienen el retorno casi todo NOCTURNO (oro overnight Sharpe 0.99; Brent +149% nocturno vs −72% intradía). Patrón de sesión específico por clase de activo. Falta validar con costos (swaps+spread) y OOS, pero es una frontera viva que merece seguir.",
-   "pt": "FRONTERA NUEVA: descomponer el retorno diario en NOCTURNO (cierre→apertura) e INTRADÍA (apertura→cierre). En índices domina el intradía (SP500 Sharpe 0.84 vs nocturno −0.33) — lo OPUESTO a la anomalía clásica de acciones US. Pero hallazgo real: oro y petróleo tienen el retorno casi todo NOCTURNO (oro overnight Sharpe 0.99; Brent +149% nocturno vs −72% intradía). Patrón de sesión específico por clase de activo. Falta validar con costos (swaps+spread) y OOS, pero es una frontera viva que merece seguir."
+   "en": "NEW FRONTIER: decomposing daily return into OVERNIGHT (close→open) and INTRADAY (open→close). In indices the intraday dominates (SP500 Sharpe 0.84 vs overnight −0.33) — the OPPOSITE of the classic US stock anomaly. But the real finding: gold and oil have almost all their return OVERNIGHT (gold overnight Sharpe 0.99; Brent +149% overnight vs −72% intraday). Session-specific pattern by asset class. Still needs validation with costs (swaps+spread) and OOS, but it's a live frontier worth pursuing.",
+   "pt": "NOVA FRONTEIRA: decompor o retorno diário em NOTURNO (fechamento→abertura) e INTRADIÁRIO (abertura→fechamento). Nos índices domina o intradiário (SP500 Sharpe 0,84 vs noturno −0,33) — o OPOSTO da anomalia clássica de ações US. Mas a descoberta real: ouro e petróleo têm o retorno quase todo NOTURNO (ouro overnight Sharpe 0,99; Brent +149% noturno vs −72% intradiário). Padrão de sessão específico por classe de ativo. Falta validar com custos (swaps+spread) e OOS, mas é uma fronteira viva que vale seguir."
   },
   "name": {
    "es": "Efecto overnight (sesion dia/noche)",
-   "en": "Efecto overnight (sesion dia/noche)",
-   "pt": "Efecto overnight (sesion dia/noche)"
+   "en": "Overnight effect (day/night session)",
+   "pt": "Efeito overnight (sessão dia/noite)"
   },
   "family": "anomalia",
   "date": "2026-06-15T09:00:00",
   "description": {
    "es": "Retorno nocturno (cierre->apertura) vs intradia (apertura->cierre) por activo. Anomalia de sesion (Cooper, Cliff & Gulen 2008).",
-   "en": "Retorno nocturno (cierre->apertura) vs intradia (apertura->cierre) por activo. Anomalia de sesion (Cooper, Cliff & Gulen 2008).",
-   "pt": "Retorno nocturno (cierre->apertura) vs intradia (apertura->cierre) por activo. Anomalia de sesion (Cooper, Cliff & Gulen 2008)."
+   "en": "Overnight return (close→open) vs intraday (open→close) per asset. Session anomaly (Cooper, Cliff & Gulen 2008).",
+   "pt": "Retorno noturno (fechamento→abertura) vs intradiário (abertura→fechamento) por ativo. Anomalia de sessão (Cooper, Cliff & Gulen 2008)."
   },
   "params": {},
   "verdict": {
    "es": "frontera abierta",
-   "en": "frontera abierta",
-   "pt": "frontera abierta"
+   "en": "open frontier",
+   "pt": "fronteira aberta"
   },
   "notes": {
    "es": "",
@@ -382,26 +382,26 @@
   "v": 62,
   "analysis": {
    "es": "Triple test de B3 (el mejor candidato de riesgo). Murió igual: sobre FX+oro es negativo in-sample, Deflated Sharpe 0.20, OOS Sharpe −0.03. Su mejora de retorno también era beta de índices, y su drawdown no le gana claro a simplemente usar 1x. CIERRE de la saga regime-switch: 8 ataques, ninguno pasa el triple test; nada le gana a 1x; no hay alpha. El muro es la detección ejecutable + los datos retail, no la falta de ideas.",
-   "en": "Triple test de B3 (el mejor candidato de riesgo). Murió igual: sobre FX+oro es negativo in-sample, Deflated Sharpe 0.20, OOS Sharpe −0.03. Su mejora de retorno también era beta de índices, y su drawdown no le gana claro a simplemente usar 1x. CIERRE de la saga regime-switch: 8 ataques, ninguno pasa el triple test; nada le gana a 1x; no hay alpha. El muro es la detección ejecutable + los datos retail, no la falta de ideas.",
-   "pt": "Triple test de B3 (el mejor candidato de riesgo). Murió igual: sobre FX+oro es negativo in-sample, Deflated Sharpe 0.20, OOS Sharpe −0.03. Su mejora de retorno también era beta de índices, y su drawdown no le gana claro a simplemente usar 1x. CIERRE de la saga regime-switch: 8 ataques, ninguno pasa el triple test; nada le gana a 1x; no hay alpha. El muro es la detección ejecutable + los datos retail, no la falta de ideas."
+   "en": "Triple test of B3 (the best risk candidate). Died anyway: on FX+gold it's negative in-sample, Deflated Sharpe 0.20, OOS Sharpe −0.03. Its return improvement was also index beta, and its drawdown doesn't clearly beat simply using 1x. CLOSURE of the regime-switch saga: 8 attacks, none passes the triple test; nothing beats 1x; there's no alpha. The wall is executable detection + retail data, not a lack of ideas.",
+   "pt": "Triple test de B3 (o melhor candidato de risco). Morreu igual: sobre FX+ouro é negativo in-sample, Deflated Sharpe 0,20, OOS Sharpe −0,03. Sua melhora de retorno também era beta de índices, e seu drawdown não ganha claramente de simplesmente usar 1x. ENCERRAMENTO da saga regime-switch: 8 ataques, nenhum passa o triple test; nada ganha de 1x; não há alpha. O muro é a detecção executável + dados retail, não falta de ideias."
   },
   "name": {
    "es": "B3 continuo (triple test)",
-   "en": "B3 continuo (triple test)",
-   "pt": "B3 continuo (triple test)"
+   "en": "B3 continuous (triple test)",
+   "pt": "B3 contínuo (triple test)"
   },
   "family": "regime-switch",
   "date": "2026-06-14T12:30:00",
   "description": {
    "es": "Exposicion continua por tendencia (sin switch binario); validacion OOS 2007-13 + Deflated Sharpe.",
-   "en": "Exposicion continua por tendencia (sin switch binario); validacion OOS 2007-13 + Deflated Sharpe.",
-   "pt": "Exposicion continua por tendencia (sin switch binario); validacion OOS 2007-13 + Deflated Sharpe."
+   "en": "Continuous trend exposure (no binary switch); OOS 2007-13 validation + Deflated Sharpe.",
+   "pt": "Exposição contínua por tendência (sem switch binário); validação OOS 2007-13 + Deflated Sharpe."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (murio OOS)",
-   "en": "no sirvio (murio OOS)",
-   "pt": "no sirvio (murio OOS)"
+   "en": "did not work (died OOS)",
+   "pt": "não serviu (morreu OOS)"
   },
   "notes": {
    "es": "",
@@ -423,26 +423,26 @@
   "v": 61,
   "analysis": {
    "es": "Segundo intento. B1 (long/short DÓLAR-NEUTRAL): sin edge, −28% (los costos ganan; confirma que lo cross-sectional está muerto). B2 (core 1x + overlay neutral): el overlay perdedor envenenó el core ganador (−10% vs +23%). B3 (exposición CONTINUA, sin switch binario): el mejor de riesgo — iguala a 1x con el menor drawdown en ambas crisis, sin whipsaw.",
-   "en": "Segundo intento. B1 (long/short DÓLAR-NEUTRAL): sin edge, −28% (los costos ganan; confirma que lo cross-sectional está muerto). B2 (core 1x + overlay neutral): el overlay perdedor envenenó el core ganador (−10% vs +23%). B3 (exposición CONTINUA, sin switch binario): el mejor de riesgo — iguala a 1x con el menor drawdown en ambas crisis, sin whipsaw.",
-   "pt": "Segundo intento. B1 (long/short DÓLAR-NEUTRAL): sin edge, −28% (los costos ganan; confirma que lo cross-sectional está muerto). B2 (core 1x + overlay neutral): el overlay perdedor envenenó el core ganador (−10% vs +23%). B3 (exposición CONTINUA, sin switch binario): el mejor de riesgo — iguala a 1x con el menor drawdown en ambas crisis, sin whipsaw."
+   "en": "Second attempt. B1 (DOLLAR-NEUTRAL long/short): no edge, −28% (costs win; confirms cross-sectional is dead). B2 (core 1x + neutral overlay): the losing overlay poisoned the winning core (−10% vs +23%). B3 (CONTINUOUS exposure, no binary switch): the best for risk — matches 1x with the lowest drawdown in both crises, no whipsaw.",
+   "pt": "Segunda tentativa. B1 (long/short DÓLAR-NEUTRO): sem edge, −28% (custos vencem; confirma que o cross-sectional está morto). B2 (core 1x + overlay neutro): o overlay perdedor envenenou o core vencedor (−10% vs +23%). B3 (exposição CONTÍNUA, sem switch binário): o melhor em risco — iguala 1x com o menor drawdown nas duas crises, sem whipsaw."
   },
   "name": {
    "es": "Ataques regime-switch — ronda 2",
-   "en": "Ataques regime-switch — ronda 2",
-   "pt": "Ataques regime-switch — ronda 2"
+   "en": "Regime-switch attacks — round 2",
+   "pt": "Ataques regime-switch — rodada 2"
   },
   "family": "regime-switch",
   "date": "2026-06-14T12:00:00",
   "description": {
    "es": "Long/short dolar-neutral, core 1x + overlay neutral, y exposicion continua por tendencia.",
-   "en": "Long/short dolar-neutral, core 1x + overlay neutral, y exposicion continua por tendencia.",
-   "pt": "Long/short dolar-neutral, core 1x + overlay neutral, y exposicion continua por tendencia."
+   "en": "Dollar-neutral long/short, core 1x + neutral overlay, and continuous trend exposure.",
+   "pt": "Long/short dólar-neutro, core 1x + overlay neutro e exposição contínua por tendência."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -464,26 +464,26 @@
   "v": 60,
   "analysis": {
    "es": "Primer intento de arreglar la pérdida en el oso. A1 (Trend+VIX) se envenenó: el filtro VIX rezagado hace whipsaw y arrastró todo a −17%. A3 (long/short direccional) gana en el oso 2022 (+6.7%) pero pierde en el alcista (−24%) — es la apuesta opuesta, no un arreglo. A2 (vol-targeting) no aportó. Cada 'fix' solo mueve dónde ganas y dónde pierdes.",
-   "en": "Primer intento de arreglar la pérdida en el oso. A1 (Trend+VIX) se envenenó: el filtro VIX rezagado hace whipsaw y arrastró todo a −17%. A3 (long/short direccional) gana en el oso 2022 (+6.7%) pero pierde en el alcista (−24%) — es la apuesta opuesta, no un arreglo. A2 (vol-targeting) no aportó. Cada 'fix' solo mueve dónde ganas y dónde pierdes.",
-   "pt": "Primer intento de arreglar la pérdida en el oso. A1 (Trend+VIX) se envenenó: el filtro VIX rezagado hace whipsaw y arrastró todo a −17%. A3 (long/short direccional) gana en el oso 2022 (+6.7%) pero pierde en el alcista (−24%) — es la apuesta opuesta, no un arreglo. A2 (vol-targeting) no aportó. Cada 'fix' solo mueve dónde ganas y dónde pierdes."
+   "en": "First attempt to fix the bear-market loss. A1 (Trend+VIX) poisoned itself: the lagged VIX filter whipsaws and dragged everything to −17%. A3 (directional long/short) wins in bear 2022 (+6.7%) but loses in the bull (−24%) — it's the opposite bet, not a fix. A2 (vol-targeting) didn't help. Each 'fix' only shifts where you win and where you lose.",
+   "pt": "Primeira tentativa de corrigir a perda no urso. A1 (Trend+VIX) se envenenou: o filtro VIX defasado faz whipsaw e arrastou tudo a −17%. A3 (long/short direcional) ganha no urso 2022 (+6,7%) mas perde no alta (−24%) — é a aposta oposta, não um conserto. A2 (vol-targeting) não ajudou. Cada 'fix' só muda onde se ganha e onde se perde."
   },
   "name": {
    "es": "Ataques regime-switch — ronda 1",
-   "en": "Ataques regime-switch — ronda 1",
-   "pt": "Ataques regime-switch — ronda 1"
+   "en": "Regime-switch attacks — round 1",
+   "pt": "Ataques regime-switch — rodada 1"
   },
   "family": "regime-switch",
   "date": "2026-06-14T11:30:00",
   "description": {
    "es": "Trend+VIX combo, Trend+vol-targeting y long/short direccional, para arreglar la perdida en el oso.",
-   "en": "Trend+VIX combo, Trend+vol-targeting y long/short direccional, para arreglar la perdida en el oso.",
-   "pt": "Trend+VIX combo, Trend+vol-targeting y long/short direccional, para arreglar la perdida en el oso."
+   "en": "Trend+VIX combo, Trend+vol-targeting and directional long/short, to fix the bear-market loss.",
+   "pt": "Combo Trend+VIX, Trend+vol-targeting e long/short direcional, para corrigir a perda no urso."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio",
-   "en": "no sirvio",
-   "pt": "no sirvio"
+   "en": "did not work",
+   "pt": "não serviu"
   },
   "notes": {
    "es": "",
@@ -505,26 +505,26 @@
   "v": 59,
   "analysis": {
    "es": "La idea del usuario: detectar bajismo con la MA200 y ponerse flat. En la cesta completa daba +30% (2014-24)… pero el triple test lo mató: sobre la cesta que llega a 2007 (FX+oro, sin índices) es negativo, Deflated Sharpe 0.21, OOS 2007-13 Sharpe −0.09. El '+30%' era BETA de los índices disfrazada de edge de régimen, no alpha. Lección: un detector lento (tendencia) sobrevive la ejecución mejor que uno rápido (VIX), pero igual no genera alpha.",
-   "en": "La idea del usuario: detectar bajismo con la MA200 y ponerse flat. En la cesta completa daba +30% (2014-24)… pero el triple test lo mató: sobre la cesta que llega a 2007 (FX+oro, sin índices) es negativo, Deflated Sharpe 0.21, OOS 2007-13 Sharpe −0.09. El '+30%' era BETA de los índices disfrazada de edge de régimen, no alpha. Lección: un detector lento (tendencia) sobrevive la ejecución mejor que uno rápido (VIX), pero igual no genera alpha.",
-   "pt": "La idea del usuario: detectar bajismo con la MA200 y ponerse flat. En la cesta completa daba +30% (2014-24)… pero el triple test lo mató: sobre la cesta que llega a 2007 (FX+oro, sin índices) es negativo, Deflated Sharpe 0.21, OOS 2007-13 Sharpe −0.09. El '+30%' era BETA de los índices disfrazada de edge de régimen, no alpha. Lección: un detector lento (tendencia) sobrevive la ejecución mejor que uno rápido (VIX), pero igual no genera alpha."
+   "en": "The user's idea: detect bearishness with the MA200 and go flat. On the full basket it showed +30% (2014-24)… but the triple test killed it: on the basket reaching 2007 (FX+gold, no indices) it's negative, Deflated Sharpe 0.21, OOS 2007-13 Sharpe −0.09. The '+30%' was index BETA disguised as a regime edge, not alpha. Lesson: a slow detector (trend) survives execution better than a fast one (VIX), but still doesn't generate alpha.",
+   "pt": "A ideia do usuário: detectar baixismo com a MA200 e ficar flat. Na cesta completa dava +30% (2014-24)… mas o triple test o matou: na cesta que chega a 2007 (FX+ouro, sem índices) é negativo, Deflated Sharpe 0,21, OOS 2007-13 Sharpe −0,09. Os '+30%' eram BETA dos índices disfarçada de edge de regime, não alpha. Lição: um detector lento (tendência) sobrevive à execução melhor do que um rápido (VIX), mas igualmente não gera alpha."
   },
   "name": {
    "es": "Trend-flat (regime switch por MA200)",
-   "en": "Trend-flat (regime switch por MA200)",
-   "pt": "Trend-flat (regime switch por MA200)"
+   "en": "Trend-flat (regime switch via MA200)",
+   "pt": "Trend-flat (regime switch via MA200)"
   },
   "family": "regime-switch",
   "date": "2026-06-14T11:00:00",
   "description": {
    "es": "Detectar bajismo con la media movil de 200 dias y ponerse flat. La idea de cambiar de estrategia por regimen.",
-   "en": "Detectar bajismo con la media movil de 200 dias y ponerse flat. La idea de cambiar de estrategia por regimen.",
-   "pt": "Detectar bajismo con la media movil de 200 dias y ponerse flat. La idea de cambiar de estrategia por regimen."
+   "en": "Detect bearishness with the 200-day moving average and go flat. The idea of switching strategy by regime.",
+   "pt": "Detectar baixismo com a média móvel de 200 dias e ficar flat. A ideia de trocar de estratégia por regime."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (murio OOS)",
-   "en": "no sirvio (murio OOS)",
-   "pt": "no sirvio (murio OOS)"
+   "en": "did not work (died OOS)",
+   "pt": "não serviu (morreu OOS)"
   },
   "notes": {
    "es": "",
@@ -546,25 +546,25 @@
   "v": 58,
   "analysis": {
    "es": "¿Cuánto daría el bot? Simulado con precios reales: 1 mes −1.0%, 6 meses +6.7%, COVID 2020 +13.1%, oso 2022 −17.0% (todo a 2x). Mismo bot, signo según el mercado: es beta apalancada, no alpha. Los costos de trading son mínimos (~$192 en 6 meses); el riesgo real es la dirección del mercado + los swaps. En un año bajista perderías y a 2x el drawdown reventaría un fondeo.",
-   "en": "¿Cuánto daría el bot? Simulado con precios reales: 1 mes −1.0%, 6 meses +6.7%, COVID 2020 +13.1%, oso 2022 −17.0% (todo a 2x). Mismo bot, signo según el mercado: es beta apalancada, no alpha. Los costos de trading son mínimos (~$192 en 6 meses); el riesgo real es la dirección del mercado + los swaps. En un año bajista perderías y a 2x el drawdown reventaría un fondeo.",
-   "pt": "¿Cuánto daría el bot? Simulado con precios reales: 1 mes −1.0%, 6 meses +6.7%, COVID 2020 +13.1%, oso 2022 −17.0% (todo a 2x). Mismo bot, signo según el mercado: es beta apalancada, no alpha. Los costos de trading son mínimos (~$192 en 6 meses); el riesgo real es la dirección del mercado + los swaps. En un año bajista perderías y a 2x el drawdown reventaría un fondeo."
+   "en": "How much would the bot yield? Simulated with real prices: 1 month −1.0%, 6 months +6.7%, COVID 2020 +13.1%, bear 2022 −17.0% (all at 2x). Same bot, sign follows the market: it's leveraged beta, not alpha. Trading costs are minimal (~$192 in 6 months); the real risk is market direction + swaps. In a bear year you'd lose, and at 2x the drawdown would bust a funded account.",
+   "pt": "Quanto o bot renderia? Simulado com preços reais: 1 mês −1,0%, 6 meses +6,7%, COVID 2020 +13,1%, urso 2022 −17,0% (tudo a 2x). Mesmo bot, sinal conforme o mercado: é beta alavancada, não alpha. Os custos de trading são mínimos (~$192 em 6 meses); o risco real é a direção do mercado + os swaps. Num ano de baixa perderia, e a 2x o drawdown rebentaria um fondeado."
   },
   "name": {
    "es": "What-if: capital del bot (1x / 2x / vol-target)",
-   "en": "What-if: capital del bot (1x / 2x / vol-target)",
-   "pt": "What-if: capital del bot (1x / 2x / vol-target)"
+   "en": "What-if: bot capital (1x / 2x / vol-target)",
+   "pt": "What-if: capital do bot (1x / 2x / vol-target)"
   },
   "family": "forward-test",
   "date": "2026-06-14T10:00:00",
   "description": {
    "es": "Cuanto tendriamos si el bot hubiera corrido: 1 mes, 6 meses y años-oso (2020, 2022), a distintos apalancamientos.",
-   "en": "Cuanto tendriamos si el bot hubiera corrido: 1 mes, 6 meses y años-oso (2020, 2022), a distintos apalancamientos.",
-   "pt": "Cuanto tendriamos si el bot hubiera corrido: 1 mes, 6 meses y años-oso (2020, 2022), a distintos apalancamientos."
+   "en": "How much would the bot yield if it had run: 1 month, 6 months and bear years (2020, 2022) at different leverages.",
+   "pt": "Quanto teríamos se o bot tivesse rodado: 1 mês, 6 meses e anos-urso (2020, 2022), com diferentes alavancagens."
   },
   "params": {},
   "verdict": {
    "es": "parcial",
-   "en": "parcial",
+   "en": "partial",
    "pt": "parcial"
   },
   "notes": {
