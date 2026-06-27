@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { spawn } from "child_process";
+import fs from "fs";
+import path from "path";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -8,6 +10,7 @@ export const dynamic = "force-dynamic";
 // en produccion (Vercel) responde 403 y no ejecuta nada.
 const PY = "D:/ATLAS/envs/atlas/python.exe";
 const CWD = "D:/ATLAS";
+const LOG = path.join(process.cwd(), "public", "data", "lab.log");
 
 export async function POST(req: Request) {
   if (process.env.NODE_ENV !== "development") {
@@ -21,7 +24,12 @@ export async function POST(req: Request) {
   }
 
   if (action === "start") {
-    const p = spawn(PY, ["-m", "lab.runner", "run"], { cwd: CWD, detached: true, stdio: "ignore" });
+    // captura toda la salida (incluido cualquier traceback) a public/data/lab.log
+    // -u = sin buffer, para que el log se vea EN VIVO en la mini-consola.
+    const out = fs.openSync(LOG, "w");
+    const p = spawn(PY, ["-u", "-m", "lab.runner", "run"], {
+      cwd: CWD, detached: true, stdio: ["ignore", out, out],
+    });
     p.unref();
     return NextResponse.json({ ok: true, state: "running" });
   }

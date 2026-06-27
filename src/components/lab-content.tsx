@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Play, Square, RefreshCw, FlaskConical, ShieldCheck } from "lucide-react";
+import { Play, Square, RefreshCw, FlaskConical, ShieldCheck, Terminal } from "lucide-react";
 import type { LabData } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +17,8 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [data, setData] = React.useState<LabData>(initial);
   const [isLocal, setIsLocal] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
+  const [log, setLog] = React.useState("");
+  const logRef = React.useRef<HTMLPreElement>(null);
 
   React.useEffect(() => {
     const h = window.location.hostname;
@@ -32,15 +34,33 @@ export function LabContent({ data: initial }: { data: LabData }) {
     }
   }, []);
 
-  // mientras corre, refresca solo cada 4s
+  const fetchLog = React.useCallback(async () => {
+    try {
+      const r = await fetch(`/data/lab.log?t=${Date.now()}`, { cache: "no-store" });
+      if (r.ok) setLog(await r.text());
+    } catch {
+      /* sin log aun */
+    }
+  }, []);
+
+  // auto-scroll de la consola al fondo
+  React.useEffect(() => {
+    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+  }, [log]);
+
+  // mientras corre: refresca tabla + consola cada 1.5s
   React.useEffect(() => {
     if (data.state !== "running") return;
-    const id = setInterval(refresh, 4000);
+    const id = setInterval(() => {
+      refresh();
+      fetchLog();
+    }, 1500);
     return () => clearInterval(id);
-  }, [data.state, refresh]);
+  }, [data.state, refresh, fetchLog]);
 
   const act = async (action: "start" | "stop") => {
     setBusy(true);
+    if (action === "start") setLog(t("lab.starting") + "\n");
     try {
       await fetch("/api/lab", {
         method: "POST",
@@ -48,11 +68,16 @@ export function LabContent({ data: initial }: { data: LabData }) {
         body: JSON.stringify({ action }),
       });
       setData((d) => ({ ...d, state: action === "start" ? "running" : "stopped" }));
-      setTimeout(refresh, 1500);
+      setTimeout(() => {
+        refresh();
+        fetchLog();
+      }, 800);
     } finally {
       setBusy(false);
     }
   };
+
+  const logTail = log.split("\n").slice(-120).join("\n");
 
   const running = data.state === "running";
   const filters = ["lab.f1", "lab.f2", "lab.f3", "lab.f4", "lab.f5"];
@@ -104,6 +129,28 @@ export function LabContent({ data: initial }: { data: LabData }) {
         <p className="rounded-lg border border-dashed bg-muted/40 px-4 py-3 text-sm text-muted-foreground">
           {t("lab.localOnly")}
         </p>
+      )}
+
+      {/* mini-consola en vivo (solo localhost) */}
+      {isLocal && (
+        <div className="overflow-hidden rounded-xl border bg-zinc-950 text-zinc-100">
+          <div className="flex items-center gap-2 border-b border-white/10 px-3 py-2 text-xs font-medium text-zinc-400">
+            <Terminal className="size-3.5" />
+            {t("lab.console")}
+            {running && (
+              <span className="ml-auto inline-flex items-center gap-1.5 text-[var(--gain)]">
+                <span className="size-1.5 animate-pulse rounded-full bg-[var(--gain)]" />
+                {t("lab.running")}
+              </span>
+            )}
+          </div>
+          <pre
+            ref={logRef}
+            className="max-h-64 overflow-auto px-3 py-2 font-mono text-[11.5px] leading-relaxed whitespace-pre-wrap text-zinc-300"
+          >
+            {logTail || <span className="text-zinc-500">{t("lab.consoleEmpty")}</span>}
+          </pre>
+        </div>
       )}
 
       {/* el gauntlet */}

@@ -30,6 +30,9 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.run": "Ejecutar",
     "lab.stop": "Parar",
     "lab.refresh": "Actualizar",
+    "lab.console": "Consola",
+    "lab.starting": "iniciando laboratorio…",
+    "lab.consoleEmpty": "Sin salida todavía. Dale a Ejecutar.",
     "lab.localOnly":
       "Los controles de ejecutar/parar solo están disponibles en localhost (el motor corre en tu PC). Esta vista pública solo muestra los resultados.",
     "lab.empty": "Aún no hay estrategias probadas. Corre el laboratorio en local.",
@@ -167,6 +170,9 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.run": "Run",
     "lab.stop": "Stop",
     "lab.refresh": "Refresh",
+    "lab.console": "Console",
+    "lab.starting": "starting lab…",
+    "lab.consoleEmpty": "No output yet. Hit Run.",
     "lab.localOnly":
       "Run/stop controls are only available on localhost (the engine runs on your machine). This public view only shows results.",
     "lab.empty": "No strategies tested yet. Run the lab locally.",
@@ -304,6 +310,9 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.run": "Executar",
     "lab.stop": "Parar",
     "lab.refresh": "Atualizar",
+    "lab.console": "Console",
+    "lab.starting": "iniciando laboratório…",
+    "lab.consoleEmpty": "Sem saída ainda. Clique em Executar.",
     "lab.localOnly":
       "Os controles de executar/parar só estão disponíveis no localhost (o motor roda na sua máquina). Esta visão pública só mostra resultados.",
     "lab.empty": "Ainda não há estratégias testadas. Rode o laboratório localmente.",
