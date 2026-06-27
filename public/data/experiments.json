@@ -983,7 +983,7 @@
   "name": {
    "es": "Momentum cross-sectional v48",
    "en": "Cross-sectional momentum v48",
-   "pt": "Momentum cross-sectional v48"
+   "pt": "Momentum cross-sectional (seccional) v48"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -1118,7 +1118,7 @@
   "name": {
    "es": "COT contrarian extremos v45",
    "en": "COT contrarian extremes v45",
-   "pt": "COT contrarian extremos v45"
+   "pt": "COT contrária em extremos v45"
   },
   "family": "cot",
   "date": "2026-06-10T14:21:18",
@@ -1350,7 +1350,7 @@
   "name": {
    "es": "VEREDICTO FINAL 40 experimentos v40",
    "en": "FINAL VERDICT 40 experiments v40",
-   "pt": "VEREDICTO FINAL 40 experimentos v40"
+   "pt": "VEREDITO FINAL 40 experimentos v40"
   },
   "family": "risk",
   "date": "2026-06-10T14:10:58",
@@ -2254,7 +2254,7 @@
   "name": {
    "es": "OOS temporal 2007-2013 (anti-overfit) v21",
    "en": "Temporal OOS 2007-2013 (anti-overfit) v21",
-   "pt": "OOS temporal 2007-2013 (anti-overfit) v21"
+   "pt": "OOS temporal 2007-2013 (anti-sobreajuste) v21"
   },
   "family": "bot",
   "date": "2026-06-10T02:25:56",
@@ -2312,7 +2312,7 @@
   "name": {
    "es": "Trend long-short filtrado v20",
    "en": "Trend long-short filtered v20",
-   "pt": "Trend long-short filtrado v20"
+   "pt": "Trend long-short com filtro v20"
   },
   "family": "bot",
   "date": "2026-06-09T21:07:57",
@@ -3508,7 +3508,7 @@
   "name": {
    "es": "Baseline SMA 20/50",
    "en": "Baseline SMA 20/50",
-   "pt": "Baseline SMA 20/50"
+   "pt": "Linha de base SMA 20/50"
   },
   "family": "baseline",
   "date": "2026-06-07T14:49:08",
