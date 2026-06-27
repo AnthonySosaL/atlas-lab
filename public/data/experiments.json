@@ -1,5 +1,91 @@
 [
  {
+  "id": "extra-v78",
+  "v": 78,
+  "analysis": {
+   "es": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance.",
+   "en": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance.",
+   "pt": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance."
+  },
+  "name": {
+   "es": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?",
+   "en": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?",
+   "pt": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?"
+  },
+  "family": "risk-mgmt",
+  "date": "2026-06-27T12:20:00",
+  "description": {
+   "es": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año.",
+   "en": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año.",
+   "pt": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año."
+  },
+  "params": {},
+  "verdict": {
+   "es": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)",
+   "en": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)",
+   "pt": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "Calmar_Turtle": 0.22,
+   "Calmar_Faber": 0.16,
+   "Calmar_BuyHold": 0.14,
+   "retiro4pct_BuyHold": "$45,231",
+   "retiro4pct_Turtle": "$28,672"
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v77",
+  "v": 77,
+  "analysis": {
+   "es": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución.",
+   "en": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución.",
+   "pt": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución."
+  },
+  "name": {
+   "es": "Régimen adaptativo (mean-rev en rango, trend en tendencia)",
+   "en": "Régimen adaptativo (mean-rev en rango, trend en tendencia)",
+   "pt": "Régimen adaptativo (mean-rev en rango, trend en tendencia)"
+  },
+  "family": "regime-switch",
+  "date": "2026-06-27T12:00:00",
+  "description": {
+   "es": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo.",
+   "en": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo.",
+   "pt": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)",
+   "en": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)",
+   "pt": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "pct_dias_tendencia": "27%",
+   "adaptive_IS_Sharpe": -0.27,
+   "adaptive_OOS_Sharpe": 0.37,
+   "solo_trend_OOS": 0.59,
+   "BuyHold_Sharpe": 0.68
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v76",
   "v": 76,
   "analysis": {
