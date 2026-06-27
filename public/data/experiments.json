@@ -1,5 +1,90 @@
 [
  {
+  "id": "extra-v76",
+  "v": 76,
+  "analysis": {
+   "es": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes.",
+   "en": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes.",
+   "pt": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes."
+  },
+  "name": {
+   "es": "Double Seven (Larry Connors)",
+   "en": "Double Seven (Larry Connors)",
+   "pt": "Double Seven (Larry Connors)"
+  },
+  "family": "estrategia-publica",
+  "date": "2026-06-27T11:10:00",
+  "description": {
+   "es": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'.",
+   "en": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'.",
+   "pt": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio (se degrada OOS)",
+   "en": "no sirvio (se degrada OOS)",
+   "pt": "no sirvio (se degrada OOS)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "IS_Sharpe": 0.58,
+   "OOS_Sharpe": 0.16,
+   "OOS_MaxDD": "-35%",
+   "win_rate_publicado": "77%"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v75",
+  "v": 75,
+  "analysis": {
+   "es": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado.",
+   "en": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado.",
+   "pt": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado."
+  },
+  "name": {
+   "es": "IBS — Internal Bar Strength (QuantifiedStrategies)",
+   "en": "IBS — Internal Bar Strength (QuantifiedStrategies)",
+   "pt": "IBS — Internal Bar Strength (QuantifiedStrategies)"
+  },
+  "family": "estrategia-publica",
+  "date": "2026-06-27T11:00:00",
+  "description": {
+   "es": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'.",
+   "en": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'.",
+   "pt": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio (gana, pero la mitad que Buy&Hold)",
+   "en": "no sirvio (gana, pero la mitad que Buy&Hold)",
+   "pt": "no sirvio (gana, pero la mitad que Buy&Hold)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "OOS_total": "+32%",
+   "OOS_Sharpe": 0.42,
+   "BuyHold_OOS_total": "+109%",
+   "BuyHold_Sharpe": 0.68,
+   "win_rate_publicado": "68%"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v74",
   "v": 74,
   "analysis": {
