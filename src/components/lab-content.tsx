@@ -435,6 +435,11 @@ export function LabContent({ data: initial }: { data: LabData }) {
                     </div>
                     <span className="ml-6 text-xs text-muted-foreground">
                       <span className="font-mono">#{it.order}</span> · {it.family} · {it.type}
+                      {it.source && it.source !== "?" && (
+                        <span className="ml-1 rounded bg-muted px-1.5 py-0.5 text-[10px]">
+                          {t(`lab.src.${it.source}`)}
+                        </span>
+                      )}
                     </span>
                   </td>
                   <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>

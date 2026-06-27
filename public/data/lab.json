@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-27 17:55",
+ "updated": "2026-06-27 18:09",
  "total": 161,
  "survived": 0,
  "state": "stopped",
@@ -12,6 +12,7 @@
   {
    "id": "5b8195d5fb94",
    "order": 132,
+   "source": "?",
    "name": "rsi_meanrev_6_20_80_t100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -37,6 +38,7 @@
   {
    "id": "c3892ddefa60",
    "order": 121,
+   "source": "?",
    "name": "S8",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -62,6 +64,7 @@
   {
    "id": "53d3108c52db",
    "order": 127,
+   "source": "?",
    "name": "rsi_meanrev_3_10_80_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -87,6 +90,7 @@
   {
    "id": "d6c031574cac",
    "order": 22,
+   "source": "seed",
    "name": "RSI3 reversion <5",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -112,6 +116,7 @@
   {
    "id": "152f351cbeaa",
    "order": 125,
+   "source": "?",
    "name": "ma_trend_120",
    "family": "trend",
    "type": "ma_trend",
@@ -134,6 +139,7 @@
   {
    "id": "e9b87ba45be7",
    "order": 9,
+   "source": "seed",
    "name": "Donchian 40/20",
    "family": "breakout",
    "type": "donchian",
@@ -157,6 +163,7 @@
   {
    "id": "08fe4f71d33f",
    "order": 30,
+   "source": "seed",
    "name": "IBS <0.1/>0.9",
    "family": "meanrev",
    "type": "ibs",
@@ -180,6 +187,7 @@
   {
    "id": "c0d0ebed2402",
    "order": 88,
+   "source": "?",
    "name": "Donchian 59/24",
    "family": "breakout",
    "type": "donchian",
@@ -203,6 +211,7 @@
   {
    "id": "52c28b7acb7d",
    "order": 7,
+   "source": "seed",
    "name": "Donchian 20/10",
    "family": "breakout",
    "type": "donchian",
@@ -226,6 +235,7 @@
   {
    "id": "2a2bb391d31f",
    "order": 97,
+   "source": "?",
    "name": "Momentum 260d",
    "family": "momentum",
    "type": "momentum",
@@ -248,6 +258,7 @@
   {
    "id": "aeca6240f47f",
    "order": 27,
+   "source": "seed",
    "name": "RSI4 reversion <15",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -273,6 +284,7 @@
   {
    "id": "b0ccb4d21e60",
    "order": 112,
+   "source": "?",
    "name": "rsi_meanrev_7_30_85_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -298,6 +310,7 @@
   {
    "id": "b2928fc403e3",
    "order": 93,
+   "source": "?",
    "name": "IBS 0.17/0.9",
    "family": "meanrev",
    "type": "ibs",
@@ -321,6 +334,7 @@
   {
    "id": "1ce444c50fd4",
    "order": 69,
+   "source": "?",
    "name": "momentum_150",
    "family": "momentum",
    "type": "momentum",
@@ -343,6 +357,7 @@
   {
    "id": "10bb1ec5541b",
    "order": 83,
+   "source": "?",
    "name": "Donchian 76/68",
    "family": "breakout",
    "type": "donchian",
@@ -366,6 +381,7 @@
   {
    "id": "7cadcdfa922b",
    "order": 123,
+   "source": "?",
    "name": "S10",
    "family": "meanrev",
    "type": "ibs",
@@ -389,6 +405,7 @@
   {
    "id": "386ba9495549",
    "order": 51,
+   "source": "?",
    "name": "RSI_MeanRev_2_30_90_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -414,6 +431,7 @@
   {
    "id": "0d60b3b3ff4c",
    "order": 8,
+   "source": "seed",
    "name": "Donchian 40/10",
    "family": "breakout",
    "type": "donchian",
@@ -437,6 +455,7 @@
   {
    "id": "40f8892de478",
    "order": 144,
+   "source": "?",
    "name": "donchian_145_72",
    "family": "breakout",
    "type": "donchian",
@@ -460,6 +479,7 @@
   {
    "id": "0d88e875bf7a",
    "order": 135,
+   "source": "?",
    "name": "rsi_meanrev_3_10_75_t200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -485,6 +505,7 @@
   {
    "id": "5ac6fd1f0a9c",
    "order": 44,
+   "source": "?",
    "name": "Momentum_300",
    "family": "momentum",
    "type": "momentum",
@@ -507,6 +528,7 @@
   {
    "id": "921f5d696c57",
    "order": 67,
+   "source": "?",
    "name": "donchian_70_25",
    "family": "breakout",
    "type": "donchian",
@@ -530,6 +552,7 @@
   {
    "id": "d923716b0514",
    "order": 114,
+   "source": "?",
    "name": "donchian_140_70",
    "family": "breakout",
    "type": "donchian",
@@ -553,6 +576,7 @@
   {
    "id": "f958daf5a2a1",
    "order": 18,
+   "source": "seed",
    "name": "Momentum 252d",
    "family": "momentum",
    "type": "momentum",
@@ -575,6 +599,7 @@
   {
    "id": "d31880ccaa41",
    "order": 55,
+   "source": "?",
    "name": "ma_trend_win_125",
    "family": "trend",
    "type": "ma_trend",
@@ -597,6 +622,7 @@
   {
    "id": "fc4e66c7ab4c",
    "order": 140,
+   "source": "?",
    "name": "donchian_130_65",
    "family": "breakout",
    "type": "donchian",
@@ -620,6 +646,7 @@
   {
    "id": "72168f4e40bd",
    "order": 116,
+   "source": "?",
    "name": "rsi_meanrev_9_5_90_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -645,6 +672,7 @@
   {
    "id": "f8b03ffaa9a5",
    "order": 3,
+   "source": "seed",
    "name": "Tendencia MA150",
    "family": "trend",
    "type": "ma_trend",
@@ -667,6 +695,7 @@
   {
    "id": "4c5617c997db",
    "order": 110,
+   "source": "?",
    "name": "donchian_breakout_150_75",
    "family": "breakout",
    "type": "donchian",
@@ -690,6 +719,7 @@
   {
    "id": "ab49bf446c32",
    "order": 148,
+   "source": "?",
    "name": "Donchian breakout tight",
    "family": "breakout",
    "type": "donchian",
@@ -713,6 +743,7 @@
   {
    "id": "4996ee5a6282",
    "order": 2,
+   "source": "seed",
    "name": "Tendencia MA100",
    "family": "trend",
    "type": "ma_trend",
@@ -735,6 +766,7 @@
   {
    "id": "e0fa67f2ad82",
    "order": 33,
+   "source": "seed",
    "name": "IBS <0.2/>0.9",
    "family": "meanrev",
    "type": "ibs",
@@ -758,6 +790,7 @@
   {
    "id": "45b3e9315c0f",
    "order": 115,
+   "source": "?",
    "name": "momentum_240",
    "family": "momentum",
    "type": "momentum",
@@ -780,6 +813,7 @@
   {
    "id": "aa09ac2c06d2",
    "order": 90,
+   "source": "?",
    "name": "Momentum 293d",
    "family": "momentum",
    "type": "momentum",
@@ -802,6 +836,7 @@
   {
    "id": "a934583e09e9",
    "order": 15,
+   "source": "seed",
    "name": "Momentum 60d",
    "family": "momentum",
    "type": "momentum",
@@ -824,6 +859,7 @@
   {
    "id": "f281bed64c83",
    "order": 66,
+   "source": "?",
    "name": "donchian_30_15",
    "family": "breakout",
    "type": "donchian",
@@ -847,6 +883,7 @@
   {
    "id": "cfef2b2c20ca",
    "order": 99,
+   "source": "?",
    "name": "DoubleSeven 4 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -870,6 +907,7 @@
   {
    "id": "db56e25091b4",
    "order": 138,
+   "source": "?",
    "name": "rsi_meanrev_2_30_90_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -895,6 +933,7 @@
   {
    "id": "7fa9586ef13a",
    "order": 87,
+   "source": "?",
    "name": "Momentum 96d",
    "family": "momentum",
    "type": "momentum",
@@ -917,6 +956,7 @@
   {
    "id": "2ffb65d8a5b2",
    "order": 10,
+   "source": "seed",
    "name": "Donchian 55/10",
    "family": "breakout",
    "type": "donchian",
@@ -940,6 +980,7 @@
   {
    "id": "b96c6c7a3589",
    "order": 126,
+   "source": "?",
    "name": "donchian_110_50",
    "family": "breakout",
    "type": "donchian",
@@ -963,6 +1004,7 @@
   {
    "id": "b053a9e9411f",
    "order": 50,
+   "source": "?",
    "name": "Momentum_250",
    "family": "momentum",
    "type": "momentum",
@@ -985,6 +1027,7 @@
   {
    "id": "d1fa9281636b",
    "order": 129,
+   "source": "?",
    "name": "donchian_50_10",
    "family": "breakout",
    "type": "donchian",
@@ -1008,6 +1051,7 @@
   {
    "id": "ef9e1a7a11c0",
    "order": 150,
+   "source": "?",
    "name": "MA trend short",
    "family": "trend",
    "type": "ma_trend",
@@ -1030,6 +1074,7 @@
   {
    "id": "f6b9f86bf4e4",
    "order": 100,
+   "source": "?",
    "name": "Donchian 46/42",
    "family": "breakout",
    "type": "donchian",
@@ -1053,6 +1098,7 @@
   {
    "id": "f626df42eeb6",
    "order": 20,
+   "source": "seed",
    "name": "RSI2 reversion <10",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1078,6 +1124,7 @@
   {
    "id": "a265aaed141c",
    "order": 77,
+   "source": "?",
    "name": "RSI2 <15",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1103,6 +1150,7 @@
   {
    "id": "3601e24b0707",
    "order": 57,
+   "source": "?",
    "name": "donchian_entry_120_exit_50",
    "family": "breakout",
    "type": "donchian",
@@ -1126,6 +1174,7 @@
   {
    "id": "ea334f5cb387",
    "order": 43,
+   "source": "?",
    "name": "Donchian_150_100",
    "family": "breakout",
    "type": "donchian",
@@ -1149,6 +1198,7 @@
   {
    "id": "af1b3d6f4d5c",
    "order": 137,
+   "source": "?",
    "name": "donchian_80_20",
    "family": "breakout",
    "type": "donchian",
@@ -1172,6 +1222,7 @@
   {
    "id": "9f7fc5880a12",
    "order": 81,
+   "source": "?",
    "name": "Donchian 69/12",
    "family": "breakout",
    "type": "donchian",
@@ -1195,6 +1246,7 @@
   {
    "id": "8fd4a9b36451",
    "order": 62,
+   "source": "?",
    "name": "ibs_lo_0.05_hi_0.95",
    "family": "meanrev",
    "type": "ibs",
@@ -1218,6 +1270,7 @@
   {
    "id": "69860c36c391",
    "order": 70,
+   "source": "?",
    "name": "momentum_280",
    "family": "momentum",
    "type": "momentum",
@@ -1240,6 +1293,7 @@
   {
    "id": "38793363b844",
    "order": 11,
+   "source": "seed",
    "name": "Donchian 55/20",
    "family": "breakout",
    "type": "donchian",
@@ -1263,6 +1317,7 @@
   {
    "id": "80648f37f474",
    "order": 26,
+   "source": "seed",
    "name": "RSI4 reversion <10",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1288,6 +1343,7 @@
   {
    "id": "9524c86a86d7",
    "order": 1,
+   "source": "seed",
    "name": "Tendencia MA50",
    "family": "trend",
    "type": "ma_trend",
@@ -1310,6 +1366,7 @@
   {
    "id": "7609eab505dc",
    "order": 21,
+   "source": "seed",
    "name": "RSI2 reversion <15",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1335,6 +1392,7 @@
   {
    "id": "b1ad174c6302",
    "order": 29,
+   "source": "seed",
    "name": "IBS <0.1/>0.8",
    "family": "meanrev",
    "type": "ibs",
@@ -1358,6 +1416,7 @@
   {
    "id": "ea7f68f7eb83",
    "order": 37,
+   "source": "seed",
    "name": "DoubleSeven 5 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -1381,6 +1440,7 @@
   {
    "id": "abeaa717c1be",
    "order": 156,
+   "source": "?",
    "name": "Double Seven medium window",
    "family": "breakout",
    "type": "double_seven",
@@ -1404,6 +1464,7 @@
   {
    "id": "e54bcc093906",
    "order": 134,
+   "source": "?",
    "name": "momentum_160",
    "family": "momentum",
    "type": "momentum",
@@ -1426,6 +1487,7 @@
   {
    "id": "a4eb990af434",
    "order": 54,
+   "source": "?",
    "name": "ma_trend_win_75",
    "family": "trend",
    "type": "ma_trend",
@@ -1448,6 +1510,7 @@
   {
    "id": "a84361e824ca",
    "order": 64,
+   "source": "?",
    "name": "double_seven_trend100_win12",
    "family": "breakout",
    "type": "double_seven",
@@ -1471,6 +1534,7 @@
   {
    "id": "3d6b401c608a",
    "order": 72,
+   "source": "?",
    "name": "rsi_meanrev_8_25_85_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1496,6 +1560,7 @@
   {
    "id": "ff6d114796c0",
    "order": 92,
+   "source": "?",
    "name": "MA52",
    "family": "trend",
    "type": "ma_trend",
@@ -1518,6 +1583,7 @@
   {
    "id": "4f843aa2a060",
    "order": 161,
+   "source": "?",
    "name": "Momentum 100",
    "family": "momentum",
    "type": "momentum",
@@ -1540,6 +1606,7 @@
   {
    "id": "920f1cc09c25",
    "order": 39,
+   "source": "seed",
    "name": "DoubleSeven 10 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -1563,6 +1630,7 @@
   {
    "id": "e893d9a1e04e",
    "order": 124,
+   "source": "?",
    "name": "S11",
    "family": "trend",
    "type": "double_seven",
@@ -1586,6 +1654,7 @@
   {
    "id": "29393809d674",
    "order": 84,
+   "source": "?",
    "name": "IBS 0.09/0.74",
    "family": "meanrev",
    "type": "ibs",
@@ -1609,6 +1678,7 @@
   {
    "id": "2725226acb70",
    "order": 79,
+   "source": "?",
    "name": "DoubleSeven 3 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -1632,6 +1702,7 @@
   {
    "id": "c43b813f3881",
    "order": 118,
+   "source": "?",
    "name": "S4",
    "family": "breakout",
    "type": "donchian",
@@ -1655,6 +1726,7 @@
   {
    "id": "517bd3d87d2d",
    "order": 149,
+   "source": "?",
    "name": "Donchian breakout wide",
    "family": "breakout",
    "type": "donchian",
@@ -1678,6 +1750,7 @@
   {
    "id": "d4cd442c42ae",
    "order": 12,
+   "source": "seed",
    "name": "Donchian 100/10",
    "family": "breakout",
    "type": "donchian",
@@ -1701,6 +1774,7 @@
   {
    "id": "1f1acaae186d",
    "order": 24,
+   "source": "seed",
    "name": "RSI3 reversion <15",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1726,6 +1800,7 @@
   {
    "id": "bdb0da67213d",
    "order": 23,
+   "source": "seed",
    "name": "RSI3 reversion <10",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1751,6 +1826,7 @@
   {
    "id": "d49c28098564",
    "order": 103,
+   "source": "?",
    "name": "DoubleSeven 9 (MA200)",
    "family": "meanrev",
    "type": "double_seven",
@@ -1774,6 +1850,7 @@
   {
    "id": "7485221e84d5",
    "order": 98,
+   "source": "?",
    "name": "IBS 0.09/0.64",
    "family": "meanrev",
    "type": "ibs",
@@ -1797,6 +1874,7 @@
   {
    "id": "ccaf888e6a52",
    "order": 122,
+   "source": "?",
    "name": "S9",
    "family": "meanrev",
    "type": "ibs",
@@ -1820,6 +1898,7 @@
   {
    "id": "37e102e11a47",
    "order": 14,
+   "source": "seed",
    "name": "Momentum 20d",
    "family": "momentum",
    "type": "momentum",
@@ -1842,6 +1921,7 @@
   {
    "id": "a886d5cd766f",
    "order": 120,
+   "source": "?",
    "name": "S7",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -1867,6 +1947,7 @@
   {
    "id": "7b5d5779264d",
    "order": 53,
+   "source": "?",
    "name": "Double_Seven_200_3",
    "family": "breakout",
    "type": "double_seven",
@@ -1890,6 +1971,7 @@
   {
    "id": "a473b91b38f8",
    "order": 131,
+   "source": "?",
    "name": "double_seven_200_13",
    "family": "trend",
    "type": "double_seven",
@@ -1913,6 +1995,7 @@
   {
    "id": "5b47633686e8",
    "order": 139,
+   "source": "?",
    "name": "ma_trend_60",
    "family": "trend",
    "type": "ma_trend",
@@ -1935,6 +2018,7 @@
   {
    "id": "b96212cf2564",
    "order": 36,
+   "source": "seed",
    "name": "IBS <0.3/>0.9",
    "family": "meanrev",
    "type": "ibs",
@@ -1958,6 +2042,7 @@
   {
    "id": "135664ebdd22",
    "order": 104,
+   "source": "?",
    "name": "ma_trend_20",
    "family": "trend",
    "type": "ma_trend",
@@ -1980,6 +2065,7 @@
   {
    "id": "83c22466e08a",
    "order": 154,
+   "source": "?",
    "name": "IBS extreme low",
    "family": "meanrev",
    "type": "ibs",
@@ -2003,6 +2089,7 @@
   {
    "id": "68d34ec3dd3d",
    "order": 58,
+   "source": "?",
    "name": "momentum_lookback_80",
    "family": "momentum",
    "type": "momentum",
@@ -2025,6 +2112,7 @@
   {
    "id": "e5dca85b7e95",
    "order": 25,
+   "source": "seed",
    "name": "RSI4 reversion <5",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2050,6 +2138,7 @@
   {
    "id": "a1866abc384e",
    "order": 68,
+   "source": "?",
    "name": "donchian_90_40",
    "family": "breakout",
    "type": "donchian",
@@ -2073,6 +2162,7 @@
   {
    "id": "8a5f0423156a",
    "order": 76,
+   "source": "?",
    "name": "double_seven_100_14",
    "family": "breakout",
    "type": "double_seven",
@@ -2096,6 +2186,7 @@
   {
    "id": "d83054a3c430",
    "order": 56,
+   "source": "?",
    "name": "donchian_entry_60_exit_30",
    "family": "breakout",
    "type": "donchian",
@@ -2119,6 +2210,7 @@
   {
    "id": "aa804ee8b5f4",
    "order": 111,
+   "source": "?",
    "name": "momentum_40",
    "family": "momentum",
    "type": "momentum",
@@ -2141,6 +2233,7 @@
   {
    "id": "b30d245a659a",
    "order": 46,
+   "source": "?",
    "name": "IBS_0.15_0.85",
    "family": "meanrev",
    "type": "ibs",
@@ -2164,6 +2257,7 @@
   {
    "id": "72f2e38b4bfe",
    "order": 13,
+   "source": "seed",
    "name": "Donchian 100/20",
    "family": "breakout",
    "type": "donchian",
@@ -2187,6 +2281,7 @@
   {
    "id": "4d9ba2e886b5",
    "order": 141,
+   "source": "?",
    "name": "rsi_meanrev_8_20_80_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2212,6 +2307,7 @@
   {
    "id": "ae95e512120f",
    "order": 147,
+   "source": "?",
    "name": "ma_trend_180",
    "family": "trend",
    "type": "ma_trend",
@@ -2234,6 +2330,7 @@
   {
    "id": "3852b838f41a",
    "order": 96,
+   "source": "?",
    "name": "IBS 0.05/0.73",
    "family": "meanrev",
    "type": "ibs",
@@ -2257,6 +2354,7 @@
   {
    "id": "0adfbffbcefd",
    "order": 4,
+   "source": "seed",
    "name": "Tendencia MA200",
    "family": "trend",
    "type": "ma_trend",
@@ -2279,6 +2377,7 @@
   {
    "id": "36fa89d91e99",
    "order": 73,
+   "source": "?",
    "name": "ibs_0.1_0.6",
    "family": "meanrev",
    "type": "ibs",
@@ -2302,6 +2401,7 @@
   {
    "id": "9cb05d3d8a60",
    "order": 45,
+   "source": "?",
    "name": "RSI_MeanRev_5_20_80_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2327,6 +2427,7 @@
   {
    "id": "07508004dd29",
    "order": 80,
+   "source": "?",
    "name": "MA188",
    "family": "trend",
    "type": "ma_trend",
@@ -2349,6 +2450,7 @@
   {
    "id": "bf9302dc7c71",
    "order": 106,
+   "source": "?",
    "name": "momentum_220",
    "family": "momentum",
    "type": "momentum",
@@ -2371,6 +2473,7 @@
   {
    "id": "4d0c5b929c86",
    "order": 32,
+   "source": "seed",
    "name": "IBS <0.2/>0.8",
    "family": "meanrev",
    "type": "ibs",
@@ -2394,6 +2497,7 @@
   {
    "id": "8b4e5e2629dc",
    "order": 49,
+   "source": "?",
    "name": "Donchian_80_30",
    "family": "breakout",
    "type": "donchian",
@@ -2417,6 +2521,7 @@
   {
    "id": "ec3df3e57295",
    "order": 47,
+   "source": "?",
    "name": "Double_Seven_100_15",
    "family": "breakout",
    "type": "double_seven",
@@ -2440,6 +2545,7 @@
   {
    "id": "62753fe83fd5",
    "order": 151,
+   "source": "?",
    "name": "MA trend long",
    "family": "trend",
    "type": "ma_trend",
@@ -2462,6 +2568,7 @@
   {
    "id": "5c41afd260a7",
    "order": 101,
+   "source": "?",
    "name": "IBS 0.1/0.66",
    "family": "meanrev",
    "type": "ibs",
@@ -2485,6 +2592,7 @@
   {
    "id": "d189231446b4",
    "order": 28,
+   "source": "seed",
    "name": "IBS <0.1/>0.7",
    "family": "meanrev",
    "type": "ibs",
@@ -2508,6 +2616,7 @@
   {
    "id": "04c5c0e40344",
    "order": 65,
+   "source": "?",
    "name": "double_seven_trend200_win8",
    "family": "breakout",
    "type": "double_seven",
@@ -2531,6 +2640,7 @@
   {
    "id": "9221813253c0",
    "order": 82,
+   "source": "?",
    "name": "MA293",
    "family": "trend",
    "type": "ma_trend",
@@ -2553,6 +2663,7 @@
   {
    "id": "62dac530a0f4",
    "order": 143,
+   "source": "?",
    "name": "rsi_meanrev_2_10_85_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2578,6 +2689,7 @@
   {
    "id": "cc981e5b01d8",
    "order": 89,
+   "source": "?",
    "name": "Momentum 121d",
    "family": "momentum",
    "type": "momentum",
@@ -2600,6 +2712,7 @@
   {
    "id": "6aac573a7dc8",
    "order": 42,
+   "source": "seed",
    "name": "DoubleSeven 10 (MA200)",
    "family": "meanrev",
    "type": "double_seven",
@@ -2623,6 +2736,7 @@
   {
    "id": "d3f7c3f26920",
    "order": 159,
+   "source": "?",
    "name": "RSI MeanRev 8-15-70-200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2648,6 +2762,7 @@
   {
    "id": "738b5714c150",
    "order": 153,
+   "source": "?",
    "name": "RSI mean reversion conservative",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2673,6 +2788,7 @@
   {
    "id": "8b8521404882",
    "order": 40,
+   "source": "seed",
    "name": "DoubleSeven 5 (MA200)",
    "family": "meanrev",
    "type": "double_seven",
@@ -2696,6 +2812,7 @@
   {
    "id": "a579736f64d9",
    "order": 60,
+   "source": "?",
    "name": "rsi_meanrev_n5_lo10_hi65_trend200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2721,6 +2838,7 @@
   {
    "id": "b57dd567f4d4",
    "order": 119,
+   "source": "?",
    "name": "S5",
    "family": "momentum",
    "type": "momentum",
@@ -2743,6 +2861,7 @@
   {
    "id": "fa101ede011b",
    "order": 17,
+   "source": "seed",
    "name": "Momentum 200d",
    "family": "momentum",
    "type": "momentum",
@@ -2765,6 +2884,7 @@
   {
    "id": "c1673a5b5bfc",
    "order": 19,
+   "source": "seed",
    "name": "RSI2 reversion <5",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2790,6 +2910,7 @@
   {
    "id": "5b0458d916ae",
    "order": 105,
+   "source": "?",
    "name": "donchian_breakout_100_40",
    "family": "breakout",
    "type": "donchian",
@@ -2813,6 +2934,7 @@
   {
    "id": "7416f294aad8",
    "order": 48,
+   "source": "?",
    "name": "MA_Trend_400",
    "family": "trend",
    "type": "ma_trend",
@@ -2835,6 +2957,7 @@
   {
    "id": "fb53f1ed4835",
    "order": 59,
+   "source": "?",
    "name": "momentum_lookback_180",
    "family": "momentum",
    "type": "momentum",
@@ -2857,6 +2980,7 @@
   {
    "id": "1e427b0bf100",
    "order": 109,
+   "source": "?",
    "name": "ma_trend_350",
    "family": "trend",
    "type": "ma_trend",
@@ -2879,6 +3003,7 @@
   {
    "id": "0e0bae77a838",
    "order": 85,
+   "source": "?",
    "name": "DoubleSeven 8 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -2902,6 +3027,7 @@
   {
    "id": "f6adbe8cbf56",
    "order": 142,
+   "source": "?",
    "name": "donchian_10_5",
    "family": "breakout",
    "type": "donchian",
@@ -2925,6 +3051,7 @@
   {
    "id": "ecf956c49c1a",
    "order": 91,
+   "source": "?",
    "name": "MA332",
    "family": "trend",
    "type": "ma_trend",
@@ -2947,6 +3074,7 @@
   {
    "id": "b2dedf986530",
    "order": 117,
+   "source": "?",
    "name": "rsi_meanrev_10_25_60_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -2972,6 +3100,7 @@
   {
    "id": "1c7e7aa893d7",
    "order": 6,
+   "source": "seed",
    "name": "Tendencia MA300",
    "family": "trend",
    "type": "ma_trend",
@@ -2994,6 +3123,7 @@
   {
    "id": "d4d34ac8a555",
    "order": 75,
+   "source": "?",
    "name": "double_seven_200_6",
    "family": "breakout",
    "type": "double_seven",
@@ -3017,6 +3147,7 @@
   {
    "id": "7e796289fa40",
    "order": 102,
+   "source": "?",
    "name": "MA303",
    "family": "trend",
    "type": "ma_trend",
@@ -3039,6 +3170,7 @@
   {
    "id": "cd598e498ec9",
    "order": 95,
+   "source": "?",
    "name": "MA298",
    "family": "trend",
    "type": "ma_trend",
@@ -3061,6 +3193,7 @@
   {
    "id": "9d719d249d39",
    "order": 5,
+   "source": "seed",
    "name": "Tendencia MA250",
    "family": "trend",
    "type": "ma_trend",
@@ -3083,6 +3216,7 @@
   {
    "id": "045588557bb6",
    "order": 108,
+   "source": "?",
    "name": "double_seven_200_11",
    "family": "trend",
    "type": "double_seven",
@@ -3106,6 +3240,7 @@
   {
    "id": "7feb35dea703",
    "order": 158,
+   "source": "?",
    "name": "IBS 0.12-0.68",
    "family": "meanrev",
    "type": "ibs",
@@ -3129,6 +3264,7 @@
   {
    "id": "afc5964e7160",
    "order": 86,
+   "source": "?",
    "name": "MA230",
    "family": "trend",
    "type": "ma_trend",
@@ -3151,6 +3287,7 @@
   {
    "id": "f64ec4699ef2",
    "order": 107,
+   "source": "?",
    "name": "rsi_meanrev_4_15_70_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3176,6 +3313,7 @@
   {
    "id": "38df0e8081d0",
    "order": 133,
+   "source": "?",
    "name": "ibs_rev_25_85",
    "family": "meanrev",
    "type": "ibs",
@@ -3199,6 +3337,7 @@
   {
    "id": "61e0234bf683",
    "order": 94,
+   "source": "?",
    "name": "IBS 0.19/0.73",
    "family": "meanrev",
    "type": "ibs",
@@ -3222,6 +3361,7 @@
   {
    "id": "84954f1ba45f",
    "order": 155,
+   "source": "?",
    "name": "IBS moderate range",
    "family": "meanrev",
    "type": "ibs",
@@ -3245,6 +3385,7 @@
   {
    "id": "d1341792828b",
    "order": 128,
+   "source": "?",
    "name": "ma_trend_260",
    "family": "trend",
    "type": "ma_trend",
@@ -3267,6 +3408,7 @@
   {
    "id": "ea08b78a7b4d",
    "order": 16,
+   "source": "seed",
    "name": "Momentum 120d",
    "family": "momentum",
    "type": "momentum",
@@ -3289,6 +3431,7 @@
   {
    "id": "80af2028f328",
    "order": 146,
+   "source": "?",
    "name": "ibs_0.2_0.75",
    "family": "meanrev",
    "type": "ibs",
@@ -3312,6 +3455,7 @@
   {
    "id": "799bceb1d019",
    "order": 41,
+   "source": "seed",
    "name": "DoubleSeven 7 (MA200)",
    "family": "meanrev",
    "type": "double_seven",
@@ -3335,6 +3479,7 @@
   {
    "id": "79d4552b8ad5",
    "order": 35,
+   "source": "seed",
    "name": "IBS <0.3/>0.8",
    "family": "meanrev",
    "type": "ibs",
@@ -3358,6 +3503,7 @@
   {
    "id": "341c565c2e7e",
    "order": 38,
+   "source": "seed",
    "name": "DoubleSeven 7 (MA100)",
    "family": "meanrev",
    "type": "double_seven",
@@ -3381,6 +3527,7 @@
   {
    "id": "2ee95542ff51",
    "order": 136,
+   "source": "?",
    "name": "ibs_rev_15_70",
    "family": "meanrev",
    "type": "ibs",
@@ -3404,6 +3551,7 @@
   {
    "id": "b251ba6c8c7c",
    "order": 152,
+   "source": "?",
    "name": "RSI mean reversion aggressive",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3429,6 +3577,7 @@
   {
    "id": "c7e193fdd084",
    "order": 145,
+   "source": "?",
    "name": "rsi_meanrev_5_25_65_200",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3454,6 +3603,7 @@
   {
    "id": "9044c9196f32",
    "order": 130,
+   "source": "?",
    "name": "rsi_meanrev_5_20_75_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3479,6 +3629,7 @@
   {
    "id": "2b6c57059960",
    "order": 78,
+   "source": "?",
    "name": "IBS 0.37/0.74",
    "family": "meanrev",
    "type": "ibs",
@@ -3502,6 +3653,7 @@
   {
    "id": "f737a3ccdade",
    "order": 157,
+   "source": "?",
    "name": "RSI MeanRev 2-5-70-100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3527,6 +3679,7 @@
   {
    "id": "5c57a3950ff6",
    "order": 160,
+   "source": "?",
    "name": "IBS 0.18-0.72",
    "family": "meanrev",
    "type": "ibs",
@@ -3550,6 +3703,7 @@
   {
    "id": "3ae0acd8fc2f",
    "order": 31,
+   "source": "seed",
    "name": "IBS <0.2/>0.7",
    "family": "meanrev",
    "type": "ibs",
@@ -3573,6 +3727,7 @@
   {
    "id": "56f876ffc20a",
    "order": 61,
+   "source": "?",
    "name": "rsi_meanrev_n3_lo20_hi75_trend100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3598,6 +3753,7 @@
   {
    "id": "737422e86274",
    "order": 63,
+   "source": "?",
    "name": "ibs_lo_0.25_hi_0.75",
    "family": "meanrev",
    "type": "ibs",
@@ -3621,6 +3777,7 @@
   {
    "id": "32d8829f7e5a",
    "order": 52,
+   "source": "?",
    "name": "IBS_0.4_0.6",
    "family": "meanrev",
    "type": "ibs",
@@ -3644,6 +3801,7 @@
   {
    "id": "6f43b41ef2e0",
    "order": 74,
+   "source": "?",
    "name": "ibs_0.35_0.65",
    "family": "meanrev",
    "type": "ibs",
@@ -3667,6 +3825,7 @@
   {
    "id": "22ece60e042d",
    "order": 71,
+   "source": "?",
    "name": "rsi_meanrev_6_10_70_100",
    "family": "meanrev",
    "type": "rsi_meanrev",
@@ -3692,6 +3851,7 @@
   {
    "id": "b42622828ce8",
    "order": 113,
+   "source": "?",
    "name": "ibs_035_07",
    "family": "meanrev",
    "type": "ibs",
@@ -3715,6 +3875,7 @@
   {
    "id": "3450c8fcdc0c",
    "order": 34,
+   "source": "seed",
    "name": "IBS <0.3/>0.7",
    "family": "meanrev",
    "type": "ibs",

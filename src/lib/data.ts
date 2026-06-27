@@ -44,6 +44,7 @@ export type Serie = { name: string; x: string[]; y: (number | null)[] };
 export type LabItem = {
   id: string;
   order: number;
+  source?: string;
   name: string;
   family: string;
   type: string;

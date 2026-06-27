@@ -66,6 +66,10 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.tipOOS2": "Out-of-Sample 2021-2024 (época reciente)",
     "lab.tipDSR": "Deflated Sharpe Ratio: corrige por el nº de estrategias probadas",
     "lab.tipMC": "Monte Carlo: p-valor del test de permutación (más bajo = mejor)",
+    "lab.src.seed": "semilla",
+    "lab.src.ai": "DeepSeek",
+    "lab.src.explore": "exploración",
+    "lab.src.mine": "tuya",
     "lab.localOnly":
       "Los controles de ejecutar/parar solo están disponibles en localhost (el motor corre en tu PC). Esta vista pública solo muestra los resultados.",
     "lab.empty": "Aún no hay estrategias probadas. Corre el laboratorio en local.",
@@ -239,6 +243,10 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.tipOOS2": "Out-of-Sample 2021-2024 (recent era)",
     "lab.tipDSR": "Deflated Sharpe Ratio: corrects for the number of strategies tested",
     "lab.tipMC": "Monte Carlo: permutation-test p-value (lower = better)",
+    "lab.src.seed": "seed",
+    "lab.src.ai": "DeepSeek",
+    "lab.src.explore": "explore",
+    "lab.src.mine": "yours",
     "lab.localOnly":
       "Run/stop controls are only available on localhost (the engine runs on your machine). This public view only shows results.",
     "lab.empty": "No strategies tested yet. Run the lab locally.",
@@ -412,6 +420,10 @@ const DICT: Record<Locale, Record<string, string>> = {
     "lab.tipOOS2": "Out-of-Sample 2021-2024 (época recente)",
     "lab.tipDSR": "Deflated Sharpe Ratio: corrige pelo nº de estratégias testadas",
     "lab.tipMC": "Monte Carlo: p-valor do teste de permutação (menor = melhor)",
+    "lab.src.seed": "semente",
+    "lab.src.ai": "DeepSeek",
+    "lab.src.explore": "exploração",
+    "lab.src.mine": "sua",
     "lab.localOnly":
       "Os controles de executar/parar só estão disponíveis no localhost (o motor roda na sua máquina). Esta visão pública só mostra resultados.",
     "lab.empty": "Ainda não há estratégias testadas. Rode o laboratório localmente.",
