@@ -41,6 +41,32 @@ export type RoadmapChapter = {
 };
 export type Serie = { name: string; x: string[]; y: (number | null)[] };
 
+export type LabItem = {
+  id: string;
+  name: string;
+  family: string;
+  type: string;
+  params: Record<string, unknown>;
+  status: "survived" | "died";
+  verdict: string;
+  dsr: number;
+  mc_p: number;
+  beats_bh: boolean;
+  sharpe_is: number;
+  sharpe_oos1: number;
+  sharpe_oos2: number;
+  ret_is: number;
+  mdd_is: number;
+  at: string;
+};
+export type LabData = {
+  updated: string;
+  total: number;
+  survived: number;
+  state: "running" | "stopped";
+  items: LabItem[];
+};
+
 async function readJSON<T>(file: string, fallback: T): Promise<T> {
   try {
     return JSON.parse(await fs.readFile(path.join(DATA, file), "utf8")) as T;
@@ -55,6 +81,8 @@ export const getSummary = () =>
     total: 0, families: [], n_families: 0, survived: 0, died: 0, generated_at: "",
   });
 export const getRoadmap = () => readJSON<RoadmapChapter[]>("roadmap.json", []);
+export const getLab = () =>
+  readJSON<LabData>("lab.json", { updated: "", total: 0, survived: 0, state: "stopped", items: [] });
 
 export async function getExperiment(id: string) {
   const all = await getExperiments();
