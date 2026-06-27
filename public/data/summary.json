@@ -1,5 +1,5 @@
 {
- "total": 78,
+ "total": 80,
  "families": [
   "anomalia",
   "baseline",
@@ -26,7 +26,7 @@
   "volatilidad"
  ],
  "n_families": 23,
- "survived": 15,
- "died": 46,
- "generated_at": "2026-06-27T10:40:09"
+ "survived": 16,
+ "died": 47,
+ "generated_at": "2026-06-27T10:48:35"
 }

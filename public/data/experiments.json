@@ -1,5 +1,90 @@
 [
  {
+  "id": "extra-v80",
+  "v": 80,
+  "analysis": {
+   "es": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios).",
+   "en": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios).",
+   "pt": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios)."
+  },
+  "name": {
+   "es": "Estrategia de INGRESO óptima por Calmar (índices+oro)",
+   "en": "Estrategia de INGRESO óptima por Calmar (índices+oro)",
+   "pt": "Estrategia de INGRESO óptima por Calmar (índices+oro)"
+  },
+  "family": "risk-mgmt",
+  "date": "2026-06-27T13:20:00",
+  "description": {
+   "es": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce.",
+   "en": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce.",
+   "pt": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce."
+  },
+  "params": {},
+  "verdict": {
+   "es": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)",
+   "en": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)",
+   "pt": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "VolTarget_CAGR": "+8.7%",
+   "VolTarget_MaxDD": "-26%",
+   "VolTarget_retiro": "8%/año",
+   "Turtle_Calmar": 0.44,
+   "BuyHold_retiro": "9.5%/año"
+  },
+  "status": "survived",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v79",
+  "v": 79,
+  "analysis": {
+   "es": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas.",
+   "en": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas.",
+   "pt": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas."
+  },
+  "name": {
+   "es": "Régimen adaptativo v2 — histéresis/confirmación/mezcla",
+   "en": "Régimen adaptativo v2 — histéresis/confirmación/mezcla",
+   "pt": "Régimen adaptativo v2 — histéresis/confirmación/mezcla"
+  },
+  "family": "regime-switch",
+  "date": "2026-06-27T13:00:00",
+  "description": {
+   "es": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?",
+   "en": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?",
+   "pt": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?"
+  },
+  "params": {},
+  "verdict": {
+   "es": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)",
+   "en": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)",
+   "pt": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "confirmacion_OOS_Sharpe": 0.6,
+   "solo_trend_OOS": 0.59,
+   "adaptive_IS": "negativo",
+   "BuyHold_Sharpe": 0.68
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v78",
   "v": 78,
   "analysis": {
