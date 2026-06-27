@@ -1,7 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Play, Square, RefreshCw, FlaskConical, ShieldCheck, Terminal } from "lucide-react";
+import {
+  Play, Square, RefreshCw, FlaskConical, ShieldCheck, Terminal,
+  Sparkles, Code2, Check, X,
+} from "lucide-react";
 import type { LabData } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -67,6 +70,71 @@ export function LabContent({ data: initial }: { data: LabData }) {
     }, 1500);
     return () => clearInterval(id);
   }, [refresh, fetchLog]);
+
+  // --- escribir mi propia estrategia ---
+  type Spec = { name?: string; signal: { type: string; params: Record<string, unknown> } };
+  type Parsed = { spec: Spec; code: string };
+  type EvalResult = {
+    status: "survived" | "died";
+    verdict: string;
+    dsr: number;
+    mc_p: number;
+    is_: { sharpe: number };
+    oos1: { sharpe: number };
+    oos2: { sharpe: number };
+  };
+  type TestOut = { result: EvalResult; code: string; spec: Spec };
+  const [idea, setIdea] = React.useState("");
+  const [parsing, setParsing] = React.useState(false);
+  const [parsed, setParsed] = React.useState<Parsed | null>(null);
+  const [parseErr, setParseErr] = React.useState(false);
+  const [testing, setTesting] = React.useState(false);
+  const [myResult, setMyResult] = React.useState<TestOut | null>(null);
+  const [openCode, setOpenCode] = React.useState<Set<string>>(new Set());
+
+  const postLab = async (payload: object) => {
+    const r = await fetch("/api/lab", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    return r.json();
+  };
+
+  const interpret = async () => {
+    if (!idea.trim()) return;
+    setParsing(true); setParseErr(false); setParsed(null); setMyResult(null);
+    try {
+      const res = await postLab({ action: "parse", text: idea });
+      if (res?.spec) setParsed(res as Parsed);
+      else setParseErr(true);
+    } finally {
+      setParsing(false);
+    }
+  };
+
+  const confirmTest = async () => {
+    if (!parsed) return;
+    setTesting(true);
+    try {
+      const res = await postLab({ action: "test", spec: parsed.spec });
+      if (res?.result) {
+        setMyResult(res as TestOut);
+        setParsed(null);
+        setIdea("");
+        refresh();
+      }
+    } finally {
+      setTesting(false);
+    }
+  };
+
+  const toggleCode = (id: string) =>
+    setOpenCode((s) => {
+      const n = new Set(s);
+      n.has(id) ? n.delete(id) : n.add(id);
+      return n;
+    });
 
   const act = async (action: "start" | "stop") => {
     setBusy(true);
@@ -183,6 +251,80 @@ export function LabContent({ data: initial }: { data: LabData }) {
         </CardContent>
       </Card>
 
+      {/* escribir mi propia estrategia (solo localhost) */}
+      {isLocal && (
+        <Card>
+          <CardContent className="py-4">
+            <div className="mb-1 flex items-center gap-2 text-sm font-semibold">
+              <Sparkles className="size-4 text-primary" /> {t("lab.writeTitle")}
+            </div>
+            <p className="mb-3 text-xs text-muted-foreground">{t("lab.writeHint")}</p>
+
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <textarea
+                value={idea}
+                onChange={(e) => setIdea(e.target.value)}
+                placeholder={t("lab.writePlaceholder")}
+                rows={2}
+                className="flex-1 resize-y rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+              />
+              <Button
+                size="sm"
+                disabled={parsing || !idea.trim()}
+                onClick={interpret}
+                className="sm:self-start"
+              >
+                <Sparkles className="size-4" /> {parsing ? t("lab.interpreting") : t("lab.interpret")}
+              </Button>
+            </div>
+
+            {parseErr && (
+              <p className="mt-3 rounded-lg border border-dashed border-[var(--loss)]/50 px-3 py-2 text-xs text-[var(--loss)]">
+                {t("lab.parseError")}
+              </p>
+            )}
+
+            {/* interpretacion -> confirmar */}
+            {parsed && (
+              <div className="mt-3 rounded-lg border bg-muted/30 p-3">
+                <div className="mb-2 text-sm font-medium">{t("lab.parsed")}</div>
+                <pre className="mb-3 overflow-auto rounded-md bg-zinc-950 px-3 py-2 font-mono text-[11.5px] leading-relaxed whitespace-pre-wrap text-zinc-300">
+                  {parsed.code}
+                </pre>
+                <div className="flex items-center gap-2">
+                  <Button size="sm" disabled={testing} onClick={confirmTest}>
+                    <Check className="size-4" /> {testing ? t("lab.testing") : t("lab.confirmTest")}
+                  </Button>
+                  <Button size="sm" variant="ghost" disabled={testing} onClick={() => setParsed(null)}>
+                    <X className="size-4" /> {t("lab.cancel")}
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* resultado de mi estrategia */}
+            {myResult && (
+              <div className="mt-3 rounded-lg border p-3">
+                <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+                  {t("lab.yourResult")}
+                  <Badge variant={myResult.result.status === "survived" ? "survived" : "died"}>
+                    {t(`status.${myResult.result.status}`)}
+                  </Badge>
+                </div>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-xs sm:grid-cols-3">
+                  <Metric label={t("lab.colIS")} v={fmt(myResult.result.is_.sharpe)} />
+                  <Metric label={t("lab.colOOS1")} v={fmt(myResult.result.oos1.sharpe)} ok={myResult.result.oos1.sharpe > 0.3} />
+                  <Metric label={t("lab.colOOS2")} v={fmt(myResult.result.oos2.sharpe)} ok={myResult.result.oos2.sharpe > 0.3} />
+                  <Metric label={t("lab.colDSR")} v={myResult.result.dsr.toFixed(2)} ok={myResult.result.dsr > 0.95} />
+                  <Metric label={t("lab.colMC")} v={myResult.result.mc_p.toFixed(2)} ok={myResult.result.mc_p < 0.05} />
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">{myResult.result.verdict}</p>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      )}
+
       {/* tabla de resultados */}
       {data.items.length === 0 ? (
         <p className="rounded-lg border bg-card px-4 py-10 text-center text-sm text-muted-foreground">
@@ -204,24 +346,44 @@ export function LabContent({ data: initial }: { data: LabData }) {
             </thead>
             <tbody>
               {data.items.map((it) => (
-                <tr key={it.id} className="border-b last:border-0 hover:bg-muted/30">
-                  <td className="px-4 py-2.5">
-                    <div className="flex items-center gap-2">
-                      <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
-                      <span className="font-medium">{it.name}</span>
-                      <Badge variant={it.status === "survived" ? "survived" : "died"}>
-                        {t(`status.${it.status}`)}
-                      </Badge>
-                    </div>
-                    <span className="ml-6 text-xs text-muted-foreground">{it.family} · {it.type}</span>
-                  </td>
-                  <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < 0.05))}>{it.mc_p.toFixed(2)}</td>
-                  <td className="px-4 py-2.5 text-xs text-muted-foreground">{it.verdict}</td>
-                </tr>
+                <React.Fragment key={it.id}>
+                  <tr className="border-b last:border-0 hover:bg-muted/30">
+                    <td className="px-4 py-2.5">
+                      <div className="flex items-center gap-2">
+                        <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
+                        <span className="font-medium">{it.name}</span>
+                        <Badge variant={it.status === "survived" ? "survived" : "died"}>
+                          {t(`status.${it.status}`)}
+                        </Badge>
+                        {it.code && (
+                          <button
+                            onClick={() => toggleCode(it.id)}
+                            className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
+                          >
+                            <Code2 className="size-3" />
+                            {openCode.has(it.id) ? t("lab.hideCode") : t("lab.viewCode")}
+                          </button>
+                        )}
+                      </div>
+                      <span className="ml-6 text-xs text-muted-foreground">{it.family} · {it.type}</span>
+                    </td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
+                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
+                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
+                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
+                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < 0.05))}>{it.mc_p.toFixed(2)}</td>
+                    <td className="px-4 py-2.5 text-xs text-muted-foreground">{it.verdict}</td>
+                  </tr>
+                  {openCode.has(it.id) && it.code && (
+                    <tr className="border-b last:border-0">
+                      <td colSpan={7} className="px-4 pb-3">
+                        <pre className="overflow-auto rounded-md bg-zinc-950 px-3 py-2 font-mono text-[11.5px] leading-relaxed whitespace-pre-wrap text-zinc-300">
+                          {it.code}
+                        </pre>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
               ))}
             </tbody>
           </table>
@@ -238,6 +400,15 @@ function Stat({ label, value, accent }: { label: string; value: string; accent?:
     <div className="flex items-baseline gap-1.5">
       <span className={cn("text-lg font-bold tabular-nums", accent && "text-primary")}>{value}</span>
       <span className="text-muted-foreground">{label}</span>
+    </div>
+  );
+}
+
+function Metric({ label, v, ok }: { label: string; v: string; ok?: boolean }) {
+  return (
+    <div className="flex items-baseline justify-between gap-2">
+      <span className="text-muted-foreground">{label}</span>
+      <span className={cn("font-medium tabular-nums", ok === undefined ? "" : pass(ok))}>{v}</span>
     </div>
   );
 }

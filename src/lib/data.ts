@@ -57,6 +57,7 @@ export type LabItem = {
   sharpe_oos2: number;
   ret_is: number;
   mdd_is: number;
+  code?: string;
   at: string;
 };
 export type LabData = {
