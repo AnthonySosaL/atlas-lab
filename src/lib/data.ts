@@ -43,6 +43,7 @@ export type Serie = { name: string; x: string[]; y: (number | null)[] };
 
 export type LabItem = {
   id: string;
+  order: number;
   name: string;
   family: string;
   type: string;
@@ -65,6 +66,7 @@ export type LabData = {
   total: number;
   survived: number;
   state: "running" | "stopped";
+  thresholds?: { oos_min: number; dsr_min: number; mc_max: number };
   items: LabItem[];
 };
 
@@ -83,7 +85,10 @@ export const getSummary = () =>
   });
 export const getRoadmap = () => readJSON<RoadmapChapter[]>("roadmap.json", []);
 export const getLab = () =>
-  readJSON<LabData>("lab.json", { updated: "", total: 0, survived: 0, state: "stopped", items: [] });
+  readJSON<LabData>("lab.json", {
+    updated: "", total: 0, survived: 0, state: "stopped",
+    thresholds: { oos_min: 0.3, dsr_min: 0.95, mc_max: 0.05 }, items: [],
+  });
 
 export async function getExperiment(id: string) {
   const all = await getExperiments();

@@ -91,6 +91,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [testing, setTesting] = React.useState(false);
   const [myResult, setMyResult] = React.useState<TestOut | null>(null);
   const [codeModal, setCodeModal] = React.useState<{ title: string; code: string } | null>(null);
+  const [sortBy, setSortBy] = React.useState<"result" | "order">("result");
 
   // cerrar el modal con Esc
   React.useEffect(() => {
@@ -161,6 +162,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
   const running = data.state === "running";
   const filters = ["lab.f1", "lab.f2", "lab.f3", "lab.f4", "lab.f5"];
+  const thr = data.thresholds ?? { oos_min: 0.3, dsr_min: 0.95, mc_max: 0.05 };
+  const thrChips = [`> ${thr.oos_min}`, `> ${thr.oos_min}`, `> ${thr.dsr_min}`, `< ${thr.mc_max}`, ""];
+  const sortedItems =
+    sortBy === "order" ? [...data.items].sort((a, b) => a.order - b.order) : data.items;
 
   return (
     <div className="space-y-6">
@@ -246,9 +251,15 @@ export function LabContent({ data: initial }: { data: LabData }) {
                   {i + 1}
                 </span>
                 {t(k)}
+                {thrChips[i] && (
+                  <span className="rounded bg-[var(--gain)]/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-[var(--gain)]">
+                    {thrChips[i]}
+                  </span>
+                )}
               </span>
             ))}
           </div>
+          <p className="mt-3 text-xs text-muted-foreground">{t("lab.legend")}</p>
         </CardContent>
       </Card>
 
@@ -338,6 +349,22 @@ export function LabContent({ data: initial }: { data: LabData }) {
           {t("lab.empty")}
         </p>
       ) : (
+        <div className="space-y-2">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <span>{t("lab.sortLabel")}</span>
+          {(["result", "order"] as const).map((k) => (
+            <button
+              key={k}
+              onClick={() => setSortBy(k)}
+              className={cn(
+                "rounded-full border px-2.5 py-1 transition-colors",
+                sortBy === k ? "border-primary bg-primary/10 text-primary" : "hover:text-foreground"
+              )}
+            >
+              {t(k === "result" ? "lab.sortResult" : "lab.sortOrder")}
+            </button>
+          ))}
+        </div>
         <div className="overflow-x-auto rounded-xl border">
           <table className="w-full min-w-[680px] text-sm">
             <thead className="border-b bg-muted/40 text-xs text-muted-foreground">
@@ -352,7 +379,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
               </tr>
             </thead>
             <tbody>
-              {data.items.map((it) => (
+              {sortedItems.map((it) => (
                 <tr key={it.id} className="border-b last:border-0 hover:bg-muted/30">
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-2">
@@ -370,7 +397,9 @@ export function LabContent({ data: initial }: { data: LabData }) {
                         </button>
                       )}
                     </div>
-                    <span className="ml-6 text-xs text-muted-foreground">{it.family} · {it.type}</span>
+                    <span className="ml-6 text-xs text-muted-foreground">
+                      <span className="font-mono">#{it.order}</span> · {it.family} · {it.type}
+                    </span>
                   </td>
                   <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
                   <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
@@ -382,6 +411,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
               ))}
             </tbody>
           </table>
+        </div>
         </div>
       )}
 
