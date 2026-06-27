@@ -10,7 +10,14 @@
    "**#65-#68 (reversión, anomalías, lead-lag, estacionalidad):** muertas. #63/#71 overnight: real (DSR 1.0) pero los costos lo matan.",
    "**#72-#76 estrategias PÚBLICAS famosas** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **todas GANAN dinero pero NINGUNA bate al Buy&Hold** en retorno; las \"buenas\" solo recortan drawdown. El \"68-77% win rate\" es comprar el dip en un bull. Double Seven se desmorona OOS.",
    "**#78/#80 ⭐ EL GIRO ÚTIL (idea del usuario):** para INGRESO importa el **Calmar** (retorno/drawdown), no el retorno total. Y ahí las de tendencia LE GANAN al Buy&Hold. **Entregable real: VOL-TARGETING sobre índices+oro = +8.7% CAGR (≈mercado) con MaxDD −26% → retiro 8%/año.** Es beta gestionada (no alpha), pero un plan de ingreso sensato. NO necesita opciones (a diferencia del VRP).",
-   "**🧭 PLAN DE FRONTERAS — a dónde ir ahora**"
+   "**🧭 PLAN DE FRONTERAS — a dónde ir ahora**",
+   "La frontera de \"buscar alpha\" está agotada (lo confirmamos 80 veces). Las fronteras REALES que quedan:",
+   "**🥇 PIVOTE A INGRESOS (la prioridad #1, sin capital):** vender la habilidad. El laboratorio de 80 experimentos + la web atlas-lab ES el portafolio. Upwork/empleos/artículo. **Aquí está el dinero rápido y sin capital.**",
+   "**📊 Plan de ingreso con vol-targeting (para cuando haya capital):** implementarlo con ETFs en un broker normal (NO necesita opciones). ~8%/año con riesgo controlado. Es inversión sensata, no jackpot; necesita capital.",
+   "**🛡️ VRP en IBKR paper (pendiente, gratis):** testear el único edge real con opciones simuladas, sin capital. Pieza de portafolio fuerte. Requiere abrir cuenta IBKR (KYC) + IB Gateway.",
+   "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva.",
+   "**🔬 Testear estrategias nuevas a demanda:** con `/probar-estrategia`, cualquier afirmación de influencer/curso → veredicto documentado.",
+   "**❌ Lo que NO hacer:** pagar challenges de prop firms (−EV probado #9-40); pagar cursos/links de influencers (sus estrategias son las que ya probamos, muertas); buscar más \"alpha\" en datos retail (el muro es real)."
   ],
   "title_i18n": {
    "es": "ESTADO ACTUAL Y PLAN DE FRONTERAS (2026-06-27) — 80 experimentos",
@@ -26,7 +33,14 @@
     "**#65-#68 (reversión, anomalías, lead-lag, estacionalidad):** muertas. #63/#71 overnight: real (DSR 1.0) pero los costos lo matan.",
     "**#72-#76 estrategias PÚBLICAS famosas** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **todas GANAN dinero pero NINGUNA bate al Buy&Hold** en retorno; las \"buenas\" solo recortan drawdown. El \"68-77% win rate\" es comprar el dip en un bull. Double Seven se desmorona OOS.",
     "**#78/#80 ⭐ EL GIRO ÚTIL (idea del usuario):** para INGRESO importa el **Calmar** (retorno/drawdown), no el retorno total. Y ahí las de tendencia LE GANAN al Buy&Hold. **Entregable real: VOL-TARGETING sobre índices+oro = +8.7% CAGR (≈mercado) con MaxDD −26% → retiro 8%/año.** Es beta gestionada (no alpha), pero un plan de ingreso sensato. NO necesita opciones (a diferencia del VRP).",
-    "**🧭 PLAN DE FRONTERAS — a dónde ir ahora**"
+    "**🧭 PLAN DE FRONTERAS — a dónde ir ahora**",
+    "La frontera de \"buscar alpha\" está agotada (lo confirmamos 80 veces). Las fronteras REALES que quedan:",
+    "**🥇 PIVOTE A INGRESOS (la prioridad #1, sin capital):** vender la habilidad. El laboratorio de 80 experimentos + la web atlas-lab ES el portafolio. Upwork/empleos/artículo. **Aquí está el dinero rápido y sin capital.**",
+    "**📊 Plan de ingreso con vol-targeting (para cuando haya capital):** implementarlo con ETFs en un broker normal (NO necesita opciones). ~8%/año con riesgo controlado. Es inversión sensata, no jackpot; necesita capital.",
+    "**🛡️ VRP en IBKR paper (pendiente, gratis):** testear el único edge real con opciones simuladas, sin capital. Pieza de portafolio fuerte. Requiere abrir cuenta IBKR (KYC) + IB Gateway.",
+    "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva.",
+    "**🔬 Testear estrategias nuevas a demanda:** con `/probar-estrategia`, cualquier afirmación de influencer/curso → veredicto documentado.",
+    "**❌ Lo que NO hacer:** pagar challenges de prop firms (−EV probado #9-40); pagar cursos/links de influencers (sus estrategias son las que ya probamos, muertas); buscar más \"alpha\" en datos retail (el muro es real)."
    ],
    "en": [
     "**What happened #58-#80 (summary)**",
@@ -36,7 +50,14 @@
     "**#65-#68 (reversion, anomalies, lead-lag, seasonality):** dead. #63/#71 overnight: real (DSR 1.0) but costs kill it.",
     "**#72-#76 famous PUBLIC strategies** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **all MAKE money but NONE beats Buy&Hold** in return; the 'good' ones only cut drawdown. The '68-77% win rate' is buying the dip in a bull. Double Seven crumbles OOS.",
     "**#78/#80 ⭐ THE USEFUL PIVOT (user's idea):** for INCOME what matters is the **Calmar** (return/drawdown), not total return. And there the trend strategies BEAT Buy&Hold. **Real deliverable: VOL-TARGETING on indices+gold = +8.7% CAGR (≈market) with MaxDD −26% → 8%/year withdrawal.** It's managed beta (not alpha), but a sensible income plan. DOES NOT require options (unlike VRP).",
-    "**🧭 FRONTIER PLAN — where to go next**"
+    "**🧭 FRONTIER PLAN — where to go next**",
+    "The 'search for alpha' frontier is exhausted (confirmed 80 times). The REAL frontiers left:",
+    "**🥇 PIVOT TO INCOME (priority #1, no capital):** sell the skill. The 80-experiment lab + the atlas-lab site IS the portfolio. Upwork/jobs/article. **This is the fast money, no capital needed.**",
+    "**📊 Income plan with vol-targeting (for when there's capital):** implement it with ETFs in a normal broker (NO options needed). ~8%/year with controlled risk. Sensible investing, not a jackpot; needs capital.",
+    "**🛡️ VRP on IBKR paper (pending, free):** test the only real edge with simulated options, no capital. Strong portfolio piece. Requires opening an IBKR account (KYC) + IB Gateway.",
+    "**🤖 Bot forward test:** still running on demo (NOT touched until it ends) as a measurement instrument + living piece.",
+    "**🔬 Test new strategies on demand:** with `/probar-estrategia`, any influencer/course claim → documented verdict.",
+    "**❌ What NOT to do:** pay prop-firm challenges (−EV proven #9-40); pay influencer courses/links (their strategies are the ones we already tested, dead); search for more 'alpha' in retail data (the wall is real)."
    ],
    "pt": [
     "**O que aconteceu #58-#80 (resumo)**",
@@ -46,7 +67,14 @@
     "**#65-#68 (reversão, anomalias, lead-lag, sazonalidade):** mortas. #63/#71 overnight: real (DSR 1,0) mas os custos matam.",
     "**#72-#76 estratégias PÚBLICAS famosas** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **todas GANHAM dinheiro mas NENHUMA bate o Buy&Hold** em retorno; as 'boas' só cortam drawdown. O '68-77% win rate' é comprar o dip num bull. Double Seven desmorona OOS.",
     "**#78/#80 ⭐ A VIRADA ÚTIL (ideia do usuário):** para RENDA o que importa é o **Calmar** (retorno/drawdown), não o retorno total. E aí as de tendência GANHAM do Buy&Hold. **Entregável real: VOL-TARGETING sobre índices+ouro = +8,7% CAGR (≈mercado) com MaxDD −26% → retirada de 8%/ano.** É beta gerenciada (não alpha), mas um plano de renda sensato. NÃO precisa de opções (ao contrário do VRP).",
-    "**🧭 PLANO DE FRONTEIRAS — para onde ir agora**"
+    "**🧭 PLANO DE FRONTEIRAS — para onde ir agora**",
+    "A fronteira de 'buscar alpha' está esgotada (confirmado 80 vezes). As fronteiras REAIS que restam:",
+    "**🥇 PIVÔ PARA RENDA (prioridade #1, sem capital):** vender a habilidade. O laboratório de 80 experimentos + o site atlas-lab É o portfólio. Upwork/empregos/artigo. **Aqui está o dinheiro rápido, sem capital.**",
+    "**📊 Plano de renda com vol-targeting (para quando houver capital):** implementá-lo com ETFs num broker normal (NÃO precisa de opções). ~8%/ano com risco controlado. Investimento sensato, não jackpot; precisa de capital.",
+    "**🛡️ VRP em IBKR paper (pendente, grátis):** testar o único edge real com opções simuladas, sem capital. Peça de portfólio forte. Requer abrir conta IBKR (KYC) + IB Gateway.",
+    "**🤖 Forward test do bot:** continua rodando em demo (NÃO tocar até terminar) como instrumento de medição + peça viva.",
+    "**🔬 Testar estratégias novas sob demanda:** com `/probar-estrategia`, qualquer afirmação de influencer/curso → veredicto documentado.",
+    "**❌ O que NÃO fazer:** pagar challenges de prop firms (−EV provado #9-40); pagar cursos/links de influencers (suas estratégias são as que já testamos, mortas); buscar mais 'alpha' em dados retail (o muro é real)."
    ]
   }
  },
@@ -502,83 +530,6 @@
     "**matplotlib trava** nativamente neste ambiente → usar **plotly → HTML** para todos os gráficos.",
     "o conda cria novos ambientes em `D:\\envs` (não em C:). `D:\\miniconda3\\envs` não é gravável.",
     "Usar `flush=True` / `python -u` ao imprimir (se um script travar, o buffer não enviado se perde e parece \"sem saída\")."
-   ]
-  }
- },
- {
-  "title": "Próximo — Fase 3: Machine Learning",
-  "emoji": "🔜",
-  "items": [],
-  "title_i18n": {
-   "es": "Próximo — Fase 3: Machine Learning",
-   "en": "Next — Phase 3: Machine Learning",
-   "pt": "Próximo — Fase 3: Machine Learning"
-  },
-  "items_i18n": {
-   "es": [],
-   "en": [],
-   "pt": []
-  }
- },
- {
-  "title": "Más adelante",
-  "emoji": "⏳",
-  "items": [
-   "Gestión de riesgo del challenge (daily/trailing drawdown).",
-   "Forward test en demo MT5 (semanas).",
-   "Challenge real — solo con evidencia de lo anterior."
-  ],
-  "title_i18n": {
-   "es": "Más adelante",
-   "en": "Further ahead",
-   "pt": "Mais adiante"
-  },
-  "items_i18n": {
-   "es": [
-    "Gestión de riesgo del challenge (daily/trailing drawdown).",
-    "Forward test en demo MT5 (semanas).",
-    "Challenge real — solo con evidencia de lo anterior."
-   ],
-   "en": [
-    "Challenge risk management (daily/trailing drawdown).",
-    "Live demo MT5 forward test (weeks).",
-    "Real challenge — only with evidence from the above."
-   ],
-   "pt": [
-    "Gestão de risco do challenge (daily/trailing drawdown).",
-    "Forward test em demo MT5 (semanas).",
-    "Challenge real — apenas com evidência do acima."
-   ]
-  }
- },
- {
-  "title": "Backlog / ideas a probar",
-  "emoji": "💡",
-  "items": [
-   "Timeframes M5 vs H1.",
-   "Long/short vs long-only.",
-   "Filtro de régimen (operar solo en tendencia / ciertas horas)."
-  ],
-  "title_i18n": {
-   "es": "Backlog / ideas a probar",
-   "en": "Backlog / ideas to test",
-   "pt": "Backlog / ideias a testar"
-  },
-  "items_i18n": {
-   "es": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Filtro de régimen (operar solo en tendencia / ciertas horas)."
-   ],
-   "en": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Regime filter (trade only in trend / certain hours)."
-   ],
-   "pt": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Filtro de regime (operar apenas em tendência / certas horas)."
    ]
   }
  }
