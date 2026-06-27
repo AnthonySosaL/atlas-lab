@@ -90,7 +90,15 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [parseErr, setParseErr] = React.useState(false);
   const [testing, setTesting] = React.useState(false);
   const [myResult, setMyResult] = React.useState<TestOut | null>(null);
-  const [openCode, setOpenCode] = React.useState<Set<string>>(new Set());
+  const [codeModal, setCodeModal] = React.useState<{ title: string; code: string } | null>(null);
+
+  // cerrar el modal con Esc
+  React.useEffect(() => {
+    if (!codeModal) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setCodeModal(null);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [codeModal]);
 
   const postLab = async (payload: object) => {
     const r = await fetch("/api/lab", {
@@ -128,13 +136,6 @@ export function LabContent({ data: initial }: { data: LabData }) {
       setTesting(false);
     }
   };
-
-  const toggleCode = (id: string) =>
-    setOpenCode((s) => {
-      const n = new Set(s);
-      n.has(id) ? n.delete(id) : n.add(id);
-      return n;
-    });
 
   const act = async (action: "start" | "stop") => {
     setBusy(true);
@@ -310,6 +311,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
                   <Badge variant={myResult.result.status === "survived" ? "survived" : "died"}>
                     {t(`status.${myResult.result.status}`)}
                   </Badge>
+                  <button
+                    onClick={() => setCodeModal({ title: myResult.spec.name || "estrategia", code: myResult.code })}
+                    className="ml-auto inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
+                  >
+                    <Code2 className="size-3" /> {t("lab.viewCode")}
+                  </button>
                 </div>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-xs sm:grid-cols-3">
                   <Metric label={t("lab.colIS")} v={fmt(myResult.result.is_.sharpe)} />
@@ -346,44 +353,32 @@ export function LabContent({ data: initial }: { data: LabData }) {
             </thead>
             <tbody>
               {data.items.map((it) => (
-                <React.Fragment key={it.id}>
-                  <tr className="border-b last:border-0 hover:bg-muted/30">
-                    <td className="px-4 py-2.5">
-                      <div className="flex items-center gap-2">
-                        <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
-                        <span className="font-medium">{it.name}</span>
-                        <Badge variant={it.status === "survived" ? "survived" : "died"}>
-                          {t(`status.${it.status}`)}
-                        </Badge>
-                        {it.code && (
-                          <button
-                            onClick={() => toggleCode(it.id)}
-                            className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
-                          >
-                            <Code2 className="size-3" />
-                            {openCode.has(it.id) ? t("lab.hideCode") : t("lab.viewCode")}
-                          </button>
-                        )}
-                      </div>
-                      <span className="ml-6 text-xs text-muted-foreground">{it.family} · {it.type}</span>
-                    </td>
-                    <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
-                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
-                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
-                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
-                    <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < 0.05))}>{it.mc_p.toFixed(2)}</td>
-                    <td className="px-4 py-2.5 text-xs text-muted-foreground">{it.verdict}</td>
-                  </tr>
-                  {openCode.has(it.id) && it.code && (
-                    <tr className="border-b last:border-0">
-                      <td colSpan={7} className="px-4 pb-3">
-                        <pre className="overflow-auto rounded-md bg-zinc-950 px-3 py-2 font-mono text-[11.5px] leading-relaxed whitespace-pre-wrap text-zinc-300">
-                          {it.code}
-                        </pre>
-                      </td>
-                    </tr>
-                  )}
-                </React.Fragment>
+                <tr key={it.id} className="border-b last:border-0 hover:bg-muted/30">
+                  <td className="px-4 py-2.5">
+                    <div className="flex items-center gap-2">
+                      <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
+                      <span className="font-medium">{it.name}</span>
+                      <Badge variant={it.status === "survived" ? "survived" : "died"}>
+                        {t(`status.${it.status}`)}
+                      </Badge>
+                      {it.code && (
+                        <button
+                          onClick={() => setCodeModal({ title: it.name, code: it.code! })}
+                          className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
+                        >
+                          <Code2 className="size-3" /> {t("lab.viewCode")}
+                        </button>
+                      )}
+                    </div>
+                    <span className="ml-6 text-xs text-muted-foreground">{it.family} · {it.type}</span>
+                  </td>
+                  <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < 0.05))}>{it.mc_p.toFixed(2)}</td>
+                  <td className="px-4 py-2.5 text-xs text-muted-foreground">{it.verdict}</td>
+                </tr>
               ))}
             </tbody>
           </table>
@@ -391,6 +386,36 @@ export function LabContent({ data: initial }: { data: LabData }) {
       )}
 
       <p className="text-xs text-muted-foreground">{t("lab.note")}</p>
+
+      {/* modal con el codigo real */}
+      {codeModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={() => setCodeModal(null)}
+        >
+          <div
+            className="flex max-h-[80vh] w-full max-w-2xl flex-col overflow-hidden rounded-xl border bg-card shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b px-4 py-3">
+              <div className="flex min-w-0 items-center gap-2 text-sm font-semibold">
+                <Code2 className="size-4 shrink-0 text-primary" />
+                <span className="truncate">{codeModal.title}</span>
+              </div>
+              <button
+                onClick={() => setCodeModal(null)}
+                className="shrink-0 text-muted-foreground hover:text-foreground"
+                aria-label="cerrar"
+              >
+                <X className="size-4" />
+              </button>
+            </div>
+            <pre className="overflow-auto bg-zinc-950 px-4 py-3 font-mono text-[12px] leading-relaxed whitespace-pre-wrap text-zinc-300">
+              {codeModal.code}
+            </pre>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
