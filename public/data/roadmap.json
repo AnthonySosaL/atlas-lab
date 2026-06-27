@@ -14,8 +14,8 @@
   ],
   "title_i18n": {
    "es": "ESTADO ACTUAL Y PLAN DE FRONTERAS (2026-06-27) — 80 experimentos",
-   "en": "VOLATILITY CHAPTER — #51-#57 (2026-06-13)",
-   "pt": "CAPÍTULO VOLATILIDADE — #51-#57 (2026-06-13)"
+   "en": "CURRENT STATUS AND FRONTIER PLAN (2026-06-27) — 80 experiments",
+   "pt": "ESTADO ATUAL E PLANO DE FRONTEIRAS (2026-06-27) — 80 experimentos"
   },
   "items_i18n": {
    "es": [
@@ -27,6 +27,55 @@
     "**#72-#76 estrategias PÚBLICAS famosas** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **todas GANAN dinero pero NINGUNA bate al Buy&Hold** en retorno; las \"buenas\" solo recortan drawdown. El \"68-77% win rate\" es comprar el dip en un bull. Double Seven se desmorona OOS.",
     "**#78/#80 ⭐ EL GIRO ÚTIL (idea del usuario):** para INGRESO importa el **Calmar** (retorno/drawdown), no el retorno total. Y ahí las de tendencia LE GANAN al Buy&Hold. **Entregable real: VOL-TARGETING sobre índices+oro = +8.7% CAGR (≈mercado) con MaxDD −26% → retiro 8%/año.** Es beta gestionada (no alpha), pero un plan de ingreso sensato. NO necesita opciones (a diferencia del VRP).",
     "**🧭 PLAN DE FRONTERAS — a dónde ir ahora**"
+   ],
+   "en": [
+    "**What happened #58-#80 (summary)**",
+    "**#58-#63 (volatility cont. + bot):** direction still dead; bot what-if = month's beta (1m −1%, 6m +6.7%, bear 2022 −17%). Filter bug fixed (wasn't flattening in risk-off).",
+    "**#64/#69 🌟 VRP (Volatility Risk Premium):** THE ONLY REAL EDGE — selling volatility, Sharpe 1.56 (protected 1.85), 92% positive years. BUT −28σ tail (the XIV 'Volmageddon' 2018) and **requires OPTIONS + capital**. Not deployable on the CFD bot.",
+    "**#59-#62, #77, #79 regime-switch (the thesis of 'detect regime and adapt'):** tested thoroughly (trend-flat, long/short, neutral, continuous, hysteresis, confirmation, blending). **ALL FAIL executable** — the detector whipsaws; the 'right way' would require guessing the perfect regime. Detection wall confirmed.",
+    "**#65-#68 (reversion, anomalies, lead-lag, seasonality):** dead. #63/#71 overnight: real (DSR 1.0) but costs kill it.",
+    "**#72-#76 famous PUBLIC strategies** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **all MAKE money but NONE beats Buy&Hold** in return; the 'good' ones only cut drawdown. The '68-77% win rate' is buying the dip in a bull. Double Seven crumbles OOS.",
+    "**#78/#80 ⭐ THE USEFUL PIVOT (user's idea):** for INCOME what matters is the **Calmar** (return/drawdown), not total return. And there the trend strategies BEAT Buy&Hold. **Real deliverable: VOL-TARGETING on indices+gold = +8.7% CAGR (≈market) with MaxDD −26% → 8%/year withdrawal.** It's managed beta (not alpha), but a sensible income plan. DOES NOT require options (unlike VRP).",
+    "**🧭 FRONTIER PLAN — where to go next**"
+   ],
+   "pt": [
+    "**O que aconteceu #58-#80 (resumo)**",
+    "**#58-#63 (volatilidade cont. + bot):** a direção continua morta; what-if do bot = beta do mês (1m −1%, 6m +6,7%, urso 2022 −17%). Bug do filtro corrigido (não aplanava em risk-off).",
+    "**#64/#69 🌟 VRP (Volatility Risk Premium):** O ÚNICO EDGE REAL — vender volatilidade, Sharpe 1,56 (protegido 1,85), 92% anos positivos. MAS cauda −28σ (o 'Volmageddon' do XIV 2018) e **precisa de OPÇÕES + capital**. Não implantável no bot CFD.",
+    "**#59-#62, #77, #79 regime-switch (a tese de 'detectar regime e adaptar'):** testada a fundo (trend-flat, long/short, neutro, contínuo, histerese, confirmação, mistura). **TUDO FALHA executável** — o detector faz whipsaw; a 'maneira certa' exigiria adivinhar o regime perfeito. Muro de detecção confirmado.",
+    "**#65-#68 (reversão, anomalias, lead-lag, sazonalidade):** mortas. #63/#71 overnight: real (DSR 1,0) mas os custos matam.",
+    "**#72-#76 estratégias PÚBLICAS famosas** (Connors RSI2, Faber GTAA, Turtle, IBS, Double Seven): **todas GANHAM dinheiro mas NENHUMA bate o Buy&Hold** em retorno; as 'boas' só cortam drawdown. O '68-77% win rate' é comprar o dip num bull. Double Seven desmorona OOS.",
+    "**#78/#80 ⭐ A VIRADA ÚTIL (ideia do usuário):** para RENDA o que importa é o **Calmar** (retorno/drawdown), não o retorno total. E aí as de tendência GANHAM do Buy&Hold. **Entregável real: VOL-TARGETING sobre índices+ouro = +8,7% CAGR (≈mercado) com MaxDD −26% → retirada de 8%/ano.** É beta gerenciada (não alpha), mas um plano de renda sensato. NÃO precisa de opções (ao contrário do VRP).",
+    "**🧭 PLANO DE FRONTEIRAS — para onde ir agora**"
+   ]
+  }
+ },
+ {
+  "title": "CAPÍTULO VOLATILIDAD — #51-#57 (2026-06-13)",
+  "emoji": "🌊",
+  "items": [
+   "**#51 Re-test del enfoque del research (swing 5d, clasificación RSI/MACD/BB/volumen + gating híbrido):** accuracy direccional **0.516** (≈base rate, no skill), Sharpe ML +0.15 < Buy&Hold +0.37, y el **test NULO (etiquetas barajadas) rindió +0.36 ≥ el modelo real** → el \"edge\" es solo beta, no predicción. ML supera B&H en solo 27% de activos. Las tablas \"+30% Transformer / 68-72%\" de los papers son mejora relativa de métrica o leakage; se evaporan sin lookahead+costos.",
+   "**🌟 HALLAZGO POSITIVO REAL:** la **VOLATILIDAD sí es predecible** en índices/energía (R²_OOS: WTI +0.40, DAX +0.35, SP500 +0.27, FTSE +0.21). **Acierto direccional de la vol = 65-67%** (¿sube o baja la próxima semana?) vs **50% de la dirección del precio**. Correlación pred/real ~0.6. Señal sobre **RIESGO**, no dirección → sirve para sizing/control de DD, no para apostar dirección.",
+   "**#52 Vol-targeting (el único entregable):** sobre basket líquido, leverage fijo → MaxDD −68%; vol-targeting → **MaxDD −20%** (recorta 3.5×) clavando el objetivo de vol. **#55 navaja de Occam: un EWMA simple predice la vol MEJOR que el ML (R² 0.225 vs 0.113) → desplegar lo simple, el ML no aporta.**",
+   "**#53 Vol-breakout direction-agnostic ❌:** operar la *expansión* (rompa arriba/abajo) pierde (−0.44 vs B&H +0.65) — sigue exigiendo dirección (muerta). Monetizar vol pura requeriría OPCIONES (no hay en CFD retail).",
+   "**#54 Volumen NO predecible** (R²≈0, tick-volume exógeno) pero **el RANGO sí** (R² 0.15-0.27) → confirma la vol por otra puerta; útil para timing de ejecución.",
+   "**#56 Sentimiento probado 4 FORMAS** (VIX-miedo, estructura plazos VIX/VIX3M, cross-asset risk-on/off, todo junto; SPY 2010-2026, OOS+nulo): **las 4 NO superan la base rate en dirección (acc 0.55-0.58 < 0.613) y el nulo les gana** → el sentimiento **NO predice dirección**, ni el famoso \"+30%\". Para volatilidad ayuda marginal (VIX 0.395 vs precio 0.378). El sentimiento real (noticias del minuto, order flow) no está en datos gratis y es el más propenso a leakage.",
+   "**🤖 #57 ¿El vol-targeting MEJORA al bot que está corriendo?** Comparación honesta (lógica exacta del bot vivo: risk-parity + filtro macro **rezagado 1 día**, misma exposición media, COVID+2022 incluidos): bot **ACTUAL (lev fijo 2.0)** → CAGR −0.2%, Sharpe −0.00, MaxDD −17.8%; **vol-targeting** → CAGR +0.4%, Sharpe +0.10, MaxDD −17.3%. **Mejora REAL pero pequeña, sobre todo en las crisis que importan: COVID 2020 −10.3%→−9.0% y oso 2022 −13.9%→−10.9%** (peor en 2018: vol baja antes del selloff). 🔑 **Honestidad: ambas versiones hacen ~0% CAGR ejecutable (lag-1) — el vol-targeting mejora el RIESGO, no crea RETORNO.** Consistente con los 56 experimentos: no hay alpha desplegable; el bot es instrumento de medición. **Upgrade preparado (flag OFF) para aplicar tras el forward test; el bot vivo NO se toca hasta entonces.**"
+  ],
+  "title_i18n": {
+   "es": "CAPÍTULO VOLATILIDAD — #51-#57 (2026-06-13)",
+   "en": "VOLATILITY CHAPTER — #51-#57 (2026-06-13)",
+   "pt": "CAPÍTULO VOLATILIDADE — #51-#57 (2026-06-13)"
+  },
+  "items_i18n": {
+   "es": [
+    "**#51 Re-test del enfoque del research (swing 5d, clasificación RSI/MACD/BB/volumen + gating híbrido):** accuracy direccional **0.516** (≈base rate, no skill), Sharpe ML +0.15 < Buy&Hold +0.37, y el **test NULO (etiquetas barajadas) rindió +0.36 ≥ el modelo real** → el \"edge\" es solo beta, no predicción. ML supera B&H en solo 27% de activos. Las tablas \"+30% Transformer / 68-72%\" de los papers son mejora relativa de métrica o leakage; se evaporan sin lookahead+costos.",
+    "**🌟 HALLAZGO POSITIVO REAL:** la **VOLATILIDAD sí es predecible** en índices/energía (R²_OOS: WTI +0.40, DAX +0.35, SP500 +0.27, FTSE +0.21). **Acierto direccional de la vol = 65-67%** (¿sube o baja la próxima semana?) vs **50% de la dirección del precio**. Correlación pred/real ~0.6. Señal sobre **RIESGO**, no dirección → sirve para sizing/control de DD, no para apostar dirección.",
+    "**#52 Vol-targeting (el único entregable):** sobre basket líquido, leverage fijo → MaxDD −68%; vol-targeting → **MaxDD −20%** (recorta 3.5×) clavando el objetivo de vol. **#55 navaja de Occam: un EWMA simple predice la vol MEJOR que el ML (R² 0.225 vs 0.113) → desplegar lo simple, el ML no aporta.**",
+    "**#53 Vol-breakout direction-agnostic ❌:** operar la *expansión* (rompa arriba/abajo) pierde (−0.44 vs B&H +0.65) — sigue exigiendo dirección (muerta). Monetizar vol pura requeriría OPCIONES (no hay en CFD retail).",
+    "**#54 Volumen NO predecible** (R²≈0, tick-volume exógeno) pero **el RANGO sí** (R² 0.15-0.27) → confirma la vol por otra puerta; útil para timing de ejecución.",
+    "**#56 Sentimiento probado 4 FORMAS** (VIX-miedo, estructura plazos VIX/VIX3M, cross-asset risk-on/off, todo junto; SPY 2010-2026, OOS+nulo): **las 4 NO superan la base rate en dirección (acc 0.55-0.58 < 0.613) y el nulo les gana** → el sentimiento **NO predice dirección**, ni el famoso \"+30%\". Para volatilidad ayuda marginal (VIX 0.395 vs precio 0.378). El sentimiento real (noticias del minuto, order flow) no está en datos gratis y es el más propenso a leakage.",
+    "**🤖 #57 ¿El vol-targeting MEJORA al bot que está corriendo?** Comparación honesta (lógica exacta del bot vivo: risk-parity + filtro macro **rezagado 1 día**, misma exposición media, COVID+2022 incluidos): bot **ACTUAL (lev fijo 2.0)** → CAGR −0.2%, Sharpe −0.00, MaxDD −17.8%; **vol-targeting** → CAGR +0.4%, Sharpe +0.10, MaxDD −17.3%. **Mejora REAL pero pequeña, sobre todo en las crisis que importan: COVID 2020 −10.3%→−9.0% y oso 2022 −13.9%→−10.9%** (peor en 2018: vol baja antes del selloff). 🔑 **Honestidad: ambas versiones hacen ~0% CAGR ejecutable (lag-1) — el vol-targeting mejora el RIESGO, no crea RETORNO.** Consistente con los 56 experimentos: no hay alpha desplegable; el bot es instrumento de medición. **Upgrade preparado (flag OFF) para aplicar tras el forward test; el bot vivo NO se toca hasta entonces.**"
    ],
    "en": [
     "**#51 Re-test of the research approach (5-day swing, RSI/MACD/BB/volume classification + hybrid gating):** directional accuracy **0.516** (≈ base rate, no skill), Sharpe ML +0.15 < Buy&Hold +0.37, and the **NULL test (shuffled labels) scored +0.36 ≥ the real model** → the \"edge\" is just beta, not prediction. ML beats B&H in only 27% of assets. The \"+30% Transformer / 68-72%\" tables from papers are relative metric improvement or leakage; they evaporate without lookahead+costs.",
@@ -49,31 +98,31 @@
   }
  },
  {
-  "title": "CAPÍTULO VOLATILIDAD — #51-#57 (2026-06-13)",
-  "emoji": "🌊",
+  "title": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)",
+  "emoji": "🏁",
   "items": [
-   "**#51 Re-test del enfoque del research (swing 5d, clasificación RSI/MACD/BB/volumen + gating híbrido):** accuracy direccional **0.516** (≈base rate, no skill), Sharpe ML +0.15 < Buy&Hold +0.37, y el **test NULO (etiquetas barajadas) rindió +0.36 ≥ el modelo real** → el \"edge\" es solo beta, no predicción. ML supera B&H en solo 27% de activos. Las tablas \"+30% Transformer / 68-72%\" de los papers son mejora relativa de métrica o leakage; se evaporan sin lookahead+costos.",
-   "**🌟 HALLAZGO POSITIVO REAL:** la **VOLATILIDAD sí es predecible** en índices/energía (R²_OOS: WTI +0.40, DAX +0.35, SP500 +0.27, FTSE +0.21). **Acierto direccional de la vol = 65-67%** (¿sube o baja la próxima semana?) vs **50% de la dirección del precio**. Correlación pred/real ~0.6. Señal sobre **RIESGO**, no dirección → sirve para sizing/control de DD, no para apostar dirección.",
-   "**#52 Vol-targeting (el único entregable):** sobre basket líquido, leverage fijo → MaxDD −68%; vol-targeting → **MaxDD −20%** (recorta 3.5×) clavando el objetivo de vol. **#55 navaja de Occam: un EWMA simple predice la vol MEJOR que el ML (R² 0.225 vs 0.113) → desplegar lo simple, el ML no aporta.**",
-   "**#53 Vol-breakout direction-agnostic ❌:** operar la *expansión* (rompa arriba/abajo) pierde (−0.44 vs B&H +0.65) — sigue exigiendo dirección (muerta). Monetizar vol pura requeriría OPCIONES (no hay en CFD retail).",
-   "**#54 Volumen NO predecible** (R²≈0, tick-volume exógeno) pero **el RANGO sí** (R² 0.15-0.27) → confirma la vol por otra puerta; útil para timing de ejecución.",
-   "**#56 Sentimiento probado 4 FORMAS** (VIX-miedo, estructura plazos VIX/VIX3M, cross-asset risk-on/off, todo junto; SPY 2010-2026, OOS+nulo): **las 4 NO superan la base rate en dirección (acc 0.55-0.58 < 0.613) y el nulo les gana** → el sentimiento **NO predice dirección**, ni el famoso \"+30%\". Para volatilidad ayuda marginal (VIX 0.395 vs precio 0.378). El sentimiento real (noticias del minuto, order flow) no está en datos gratis y es el más propenso a leakage.",
-   "**🤖 #57 ¿El vol-targeting MEJORA al bot que está corriendo?** Comparación honesta (lógica exacta del bot vivo: risk-parity + filtro macro **rezagado 1 día**, misma exposición media, COVID+2022 incluidos): bot **ACTUAL (lev fijo 2.0)** → CAGR −0.2%, Sharpe −0.00, MaxDD −17.8%; **vol-targeting** → CAGR +0.4%, Sharpe +0.10, MaxDD −17.3%. **Mejora REAL pero pequeña, sobre todo en las crisis que importan: COVID 2020 −10.3%→−9.0% y oso 2022 −13.9%→−10.9%** (peor en 2018: vol baja antes del selloff). 🔑 **Honestidad: ambas versiones hacen ~0% CAGR ejecutable (lag-1) — el vol-targeting mejora el RIESGO, no crea RETORNO.** Consistente con los 56 experimentos: no hay alpha desplegable; el bot es instrumento de medición. **Upgrade preparado (flag OFF) para aplicar tras el forward test; el bot vivo NO se toca hasta entonces.**"
+   "**#28-30:** lag-1 + kill-switch NO basta (muere por DD acumulado en la 1ª semana del crash).",
+   "**#31-32:** filtro REACTIVO intradía (φ=0.5, implementable con poll de VIX) → **primera config ejecutable que sobrevive 2007-2024**… a x≤2 con **Sharpe 0.40, ~2%/año**.",
+   "**#33-36:** disparo temprano NO ayuda; graduado solo hasta x2.5; curva de tasas NO ayuda; **sin reglas prop la estrategia a x3+ se autodestruye igual** (MaxDD −38/−94%) → el techo es intrínseco.",
+   "**#37:** P(pasar) ejecutable: 8.6% en 1 año; 69% sin límite PERO mediana **2.3 AÑOS**.",
+   "**#38:** **Deflated Sharpe = 0.35** — el Sharpe 0.38 ejecutable NO se distingue del mejor resultado por azar tras ~40 intentos de búsqueda.",
+   "**#39:** EV nominal +$1.7k/intento pero impracticable (2.3 años, CAGR 1.9%).",
+   "**🏁 CONCLUSIÓN:** con datos retail (precio + macro gratis) y rebalanceo diario, **NO existe un edge desplegable que pase challenges de prop firm con expectativa real**. El ~7% de aprobación del sector es la matemática, no solo indisciplina. **Decisiones:** bot demo ajustado a **x2** (config ejecutable) como **instrumento de medición** (φ real, slippage, swaps); **NO comprar ningún challenge** con esta clase de estrategia. **Lo que sí vale:** el framework (cazó 6+ ilusiones, incluida la nuestra), la infraestructura completa, y el conocimiento. **Direcciones genuinas si se continúa:** carry/tasas (FRED), posicionamiento COT, o usar el basket+filtro a x1-2 como inversión personal de largo plazo (fuera de reglas prop, donde sobrevivir 18 años con ~2-4%/año + protección de crashes sí tiene valor)."
   ],
   "title_i18n": {
-   "es": "CAPÍTULO VOLATILIDAD — #51-#57 (2026-06-13)",
+   "es": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)",
    "en": "FINAL VERDICT — 40 EXPERIMENTS (2026-06-10)",
    "pt": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)"
   },
   "items_i18n": {
    "es": [
-    "**#51 Re-test del enfoque del research (swing 5d, clasificación RSI/MACD/BB/volumen + gating híbrido):** accuracy direccional **0.516** (≈base rate, no skill), Sharpe ML +0.15 < Buy&Hold +0.37, y el **test NULO (etiquetas barajadas) rindió +0.36 ≥ el modelo real** → el \"edge\" es solo beta, no predicción. ML supera B&H en solo 27% de activos. Las tablas \"+30% Transformer / 68-72%\" de los papers son mejora relativa de métrica o leakage; se evaporan sin lookahead+costos.",
-    "**🌟 HALLAZGO POSITIVO REAL:** la **VOLATILIDAD sí es predecible** en índices/energía (R²_OOS: WTI +0.40, DAX +0.35, SP500 +0.27, FTSE +0.21). **Acierto direccional de la vol = 65-67%** (¿sube o baja la próxima semana?) vs **50% de la dirección del precio**. Correlación pred/real ~0.6. Señal sobre **RIESGO**, no dirección → sirve para sizing/control de DD, no para apostar dirección.",
-    "**#52 Vol-targeting (el único entregable):** sobre basket líquido, leverage fijo → MaxDD −68%; vol-targeting → **MaxDD −20%** (recorta 3.5×) clavando el objetivo de vol. **#55 navaja de Occam: un EWMA simple predice la vol MEJOR que el ML (R² 0.225 vs 0.113) → desplegar lo simple, el ML no aporta.**",
-    "**#53 Vol-breakout direction-agnostic ❌:** operar la *expansión* (rompa arriba/abajo) pierde (−0.44 vs B&H +0.65) — sigue exigiendo dirección (muerta). Monetizar vol pura requeriría OPCIONES (no hay en CFD retail).",
-    "**#54 Volumen NO predecible** (R²≈0, tick-volume exógeno) pero **el RANGO sí** (R² 0.15-0.27) → confirma la vol por otra puerta; útil para timing de ejecución.",
-    "**#56 Sentimiento probado 4 FORMAS** (VIX-miedo, estructura plazos VIX/VIX3M, cross-asset risk-on/off, todo junto; SPY 2010-2026, OOS+nulo): **las 4 NO superan la base rate en dirección (acc 0.55-0.58 < 0.613) y el nulo les gana** → el sentimiento **NO predice dirección**, ni el famoso \"+30%\". Para volatilidad ayuda marginal (VIX 0.395 vs precio 0.378). El sentimiento real (noticias del minuto, order flow) no está en datos gratis y es el más propenso a leakage.",
-    "**🤖 #57 ¿El vol-targeting MEJORA al bot que está corriendo?** Comparación honesta (lógica exacta del bot vivo: risk-parity + filtro macro **rezagado 1 día**, misma exposición media, COVID+2022 incluidos): bot **ACTUAL (lev fijo 2.0)** → CAGR −0.2%, Sharpe −0.00, MaxDD −17.8%; **vol-targeting** → CAGR +0.4%, Sharpe +0.10, MaxDD −17.3%. **Mejora REAL pero pequeña, sobre todo en las crisis que importan: COVID 2020 −10.3%→−9.0% y oso 2022 −13.9%→−10.9%** (peor en 2018: vol baja antes del selloff). 🔑 **Honestidad: ambas versiones hacen ~0% CAGR ejecutable (lag-1) — el vol-targeting mejora el RIESGO, no crea RETORNO.** Consistente con los 56 experimentos: no hay alpha desplegable; el bot es instrumento de medición. **Upgrade preparado (flag OFF) para aplicar tras el forward test; el bot vivo NO se toca hasta entonces.**"
+    "**#28-30:** lag-1 + kill-switch NO basta (muere por DD acumulado en la 1ª semana del crash).",
+    "**#31-32:** filtro REACTIVO intradía (φ=0.5, implementable con poll de VIX) → **primera config ejecutable que sobrevive 2007-2024**… a x≤2 con **Sharpe 0.40, ~2%/año**.",
+    "**#33-36:** disparo temprano NO ayuda; graduado solo hasta x2.5; curva de tasas NO ayuda; **sin reglas prop la estrategia a x3+ se autodestruye igual** (MaxDD −38/−94%) → el techo es intrínseco.",
+    "**#37:** P(pasar) ejecutable: 8.6% en 1 año; 69% sin límite PERO mediana **2.3 AÑOS**.",
+    "**#38:** **Deflated Sharpe = 0.35** — el Sharpe 0.38 ejecutable NO se distingue del mejor resultado por azar tras ~40 intentos de búsqueda.",
+    "**#39:** EV nominal +$1.7k/intento pero impracticable (2.3 años, CAGR 1.9%).",
+    "**🏁 CONCLUSIÓN:** con datos retail (precio + macro gratis) y rebalanceo diario, **NO existe un edge desplegable que pase challenges de prop firm con expectativa real**. El ~7% de aprobación del sector es la matemática, no solo indisciplina. **Decisiones:** bot demo ajustado a **x2** (config ejecutable) como **instrumento de medición** (φ real, slippage, swaps); **NO comprar ningún challenge** con esta clase de estrategia. **Lo que sí vale:** el framework (cazó 6+ ilusiones, incluida la nuestra), la infraestructura completa, y el conocimiento. **Direcciones genuinas si se continúa:** carry/tasas (FRED), posicionamiento COT, o usar el basket+filtro a x1-2 como inversión personal de largo plazo (fuera de reglas prop, donde sobrevivir 18 años con ~2-4%/año + protección de crashes sí tiene valor)."
    ],
    "en": [
     "**#28-30:** lag-1 + kill-switch NOT enough (dies from accumulated DD in the crash's 1st week).",
@@ -96,31 +145,27 @@
   }
  },
  {
-  "title": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)",
-  "emoji": "🏁",
+  "title": "FRONTERAS MATEMÁTICAS PURAS (#46-#50, 2026-06-10) — el desafío quant",
+  "emoji": "🧮",
   "items": [
-   "**#28-30:** lag-1 + kill-switch NO basta (muere por DD acumulado en la 1ª semana del crash).",
-   "**#31-32:** filtro REACTIVO intradía (φ=0.5, implementable con poll de VIX) → **primera config ejecutable que sobrevive 2007-2024**… a x≤2 con **Sharpe 0.40, ~2%/año**.",
-   "**#33-36:** disparo temprano NO ayuda; graduado solo hasta x2.5; curva de tasas NO ayuda; **sin reglas prop la estrategia a x3+ se autodestruye igual** (MaxDD −38/−94%) → el techo es intrínseco.",
-   "**#37:** P(pasar) ejecutable: 8.6% en 1 año; 69% sin límite PERO mediana **2.3 AÑOS**.",
-   "**#38:** **Deflated Sharpe = 0.35** — el Sharpe 0.38 ejecutable NO se distingue del mejor resultado por azar tras ~40 intentos de búsqueda.",
-   "**#39:** EV nominal +$1.7k/intento pero impracticable (2.3 años, CAGR 1.9%).",
-   "**🏁 CONCLUSIÓN:** con datos retail (precio + macro gratis) y rebalanceo diario, **NO existe un edge desplegable que pase challenges de prop firm con expectativa real**. El ~7% de aprobación del sector es la matemática, no solo indisciplina. **Decisiones:** bot demo ajustado a **x2** (config ejecutable) como **instrumento de medición** (φ real, slippage, swaps); **NO comprar ningún challenge** con esta clase de estrategia. **Lo que sí vale:** el framework (cazó 6+ ilusiones, incluida la nuestra), la infraestructura completa, y el conocimiento. **Direcciones genuinas si se continúa:** carry/tasas (FRED), posicionamiento COT, o usar el basket+filtro a x1-2 como inversión personal de largo plazo (fuera de reglas prop, donde sobrevivir 18 años con ~2-4%/año + protección de crashes sí tiene valor)."
+   "**#46 Pairs/cointegración** (Engle-Granger, 6 pares relacionados: Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD) → ❌ muere ambos períodos.",
+   "**#47 Stat-arb PCA** (Avellaneda & Lee 2010: reversión de residuos vs factor común) → ❌ muere.",
+   "**#48 Momentum cross-sectional** (long top-3/short bottom-3, Jegadeesh-Titman) → ❌ muere.",
+   "**#49 Turn-of-month** (efecto calendario en índices) → ❌ muere.",
+   "**#50 CIERRE: 50 experimentos, 11 clases de estrategia — ninguna pasa el triple test con datos retail.** La ventaja de los quants institucionales no está en la matemática (es pública y la probamos): está en los **DATOS** (tick/order flow), los **COSTES** (acceso directo al mercado, no spreads CFD) y la **AMPLITUD** (miles de instrumentos). Eso es lo que el retail no puede replicar — y por eso contratan PhDs *y además* pagan millones en infraestructura de datos."
   ],
   "title_i18n": {
-   "es": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)",
+   "es": "FRONTERAS MATEMÁTICAS PURAS (#46-#50, 2026-06-10) — el desafío quant",
    "en": "PURE MATHEMATICAL FRONTIERS (#46-#50, 2026-06-10) — the quant challenge",
    "pt": "FRONTEIRAS MATEMÁTICAS PURAS (#46-#50, 2026-06-10) — o desafio quant"
   },
   "items_i18n": {
    "es": [
-    "**#28-30:** lag-1 + kill-switch NO basta (muere por DD acumulado en la 1ª semana del crash).",
-    "**#31-32:** filtro REACTIVO intradía (φ=0.5, implementable con poll de VIX) → **primera config ejecutable que sobrevive 2007-2024**… a x≤2 con **Sharpe 0.40, ~2%/año**.",
-    "**#33-36:** disparo temprano NO ayuda; graduado solo hasta x2.5; curva de tasas NO ayuda; **sin reglas prop la estrategia a x3+ se autodestruye igual** (MaxDD −38/−94%) → el techo es intrínseco.",
-    "**#37:** P(pasar) ejecutable: 8.6% en 1 año; 69% sin límite PERO mediana **2.3 AÑOS**.",
-    "**#38:** **Deflated Sharpe = 0.35** — el Sharpe 0.38 ejecutable NO se distingue del mejor resultado por azar tras ~40 intentos de búsqueda.",
-    "**#39:** EV nominal +$1.7k/intento pero impracticable (2.3 años, CAGR 1.9%).",
-    "**🏁 CONCLUSIÓN:** con datos retail (precio + macro gratis) y rebalanceo diario, **NO existe un edge desplegable que pase challenges de prop firm con expectativa real**. El ~7% de aprobación del sector es la matemática, no solo indisciplina. **Decisiones:** bot demo ajustado a **x2** (config ejecutable) como **instrumento de medición** (φ real, slippage, swaps); **NO comprar ningún challenge** con esta clase de estrategia. **Lo que sí vale:** el framework (cazó 6+ ilusiones, incluida la nuestra), la infraestructura completa, y el conocimiento. **Direcciones genuinas si se continúa:** carry/tasas (FRED), posicionamiento COT, o usar el basket+filtro a x1-2 como inversión personal de largo plazo (fuera de reglas prop, donde sobrevivir 18 años con ~2-4%/año + protección de crashes sí tiene valor)."
+    "**#46 Pairs/cointegración** (Engle-Granger, 6 pares relacionados: Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD) → ❌ muere ambos períodos.",
+    "**#47 Stat-arb PCA** (Avellaneda & Lee 2010: reversión de residuos vs factor común) → ❌ muere.",
+    "**#48 Momentum cross-sectional** (long top-3/short bottom-3, Jegadeesh-Titman) → ❌ muere.",
+    "**#49 Turn-of-month** (efecto calendario en índices) → ❌ muere.",
+    "**#50 CIERRE: 50 experimentos, 11 clases de estrategia — ninguna pasa el triple test con datos retail.** La ventaja de los quants institucionales no está en la matemática (es pública y la probamos): está en los **DATOS** (tick/order flow), los **COSTES** (acceso directo al mercado, no spreads CFD) y la **AMPLITUD** (miles de instrumentos). Eso es lo que el retail no puede replicar — y por eso contratan PhDs *y además* pagan millones en infraestructura de datos."
    ],
    "en": [
     "**#46 Pairs/cointegration** (Engle-Granger, 6 related pairs: Brent-WTI, gold-silver, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD) → ❌ dies in both periods.",
@@ -139,27 +184,23 @@
   }
  },
  {
-  "title": "FRONTERAS MATEMÁTICAS PURAS (#46-#50, 2026-06-10) — el desafío quant",
-  "emoji": "🧮",
+  "title": "FRONTERAS DE DATOS AGOTADAS (#41-#45, 2026-06-10)",
+  "emoji": "🔚",
   "items": [
-   "**#46 Pairs/cointegración** (Engle-Granger, 6 pares relacionados: Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD) → ❌ muere ambos períodos.",
-   "**#47 Stat-arb PCA** (Avellaneda & Lee 2010: reversión de residuos vs factor común) → ❌ muere.",
-   "**#48 Momentum cross-sectional** (long top-3/short bottom-3, Jegadeesh-Titman) → ❌ muere.",
-   "**#49 Turn-of-month** (efecto calendario en índices) → ❌ muere.",
-   "**#50 CIERRE: 50 experimentos, 11 clases de estrategia — ninguna pasa el triple test con datos retail.** La ventaja de los quants institucionales no está en la matemática (es pública y la probamos): está en los **DATOS** (tick/order flow), los **COSTES** (acceso directo al mercado, no spreads CFD) y la **AMPLITUD** (miles de instrumentos). Eso es lo que el retail no puede replicar — y por eso contratan PhDs *y además* pagan millones en infraestructura de datos."
+   "**#41-43 CARRY (tasas FRED, 8 monedas desde 1956):** carry puro **muere en ambos períodos** (carry crashes); ni el filtro macro ni el combo carry∧trend lo salvan en 2014-24. El factor decayó post-2008 (tasas G10 en ~0 una década) — consistente con la literatura.",
+   "**#44-45 COT (posicionamiento CFTC, 40 años, API pública):** estrategia contraria en extremos (percentil 90/10 del net non-commercial) **muere en ambos períodos**.",
+   "**CIERRE DE LA BÚSQUEDA:** probadas TODAS las clases de edge con datos gratis/retail: precio (ML+clásico), intradía de sesión, régimen macro (manual+IA), carry, COT. **Ninguna produce un edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe).** 45 experimentos. El veredicto del #40 queda confirmado y reforzado."
   ],
   "title_i18n": {
-   "es": "FRONTERAS MATEMÁTICAS PURAS (#46-#50, 2026-06-10) — el desafío quant",
+   "es": "FRONTERAS DE DATOS AGOTADAS (#41-#45, 2026-06-10)",
    "en": "EXHAUSTED DATA FRONTIERS (#41-#45, 2026-06-10)",
    "pt": "FRONTEIRAS DE DADOS ESGOTADAS (#41-#45, 2026-06-10)"
   },
   "items_i18n": {
    "es": [
-    "**#46 Pairs/cointegración** (Engle-Granger, 6 pares relacionados: Brent-WTI, oro-plata, SP500-NAS100, DAX-FTSE, EUR-GBP, AUD-NZD) → ❌ muere ambos períodos.",
-    "**#47 Stat-arb PCA** (Avellaneda & Lee 2010: reversión de residuos vs factor común) → ❌ muere.",
-    "**#48 Momentum cross-sectional** (long top-3/short bottom-3, Jegadeesh-Titman) → ❌ muere.",
-    "**#49 Turn-of-month** (efecto calendario en índices) → ❌ muere.",
-    "**#50 CIERRE: 50 experimentos, 11 clases de estrategia — ninguna pasa el triple test con datos retail.** La ventaja de los quants institucionales no está en la matemática (es pública y la probamos): está en los **DATOS** (tick/order flow), los **COSTES** (acceso directo al mercado, no spreads CFD) y la **AMPLITUD** (miles de instrumentos). Eso es lo que el retail no puede replicar — y por eso contratan PhDs *y además* pagan millones en infraestructura de datos."
+    "**#41-43 CARRY (tasas FRED, 8 monedas desde 1956):** carry puro **muere en ambos períodos** (carry crashes); ni el filtro macro ni el combo carry∧trend lo salvan en 2014-24. El factor decayó post-2008 (tasas G10 en ~0 una década) — consistente con la literatura.",
+    "**#44-45 COT (posicionamiento CFTC, 40 años, API pública):** estrategia contraria en extremos (percentil 90/10 del net non-commercial) **muere en ambos períodos**.",
+    "**CIERRE DE LA BÚSQUEDA:** probadas TODAS las clases de edge con datos gratis/retail: precio (ML+clásico), intradía de sesión, régimen macro (manual+IA), carry, COT. **Ninguna produce un edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe).** 45 experimentos. El veredicto del #40 queda confirmado y reforzado."
    ],
    "en": [
     "**#41-43 CARRY (FRED rates, 8 currencies since 1956):** pure carry **dies in both periods** (carry crashes); neither the macro filter nor the carry∧trend combo saves it in 2014-24. The factor decayed post-2008 (G10 rates at ~0 for a decade) — consistent with the literature.",
@@ -174,23 +215,27 @@
   }
  },
  {
-  "title": "FRONTERAS DE DATOS AGOTADAS (#41-#45, 2026-06-10)",
-  "emoji": "🔚",
+  "title": "HALLAZGO CRÍTICO (2026-06-10, experimentos #23-#27 de IA)",
+  "emoji": "🚨",
   "items": [
-   "**#41-43 CARRY (tasas FRED, 8 monedas desde 1956):** carry puro **muere en ambos períodos** (carry crashes); ni el filtro macro ni el combo carry∧trend lo salvan en 2014-24. El factor decayó post-2008 (tasas G10 en ~0 una década) — consistente con la literatura.",
-   "**#44-45 COT (posicionamiento CFTC, 40 años, API pública):** estrategia contraria en extremos (percentil 90/10 del net non-commercial) **muere en ambos períodos**.",
-   "**CIERRE DE LA BÚSQUEDA:** probadas TODAS las clases de edge con datos gratis/retail: precio (ML+clásico), intradía de sesión, régimen macro (manual+IA), carry, COT. **Ninguna produce un edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe).** 45 experimentos. El veredicto del #40 queda confirmado y reforzado."
+   "**#23/#24 (régimen supervisado XGB, walk-forward):** el ML NO puede aprender a predecir crashes (~2 ejemplos por época; cada crisis distinta). Murió en COVID ambas versiones.",
+   "**#25 (ML sizing con protección manual intacta):** sobrevive ambos períodos pero NO aporta (1.20/1.04 vs 1.23/1.06). Las features macro no tienen señal de retorno a 10d más allá del on/off.",
+   "**#26 (re-entrada \"pánico enfriándose\"):** Sharpe 2.12/1.53 en toda la grilla… **ERA LOOKAHEAD**.",
+   "**#27 (prueba de fuego lag-1): al rezagar TODAS las señales 1 día (la versión físicamente ejecutable), la re-entrada Y EL PROPIO BASELINE MUEREN en ambos períodos.** El backtest del filtro usaba el VIX del cierre de hoy para evitar el crash de hoy (clarividencia). El bot real (decide 17:30 → aplica mañana) es la versión lag-1. **Mecanismo de muerte: un solo día de crash a x3-4 rompe el límite diario 5% antes de que el filtro pueda reaccionar.**",
+   "**IMPLICACIÓN PARA EL BOT VIVO (demo):** su protección real es más débil de lo que decía el backtest. El forward test sigue (demo, $0 riesgo) pero **el go/no-go AHORA exige resolver esto antes de cualquier challenge**: (a) **kill-switch intradía** (monitor que aplana si la pérdida del día toca ~−3%, implementable en MT5) y/o (b) leverage menor, y **re-validar el backtest en versión lag-1 + kill-switch**. Nada de dinero real hasta que la versión ejecutable sobreviva las crisis en backtest."
   ],
   "title_i18n": {
-   "es": "FRONTERAS DE DATOS AGOTADAS (#41-#45, 2026-06-10)",
+   "es": "HALLAZGO CRÍTICO (2026-06-10, experimentos #23-#27 de IA)",
    "en": "CRITICAL FINDING (2026-06-10, AI experiments #23-#27)",
    "pt": "ACHADO CRÍTICO (2026-06-10, experimentos #23-#27 de IA)"
   },
   "items_i18n": {
    "es": [
-    "**#41-43 CARRY (tasas FRED, 8 monedas desde 1956):** carry puro **muere en ambos períodos** (carry crashes); ni el filtro macro ni el combo carry∧trend lo salvan en 2014-24. El factor decayó post-2008 (tasas G10 en ~0 una década) — consistente con la literatura.",
-    "**#44-45 COT (posicionamiento CFTC, 40 años, API pública):** estrategia contraria en extremos (percentil 90/10 del net non-commercial) **muere en ambos períodos**.",
-    "**CIERRE DE LA BÚSQUEDA:** probadas TODAS las clases de edge con datos gratis/retail: precio (ML+clásico), intradía de sesión, régimen macro (manual+IA), carry, COT. **Ninguna produce un edge ejecutable que pase el triple test (OOS temporal + lag ejecutable + Deflated Sharpe).** 45 experimentos. El veredicto del #40 queda confirmado y reforzado."
+    "**#23/#24 (régimen supervisado XGB, walk-forward):** el ML NO puede aprender a predecir crashes (~2 ejemplos por época; cada crisis distinta). Murió en COVID ambas versiones.",
+    "**#25 (ML sizing con protección manual intacta):** sobrevive ambos períodos pero NO aporta (1.20/1.04 vs 1.23/1.06). Las features macro no tienen señal de retorno a 10d más allá del on/off.",
+    "**#26 (re-entrada \"pánico enfriándose\"):** Sharpe 2.12/1.53 en toda la grilla… **ERA LOOKAHEAD**.",
+    "**#27 (prueba de fuego lag-1): al rezagar TODAS las señales 1 día (la versión físicamente ejecutable), la re-entrada Y EL PROPIO BASELINE MUEREN en ambos períodos.** El backtest del filtro usaba el VIX del cierre de hoy para evitar el crash de hoy (clarividencia). El bot real (decide 17:30 → aplica mañana) es la versión lag-1. **Mecanismo de muerte: un solo día de crash a x3-4 rompe el límite diario 5% antes de que el filtro pueda reaccionar.**",
+    "**IMPLICACIÓN PARA EL BOT VIVO (demo):** su protección real es más débil de lo que decía el backtest. El forward test sigue (demo, $0 riesgo) pero **el go/no-go AHORA exige resolver esto antes de cualquier challenge**: (a) **kill-switch intradía** (monitor que aplana si la pérdida del día toca ~−3%, implementable en MT5) y/o (b) leverage menor, y **re-validar el backtest en versión lag-1 + kill-switch**. Nada de dinero real hasta que la versión ejecutable sobreviva las crisis en backtest."
    ],
    "en": [
     "**#23/#24 (supervised regime XGB, walk-forward):** ML CANNOT learn to predict crashes (~2 examples per epoch; each crisis is different). Died in COVID in both versions.",
@@ -209,27 +254,63 @@
   }
  },
  {
-  "title": "HALLAZGO CRÍTICO (2026-06-10, experimentos #23-#27 de IA)",
-  "emoji": "🚨",
+  "title": "En curso — PIVOTE a gestión de riesgo (la decisión sabia)",
+  "emoji": "🟢",
   "items": [
-   "**#23/#24 (régimen supervisado XGB, walk-forward):** el ML NO puede aprender a predecir crashes (~2 ejemplos por época; cada crisis distinta). Murió en COVID ambas versiones.",
-   "**#25 (ML sizing con protección manual intacta):** sobrevive ambos períodos pero NO aporta (1.20/1.04 vs 1.23/1.06). Las features macro no tienen señal de retorno a 10d más allá del on/off.",
-   "**#26 (re-entrada \"pánico enfriándose\"):** Sharpe 2.12/1.53 en toda la grilla… **ERA LOOKAHEAD**.",
-   "**#27 (prueba de fuego lag-1): al rezagar TODAS las señales 1 día (la versión físicamente ejecutable), la re-entrada Y EL PROPIO BASELINE MUEREN en ambos períodos.** El backtest del filtro usaba el VIX del cierre de hoy para evitar el crash de hoy (clarividencia). El bot real (decide 17:30 → aplica mañana) es la versión lag-1. **Mecanismo de muerte: un solo día de crash a x3-4 rompe el límite diario 5% antes de que el filtro pueda reaccionar.**",
-   "**IMPLICACIÓN PARA EL BOT VIVO (demo):** su protección real es más débil de lo que decía el backtest. El forward test sigue (demo, $0 riesgo) pero **el go/no-go AHORA exige resolver esto antes de cualquier challenge**: (a) **kill-switch intradía** (monitor que aplana si la pérdida del día toca ~−3%, implementable en MT5) y/o (b) leverage menor, y **re-validar el backtest en versión lag-1 + kill-switch**. Nada de dinero real hasta que la versión ejecutable sobreviva las crisis en backtest."
+   "**#9 Simulador de challenge de prop firm (Monte Carlo, reglas FTMO).** 🔑 **Hallazgo clave: pasar es 90% SIZING + disciplina, no alfa.** Cartera diversificada bien dimensionada (~x4 leverage) → **~48% de pasar** (período alcista) y **~38% incluso en mercado plano sin edge** — vs el ~7% real (que falla por errores de comportamiento). El challenge es un problema de barreras (+10% vs −10% DD): con el tamaño correcto llegar arriba antes que abajo es casi 50/50 aunque no haya edge.",
+   "**Implicación:** el edge REAL del juego no es alfa secreta — es **sizing óptimo + disciplina + diversificación + respetar el drawdown.** Eso lo podemos ingenierizar y validar con el simulador.",
+   "**#10 Risk parity + sizing:** P(pasar) se topa en **~45-48% sin alfa** (risk parity no mejora a equal-weight; lo que manda es la vol total para alcanzar el objetivo a tiempo).",
+   "**#11 EV REAL (challenge + fase fondeada):** con sizing **AGRESIVO para pasar (~x4, 48%)** y **CONSERVADOR ya fondeado (~x2)**, **EV ≈ +$5,900 por intento** (E[cobro fondeada] ~$13k, 79% logra algún payout). 🔑 Insight operativo: **agresivo para pasar, conservador para ordeñar.**",
+   "**⚠️ Honestidad:** ese EV usa solo el **BETA del basket 2019-24 (período alcista)** → optimista; en mercado feo cae. Es levantar **beta largo diversificado con el capital de la prop firm**, no alfa. +EV solo si el mercado acompaña.",
+   "**🤖 El \"algoritmo\" emergente (objetivo dinero):** cartera diversificada risk-controlled, **sizing dual** (challenge ~x4 / fondeo ~x2), respetando daily + trailing drawdown.",
+   "**#12 Stress test por régimen (la verdad):** el EV se mantiene **positivo en TODOS los regímenes malos** (2008 +$1.2k, 2022 +$2.1k, COVID +$3.4k) pero **se desploma a ≈breakeven en bear sostenido** (USD/commodities 2014-15: +$122). → Resiliente pero **dependiente del régimen**: hace dinero (~$4k) en mercados normales/buenos, sobrevive (≈breakeven) en los feos. ⚠️ El bootstrap por bloques **subestima los drawdowns sostenidos** → en un bear real probablemente sea peor.",
+   "**🏁 VEREDICTO (bootstrap):** +EV en expectativa y resiliente en el Monte Carlo... **pero el bootstrap engañaba.**",
+   "**#13/#14 Bot desplegable + forward-test en PAPEL (datos reales, `D:\\ATLAS\\bot\\`):** el bot (risk-parity long + reglas FTMO) a **x2 REVENTÓ en el COVID (mar-2020)**; con **vol targeting reventó PEOR** (vol rezagada → leverage alto justo antes del crash súbito). El bootstrap no reproducía el crash sostenido y correlacionado.",
+   "**🧨 LA TENSIÓN FUNDAMENTAL (barrido de leverage, camino real):** **x1 sobrevive** el COVID pero solo ~3.4%/año (demasiado lento para pasar); **x1.5+ revienta** en el crash. → **La leverage necesaria para PASAR (+10% rápido) es exactamente la que te REVIENTA en un crash.** Por eso ~93% fallan: las reglas de drawdown están calibradas para esto.",
+   "**🏁 VERDAD (precio-solo):** con métodos de precio-solo, aprobar fondeos es apuesta de alta varianza (revientas en crashes). El edge robusto exigía **datos distintos**. → Así que fuimos por eso:",
+   "**🌟 GIRO — opción 2 (datos distintos al precio): #15/#16 FILTRO DE RÉGIMEN MACRO (VIX + crédito HYG/LQD, gratis de Yahoo).** El bot se pone FLAT cuando hay señal de riesgo cross-asset (VIX alto/spike o crédito deteriorándose) — info que NO está en el precio. **Validado 2014-2024 (4 crisis: 2015/2018/2020/2022): sobrevive TODO, Sharpe ~1.2, +267%, y los años de crisis (2020 +22.8%, 2022 +11.6%) son POSITIVOS.** Test anti-overfit (grilla VIX 24-32 × credit_win 40-80): **las 9 combinaciones sobreviven con Sharpe 1.04-1.47** → robusto, NO curve-fit. **PRIMER edge candidato REAL de toda la investigación: rompe la tensión fundamental** (sobrevive crashes con leverage suficiente para pasar). Código: `src\\exp_macro15/16`, `bot\\regime.py`, `src\\download_macro.py`.",
+   "**Honestidad (sigue):** ~50% flat (timing on/off), long-biased (beta cronometrada por macro, favorecido por el bull 2014-24), un solo camino histórico, falta forward test live + chequeo de trailing-DD. PERO pasó los tests que mataron a las 14 pruebas anteriores.",
+   "**#17 EL DINERO REAL + el factor decisivo: EL LÍMITE DE TIEMPO.** A **30 días** el filtro es DEMASIADO LENTO (P(pasar) 1-6%, EV negativo): es robusto pero de baja vol, lo opuesto a lo que premia un challenge corto. PERO la matriz leverage×tiempo lo aclara: **x4 SIN límite de tiempo = 82% de pasar** (252d=74%, 120d=46%). 🔑 **CLAVE: usar una prop firm SIN LÍMITE DE TIEMPO** (FTMO/FundedNext modernas ya no tienen límite). El bot con filtro grindea a +10% en unos meses SIN reventar (el filtro evita los crashes) → **~82% pasar** y EV ≈ **+$9k/intento**. Con límite de 1 mes NO sirve.",
+   "**🏆 RESULTADO FINAL (objetivo dinero):** candidato real y validado = **basket diversificado (15) + risk parity + filtro de régimen macro (VIX/crédito) + ~x4 leverage, en una firm SIN límite de tiempo.** ~82% de pasar, sobrevive 4 crisis, robusto a parámetros (Sharpe 1.0-1.5). Honestidad: un solo camino histórico, beta cronometrada, **falta forward test en vivo (demo MT5)** y ojo con firms de *trailing* drawdown.",
+   "**✅ FORWARD TEST EN VIVO (2026-06-09):** demo Pepperstone conectada (login 61540806), adaptador `bot/mt5_broker.py` + runner `bot/run_live.py`, **15 posiciones abiertas** (x4, RISK-ON, VIX 19.9). Correr `run_live.py --live` 1 vez/día. MCP \"atlas-mt5\" creado para manejarlo desde Claude (carga al reiniciar sesión).",
+   "**#18-#20 Variantes sobre la línea ganadora (2026-06-09):**",
+   "**#18 Rotación defensiva (oro+yen en risk-off)** ❌ reventó en 2014 — los refugios también caen; **quedar FLAT es lo correcto**.",
+   "**#20 Trend long/short (cortos por momentum)** ❌ reventó — los cortos restan; long-only filtrado gana.",
+   "**#19 Leverage graduado por VIX** ✅ **mejor que el baseline** (+592%, Sharpe 1.39 vs 1.23). Sensibilidad: **robusto SOLO con calma estricta** — VIX<14 aguanta x4/x5/x6 (Sharpe 1.39-1.60); VIX<16 muere a x6; VIX<18 muere a x5. Frontera coherente de riesgo. **Candidato de upgrade: VIX<14 → x5, si no x3, risk-off flat.** ⚠️ MaxDD ~15% desde pico → solo firms de drawdown ESTÁTICO (no trailing).",
+   "**Decisión:** el bot live en demo **se queda con la config validada actual** (no se cambia a mitad del forward test); #19-estricto queda como **upgrade candidato** a validar después.",
+   "**#22 IA para régimen — HMM (Hamilton 1989) vs filtro manual:** HMM gaussiano 2 estados (sin lookahead: refit expandiente, prob filtrada) **PERDIÓ**: solo reventó en ambos períodos (Sharpe −2.31 / −0.54); combinado no mejora (0.98/1.03 vs 1.23/1.06 del manual). 🔑 **Lección: el edge está en los DATOS forward-looking (VIX implícita, crédito), no en la sofisticación del algoritmo** — el HMM ve la vol realizada y llega tarde. De paso se arregló el bug raíz del env (MKL→OpenBLAS: np.cov/matmul crasheaban con 0xc06d007f). Próximos candidatos de IA (cola): #23 modelo SUPERVISADO de régimen con features macro + walk-forward (aprende los umbrales en vez de fijarlos a mano; la vara es 1.23/1.06), #24 meta-labeling para SIZING sobre la estrategia que sí funciona.",
+   "**#21 OOS TEMPORAL PURO 2007-2013 (anti-overfit definitivo, pedido por el usuario):** reglas fijadas en 2014-2024 aplicadas SIN CAMBIOS a fechas jamás vistas (crisis 2008 + euro 2011; basket reducido 7FX+oro). **Resultado: el filtro SOBREVIVE la crisis de 2008 con TODOS los años positivos (2008: +9%), Sharpe 1.06** (vs 1.23 in-sample — degradación pequeña y sana). El control sin filtro murió en 2008. **El edge generaliza a través de ~18 años y 6 crisis → NO está sobreentrenado.** Riesgo restante: que el futuro cambie de régimen — eso lo cubre el forward test en demo."
   ],
   "title_i18n": {
-   "es": "HALLAZGO CRÍTICO (2026-06-10, experimentos #23-#27 de IA)",
+   "es": "En curso — PIVOTE a gestión de riesgo (la decisión sabia)",
    "en": "In progress — PIVOT to risk management (the wise decision)",
    "pt": "Em curso — PIVÔ para gestão de risco (a decisão sábia)"
   },
   "items_i18n": {
    "es": [
-    "**#23/#24 (régimen supervisado XGB, walk-forward):** el ML NO puede aprender a predecir crashes (~2 ejemplos por época; cada crisis distinta). Murió en COVID ambas versiones.",
-    "**#25 (ML sizing con protección manual intacta):** sobrevive ambos períodos pero NO aporta (1.20/1.04 vs 1.23/1.06). Las features macro no tienen señal de retorno a 10d más allá del on/off.",
-    "**#26 (re-entrada \"pánico enfriándose\"):** Sharpe 2.12/1.53 en toda la grilla… **ERA LOOKAHEAD**.",
-    "**#27 (prueba de fuego lag-1): al rezagar TODAS las señales 1 día (la versión físicamente ejecutable), la re-entrada Y EL PROPIO BASELINE MUEREN en ambos períodos.** El backtest del filtro usaba el VIX del cierre de hoy para evitar el crash de hoy (clarividencia). El bot real (decide 17:30 → aplica mañana) es la versión lag-1. **Mecanismo de muerte: un solo día de crash a x3-4 rompe el límite diario 5% antes de que el filtro pueda reaccionar.**",
-    "**IMPLICACIÓN PARA EL BOT VIVO (demo):** su protección real es más débil de lo que decía el backtest. El forward test sigue (demo, $0 riesgo) pero **el go/no-go AHORA exige resolver esto antes de cualquier challenge**: (a) **kill-switch intradía** (monitor que aplana si la pérdida del día toca ~−3%, implementable en MT5) y/o (b) leverage menor, y **re-validar el backtest en versión lag-1 + kill-switch**. Nada de dinero real hasta que la versión ejecutable sobreviva las crisis en backtest."
+    "**#9 Simulador de challenge de prop firm (Monte Carlo, reglas FTMO).** 🔑 **Hallazgo clave: pasar es 90% SIZING + disciplina, no alfa.** Cartera diversificada bien dimensionada (~x4 leverage) → **~48% de pasar** (período alcista) y **~38% incluso en mercado plano sin edge** — vs el ~7% real (que falla por errores de comportamiento). El challenge es un problema de barreras (+10% vs −10% DD): con el tamaño correcto llegar arriba antes que abajo es casi 50/50 aunque no haya edge.",
+    "**Implicación:** el edge REAL del juego no es alfa secreta — es **sizing óptimo + disciplina + diversificación + respetar el drawdown.** Eso lo podemos ingenierizar y validar con el simulador.",
+    "**#10 Risk parity + sizing:** P(pasar) se topa en **~45-48% sin alfa** (risk parity no mejora a equal-weight; lo que manda es la vol total para alcanzar el objetivo a tiempo).",
+    "**#11 EV REAL (challenge + fase fondeada):** con sizing **AGRESIVO para pasar (~x4, 48%)** y **CONSERVADOR ya fondeado (~x2)**, **EV ≈ +$5,900 por intento** (E[cobro fondeada] ~$13k, 79% logra algún payout). 🔑 Insight operativo: **agresivo para pasar, conservador para ordeñar.**",
+    "**⚠️ Honestidad:** ese EV usa solo el **BETA del basket 2019-24 (período alcista)** → optimista; en mercado feo cae. Es levantar **beta largo diversificado con el capital de la prop firm**, no alfa. +EV solo si el mercado acompaña.",
+    "**🤖 El \"algoritmo\" emergente (objetivo dinero):** cartera diversificada risk-controlled, **sizing dual** (challenge ~x4 / fondeo ~x2), respetando daily + trailing drawdown.",
+    "**#12 Stress test por régimen (la verdad):** el EV se mantiene **positivo en TODOS los regímenes malos** (2008 +$1.2k, 2022 +$2.1k, COVID +$3.4k) pero **se desploma a ≈breakeven en bear sostenido** (USD/commodities 2014-15: +$122). → Resiliente pero **dependiente del régimen**: hace dinero (~$4k) en mercados normales/buenos, sobrevive (≈breakeven) en los feos. ⚠️ El bootstrap por bloques **subestima los drawdowns sostenidos** → en un bear real probablemente sea peor.",
+    "**🏁 VEREDICTO (bootstrap):** +EV en expectativa y resiliente en el Monte Carlo... **pero el bootstrap engañaba.**",
+    "**#13/#14 Bot desplegable + forward-test en PAPEL (datos reales, `D:\\ATLAS\\bot\\`):** el bot (risk-parity long + reglas FTMO) a **x2 REVENTÓ en el COVID (mar-2020)**; con **vol targeting reventó PEOR** (vol rezagada → leverage alto justo antes del crash súbito). El bootstrap no reproducía el crash sostenido y correlacionado.",
+    "**🧨 LA TENSIÓN FUNDAMENTAL (barrido de leverage, camino real):** **x1 sobrevive** el COVID pero solo ~3.4%/año (demasiado lento para pasar); **x1.5+ revienta** en el crash. → **La leverage necesaria para PASAR (+10% rápido) es exactamente la que te REVIENTA en un crash.** Por eso ~93% fallan: las reglas de drawdown están calibradas para esto.",
+    "**🏁 VERDAD (precio-solo):** con métodos de precio-solo, aprobar fondeos es apuesta de alta varianza (revientas en crashes). El edge robusto exigía **datos distintos**. → Así que fuimos por eso:",
+    "**🌟 GIRO — opción 2 (datos distintos al precio): #15/#16 FILTRO DE RÉGIMEN MACRO (VIX + crédito HYG/LQD, gratis de Yahoo).** El bot se pone FLAT cuando hay señal de riesgo cross-asset (VIX alto/spike o crédito deteriorándose) — info que NO está en el precio. **Validado 2014-2024 (4 crisis: 2015/2018/2020/2022): sobrevive TODO, Sharpe ~1.2, +267%, y los años de crisis (2020 +22.8%, 2022 +11.6%) son POSITIVOS.** Test anti-overfit (grilla VIX 24-32 × credit_win 40-80): **las 9 combinaciones sobreviven con Sharpe 1.04-1.47** → robusto, NO curve-fit. **PRIMER edge candidato REAL de toda la investigación: rompe la tensión fundamental** (sobrevive crashes con leverage suficiente para pasar). Código: `src\\exp_macro15/16`, `bot\\regime.py`, `src\\download_macro.py`.",
+    "**Honestidad (sigue):** ~50% flat (timing on/off), long-biased (beta cronometrada por macro, favorecido por el bull 2014-24), un solo camino histórico, falta forward test live + chequeo de trailing-DD. PERO pasó los tests que mataron a las 14 pruebas anteriores.",
+    "**#17 EL DINERO REAL + el factor decisivo: EL LÍMITE DE TIEMPO.** A **30 días** el filtro es DEMASIADO LENTO (P(pasar) 1-6%, EV negativo): es robusto pero de baja vol, lo opuesto a lo que premia un challenge corto. PERO la matriz leverage×tiempo lo aclara: **x4 SIN límite de tiempo = 82% de pasar** (252d=74%, 120d=46%). 🔑 **CLAVE: usar una prop firm SIN LÍMITE DE TIEMPO** (FTMO/FundedNext modernas ya no tienen límite). El bot con filtro grindea a +10% en unos meses SIN reventar (el filtro evita los crashes) → **~82% pasar** y EV ≈ **+$9k/intento**. Con límite de 1 mes NO sirve.",
+    "**🏆 RESULTADO FINAL (objetivo dinero):** candidato real y validado = **basket diversificado (15) + risk parity + filtro de régimen macro (VIX/crédito) + ~x4 leverage, en una firm SIN límite de tiempo.** ~82% de pasar, sobrevive 4 crisis, robusto a parámetros (Sharpe 1.0-1.5). Honestidad: un solo camino histórico, beta cronometrada, **falta forward test en vivo (demo MT5)** y ojo con firms de *trailing* drawdown.",
+    "**✅ FORWARD TEST EN VIVO (2026-06-09):** demo Pepperstone conectada (login 61540806), adaptador `bot/mt5_broker.py` + runner `bot/run_live.py`, **15 posiciones abiertas** (x4, RISK-ON, VIX 19.9). Correr `run_live.py --live` 1 vez/día. MCP \"atlas-mt5\" creado para manejarlo desde Claude (carga al reiniciar sesión).",
+    "**#18-#20 Variantes sobre la línea ganadora (2026-06-09):**",
+    "**#18 Rotación defensiva (oro+yen en risk-off)** ❌ reventó en 2014 — los refugios también caen; **quedar FLAT es lo correcto**.",
+    "**#20 Trend long/short (cortos por momentum)** ❌ reventó — los cortos restan; long-only filtrado gana.",
+    "**#19 Leverage graduado por VIX** ✅ **mejor que el baseline** (+592%, Sharpe 1.39 vs 1.23). Sensibilidad: **robusto SOLO con calma estricta** — VIX<14 aguanta x4/x5/x6 (Sharpe 1.39-1.60); VIX<16 muere a x6; VIX<18 muere a x5. Frontera coherente de riesgo. **Candidato de upgrade: VIX<14 → x5, si no x3, risk-off flat.** ⚠️ MaxDD ~15% desde pico → solo firms de drawdown ESTÁTICO (no trailing).",
+    "**Decisión:** el bot live en demo **se queda con la config validada actual** (no se cambia a mitad del forward test); #19-estricto queda como **upgrade candidato** a validar después.",
+    "**#22 IA para régimen — HMM (Hamilton 1989) vs filtro manual:** HMM gaussiano 2 estados (sin lookahead: refit expandiente, prob filtrada) **PERDIÓ**: solo reventó en ambos períodos (Sharpe −2.31 / −0.54); combinado no mejora (0.98/1.03 vs 1.23/1.06 del manual). 🔑 **Lección: el edge está en los DATOS forward-looking (VIX implícita, crédito), no en la sofisticación del algoritmo** — el HMM ve la vol realizada y llega tarde. De paso se arregló el bug raíz del env (MKL→OpenBLAS: np.cov/matmul crasheaban con 0xc06d007f). Próximos candidatos de IA (cola): #23 modelo SUPERVISADO de régimen con features macro + walk-forward (aprende los umbrales en vez de fijarlos a mano; la vara es 1.23/1.06), #24 meta-labeling para SIZING sobre la estrategia que sí funciona.",
+    "**#21 OOS TEMPORAL PURO 2007-2013 (anti-overfit definitivo, pedido por el usuario):** reglas fijadas en 2014-2024 aplicadas SIN CAMBIOS a fechas jamás vistas (crisis 2008 + euro 2011; basket reducido 7FX+oro). **Resultado: el filtro SOBREVIVE la crisis de 2008 con TODOS los años positivos (2008: +9%), Sharpe 1.06** (vs 1.23 in-sample — degradación pequeña y sana). El control sin filtro murió en 2008. **El edge generaliza a través de ~18 años y 6 crisis → NO está sobreentrenado.** Riesgo restante: que el futuro cambie de régimen — eso lo cubre el forward test en demo."
    ],
    "en": [
     "**#9 Prop firm challenge simulator (Monte Carlo, FTMO rules).** 🔑 **Key finding: passing is 90% SIZING + discipline, not alpha.** Well-sized diversified portfolio (~x4 leverage) → **~48% chance of passing** (bullish period) and **~38% even in a flat market with no edge** — vs the ~7% real rate (failing due to behavioral errors). The challenge is a barrier problem (+10% vs −10% DD): with the right size, reaching the top before the bottom is almost 50/50 even with no edge.",
@@ -284,63 +365,29 @@
   }
  },
  {
-  "title": "En curso — PIVOTE a gestión de riesgo (la decisión sabia)",
-  "emoji": "🟢",
+  "title": "️ Bitácora (lo hecho)",
+  "emoji": "🗓",
   "items": [
-   "**#9 Simulador de challenge de prop firm (Monte Carlo, reglas FTMO).** 🔑 **Hallazgo clave: pasar es 90% SIZING + disciplina, no alfa.** Cartera diversificada bien dimensionada (~x4 leverage) → **~48% de pasar** (período alcista) y **~38% incluso en mercado plano sin edge** — vs el ~7% real (que falla por errores de comportamiento). El challenge es un problema de barreras (+10% vs −10% DD): con el tamaño correcto llegar arriba antes que abajo es casi 50/50 aunque no haya edge.",
-   "**Implicación:** el edge REAL del juego no es alfa secreta — es **sizing óptimo + disciplina + diversificación + respetar el drawdown.** Eso lo podemos ingenierizar y validar con el simulador.",
-   "**#10 Risk parity + sizing:** P(pasar) se topa en **~45-48% sin alfa** (risk parity no mejora a equal-weight; lo que manda es la vol total para alcanzar el objetivo a tiempo).",
-   "**#11 EV REAL (challenge + fase fondeada):** con sizing **AGRESIVO para pasar (~x4, 48%)** y **CONSERVADOR ya fondeado (~x2)**, **EV ≈ +$5,900 por intento** (E[cobro fondeada] ~$13k, 79% logra algún payout). 🔑 Insight operativo: **agresivo para pasar, conservador para ordeñar.**",
-   "**⚠️ Honestidad:** ese EV usa solo el **BETA del basket 2019-24 (período alcista)** → optimista; en mercado feo cae. Es levantar **beta largo diversificado con el capital de la prop firm**, no alfa. +EV solo si el mercado acompaña.",
-   "**🤖 El \"algoritmo\" emergente (objetivo dinero):** cartera diversificada risk-controlled, **sizing dual** (challenge ~x4 / fondeo ~x2), respetando daily + trailing drawdown.",
-   "**#12 Stress test por régimen (la verdad):** el EV se mantiene **positivo en TODOS los regímenes malos** (2008 +$1.2k, 2022 +$2.1k, COVID +$3.4k) pero **se desploma a ≈breakeven en bear sostenido** (USD/commodities 2014-15: +$122). → Resiliente pero **dependiente del régimen**: hace dinero (~$4k) en mercados normales/buenos, sobrevive (≈breakeven) en los feos. ⚠️ El bootstrap por bloques **subestima los drawdowns sostenidos** → en un bear real probablemente sea peor.",
-   "**🏁 VEREDICTO (bootstrap):** +EV en expectativa y resiliente en el Monte Carlo... **pero el bootstrap engañaba.**",
-   "**#13/#14 Bot desplegable + forward-test en PAPEL (datos reales, `D:\\ATLAS\\bot\\`):** el bot (risk-parity long + reglas FTMO) a **x2 REVENTÓ en el COVID (mar-2020)**; con **vol targeting reventó PEOR** (vol rezagada → leverage alto justo antes del crash súbito). El bootstrap no reproducía el crash sostenido y correlacionado.",
-   "**🧨 LA TENSIÓN FUNDAMENTAL (barrido de leverage, camino real):** **x1 sobrevive** el COVID pero solo ~3.4%/año (demasiado lento para pasar); **x1.5+ revienta** en el crash. → **La leverage necesaria para PASAR (+10% rápido) es exactamente la que te REVIENTA en un crash.** Por eso ~93% fallan: las reglas de drawdown están calibradas para esto.",
-   "**🏁 VERDAD (precio-solo):** con métodos de precio-solo, aprobar fondeos es apuesta de alta varianza (revientas en crashes). El edge robusto exigía **datos distintos**. → Así que fuimos por eso:",
-   "**🌟 GIRO — opción 2 (datos distintos al precio): #15/#16 FILTRO DE RÉGIMEN MACRO (VIX + crédito HYG/LQD, gratis de Yahoo).** El bot se pone FLAT cuando hay señal de riesgo cross-asset (VIX alto/spike o crédito deteriorándose) — info que NO está en el precio. **Validado 2014-2024 (4 crisis: 2015/2018/2020/2022): sobrevive TODO, Sharpe ~1.2, +267%, y los años de crisis (2020 +22.8%, 2022 +11.6%) son POSITIVOS.** Test anti-overfit (grilla VIX 24-32 × credit_win 40-80): **las 9 combinaciones sobreviven con Sharpe 1.04-1.47** → robusto, NO curve-fit. **PRIMER edge candidato REAL de toda la investigación: rompe la tensión fundamental** (sobrevive crashes con leverage suficiente para pasar). Código: `src\\exp_macro15/16`, `bot\\regime.py`, `src\\download_macro.py`.",
-   "**Honestidad (sigue):** ~50% flat (timing on/off), long-biased (beta cronometrada por macro, favorecido por el bull 2014-24), un solo camino histórico, falta forward test live + chequeo de trailing-DD. PERO pasó los tests que mataron a las 14 pruebas anteriores.",
-   "**#17 EL DINERO REAL + el factor decisivo: EL LÍMITE DE TIEMPO.** A **30 días** el filtro es DEMASIADO LENTO (P(pasar) 1-6%, EV negativo): es robusto pero de baja vol, lo opuesto a lo que premia un challenge corto. PERO la matriz leverage×tiempo lo aclara: **x4 SIN límite de tiempo = 82% de pasar** (252d=74%, 120d=46%). 🔑 **CLAVE: usar una prop firm SIN LÍMITE DE TIEMPO** (FTMO/FundedNext modernas ya no tienen límite). El bot con filtro grindea a +10% en unos meses SIN reventar (el filtro evita los crashes) → **~82% pasar** y EV ≈ **+$9k/intento**. Con límite de 1 mes NO sirve.",
-   "**🏆 RESULTADO FINAL (objetivo dinero):** candidato real y validado = **basket diversificado (15) + risk parity + filtro de régimen macro (VIX/crédito) + ~x4 leverage, en una firm SIN límite de tiempo.** ~82% de pasar, sobrevive 4 crisis, robusto a parámetros (Sharpe 1.0-1.5). Honestidad: un solo camino histórico, beta cronometrada, **falta forward test en vivo (demo MT5)** y ojo con firms de *trailing* drawdown.",
-   "**✅ FORWARD TEST EN VIVO (2026-06-09):** demo Pepperstone conectada (login 61540806), adaptador `bot/mt5_broker.py` + runner `bot/run_live.py`, **15 posiciones abiertas** (x4, RISK-ON, VIX 19.9). Correr `run_live.py --live` 1 vez/día. MCP \"atlas-mt5\" creado para manejarlo desde Claude (carga al reiniciar sesión).",
-   "**#18-#20 Variantes sobre la línea ganadora (2026-06-09):**",
-   "**#18 Rotación defensiva (oro+yen en risk-off)** ❌ reventó en 2014 — los refugios también caen; **quedar FLAT es lo correcto**.",
-   "**#20 Trend long/short (cortos por momentum)** ❌ reventó — los cortos restan; long-only filtrado gana.",
-   "**#19 Leverage graduado por VIX** ✅ **mejor que el baseline** (+592%, Sharpe 1.39 vs 1.23). Sensibilidad: **robusto SOLO con calma estricta** — VIX<14 aguanta x4/x5/x6 (Sharpe 1.39-1.60); VIX<16 muere a x6; VIX<18 muere a x5. Frontera coherente de riesgo. **Candidato de upgrade: VIX<14 → x5, si no x3, risk-off flat.** ⚠️ MaxDD ~15% desde pico → solo firms de drawdown ESTÁTICO (no trailing).",
-   "**Decisión:** el bot live en demo **se queda con la config validada actual** (no se cambia a mitad del forward test); #19-estricto queda como **upgrade candidato** a validar después.",
-   "**#22 IA para régimen — HMM (Hamilton 1989) vs filtro manual:** HMM gaussiano 2 estados (sin lookahead: refit expandiente, prob filtrada) **PERDIÓ**: solo reventó en ambos períodos (Sharpe −2.31 / −0.54); combinado no mejora (0.98/1.03 vs 1.23/1.06 del manual). 🔑 **Lección: el edge está en los DATOS forward-looking (VIX implícita, crédito), no en la sofisticación del algoritmo** — el HMM ve la vol realizada y llega tarde. De paso se arregló el bug raíz del env (MKL→OpenBLAS: np.cov/matmul crasheaban con 0xc06d007f). Próximos candidatos de IA (cola): #23 modelo SUPERVISADO de régimen con features macro + walk-forward (aprende los umbrales en vez de fijarlos a mano; la vara es 1.23/1.06), #24 meta-labeling para SIZING sobre la estrategia que sí funciona.",
-   "**#21 OOS TEMPORAL PURO 2007-2013 (anti-overfit definitivo, pedido por el usuario):** reglas fijadas en 2014-2024 aplicadas SIN CAMBIOS a fechas jamás vistas (crisis 2008 + euro 2011; basket reducido 7FX+oro). **Resultado: el filtro SOBREVIVE la crisis de 2008 con TODOS los años positivos (2008: +9%), Sharpe 1.06** (vs 1.23 in-sample — degradación pequeña y sana). El control sin filtro murió en 2008. **El edge generaliza a través de ~18 años y 6 crisis → NO está sobreentrenado.** Riesgo restante: que el futuro cambie de régimen — eso lo cubre el forward test en demo."
+   "**2026-06-07 — Arranque del proyecto ATLAS**",
+   "**Decisiones:** forex **EUR/USD**, validación primero, Windows nativo, **$0 en challenges** hasta tener evidencia.",
+   "**Infraestructura:** entorno conda `atlas` en `D:` · PyTorch 2.11 + CUDA 12.8 verificado en la **RTX 5070**.",
+   "**Datos:** EUR/USD 2019–2024 (Dukascopy) → 2.23M velas M1 + M5 + H1, 0 NaNs, índice UTC.",
+   "**Baseline SMA 20/50** (la vara): Sharpe 0.245, +7.9% en 6 años; gana al Buy&Hold pero los costes se comen el edge.",
+   "**Dashboard \"ATLAS Lab\"** + acceso directo en el escritorio + botón de apagar."
   ],
   "title_i18n": {
-   "es": "En curso — PIVOTE a gestión de riesgo (la decisión sabia)",
+   "es": "️ Bitácora (lo hecho)",
    "en": "Lab journal (what was done)",
    "pt": "Diário (o que foi feito)"
   },
   "items_i18n": {
    "es": [
-    "**#9 Simulador de challenge de prop firm (Monte Carlo, reglas FTMO).** 🔑 **Hallazgo clave: pasar es 90% SIZING + disciplina, no alfa.** Cartera diversificada bien dimensionada (~x4 leverage) → **~48% de pasar** (período alcista) y **~38% incluso en mercado plano sin edge** — vs el ~7% real (que falla por errores de comportamiento). El challenge es un problema de barreras (+10% vs −10% DD): con el tamaño correcto llegar arriba antes que abajo es casi 50/50 aunque no haya edge.",
-    "**Implicación:** el edge REAL del juego no es alfa secreta — es **sizing óptimo + disciplina + diversificación + respetar el drawdown.** Eso lo podemos ingenierizar y validar con el simulador.",
-    "**#10 Risk parity + sizing:** P(pasar) se topa en **~45-48% sin alfa** (risk parity no mejora a equal-weight; lo que manda es la vol total para alcanzar el objetivo a tiempo).",
-    "**#11 EV REAL (challenge + fase fondeada):** con sizing **AGRESIVO para pasar (~x4, 48%)** y **CONSERVADOR ya fondeado (~x2)**, **EV ≈ +$5,900 por intento** (E[cobro fondeada] ~$13k, 79% logra algún payout). 🔑 Insight operativo: **agresivo para pasar, conservador para ordeñar.**",
-    "**⚠️ Honestidad:** ese EV usa solo el **BETA del basket 2019-24 (período alcista)** → optimista; en mercado feo cae. Es levantar **beta largo diversificado con el capital de la prop firm**, no alfa. +EV solo si el mercado acompaña.",
-    "**🤖 El \"algoritmo\" emergente (objetivo dinero):** cartera diversificada risk-controlled, **sizing dual** (challenge ~x4 / fondeo ~x2), respetando daily + trailing drawdown.",
-    "**#12 Stress test por régimen (la verdad):** el EV se mantiene **positivo en TODOS los regímenes malos** (2008 +$1.2k, 2022 +$2.1k, COVID +$3.4k) pero **se desploma a ≈breakeven en bear sostenido** (USD/commodities 2014-15: +$122). → Resiliente pero **dependiente del régimen**: hace dinero (~$4k) en mercados normales/buenos, sobrevive (≈breakeven) en los feos. ⚠️ El bootstrap por bloques **subestima los drawdowns sostenidos** → en un bear real probablemente sea peor.",
-    "**🏁 VEREDICTO (bootstrap):** +EV en expectativa y resiliente en el Monte Carlo... **pero el bootstrap engañaba.**",
-    "**#13/#14 Bot desplegable + forward-test en PAPEL (datos reales, `D:\\ATLAS\\bot\\`):** el bot (risk-parity long + reglas FTMO) a **x2 REVENTÓ en el COVID (mar-2020)**; con **vol targeting reventó PEOR** (vol rezagada → leverage alto justo antes del crash súbito). El bootstrap no reproducía el crash sostenido y correlacionado.",
-    "**🧨 LA TENSIÓN FUNDAMENTAL (barrido de leverage, camino real):** **x1 sobrevive** el COVID pero solo ~3.4%/año (demasiado lento para pasar); **x1.5+ revienta** en el crash. → **La leverage necesaria para PASAR (+10% rápido) es exactamente la que te REVIENTA en un crash.** Por eso ~93% fallan: las reglas de drawdown están calibradas para esto.",
-    "**🏁 VERDAD (precio-solo):** con métodos de precio-solo, aprobar fondeos es apuesta de alta varianza (revientas en crashes). El edge robusto exigía **datos distintos**. → Así que fuimos por eso:",
-    "**🌟 GIRO — opción 2 (datos distintos al precio): #15/#16 FILTRO DE RÉGIMEN MACRO (VIX + crédito HYG/LQD, gratis de Yahoo).** El bot se pone FLAT cuando hay señal de riesgo cross-asset (VIX alto/spike o crédito deteriorándose) — info que NO está en el precio. **Validado 2014-2024 (4 crisis: 2015/2018/2020/2022): sobrevive TODO, Sharpe ~1.2, +267%, y los años de crisis (2020 +22.8%, 2022 +11.6%) son POSITIVOS.** Test anti-overfit (grilla VIX 24-32 × credit_win 40-80): **las 9 combinaciones sobreviven con Sharpe 1.04-1.47** → robusto, NO curve-fit. **PRIMER edge candidato REAL de toda la investigación: rompe la tensión fundamental** (sobrevive crashes con leverage suficiente para pasar). Código: `src\\exp_macro15/16`, `bot\\regime.py`, `src\\download_macro.py`.",
-    "**Honestidad (sigue):** ~50% flat (timing on/off), long-biased (beta cronometrada por macro, favorecido por el bull 2014-24), un solo camino histórico, falta forward test live + chequeo de trailing-DD. PERO pasó los tests que mataron a las 14 pruebas anteriores.",
-    "**#17 EL DINERO REAL + el factor decisivo: EL LÍMITE DE TIEMPO.** A **30 días** el filtro es DEMASIADO LENTO (P(pasar) 1-6%, EV negativo): es robusto pero de baja vol, lo opuesto a lo que premia un challenge corto. PERO la matriz leverage×tiempo lo aclara: **x4 SIN límite de tiempo = 82% de pasar** (252d=74%, 120d=46%). 🔑 **CLAVE: usar una prop firm SIN LÍMITE DE TIEMPO** (FTMO/FundedNext modernas ya no tienen límite). El bot con filtro grindea a +10% en unos meses SIN reventar (el filtro evita los crashes) → **~82% pasar** y EV ≈ **+$9k/intento**. Con límite de 1 mes NO sirve.",
-    "**🏆 RESULTADO FINAL (objetivo dinero):** candidato real y validado = **basket diversificado (15) + risk parity + filtro de régimen macro (VIX/crédito) + ~x4 leverage, en una firm SIN límite de tiempo.** ~82% de pasar, sobrevive 4 crisis, robusto a parámetros (Sharpe 1.0-1.5). Honestidad: un solo camino histórico, beta cronometrada, **falta forward test en vivo (demo MT5)** y ojo con firms de *trailing* drawdown.",
-    "**✅ FORWARD TEST EN VIVO (2026-06-09):** demo Pepperstone conectada (login 61540806), adaptador `bot/mt5_broker.py` + runner `bot/run_live.py`, **15 posiciones abiertas** (x4, RISK-ON, VIX 19.9). Correr `run_live.py --live` 1 vez/día. MCP \"atlas-mt5\" creado para manejarlo desde Claude (carga al reiniciar sesión).",
-    "**#18-#20 Variantes sobre la línea ganadora (2026-06-09):**",
-    "**#18 Rotación defensiva (oro+yen en risk-off)** ❌ reventó en 2014 — los refugios también caen; **quedar FLAT es lo correcto**.",
-    "**#20 Trend long/short (cortos por momentum)** ❌ reventó — los cortos restan; long-only filtrado gana.",
-    "**#19 Leverage graduado por VIX** ✅ **mejor que el baseline** (+592%, Sharpe 1.39 vs 1.23). Sensibilidad: **robusto SOLO con calma estricta** — VIX<14 aguanta x4/x5/x6 (Sharpe 1.39-1.60); VIX<16 muere a x6; VIX<18 muere a x5. Frontera coherente de riesgo. **Candidato de upgrade: VIX<14 → x5, si no x3, risk-off flat.** ⚠️ MaxDD ~15% desde pico → solo firms de drawdown ESTÁTICO (no trailing).",
-    "**Decisión:** el bot live en demo **se queda con la config validada actual** (no se cambia a mitad del forward test); #19-estricto queda como **upgrade candidato** a validar después.",
-    "**#22 IA para régimen — HMM (Hamilton 1989) vs filtro manual:** HMM gaussiano 2 estados (sin lookahead: refit expandiente, prob filtrada) **PERDIÓ**: solo reventó en ambos períodos (Sharpe −2.31 / −0.54); combinado no mejora (0.98/1.03 vs 1.23/1.06 del manual). 🔑 **Lección: el edge está en los DATOS forward-looking (VIX implícita, crédito), no en la sofisticación del algoritmo** — el HMM ve la vol realizada y llega tarde. De paso se arregló el bug raíz del env (MKL→OpenBLAS: np.cov/matmul crasheaban con 0xc06d007f). Próximos candidatos de IA (cola): #23 modelo SUPERVISADO de régimen con features macro + walk-forward (aprende los umbrales en vez de fijarlos a mano; la vara es 1.23/1.06), #24 meta-labeling para SIZING sobre la estrategia que sí funciona.",
-    "**#21 OOS TEMPORAL PURO 2007-2013 (anti-overfit definitivo, pedido por el usuario):** reglas fijadas en 2014-2024 aplicadas SIN CAMBIOS a fechas jamás vistas (crisis 2008 + euro 2011; basket reducido 7FX+oro). **Resultado: el filtro SOBREVIVE la crisis de 2008 con TODOS los años positivos (2008: +9%), Sharpe 1.06** (vs 1.23 in-sample — degradación pequeña y sana). El control sin filtro murió en 2008. **El edge generaliza a través de ~18 años y 6 crisis → NO está sobreentrenado.** Riesgo restante: que el futuro cambie de régimen — eso lo cubre el forward test en demo."
+    "**2026-06-07 — Arranque del proyecto ATLAS**",
+    "**Decisiones:** forex **EUR/USD**, validación primero, Windows nativo, **$0 en challenges** hasta tener evidencia.",
+    "**Infraestructura:** entorno conda `atlas` en `D:` · PyTorch 2.11 + CUDA 12.8 verificado en la **RTX 5070**.",
+    "**Datos:** EUR/USD 2019–2024 (Dukascopy) → 2.23M velas M1 + M5 + H1, 0 NaNs, índice UTC.",
+    "**Baseline SMA 20/50** (la vara): Sharpe 0.245, +7.9% en 6 años; gana al Buy&Hold pero los costes se comen el edge.",
+    "**Dashboard \"ATLAS Lab\"** + acceso directo en el escritorio + botón de apagar."
    ],
    "en": [
     "**2026-06-07 — ATLAS project kickoff**",
@@ -361,29 +408,41 @@
   }
  },
  {
-  "title": "️ Bitácora (lo hecho)",
-  "emoji": "🗓",
+  "title": "Ya probado — NO repetir",
+  "emoji": "✅",
   "items": [
-   "**2026-06-07 — Arranque del proyecto ATLAS**",
-   "**Decisiones:** forex **EUR/USD**, validación primero, Windows nativo, **$0 en challenges** hasta tener evidencia.",
-   "**Infraestructura:** entorno conda `atlas` en `D:` · PyTorch 2.11 + CUDA 12.8 verificado en la **RTX 5070**.",
-   "**Datos:** EUR/USD 2019–2024 (Dukascopy) → 2.23M velas M1 + M5 + H1, 0 NaNs, índice UTC.",
-   "**Baseline SMA 20/50** (la vara): Sharpe 0.245, +7.9% en 6 años; gana al Buy&Hold pero los costes se comen el edge.",
-   "**Dashboard \"ATLAS Lab\"** + acceso directo en el escritorio + botón de apagar."
+   "**SMA 20/50 long/short H1 con costes** → Sharpe 0.245, PF 1.04. Edge real pero mínimo; **la frecuencia/costes lo matan**. Vale solo como vara mínima.",
+   "**Buy & Hold EUR/USD 2019–2024** → −9.7%. No sirve como estrategia (referencia nada más).",
+   "**ML #1 — XGBoost triple-barrier (predice dirección, opera cada barra)** → OOS **aleatorio** (MCPT p=0.78, PSR 0.19). Ruido + costes.",
+   "**ML #2 — XGBoost + filtro de convicción (prob>0.5)** → **Sharpe −4.79** (1822 trades; ~33% del capital en costes; la \"confianza\" del modelo se invierte OOS).",
+   "**ML #3 — Meta-labeling (SMA primario + XGBoost filtro)** → señal **~aleatoria** (PSR 0.51, p=0.48), Sharpe −3.28 por costes.",
+   "**#4 — Time-Series Momentum diario (Moskowitz et al. 2012)** → la frecuencia diaria **resolvió los costes** (solo 75 trades) PERO señal **~aleatoria** (PSR 0.47, p=0.58), Sharpe ≈ 0.",
+   "**#5 — TSMOM de CARTERA (15 activos) + volatility scaling** → Sharpe −0.105, retorno −4.1%. El MCPT p=0.003 parecía prometedor PERO el **Sharpe SIN costes es −0.003 (cero edge real)** y el **buy&hold del basket dio Sharpe 0.392** (le ganó a la estrategia). El p bajo era **artefacto de turnover**, no alpha.",
+   "**#6 — ORB breakout de sesión (Londres/NY) EUR/USD M1** → Sharpe −0.96, **pierde SIGNIFICATIVO** (PSR 0.009). Los breakouts en FX fallan → el par **revierte** intradía (al revés que los índices; Zarattini & Aziz 2023).",
+   "**#7 — Reversión de sesión (fade) EUR/USD M1** → Sharpe NETO −1.99 PERO **Sharpe SIN costes +0.20** → ¡hay un edge de reversión **REAL** pero los costes (1553 trades) lo entierran!",
+   "**#8 — Meta-labeling (López de Prado) sobre la reversión #7** → falló: out-of-sample el edge **gross es −1.41 (negativo)**. El \"+0.20\" de #7 era de los años tempranos.",
+   "**Desglose por año de la reversión (gross / neto):** 2019 +1.85/−1.66 · 2020 −0.74/−2.62 · 2021 +1.15/−1.64 · 2022 +0.86/−0.68 · 2023 −0.60/−2.92 · 2024 −1.34/−4.29. → El gross **cambia de signo año a año y decae**; neto negativo SIEMPRE. **No es un edge — es ruido que promedió +0.20.**",
+   "**🏁 CONCLUSIÓN DE LA BÚSQUEDA DE EDGE (8 pruebas):** con métodos de *precio-solo* sobre EUR/USD 2019–2024 **no existe un edge robusto, out-of-sample, que sobreviva a costes.** Los \"edges\" eran ilusiones in-sample, cazadas con rigor (chequeos sin costes, OOS, por año). **Seguir probando variantes sobre los MISMOS datos = riesgo de hallar un ganador FALSO por azar** (multiple testing — justo lo que López de Prado advierte con el Deflated Sharpe / \"por qué fallan los fondos ML\"). **Decisión deliberada (anti curve-fitting): parar la minería ciega de precio.** Caminos reales: (1) **datos distintos** (calendario/noticias, order-flow, cross-asset) donde viven los edges; (2) reformular hacia **gestión de riesgo disciplinada sobre un edge modesto/beta** + el framework de validación riguroso — que es, en sí, el mayor valor (nos protegió de pagar challenges con estrategias falsas)."
   ],
   "title_i18n": {
-   "es": "️ Bitácora (lo hecho)",
+   "es": "Ya probado — NO repetir",
    "en": "Already tested — DO NOT repeat",
    "pt": "Já testado — NÃO repetir"
   },
   "items_i18n": {
    "es": [
-    "**2026-06-07 — Arranque del proyecto ATLAS**",
-    "**Decisiones:** forex **EUR/USD**, validación primero, Windows nativo, **$0 en challenges** hasta tener evidencia.",
-    "**Infraestructura:** entorno conda `atlas` en `D:` · PyTorch 2.11 + CUDA 12.8 verificado en la **RTX 5070**.",
-    "**Datos:** EUR/USD 2019–2024 (Dukascopy) → 2.23M velas M1 + M5 + H1, 0 NaNs, índice UTC.",
-    "**Baseline SMA 20/50** (la vara): Sharpe 0.245, +7.9% en 6 años; gana al Buy&Hold pero los costes se comen el edge.",
-    "**Dashboard \"ATLAS Lab\"** + acceso directo en el escritorio + botón de apagar."
+    "**SMA 20/50 long/short H1 con costes** → Sharpe 0.245, PF 1.04. Edge real pero mínimo; **la frecuencia/costes lo matan**. Vale solo como vara mínima.",
+    "**Buy & Hold EUR/USD 2019–2024** → −9.7%. No sirve como estrategia (referencia nada más).",
+    "**ML #1 — XGBoost triple-barrier (predice dirección, opera cada barra)** → OOS **aleatorio** (MCPT p=0.78, PSR 0.19). Ruido + costes.",
+    "**ML #2 — XGBoost + filtro de convicción (prob>0.5)** → **Sharpe −4.79** (1822 trades; ~33% del capital en costes; la \"confianza\" del modelo se invierte OOS).",
+    "**ML #3 — Meta-labeling (SMA primario + XGBoost filtro)** → señal **~aleatoria** (PSR 0.51, p=0.48), Sharpe −3.28 por costes.",
+    "**#4 — Time-Series Momentum diario (Moskowitz et al. 2012)** → la frecuencia diaria **resolvió los costes** (solo 75 trades) PERO señal **~aleatoria** (PSR 0.47, p=0.58), Sharpe ≈ 0.",
+    "**#5 — TSMOM de CARTERA (15 activos) + volatility scaling** → Sharpe −0.105, retorno −4.1%. El MCPT p=0.003 parecía prometedor PERO el **Sharpe SIN costes es −0.003 (cero edge real)** y el **buy&hold del basket dio Sharpe 0.392** (le ganó a la estrategia). El p bajo era **artefacto de turnover**, no alpha.",
+    "**#6 — ORB breakout de sesión (Londres/NY) EUR/USD M1** → Sharpe −0.96, **pierde SIGNIFICATIVO** (PSR 0.009). Los breakouts en FX fallan → el par **revierte** intradía (al revés que los índices; Zarattini & Aziz 2023).",
+    "**#7 — Reversión de sesión (fade) EUR/USD M1** → Sharpe NETO −1.99 PERO **Sharpe SIN costes +0.20** → ¡hay un edge de reversión **REAL** pero los costes (1553 trades) lo entierran!",
+    "**#8 — Meta-labeling (López de Prado) sobre la reversión #7** → falló: out-of-sample el edge **gross es −1.41 (negativo)**. El \"+0.20\" de #7 era de los años tempranos.",
+    "**Desglose por año de la reversión (gross / neto):** 2019 +1.85/−1.66 · 2020 −0.74/−2.62 · 2021 +1.15/−1.64 · 2022 +0.86/−0.68 · 2023 −0.60/−2.92 · 2024 −1.34/−4.29. → El gross **cambia de signo año a año y decae**; neto negativo SIEMPRE. **No es un edge — es ruido que promedió +0.20.**",
+    "**🏁 CONCLUSIÓN DE LA BÚSQUEDA DE EDGE (8 pruebas):** con métodos de *precio-solo* sobre EUR/USD 2019–2024 **no existe un edge robusto, out-of-sample, que sobreviva a costes.** Los \"edges\" eran ilusiones in-sample, cazadas con rigor (chequeos sin costes, OOS, por año). **Seguir probando variantes sobre los MISMOS datos = riesgo de hallar un ganador FALSO por azar** (multiple testing — justo lo que López de Prado advierte con el Deflated Sharpe / \"por qué fallan los fondos ML\"). **Decisión deliberada (anti curve-fitting): parar la minería ciega de precio.** Caminos reales: (1) **datos distintos** (calendario/noticias, order-flow, cross-asset) donde viven los edges; (2) reformular hacia **gestión de riesgo disciplinada sobre un edge modesto/beta** + el framework de validación riguroso — que es, en sí, el mayor valor (nos protegió de pagar challenges con estrategias falsas)."
    ],
    "en": [
     "**SMA 20/50 long/short H1 with costs** → Sharpe 0.245, PF 1.04. Real but minimal edge; **frequency/costs kill it**. Useful only as minimum benchmark.",
@@ -416,41 +475,23 @@
   }
  },
  {
-  "title": "Ya probado — NO repetir",
-  "emoji": "✅",
+  "title": "Gotchas técnicos del entorno",
+  "emoji": "🧰",
   "items": [
-   "**SMA 20/50 long/short H1 con costes** → Sharpe 0.245, PF 1.04. Edge real pero mínimo; **la frecuencia/costes lo matan**. Vale solo como vara mínima.",
-   "**Buy & Hold EUR/USD 2019–2024** → −9.7%. No sirve como estrategia (referencia nada más).",
-   "**ML #1 — XGBoost triple-barrier (predice dirección, opera cada barra)** → OOS **aleatorio** (MCPT p=0.78, PSR 0.19). Ruido + costes.",
-   "**ML #2 — XGBoost + filtro de convicción (prob>0.5)** → **Sharpe −4.79** (1822 trades; ~33% del capital en costes; la \"confianza\" del modelo se invierte OOS).",
-   "**ML #3 — Meta-labeling (SMA primario + XGBoost filtro)** → señal **~aleatoria** (PSR 0.51, p=0.48), Sharpe −3.28 por costes.",
-   "**#4 — Time-Series Momentum diario (Moskowitz et al. 2012)** → la frecuencia diaria **resolvió los costes** (solo 75 trades) PERO señal **~aleatoria** (PSR 0.47, p=0.58), Sharpe ≈ 0.",
-   "**#5 — TSMOM de CARTERA (15 activos) + volatility scaling** → Sharpe −0.105, retorno −4.1%. El MCPT p=0.003 parecía prometedor PERO el **Sharpe SIN costes es −0.003 (cero edge real)** y el **buy&hold del basket dio Sharpe 0.392** (le ganó a la estrategia). El p bajo era **artefacto de turnover**, no alpha.",
-   "**#6 — ORB breakout de sesión (Londres/NY) EUR/USD M1** → Sharpe −0.96, **pierde SIGNIFICATIVO** (PSR 0.009). Los breakouts en FX fallan → el par **revierte** intradía (al revés que los índices; Zarattini & Aziz 2023).",
-   "**#7 — Reversión de sesión (fade) EUR/USD M1** → Sharpe NETO −1.99 PERO **Sharpe SIN costes +0.20** → ¡hay un edge de reversión **REAL** pero los costes (1553 trades) lo entierran!",
-   "**#8 — Meta-labeling (López de Prado) sobre la reversión #7** → falló: out-of-sample el edge **gross es −1.41 (negativo)**. El \"+0.20\" de #7 era de los años tempranos.",
-   "**Desglose por año de la reversión (gross / neto):** 2019 +1.85/−1.66 · 2020 −0.74/−2.62 · 2021 +1.15/−1.64 · 2022 +0.86/−0.68 · 2023 −0.60/−2.92 · 2024 −1.34/−4.29. → El gross **cambia de signo año a año y decae**; neto negativo SIEMPRE. **No es un edge — es ruido que promedió +0.20.**",
-   "**🏁 CONCLUSIÓN DE LA BÚSQUEDA DE EDGE (8 pruebas):** con métodos de *precio-solo* sobre EUR/USD 2019–2024 **no existe un edge robusto, out-of-sample, que sobreviva a costes.** Los \"edges\" eran ilusiones in-sample, cazadas con rigor (chequeos sin costes, OOS, por año). **Seguir probando variantes sobre los MISMOS datos = riesgo de hallar un ganador FALSO por azar** (multiple testing — justo lo que López de Prado advierte con el Deflated Sharpe / \"por qué fallan los fondos ML\"). **Decisión deliberada (anti curve-fitting): parar la minería ciega de precio.** Caminos reales: (1) **datos distintos** (calendario/noticias, order-flow, cross-asset) donde viven los edges; (2) reformular hacia **gestión de riesgo disciplinada sobre un edge modesto/beta** + el framework de validación riguroso — que es, en sí, el mayor valor (nos protegió de pagar challenges con estrategias falsas)."
+   "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
+   "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
+   "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
   ],
   "title_i18n": {
-   "es": "Ya probado — NO repetir",
+   "es": "Gotchas técnicos del entorno",
    "en": "Technical environment gotchas",
    "pt": "Gotchas técnicos do ambiente"
   },
   "items_i18n": {
    "es": [
-    "**SMA 20/50 long/short H1 con costes** → Sharpe 0.245, PF 1.04. Edge real pero mínimo; **la frecuencia/costes lo matan**. Vale solo como vara mínima.",
-    "**Buy & Hold EUR/USD 2019–2024** → −9.7%. No sirve como estrategia (referencia nada más).",
-    "**ML #1 — XGBoost triple-barrier (predice dirección, opera cada barra)** → OOS **aleatorio** (MCPT p=0.78, PSR 0.19). Ruido + costes.",
-    "**ML #2 — XGBoost + filtro de convicción (prob>0.5)** → **Sharpe −4.79** (1822 trades; ~33% del capital en costes; la \"confianza\" del modelo se invierte OOS).",
-    "**ML #3 — Meta-labeling (SMA primario + XGBoost filtro)** → señal **~aleatoria** (PSR 0.51, p=0.48), Sharpe −3.28 por costes.",
-    "**#4 — Time-Series Momentum diario (Moskowitz et al. 2012)** → la frecuencia diaria **resolvió los costes** (solo 75 trades) PERO señal **~aleatoria** (PSR 0.47, p=0.58), Sharpe ≈ 0.",
-    "**#5 — TSMOM de CARTERA (15 activos) + volatility scaling** → Sharpe −0.105, retorno −4.1%. El MCPT p=0.003 parecía prometedor PERO el **Sharpe SIN costes es −0.003 (cero edge real)** y el **buy&hold del basket dio Sharpe 0.392** (le ganó a la estrategia). El p bajo era **artefacto de turnover**, no alpha.",
-    "**#6 — ORB breakout de sesión (Londres/NY) EUR/USD M1** → Sharpe −0.96, **pierde SIGNIFICATIVO** (PSR 0.009). Los breakouts en FX fallan → el par **revierte** intradía (al revés que los índices; Zarattini & Aziz 2023).",
-    "**#7 — Reversión de sesión (fade) EUR/USD M1** → Sharpe NETO −1.99 PERO **Sharpe SIN costes +0.20** → ¡hay un edge de reversión **REAL** pero los costes (1553 trades) lo entierran!",
-    "**#8 — Meta-labeling (López de Prado) sobre la reversión #7** → falló: out-of-sample el edge **gross es −1.41 (negativo)**. El \"+0.20\" de #7 era de los años tempranos.",
-    "**Desglose por año de la reversión (gross / neto):** 2019 +1.85/−1.66 · 2020 −0.74/−2.62 · 2021 +1.15/−1.64 · 2022 +0.86/−0.68 · 2023 −0.60/−2.92 · 2024 −1.34/−4.29. → El gross **cambia de signo año a año y decae**; neto negativo SIEMPRE. **No es un edge — es ruido que promedió +0.20.**",
-    "**🏁 CONCLUSIÓN DE LA BÚSQUEDA DE EDGE (8 pruebas):** con métodos de *precio-solo* sobre EUR/USD 2019–2024 **no existe un edge robusto, out-of-sample, que sobreviva a costes.** Los \"edges\" eran ilusiones in-sample, cazadas con rigor (chequeos sin costes, OOS, por año). **Seguir probando variantes sobre los MISMOS datos = riesgo de hallar un ganador FALSO por azar** (multiple testing — justo lo que López de Prado advierte con el Deflated Sharpe / \"por qué fallan los fondos ML\"). **Decisión deliberada (anti curve-fitting): parar la minería ciega de precio.** Caminos reales: (1) **datos distintos** (calendario/noticias, order-flow, cross-asset) donde viven los edges; (2) reformular hacia **gestión de riesgo disciplinada sobre un edge modesto/beta** + el framework de validación riguroso — que es, en sí, el mayor valor (nos protegió de pagar challenges con estrategias falsas)."
+    "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
+    "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
+    "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
    ],
    "en": [
     "**matplotlib crashes** natively in this env → use **plotly → HTML** for all charts.",
@@ -465,47 +506,39 @@
   }
  },
  {
-  "title": "Gotchas técnicos del entorno",
-  "emoji": "🧰",
-  "items": [
-   "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
-   "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
-   "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
-  ],
-  "title_i18n": {
-   "es": "Gotchas técnicos del entorno",
-   "en": "Next — Phase 3: Machine Learning",
-   "pt": "Próximo — Fase 3: Machine Learning"
-  },
-  "items_i18n": {
-   "es": [
-    "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
-    "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
-    "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
-   ],
-   "en": [
-    "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
-    "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
-    "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
-   ],
-   "pt": [
-    "**matplotlib crashea** a nivel nativo en este env → usar **plotly → HTML** para todo gráfico.",
-    "conda crea los entornos nuevos en `D:\\envs` (no en C:). `D:\\miniconda3\\envs` no es escribible.",
-    "Usar `flush=True` / `python -u` al imprimir (si un script crashea, el buffer sin flush se pierde y parece \"sin salida\")."
-   ]
-  }
- },
- {
   "title": "Próximo — Fase 3: Machine Learning",
   "emoji": "🔜",
   "items": [],
   "title_i18n": {
    "es": "Próximo — Fase 3: Machine Learning",
+   "en": "Next — Phase 3: Machine Learning",
+   "pt": "Próximo — Fase 3: Machine Learning"
+  },
+  "items_i18n": {
+   "es": [],
+   "en": [],
+   "pt": []
+  }
+ },
+ {
+  "title": "Más adelante",
+  "emoji": "⏳",
+  "items": [
+   "Gestión de riesgo del challenge (daily/trailing drawdown).",
+   "Forward test en demo MT5 (semanas).",
+   "Challenge real — solo con evidencia de lo anterior."
+  ],
+  "title_i18n": {
+   "es": "Más adelante",
    "en": "Further ahead",
    "pt": "Mais adiante"
   },
   "items_i18n": {
-   "es": [],
+   "es": [
+    "Gestión de riesgo del challenge (daily/trailing drawdown).",
+    "Forward test en demo MT5 (semanas).",
+    "Challenge real — solo con evidencia de lo anterior."
+   ],
    "en": [
     "Challenge risk management (daily/trailing drawdown).",
     "Live demo MT5 forward test (weeks).",
@@ -519,23 +552,23 @@
   }
  },
  {
-  "title": "Más adelante",
-  "emoji": "⏳",
+  "title": "Backlog / ideas a probar",
+  "emoji": "💡",
   "items": [
-   "Gestión de riesgo del challenge (daily/trailing drawdown).",
-   "Forward test en demo MT5 (semanas).",
-   "Challenge real — solo con evidencia de lo anterior."
+   "Timeframes M5 vs H1.",
+   "Long/short vs long-only.",
+   "Filtro de régimen (operar solo en tendencia / ciertas horas)."
   ],
   "title_i18n": {
-   "es": "Más adelante",
+   "es": "Backlog / ideas a probar",
    "en": "Backlog / ideas to test",
    "pt": "Backlog / ideias a testar"
   },
   "items_i18n": {
    "es": [
-    "Gestión de riesgo del challenge (daily/trailing drawdown).",
-    "Forward test en demo MT5 (semanas).",
-    "Challenge real — solo con evidencia de lo anterior."
+    "Timeframes M5 vs H1.",
+    "Long/short vs long-only.",
+    "Filtro de régimen (operar solo en tendencia / ciertas horas)."
    ],
    "en": [
     "Timeframes M5 vs H1.",
@@ -546,37 +579,6 @@
     "Timeframes M5 vs H1.",
     "Long/short vs long-only.",
     "Filtro de regime (operar apenas em tendência / certas horas)."
-   ]
-  }
- },
- {
-  "title": "Backlog / ideas a probar",
-  "emoji": "💡",
-  "items": [
-   "Timeframes M5 vs H1.",
-   "Long/short vs long-only.",
-   "Filtro de régimen (operar solo en tendencia / ciertas horas)."
-  ],
-  "title_i18n": {
-   "es": "Backlog / ideas a probar",
-   "en": "Backlog / ideas a probar",
-   "pt": "Backlog / ideas a probar"
-  },
-  "items_i18n": {
-   "es": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Filtro de régimen (operar solo en tendencia / ciertas horas)."
-   ],
-   "en": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Filtro de régimen (operar solo en tendencia / ciertas horas)."
-   ],
-   "pt": [
-    "Timeframes M5 vs H1.",
-    "Long/short vs long-only.",
-    "Filtro de régimen (operar solo en tendencia / ciertas horas)."
    ]
   }
  }

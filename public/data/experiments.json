@@ -4,26 +4,26 @@
   "v": 80,
   "analysis": {
    "es": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios).",
-   "en": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios).",
-   "pt": "El primer entregable PRÁCTICO de verdad. Partiendo del punto del usuario (#78: para ingreso importa el Calmar, no el retorno total), optimizamos una estrategia de INGRESO sobre índices+oro, midiendo Calmar y el retiro máximo sostenible. Resultado: el VOL-TARGETING (B3) es el punto dulce — CAGR +8.7% (igual que Buy&Hold) pero MaxDD −26% (vs −31%), soporta retirar 8%/año. Turtle tiene el mejor Calmar (0.44, drawdown solo −7%) pero menos retorno (retiro 5%). Conclusión: para VIVIR de esto (retirar mientras gana) la clave es el Calmar, y el vol-targeting da el mejor balance retorno/riesgo. No es alpha — es beta gestionada inteligentemente — pero es un plan de ingreso REAL y sensato (lo que hacen los inversores tácticos serios)."
+   "en": "The first truly PRACTICAL deliverable. Starting from the user's point (#78: for income the Calmar matters, not total return), we optimized an INCOME strategy on indices+gold, measuring Calmar and max sustainable withdrawal. Result: VOL-TARGETING (B3) is the sweet spot — CAGR +8.7% (same as Buy&Hold) but MaxDD −26% (vs −31%), supports withdrawing 8%/year. Turtle has the best Calmar (0.44, drawdown only −7%) but less return (5% withdrawal). Conclusion: to LIVE off this (withdraw while earning) the key is the Calmar, and vol-targeting gives the best return/risk balance. It's not alpha — it's intelligently managed beta — but it's a REAL and sensible income plan (what serious tactical investors do).",
+   "pt": "O primeiro entregável verdadeiramente PRÁTICO. Partindo do ponto do usuário (#78: para renda importa o Calmar, não o retorno total), otimizamos uma estratégia de RENDA sobre índices+ouro, medindo Calmar e retirada máxima sustentável. Resultado: VOL-TARGETING (B3) é o ponto ideal — CAGR +8,7% (igual ao Buy&Hold) mas MaxDD −26% (vs −31%), suporta retirar 8%/ano. Turtle tem o melhor Calmar (0,44, drawdown apenas −7%) mas menos retorno (retirada 5%). Conclusão: para VIVER disto (retirar enquanto ganha) a chave é o Calmar, e o vol-targeting dá o melhor equilíbrio retorno/risco. Não é alpha — é beta gerenciada inteligentemente — mas é um plano de renda REAL e sensato (o que investidores táticos sérios fazem)."
   },
   "name": {
    "es": "Estrategia de INGRESO óptima por Calmar (índices+oro)",
-   "en": "Estrategia de INGRESO óptima por Calmar (índices+oro)",
-   "pt": "Estrategia de INGRESO óptima por Calmar (índices+oro)"
+   "en": "Optimal INCOME strategy by Calmar (indices+gold)",
+   "pt": "Estratégia de RENDA ótima por Calmar (índices+ouro)"
   },
   "family": "risk-mgmt",
   "date": "2026-06-27T13:20:00",
   "description": {
    "es": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce.",
-   "en": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce.",
-   "pt": "Optimizar para INGRESO (retirar sin reventar): Calmar + retiro máximo sostenible. El vol-targeting es el punto dulce."
+   "en": "Optimize for INCOME (withdraw without blowing up): Calmar + max sustainable withdrawal. Vol-targeting is the sweet spot.",
+   "pt": "Otimizar para RENDA (retirar sem rebentar): Calmar + retirada máxima sustentável. Vol-targeting é o ponto ideal."
   },
   "params": {},
   "verdict": {
    "es": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)",
-   "en": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)",
-   "pt": "sirvió como plan de ingreso (beta gestionada, no alpha, pero práctico)"
+   "en": "worked as income plan (managed beta, not alpha, but practical)",
+   "pt": "serviu como plano de renda (beta gerenciada, não alpha, mas prático)"
   },
   "notes": {
    "es": "",
@@ -47,26 +47,26 @@
   "v": 79,
   "analysis": {
    "es": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas.",
-   "en": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas.",
-   "pt": "Investigación a fondo del régimen adaptativo (¿hay manera de arreglar el whipsaw del #77?). Probamos histéresis (banda 0.45/0.25), confirmación (régimen 5 días) y mezcla continua. SÍ mejoran: la confirmación llegó a Sharpe OOS 0.60 (vs 0.36 del binario). PERO (1) apenas iguala a 'solo-trend' (la adaptación no aporta nada extra) y (2) sigue por debajo del Buy&Hold (0.68), con Sharpe NEGATIVO in-sample 2012-18. Solo brilla en 2019-24 (periodo tendencial). Es trend-following dependiente del periodo, no un edge robusto. La 'manera' requeriría adivinar el régimen perfecto — imposible. Muro confirmado con todas las mejoras probadas."
+   "en": "Deep investigation of the adaptive regime (can the whipsaw from #77 be fixed?). We tested hysteresis (band 0.45/0.25), confirmation (5-day regime) and continuous blending. They DO improve: confirmation reached OOS Sharpe 0.60 (vs 0.36 binary). BUT (1) barely matches 'trend-only' (adaptation adds nothing extra) and (2) still below Buy&Hold (0.68), with NEGATIVE in-sample Sharpe 2012-18. Only shines in 2019-24 (trending period). It's period-dependent trend-following, not a robust edge. The 'right way' would require guessing the perfect regime — impossible. Wall confirmed with all improvements tested.",
+   "pt": "Investigação a fundo do regime adaptativo (dá para consertar o whipsaw do #77?). Testamos histerese (banda 0,45/0,25), confirmação (regime de 5 dias) e mistura contínua. SIM melhoram: a confirmação chegou a Sharpe OOS 0,60 (vs 0,36 binário). MAS (1) mal iguala 'só-trend' (a adaptação não acrescenta nada extra) e (2) continua abaixo do Buy&Hold (0,68), com Sharpe NEGATIVO in-sample 2012-18. Só brilha em 2019-24 (período tendencial). É trend-following dependente do período, não um edge robusto. A 'maneira certa' exigiria adivinhar o regime perfeito — impossível. Muro confirmado com todas as melhorias testadas."
   },
   "name": {
    "es": "Régimen adaptativo v2 — histéresis/confirmación/mezcla",
-   "en": "Régimen adaptativo v2 — histéresis/confirmación/mezcla",
-   "pt": "Régimen adaptativo v2 — histéresis/confirmación/mezcla"
+   "en": "Adaptive regime v2 — hysteresis/confirmation/blending",
+   "pt": "Regime adaptativo v2 — histerese/confirmação/mistura"
   },
   "family": "regime-switch",
   "date": "2026-06-27T13:00:00",
   "description": {
    "es": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?",
-   "en": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?",
-   "pt": "Investigación a fondo: ¿se arregla el whipsaw del régimen adaptativo (#77) con histéresis, confirmación de 5 días o mezcla continua?"
+   "en": "Deep dive: can the adaptive regime whipsaw (#77) be fixed with hysteresis, 5-day confirmation or continuous blending?",
+   "pt": "Investigação a fundo: dá para corrigir o whipsaw do regime adaptativo (#77) com histerese, confirmação de 5 dias ou mistura contínua?"
   },
   "params": {},
   "verdict": {
    "es": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)",
-   "en": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)",
-   "pt": "mejora pero no basta (sigue < Buy&Hold, negativo in-sample)"
+   "en": "improves but not enough (still < Buy&Hold, negative in-sample)",
+   "pt": "melhora mas não basta (ainda < Buy&Hold, negativo in-sample)"
   },
   "notes": {
    "es": "",
@@ -89,26 +89,26 @@
   "v": 78,
   "analysis": {
    "es": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance.",
-   "en": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance.",
-   "pt": "El punto (acertado) del usuario: comparar todo contra Buy&Hold por retorno total es injusto — B&H es solo mantener. Para RETIRAR ingreso lo que importa es el drawdown (sequence-of-returns risk). Métrica correcta: CALMAR (retorno/drawdown). Y ahí Turtle (0.22) y Faber (0.16) LE GANAN al Buy&Hold (0.14) — menos retorno pero mucho menos drawdown. Matiz: en la simulación de retiro al 4%/año, B&H terminó más alto ($45k) porque su retorno (+4%) sostiene el retiro mientras las de +2% se agotan. Conclusión: para seguridad/dormir → Turtle/Faber (mejor Calmar); para retiros altos → necesitas retorno ≥ retiro; el ideal (alto retorno + bajo DD) es justo lo difícil. El vol-target (B3) es el mejor balance."
+   "en": "The user's (correct) point: comparing everything to Buy&Hold by total return is unfair — B&H is just holding. For WITHDRAWING income what matters is drawdown (sequence-of-returns risk). Right metric: CALMAR (return/drawdown). And there Turtle (0.22) and Faber (0.16) BEAT Buy&Hold (0.14) — less return but much less drawdown. Nuance: in the 4%/year withdrawal simulation, B&H ended higher ($45k) because its return (+4%) sustains the withdrawal while +2% strategies deplete. Conclusion: for safety/peace → Turtle/Faber (better Calmar); for high withdrawals → you need return ≥ withdrawal; the ideal (high return + low DD) is precisely what's hard. Vol-target (B3) is the best balance.",
+   "pt": "O ponto (acertado) do usuário: comparar tudo com Buy&Hold por retorno total é injusto — B&H é só manter. Para RETIRAR renda o que importa é o drawdown (risco de sequência de retornos). Métrica correta: CALMAR (retorno/drawdown). E aí Turtle (0,22) e Faber (0,16) GANHAM do Buy&Hold (0,14) — menos retorno, mas muito menos drawdown. Matiz: na simulação de retirada a 4%/ano, B&H terminou mais alto ($45k) porque seu retorno (+4%) sustenta a retirada enquanto as de +2% se esgotam. Conclusão: para segurança/tranquilidade → Turtle/Faber (melhor Calmar); para retiradas altas → precisa de retorno ≥ retirada; o ideal (alto retorno + baixo DD) é justamente o difícil. Vol-target (B3) é o melhor equilíbrio."
   },
   "name": {
    "es": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?",
-   "en": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?",
-   "pt": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?"
+   "en": "Calmar and withdrawals: better than Buy&Hold for income?",
+   "pt": "Calmar e retiradas: melhor que Buy&Hold para renda?"
   },
   "family": "risk-mgmt",
   "date": "2026-06-27T12:20:00",
   "description": {
    "es": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año.",
-   "en": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año.",
-   "pt": "El punto del usuario: para RETIRAR ingreso importa el drawdown, no el retorno total. Calmar (retorno/DD) + simulación de retiros 4%/año."
+   "en": "The user's point: for WITHDRAWING income, drawdown matters, not total return. Calmar (return/DD) + 4%/year withdrawal simulation.",
+   "pt": "O ponto do usuário: para RETIRAR renda, o drawdown importa, não o retorno total. Calmar (retorno/DD) + simulação de retirada 4%/ano."
   },
   "params": {},
   "verdict": {
    "es": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)",
-   "en": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)",
-   "pt": "parcial (Turtle/Faber ganan en Calmar; el retiro alto depende del retorno)"
+   "en": "partial (Turtle/Faber win on Calmar; high withdrawal depends on return)",
+   "pt": "parcial (Turtle/Faber ganham em Calmar; retirada alta depende do retorno)"
   },
   "notes": {
    "es": "",
@@ -132,26 +132,26 @@
   "v": 77,
   "analysis": {
    "es": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución.",
-   "en": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución.",
-   "pt": "Tesis de un TikTok: 'ninguna estrategia sirve siempre; mide el régimen y adapta' — mean-reversion cuando el mercado está en rango, trend-following cuando hay tendencia (~80/20). Conceptualmente correcto (medimos 27% de días en tendencia, cerca de su 20%). PERO al testearlo: la versión ADAPTATIVA (detector Efficiency Ratio rezagado) es PEOR que aplicar una sola estrategia siempre (IS Sharpe −0.27 vs solo-trend +0.02; OOS +0.37 vs +0.59). El detector whipsea: para cuando mide 'tendencia', el régimen ya cambió. Es el mismo muro de detección de los #59-62. Buy&Hold (0.68) le gana a todo. Tenía razón en el diagnóstico, no en la solución."
+   "en": "TikTok thesis: 'no strategy works all the time; measure the regime and adapt' — mean-reversion in range, trend-following in trend (~80/20). Conceptually correct (we measured 27% of trending days, close to their 20%). BUT when tested: the ADAPTIVE version (lagged Efficiency Ratio detector) is WORSE than applying a single strategy always (IS Sharpe −0.27 vs trend-only +0.02; OOS +0.37 vs +0.59). The detector whipsaws: by the time it measures 'trend', the regime already changed. Same detection wall as #59-62. Buy&Hold (0.68) beats everything. Right diagnosis, wrong solution.",
+   "pt": "Tese de TikTok: 'nenhuma estratégia funciona sempre; meça o regime e adapte' — mean-reversion em rango, trend-following em tendência (~80/20). Conceitualmente correto (medimos 27% de dias em tendência, perto dos 20% deles). MAS ao testar: a versão ADAPTATIVA (detector Efficiency Ratio defasado) é PIOR do que aplicar uma única estratégia sempre (IS Sharpe −0,27 vs só-trend +0,02; OOS +0,37 vs +0,59). O detector faz whipsaw: quando mede 'tendência', o regime já mudou. Mesmo muro de detecção dos #59-62. Buy&Hold (0,68) ganha de tudo. Diagnóstico certo, solução errada."
   },
   "name": {
    "es": "Régimen adaptativo (mean-rev en rango, trend en tendencia)",
-   "en": "Régimen adaptativo (mean-rev en rango, trend en tendencia)",
-   "pt": "Régimen adaptativo (mean-rev en rango, trend en tendencia)"
+   "en": "Adaptive regime (mean-rev in range, trend in trend)",
+   "pt": "Regime adaptativo (mean-rev em rango, trend em tendência)"
   },
   "family": "regime-switch",
   "date": "2026-06-27T12:00:00",
   "description": {
    "es": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo.",
-   "en": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo.",
-   "pt": "Tesis de un TikTok: medir el régimen (Efficiency Ratio) y aplicar mean-reversion en rango o trend-following en tendencia. Adaptativo."
+   "en": "TikTok thesis: measure the regime (Efficiency Ratio) and apply mean-reversion in range or trend-following in trend. Adaptive.",
+   "pt": "Tese de TikTok: medir o regime (Efficiency Ratio) e aplicar mean-reversion em rango ou trend-following em tendência. Adaptativo."
   },
   "params": {},
   "verdict": {
    "es": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)",
-   "en": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)",
-   "pt": "no sirvió (la adaptativa es PEOR que una sola; whipsaw del detector)"
+   "en": "did not work (adaptive is WORSE than single; detector whipsaw)",
+   "pt": "não serviu (adaptativa é PIOR que única; whipsaw do detector)"
   },
   "notes": {
    "es": "",
@@ -175,8 +175,8 @@
   "v": 76,
   "analysis": {
    "es": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes.",
-   "en": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes.",
-   "pt": "Double Seven (Larry Connors): sobre la MA200, comprar si el cierre rompe el mínimo de 7 días, salir si rompe el máximo de 7. Vendida con '77% win rate'. Se DESMORONA out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) y el drawdown explota a −35%. El ejemplo perfecto de overfit que se ve bonito in-sample (y con win rate alto) y se cae en datos nuevos. El win rate alto esconde el riesgo: pocas pérdidas pero enormes."
+   "en": "Double Seven (Larry Connors): above MA200, buy on 7-day low break, exit on 7-day high. Marketed with '77% win rate'. It CRUMBLES out-of-sample: Sharpe 0.58 (IS) → 0.16 (OOS) and drawdown explodes to −35%. The perfect example of overfit that looks pretty in-sample (with high win rate) and collapses on new data. High win rate hides the risk: few losses but enormous ones.",
+   "pt": "Double Seven (Larry Connors): acima da MA200, comprar ao romper mínima de 7 dias, sair ao romper máxima de 7d. Vendida com '77% win rate'. DESMORONA out-of-sample: Sharpe 0,58 (IS) → 0,16 (OOS) e o drawdown explode a −35%. O exemplo perfeito de overfit que fica bonito in-sample (com win rate alto) e desmorona em dados novos. O win rate alto esconde o risco: poucas perdas, mas enormes."
   },
   "name": {
    "es": "Double Seven (Larry Connors)",
@@ -187,14 +187,14 @@
   "date": "2026-06-27T11:10:00",
   "description": {
    "es": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'.",
-   "en": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'.",
-   "pt": "Sobre MA200, comprar si C < minimo de 7 dias, salir si C > maximo 7d. Vendida con '77% win rate'."
+   "en": "Above MA200, buy if close < 7-day low, exit if close > 7-day high. Marketed with '77% win rate'.",
+   "pt": "Acima da MA200, comprar se fechamento < mínima de 7 dias, sair se fechamento > máxima de 7d. Vendida com '77% win rate'."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (se degrada OOS)",
-   "en": "no sirvio (se degrada OOS)",
-   "pt": "no sirvio (se degrada OOS)"
+   "en": "did not work (degrades OOS)",
+   "pt": "não serviu (degrada-se OOS)"
   },
   "notes": {
    "es": "",
@@ -217,8 +217,8 @@
   "v": 75,
   "analysis": {
    "es": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado.",
-   "en": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado.",
-   "pt": "IBS (Internal Bar Strength), de QuantifiedStrategies, vendida con '13% CAGR, 68% win rate'. Comprar cuando el cierre está cerca del mínimo del día (ibs<0.2), salir cuando está cerca del máximo. Con costos: gana (+32% OOS) pero **la mitad que Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. El '68% win rate' es comprar el dip en un mercado alcista: muchas ganancias chicas, pero rindes menos que quedarte quieto. Gana dinero, no le gana al mercado."
+   "en": "IBS (Internal Bar Strength), from QuantifiedStrategies, marketed with '13% CAGR, 68% win rate'. Buy when close is near the day's low (ibs<0.2), exit when near the high. With costs: it wins (+32% OOS) but **half of Buy&Hold (+109%)**, Sharpe 0.42 vs 0.68. The '68% win rate' is buying the dip in a bull market: many small wins, but you earn less than sitting still. Makes money, doesn't beat the market.",
+   "pt": "IBS (Internal Bar Strength), da QuantifiedStrategies, vendida com '13% CAGR, 68% win rate'. Comprar quando o fechamento está perto da mínima do dia (ibs<0,2), sair quando perto da máxima. Com custos: ganha (+32% OOS) mas **metade do Buy&Hold (+109%)**, Sharpe 0,42 vs 0,68. O '68% win rate' é comprar o dip num mercado de alta: muitos ganhos pequenos, mas rende menos do que ficar parado. Ganha dinheiro, não ganha do mercado."
   },
   "name": {
    "es": "IBS — Internal Bar Strength (QuantifiedStrategies)",
@@ -229,14 +229,14 @@
   "date": "2026-06-27T11:00:00",
   "description": {
    "es": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'.",
-   "en": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'.",
-   "pt": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar si <0.2, salir si >0.7. Vendida con '13% CAGR, 68% win rate'."
+   "en": "Famous mean reversion: ibs=(C-L)/(H-L), buy if <0.2, exit if >0.7. Marketed with '13% CAGR, 68% win rate'.",
+   "pt": "Mean reversion famosa: ibs=(C-L)/(H-L), comprar se <0,2, sair se >0,7. Vendida com '13% CAGR, 68% win rate'."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (gana, pero la mitad que Buy&Hold)",
-   "en": "no sirvio (gana, pero la mitad que Buy&Hold)",
-   "pt": "no sirvio (gana, pero la mitad que Buy&Hold)"
+   "en": "did not work (wins, but half of Buy&Hold)",
+   "pt": "não serviu (ganha, mas metade do Buy&Hold)"
   },
   "notes": {
    "es": "",
@@ -260,26 +260,26 @@
   "v": 74,
   "analysis": {
    "es": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable.",
-   "en": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable.",
-   "pt": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable."
+   "en": "Turtle Trading (Richard Dennis, the 1983 experiment): buy on 20-day high breakout, exit on 10-day low break (Donchian). OOS 2019-24 gave Sharpe 0.75 (slightly above Buy&Hold 0.67) BUT in-sample 2012-18 only 0.21 — inconsistent, period-dependent (2019-24 was very trending). Classic trend-following: harvests trends when present, suffers in sideways markets. Not a stable edge.",
+   "pt": "Turtle Trading (Richard Dennis, o experimento de 1983): comprar ao romper a máxima de 20 dias, sair ao perder a mínima de 10 (Donchian). OOS 2019-24 deu Sharpe 0,75 (algo acima do Buy&Hold 0,67) MAS in-sample 2012-18 apenas 0,21 — inconsistente, dependente do período (2019-24 foi muito tendencial). Trend-following clássico: colhe tendências quando existem, sofre em mercados laterais. Não é um edge estável."
   },
   "name": {
    "es": "Turtle Trading — breakout Donchian (Richard Dennis)",
-   "en": "Turtle Trading — breakout Donchian (Richard Dennis)",
+   "en": "Turtle Trading — Donchian breakout (Richard Dennis)",
    "pt": "Turtle Trading — breakout Donchian (Richard Dennis)"
   },
   "family": "estrategia-publica",
   "date": "2026-06-27T10:20:00",
   "description": {
    "es": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following.",
-   "en": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following.",
-   "pt": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following."
+   "en": "Famous public strategy: long on 20-day high breakout, exit on 10-day low break. Trend-following.",
+   "pt": "Estratégia pública famosa: comprar ao romper máxima de 20 dias, sair ao perder mínima de 10 dias. Trend-following."
   },
   "params": {},
   "verdict": {
    "es": "parcial (depende del periodo)",
-   "en": "parcial (depende del periodo)",
-   "pt": "parcial (depende del periodo)"
+   "en": "partial (depends on the period)",
+   "pt": "parcial (depende do período)"
   },
   "notes": {
    "es": "",
@@ -301,26 +301,26 @@
   "v": 73,
   "analysis": {
    "es": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado.",
-   "en": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado.",
-   "pt": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado."
+   "en": "Faber GTAA (Meb Faber, the basis of tactical asset allocation): hold each asset if above its 10-month MA (≈MA200), else go to cash. Cuts drawdown brutally (−10% vs −30% of Buy&Hold) BUT its Sharpe (0.58) is still below Buy&Hold (0.67) — it's RISK MANAGEMENT, not alpha. Same profile as our trend-flat (#59) which died the triple test. Useful for sleeping well, not for beating the market.",
+   "pt": "Faber GTAA (Meb Faber, a base da alocação tática de ativos): manter cada ativo se acima da MA de 10 meses (≈MA200), senão cash. Corta o drawdown brutalmente (−10% vs −30% do Buy&Hold) MAS seu Sharpe (0,58) continua abaixo do Buy&Hold (0,67) — é GESTÃO DE RISCO, não alpha. Mesmo perfil do nosso trend-flat (#59) que morreu no triple test. Útil para dormir tranquilo, não para bater o mercado."
   },
   "name": {
    "es": "Faber GTAA — timing por MA200 (Meb Faber)",
-   "en": "Faber GTAA — timing por MA200 (Meb Faber)",
+   "en": "Faber GTAA — MA200 timing (Meb Faber)",
    "pt": "Faber GTAA — timing por MA200 (Meb Faber)"
   },
   "family": "estrategia-publica",
   "date": "2026-06-27T10:10:00",
   "description": {
    "es": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo.",
-   "en": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo.",
-   "pt": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo."
+   "en": "Famous public strategy: hold if close>MA200 (10 months), else cash. Equal-weight, multi-asset.",
+   "pt": "Estratégia pública famosa: manter se fechamento>MA200 (10 meses), senão cash. Equal-weight, multi-ativo."
   },
   "params": {},
   "verdict": {
    "es": "parcial (controla drawdown, no es alpha)",
-   "en": "parcial (controla drawdown, no es alpha)",
-   "pt": "parcial (controla drawdown, no es alpha)"
+   "en": "partial (controls drawdown, not alpha)",
+   "pt": "parcial (controla drawdown, não é alpha)"
   },
   "notes": {
    "es": "",
@@ -343,26 +343,26 @@
   "v": 72,
   "analysis": {
    "es": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65.",
-   "en": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65.",
-   "pt": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65."
+   "en": "NEW CATEGORY — testing famous PUBLIC strategies with their exact rules. Connors RSI(2) (Larry Connors, one of the most documented reversions): long if above MA200 and RSI(2)<10, exit if RSI(2)>70. Net of costs: Sharpe IS 0.17 / OOS 0.48 — ALWAYS below Buy&Hold (0.67). Short-term reversion doesn't add edge after costs. Confirms our #65.",
+   "pt": "NOVA CATEGORIA — testar estratégias PÚBLICAS famosas com suas regras exatas. Connors RSI(2) (Larry Connors, uma das reversões mais documentadas): comprar se acima da MA200 e RSI(2)<10, sair se RSI(2)>70. Líquido de custos: Sharpe IS 0,17 / OOS 0,48 — SEMPRE abaixo do Buy&Hold (0,67). A reversão de curto prazo não adiciona edge após custos. Confirma nosso #65."
   },
   "name": {
    "es": "Connors RSI(2) — reversion (Larry Connors)",
    "en": "Connors RSI(2) — reversion (Larry Connors)",
-   "pt": "Connors RSI(2) — reversion (Larry Connors)"
+   "pt": "Connors RSI(2) — reversão (Larry Connors)"
   },
   "family": "estrategia-publica",
   "date": "2026-06-27T10:00:00",
   "description": {
    "es": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices.",
-   "en": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices.",
-   "pt": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices."
+   "en": "Famous public strategy: long if close>MA200 and RSI(2)<10, exit if RSI(2)>70. Mean reversion in indices.",
+   "pt": "Estratégia pública famosa: comprar se fechamento>MA200 e RSI(2)<10, sair se RSI(2)>70. Mean reversion em índices."
   },
   "params": {},
   "verdict": {
    "es": "no sirvio (Sharpe < Buy&Hold)",
-   "en": "no sirvio (Sharpe < Buy&Hold)",
-   "pt": "no sirvio (Sharpe < Buy&Hold)"
+   "en": "did not work (Sharpe < Buy&Hold)",
+   "pt": "não serviu (Sharpe < Buy&Hold)"
   },
   "notes": {
    "es": "",
