@@ -15,7 +15,7 @@ const LOG = path.join(process.cwd(), "public", "data", "lab.log");
 // ejecuta python y captura stdout (para parse/test, que devuelven un JSON)
 function runPy(args: string[]): Promise<string> {
   return new Promise((resolve) => {
-    const p = spawn(PY, args, { cwd: CWD });
+    const p = spawn(PY, args, { cwd: CWD, windowsHide: true });
     let out = "";
     p.stdout.on("data", (d) => (out += d));
     p.on("close", () => resolve(out));
@@ -49,13 +49,13 @@ export async function POST(req: Request) {
     // -u = sin buffer, para que el log se vea EN VIVO en la mini-consola.
     const out = fs.openSync(LOG, "w");
     const p = spawn(PY, ["-u", "-m", "lab.runner", "run"], {
-      cwd: CWD, detached: true, stdio: ["ignore", out, out],
+      cwd: CWD, detached: true, stdio: ["ignore", out, out], windowsHide: true,
     });
     p.unref();
     return NextResponse.json({ ok: true, state: "running" });
   }
   if (action === "stop") {
-    const p = spawn(PY, ["-m", "lab.runner", "stop"], { cwd: CWD, stdio: "ignore" });
+    const p = spawn(PY, ["-m", "lab.runner", "stop"], { cwd: CWD, stdio: "ignore", windowsHide: true });
     p.unref();
     return NextResponse.json({ ok: true, state: "stopped" });
   }

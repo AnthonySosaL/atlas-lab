@@ -90,16 +90,18 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [parseErr, setParseErr] = React.useState(false);
   const [testing, setTesting] = React.useState(false);
   const [myResult, setMyResult] = React.useState<TestOut | null>(null);
-  const [codeModal, setCodeModal] = React.useState<{ title: string; code: string } | null>(null);
+  const [modal, setModal] = React.useState<{ title: string; body: string; mono: boolean } | null>(null);
   const [sortBy, setSortBy] = React.useState<"result" | "order">("result");
+  const [sortDir, setSortDir] = React.useState<"asc" | "desc">("desc");
+  const [statusFilter, setStatusFilter] = React.useState<"all" | "survived" | "died">("all");
 
   // cerrar el modal con Esc
   React.useEffect(() => {
-    if (!codeModal) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setCodeModal(null);
+    if (!modal) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setModal(null);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [codeModal]);
+  }, [modal]);
 
   const postLab = async (payload: object) => {
     const r = await fetch("/api/lab", {
@@ -164,8 +166,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const filters = ["lab.f1", "lab.f2", "lab.f3", "lab.f4", "lab.f5"];
   const thr = data.thresholds ?? { oos_min: 0.3, dsr_min: 0.95, mc_max: 0.05 };
   const thrChips = [`> ${thr.oos_min}`, `> ${thr.oos_min}`, `> ${thr.dsr_min}`, `< ${thr.mc_max}`, ""];
-  const sortedItems =
-    sortBy === "order" ? [...data.items].sort((a, b) => a.order - b.order) : data.items;
+
+  const sortKey = (it: (typeof data.items)[number]) =>
+    sortBy === "order" ? it.order : Math.min(it.sharpe_oos1, it.sharpe_oos2);
+  const displayItems = data.items
+    .filter((it) => statusFilter === "all" || it.status === statusFilter)
+    .sort((a, b) => (sortDir === "asc" ? sortKey(a) - sortKey(b) : sortKey(b) - sortKey(a)));
 
   return (
     <div className="space-y-6">
@@ -246,7 +252,11 @@ export function LabContent({ data: initial }: { data: LabData }) {
           </div>
           <div className="flex flex-wrap gap-2">
             {filters.map((k, i) => (
-              <span key={k} className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs">
+              <button
+                key={k}
+                onClick={() => setModal({ title: `${i + 1}. ${t(k)}`, body: t(`${k}why`), mono: false })}
+                className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs transition-colors hover:border-primary hover:bg-primary/5"
+              >
                 <span className="grid size-4 place-items-center rounded-full bg-primary/10 text-[10px] font-bold text-primary">
                   {i + 1}
                 </span>
@@ -256,10 +266,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
                     {thrChips[i]}
                   </span>
                 )}
-              </span>
+              </button>
             ))}
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">{t("lab.legend")}</p>
+          <p className="mt-2 text-xs text-primary/80">{t("lab.whyHint")}</p>
+          <p className="mt-1 text-xs text-muted-foreground">{t("lab.legend")}</p>
+          <p className="mt-1 text-[11px] text-muted-foreground">{t("lab.glossary")}</p>
         </CardContent>
       </Card>
 
@@ -323,7 +335,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
                     {t(`status.${myResult.result.status}`)}
                   </Badge>
                   <button
-                    onClick={() => setCodeModal({ title: myResult.spec.name || "estrategia", code: myResult.code })}
+                    onClick={() => setModal({ title: myResult.spec.name || "estrategia", body: myResult.code, mono: true })}
                     className="ml-auto inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
                   >
                     <Code2 className="size-3" /> {t("lab.viewCode")}
@@ -350,36 +362,60 @@ export function LabContent({ data: initial }: { data: LabData }) {
         </p>
       ) : (
         <div className="space-y-2">
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span>{t("lab.sortLabel")}</span>
-          {(["result", "order"] as const).map((k) => (
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+          {/* filtro por estado */}
+          <div className="flex items-center gap-1">
+            {(["all", "survived", "died"] as const).map((s) => (
+              <button
+                key={s}
+                onClick={() => setStatusFilter(s)}
+                className={cn(
+                  "rounded-full border px-2.5 py-1 transition-colors",
+                  statusFilter === s ? "border-primary bg-primary/10 text-primary" : "hover:text-foreground"
+                )}
+              >
+                {t(s === "all" ? "filter.all" : s === "survived" ? "filter.survived" : "filter.died")}
+              </button>
+            ))}
+          </div>
+          {/* ordenar por + direccion */}
+          <div className="flex items-center gap-1">
+            <span>{t("lab.sortLabel")}</span>
+            {(["result", "order"] as const).map((k) => (
+              <button
+                key={k}
+                onClick={() => setSortBy(k)}
+                className={cn(
+                  "rounded-full border px-2.5 py-1 transition-colors",
+                  sortBy === k ? "border-primary bg-primary/10 text-primary" : "hover:text-foreground"
+                )}
+              >
+                {t(k === "result" ? "lab.sortResult" : "lab.sortOrder")}
+              </button>
+            ))}
             <button
-              key={k}
-              onClick={() => setSortBy(k)}
-              className={cn(
-                "rounded-full border px-2.5 py-1 transition-colors",
-                sortBy === k ? "border-primary bg-primary/10 text-primary" : "hover:text-foreground"
-              )}
+              onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+              className="rounded-full border px-2.5 py-1 transition-colors hover:text-foreground"
             >
-              {t(k === "result" ? "lab.sortResult" : "lab.sortOrder")}
+              {sortDir === "asc" ? "↑ " : "↓ "}{t(sortDir === "asc" ? "lab.asc" : "lab.desc")}
             </button>
-          ))}
+          </div>
         </div>
         <div className="overflow-x-auto rounded-xl border">
           <table className="w-full min-w-[680px] text-sm">
             <thead className="border-b bg-muted/40 text-xs text-muted-foreground">
               <tr>
                 <th className="px-4 py-2.5 text-left font-medium">{t("lab.colName")}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t("lab.colIS")}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t("lab.colOOS1")}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t("lab.colOOS2")}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t("lab.colDSR")}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t("lab.colMC")}</th>
+                <th title={t("lab.tipIS")} className="cursor-help px-3 py-2.5 text-right font-medium">{t("lab.colIS")}</th>
+                <th title={t("lab.tipOOS1")} className="cursor-help px-3 py-2.5 text-right font-medium">{t("lab.colOOS1")}</th>
+                <th title={t("lab.tipOOS2")} className="cursor-help px-3 py-2.5 text-right font-medium">{t("lab.colOOS2")}</th>
+                <th title={t("lab.tipDSR")} className="cursor-help px-3 py-2.5 text-right font-medium">{t("lab.colDSR")}</th>
+                <th title={t("lab.tipMC")} className="cursor-help px-3 py-2.5 text-right font-medium">{t("lab.colMC")}</th>
                 <th className="px-4 py-2.5 text-left font-medium">{t("lab.colVerdict")}</th>
               </tr>
             </thead>
             <tbody>
-              {sortedItems.map((it) => (
+              {displayItems.map((it) => (
                 <tr key={it.id} className="border-b last:border-0 hover:bg-muted/30">
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-2">
@@ -390,7 +426,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
                       </Badge>
                       {it.code && (
                         <button
-                          onClick={() => setCodeModal({ title: it.name, code: it.code! })}
+                          onClick={() => setModal({ title: it.name, body: it.code!, mono: true })}
                           className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-primary"
                         >
                           <Code2 className="size-3" /> {t("lab.viewCode")}
@@ -417,11 +453,11 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
       <p className="text-xs text-muted-foreground">{t("lab.note")}</p>
 
-      {/* modal con el codigo real */}
-      {codeModal && (
+      {/* modal: codigo real (mono) o explicacion de filtro (prosa) */}
+      {modal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-          onClick={() => setCodeModal(null)}
+          onClick={() => setModal(null)}
         >
           <div
             className="flex max-h-[80vh] w-full max-w-2xl flex-col overflow-hidden rounded-xl border bg-card shadow-2xl"
@@ -429,20 +465,26 @@ export function LabContent({ data: initial }: { data: LabData }) {
           >
             <div className="flex items-center justify-between border-b px-4 py-3">
               <div className="flex min-w-0 items-center gap-2 text-sm font-semibold">
-                <Code2 className="size-4 shrink-0 text-primary" />
-                <span className="truncate">{codeModal.title}</span>
+                {modal.mono ? <Code2 className="size-4 shrink-0 text-primary" /> : <ShieldCheck className="size-4 shrink-0 text-primary" />}
+                <span className="truncate">{modal.title}</span>
               </div>
               <button
-                onClick={() => setCodeModal(null)}
+                onClick={() => setModal(null)}
                 className="shrink-0 text-muted-foreground hover:text-foreground"
                 aria-label="cerrar"
               >
                 <X className="size-4" />
               </button>
             </div>
-            <pre className="overflow-auto bg-zinc-950 px-4 py-3 font-mono text-[12px] leading-relaxed whitespace-pre-wrap text-zinc-300">
-              {codeModal.code}
-            </pre>
+            {modal.mono ? (
+              <pre className="overflow-auto bg-zinc-950 px-4 py-3 font-mono text-[12px] leading-relaxed whitespace-pre-wrap text-zinc-300">
+                {modal.body}
+              </pre>
+            ) : (
+              <p className="overflow-auto px-5 py-4 text-sm leading-relaxed text-muted-foreground">
+                {modal.body}
+              </p>
+            )}
           </div>
         </div>
       )}

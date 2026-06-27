@@ -1,6 +1,6 @@
 {
- "updated": "2026-06-27 17:40",
- "total": 66,
+ "updated": "2026-06-27 17:55",
+ "total": 161,
  "survived": 0,
  "state": "stopped",
  "thresholds": {
@@ -9,6 +9,81 @@
   "mc_max": 0.05
  },
  "items": [
+  {
+   "id": "5b8195d5fb94",
+   "order": 132,
+   "name": "rsi_meanrev_6_20_80_t100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 6,
+    "lo": 20,
+    "hi": 80,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: DSR 0.00; MC p=0.68; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.681,
+   "beats_bh": false,
+   "sharpe_is": -0.177,
+   "sharpe_oos1": 0.756,
+   "sharpe_oos2": 0.549,
+   "ret_is": -0.0258,
+   "mdd_is": -0.0641,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 6)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 20) & reg] = 1.0\npos[rsi > 80] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "c3892ddefa60",
+   "order": 121,
+   "name": "S8",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 10,
+    "lo": 30,
+    "hi": 60,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: DSR 0.03; MC p=0.22",
+   "dsr": 0.025,
+   "mc_p": 0.219,
+   "beats_bh": true,
+   "sharpe_is": 0.232,
+   "sharpe_oos1": 0.408,
+   "sharpe_oos2": 0.351,
+   "ret_is": 0.0158,
+   "mdd_is": -0.0258,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 10)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 30) & reg] = 1.0\npos[rsi > 60] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "53d3108c52db",
+   "order": 127,
+   "name": "rsi_meanrev_3_10_80_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 3,
+    "lo": 10,
+    "hi": 80,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.27; OOS2(21-24) +0.23; DSR 0.01; MC p=0.40; no bate B&H",
+   "dsr": 0.009,
+   "mc_p": 0.395,
+   "beats_bh": false,
+   "sharpe_is": 0.082,
+   "sharpe_oos1": 0.268,
+   "sharpe_oos2": 0.234,
+   "ret_is": 0.008,
+   "mdd_is": -0.0386,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 3)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 10) & reg] = 1.0\npos[rsi > 80] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
   {
    "id": "d6c031574cac",
    "order": 22,
@@ -32,6 +107,28 @@
    "ret_is": 0.0102,
    "mdd_is": -0.0156,
    "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 3)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 5) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "152f351cbeaa",
+   "order": 125,
+   "name": "ma_trend_120",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 120
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.11; OOS2(21-24) +0.09; DSR 0.05; MC p=0.62; no bate B&H",
+   "dsr": 0.055,
+   "mc_p": 0.625,
+   "beats_bh": false,
+   "sharpe_is": -0.097,
+   "sharpe_oos1": 0.106,
+   "sharpe_oos2": 0.09,
+   "ret_is": -0.0261,
+   "mdd_is": -0.1109,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(120).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -81,6 +178,29 @@
    "at": "2026-06-27"
   },
   {
+   "id": "c0d0ebed2402",
+   "order": 88,
+   "name": "Donchian 59/24",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 59,
+    "exit": 24
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.08; OOS2(21-24) +0.15; DSR 0.10; MC p=0.62; no bate B&H",
+   "dsr": 0.102,
+   "mc_p": 0.618,
+   "beats_bh": false,
+   "sharpe_is": -0.032,
+   "sharpe_oos1": 0.082,
+   "sharpe_oos2": 0.15,
+   "ret_is": -0.0081,
+   "mdd_is": -0.0718,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(59).max().shift(1)] = 1.0\npos[close < close.rolling(24).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "52c28b7acb7d",
    "order": 7,
    "name": "Donchian 20/10",
@@ -101,6 +221,28 @@
    "ret_is": -0.0442,
    "mdd_is": -0.0864,
    "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(20).max().shift(1)] = 1.0\npos[close < close.rolling(10).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "2a2bb391d31f",
+   "order": 97,
+   "name": "Momentum 260d",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 260
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.07; OOS2(21-24) +0.12; DSR 0.10; MC p=0.79; no bate B&H",
+   "dsr": 0.098,
+   "mc_p": 0.794,
+   "beats_bh": false,
+   "sharpe_is": -0.146,
+   "sharpe_oos1": 0.073,
+   "sharpe_oos2": 0.117,
+   "ret_is": -0.0352,
+   "mdd_is": -0.1055,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(260) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -126,6 +268,122 @@
    "ret_is": 0.0173,
    "mdd_is": -0.0225,
    "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 4)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 15) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b0ccb4d21e60",
+   "order": 112,
+   "name": "rsi_meanrev_7_30_85_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 7,
+    "lo": 30,
+    "hi": 85,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.06; DSR 0.00; MC p=0.74; no bate B&H",
+   "dsr": 0.002,
+   "mc_p": 0.744,
+   "beats_bh": false,
+   "sharpe_is": -0.131,
+   "sharpe_oos1": 0.062,
+   "sharpe_oos2": 0.713,
+   "ret_is": -0.0358,
+   "mdd_is": -0.128,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 7)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 30) & reg] = 1.0\npos[rsi > 85] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b2928fc403e3",
+   "order": 93,
+   "name": "IBS 0.17/0.9",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.17,
+    "hi": 0.9
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.05; DSR 0.00; MC p=0.29; no bate B&H",
+   "dsr": 0.002,
+   "mc_p": 0.286,
+   "beats_bh": false,
+   "sharpe_is": -0.136,
+   "sharpe_oos1": 0.049,
+   "sharpe_oos2": 0.408,
+   "ret_is": -0.0361,
+   "mdd_is": -0.1102,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.17] = 1.0\npos[ibs > 0.9] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "1ce444c50fd4",
+   "order": 69,
+   "name": "momentum_150",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 150
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.15; OOS2(21-24) +0.04; DSR 0.26; MC p=0.43; no bate B&H",
+   "dsr": 0.257,
+   "mc_p": 0.429,
+   "beats_bh": false,
+   "sharpe_is": 0.082,
+   "sharpe_oos1": 0.15,
+   "sharpe_oos2": 0.043,
+   "ret_is": 0.0161,
+   "mdd_is": -0.0808,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(150) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "10bb1ec5541b",
+   "order": 83,
+   "name": "Donchian 76/68",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 76,
+    "exit": 68
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.05; OOS2(21-24) +0.04; DSR 0.06; MC p=0.82; no bate B&H",
+   "dsr": 0.064,
+   "mc_p": 0.824,
+   "beats_bh": false,
+   "sharpe_is": -0.11,
+   "sharpe_oos1": 0.049,
+   "sharpe_oos2": 0.041,
+   "ret_is": -0.028,
+   "mdd_is": -0.0996,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(76).max().shift(1)] = 1.0\npos[close < close.rolling(68).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "7cadcdfa922b",
+   "order": 123,
+   "name": "S10",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.4,
+    "hi": 0.95
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.04; DSR 0.00; MC p=0.75; no bate B&H",
+   "dsr": 0.002,
+   "mc_p": 0.748,
+   "beats_bh": false,
+   "sharpe_is": -0.117,
+   "sharpe_oos1": 0.037,
+   "sharpe_oos2": 0.396,
+   "ret_is": -0.035,
+   "mdd_is": -0.1206,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.4] = 1.0\npos[ibs > 0.95] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -177,6 +435,54 @@
    "at": "2026-06-27"
   },
   {
+   "id": "40f8892de478",
+   "order": 144,
+   "name": "donchian_145_72",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 145,
+    "exit": 72
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.25; OOS2(21-24) +0.03; DSR 0.05; MC p=0.80; no bate B&H",
+   "dsr": 0.054,
+   "mc_p": 0.801,
+   "beats_bh": false,
+   "sharpe_is": -0.152,
+   "sharpe_oos1": 0.25,
+   "sharpe_oos2": 0.034,
+   "ret_is": -0.0339,
+   "mdd_is": -0.0936,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(145).max().shift(1)] = 1.0\npos[close < close.rolling(72).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "0d88e875bf7a",
+   "order": 135,
+   "name": "rsi_meanrev_3_10_75_t200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 3,
+    "lo": 10,
+    "hi": 75,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) +0.02; DSR 0.01; MC p=0.48; no bate B&H",
+   "dsr": 0.005,
+   "mc_p": 0.478,
+   "beats_bh": false,
+   "sharpe_is": 0.001,
+   "sharpe_oos1": 0.396,
+   "sharpe_oos2": 0.023,
+   "ret_is": -0.0004,
+   "mdd_is": -0.041,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 3)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 10) & reg] = 1.0\npos[rsi > 75] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "5ac6fd1f0a9c",
    "order": 44,
    "name": "Momentum_300",
@@ -196,6 +502,52 @@
    "ret_is": 0.0213,
    "mdd_is": -0.0813,
    "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(300) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "921f5d696c57",
+   "order": 67,
+   "name": "donchian_70_25",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 70,
+    "exit": 25
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.01; OOS2(21-24) +0.03; DSR 0.05; MC p=0.76; no bate B&H",
+   "dsr": 0.047,
+   "mc_p": 0.761,
+   "beats_bh": false,
+   "sharpe_is": -0.156,
+   "sharpe_oos1": 0.015,
+   "sharpe_oos2": 0.029,
+   "ret_is": -0.0309,
+   "mdd_is": -0.0912,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(70).max().shift(1)] = 1.0\npos[close < close.rolling(25).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "d923716b0514",
+   "order": 114,
+   "name": "donchian_140_70",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 140,
+    "exit": 70
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.21; OOS2(21-24) +0.01; DSR 0.06; MC p=0.79; no bate B&H",
+   "dsr": 0.059,
+   "mc_p": 0.791,
+   "beats_bh": false,
+   "sharpe_is": -0.144,
+   "sharpe_oos1": 0.21,
+   "sharpe_oos2": 0.014,
+   "ret_is": -0.0323,
+   "mdd_is": -0.0899,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(140).max().shift(1)] = 1.0\npos[close < close.rolling(70).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -243,6 +595,54 @@
    "at": "2026-06-27"
   },
   {
+   "id": "fc4e66c7ab4c",
+   "order": 140,
+   "name": "donchian_130_65",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 130,
+    "exit": 65
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.29; OOS2(21-24) +0.01; DSR 0.05; MC p=0.82; no bate B&H",
+   "dsr": 0.049,
+   "mc_p": 0.817,
+   "beats_bh": false,
+   "sharpe_is": -0.184,
+   "sharpe_oos1": 0.289,
+   "sharpe_oos2": 0.01,
+   "ret_is": -0.0403,
+   "mdd_is": -0.1007,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(130).max().shift(1)] = 1.0\npos[close < close.rolling(65).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "72168f4e40bd",
+   "order": 116,
+   "name": "rsi_meanrev_9_5_90_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 9,
+    "lo": 5,
+    "hi": 90,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.00; OOS2(21-24) +0.00; DSR 0.00; MC p=1.00; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 1.0,
+   "beats_bh": false,
+   "sharpe_is": 0.0,
+   "sharpe_oos1": 0.0,
+   "sharpe_oos2": 0.0,
+   "ret_is": 0.0,
+   "mdd_is": 0.0,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 9)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 5) & reg] = 1.0\npos[rsi > 90] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "f8b03ffaa9a5",
    "order": 3,
    "name": "Tendencia MA150",
@@ -262,6 +662,52 @@
    "ret_is": -0.0105,
    "mdd_is": -0.0956,
    "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(150).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "4c5617c997db",
+   "order": 110,
+   "name": "donchian_breakout_150_75",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 150,
+    "exit": 75
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.28; OOS2(21-24) -0.00; DSR 0.07; MC p=0.79; no bate B&H",
+   "dsr": 0.074,
+   "mc_p": 0.791,
+   "beats_bh": false,
+   "sharpe_is": -0.103,
+   "sharpe_oos1": 0.279,
+   "sharpe_oos2": -0.003,
+   "ret_is": -0.0235,
+   "mdd_is": -0.0827,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(150).max().shift(1)] = 1.0\npos[close < close.rolling(75).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ab49bf446c32",
+   "order": 148,
+   "name": "Donchian breakout tight",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 30,
+    "exit": 18
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.06; OOS2(21-24) -0.00; DSR 0.05; MC p=0.72; no bate B&H",
+   "dsr": 0.053,
+   "mc_p": 0.721,
+   "beats_bh": false,
+   "sharpe_is": -0.16,
+   "sharpe_oos1": 0.057,
+   "sharpe_oos2": -0.004,
+   "ret_is": -0.0348,
+   "mdd_is": -0.0848,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(30).max().shift(1)] = 1.0\npos[close < close.rolling(18).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -310,6 +756,50 @@
    "at": "2026-06-27"
   },
   {
+   "id": "45b3e9315c0f",
+   "order": 115,
+   "name": "momentum_240",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 240
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.12; OOS2(21-24) -0.01; DSR 0.10; MC p=0.81; no bate B&H",
+   "dsr": 0.1,
+   "mc_p": 0.811,
+   "beats_bh": false,
+   "sharpe_is": -0.149,
+   "sharpe_oos1": 0.122,
+   "sharpe_oos2": -0.013,
+   "ret_is": -0.0357,
+   "mdd_is": -0.0939,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(240) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "aa09ac2c06d2",
+   "order": 90,
+   "name": "Momentum 293d",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 293
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.04; OOS2(21-24) -0.02; DSR 0.21; MC p=0.58; no bate B&H",
+   "dsr": 0.212,
+   "mc_p": 0.578,
+   "beats_bh": false,
+   "sharpe_is": 0.018,
+   "sharpe_oos1": 0.043,
+   "sharpe_oos2": -0.016,
+   "ret_is": 0.0013,
+   "mdd_is": -0.1073,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(293) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "a934583e09e9",
    "order": 15,
    "name": "Momentum 60d",
@@ -355,6 +845,76 @@
    "at": "2026-06-27"
   },
   {
+   "id": "cfef2b2c20ca",
+   "order": 99,
+   "name": "DoubleSeven 4 (MA100)",
+   "family": "meanrev",
+   "type": "double_seven",
+   "params": {
+    "trend": 100,
+    "win": 4
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.02; OOS2(21-24) +0.16; DSR 0.00; MC p=0.72; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.718,
+   "beats_bh": false,
+   "sharpe_is": -0.528,
+   "sharpe_oos1": -0.021,
+   "sharpe_oos2": 0.161,
+   "ret_is": -0.0805,
+   "mdd_is": -0.1158,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(4).min()) & reg] = 1.0\npos[close >= close.rolling(4).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "db56e25091b4",
+   "order": 138,
+   "name": "rsi_meanrev_2_30_90_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 2,
+    "lo": 30,
+    "hi": 90,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.18; OOS2(21-24) -0.03; DSR 0.01; MC p=0.41; no bate B&H",
+   "dsr": 0.007,
+   "mc_p": 0.412,
+   "beats_bh": false,
+   "sharpe_is": 0.021,
+   "sharpe_oos1": 0.184,
+   "sharpe_oos2": -0.027,
+   "ret_is": 0.0019,
+   "mdd_is": -0.0873,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 30) & reg] = 1.0\npos[rsi > 90] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "7fa9586ef13a",
+   "order": 87,
+   "name": "Momentum 96d",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 96
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.03; DSR 0.10; MC p=0.70; no bate B&H",
+   "dsr": 0.097,
+   "mc_p": 0.701,
+   "beats_bh": false,
+   "sharpe_is": -0.14,
+   "sharpe_oos1": 0.353,
+   "sharpe_oos2": -0.029,
+   "ret_is": -0.0357,
+   "mdd_is": -0.1252,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(96) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "2ffb65d8a5b2",
    "order": 10,
    "name": "Donchian 55/10",
@@ -375,6 +935,29 @@
    "ret_is": 0.0122,
    "mdd_is": -0.0515,
    "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(55).max().shift(1)] = 1.0\npos[close < close.rolling(10).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b96c6c7a3589",
+   "order": 126,
+   "name": "donchian_110_50",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 110,
+    "exit": 50
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.03; DSR 0.06; MC p=0.80; no bate B&H",
+   "dsr": 0.061,
+   "mc_p": 0.797,
+   "beats_bh": false,
+   "sharpe_is": -0.143,
+   "sharpe_oos1": 0.312,
+   "sharpe_oos2": -0.032,
+   "ret_is": -0.0299,
+   "mdd_is": -0.0961,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(110).max().shift(1)] = 1.0\npos[close < close.rolling(50).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -400,6 +983,74 @@
    "at": "2026-06-27"
   },
   {
+   "id": "d1fa9281636b",
+   "order": 129,
+   "name": "donchian_50_10",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 50,
+    "exit": 10
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.04; OOS2(21-24) +0.01; DSR 0.16; MC p=0.45; no bate B&H",
+   "dsr": 0.162,
+   "mc_p": 0.449,
+   "beats_bh": false,
+   "sharpe_is": 0.04,
+   "sharpe_oos1": -0.041,
+   "sharpe_oos2": 0.014,
+   "ret_is": 0.005,
+   "mdd_is": -0.0581,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(50).max().shift(1)] = 1.0\npos[close < close.rolling(10).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ef9e1a7a11c0",
+   "order": 150,
+   "name": "MA trend short",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 88
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.01; OOS2(21-24) -0.04; DSR 0.04; MC p=0.59; no bate B&H",
+   "dsr": 0.044,
+   "mc_p": 0.591,
+   "beats_bh": false,
+   "sharpe_is": -0.115,
+   "sharpe_oos1": 0.008,
+   "sharpe_oos2": -0.043,
+   "ret_is": -0.0297,
+   "mdd_is": -0.088,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(88).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "f6b9f86bf4e4",
+   "order": 100,
+   "name": "Donchian 46/42",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 46,
+    "exit": 42
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.04; OOS2(21-24) -0.04; DSR 0.07; MC p=0.73; no bate B&H",
+   "dsr": 0.074,
+   "mc_p": 0.731,
+   "beats_bh": false,
+   "sharpe_is": -0.096,
+   "sharpe_oos1": -0.041,
+   "sharpe_oos2": -0.044,
+   "ret_is": -0.0242,
+   "mdd_is": -0.1027,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(46).max().shift(1)] = 1.0\npos[close < close.rolling(42).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "f626df42eeb6",
    "order": 20,
    "name": "RSI2 reversion <10",
@@ -422,6 +1073,31 @@
    "ret_is": 0.0159,
    "mdd_is": -0.0339,
    "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 10) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "a265aaed141c",
+   "order": 77,
+   "name": "RSI2 <15",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 2,
+    "lo": 15,
+    "hi": 65,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.01; OOS2(21-24) -0.06; DSR 0.01; MC p=0.19; no bate B&H",
+   "dsr": 0.013,
+   "mc_p": 0.193,
+   "beats_bh": false,
+   "sharpe_is": 0.056,
+   "sharpe_oos1": -0.012,
+   "sharpe_oos2": -0.057,
+   "ret_is": 0.0061,
+   "mdd_is": -0.0282,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 15) & reg] = 1.0\npos[rsi > 65] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -471,6 +1147,52 @@
    "at": "2026-06-27"
   },
   {
+   "id": "af1b3d6f4d5c",
+   "order": 137,
+   "name": "donchian_80_20",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 80,
+    "exit": 20
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.12; OOS2(21-24) -0.07; DSR 0.06; MC p=0.75; no bate B&H",
+   "dsr": 0.059,
+   "mc_p": 0.751,
+   "beats_bh": false,
+   "sharpe_is": -0.153,
+   "sharpe_oos1": 0.116,
+   "sharpe_oos2": -0.065,
+   "ret_is": -0.0283,
+   "mdd_is": -0.0895,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(80).max().shift(1)] = 1.0\npos[close < close.rolling(20).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "9f7fc5880a12",
+   "order": 81,
+   "name": "Donchian 69/12",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 69,
+    "exit": 12
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.02; OOS2(21-24) -0.07; DSR 0.17; MC p=0.40; no bate B&H",
+   "dsr": 0.172,
+   "mc_p": 0.395,
+   "beats_bh": false,
+   "sharpe_is": 0.086,
+   "sharpe_oos1": -0.023,
+   "sharpe_oos2": -0.066,
+   "ret_is": 0.0125,
+   "mdd_is": -0.0432,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(69).max().shift(1)] = 1.0\npos[close < close.rolling(12).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "8fd4a9b36451",
    "order": 62,
    "name": "ibs_lo_0.05_hi_0.95",
@@ -491,6 +1213,28 @@
    "ret_is": -0.0004,
    "mdd_is": -0.0602,
    "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.05] = 1.0\npos[ibs > 0.95] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "69860c36c391",
+   "order": 70,
+   "name": "momentum_280",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 280
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.04; OOS2(21-24) -0.08; DSR 0.24; MC p=0.53; no bate B&H",
+   "dsr": 0.237,
+   "mc_p": 0.528,
+   "beats_bh": false,
+   "sharpe_is": 0.058,
+   "sharpe_oos1": 0.035,
+   "sharpe_oos2": -0.08,
+   "ret_is": 0.0102,
+   "mdd_is": -0.0979,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(280) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -635,6 +1379,51 @@
    "at": "2026-06-27"
   },
   {
+   "id": "abeaa717c1be",
+   "order": 156,
+   "name": "Double Seven medium window",
+   "family": "breakout",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 12
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.29; OOS2(21-24) -0.10; DSR 0.32; MC p=0.22",
+   "dsr": 0.316,
+   "mc_p": 0.219,
+   "beats_bh": true,
+   "sharpe_is": 0.236,
+   "sharpe_oos1": 0.292,
+   "sharpe_oos2": -0.095,
+   "ret_is": 0.0348,
+   "mdd_is": -0.041,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(12).min()) & reg] = 1.0\npos[close >= close.rolling(12).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "e54bcc093906",
+   "order": 134,
+   "name": "momentum_160",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 160
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.10; DSR 0.39; MC p=0.31",
+   "dsr": 0.392,
+   "mc_p": 0.312,
+   "beats_bh": true,
+   "sharpe_is": 0.202,
+   "sharpe_oos1": 0.378,
+   "sharpe_oos2": -0.098,
+   "ret_is": 0.0447,
+   "mdd_is": -0.0512,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(160) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "a4eb990af434",
    "order": 54,
    "name": "ma_trend_win_75",
@@ -680,6 +1469,75 @@
    "at": "2026-06-27"
   },
   {
+   "id": "3d6b401c608a",
+   "order": 72,
+   "name": "rsi_meanrev_8_25_85_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 8,
+    "lo": 25,
+    "hi": 85,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.10; OOS2(21-24) +0.18; DSR 0.00; MC p=0.86; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.864,
+   "beats_bh": false,
+   "sharpe_is": -0.289,
+   "sharpe_oos1": -0.101,
+   "sharpe_oos2": 0.184,
+   "ret_is": -0.064,
+   "mdd_is": -0.1125,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 8)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 25) & reg] = 1.0\npos[rsi > 85] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ff6d114796c0",
+   "order": 92,
+   "name": "MA52",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 52
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.02; OOS2(21-24) -0.11; DSR 0.02; MC p=0.73; no bate B&H",
+   "dsr": 0.025,
+   "mc_p": 0.734,
+   "beats_bh": false,
+   "sharpe_is": -0.325,
+   "sharpe_oos1": 0.024,
+   "sharpe_oos2": -0.106,
+   "ret_is": -0.0748,
+   "mdd_is": -0.124,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(52).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "4f843aa2a060",
+   "order": 161,
+   "name": "Momentum 100",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.11; DSR 0.10; MC p=0.74; no bate B&H",
+   "dsr": 0.102,
+   "mc_p": 0.738,
+   "beats_bh": false,
+   "sharpe_is": -0.135,
+   "sharpe_oos1": 0.418,
+   "sharpe_oos2": -0.109,
+   "ret_is": -0.0342,
+   "mdd_is": -0.1161,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(100) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "920f1cc09c25",
    "order": 39,
    "name": "DoubleSeven 10 (MA100)",
@@ -700,6 +1558,121 @@
    "ret_is": 0.0559,
    "mdd_is": -0.0408,
    "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(10).min()) & reg] = 1.0\npos[close >= close.rolling(10).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "e893d9a1e04e",
+   "order": 124,
+   "name": "S11",
+   "family": "trend",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 15
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.22; OOS2(21-24) -0.12; DSR 0.35; MC p=0.16",
+   "dsr": 0.349,
+   "mc_p": 0.156,
+   "beats_bh": true,
+   "sharpe_is": 0.318,
+   "sharpe_oos1": 0.217,
+   "sharpe_oos2": -0.115,
+   "ret_is": 0.048,
+   "mdd_is": -0.0347,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(15).min()) & reg] = 1.0\npos[close >= close.rolling(15).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "29393809d674",
+   "order": 84,
+   "name": "IBS 0.09/0.74",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.09,
+    "hi": 0.74
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.09; OOS2(21-24) -0.12; DSR 0.00; MC p=0.10; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.096,
+   "beats_bh": false,
+   "sharpe_is": -0.195,
+   "sharpe_oos1": -0.092,
+   "sharpe_oos2": -0.119,
+   "ret_is": -0.0293,
+   "mdd_is": -0.063,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.09] = 1.0\npos[ibs > 0.74] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "2725226acb70",
+   "order": 79,
+   "name": "DoubleSeven 3 (MA100)",
+   "family": "meanrev",
+   "type": "double_seven",
+   "params": {
+    "trend": 100,
+    "win": 3
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.12; OOS2(21-24) +0.09; DSR 0.00; MC p=0.61; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.615,
+   "beats_bh": false,
+   "sharpe_is": -0.688,
+   "sharpe_oos1": -0.121,
+   "sharpe_oos2": 0.093,
+   "ret_is": -0.1035,
+   "mdd_is": -0.1345,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(3).min()) & reg] = 1.0\npos[close >= close.rolling(3).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "c43b813f3881",
+   "order": 118,
+   "name": "S4",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 120,
+    "exit": 60
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.13; DSR 0.07; MC p=0.78; no bate B&H",
+   "dsr": 0.066,
+   "mc_p": 0.777,
+   "beats_bh": false,
+   "sharpe_is": -0.129,
+   "sharpe_oos1": 0.352,
+   "sharpe_oos2": -0.126,
+   "ret_is": -0.0291,
+   "mdd_is": -0.0936,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(120).max().shift(1)] = 1.0\npos[close < close.rolling(60).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "517bd3d87d2d",
+   "order": 149,
+   "name": "Donchian breakout wide",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 90,
+    "exit": 35
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.15; OOS2(21-24) -0.13; DSR 0.03; MC p=0.84; no bate B&H",
+   "dsr": 0.031,
+   "mc_p": 0.844,
+   "beats_bh": false,
+   "sharpe_is": -0.236,
+   "sharpe_oos1": 0.147,
+   "sharpe_oos2": -0.13,
+   "ret_is": -0.0463,
+   "mdd_is": -0.1101,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(90).max().shift(1)] = 1.0\npos[close < close.rolling(35).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -776,6 +1749,75 @@
    "at": "2026-06-27"
   },
   {
+   "id": "d49c28098564",
+   "order": 103,
+   "name": "DoubleSeven 9 (MA200)",
+   "family": "meanrev",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 9
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.23; OOS2(21-24) -0.14; DSR 0.07; MC p=0.12",
+   "dsr": 0.067,
+   "mc_p": 0.123,
+   "beats_bh": true,
+   "sharpe_is": 0.334,
+   "sharpe_oos1": 0.231,
+   "sharpe_oos2": -0.143,
+   "ret_is": 0.0514,
+   "mdd_is": -0.0235,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(9).min()) & reg] = 1.0\npos[close >= close.rolling(9).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "7485221e84d5",
+   "order": 98,
+   "name": "IBS 0.09/0.64",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.09,
+    "hi": 0.64
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.14; OOS2(21-24) -0.09; DSR 0.00; MC p=0.10; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.096,
+   "beats_bh": false,
+   "sharpe_is": -0.367,
+   "sharpe_oos1": -0.144,
+   "sharpe_oos2": -0.092,
+   "ret_is": -0.0443,
+   "mdd_is": -0.0699,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.09] = 1.0\npos[ibs > 0.64] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ccaf888e6a52",
+   "order": 122,
+   "name": "S9",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.05,
+    "hi": 0.6
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.14; OOS2(21-24) -0.06; DSR 0.00; no bate B&H",
+   "dsr": 0.003,
+   "mc_p": 0.027,
+   "beats_bh": false,
+   "sharpe_is": -0.05,
+   "sharpe_oos1": -0.145,
+   "sharpe_oos2": -0.062,
+   "ret_is": -0.0042,
+   "mdd_is": -0.0284,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.05] = 1.0\npos[ibs > 0.6] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "37e102e11a47",
    "order": 14,
    "name": "Momentum 20d",
@@ -795,6 +1837,31 @@
    "ret_is": -0.1232,
    "mdd_is": -0.1601,
    "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(20) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "a886d5cd766f",
+   "order": 120,
+   "name": "S7",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 2,
+    "lo": 5,
+    "hi": 90,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.15; DSR 0.03; MC p=0.22",
+   "dsr": 0.028,
+   "mc_p": 0.219,
+   "beats_bh": true,
+   "sharpe_is": 0.245,
+   "sharpe_oos1": 0.455,
+   "sharpe_oos2": -0.146,
+   "ret_is": 0.0287,
+   "mdd_is": -0.0322,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 5) & reg] = 1.0\npos[rsi > 90] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -821,6 +1888,51 @@
    "at": "2026-06-27"
   },
   {
+   "id": "a473b91b38f8",
+   "order": 131,
+   "name": "double_seven_200_13",
+   "family": "trend",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 13
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.23; OOS2(21-24) -0.15; DSR 0.36; MC p=0.14",
+   "dsr": 0.357,
+   "mc_p": 0.143,
+   "beats_bh": true,
+   "sharpe_is": 0.333,
+   "sharpe_oos1": 0.235,
+   "sharpe_oos2": -0.154,
+   "ret_is": 0.0493,
+   "mdd_is": -0.034,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(13).min()) & reg] = 1.0\npos[close >= close.rolling(13).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "5b47633686e8",
+   "order": 139,
+   "name": "ma_trend_60",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 60
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.08; OOS2(21-24) -0.15; DSR 0.01; MC p=0.76; no bate B&H",
+   "dsr": 0.01,
+   "mc_p": 0.764,
+   "beats_bh": false,
+   "sharpe_is": -0.311,
+   "sharpe_oos1": 0.076,
+   "sharpe_oos2": -0.155,
+   "ret_is": -0.0721,
+   "mdd_is": -0.1221,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(60).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "b96212cf2564",
    "order": 36,
    "name": "IBS <0.3/>0.9",
@@ -841,6 +1953,51 @@
    "ret_is": -0.066,
    "mdd_is": -0.1453,
    "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.3] = 1.0\npos[ibs > 0.9] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "135664ebdd22",
+   "order": 104,
+   "name": "ma_trend_20",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 20
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.16; OOS2(21-24) +0.04; DSR 0.00; MC p=0.94; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.937,
+   "beats_bh": false,
+   "sharpe_is": -0.617,
+   "sharpe_oos1": -0.16,
+   "sharpe_oos2": 0.037,
+   "ret_is": -0.1357,
+   "mdd_is": -0.1511,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(20).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "83c22466e08a",
+   "order": 154,
+   "name": "IBS extreme low",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.08,
+    "hi": 0.78
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.03; OOS2(21-24) -0.16; DSR 0.00; MC p=0.20; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.199,
+   "beats_bh": false,
+   "sharpe_is": -0.276,
+   "sharpe_oos1": -0.029,
+   "sharpe_oos2": -0.16,
+   "ret_is": -0.0458,
+   "mdd_is": -0.0833,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.08] = 1.0\npos[ibs > 0.78] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -891,6 +2048,52 @@
    "at": "2026-06-27"
   },
   {
+   "id": "a1866abc384e",
+   "order": 68,
+   "name": "donchian_90_40",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 90,
+    "exit": 40
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.15; OOS2(21-24) -0.16; DSR 0.04; MC p=0.80; no bate B&H",
+   "dsr": 0.035,
+   "mc_p": 0.804,
+   "beats_bh": false,
+   "sharpe_is": -0.203,
+   "sharpe_oos1": 0.153,
+   "sharpe_oos2": -0.162,
+   "ret_is": -0.0413,
+   "mdd_is": -0.1045,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(90).max().shift(1)] = 1.0\npos[close < close.rolling(40).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "8a5f0423156a",
+   "order": 76,
+   "name": "double_seven_100_14",
+   "family": "breakout",
+   "type": "double_seven",
+   "params": {
+    "trend": 100,
+    "win": 14
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.17; DSR 0.25; MC p=0.26",
+   "dsr": 0.253,
+   "mc_p": 0.256,
+   "beats_bh": true,
+   "sharpe_is": 0.185,
+   "sharpe_oos1": 0.302,
+   "sharpe_oos2": -0.166,
+   "ret_is": 0.0258,
+   "mdd_is": -0.0548,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(14).min()) & reg] = 1.0\npos[close >= close.rolling(14).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "d83054a3c430",
    "order": 56,
    "name": "donchian_entry_60_exit_30",
@@ -911,6 +2114,28 @@
    "ret_is": -0.0171,
    "mdd_is": -0.0854,
    "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(60).max().shift(1)] = 1.0\npos[close < close.rolling(30).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "aa804ee8b5f4",
+   "order": 111,
+   "name": "momentum_40",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 40
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.06; OOS2(21-24) -0.17; DSR 0.09; MC p=0.58; no bate B&H",
+   "dsr": 0.086,
+   "mc_p": 0.585,
+   "beats_bh": false,
+   "sharpe_is": -0.177,
+   "sharpe_oos1": -0.063,
+   "sharpe_oos2": -0.171,
+   "ret_is": -0.0431,
+   "mdd_is": -0.1163,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(40) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -960,6 +2185,76 @@
    "at": "2026-06-27"
   },
   {
+   "id": "4d9ba2e886b5",
+   "order": 141,
+   "name": "rsi_meanrev_8_20_80_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 8,
+    "lo": 20,
+    "hi": 80,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.19; DSR 0.00; MC p=0.70; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.701,
+   "beats_bh": false,
+   "sharpe_is": -0.163,
+   "sharpe_oos1": -0.189,
+   "sharpe_oos2": 0.571,
+   "ret_is": -0.0145,
+   "mdd_is": -0.0508,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 8)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 20) & reg] = 1.0\npos[rsi > 80] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ae95e512120f",
+   "order": 147,
+   "name": "ma_trend_180",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 180
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.23; OOS2(21-24) -0.21; DSR 0.12; MC p=0.49; no bate B&H",
+   "dsr": 0.123,
+   "mc_p": 0.488,
+   "beats_bh": false,
+   "sharpe_is": 0.071,
+   "sharpe_oos1": 0.231,
+   "sharpe_oos2": -0.209,
+   "ret_is": 0.0138,
+   "mdd_is": -0.0752,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(180).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "3852b838f41a",
+   "order": 96,
+   "name": "IBS 0.05/0.73",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.05,
+    "hi": 0.73
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.09; OOS2(21-24) -0.21; DSR 0.01; no bate B&H",
+   "dsr": 0.01,
+   "mc_p": 0.033,
+   "beats_bh": false,
+   "sharpe_is": 0.045,
+   "sharpe_oos1": -0.087,
+   "sharpe_oos2": -0.213,
+   "ret_is": 0.0037,
+   "mdd_is": -0.027,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.05] = 1.0\npos[ibs > 0.73] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "0adfbffbcefd",
    "order": 4,
    "name": "Tendencia MA200",
@@ -979,6 +2274,29 @@
    "ret_is": 0.0271,
    "mdd_is": -0.062,
    "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(200).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "36fa89d91e99",
+   "order": 73,
+   "name": "ibs_0.1_0.6",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.1,
+    "hi": 0.6
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.22; OOS2(21-24) -0.12; DSR 0.00; MC p=0.19; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.193,
+   "beats_bh": false,
+   "sharpe_is": -0.591,
+   "sharpe_oos1": -0.221,
+   "sharpe_oos2": -0.125,
+   "ret_is": -0.0755,
+   "mdd_is": -0.1061,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.1] = 1.0\npos[ibs > 0.6] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1004,6 +2322,50 @@
    "ret_is": -0.0051,
    "mdd_is": -0.0483,
    "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 5)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 20) & reg] = 1.0\npos[rsi > 80] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "07508004dd29",
+   "order": 80,
+   "name": "MA188",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 188
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.21; OOS2(21-24) -0.22; DSR 0.33; MC p=0.40",
+   "dsr": 0.325,
+   "mc_p": 0.399,
+   "beats_bh": true,
+   "sharpe_is": 0.138,
+   "sharpe_oos1": 0.21,
+   "sharpe_oos2": -0.223,
+   "ret_is": 0.0302,
+   "mdd_is": -0.0629,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(188).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "bf9302dc7c71",
+   "order": 106,
+   "name": "momentum_220",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 220
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.07; OOS2(21-24) -0.23; DSR 0.17; MC p=0.62; no bate B&H",
+   "dsr": 0.167,
+   "mc_p": 0.618,
+   "beats_bh": false,
+   "sharpe_is": -0.043,
+   "sharpe_oos1": 0.067,
+   "sharpe_oos2": -0.225,
+   "ret_is": -0.0127,
+   "mdd_is": -0.0637,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(220) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1076,6 +2438,51 @@
    "at": "2026-06-27"
   },
   {
+   "id": "62753fe83fd5",
+   "order": 151,
+   "name": "MA trend long",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 210
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.24; OOS2(21-24) -0.25; DSR 0.21; MC p=0.35",
+   "dsr": 0.209,
+   "mc_p": 0.352,
+   "beats_bh": true,
+   "sharpe_is": 0.187,
+   "sharpe_oos1": 0.243,
+   "sharpe_oos2": -0.248,
+   "ret_is": 0.042,
+   "mdd_is": -0.0484,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(210).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "5c41afd260a7",
+   "order": 101,
+   "name": "IBS 0.1/0.66",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.1,
+    "hi": 0.66
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.25; OOS2(21-24) -0.12; DSR 0.00; MC p=0.10; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.096,
+   "beats_bh": false,
+   "sharpe_is": -0.361,
+   "sharpe_oos1": -0.249,
+   "sharpe_oos2": -0.116,
+   "ret_is": -0.0505,
+   "mdd_is": -0.084,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.1] = 1.0\npos[ibs > 0.66] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "d189231446b4",
    "order": 28,
    "name": "IBS <0.1/>0.7",
@@ -1122,6 +2529,75 @@
    "at": "2026-06-27"
   },
   {
+   "id": "9221813253c0",
+   "order": 82,
+   "name": "MA293",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 293
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.21; OOS2(21-24) -0.25; DSR 0.24; MC p=0.58; no bate B&H",
+   "dsr": 0.238,
+   "mc_p": 0.578,
+   "beats_bh": false,
+   "sharpe_is": 0.048,
+   "sharpe_oos1": 0.208,
+   "sharpe_oos2": -0.254,
+   "ret_is": 0.0082,
+   "mdd_is": -0.0822,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(293).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "62dac530a0f4",
+   "order": 143,
+   "name": "rsi_meanrev_2_10_85_100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 2,
+    "lo": 10,
+    "hi": 85,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.29; OOS2(21-24) -0.26; DSR 0.04; MC p=0.12",
+   "dsr": 0.037,
+   "mc_p": 0.12,
+   "beats_bh": true,
+   "sharpe_is": 0.254,
+   "sharpe_oos1": 0.288,
+   "sharpe_oos2": -0.261,
+   "ret_is": 0.0338,
+   "mdd_is": -0.0358,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 10) & reg] = 1.0\npos[rsi > 85] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "cc981e5b01d8",
+   "order": 89,
+   "name": "Momentum 121d",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 121
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.26; DSR 0.13; MC p=0.70; no bate B&H",
+   "dsr": 0.133,
+   "mc_p": 0.701,
+   "beats_bh": false,
+   "sharpe_is": -0.081,
+   "sharpe_oos1": 0.341,
+   "sharpe_oos2": -0.262,
+   "ret_is": -0.0217,
+   "mdd_is": -0.0967,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(121) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "6aac573a7dc8",
    "order": 42,
    "name": "DoubleSeven 10 (MA200)",
@@ -1142,6 +2618,56 @@
    "ret_is": 0.0835,
    "mdd_is": -0.0227,
    "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(10).min()) & reg] = 1.0\npos[close >= close.rolling(10).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "d3f7c3f26920",
+   "order": 159,
+   "name": "RSI MeanRev 8-15-70-200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 8,
+    "lo": 15,
+    "hi": 70,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.27; DSR 0.00; MC p=0.96; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.96,
+   "beats_bh": false,
+   "sharpe_is": -0.606,
+   "sharpe_oos1": -0.267,
+   "sharpe_oos2": 0.794,
+   "ret_is": -0.0271,
+   "mdd_is": -0.0362,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 8)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 15) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "738b5714c150",
+   "order": 153,
+   "name": "RSI mean reversion conservative",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 4,
+    "lo": 30,
+    "hi": 65,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.28; OOS2(21-24) -0.28; DSR 0.01; MC p=0.38; no bate B&H",
+   "dsr": 0.008,
+   "mc_p": 0.375,
+   "beats_bh": false,
+   "sharpe_is": 0.036,
+   "sharpe_oos1": 0.285,
+   "sharpe_oos2": -0.276,
+   "ret_is": 0.004,
+   "mdd_is": -0.0512,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 4)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 30) & reg] = 1.0\npos[rsi > 65] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1193,6 +2719,28 @@
    "at": "2026-06-27"
   },
   {
+   "id": "b57dd567f4d4",
+   "order": 119,
+   "name": "S5",
+   "family": "momentum",
+   "type": "momentum",
+   "params": {
+    "lookback": 50
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.12; OOS2(21-24) -0.28; DSR 0.15; MC p=0.48; no bate B&H",
+   "dsr": 0.15,
+   "mc_p": 0.478,
+   "beats_bh": false,
+   "sharpe_is": -0.072,
+   "sharpe_oos1": -0.119,
+   "sharpe_oos2": -0.285,
+   "ret_is": -0.0196,
+   "mdd_is": -0.1031,
+   "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(50) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "fa101ede011b",
    "order": 17,
    "name": "Momentum 200d",
@@ -1240,6 +2788,29 @@
    "at": "2026-06-27"
   },
   {
+   "id": "5b0458d916ae",
+   "order": 105,
+   "name": "donchian_breakout_100_40",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 100,
+    "exit": 40
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.29; OOS2(21-24) -0.29; DSR 0.06; MC p=0.76; no bate B&H",
+   "dsr": 0.063,
+   "mc_p": 0.757,
+   "beats_bh": false,
+   "sharpe_is": -0.125,
+   "sharpe_oos1": 0.292,
+   "sharpe_oos2": -0.29,
+   "ret_is": -0.0256,
+   "mdd_is": -0.0917,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(100).max().shift(1)] = 1.0\npos[close < close.rolling(40).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "7416f294aad8",
    "order": 48,
    "name": "MA_Trend_400",
@@ -1284,6 +2855,121 @@
    "at": "2026-06-27"
   },
   {
+   "id": "1e427b0bf100",
+   "order": 109,
+   "name": "ma_trend_350",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 350
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.19; OOS2(21-24) -0.30; DSR 0.17; MC p=0.52; no bate B&H",
+   "dsr": 0.171,
+   "mc_p": 0.518,
+   "beats_bh": false,
+   "sharpe_is": 0.107,
+   "sharpe_oos1": 0.189,
+   "sharpe_oos2": -0.301,
+   "ret_is": 0.0219,
+   "mdd_is": -0.0747,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(350).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "0e0bae77a838",
+   "order": 85,
+   "name": "DoubleSeven 8 (MA100)",
+   "family": "meanrev",
+   "type": "double_seven",
+   "params": {
+    "trend": 100,
+    "win": 8
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.06; OOS2(21-24) -0.30; DSR 0.07; MC p=0.09",
+   "dsr": 0.068,
+   "mc_p": 0.09,
+   "beats_bh": true,
+   "sharpe_is": 0.341,
+   "sharpe_oos1": 0.056,
+   "sharpe_oos2": -0.302,
+   "ret_is": 0.0536,
+   "mdd_is": -0.0341,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(8).min()) & reg] = 1.0\npos[close >= close.rolling(8).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "f6adbe8cbf56",
+   "order": 142,
+   "name": "donchian_10_5",
+   "family": "breakout",
+   "type": "donchian",
+   "params": {
+    "entry": 10,
+    "exit": 5
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.19; OOS2(21-24) -0.31; DSR 0.01; MC p=0.75; no bate B&H",
+   "dsr": 0.007,
+   "mc_p": 0.751,
+   "beats_bh": false,
+   "sharpe_is": -0.434,
+   "sharpe_oos1": -0.193,
+   "sharpe_oos2": -0.307,
+   "ret_is": -0.089,
+   "mdd_is": -0.1006,
+   "code": "# --- senal (engine._signal, rama 'donchian') ---\npos = pd.Series(np.nan, index=close.index)\npos[close > close.rolling(10).max().shift(1)] = 1.0\npos[close < close.rolling(5).min().shift(1)] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "ecf956c49c1a",
+   "order": 91,
+   "name": "MA332",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 332
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.13; OOS2(21-24) -0.31; DSR 0.30; MC p=0.47; no bate B&H",
+   "dsr": 0.295,
+   "mc_p": 0.465,
+   "beats_bh": false,
+   "sharpe_is": 0.125,
+   "sharpe_oos1": 0.134,
+   "sharpe_oos2": -0.311,
+   "ret_is": 0.0264,
+   "mdd_is": -0.0681,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(332).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b2dedf986530",
+   "order": 117,
+   "name": "rsi_meanrev_10_25_60_100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 10,
+    "lo": 25,
+    "hi": 60,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.31; DSR 0.23",
+   "dsr": 0.232,
+   "mc_p": 0.037,
+   "beats_bh": true,
+   "sharpe_is": 0.675,
+   "sharpe_oos1": -0.312,
+   "sharpe_oos2": 0.415,
+   "ret_is": 0.0084,
+   "mdd_is": -0.0024,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 10)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 25) & reg] = 1.0\npos[rsi > 60] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "1c7e7aa893d7",
    "order": 6,
    "name": "Tendencia MA300",
@@ -1303,6 +2989,73 @@
    "ret_is": 0.0029,
    "mdd_is": -0.0838,
    "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(300).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "d4d34ac8a555",
+   "order": 75,
+   "name": "double_seven_200_6",
+   "family": "breakout",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 6
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.32; DSR 0.14; MC p=0.24; no bate B&H",
+   "dsr": 0.145,
+   "mc_p": 0.243,
+   "beats_bh": false,
+   "sharpe_is": 0.042,
+   "sharpe_oos1": 0.308,
+   "sharpe_oos2": -0.32,
+   "ret_is": 0.0052,
+   "mdd_is": -0.0628,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(6).min()) & reg] = 1.0\npos[close >= close.rolling(6).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "7e796289fa40",
+   "order": 102,
+   "name": "MA303",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 303
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.15; OOS2(21-24) -0.32; DSR 0.21; MC p=0.55; no bate B&H",
+   "dsr": 0.215,
+   "mc_p": 0.551,
+   "beats_bh": false,
+   "sharpe_is": 0.059,
+   "sharpe_oos1": 0.147,
+   "sharpe_oos2": -0.323,
+   "ret_is": 0.0107,
+   "mdd_is": -0.075,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(303).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "cd598e498ec9",
+   "order": 95,
+   "name": "MA298",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 298
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.19; OOS2(21-24) -0.33; DSR 0.19; MC p=0.61; no bate B&H",
+   "dsr": 0.186,
+   "mc_p": 0.608,
+   "beats_bh": false,
+   "sharpe_is": 0.027,
+   "sharpe_oos1": 0.194,
+   "sharpe_oos2": -0.332,
+   "ret_is": 0.0033,
+   "mdd_is": -0.0859,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(298).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1328,6 +3081,190 @@
    "at": "2026-06-27"
   },
   {
+   "id": "045588557bb6",
+   "order": 108,
+   "name": "double_seven_200_11",
+   "family": "trend",
+   "type": "double_seven",
+   "params": {
+    "trend": 200,
+    "win": 11
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.21; OOS2(21-24) -0.34; DSR 0.30; MC p=0.18",
+   "dsr": 0.304,
+   "mc_p": 0.176,
+   "beats_bh": true,
+   "sharpe_is": 0.257,
+   "sharpe_oos1": 0.208,
+   "sharpe_oos2": -0.335,
+   "ret_is": 0.0385,
+   "mdd_is": -0.0373,
+   "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(11).min()) & reg] = 1.0\npos[close >= close.rolling(11).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "7feb35dea703",
+   "order": 158,
+   "name": "IBS 0.12-0.68",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.12,
+    "hi": 0.68
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.35; OOS2(21-24) -0.20; DSR 0.00; MC p=0.17; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.166,
+   "beats_bh": false,
+   "sharpe_is": -0.522,
+   "sharpe_oos1": -0.347,
+   "sharpe_oos2": -0.197,
+   "ret_is": -0.0823,
+   "mdd_is": -0.1171,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.12] = 1.0\npos[ibs > 0.68] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "afc5964e7160",
+   "order": 86,
+   "name": "MA230",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 230
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.29; OOS2(21-24) -0.35; DSR 0.36; MC p=0.36",
+   "dsr": 0.363,
+   "mc_p": 0.355,
+   "beats_bh": true,
+   "sharpe_is": 0.186,
+   "sharpe_oos1": 0.293,
+   "sharpe_oos2": -0.35,
+   "ret_is": 0.042,
+   "mdd_is": -0.0476,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(230).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "f64ec4699ef2",
+   "order": 107,
+   "name": "rsi_meanrev_4_15_70_100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 4,
+    "lo": 15,
+    "hi": 70,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.35; DSR 0.01; MC p=0.36; no bate B&H",
+   "dsr": 0.012,
+   "mc_p": 0.362,
+   "beats_bh": false,
+   "sharpe_is": 0.075,
+   "sharpe_oos1": 0.371,
+   "sharpe_oos2": -0.351,
+   "ret_is": 0.0049,
+   "mdd_is": -0.0233,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 4)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 15) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "38df0e8081d0",
+   "order": 133,
+   "name": "ibs_rev_25_85",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.25,
+    "hi": 0.85
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.35; OOS2(21-24) +0.14; DSR 0.00; MC p=0.16; no bate B&H",
+   "dsr": 0.001,
+   "mc_p": 0.159,
+   "beats_bh": false,
+   "sharpe_is": -0.224,
+   "sharpe_oos1": -0.354,
+   "sharpe_oos2": 0.143,
+   "ret_is": -0.0604,
+   "mdd_is": -0.1459,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.25] = 1.0\npos[ibs > 0.85] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "61e0234bf683",
+   "order": 94,
+   "name": "IBS 0.19/0.73",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.19,
+    "hi": 0.73
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.37; OOS2(21-24) -0.21; DSR 0.00; MC p=0.10; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.096,
+   "beats_bh": false,
+   "sharpe_is": -0.434,
+   "sharpe_oos1": -0.366,
+   "sharpe_oos2": -0.215,
+   "ret_is": -0.0882,
+   "mdd_is": -0.1392,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.19] = 1.0\npos[ibs > 0.73] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "84954f1ba45f",
+   "order": 155,
+   "name": "IBS moderate range",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.28,
+    "hi": 0.82
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.37; OOS2(21-24) +0.03; DSR 0.00; MC p=0.34; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.342,
+   "beats_bh": false,
+   "sharpe_is": -0.466,
+   "sharpe_oos1": -0.367,
+   "sharpe_oos2": 0.029,
+   "ret_is": -0.1165,
+   "mdd_is": -0.182,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.28] = 1.0\npos[ibs > 0.82] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "d1341792828b",
+   "order": 128,
+   "name": "ma_trend_260",
+   "family": "trend",
+   "type": "ma_trend",
+   "params": {
+    "win": 260
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.28; OOS2(21-24) -0.37; DSR 0.16; MC p=0.47; no bate B&H",
+   "dsr": 0.163,
+   "mc_p": 0.472,
+   "beats_bh": false,
+   "sharpe_is": 0.107,
+   "sharpe_oos1": 0.28,
+   "sharpe_oos2": -0.372,
+   "ret_is": 0.0224,
+   "mdd_is": -0.0591,
+   "code": "# --- senal (engine._signal, rama 'ma_trend') ---\npos = (close > close.rolling(260).mean()).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
    "id": "ea08b78a7b4d",
    "order": 16,
    "name": "Momentum 120d",
@@ -1347,6 +3284,29 @@
    "ret_is": -0.0056,
    "mdd_is": -0.0838,
    "code": "# --- senal (engine._signal, rama 'momentum') ---\npos = (close / close.shift(120) - 1 > 0).astype(float)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "80af2028f328",
+   "order": 146,
+   "name": "ibs_0.2_0.75",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.2,
+    "hi": 0.75
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.38; OOS2(21-24) -0.21; DSR 0.00; MC p=0.17; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.166,
+   "beats_bh": false,
+   "sharpe_is": -0.472,
+   "sharpe_oos1": -0.382,
+   "sharpe_oos2": -0.206,
+   "ret_is": -0.0997,
+   "mdd_is": -0.1502,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.2] = 1.0\npos[ibs > 0.75] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1416,6 +3376,175 @@
    "ret_is": 0.0478,
    "mdd_is": -0.0358,
    "code": "# --- senal (engine._signal, rama 'double_seven') ---\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(close <= close.rolling(7).min()) & reg] = 1.0\npos[close >= close.rolling(7).max()] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "2ee95542ff51",
+   "order": 136,
+   "name": "ibs_rev_15_70",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.15,
+    "hi": 0.7
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.43; OOS2(21-24) -0.13; DSR 0.00; MC p=0.09; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.086,
+   "beats_bh": false,
+   "sharpe_is": -0.426,
+   "sharpe_oos1": -0.429,
+   "sharpe_oos2": -0.134,
+   "ret_is": -0.077,
+   "mdd_is": -0.1204,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.15] = 1.0\npos[ibs > 0.7] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b251ba6c8c7c",
+   "order": 152,
+   "name": "RSI mean reversion aggressive",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 6,
+    "lo": 15,
+    "hi": 85,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.43; DSR 0.00; MC p=0.63; no bate B&H",
+   "dsr": 0.003,
+   "mc_p": 0.631,
+   "beats_bh": false,
+   "sharpe_is": -0.078,
+   "sharpe_oos1": -0.43,
+   "sharpe_oos2": 0.59,
+   "ret_is": -0.0073,
+   "mdd_is": -0.0508,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 6)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 15) & reg] = 1.0\npos[rsi > 85] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "c7e193fdd084",
+   "order": 145,
+   "name": "rsi_meanrev_5_25_65_200",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 5,
+    "lo": 25,
+    "hi": 65,
+    "trend": 200
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.13; OOS2(21-24) -0.43; DSR 0.02; MC p=0.25",
+   "dsr": 0.023,
+   "mc_p": 0.249,
+   "beats_bh": true,
+   "sharpe_is": 0.186,
+   "sharpe_oos1": 0.126,
+   "sharpe_oos2": -0.431,
+   "ret_is": 0.0217,
+   "mdd_is": -0.0349,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 5)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(200).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 25) & reg] = 1.0\npos[rsi > 65] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "9044c9196f32",
+   "order": 130,
+   "name": "rsi_meanrev_5_20_75_100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 5,
+    "lo": 20,
+    "hi": 75,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) +0.28; OOS2(21-24) -0.45; DSR 0.01; MC p=0.36",
+   "dsr": 0.014,
+   "mc_p": 0.359,
+   "beats_bh": true,
+   "sharpe_is": 0.137,
+   "sharpe_oos1": 0.282,
+   "sharpe_oos2": -0.452,
+   "ret_is": 0.0142,
+   "mdd_is": -0.0405,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 5)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 20) & reg] = 1.0\npos[rsi > 75] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "2b6c57059960",
+   "order": 78,
+   "name": "IBS 0.37/0.74",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.37,
+    "hi": 0.74
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.47; OOS2(21-24) -0.24; DSR 0.00; MC p=0.21; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.209,
+   "beats_bh": false,
+   "sharpe_is": -0.705,
+   "sharpe_oos1": -0.473,
+   "sharpe_oos2": -0.245,
+   "ret_is": -0.1642,
+   "mdd_is": -0.1984,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.37] = 1.0\npos[ibs > 0.74] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "f737a3ccdade",
+   "order": 157,
+   "name": "RSI MeanRev 2-5-70-100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 2,
+    "lo": 5,
+    "hi": 70,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS2(21-24) -0.49; DSR 0.00; MC p=0.48; no bate B&H",
+   "dsr": 0.002,
+   "mc_p": 0.475,
+   "beats_bh": false,
+   "sharpe_is": -0.115,
+   "sharpe_oos1": 0.489,
+   "sharpe_oos2": -0.49,
+   "ret_is": -0.0095,
+   "mdd_is": -0.0311,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 2)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 5) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "5c57a3950ff6",
+   "order": 160,
+   "name": "IBS 0.18-0.72",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.18,
+    "hi": 0.72
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.49; OOS2(21-24) -0.07; DSR 0.00; MC p=0.10; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.103,
+   "beats_bh": false,
+   "sharpe_is": -0.441,
+   "sharpe_oos1": -0.491,
+   "sharpe_oos2": -0.068,
+   "ret_is": -0.0871,
+   "mdd_is": -0.1381,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.18] = 1.0\npos[ibs > 0.72] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
@@ -1510,6 +3639,77 @@
    "ret_is": -0.2487,
    "mdd_is": -0.2626,
    "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.4] = 1.0\npos[ibs > 0.6] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "6f43b41ef2e0",
+   "order": 74,
+   "name": "ibs_0.35_0.65",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.35,
+    "hi": 0.65
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.60; OOS2(21-24) -0.20; DSR 0.00; MC p=0.11; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.106,
+   "beats_bh": false,
+   "sharpe_is": -0.833,
+   "sharpe_oos1": -0.601,
+   "sharpe_oos2": -0.195,
+   "ret_is": -0.1811,
+   "mdd_is": -0.1999,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.35] = 1.0\npos[ibs > 0.65] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "22ece60e042d",
+   "order": 71,
+   "name": "rsi_meanrev_6_10_70_100",
+   "family": "meanrev",
+   "type": "rsi_meanrev",
+   "params": {
+    "n": 6,
+    "lo": 10,
+    "hi": 70,
+    "trend": 100
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.63; DSR 0.03; MC p=0.40; no bate B&H",
+   "dsr": 0.032,
+   "mc_p": 0.402,
+   "beats_bh": false,
+   "sharpe_is": 0.126,
+   "sharpe_oos1": -0.63,
+   "sharpe_oos2": 0.482,
+   "ret_is": 0.0009,
+   "mdd_is": -0.0024,
+   "code": "# --- senal (engine._signal, rama 'rsi_meanrev') ---\nrsi = RSI(close, 6)            # EWM Wilder, alpha=1/n\nreg = close > close.rolling(100).mean()\npos = pd.Series(np.nan, index=close.index)\npos[(rsi < 10) & reg] = 1.0\npos[rsi > 70] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
+   "at": "2026-06-27"
+  },
+  {
+   "id": "b42622828ce8",
+   "order": 113,
+   "name": "ibs_035_07",
+   "family": "meanrev",
+   "type": "ibs",
+   "params": {
+    "lo": 0.35,
+    "hi": 0.7
+   },
+   "status": "died",
+   "verdict": "fallo: OOS1(07-13) -0.71; OOS2(21-24) -0.20; DSR 0.00; MC p=0.26; no bate B&H",
+   "dsr": 0.0,
+   "mc_p": 0.256,
+   "beats_bh": false,
+   "sharpe_is": -0.84,
+   "sharpe_oos1": -0.71,
+   "sharpe_oos2": -0.195,
+   "ret_is": -0.1876,
+   "mdd_is": -0.2068,
+   "code": "# --- senal (engine._signal, rama 'ibs') ---\nibs = (close - low) / (high - low)\npos = pd.Series(np.nan, index=close.index)\npos[ibs < 0.35] = 1.0\npos[ibs > 0.7] = 0.0\npos = pos.ffill().fillna(0.0)\n\n# --- backtest por activo (engine._returns), para cada uno de los 8 (7 FX + oro) ---\npos  = pos.shift(1).fillna(0.0)              # lag-1: decide hoy, aplica maniana\nret  = close.pct_change()\ncost = pos.diff().abs().fillna(0.0) * 0.0003 # 3 bps por turnover (spread real)\nr_activo = pos * 1.0 * ret - cost          # leverage = 1.0\ndaily = mean_over_assets(r_activo)           # cartera equal-weight\n\n# --- evaluacion (engine.evaluate) ---\n# IS 2014-2020 | OOS1 2007-2013 (crisis 2008) | OOS2 2021-2024\n# Deflated Sharpe (contador global) | Monte Carlo (shift circular de la senal) | bate Buy&Hold",
    "at": "2026-06-27"
   },
   {
