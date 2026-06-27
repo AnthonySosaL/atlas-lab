@@ -1,5 +1,5 @@
 {
- "total": 71,
+ "total": 74,
  "families": [
   "anomalia",
   "baseline",
@@ -11,6 +11,7 @@
   "datos",
   "ejecutable",
   "estacionalidad",
+  "estrategia-publica",
   "forward-test",
   "intraday",
   "ml",
@@ -24,8 +25,8 @@
   "vol-premium",
   "volatilidad"
  ],
- "n_families": 22,
+ "n_families": 23,
  "survived": 15,
- "died": 42,
- "generated_at": "2026-06-27T08:00:57"
+ "died": 43,
+ "generated_at": "2026-06-27T10:25:00"
 }

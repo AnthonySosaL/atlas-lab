@@ -1,5 +1,129 @@
 [
  {
+  "id": "extra-v74",
+  "v": 74,
+  "analysis": {
+   "es": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable.",
+   "en": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable.",
+   "pt": "Turtle Trading (Richard Dennis, el experimento de 1983): comprar al romper el máximo de 20 días, salir al perder el mínimo de 10 (Donchian). OOS 2019-24 dio Sharpe 0.75 (algo sobre el Buy&Hold 0.67) PERO in-sample 2012-18 solo 0.21 — inconsistente, dependiente del periodo (2019-24 fue muy tendencial). Trend-following clásico: cosecha tendencias cuando las hay, sufre en mercados laterales. No es un edge estable."
+  },
+  "name": {
+   "es": "Turtle Trading — breakout Donchian (Richard Dennis)",
+   "en": "Turtle Trading — breakout Donchian (Richard Dennis)",
+   "pt": "Turtle Trading — breakout Donchian (Richard Dennis)"
+  },
+  "family": "estrategia-publica",
+  "date": "2026-06-27T10:20:00",
+  "description": {
+   "es": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following.",
+   "en": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following.",
+   "pt": "Estrategia publica famosa: largo al romper maximo de 20 dias, salir al perder minimo de 10 dias. Trend-following."
+  },
+  "params": {},
+  "verdict": {
+   "es": "parcial (depende del periodo)",
+   "en": "parcial (depende del periodo)",
+   "pt": "parcial (depende del periodo)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "IS_2012_18_Sharpe": 0.21,
+   "OOS_2019_24_Sharpe": 0.75,
+   "BuyHold_OOS_Sharpe": 0.67
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v73",
+  "v": 73,
+  "analysis": {
+   "es": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado.",
+   "en": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado.",
+   "pt": "Faber GTAA (Meb Faber, la base del tactical asset allocation): mantener cada activo si está sobre su MA de 10 meses (≈MA200), si no a cash. Recorta el drawdown brutalmente (−10% vs −30% del Buy&Hold) PERO su Sharpe (0.58) sigue por debajo del Buy&Hold (0.67) — es GESTIÓN DE RIESGO, no alpha. Mismo perfil que nuestro trend-flat (#59) que murió el triple test. Útil para dormir tranquilo, no para batir al mercado."
+  },
+  "name": {
+   "es": "Faber GTAA — timing por MA200 (Meb Faber)",
+   "en": "Faber GTAA — timing por MA200 (Meb Faber)",
+   "pt": "Faber GTAA — timing por MA200 (Meb Faber)"
+  },
+  "family": "estrategia-publica",
+  "date": "2026-06-27T10:10:00",
+  "description": {
+   "es": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo.",
+   "en": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo.",
+   "pt": "Estrategia publica famosa: mantener si close>MA200 (10 meses), si no cash. Equal-weight, multi-activo."
+  },
+  "params": {},
+  "verdict": {
+   "es": "parcial (controla drawdown, no es alpha)",
+   "en": "parcial (controla drawdown, no es alpha)",
+   "pt": "parcial (controla drawdown, no es alpha)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "OOS_Sharpe": 0.58,
+   "OOS_MaxDD": "-10.2%",
+   "BuyHold_OOS_Sharpe": 0.67,
+   "BuyHold_MaxDD": "-29.8%"
+  },
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v72",
+  "v": 72,
+  "analysis": {
+   "es": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65.",
+   "en": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65.",
+   "pt": "NUEVA CATEGORÍA — probar estrategias PÚBLICAS famosas con sus reglas exactas. Connors RSI(2) (Larry Connors, una de las reversiones más documentadas): largo si está sobre la MA200 y el RSI(2)<10, salir si RSI(2)>70. Neto de costos: Sharpe IS 0.17 / OOS 0.48 — SIEMPRE por debajo del Buy&Hold (0.67). La reversión de corto plazo no añade edge tras costos. Confirma nuestro #65."
+  },
+  "name": {
+   "es": "Connors RSI(2) — reversion (Larry Connors)",
+   "en": "Connors RSI(2) — reversion (Larry Connors)",
+   "pt": "Connors RSI(2) — reversion (Larry Connors)"
+  },
+  "family": "estrategia-publica",
+  "date": "2026-06-27T10:00:00",
+  "description": {
+   "es": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices.",
+   "en": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices.",
+   "pt": "Estrategia publica famosa: largo si close>MA200 y RSI(2)<10, salir si RSI(2)>70. Mean reversion en indices."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvio (Sharpe < Buy&Hold)",
+   "en": "no sirvio (Sharpe < Buy&Hold)",
+   "pt": "no sirvio (Sharpe < Buy&Hold)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "IS_2012_18_Sharpe": 0.17,
+   "OOS_2019_24_Sharpe": 0.48,
+   "BuyHold_OOS_Sharpe": 0.67
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v71",
   "v": 71,
   "analysis": {
