@@ -1,5 +1,48 @@
 [
  {
+  "id": "extra-v90",
+  "v": 90,
+  "analysis": {
+   "es": "Una crítica acertada del usuario: '¿probaste en los instrumentos que dicen los influencers?' Varios especifican FUTUROS / ÍNDICES (TikTok 1 'futuros o acciones'; TikTok 4 'apertura del Nasdaq') — NO forex. Mis pruebas fueron en 7 FX + oro, que es lo contrario: el forex revierte intradía, los índices TENDENCIAN al alza. Así que re-testeé en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas y los núcleos de TikTok, midiendo dos cosas: ¿gana dinero? y ¿bate al Buy&Hold de los índices? Resultado revelador: la tendencia (MA200, EMA-cross 50/200, momentum) que en FX MORÍA, en índices GANA dinero (+$10k a +$15k sobre $10k, Sharpe positivo en los 3 periodos). ESA es la razón por la que un influencer puede mostrar '+X% al año': opera índices, que suben, y se pone largo. PERO —y aquí está la trampa— NINGUNA bate al Buy&Hold (+$29,368): habrías ganado el DOBLE simplemente comprando y manteniendo. Su 'rentabilidad' es BETA pura (el mercado subió), no habilidad. Y sus setups específicos (breakout TikTok 1/4 = −$424; sweep TikTok 5 = +$353; volumen TikTok 2 = +$707) FALLAN incluso en índices: lo único que gana es el sesgo genérico de 'estar largo del índice'. Conclusión: el instrumento cambia cuánta beta capturas, pero el edge sigue sin existir. Y esto valida el plan de ingreso (#80): largo de índices + gestión de riesgo es ingreso de beta sensato, no alpha — el camino realista, no el atajo.",
+   "en": "Una crítica acertada del usuario: '¿probaste en los instrumentos que dicen los influencers?' Varios especifican FUTUROS / ÍNDICES (TikTok 1 'futuros o acciones'; TikTok 4 'apertura del Nasdaq') — NO forex. Mis pruebas fueron en 7 FX + oro, que es lo contrario: el forex revierte intradía, los índices TENDENCIAN al alza. Así que re-testeé en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas y los núcleos de TikTok, midiendo dos cosas: ¿gana dinero? y ¿bate al Buy&Hold de los índices? Resultado revelador: la tendencia (MA200, EMA-cross 50/200, momentum) que en FX MORÍA, en índices GANA dinero (+$10k a +$15k sobre $10k, Sharpe positivo en los 3 periodos). ESA es la razón por la que un influencer puede mostrar '+X% al año': opera índices, que suben, y se pone largo. PERO —y aquí está la trampa— NINGUNA bate al Buy&Hold (+$29,368): habrías ganado el DOBLE simplemente comprando y manteniendo. Su 'rentabilidad' es BETA pura (el mercado subió), no habilidad. Y sus setups específicos (breakout TikTok 1/4 = −$424; sweep TikTok 5 = +$353; volumen TikTok 2 = +$707) FALLAN incluso en índices: lo único que gana es el sesgo genérico de 'estar largo del índice'. Conclusión: el instrumento cambia cuánta beta capturas, pero el edge sigue sin existir. Y esto valida el plan de ingreso (#80): largo de índices + gestión de riesgo es ingreso de beta sensato, no alpha — el camino realista, no el atajo.",
+   "pt": "Una crítica acertada del usuario: '¿probaste en los instrumentos que dicen los influencers?' Varios especifican FUTUROS / ÍNDICES (TikTok 1 'futuros o acciones'; TikTok 4 'apertura del Nasdaq') — NO forex. Mis pruebas fueron en 7 FX + oro, que es lo contrario: el forex revierte intradía, los índices TENDENCIAN al alza. Así que re-testeé en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas y los núcleos de TikTok, midiendo dos cosas: ¿gana dinero? y ¿bate al Buy&Hold de los índices? Resultado revelador: la tendencia (MA200, EMA-cross 50/200, momentum) que en FX MORÍA, en índices GANA dinero (+$10k a +$15k sobre $10k, Sharpe positivo en los 3 periodos). ESA es la razón por la que un influencer puede mostrar '+X% al año': opera índices, que suben, y se pone largo. PERO —y aquí está la trampa— NINGUNA bate al Buy&Hold (+$29,368): habrías ganado el DOBLE simplemente comprando y manteniendo. Su 'rentabilidad' es BETA pura (el mercado subió), no habilidad. Y sus setups específicos (breakout TikTok 1/4 = −$424; sweep TikTok 5 = +$353; volumen TikTok 2 = +$707) FALLAN incluso en índices: lo único que gana es el sesgo genérico de 'estar largo del índice'. Conclusión: el instrumento cambia cuánta beta capturas, pero el edge sigue sin existir. Y esto valida el plan de ingreso (#80): largo de índices + gestión de riesgo es ingreso de beta sensato, no alpha — el camino realista, no el atajo."
+  },
+  "name": {
+   "es": "¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)? Nasdaq/SP500/DAX/FTSE",
+   "en": "¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)? Nasdaq/SP500/DAX/FTSE",
+   "pt": "¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)? Nasdaq/SP500/DAX/FTSE"
+  },
+  "family": "lab-automatico",
+  "date": "2026-06-28T13:00:00",
+  "description": {
+   "es": "Crítica acertada del usuario: varios TikToks dicen operar FUTUROS/ÍNDICES (Nasdaq), no forex. Re-testeo en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas + los núcleos de TikTok, midiendo si ganan dinero Y si baten al Buy&Hold de los índices.",
+   "en": "Crítica acertada del usuario: varios TikToks dicen operar FUTUROS/ÍNDICES (Nasdaq), no forex. Re-testeo en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas + los núcleos de TikTok, midiendo si ganan dinero Y si baten al Buy&Hold de los índices.",
+   "pt": "Crítica acertada del usuario: varios TikToks dicen operar FUTUROS/ÍNDICES (Nasdaq), no forex. Re-testeo en índices (SP500, NAS100, DAX, FTSE100, datos 2012-2024) las tendencias clásicas + los núcleos de TikTok, midiendo si ganan dinero Y si baten al Buy&Hold de los índices."
+  },
+  "params": {},
+  "verdict": {
+   "es": "el instrumento SÍ importa: la tendencia (MA/EMA/Momentum) GANA dinero en índices (+$10-15k, beta) — en FX moría. PERO ninguna bate al Buy&Hold (+$29k); es beta, no alpha. Los setups de TikTok (breakout/sweep/volumen) fallan aun en índices.",
+   "en": "el instrumento SÍ importa: la tendencia (MA/EMA/Momentum) GANA dinero en índices (+$10-15k, beta) — en FX moría. PERO ninguna bate al Buy&Hold (+$29k); es beta, no alpha. Los setups de TikTok (breakout/sweep/volumen) fallan aun en índices.",
+   "pt": "el instrumento SÍ importa: la tendencia (MA/EMA/Momentum) GANA dinero en índices (+$10-15k, beta) — en FX moría. PERO ninguna bate al Buy&Hold (+$29k); es beta, no alpha. Los setups de TikTok (breakout/sweep/volumen) fallan aun en índices."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "BuyHold_indices_12-24": "+$29,368 (Sharpe 0.68)",
+   "Tendencia_MA_EMA_Momentum": "+$6k a +$15k — BETA, pierden vs B&H",
+   "TikTok_breakout_sweep_volumen": "≈$0 o negativo (fallan aun en índices)",
+   "cuantas_baten_BuyHold": "0"
+  },
+  "forms": [],
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v89",
   "v": 89,
   "analysis": {
