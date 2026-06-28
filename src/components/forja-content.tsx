@@ -85,12 +85,26 @@ export function ForjaContent({ data }: { data: ForjaData }) {
             </div>
 
             <div className="mt-4 rounded-lg border p-3">
-              <div className="mb-1.5 text-xs text-muted-foreground">{t("forja.exposure")}</div>
+              <div className="mb-1.5 text-xs text-muted-foreground">{t("forja.exposure")} · {t("forja.fromStart")}</div>
               <div className="flex h-5 overflow-hidden rounded bg-muted">
                 <div className="bg-primary/70" style={{ width: `${inv}%` }} />
               </div>
               <div className="mt-1 text-xs">
                 <span className="font-medium text-primary">{inv}% {t("forja.invested")}</span> · {100 - inv}% {t("forja.cash")}
+              </div>
+              <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+                <div>
+                  <div className="text-muted-foreground">{t("forja.capNet")}</div>
+                  <div className="font-bold tabular-nums">${(m.cap_final ?? 0).toLocaleString("en-US")}</div>
+                </div>
+                <div>
+                  <div className="text-muted-foreground">{t("forja.capHold")}</div>
+                  <div className="font-bold tabular-nums text-primary">${(m.en_holdings ?? 0).toLocaleString("en-US")}</div>
+                </div>
+                <div>
+                  <div className="text-muted-foreground">{t("forja.capCash")}</div>
+                  <div className="font-bold tabular-nums">${(m.en_efectivo ?? 0).toLocaleString("en-US")}</div>
+                </div>
               </div>
             </div>
 

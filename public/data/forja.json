@@ -17,7 +17,11 @@
     "b_calmar": 0.25,
     "b_total": 2.937,
     "expo_media": 0.71,
-    "expo_actual": 0.75
+    "expo_actual": 0.75,
+    "cap_inicial": 10000,
+    "cap_final": 20880,
+    "en_holdings": 15660,
+    "en_efectivo": 5220
    },
    "filters": [
     {
