@@ -1,5 +1,36 @@
 [
  {
+  "title": "LABORATORIO AUTOMÁTICO — 34,751 estrategias (2026-06-28)",
+  "emoji": "🤖",
+  "items": [
+   "**#81 El laboratorio (34,751 probadas, 0 sobrevivieron):** semillas + DeepSeek + explorador (con combos), todo deduplicado por huella. 5 filtros: IS + dos OOS + Deflated Sharpe + Monte Carlo (5000 permutaciones) + bate B&H. **El DSR NUNCA se pasó (máx 0.70 de 0.95).** Máximo 4/5: combos que engañaron a los dos OOS, al Monte Carlo y batieron al mercado — pero la mejor pierde dinero año por año. Único \"real\": un tilt débil de reversión RSI (49 de las 50 mejores positivas en 18 años) pero 94% en efectivo, ~1%/año, pierde vs mantener → real pero inexplotable. **Demostración en vivo de López de Prado: minar miles garantiza falsos positivos; solo el DSR los caza.**",
+   "**#82 ¿Sirven las 50 mejores para FONDEO?** Challenge tipo FTMO (+10% / −10% / −5% diario, ventana 3 meses) sobre las top 50. **Ninguna sirve:** a x1 nunca llegan a +10% (100% timeout, demasiado lentas); a x5 la mejor pasa 3.5% pero revienta 4.7% (más de lo que pasa). El leverage para pasar es el que te revienta — confirma #9-40.",
+   "**🏁 VEREDICTO FINAL:** no hay alpha explotable en datos de precio retail. Probado 34,751 veces con rigor institucional. El valor está en la PRUEBA del rigor (ver pestaña **Hallazgos**), no en un edge inexistente."
+  ],
+  "title_i18n": {
+   "es": "LABORATORIO AUTOMÁTICO — 34,751 estrategias (2026-06-28)",
+   "en": "AUTOMATED LAB — 34,751 strategies (2026-06-28)",
+   "pt": "LABORATÓRIO AUTOMÁTICO — 34.751 estratégias (2026-06-28)"
+  },
+  "items_i18n": {
+   "es": [
+    "**#81 El laboratorio (34,751 probadas, 0 sobrevivieron):** semillas + DeepSeek + explorador (con combos), todo deduplicado por huella. 5 filtros: IS + dos OOS + Deflated Sharpe + Monte Carlo (5000 permutaciones) + bate B&H. **El DSR NUNCA se pasó (máx 0.70 de 0.95).** Máximo 4/5: combos que engañaron a los dos OOS, al Monte Carlo y batieron al mercado — pero la mejor pierde dinero año por año. Único \"real\": un tilt débil de reversión RSI (49 de las 50 mejores positivas en 18 años) pero 94% en efectivo, ~1%/año, pierde vs mantener → real pero inexplotable. **Demostración en vivo de López de Prado: minar miles garantiza falsos positivos; solo el DSR los caza.**",
+    "**#82 ¿Sirven las 50 mejores para FONDEO?** Challenge tipo FTMO (+10% / −10% / −5% diario, ventana 3 meses) sobre las top 50. **Ninguna sirve:** a x1 nunca llegan a +10% (100% timeout, demasiado lentas); a x5 la mejor pasa 3.5% pero revienta 4.7% (más de lo que pasa). El leverage para pasar es el que te revienta — confirma #9-40.",
+    "**🏁 VEREDICTO FINAL:** no hay alpha explotable en datos de precio retail. Probado 34,751 veces con rigor institucional. El valor está en la PRUEBA del rigor (ver pestaña **Hallazgos**), no en un edge inexistente."
+   ],
+   "en": [
+    "**#81 The lab (34,751 tested, 0 survived):** seeds + DeepSeek + explorer (with combos), all deduplicated by fingerprint. 5 filters: IS + two OOS + Deflated Sharpe + Monte Carlo (5000 permutations) + beat B&H. **The DSR was NEVER passed (max 0.70 of 0.95).** Max 4/5: combos that fooled both OOS, Monte Carlo and beat the market — but the best one loses money year by year. The only 'real' thing: a faint RSI mean-reversion tilt (49 of the top 50 positive over 18 years) but 94% in cash, ~1%/year, loses vs holding → real but unexploitable. **Live demonstration of López de Prado: mining thousands guarantees false positives; only the DSR catches them.**",
+    "**#82 Do the 50 best work for FUNDING?** FTMO-style challenge (+10% / −10% / −5% daily, 3-month window) over the top 50. **None works:** at x1 they never reach +10% (100% timeout, too slow); at x5 the best passes 3.5% but blows up 4.7% (more than it passes). The leverage you need to pass is the one that blows you up — confirms #9-40.",
+    "**🏁 FINAL VERDICT:** no exploitable alpha in retail price data. Proven 34,751 times with institutional rigor. The value is in the PROOF of the rigor (see the **Findings** tab), not in a nonexistent edge."
+   ],
+   "pt": [
+    "**#81 O laboratório (34.751 testadas, 0 sobreviveram):** sementes + DeepSeek + explorador (com combos), tudo deduplicado por impressão digital. 5 filtros: IS + dois OOS + Deflated Sharpe + Monte Carlo (5000 permutações) + bater o B&H. **O DSR NUNCA foi passado (máx 0,70 de 0,95).** Máximo 4/5: combos que enganaram os dois OOS, o Monte Carlo e bateram o mercado — mas o melhor perde dinheiro ano a ano. A única coisa 'real': um tilt fraco de reversão RSI (49 das 50 melhores positivas em 18 anos) mas 94% em caixa, ~1%/ano, perde vs segurar → real mas inexplorável. **Demonstração ao vivo de López de Prado: minerar milhares garante falsos positivos; só o DSR os pega.**",
+    "**#82 As 50 melhores servem para FUNDING?** Challenge tipo FTMO (+10% / −10% / −5% diário, janela 3 meses) sobre as top 50. **Nenhuma serve:** a x1 nunca chegam a +10% (100% timeout, lentas demais); a x5 a melhor passa 3,5% mas estoura 4,7% (mais do que passa). A alavancagem para passar é a que te estoura — confirma #9-40.",
+    "**🏁 VEREDICTO FINAL:** não há alpha explorável em dados de preço de varejo. Provado 34.751 vezes com rigor institucional. O valor está na PROVA do rigor (ver a aba **Achados**), não num edge inexistente."
+   ]
+  }
+ },
+ {
   "title": "ESTADO ACTUAL Y PLAN DE FRONTERAS (2026-06-27) — 80 experimentos",
   "emoji": "🎯",
   "items": [

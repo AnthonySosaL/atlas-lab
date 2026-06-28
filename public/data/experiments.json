@@ -1,5 +1,92 @@
 [
  {
+  "id": "extra-v82",
+  "v": 82,
+  "analysis": {
+   "es": "La prueba de fuego para el caso de uso real: ¿alguna de las 50 MEJORES (de las 34,751) sirve para FONDEO? Simulamos un challenge tipo FTMO (objetivo +10%, máximo drawdown −10%, límite diario −5%, ventana de 3 meses) sobre cada una, en cientos de ventanas de distintas épocas, a leverage x1 y x5. Respuesta tajante: NINGUNA sirve. Sin leverage, jamás llegan a +10% en 3 meses (100% timeout — están en efectivo el 94% del tiempo y hacen ~1%/año, son demasiado lentas). Con leverage x5, la mejor (RSI5<18) solo pasa el 3.5% de las ventanas… pero REVIENTA el 4.7% — pierde más veces de las que gana. Confirma lo que ya vimos en los experimentos #9-40: el leverage que necesitas para pasar (+10% rápido) es justo el que te revienta el drawdown. Pagar un challenge con cualquiera de estas sería tirar el dinero (fallarías el 96-100% de las veces). Ni siquiera las mejores de decenas de miles sirven para prop firms.",
+   "en": "La prueba de fuego para el caso de uso real: ¿alguna de las 50 MEJORES (de las 34,751) sirve para FONDEO? Simulamos un challenge tipo FTMO (objetivo +10%, máximo drawdown −10%, límite diario −5%, ventana de 3 meses) sobre cada una, en cientos de ventanas de distintas épocas, a leverage x1 y x5. Respuesta tajante: NINGUNA sirve. Sin leverage, jamás llegan a +10% en 3 meses (100% timeout — están en efectivo el 94% del tiempo y hacen ~1%/año, son demasiado lentas). Con leverage x5, la mejor (RSI5<18) solo pasa el 3.5% de las ventanas… pero REVIENTA el 4.7% — pierde más veces de las que gana. Confirma lo que ya vimos en los experimentos #9-40: el leverage que necesitas para pasar (+10% rápido) es justo el que te revienta el drawdown. Pagar un challenge con cualquiera de estas sería tirar el dinero (fallarías el 96-100% de las veces). Ni siquiera las mejores de decenas de miles sirven para prop firms.",
+   "pt": "La prueba de fuego para el caso de uso real: ¿alguna de las 50 MEJORES (de las 34,751) sirve para FONDEO? Simulamos un challenge tipo FTMO (objetivo +10%, máximo drawdown −10%, límite diario −5%, ventana de 3 meses) sobre cada una, en cientos de ventanas de distintas épocas, a leverage x1 y x5. Respuesta tajante: NINGUNA sirve. Sin leverage, jamás llegan a +10% en 3 meses (100% timeout — están en efectivo el 94% del tiempo y hacen ~1%/año, son demasiado lentas). Con leverage x5, la mejor (RSI5<18) solo pasa el 3.5% de las ventanas… pero REVIENTA el 4.7% — pierde más veces de las que gana. Confirma lo que ya vimos en los experimentos #9-40: el leverage que necesitas para pasar (+10% rápido) es justo el que te revienta el drawdown. Pagar un challenge con cualquiera de estas sería tirar el dinero (fallarías el 96-100% de las veces). Ni siquiera las mejores de decenas de miles sirven para prop firms."
+  },
+  "name": {
+   "es": "¿Sirven las 50 mejores para FONDEO? (challenge tipo FTMO en 3 meses)",
+   "en": "¿Sirven las 50 mejores para FONDEO? (challenge tipo FTMO en 3 meses)",
+   "pt": "¿Sirven las 50 mejores para FONDEO? (challenge tipo FTMO en 3 meses)"
+  },
+  "family": "lab-automatico",
+  "date": "2026-06-28T09:30:00",
+  "description": {
+   "es": "Simulación de challenge (target +10%, max DD -10%, diaria -5%, ventana 3 meses) sobre las 50 mejores del laboratorio, en cientos de ventanas de distintas épocas, a leverage x1 y x5.",
+   "en": "Simulación de challenge (target +10%, max DD -10%, diaria -5%, ventana 3 meses) sobre las 50 mejores del laboratorio, en cientos de ventanas de distintas épocas, a leverage x1 y x5.",
+   "pt": "Simulación de challenge (target +10%, max DD -10%, diaria -5%, ventana 3 meses) sobre las 50 mejores del laboratorio, en cientos de ventanas de distintas épocas, a leverage x1 y x5."
+  },
+  "params": {},
+  "verdict": {
+   "es": "ninguna sirve para fondeo: x1 nunca llega a +10% (100% timeout); x5 la mejor pasa 3.5% pero revienta más (4.7%)",
+   "en": "ninguna sirve para fondeo: x1 nunca llega a +10% (100% timeout); x5 la mejor pasa 3.5% pero revienta más (4.7%)",
+   "pt": "ninguna sirve para fondeo: x1 nunca llega a +10% (100% timeout); x5 la mejor pasa 3.5% pero revienta más (4.7%)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "P_pasar_x1": "0.0%",
+   "P_pasar_x5_promedio": "0.4%",
+   "mejor_x5": "RSI5<18: 3.5%",
+   "mejor_paso": 21,
+   "mejor_revento": 28,
+   "timeout_x5": "99%"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v81",
+  "v": 81,
+  "analysis": {
+   "es": "El experimento DEFINITIVO. Construimos un laboratorio que genera y prueba estrategias en automático: semillas + un modelo (DeepSeek/Qwen) que propone ideas + un explorador que garantiza novedad infinita, todo deduplicado por huella. Cada estrategia pasa el MISMO gauntlet de 5 filtros: IS (2014-2020) + dos out-of-sample (2007-2013 con la crisis de 2008, y 2021-2024) + Deflated Sharpe (Bailey & López de Prado, corrige el multiple-testing con un contador global) + Monte Carlo de 5000 permutaciones (rota la señal en el tiempo: si no le gana a sus versiones desalineadas, su timing es suerte) + batir Buy&Hold. Una noche entera: 34,751 estrategias probadas, TODAS únicas. Resultado: 0 sobrevivieron. El Deflated Sharpe NUNCA se pasó (máximo 0.70 de 0.95 necesario). El máximo fue 4/5 filtros: unas combinaciones que engañaron a los dos OOS, al Monte Carlo y batieron al mercado — pero al diseccionar la mejor año por año, pierde dinero (un solo año de suerte). Lo único 'real' es un tilt débil de reversión RSI (49 de las 50 mejores son positivas en 18 años), pero está en efectivo el 94% del tiempo, hace ~1%/año y pierde contra solo mantener: real, medible… e inexplotable. Es la demostración EN VIVO de por qué fallan los fondos de ML (López de Prado): minar miles de estrategias garantiza falsos positivos; solo la corrección por multiple-testing los caza. Veredicto inapelable: no hay alpha explotable en datos de precio retail.",
+   "en": "El experimento DEFINITIVO. Construimos un laboratorio que genera y prueba estrategias en automático: semillas + un modelo (DeepSeek/Qwen) que propone ideas + un explorador que garantiza novedad infinita, todo deduplicado por huella. Cada estrategia pasa el MISMO gauntlet de 5 filtros: IS (2014-2020) + dos out-of-sample (2007-2013 con la crisis de 2008, y 2021-2024) + Deflated Sharpe (Bailey & López de Prado, corrige el multiple-testing con un contador global) + Monte Carlo de 5000 permutaciones (rota la señal en el tiempo: si no le gana a sus versiones desalineadas, su timing es suerte) + batir Buy&Hold. Una noche entera: 34,751 estrategias probadas, TODAS únicas. Resultado: 0 sobrevivieron. El Deflated Sharpe NUNCA se pasó (máximo 0.70 de 0.95 necesario). El máximo fue 4/5 filtros: unas combinaciones que engañaron a los dos OOS, al Monte Carlo y batieron al mercado — pero al diseccionar la mejor año por año, pierde dinero (un solo año de suerte). Lo único 'real' es un tilt débil de reversión RSI (49 de las 50 mejores son positivas en 18 años), pero está en efectivo el 94% del tiempo, hace ~1%/año y pierde contra solo mantener: real, medible… e inexplotable. Es la demostración EN VIVO de por qué fallan los fondos de ML (López de Prado): minar miles de estrategias garantiza falsos positivos; solo la corrección por multiple-testing los caza. Veredicto inapelable: no hay alpha explotable en datos de precio retail.",
+   "pt": "El experimento DEFINITIVO. Construimos un laboratorio que genera y prueba estrategias en automático: semillas + un modelo (DeepSeek/Qwen) que propone ideas + un explorador que garantiza novedad infinita, todo deduplicado por huella. Cada estrategia pasa el MISMO gauntlet de 5 filtros: IS (2014-2020) + dos out-of-sample (2007-2013 con la crisis de 2008, y 2021-2024) + Deflated Sharpe (Bailey & López de Prado, corrige el multiple-testing con un contador global) + Monte Carlo de 5000 permutaciones (rota la señal en el tiempo: si no le gana a sus versiones desalineadas, su timing es suerte) + batir Buy&Hold. Una noche entera: 34,751 estrategias probadas, TODAS únicas. Resultado: 0 sobrevivieron. El Deflated Sharpe NUNCA se pasó (máximo 0.70 de 0.95 necesario). El máximo fue 4/5 filtros: unas combinaciones que engañaron a los dos OOS, al Monte Carlo y batieron al mercado — pero al diseccionar la mejor año por año, pierde dinero (un solo año de suerte). Lo único 'real' es un tilt débil de reversión RSI (49 de las 50 mejores son positivas en 18 años), pero está en efectivo el 94% del tiempo, hace ~1%/año y pierde contra solo mantener: real, medible… e inexplotable. Es la demostración EN VIVO de por qué fallan los fondos de ML (López de Prado): minar miles de estrategias garantiza falsos positivos; solo la corrección por multiple-testing los caza. Veredicto inapelable: no hay alpha explotable en datos de precio retail."
+  },
+  "name": {
+   "es": "Laboratorio automático — 34,751 estrategias con gauntlet de 5 filtros",
+   "en": "Laboratorio automático — 34,751 estrategias con gauntlet de 5 filtros",
+   "pt": "Laboratorio automático — 34,751 estrategias con gauntlet de 5 filtros"
+  },
+  "family": "lab-automatico",
+  "date": "2026-06-28T09:00:00",
+  "description": {
+   "es": "Motor que genera y prueba estrategias en automático (semillas + DeepSeek + explorador) con 5 filtros: IS + dos OOS + Deflated Sharpe + Monte Carlo (5000 permutaciones) + bate Buy&Hold. Una noche entera minando.",
+   "en": "Motor que genera y prueba estrategias en automático (semillas + DeepSeek + explorador) con 5 filtros: IS + dos OOS + Deflated Sharpe + Monte Carlo (5000 permutaciones) + bate Buy&Hold. Una noche entera minando.",
+   "pt": "Motor que genera y prueba estrategias en automático (semillas + DeepSeek + explorador) con 5 filtros: IS + dos OOS + Deflated Sharpe + Monte Carlo (5000 permutaciones) + bate Buy&Hold. Una noche entera minando."
+  },
+  "params": {},
+  "verdict": {
+   "es": "0 sobrevivieron de 34,751 — el Deflated Sharpe nunca se pasó (máx 0.70 de 0.95)",
+   "en": "0 sobrevivieron de 34,751 — el Deflated Sharpe nunca se pasó (máx 0.70 de 0.95)",
+   "pt": "0 sobrevivieron de 34,751 — el Deflated Sharpe nunca se pasó (máx 0.70 de 0.95)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "probadas": 34751,
+   "sobrevivieron": 0,
+   "DSR_max": 0.7,
+   "max_filtros": "4/5",
+   "tilt_RSI": "real pero inutil: 6% exposicion, ~1%/año, pierde vs B&H"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v80",
   "v": 80,
   "analysis": {
