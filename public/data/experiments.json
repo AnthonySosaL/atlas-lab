@@ -1,5 +1,131 @@
 [
  {
+  "id": "extra-v85",
+  "v": 85,
+  "analysis": {
+   "es": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor.",
+   "en": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor.",
+   "pt": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor."
+  },
+  "name": {
+   "es": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)",
+   "en": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)",
+   "pt": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T12:00:00",
+  "description": {
+   "es": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar.",
+   "en": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar.",
+   "pt": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar."
+  },
+  "params": {},
+  "verdict": {
+   "es": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve.",
+   "en": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve.",
+   "pt": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "TikTok-2_formas": 10,
+   "sobrevivieron": 0,
+   "max_filtros": "0/5",
+   "TikTok-1_4": "breakout (ya muerto)",
+   "TikTok-3": "no testeable (ICT/noticias)",
+   "TikTok-5": "no descargable"
+  },
+  "forms": [
+   {
+    "name": "MA200 + volumen>2.0x(20)",
+    "is": 0.08,
+    "oos1": -1.0,
+    "oos2": -0.32,
+    "dsr": 0.55,
+    "mc": 0.14
+   },
+   {
+    "name": "MA200 + rango>2.0x(20)",
+    "is": -0.28,
+    "oos1": -0.37,
+    "oos2": -1.11,
+    "dsr": 0.1,
+    "mc": 0.18
+   },
+   {
+    "name": "MA200 + volumen>1.5x(20)",
+    "is": -0.47,
+    "oos1": -0.47,
+    "oos2": -0.45,
+    "dsr": 0.01,
+    "mc": 0.37
+   },
+   {
+    "name": "EMA200 + volumen>1.5x(20)",
+    "is": -0.51,
+    "oos1": -0.42,
+    "oos2": -0.45,
+    "dsr": 0.0,
+    "mc": 0.41
+   },
+   {
+    "name": "MA100 + volumen>1.5x(20)",
+    "is": -0.57,
+    "oos1": -0.64,
+    "oos2": -0.53,
+    "dsr": 0.0,
+    "mc": 0.49
+   },
+   {
+    "name": "EMA200 + rango>1.5x(20)",
+    "is": -0.68,
+    "oos1": -0.57,
+    "oos2": -1.55,
+    "dsr": 0.0,
+    "mc": 0.2
+   },
+   {
+    "name": "MA200 + rango>1.5x(10)",
+    "is": -0.74,
+    "oos1": -0.73,
+    "oos2": -1.03,
+    "dsr": 0.0,
+    "mc": 0.2
+   },
+   {
+    "name": "MA100 + rango>1.5x(20)",
+    "is": -0.76,
+    "oos1": -0.74,
+    "oos2": -1.48,
+    "dsr": 0.0,
+    "mc": 0.21
+   },
+   {
+    "name": "MA200 + rango>1.5x(20)",
+    "is": -0.85,
+    "oos1": -0.78,
+    "oos2": -1.35,
+    "dsr": 0.0,
+    "mc": 0.37
+   },
+   {
+    "name": "MA200 + rango>1.5x(50)",
+    "is": -0.88,
+    "oos1": -0.79,
+    "oos2": -1.24,
+    "dsr": 0.0,
+    "mc": 0.45
+   }
+  ],
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v84",
   "v": 84,
   "analysis": {
