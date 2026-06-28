@@ -1,29 +1,29 @@
 [
  {
-  "id": "extra-v85",
-  "v": 85,
+  "id": "extra-v89",
+  "v": 89,
   "analysis": {
-   "es": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor.",
-   "en": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor.",
-   "pt": "Lote de 5 TikToks de estrategias 'extremadamente simples' (todas con la misma fórmula de marketing: '+X% el último año', '20-30 años de backtest', 'sígueme'). Lo testeable a fondo fue TikTok-2 (regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces). Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o volumen): las 10 murieron (0/5) y la MAYORÍA PIERDE dinero con fuerza (OOS2 hasta −1.55). Tiene sentido: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo cuando suele revertir. Los demás: TikTok-1 (ruptura en 15m + retroceso en 5m con vela envolvente/martillo, ratio 1:3) y TikTok-4 (ORB del Nasdaq a las 9:30, ratio 1:3) son estrategias INTRADÍA trade-based (entrada+stop+objetivo) cuyo núcleo es un breakout — exactamente lo que ya murió (el ORB en #6 dio Sharpe −0.96, y toda la familia Donchian murió 34,751 veces). TikTok-3 (operar el 'breaker block' tras noticias de alto impacto, conceptos ICT) no es testeable sin calendario de noticias y sin reglas mecánicas. TikTok-5 no se pudo descargar. Patrón de fondo: son setups trade-based con ratio 1:3 y relato de cuenta auditada; ninguno aporta un edge que sobreviva al rigor."
+   "es": "TikTok 5 ('Candle Range Theory', publicidad del fondeo AXY). Marca el alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (un sweep / falso rompimiento = señal de reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-3. Su núcleo testeable en daily es el fade del falso rompimiento (sweep-reversión: el día barre el mínimo de N días y cierra por encima → largo). Probado en 8 formas (1-5 días, con y sin filtro MA): todas mueren y PIERDEN durísimo (IS −0.8 a −1.7). Fadear barridas en daily es puro turnover sin edge — los costos se comen todo y la 'reversión' es ruido. Curiosamente tanto el breakout (TikTok 1/4) como su opuesto, el fade (TikTok 5), pierden: no es que falte el lado correcto, es que no hay edge direccional y la fricción manda. La parte FVG / quiebre de estructura es intradía discrecional. Es marketing de un programa de fondeo.",
+   "en": "TikTok 5 ('Candle Range Theory', publicidad del fondeo AXY). Marca el alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (un sweep / falso rompimiento = señal de reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-3. Su núcleo testeable en daily es el fade del falso rompimiento (sweep-reversión: el día barre el mínimo de N días y cierra por encima → largo). Probado en 8 formas (1-5 días, con y sin filtro MA): todas mueren y PIERDEN durísimo (IS −0.8 a −1.7). Fadear barridas en daily es puro turnover sin edge — los costos se comen todo y la 'reversión' es ruido. Curiosamente tanto el breakout (TikTok 1/4) como su opuesto, el fade (TikTok 5), pierden: no es que falte el lado correcto, es que no hay edge direccional y la fricción manda. La parte FVG / quiebre de estructura es intradía discrecional. Es marketing de un programa de fondeo.",
+   "pt": "TikTok 5 ('Candle Range Theory', publicidad del fondeo AXY). Marca el alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (un sweep / falso rompimiento = señal de reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-3. Su núcleo testeable en daily es el fade del falso rompimiento (sweep-reversión: el día barre el mínimo de N días y cierra por encima → largo). Probado en 8 formas (1-5 días, con y sin filtro MA): todas mueren y PIERDEN durísimo (IS −0.8 a −1.7). Fadear barridas en daily es puro turnover sin edge — los costos se comen todo y la 'reversión' es ruido. Curiosamente tanto el breakout (TikTok 1/4) como su opuesto, el fade (TikTok 5), pierden: no es que falte el lado correcto, es que no hay edge direccional y la fricción manda. La parte FVG / quiebre de estructura es intradía discrecional. Es marketing de un programa de fondeo."
   },
   "name": {
-   "es": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)",
-   "en": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)",
-   "pt": "Lote de 5 TikToks (breakout/retroceso, MA200+volumen, ORB, noticias/ICT)"
+   "es": "TikTok 5 — Candle Range Theory (sweep + FVG)",
+   "en": "TikTok 5 — Candle Range Theory (sweep + FVG)",
+   "pt": "TikTok 5 — Candle Range Theory (sweep + FVG)"
   },
   "family": "influencer",
-  "date": "2026-06-28T12:00:00",
+  "date": "2026-06-28T12:20:00",
   "description": {
-   "es": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar.",
-   "en": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar.",
-   "pt": "5 TikToks de estrategias 'simples'. Testeable a fondo: TikTok-2 (MA200 a favor de tendencia + entrada en vela de alto volumen/rango que supera el ADR), 10 formas. Los demás: TikTok-1 (breakout 15m + retroceso 5m con vela envolvente) y TikTok-4 (ORB Nasdaq 9:30) son intradía trade-based → su núcleo es breakout, ya muerto (ver #6 ORB y la familia Donchian); TikTok-3 (noticias + breaker block ICT) no es testeable (sin calendario de noticias, conceptos discrecionales); TikTok-5 no se pudo descargar."
+   "es": "Marca alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (sweep / falso rompimiento = reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-1:3. Publicidad del fondeo AXY. Núcleo testeable: fade del falso rompimiento (sweep-reversión).",
+   "en": "Marca alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (sweep / falso rompimiento = reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-1:3. Publicidad del fondeo AXY. Núcleo testeable: fade del falso rompimiento (sweep-reversión).",
+   "pt": "Marca alto/bajo del día previo; en 1h espera que el precio BARRA un nivel y cierre de vuelta dentro (sweep / falso rompimiento = reversión); en 5m entra por quiebre de estructura + FVG, ratio 1:2-1:3. Publicidad del fondeo AXY. Núcleo testeable: fade del falso rompimiento (sweep-reversión)."
   },
   "params": {},
   "verdict": {
-   "es": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve.",
-   "en": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve.",
-   "pt": "TikTok-2: 10/10 died y la mayoría PIERDE dinero (entrar en el clímax de volumen/rango); breakout/ORB ya muertos; noticias/ICT no testeable. Ninguna sirve."
+   "es": "no sirvió: el sweep-reversión en daily PIERDE durísimo (IS −0.8 a −1.7). Fadear barridas en daily = puro turnover y costos sin edge. La parte FVG/quiebre es intradía discrecional.",
+   "en": "no sirvió: el sweep-reversión en daily PIERDE durísimo (IS −0.8 a −1.7). Fadear barridas en daily = puro turnover y costos sin edge. La parte FVG/quiebre es intradía discrecional.",
+   "pt": "no sirvió: el sweep-reversión en daily PIERDE durísimo (IS −0.8 a −1.7). Fadear barridas en daily = puro turnover y costos sin edge. La parte FVG/quiebre es intradía discrecional."
   },
   "notes": {
    "es": "",
@@ -31,12 +31,199 @@
    "pt": ""
   },
   "metrics": {
-   "TikTok-2_formas": 10,
+   "formas": 8,
    "sobrevivieron": 0,
-   "max_filtros": "0/5",
-   "TikTok-1_4": "breakout (ya muerto)",
-   "TikTok-3": "no testeable (ICT/noticias)",
-   "TikTok-5": "no descargable"
+   "nota": "intradía 1h/5m; aquí el núcleo (sweep-reversión) en daily"
+  },
+  "forms": [
+   {
+    "name": "MA200 + sweep_rev 3d",
+    "is": -0.82,
+    "oos1": -0.99,
+    "oos2": -0.9,
+    "dsr": 0.0,
+    "mc": 0.34
+   },
+   {
+    "name": "sweep_rev 5d",
+    "is": -0.88,
+    "oos1": -1.34,
+    "oos2": -1.29,
+    "dsr": 0.0,
+    "mc": 0.08
+   },
+   {
+    "name": "MA200 + sweep_rev 1d",
+    "is": -0.9,
+    "oos1": -1.5,
+    "oos2": -0.97,
+    "dsr": 0.0,
+    "mc": 0.12
+   },
+   {
+    "name": "EMA200 + sweep_rev 1d",
+    "is": -0.9,
+    "oos1": -1.45,
+    "oos2": -0.75,
+    "dsr": 0.0,
+    "mc": 0.12
+   },
+   {
+    "name": "MA100 + sweep_rev 2d",
+    "is": -1.1,
+    "oos1": -1.02,
+    "oos2": -0.74,
+    "dsr": 0.0,
+    "mc": 0.5
+   },
+   {
+    "name": "sweep_rev 3d",
+    "is": -1.43,
+    "oos1": -1.44,
+    "oos2": -1.15,
+    "dsr": 0.0,
+    "mc": 0.47
+   },
+   {
+    "name": "sweep_rev 2d",
+    "is": -1.59,
+    "oos1": -1.33,
+    "oos2": -1.13,
+    "dsr": 0.0,
+    "mc": 0.48
+   },
+   {
+    "name": "sweep_rev 1d",
+    "is": -1.67,
+    "oos1": -1.74,
+    "oos2": -1.14,
+    "dsr": 0.0,
+    "mc": 0.23
+   }
+  ],
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v88",
+  "v": 88,
+  "analysis": {
+   "es": "TikTok 4 (ORB, Opening Range Breakout, '+214%, 20 años'). Esperar la apertura del Nasdaq (9:30 NY), marcar el último alto/bajo de la estructura, poner buy stop en el máximo o sell stop en el mínimo, ratio 1:3. Es intradía puro. El ORB ya lo probamos de forma intradía en el experimento #6 (EUR/USD M1, sesiones de Londres/NY): Sharpe −0.96, pierde significativo (los breakouts en FX fallan y el par revierte). Su núcleo (breakout de rango) en daily también pierde (ver #85). 'Hacer siempre lo mismo' no convierte un setup sin edge en uno rentable; el 1:3 no compensa una tasa de acierto que el azar+costos deja por debajo del punto de equilibrio.",
+   "en": "TikTok 4 (ORB, Opening Range Breakout, '+214%, 20 años'). Esperar la apertura del Nasdaq (9:30 NY), marcar el último alto/bajo de la estructura, poner buy stop en el máximo o sell stop en el mínimo, ratio 1:3. Es intradía puro. El ORB ya lo probamos de forma intradía en el experimento #6 (EUR/USD M1, sesiones de Londres/NY): Sharpe −0.96, pierde significativo (los breakouts en FX fallan y el par revierte). Su núcleo (breakout de rango) en daily también pierde (ver #85). 'Hacer siempre lo mismo' no convierte un setup sin edge en uno rentable; el 1:3 no compensa una tasa de acierto que el azar+costos deja por debajo del punto de equilibrio.",
+   "pt": "TikTok 4 (ORB, Opening Range Breakout, '+214%, 20 años'). Esperar la apertura del Nasdaq (9:30 NY), marcar el último alto/bajo de la estructura, poner buy stop en el máximo o sell stop en el mínimo, ratio 1:3. Es intradía puro. El ORB ya lo probamos de forma intradía en el experimento #6 (EUR/USD M1, sesiones de Londres/NY): Sharpe −0.96, pierde significativo (los breakouts en FX fallan y el par revierte). Su núcleo (breakout de rango) en daily también pierde (ver #85). 'Hacer siempre lo mismo' no convierte un setup sin edge en uno rentable; el 1:3 no compensa una tasa de acierto que el azar+costos deja por debajo del punto de equilibrio."
+  },
+  "name": {
+   "es": "TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30",
+   "en": "TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30",
+   "pt": "TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T12:15:00",
+  "description": {
+   "es": "Esperar las 9:30 NY (apertura Nasdaq), marcar último alto/bajo de la estructura, buy stop en el máx / sell stop en el mín, ratio 1:3. '+214%, 20 años de backtest'. Intradía puro.",
+   "en": "Esperar las 9:30 NY (apertura Nasdaq), marcar último alto/bajo de la estructura, buy stop en el máx / sell stop en el mín, ratio 1:3. '+214%, 20 años de backtest'. Intradía puro.",
+   "pt": "Esperar las 9:30 NY (apertura Nasdaq), marcar último alto/bajo de la estructura, buy stop en el máx / sell stop en el mín, ratio 1:3. '+214%, 20 años de backtest'. Intradía puro."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió: el ORB ya lo probamos intradía en #6 (EUR/USD M1, Sharpe −0.96, pierde significativo); su núcleo (breakout) en daily también pierde (ver #85). Los breakouts en estos mercados revierten.",
+   "en": "no sirvió: el ORB ya lo probamos intradía en #6 (EUR/USD M1, Sharpe −0.96, pierde significativo); su núcleo (breakout) en daily también pierde (ver #85). Los breakouts en estos mercados revierten.",
+   "pt": "no sirvió: el ORB ya lo probamos intradía en #6 (EUR/USD M1, Sharpe −0.96, pierde significativo); su núcleo (breakout) en daily también pierde (ver #85). Los breakouts en estos mercados revierten."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "ORB_intradia": "#6: Sharpe -0.96",
+   "breakout_daily": "pierde (#85)",
+   "sobrevivieron": 0
+  },
+  "forms": [],
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v87",
+  "v": 87,
+  "analysis": {
+   "es": "TikTok 3 (operar noticias como 'el dinero institucional'). Tras una noticia de alto impacto (NFP, tipos, inflación) deja cerrar la vela diaria, busca ACEPTACIÓN (acumulación sin romper el máx/mín de la vela de la noticia) y opera el 'breaker block' del día previo con limit, stop bajo el día anterior y ratio 1:2. Son conceptos ICT discrecionales: no es testeable mecánicamente sin un calendario de noticias y reglas exactas de 'breaker block' y 'aceptación'. Lo relacionado que SÍ probamos —si las noticias/sentimiento predicen la dirección— ya falló (#56: las 4 formas de sentimiento no superan la base rate). Sin reglas objetivas, queda como narrativa, no como estrategia validable.",
+   "en": "TikTok 3 (operar noticias como 'el dinero institucional'). Tras una noticia de alto impacto (NFP, tipos, inflación) deja cerrar la vela diaria, busca ACEPTACIÓN (acumulación sin romper el máx/mín de la vela de la noticia) y opera el 'breaker block' del día previo con limit, stop bajo el día anterior y ratio 1:2. Son conceptos ICT discrecionales: no es testeable mecánicamente sin un calendario de noticias y reglas exactas de 'breaker block' y 'aceptación'. Lo relacionado que SÍ probamos —si las noticias/sentimiento predicen la dirección— ya falló (#56: las 4 formas de sentimiento no superan la base rate). Sin reglas objetivas, queda como narrativa, no como estrategia validable.",
+   "pt": "TikTok 3 (operar noticias como 'el dinero institucional'). Tras una noticia de alto impacto (NFP, tipos, inflación) deja cerrar la vela diaria, busca ACEPTACIÓN (acumulación sin romper el máx/mín de la vela de la noticia) y opera el 'breaker block' del día previo con limit, stop bajo el día anterior y ratio 1:2. Son conceptos ICT discrecionales: no es testeable mecánicamente sin un calendario de noticias y reglas exactas de 'breaker block' y 'aceptación'. Lo relacionado que SÍ probamos —si las noticias/sentimiento predicen la dirección— ya falló (#56: las 4 formas de sentimiento no superan la base rate). Sin reglas objetivas, queda como narrativa, no como estrategia validable."
+  },
+  "name": {
+   "es": "TikTok 3 — Noticias + Breaker Block (ICT)",
+   "en": "TikTok 3 — Noticias + Breaker Block (ICT)",
+   "pt": "TikTok 3 — Noticias + Breaker Block (ICT)"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T12:10:00",
+  "description": {
+   "es": "Operar tras noticias de alto impacto (NFP, tipos, inflación): dejar cerrar la vela diaria, buscar ACEPTACIÓN (acumulación sin romper máx/mín de la vela de la noticia), y operar el breaker block del día previo (limit, stop bajo el día anterior, ratio 1:2). Conceptos ICT discrecionales.",
+   "en": "Operar tras noticias de alto impacto (NFP, tipos, inflación): dejar cerrar la vela diaria, buscar ACEPTACIÓN (acumulación sin romper máx/mín de la vela de la noticia), y operar el breaker block del día previo (limit, stop bajo el día anterior, ratio 1:2). Conceptos ICT discrecionales.",
+   "pt": "Operar tras noticias de alto impacto (NFP, tipos, inflación): dejar cerrar la vela diaria, buscar ACEPTACIÓN (acumulación sin romper máx/mín de la vela de la noticia), y operar el breaker block del día previo (limit, stop bajo el día anterior, ratio 1:2). Conceptos ICT discrecionales."
+  },
+  "params": {},
+  "verdict": {
+   "es": "NO testeable mecánicamente: requiere calendario de noticias + conceptos ICT discrecionales sin reglas exactas. Relacionado: el sentimiento/noticias (#56) ya falló al predecir dirección.",
+   "en": "NO testeable mecánicamente: requiere calendario de noticias + conceptos ICT discrecionales sin reglas exactas. Relacionado: el sentimiento/noticias (#56) ya falló al predecir dirección.",
+   "pt": "NO testeable mecánicamente: requiere calendario de noticias + conceptos ICT discrecionales sin reglas exactas. Relacionado: el sentimiento/noticias (#56) ya falló al predecir dirección."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "testeable": "no",
+   "relacionado": "#56 sentimiento (falló)"
+  },
+  "forms": [],
+  "status": "neutral",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v86",
+  "v": 86,
+  "analysis": {
+   "es": "TikTok 2 ('+30% al año, 30 años de backtest'). Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces (mismo riesgo), ratio 1:3. Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o de volumen). Las 10 murieron (0/5) y la mayoría PIERDE con fuerza (OOS2 hasta −1.55). El motivo es claro: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo donde suele revertir. La piramidación (promediar) sobre una entrada sin edge solo amplifica la pérdida.",
+   "en": "TikTok 2 ('+30% al año, 30 años de backtest'). Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces (mismo riesgo), ratio 1:3. Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o de volumen). Las 10 murieron (0/5) y la mayoría PIERDE con fuerza (OOS2 hasta −1.55). El motivo es claro: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo donde suele revertir. La piramidación (promediar) sobre una entrada sin edge solo amplifica la pérdida.",
+   "pt": "TikTok 2 ('+30% al año, 30 años de backtest'). Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en una vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces (mismo riesgo), ratio 1:3. Probado en 10 formas (filtro MA/EMA 100/200 + gatillo de expansión de rango o de volumen). Las 10 murieron (0/5) y la mayoría PIERDE con fuerza (OOS2 hasta −1.55). El motivo es claro: entrar en la vela de mayor volumen/rango a favor de la tendencia es comprar el clímax/techo, justo donde suele revertir. La piramidación (promediar) sobre una entrada sin edge solo amplifica la pérdida."
+  },
+  "name": {
+   "es": "TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR)",
+   "en": "TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR)",
+   "pt": "TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR)"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T12:05:00",
+  "description": {
+   "es": "Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces, ratio 1:3. '+30% al año, 30 años de backtest'. Probado en 10 formas (filtro MA/EMA + gatillo de expansión de rango o volumen).",
+   "en": "Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces, ratio 1:3. '+30% al año, 30 años de backtest'. Probado en 10 formas (filtro MA/EMA + gatillo de expansión de rango o volumen).",
+   "pt": "Regresión a la media operando A FAVOR de la tendencia: MA200 como dirección + entrar en vela de alto volumen/rango que supera el ADR promedio, piramidando hasta 3 veces, ratio 1:3. '+30% al año, 30 años de backtest'. Probado en 10 formas (filtro MA/EMA + gatillo de expansión de rango o volumen)."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió: 10/10 died (0/5) y la mayoría PIERDE fuerte (OOS2 hasta −1.55). Entrar en la vela de mayor volumen/rango a favor de tendencia = comprar el clímax/techo.",
+   "en": "no sirvió: 10/10 died (0/5) y la mayoría PIERDE fuerte (OOS2 hasta −1.55). Entrar en la vela de mayor volumen/rango a favor de tendencia = comprar el clímax/techo.",
+   "pt": "no sirvió: 10/10 died (0/5) y la mayoría PIERDE fuerte (OOS2 hasta −1.55). Entrar en la vela de mayor volumen/rango a favor de tendencia = comprar el clímax/techo."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "formas": 10,
+   "sobrevivieron": 0,
+   "max_filtros": "0/5"
   },
   "forms": [
    {
@@ -118,6 +305,97 @@
     "oos2": -1.24,
     "dsr": 0.0,
     "mc": 0.45
+   }
+  ],
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v85",
+  "v": 85,
+  "analysis": {
+   "es": "TikTok 1 (Carl Ericsson / ProRealAlgos, '71% de aciertos'). Breakout + retroceso: marca el alto/bajo del día previo, espera en 15m un cierre fuera del rango, luego un retroceso al nivel, y en 5m una vela envolvente/martillo para entrar (ratio 1:3). Es intradía trade-based; su núcleo testeable en daily es el breakout de continuación del rango previo. Probado en 6 formas (range_break 1-5 días, con y sin filtro MA200): todas mueren y PIERDEN fuerte (IS −1.0 a −1.6). En estos mercados perseguir el rompimiento del rango previo compra el techo: el precio revierte y los costos por entrar/salir tan seguido rematan. La parte de retroceso + vela de entrada es intradía discrecional, no mecanizable aquí. Marketing de copy-trading.",
+   "en": "TikTok 1 (Carl Ericsson / ProRealAlgos, '71% de aciertos'). Breakout + retroceso: marca el alto/bajo del día previo, espera en 15m un cierre fuera del rango, luego un retroceso al nivel, y en 5m una vela envolvente/martillo para entrar (ratio 1:3). Es intradía trade-based; su núcleo testeable en daily es el breakout de continuación del rango previo. Probado en 6 formas (range_break 1-5 días, con y sin filtro MA200): todas mueren y PIERDEN fuerte (IS −1.0 a −1.6). En estos mercados perseguir el rompimiento del rango previo compra el techo: el precio revierte y los costos por entrar/salir tan seguido rematan. La parte de retroceso + vela de entrada es intradía discrecional, no mecanizable aquí. Marketing de copy-trading.",
+   "pt": "TikTok 1 (Carl Ericsson / ProRealAlgos, '71% de aciertos'). Breakout + retroceso: marca el alto/bajo del día previo, espera en 15m un cierre fuera del rango, luego un retroceso al nivel, y en 5m una vela envolvente/martillo para entrar (ratio 1:3). Es intradía trade-based; su núcleo testeable en daily es el breakout de continuación del rango previo. Probado en 6 formas (range_break 1-5 días, con y sin filtro MA200): todas mueren y PIERDEN fuerte (IS −1.0 a −1.6). En estos mercados perseguir el rompimiento del rango previo compra el techo: el precio revierte y los costos por entrar/salir tan seguido rematan. La parte de retroceso + vela de entrada es intradía discrecional, no mecanizable aquí. Marketing de copy-trading."
+  },
+  "name": {
+   "es": "TikTok 1 — Breakout del rango del día previo + retroceso (ProRealAlgos)",
+   "en": "TikTok 1 — Breakout del rango del día previo + retroceso (ProRealAlgos)",
+   "pt": "TikTok 1 — Breakout del rango del día previo + retroceso (ProRealAlgos)"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T12:00:00",
+  "description": {
+   "es": "Carl Ericsson / ProRealAlgos, '71% de aciertos'. Marca alto/bajo del día previo; en 15m espera cierre claro fuera del rango; espera retroceso al nivel; en 5m busca vela envolvente/martillo; entra al romper esa vela, stop bajo el patrón, objetivo 1:3. Intradía trade-based. Núcleo testeable en daily: breakout de continuación del rango previo.",
+   "en": "Carl Ericsson / ProRealAlgos, '71% de aciertos'. Marca alto/bajo del día previo; en 15m espera cierre claro fuera del rango; espera retroceso al nivel; en 5m busca vela envolvente/martillo; entra al romper esa vela, stop bajo el patrón, objetivo 1:3. Intradía trade-based. Núcleo testeable en daily: breakout de continuación del rango previo.",
+   "pt": "Carl Ericsson / ProRealAlgos, '71% de aciertos'. Marca alto/bajo del día previo; en 15m espera cierre claro fuera del rango; espera retroceso al nivel; en 5m busca vela envolvente/martillo; entra al romper esa vela, stop bajo el patrón, objetivo 1:3. Intradía trade-based. Núcleo testeable en daily: breakout de continuación del rango previo."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió: el breakout de continuación en daily PIERDE fuerte (IS −1.0 a −1.6) — la cesta revierte, perseguir rompimientos compra el techo. La parte de retroceso/vela es intradía discrecional.",
+   "en": "no sirvió: el breakout de continuación en daily PIERDE fuerte (IS −1.0 a −1.6) — la cesta revierte, perseguir rompimientos compra el techo. La parte de retroceso/vela es intradía discrecional.",
+   "pt": "no sirvió: el breakout de continuación en daily PIERDE fuerte (IS −1.0 a −1.6) — la cesta revierte, perseguir rompimientos compra el techo. La parte de retroceso/vela es intradía discrecional."
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "formas": 6,
+   "sobrevivieron": 0,
+   "nota": "intradía 15m/5m; aquí el núcleo (breakout) en daily"
+  },
+  "forms": [
+   {
+    "name": "MA200 + rangebreak 5d",
+    "is": -0.54,
+    "oos1": -0.86,
+    "oos2": -0.8,
+    "dsr": 0.01,
+    "mc": 0.19
+   },
+   {
+    "name": "range_break 5d",
+    "is": -0.97,
+    "oos1": -1.02,
+    "oos2": -1.65,
+    "dsr": 0.0,
+    "mc": 0.29
+   },
+   {
+    "name": "range_break 3d",
+    "is": -1.05,
+    "oos1": -1.02,
+    "oos2": -1.67,
+    "dsr": 0.0,
+    "mc": 0.22
+   },
+   {
+    "name": "MA200 + rangebreak 1d",
+    "is": -1.1,
+    "oos1": -0.97,
+    "oos2": -1.24,
+    "dsr": 0.0,
+    "mc": 0.5
+   },
+   {
+    "name": "range_break 2d",
+    "is": -1.13,
+    "oos1": -1.17,
+    "oos2": -1.69,
+    "dsr": 0.0,
+    "mc": 0.16
+   },
+   {
+    "name": "range_break 1d",
+    "is": -1.58,
+    "oos1": -1.19,
+    "oos2": -1.44,
+    "dsr": 0.0,
+    "mc": 0.47
    }
   ],
   "status": "died",
