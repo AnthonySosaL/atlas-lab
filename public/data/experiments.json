@@ -1,5 +1,88 @@
 [
  {
+  "id": "extra-v84",
+  "v": 84,
+  "analysis": {
+   "es": "Idea de un comentario de TikTok (más fina que el video): la media móvil NO sirve para decidir la entrada; úsala SOLO como filtro de dominio (quién manda, comprador o vendedor) en temporalidad alta, y busca la entrada en temporalidad baja — no entres al romper la MA. Es un enfoque multi-temporalidad sensato. Lo probamos en 12 formas: filtro MA/EMA de 100/200 (sesgo de temporalidad alta) combinado (AND) con entradas más rápidas (RSI dip, EMA-cross, Donchian breakout, momentum, IBS). Resultado: 12/12 murieron, máximo 2/5 filtros. El patrón revelador: varias tienen buen OOS1 (2007-2013, hasta +0.58) pero se desmoronan en OOS2 (2021-2024, hasta −1.01) — funcionan en una época y colapsan en la otra. El filtro multi-temporalidad suena lógico pero no crea edge: sigue siendo beta/ruido que no generaliza entre épocas.",
+   "en": "Idea de un comentario de TikTok (más fina que el video): la media móvil NO sirve para decidir la entrada; úsala SOLO como filtro de dominio (quién manda, comprador o vendedor) en temporalidad alta, y busca la entrada en temporalidad baja — no entres al romper la MA. Es un enfoque multi-temporalidad sensato. Lo probamos en 12 formas: filtro MA/EMA de 100/200 (sesgo de temporalidad alta) combinado (AND) con entradas más rápidas (RSI dip, EMA-cross, Donchian breakout, momentum, IBS). Resultado: 12/12 murieron, máximo 2/5 filtros. El patrón revelador: varias tienen buen OOS1 (2007-2013, hasta +0.58) pero se desmoronan en OOS2 (2021-2024, hasta −1.01) — funcionan en una época y colapsan en la otra. El filtro multi-temporalidad suena lógico pero no crea edge: sigue siendo beta/ruido que no generaliza entre épocas.",
+   "pt": "Idea de un comentario de TikTok (más fina que el video): la media móvil NO sirve para decidir la entrada; úsala SOLO como filtro de dominio (quién manda, comprador o vendedor) en temporalidad alta, y busca la entrada en temporalidad baja — no entres al romper la MA. Es un enfoque multi-temporalidad sensato. Lo probamos en 12 formas: filtro MA/EMA de 100/200 (sesgo de temporalidad alta) combinado (AND) con entradas más rápidas (RSI dip, EMA-cross, Donchian breakout, momentum, IBS). Resultado: 12/12 murieron, máximo 2/5 filtros. El patrón revelador: varias tienen buen OOS1 (2007-2013, hasta +0.58) pero se desmoronan en OOS2 (2021-2024, hasta −1.01) — funcionan en una época y colapsan en la otra. El filtro multi-temporalidad suena lógico pero no crea edge: sigue siendo beta/ruido que no generaliza entre épocas."
+  },
+  "name": {
+   "es": "Filtro multi-temporalidad (MA filtro alto + entrada baja) — 12 formas",
+   "en": "Filtro multi-temporalidad (MA filtro alto + entrada baja) — 12 formas",
+   "pt": "Filtro multi-temporalidad (MA filtro alto + entrada baja) — 12 formas"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T11:15:00",
+  "description": {
+   "es": "Comentario de TikTok: usar la media móvil SOLO como filtro de dominio (temporalidad alta) y buscar la entrada en temporalidad baja, no al romper la MA. Probado en 12 formas: filtro MA/EMA 100/200 + entradas RSI/EMA-cross/Donchian/Momentum/IBS (combos AND).",
+   "en": "Comentario de TikTok: usar la media móvil SOLO como filtro de dominio (temporalidad alta) y buscar la entrada en temporalidad baja, no al romper la MA. Probado en 12 formas: filtro MA/EMA 100/200 + entradas RSI/EMA-cross/Donchian/Momentum/IBS (combos AND).",
+   "pt": "Comentario de TikTok: usar la media móvil SOLO como filtro de dominio (temporalidad alta) y buscar la entrada en temporalidad baja, no al romper la MA. Probado en 12 formas: filtro MA/EMA 100/200 + entradas RSI/EMA-cross/Donchian/Momentum/IBS (combos AND)."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió (12/12 died, máx 2/5); buen OOS1 en algunas pero se desmorona en OOS2 — no generaliza entre épocas",
+   "en": "no sirvió (12/12 died, máx 2/5); buen OOS1 en algunas pero se desmorona en OOS2 — no generaliza entre épocas",
+   "pt": "no sirvió (12/12 died, máx 2/5); buen OOS1 en algunas pero se desmorona en OOS2 — no generaliza entre épocas"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "formas": 12,
+   "sobrevivieron": 0,
+   "max_filtros": "2/5"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
+  "id": "extra-v83",
+  "v": 83,
+  "analysis": {
+   "es": "Probamos al influencer de un video tier-list de TikTok (EXCELENTE/MEDIO/MALO). Su 'EXCELENTE' concreto y testeable: EMAs operando a favor de la tendencia (lo que dice que lo hizo rentable). Lo probamos en 8 formas — EMA-trend de 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50 y 50/200 (golden cross) — con el gauntlet de 5 filtros. Las 8 murieron (máximo 1/5); Buy&Hold (IS +0.13) les gana. Las EMAs a favor de tendencia son justo lo que el laboratorio mató 34,751 veces. Más allá del backtest, banderas rojas graves: (1) se contradice — dice que 'los indicadores son mierda' pero su EXCELENTE son EMAs, que SON un indicador; (2) consejo PELIGROSO: 'el stop loss es mierda' — al revés, la gestión de riesgo es lo único que evita reventar la cuenta; (3) empuja a índices sintéticos (Deriv) como 'donde están los ganadores', que son números aleatorios del bróker, un casino de suma negativa. Opinión/marketing, no método.",
+   "en": "Probamos al influencer de un video tier-list de TikTok (EXCELENTE/MEDIO/MALO). Su 'EXCELENTE' concreto y testeable: EMAs operando a favor de la tendencia (lo que dice que lo hizo rentable). Lo probamos en 8 formas — EMA-trend de 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50 y 50/200 (golden cross) — con el gauntlet de 5 filtros. Las 8 murieron (máximo 1/5); Buy&Hold (IS +0.13) les gana. Las EMAs a favor de tendencia son justo lo que el laboratorio mató 34,751 veces. Más allá del backtest, banderas rojas graves: (1) se contradice — dice que 'los indicadores son mierda' pero su EXCELENTE son EMAs, que SON un indicador; (2) consejo PELIGROSO: 'el stop loss es mierda' — al revés, la gestión de riesgo es lo único que evita reventar la cuenta; (3) empuja a índices sintéticos (Deriv) como 'donde están los ganadores', que son números aleatorios del bróker, un casino de suma negativa. Opinión/marketing, no método.",
+   "pt": "Probamos al influencer de un video tier-list de TikTok (EXCELENTE/MEDIO/MALO). Su 'EXCELENTE' concreto y testeable: EMAs operando a favor de la tendencia (lo que dice que lo hizo rentable). Lo probamos en 8 formas — EMA-trend de 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50 y 50/200 (golden cross) — con el gauntlet de 5 filtros. Las 8 murieron (máximo 1/5); Buy&Hold (IS +0.13) les gana. Las EMAs a favor de tendencia son justo lo que el laboratorio mató 34,751 veces. Más allá del backtest, banderas rojas graves: (1) se contradice — dice que 'los indicadores son mierda' pero su EXCELENTE son EMAs, que SON un indicador; (2) consejo PELIGROSO: 'el stop loss es mierda' — al revés, la gestión de riesgo es lo único que evita reventar la cuenta; (3) empuja a índices sintéticos (Deriv) como 'donde están los ganadores', que son números aleatorios del bróker, un casino de suma negativa. Opinión/marketing, no método."
+  },
+  "name": {
+   "es": "EMAs a favor de tendencia (TikTok tier-list) — 8 formas",
+   "en": "EMAs a favor de tendencia (TikTok tier-list) — 8 formas",
+   "pt": "EMAs a favor de tendencia (TikTok tier-list) — 8 formas"
+  },
+  "family": "influencer",
+  "date": "2026-06-28T11:00:00",
+  "description": {
+   "es": "Video tier-list de TikTok; su 'EXCELENTE' = EMAs operando a favor de la tendencia. Probado en 8 formas (EMA-trend 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50, 50/200) con el gauntlet de 5 filtros.",
+   "en": "Video tier-list de TikTok; su 'EXCELENTE' = EMAs operando a favor de la tendencia. Probado en 8 formas (EMA-trend 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50, 50/200) con el gauntlet de 5 filtros.",
+   "pt": "Video tier-list de TikTok; su 'EXCELENTE' = EMAs operando a favor de la tendencia. Probado en 8 formas (EMA-trend 20/50/100/200 y EMA-cross 9/21, 12/26, 20/50, 50/200) con el gauntlet de 5 filtros."
+  },
+  "params": {},
+  "verdict": {
+   "es": "no sirvió (8/8 died, máx 1/5); además se contradice (EMA es indicador) y da consejos peligrosos (sin stop loss, índices sintéticos)",
+   "en": "no sirvió (8/8 died, máx 1/5); además se contradice (EMA es indicador) y da consejos peligrosos (sin stop loss, índices sintéticos)",
+   "pt": "no sirvió (8/8 died, máx 1/5); además se contradice (EMA es indicador) y da consejos peligrosos (sin stop loss, índices sintéticos)"
+  },
+  "notes": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "metrics": {
+   "formas": 8,
+   "sobrevivieron": 0,
+   "max_filtros": "1/5",
+   "BuyHold_vara": "+0.13"
+  },
+  "status": "died",
+  "has_equity": false,
+  "has_trades_chart": false,
+  "has_trades_csv": false
+ },
+ {
   "id": "extra-v82",
   "v": 82,
   "analysis": {

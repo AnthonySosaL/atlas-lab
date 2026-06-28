@@ -1,5 +1,5 @@
 {
- "total": 82,
+ "total": 84,
  "families": [
   "anomalia",
   "baseline",
@@ -13,6 +13,7 @@
   "estacionalidad",
   "estrategia-publica",
   "forward-test",
+  "influencer",
   "intraday",
   "lab-automatico",
   "ml",
@@ -26,8 +27,8 @@
   "vol-premium",
   "volatilidad"
  ],
- "n_families": 24,
+ "n_families": 25,
  "survived": 16,
- "died": 49,
- "generated_at": "2026-06-28T09:51:02"
+ "died": 51,
+ "generated_at": "2026-06-28T09:59:39"
 }
