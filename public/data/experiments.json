@@ -34,19 +34,106 @@
    "formas": 12,
    "sobrevivieron": 0,
    "max_filtros": "2/5",
-   "EMA200 filtro + RSI4<15": "IS+0.14 OOS +0.58/-0.39 DSR0.58 MC0.29 (2/5)",
-   "MA200 filtro + RSI4<20": "IS+0.36 OOS +0.18/-0.68 DSR0.69 MC0.13 (1/5)",
-   "MA100 filtro + RSI3<15": "IS-0.10 OOS +0.58/-1.01 DSR0.32 MC0.49 (1/5)",
-   "MA200 filtro + IBS<0.2": "IS+0.07 OOS -0.29/-0.33 DSR0.54 MC0.01 (1/5)",
-   "MA200 filtro + RSI2<10": "IS+0.08 OOS +0.04/-0.68 DSR0.55 MC0.23 (0/5)",
-   "MA200 filtro + Donchian20/10": "IS+0.03 OOS -0.05/-0.02 DSR0.52 MC0.39 (0/5)",
-   "MA200 filtro + EMAcross9/21": "IS-0.09 OOS +0.12/-0.14 DSR0.35 MC0.57 (0/5)",
-   "MA200 filtro + EMAcross12/26": "IS-0.07 OOS +0.14/-0.14 DSR0.37 MC0.57 (0/5)",
-   "EMA200 filtro + EMAcross9/21": "IS-0.12 OOS +0.16/-0.14 DSR0.29 MC0.61 (0/5)",
-   "MA100 filtro + Momentum50": "IS-0.15 OOS -0.03/-0.19 DSR0.25 MC0.57 (0/5)",
-   "MA200 filtro + Momentum20": "IS-0.21 OOS -0.07/-0.27 DSR0.17 MC0.56 (0/5)",
-   "MA200 filtro + Donchian10/5": "IS-0.30 OOS -0.32/-0.31 DSR0.09 MC0.64 (0/5)"
+   "BuyHold_vara_IS": "+0.13"
   },
+  "forms": [
+   {
+    "name": "EMA200 filtro + RSI4<15",
+    "is": 0.14,
+    "oos1": 0.58,
+    "oos2": -0.39,
+    "dsr": 0.58,
+    "mc": 0.29
+   },
+   {
+    "name": "MA200 filtro + RSI4<20",
+    "is": 0.36,
+    "oos1": 0.18,
+    "oos2": -0.68,
+    "dsr": 0.69,
+    "mc": 0.13
+   },
+   {
+    "name": "MA100 filtro + RSI3<15",
+    "is": -0.1,
+    "oos1": 0.58,
+    "oos2": -1.01,
+    "dsr": 0.32,
+    "mc": 0.49
+   },
+   {
+    "name": "MA200 filtro + IBS<0.2",
+    "is": 0.07,
+    "oos1": -0.29,
+    "oos2": -0.33,
+    "dsr": 0.54,
+    "mc": 0.01
+   },
+   {
+    "name": "MA200 filtro + RSI2<10",
+    "is": 0.08,
+    "oos1": 0.04,
+    "oos2": -0.68,
+    "dsr": 0.55,
+    "mc": 0.23
+   },
+   {
+    "name": "MA200 filtro + Donchian20/10",
+    "is": 0.03,
+    "oos1": -0.05,
+    "oos2": -0.02,
+    "dsr": 0.52,
+    "mc": 0.39
+   },
+   {
+    "name": "MA200 filtro + EMAcross9/21",
+    "is": -0.09,
+    "oos1": 0.12,
+    "oos2": -0.14,
+    "dsr": 0.35,
+    "mc": 0.57
+   },
+   {
+    "name": "MA200 filtro + EMAcross12/26",
+    "is": -0.07,
+    "oos1": 0.14,
+    "oos2": -0.14,
+    "dsr": 0.37,
+    "mc": 0.57
+   },
+   {
+    "name": "EMA200 filtro + EMAcross9/21",
+    "is": -0.12,
+    "oos1": 0.16,
+    "oos2": -0.14,
+    "dsr": 0.29,
+    "mc": 0.61
+   },
+   {
+    "name": "MA100 filtro + Momentum50",
+    "is": -0.15,
+    "oos1": -0.03,
+    "oos2": -0.19,
+    "dsr": 0.25,
+    "mc": 0.57
+   },
+   {
+    "name": "MA200 filtro + Momentum20",
+    "is": -0.21,
+    "oos1": -0.07,
+    "oos2": -0.27,
+    "dsr": 0.17,
+    "mc": 0.56
+   },
+   {
+    "name": "MA200 filtro + Donchian10/5",
+    "is": -0.3,
+    "oos1": -0.32,
+    "oos2": -0.31,
+    "dsr": 0.09,
+    "mc": 0.64
+   }
+  ],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -86,16 +173,75 @@
   "metrics": {
    "formas": 8,
    "sobrevivieron": 0,
-   "BuyHold_vara_IS": "+0.13",
-   "EMA-trend 200": "IS+0.10 OOS +0.24/-0.26 DSR0.56 MC0.42 (0/5)",
-   "EMA-trend 100": "IS-0.14 OOS +0.09/+0.04 DSR0.26 MC0.61 (0/5)",
-   "EMA-trend 50": "IS-0.19 OOS -0.05/-0.02 DSR0.19 MC0.54 (0/5)",
-   "EMA-trend 20": "IS-0.50 OOS -0.16/-0.13 DSR0.01 MC0.73 (0/5)",
-   "EMA-cross 50/200": "IS+0.10 OOS +0.36/-0.16 DSR0.56 MC0.60 (1/5)",
-   "EMA-cross 12/26": "IS-0.28 OOS +0.19/+0.38 DSR0.10 MC0.84 (1/5)",
-   "EMA-cross 9/21": "IS-0.34 OOS +0.14/+0.46 DSR0.06 MC0.86 (1/5)",
-   "EMA-cross 20/50": "IS-0.01 OOS -0.01/+0.23 DSR0.47 MC0.59 (0/5)"
+   "max_filtros": "1/5",
+   "BuyHold_vara_IS": "+0.13"
   },
+  "forms": [
+   {
+    "name": "EMA-trend 200",
+    "is": 0.1,
+    "oos1": 0.24,
+    "oos2": -0.26,
+    "dsr": 0.56,
+    "mc": 0.42
+   },
+   {
+    "name": "EMA-trend 100",
+    "is": -0.14,
+    "oos1": 0.09,
+    "oos2": 0.04,
+    "dsr": 0.26,
+    "mc": 0.61
+   },
+   {
+    "name": "EMA-trend 50",
+    "is": -0.19,
+    "oos1": -0.05,
+    "oos2": -0.02,
+    "dsr": 0.19,
+    "mc": 0.54
+   },
+   {
+    "name": "EMA-trend 20",
+    "is": -0.5,
+    "oos1": -0.16,
+    "oos2": -0.13,
+    "dsr": 0.01,
+    "mc": 0.73
+   },
+   {
+    "name": "EMA-cross 50/200",
+    "is": 0.1,
+    "oos1": 0.36,
+    "oos2": -0.16,
+    "dsr": 0.56,
+    "mc": 0.6
+   },
+   {
+    "name": "EMA-cross 12/26",
+    "is": -0.28,
+    "oos1": 0.19,
+    "oos2": 0.38,
+    "dsr": 0.1,
+    "mc": 0.84
+   },
+   {
+    "name": "EMA-cross 9/21",
+    "is": -0.34,
+    "oos1": 0.14,
+    "oos2": 0.46,
+    "dsr": 0.06,
+    "mc": 0.86
+   },
+   {
+    "name": "EMA-cross 20/50",
+    "is": -0.01,
+    "oos1": -0.01,
+    "oos2": 0.23,
+    "dsr": 0.47,
+    "mc": 0.59
+   }
+  ],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -140,6 +286,7 @@
    "mejor_revento": 28,
    "timeout_x5": "99%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -183,6 +330,7 @@
    "max_filtros": "4/5",
    "tilt_RSI": "real pero inutil: 6% exposicion, ~1%/año, pierde vs B&H"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -226,6 +374,7 @@
    "Turtle_Calmar": 0.44,
    "BuyHold_retiro": "9.5%/año"
   },
+  "forms": [],
   "status": "survived",
   "has_equity": false,
   "has_trades_chart": false,
@@ -268,6 +417,7 @@
    "adaptive_IS": "negativo",
    "BuyHold_Sharpe": 0.68
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -311,6 +461,7 @@
    "retiro4pct_BuyHold": "$45,231",
    "retiro4pct_Turtle": "$28,672"
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -354,6 +505,7 @@
    "solo_trend_OOS": 0.59,
    "BuyHold_Sharpe": 0.68
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -396,6 +548,7 @@
    "OOS_MaxDD": "-35%",
    "win_rate_publicado": "77%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -439,6 +592,7 @@
    "BuyHold_Sharpe": 0.68,
    "win_rate_publicado": "68%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -480,6 +634,7 @@
    "OOS_2019_24_Sharpe": 0.75,
    "BuyHold_OOS_Sharpe": 0.67
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -522,6 +677,7 @@
    "BuyHold_OOS_Sharpe": 0.67,
    "BuyHold_MaxDD": "-29.8%"
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -563,6 +719,7 @@
    "OOS_2019_24_Sharpe": 0.48,
    "BuyHold_OOS_Sharpe": 0.67
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -606,6 +763,7 @@
    "DSR_gross": 1.0,
    "OOS_oro_neto": "Sharpe -7.34"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -648,6 +806,7 @@
    "VRP_sin_gestion": "Sharpe 1.36 (MaxDD -62%)",
    "VRP_con_gestion": "Sharpe 3.38 (MaxDD -26%)"
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -693,6 +852,7 @@
    "MaxDD": "-32%",
    "peor_dia_vs_a_pelo": "-7.8% (vs -27%)"
   },
+  "forms": [],
   "status": "survived",
   "has_equity": false,
   "has_trades_chart": false,
@@ -734,6 +894,7 @@
    "resto_del_mes": "+4 bps",
    "dia_semana": "plano"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -775,6 +936,7 @@
    "corr_oro_AUD_lag1": -0.005,
    "Sharpe": "~0"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -815,6 +977,7 @@
    "Sharpe": -0.21,
    "dias_con_señal": "61%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -856,6 +1019,7 @@
    "NAS100_Sharpe": 0.48,
    "vs_BuyHold": "siempre peor"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -899,6 +1063,7 @@
    "peor_dia": "-28.6 sigmas",
    "ref_BuyHold_SP500": 0.8
   },
+  "forms": [],
   "status": "survived",
   "has_equity": false,
   "has_trades_chart": false,
@@ -941,6 +1106,7 @@
    "oro_overnight_Sharpe": 0.99,
    "brent_overnight_Sharpe": 0.58
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -982,6 +1148,7 @@
    "OOS_2007_13_Sharpe": -0.03,
    "OOS_MaxDD": "-8.9%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1023,6 +1190,7 @@
    "B2_overlay_2014_24": "-9.6%",
    "B3_continuo_2022_MaxDD": "-6.5%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1064,6 +1232,7 @@
    "A3_LS_2022": "+6.7%",
    "A3_LS_2014_24": "-24.1%"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1105,6 +1274,7 @@
    "OOS_2007_13_Sharpe": -0.09,
    "DSR": 0.21
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1148,6 +1318,7 @@
    "2022_2x": "-17.0%",
    "costos_6m": "$192"
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1241,6 +1412,7 @@
    "R2_vol_VIX": 0.395,
    "R2_vol_precio": 0.378
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1281,6 +1453,7 @@
    "R2_EWMA": 0.225,
    "R2_ML": 0.113
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1321,6 +1494,7 @@
    "R2_volumen": -0.003,
    "R2_rango": 0.15
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1361,6 +1535,7 @@
    "Sharpe_gate_vol": -0.44,
    "Sharpe_BuyHold": 0.65
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1404,6 +1579,7 @@
    "R2_vol_EWMA": 0.225,
    "R2_vol_ML": 0.113
   },
+  "forms": [],
   "status": "survived",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1448,6 +1624,7 @@
    "R2_vol_SP500": 0.27,
    "R2_vol_WTI": 0.4
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1762,6 +1939,7 @@
    "años": 40,
    "fuente": "CFTC"
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -1903,6 +2081,7 @@
    "monedas": 8,
    "desde": 1956
   },
+  "forms": [],
   "status": "neutral",
   "has_equity": false,
   "has_trades_chart": false,
@@ -2426,6 +2605,7 @@
    "sobrevive": "parcial",
    "retorno": "demasiado bajo"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -2465,6 +2645,7 @@
   "metrics": {
    "sobrevive": "False"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,
@@ -2505,6 +2686,7 @@
    "sobrevive": "False",
    "causa": "DD acumulado 1a semana"
   },
+  "forms": [],
   "status": "died",
   "has_equity": false,
   "has_trades_chart": false,

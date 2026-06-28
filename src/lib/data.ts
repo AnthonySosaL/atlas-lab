@@ -17,6 +17,7 @@ export type Experiment = {
   verdict: Loc;
   notes: Loc;
   metrics: Record<string, number | string>;
+  forms?: { name: string; is: number; oos1: number; oos2: number; dsr: number; mc: number }[];
   status: "survived" | "died" | "neutral";
   has_equity: boolean;
   has_trades_chart: boolean;
