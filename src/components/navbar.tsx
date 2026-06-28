@@ -15,8 +15,8 @@ const LINKS = [
   { href: "/roadmap", key: "nav.roadmap" },
   { href: "/bot", key: "nav.bot" },
   { href: "/lab", key: "nav.lab" },
-  { href: "/forja", key: "nav.forja" },
   { href: "/hallazgos", key: "nav.hallazgos" },
+  { href: "/forja", key: "nav.forja" },
 ];
 
 export function Navbar() {
