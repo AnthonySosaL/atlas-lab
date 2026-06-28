@@ -45,14 +45,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
   const fetchLog = React.useCallback(async () => {
     try {
-      // pide solo el final del log (ultimos ~20KB) -> no se atora si crece a MB en corridas largas
-      const r = await fetch(`/data/lab.log?t=${Date.now()}`, {
-        cache: "no-store",
-        headers: { Range: "bytes=-20000" },
-      });
-      if (r.ok || r.status === 206) {
+      const r = await fetch(`/data/lab.log?t=${Date.now()}`, { cache: "no-store" });
+      if (r.ok) {
         const txt = await r.text();
-        if (txt.trim()) setLog(txt); // no pisar "iniciando..." con vacio
+        if (txt.trim()) setLog(txt.length > 60000 ? txt.slice(-60000) : txt); // acota en cliente
       }
     } catch {
       /* sin log aun */
