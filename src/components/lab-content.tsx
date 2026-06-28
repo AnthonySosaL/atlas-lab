@@ -45,8 +45,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
   const fetchLog = React.useCallback(async () => {
     try {
-      const r = await fetch(`/data/lab.log?t=${Date.now()}`, { cache: "no-store" });
-      if (r.ok) {
+      // pide solo el final del log (ultimos ~20KB) -> no se atora si crece a MB en corridas largas
+      const r = await fetch(`/data/lab.log?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { Range: "bytes=-20000" },
+      });
+      if (r.ok || r.status === 206) {
         const txt = await r.text();
         if (txt.trim()) setLog(txt); // no pisar "iniciando..." con vacio
       }
@@ -401,6 +405,11 @@ export function LabContent({ data: initial }: { data: LabData }) {
               {sortDir === "asc" ? "↑ " : "↓ "}{t(sortDir === "asc" ? "lab.asc" : "lab.desc")}
             </button>
           </div>
+          {data.shown !== undefined && data.total > data.shown && (
+            <span className="text-[11px] text-muted-foreground">
+              (mostrando las mejores {data.shown} de {data.total})
+            </span>
+          )}
         </div>
         <div className="overflow-x-auto rounded-xl border">
           <table className="w-full min-w-[680px] text-sm">
