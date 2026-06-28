@@ -49,7 +49,7 @@ export type LabItem = {
   family: string;
   type: string;
   params: Record<string, unknown>;
-  status: "survived" | "died";
+  status: "survived" | "died" | "noop";
   verdict: string;
   dsr: number;
   mc_p: number;

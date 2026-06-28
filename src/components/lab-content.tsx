@@ -444,7 +444,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
                     <div className="flex items-center gap-2">
                       <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
                       <span className="font-medium">{it.name}</span>
-                      <Badge variant={it.status === "survived" ? "survived" : "died"}>
+                      <Badge variant={it.status === "survived" ? "survived" : it.status === "noop" ? "neutral" : "died"}>
                         {t(`status.${it.status}`)}
                       </Badge>
                       {it.code && (
