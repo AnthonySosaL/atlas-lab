@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   Play, Square, RefreshCw, FlaskConical, ShieldCheck, Terminal,
-  Sparkles, Code2, Check, X,
+  Sparkles, Code2, Check, X, ArrowDownToLine,
 } from "lucide-react";
 import type { LabData } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
@@ -21,7 +21,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [isLocal, setIsLocal] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [log, setLog] = React.useState("");
+  const [autoScroll, setAutoScroll] = React.useState(true);
+  const autoScrollRef = React.useRef(true);
   const logRef = React.useRef<HTMLPreElement>(null);
+  React.useEffect(() => { autoScrollRef.current = autoScroll; }, [autoScroll]);
   const stateRef = React.useRef(initial.state);
   const liveUntilRef = React.useRef(0); // sigue refrescando aunque el estado parpadee
 
@@ -44,6 +47,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
   }, []);
 
   const fetchLog = React.useCallback(async () => {
+    if (!autoScrollRef.current) return; // pausado: congela el log para leer (la tabla sigue)
     try {
       const r = await fetch(`/data/lab.log?t=${Date.now()}`, { cache: "no-store" });
       if (r.ok) {
@@ -55,10 +59,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
     }
   }, []);
 
-  // auto-scroll de la consola al fondo
+  // auto-scroll de la consola al fondo (solo si esta activado)
   React.useEffect(() => {
-    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
-  }, [log]);
+    if (autoScroll && logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+  }, [log, autoScroll]);
 
   // un solo intervalo SIEMPRE montado: refresca si corre o dentro de la ventana viva
   React.useEffect(() => {
@@ -229,12 +233,25 @@ export function LabContent({ data: initial }: { data: LabData }) {
           <div className="flex items-center gap-2 border-b border-white/10 px-3 py-2 text-xs font-medium text-zinc-400">
             <Terminal className="size-3.5" />
             {t("lab.console")}
-            {running && (
-              <span className="ml-auto inline-flex items-center gap-1.5 text-[var(--gain)]">
-                <span className="size-1.5 animate-pulse rounded-full bg-[var(--gain)]" />
-                {t("lab.running")}
-              </span>
-            )}
+            <div className="ml-auto flex items-center gap-3">
+              <button
+                onClick={() => setAutoScroll((v) => !v)}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded px-1.5 py-0.5 transition-colors",
+                  autoScroll ? "text-[var(--gain)]" : "text-zinc-500 hover:text-zinc-300"
+                )}
+                title={t("lab.autoscroll")}
+              >
+                <ArrowDownToLine className="size-3" />
+                {t("lab.autoscroll")}: {autoScroll ? "ON" : "OFF"}
+              </button>
+              {running && (
+                <span className="inline-flex items-center gap-1.5 text-[var(--gain)]">
+                  <span className="size-1.5 animate-pulse rounded-full bg-[var(--gain)]" />
+                  {t("lab.running")}
+                </span>
+              )}
+            </div>
           </div>
           <pre
             ref={logRef}
