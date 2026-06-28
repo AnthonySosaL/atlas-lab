@@ -88,6 +88,21 @@ export const getSummary = () =>
     total: 0, families: [], n_families: 0, survived: 0, died: 0, generated_at: "",
   });
 export const getRoadmap = () => readJSON<RoadmapChapter[]>("roadmap.json", []);
+export type ForjaStrategy = {
+  id: string;
+  name: string;
+  instrument: string;
+  periodo: string;
+  rationale: string;
+  verdict: "viable" | "candidata" | "descartada";
+  npass: number;
+  metrics: Record<string, number>;
+  filters: { name: string; pass: boolean; detail: string }[];
+  equity: { x: string[]; strat: number[]; bh: number[] };
+};
+export type ForjaData = { updated: string; strategies: ForjaStrategy[] };
+export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", strategies: [] });
+
 export const getLab = () =>
   readJSON<LabData>("lab.json", {
     updated: "", total: 0, survived: 0, state: "stopped",
