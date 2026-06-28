@@ -33,7 +33,19 @@
   "metrics": {
    "formas": 12,
    "sobrevivieron": 0,
-   "max_filtros": "2/5"
+   "max_filtros": "2/5",
+   "EMA200 filtro + RSI4<15": "IS+0.14 OOS +0.58/-0.39 DSR0.58 MC0.29 (2/5)",
+   "MA200 filtro + RSI4<20": "IS+0.36 OOS +0.18/-0.68 DSR0.69 MC0.13 (1/5)",
+   "MA100 filtro + RSI3<15": "IS-0.10 OOS +0.58/-1.01 DSR0.32 MC0.49 (1/5)",
+   "MA200 filtro + IBS<0.2": "IS+0.07 OOS -0.29/-0.33 DSR0.54 MC0.01 (1/5)",
+   "MA200 filtro + RSI2<10": "IS+0.08 OOS +0.04/-0.68 DSR0.55 MC0.23 (0/5)",
+   "MA200 filtro + Donchian20/10": "IS+0.03 OOS -0.05/-0.02 DSR0.52 MC0.39 (0/5)",
+   "MA200 filtro + EMAcross9/21": "IS-0.09 OOS +0.12/-0.14 DSR0.35 MC0.57 (0/5)",
+   "MA200 filtro + EMAcross12/26": "IS-0.07 OOS +0.14/-0.14 DSR0.37 MC0.57 (0/5)",
+   "EMA200 filtro + EMAcross9/21": "IS-0.12 OOS +0.16/-0.14 DSR0.29 MC0.61 (0/5)",
+   "MA100 filtro + Momentum50": "IS-0.15 OOS -0.03/-0.19 DSR0.25 MC0.57 (0/5)",
+   "MA200 filtro + Momentum20": "IS-0.21 OOS -0.07/-0.27 DSR0.17 MC0.56 (0/5)",
+   "MA200 filtro + Donchian10/5": "IS-0.30 OOS -0.32/-0.31 DSR0.09 MC0.64 (0/5)"
   },
   "status": "died",
   "has_equity": false,
@@ -74,8 +86,15 @@
   "metrics": {
    "formas": 8,
    "sobrevivieron": 0,
-   "max_filtros": "1/5",
-   "BuyHold_vara": "+0.13"
+   "BuyHold_vara_IS": "+0.13",
+   "EMA-trend 200": "IS+0.10 OOS +0.24/-0.26 DSR0.56 MC0.42 (0/5)",
+   "EMA-trend 100": "IS-0.14 OOS +0.09/+0.04 DSR0.26 MC0.61 (0/5)",
+   "EMA-trend 50": "IS-0.19 OOS -0.05/-0.02 DSR0.19 MC0.54 (0/5)",
+   "EMA-trend 20": "IS-0.50 OOS -0.16/-0.13 DSR0.01 MC0.73 (0/5)",
+   "EMA-cross 50/200": "IS+0.10 OOS +0.36/-0.16 DSR0.56 MC0.60 (1/5)",
+   "EMA-cross 12/26": "IS-0.28 OOS +0.19/+0.38 DSR0.10 MC0.84 (1/5)",
+   "EMA-cross 9/21": "IS-0.34 OOS +0.14/+0.46 DSR0.06 MC0.86 (1/5)",
+   "EMA-cross 20/50": "IS-0.01 OOS -0.01/+0.23 DSR0.47 MC0.59 (0/5)"
   },
   "status": "died",
   "has_equity": false,
