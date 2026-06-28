@@ -67,6 +67,7 @@ export type LabData = {
   total: number;
   survived: number;
   state: "running" | "stopped";
+  bh_is?: number;
   thresholds?: { oos_min: number; dsr_min: number; mc_max: number };
   items: LabItem[];
 };

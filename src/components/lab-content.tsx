@@ -165,7 +165,8 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const running = data.state === "running";
   const filters = ["lab.f1", "lab.f2", "lab.f3", "lab.f4", "lab.f5"];
   const thr = data.thresholds ?? { oos_min: 0.3, dsr_min: 0.95, mc_max: 0.05 };
-  const thrChips = [`> ${thr.oos_min}`, `> ${thr.oos_min}`, `> ${thr.dsr_min}`, `< ${thr.mc_max}`, ""];
+  const bhIs = data.bh_is ?? 0;
+  const thrChips = [`> ${thr.oos_min}`, `> ${thr.oos_min}`, `> ${thr.dsr_min}`, `< ${thr.mc_max}`, `> ${bhIs.toFixed(2)}`];
 
   const sortKey = (it: (typeof data.items)[number]) =>
     sortBy === "order" ? it.order : Math.min(it.sharpe_oos1, it.sharpe_oos2);
@@ -442,7 +443,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
                       )}
                     </span>
                   </td>
-                  <td className="px-3 py-2.5 text-right tabular-nums text-muted-foreground">{fmt(it.sharpe_is)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_is > bhIs))} title={`Buy&Hold IS: ${fmt(bhIs)}`}>{fmt(it.sharpe_is)}</td>
                   <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
                   <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
                   <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
