@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2 } from "lucide-react";
+import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet } from "lucide-react";
 import type { ForjaData, ForjaStrategy, ForjaUniverse } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -39,6 +39,27 @@ function EquityMini({ eq }: { eq: ForjaStrategy["equity"] }) {
       <polyline points={line(strat)} fill="none" className="stroke-primary" strokeWidth="2.4" />
       {years.map((o) => (
         <text key={o.i} x={px(o.i)} y={H - 6} textAnchor="middle" fontSize="9" className="fill-muted-foreground">{o.y.slice(2)}</text>
+      ))}
+    </svg>
+  );
+}
+
+/** Curva de "bajo el agua": cuánto y cuánto tiempo estuvo en pérdida desde el último máximo. */
+function DrawdownMini({ strat, x }: { strat: number[]; x: string[] }) {
+  const W = 600, H = 120, pad = 32;
+  let peak = -Infinity;
+  const dd = strat.map((v) => { peak = Math.max(peak, v); return v / peak - 1; });
+  const worst = Math.min(...dd, -0.0001);
+  const px = (i: number) => pad + (i / (dd.length - 1)) * (W - 2 * pad);
+  const py = (v: number) => pad + (v / worst) * (H - 2 * pad); // v<=0; worst<0 -> 0..1
+  const area = `${px(0)},${pad} ` + dd.map((v, i) => `${px(i).toFixed(0)},${py(v).toFixed(1)}`).join(" ") + ` ${px(dd.length - 1)},${pad}`;
+  const years = x.map((d, i) => ({ i, y: d.slice(0, 4) })).filter((o, idx, a) => o.y !== a[idx - 1]?.y);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="drawdown">
+      <polygon points={area} className="fill-[var(--loss)]/15 stroke-[var(--loss)]" strokeWidth="1.4" />
+      <text x={pad - 6} y={py(worst) + 3} textAnchor="end" fontSize="9" className="fill-[var(--loss)]">{(worst * 100).toFixed(0)}%</text>
+      {years.map((o) => (
+        <text key={o.i} x={px(o.i)} y={H - 4} textAnchor="middle" fontSize="8" className="fill-muted-foreground">{o.y.slice(2)}</text>
       ))}
     </svg>
   );
@@ -108,6 +129,48 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
         </div>
       </div>
 
+      <div className="mt-3">
+        <div className="mb-1 text-[11px] text-muted-foreground">{t("forja.drawdown")}</div>
+        <DrawdownMini strat={s.equity.strat} x={s.equity.x} />
+      </div>
+
+      {s.ops && (
+        <div className="mt-4 rounded-lg border p-3">
+          <div className="mb-2 flex items-center gap-1.5 text-sm font-medium">
+            <Wallet className="size-4 text-primary" /> {t("forja.howToTrade")}
+          </div>
+          <div className="space-y-2">
+            {s.ops.legs.map((l, i) => (
+              <div key={i} className="rounded-md bg-muted/40 p-2.5 text-xs">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                  <span className="font-medium text-foreground">{l.name}</span>
+                  <span className="font-bold tabular-nums text-primary">${l.usd.toLocaleString("en-US")}</span>
+                  <span className="text-muted-foreground">({Math.round(l.weight * 100)}%)</span>
+                  <span className="ml-auto text-muted-foreground">{t("forja.todayInvested")}: <span className="font-medium text-foreground">{Math.round(l.expo_actual * 100)}%</span></span>
+                </div>
+                <div className="mt-1 text-muted-foreground">{l.instruments}</div>
+                <div className="mt-0.5 text-muted-foreground">↳ {l.rule}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+            <div>
+              <div className="text-muted-foreground">{t("forja.cagr")}</div>
+              <div className="font-bold tabular-nums">{(s.ops.cagr * 100).toFixed(1)}%</div>
+            </div>
+            <div>
+              <div className="text-muted-foreground">{t("forja.maxdd")}</div>
+              <div className="font-bold tabular-nums text-[var(--loss)]">{(s.ops.maxdd * 100).toFixed(0)}%</div>
+            </div>
+            <div>
+              <div className="text-muted-foreground">{t("forja.withdraw")}</div>
+              <div className="font-bold tabular-nums text-primary">${s.ops.withdraw_month.toLocaleString("en-US")}/mes</div>
+            </div>
+          </div>
+          <p className="mt-2 text-[11px] text-muted-foreground">{t("forja.withdrawNote").replace("{rate}", (s.ops.withdraw_rate * 100).toFixed(1))}</p>
+        </div>
+      )}
+
       <div className="mt-4 rounded-lg border p-3">
         <div className="mb-1.5 text-xs text-muted-foreground">{t("forja.exposure")} · {t("forja.fromStart")} · {lev}×</div>
         <div className="flex h-5 overflow-hidden rounded bg-muted">
@@ -162,14 +225,14 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
 // ---------------------------------------------------------------------------
 // Mapa de universos: cajas anidadas = contención (no son independientes)
 // ---------------------------------------------------------------------------
-function MapBox({ x, y, w, h, tag, sub, onPick, muted }: {
+function MapBox({ x, y, w, h, tag, sub, onPick, muted, color }: {
   x: number; y: number; w: number; h: number; tag: string; sub?: string;
-  onPick?: () => void; muted?: boolean;
+  onPick?: () => void; muted?: boolean; color?: string;
 }) {
   return (
     <g onClick={onPick} style={{ cursor: onPick ? "pointer" : "default" }} className={onPick ? "group/box" : ""}>
-      <rect x={x} y={y} width={w} height={h} rx={6}
-        className={cn("stroke-border", muted ? "fill-muted/20" : "fill-card", onPick && "group-hover/box:stroke-primary group-hover/box:stroke-2")} />
+      <rect x={x} y={y} width={w} height={h} rx={6} strokeWidth={color ? 2 : 1}
+        className={cn(color ?? "stroke-border", muted ? "fill-muted/20" : "fill-card", onPick && "group-hover/box:stroke-primary")} />
       <text x={x + 8} y={y + 15} fontSize="11" fontWeight={600} className={cn(onPick ? "fill-foreground" : "fill-muted-foreground")}>{tag}</text>
       {sub && <text x={x + 8} y={y + 28} fontSize="8.5" className="fill-muted-foreground">{sub}</text>}
     </g>
@@ -191,17 +254,17 @@ function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
       <svg viewBox="0 0 760 432" className="w-full" role="img" aria-label="mapa de universos">
         {/* --- ÍNDICES DEL MUNDO --- */}
         <MapHeader x={14} y={14} text="ÍNDICES DEL MUNDO" />
-        <MapBox x={14} y={22} w={300} h={120} tag="U3 · Índices global" onPick={() => onPick("U3")} />
-        <MapBox x={26} y={54} w={136} h={78} tag="U1 · US" sub="SP500 · NAS100" onPick={() => onPick("U1")} />
-        <MapBox x={168} y={54} w={134} h={78} tag="U2 · Europa" sub="DAX · FTSE100" onPick={() => onPick("U2")} />
-        <MapBox x={326} y={22} w={160} h={120} tag="U11 · Asia-Pac" sub="NIKKEI·HANGSENG·ASX" onPick={() => onPick("U11")} />
-        <MapBox x={498} y={22} w={248} h={120} tag="U7 · Diversificado" sub="contiene U3 + U4 + oro" onPick={() => onPick("U7")} />
+        <MapBox x={14} y={22} w={300} h={120} tag="U3 · Índices global" color="stroke-indigo-500" onPick={() => onPick("U3")} />
+        <MapBox x={26} y={54} w={136} h={78} tag="U1 · US" sub="SP500 · NAS100" color="stroke-blue-500" onPick={() => onPick("U1")} />
+        <MapBox x={168} y={54} w={134} h={78} tag="U2 · Europa" sub="DAX · FTSE100" color="stroke-sky-500" onPick={() => onPick("U2")} />
+        <MapBox x={326} y={22} w={160} h={120} tag="U11 · Asia-Pac" sub="NIKKEI·HANGSENG·ASX" color="stroke-cyan-500" onPick={() => onPick("U11")} />
+        <MapBox x={498} y={22} w={248} h={120} tag="U7 · Diversificado" sub="contiene U3 + U4 + oro" color="stroke-teal-500" onPick={() => onPick("U7")} />
 
         {/* --- MATERIAS PRIMAS Y REFUGIO --- */}
         <MapHeader x={14} y={166} text="MATERIAS PRIMAS Y REFUGIO" />
-        <MapBox x={14} y={174} w={236} h={64} tag="U4 · Energía" sub="WTI · BRENT" onPick={() => onPick("U4")} />
-        <MapBox x={262} y={174} w={236} h={64} tag="U5 · Metales" sub="oro · plata" onPick={() => onPick("U5")} />
-        <MapBox x={510} y={174} w={236} h={64} tag="U8 · Refugio" sub="oro · JPY · CHF" onPick={() => onPick("U8")} />
+        <MapBox x={14} y={174} w={236} h={64} tag="U4 · Energía" sub="WTI · BRENT" color="stroke-amber-500" onPick={() => onPick("U4")} />
+        <MapBox x={262} y={174} w={236} h={64} tag="U5 · Metales" sub="oro · plata" color="stroke-yellow-500" onPick={() => onPick("U5")} />
+        <MapBox x={510} y={174} w={236} h={64} tag="U8 · Refugio" sub="oro · JPY · CHF" color="stroke-orange-500" onPick={() => onPick("U8")} />
         <line x1={380} y1={238} x2={380} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
         <line x1={380} y1={250} x2={628} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
         <line x1={628} y1={250} x2={628} y2={238} className="stroke-amber-500" strokeDasharray="3 3" />
@@ -209,13 +272,13 @@ function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
 
         {/* --- DIVISAS (FX) --- */}
         <MapHeader x={14} y={278} text="DIVISAS (FX)" />
-        <MapBox x={14} y={286} w={236} h={64} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" onPick={() => onPick("U6a")} />
-        <MapBox x={262} y={286} w={236} h={64} tag="U6b · commodity" sub="AUD · NZD · CAD" onPick={() => onPick("U6b")} />
-        <MapBox x={510} y={286} w={236} h={64} tag="U10 · Cruces JPY" sub="EURJPY · GBPJPY · AUDJPY" onPick={() => onPick("U10")} />
+        <MapBox x={14} y={286} w={236} h={64} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" color="stroke-emerald-500" onPick={() => onPick("U6a")} />
+        <MapBox x={262} y={286} w={236} h={64} tag="U6b · commodity" sub="AUD · NZD · CAD" color="stroke-green-500" onPick={() => onPick("U6b")} />
+        <MapBox x={510} y={286} w={236} h={64} tag="U10 · Cruces JPY" sub="EURJPY · GBPJPY · AUDJPY" color="stroke-lime-600" onPick={() => onPick("U10")} />
 
         {/* --- ALTERNATIVOS Y CARTERAS --- */}
         <MapHeader x={14} y={378} text="ALTERNATIVOS Y CARTERAS" />
-        <MapBox x={14} y={386} w={236} h={40} tag="U9 · Cripto" sub="BTC · ETH · LTC" onPick={() => onPick("U9")} />
+        <MapBox x={14} y={386} w={236} h={40} tag="U9 · Cripto" sub="BTC · ETH · LTC" color="stroke-violet-500" onPick={() => onPick("U9")} />
         <g onClick={() => onPick("UP")} style={{ cursor: "pointer" }} className="group/box">
           <rect x={262} y={386} width={484} height={40} rx={6} className="fill-primary/10 stroke-primary group-hover/box:stroke-2" />
           <text x={270} y={403} fontSize="11" fontWeight={700} className="fill-primary">UP · Portafolios combinados</text>

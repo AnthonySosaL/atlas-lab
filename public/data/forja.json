@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-29 01:04",
+ "updated": "2026-06-29 01:11",
  "universes": [
   {
    "key": "UP",
@@ -19,6 +19,39 @@
      "id": "port_3mkt",
      "name": "Cartera 3 mercados",
      "hyp": "portfolio",
+     "ops": {
+      "capital": 100000,
+      "legs": [
+       {
+        "name": "Vol-targeting 10% · Índices global",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "SP500 · NAS100 · DAX · FTSE100",
+        "expo_actual": 0.76,
+        "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
+       },
+       {
+        "name": "TSMOM 12 meses · Cruces JPY",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "EURJPY · GBPJPY · AUDJPY",
+        "expo_actual": 0.67,
+        "rule": "Largo cada activo si su retorno a 12 meses (252 días) es positivo; en efectivo si es negativo. Revisión al cierre del día."
+       },
+       {
+        "name": "Donchian 50/25 (breakout) · Energía",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "WTI · BRENT",
+        "expo_actual": 0.0,
+        "rule": "Largo al cerrar por encima del máximo de 50 días; sale al cerrar por debajo del mínimo de 25 días."
+       }
+      ],
+      "cagr": 0.0474,
+      "withdraw_rate": 0.0285,
+      "withdraw_month": 237,
+      "maxdd": -0.1173
+     },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía",
      "periodo": "2012 → 2025",
      "rationale": "Equal-weight de 3 mercados INDEPENDIENTES: vol-targeting en índices globales + momentum en cruces JPY + breakout en energía. Mercados poco correlacionados: cuando uno sufre, los otros amortiguan → menor drawdown que cualquiera por separado (diversificación, Markowitz).",
@@ -559,6 +592,39 @@
      "id": "port_idx_world",
      "name": "Cartera índices del mundo",
      "hyp": "portfolio",
+     "ops": {
+      "capital": 100000,
+      "legs": [
+       {
+        "name": "Vol-targeting 10% · Índices US",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "SP500 · NAS100",
+        "expo_actual": 0.63,
+        "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
+       },
+       {
+        "name": "Vol-targeting 10% · Índices Europa",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "DAX · FTSE100",
+        "expo_actual": 1.0,
+        "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
+       },
+       {
+        "name": "Vol-targeting 10% · Índices Asia-Pac",
+        "weight": 0.333,
+        "usd": 33333,
+        "instruments": "NIKKEI · HANGSENG · ASX200",
+        "expo_actual": 0.72,
+        "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
+       }
+      ],
+      "cagr": 0.0489,
+      "withdraw_rate": 0.0294,
+      "withdraw_month": 245,
+      "maxdd": -0.1469
+     },
      "instrument": "Vol-targeting 10%·Índices US + Vol-targeting 10%·Índices Europa + Vol-targeting 10%·Índices Asia-Pac",
      "periodo": "2012 → 2025",
      "rationale": "Vol-targeting de índices en TRES regiones independientes: US + Europa + Asia-Pacífico. Misma estrategia (ya viable) repartida geográficamente para suavizar aún más los sustos regionales.",
@@ -1084,6 +1150,47 @@
      "id": "port_4mkt",
      "name": "Cartera 4 mercados (+ cripto)",
      "hyp": "portfolio",
+     "ops": {
+      "capital": 100000,
+      "legs": [
+       {
+        "name": "Vol-targeting 10% · Índices global",
+        "weight": 0.25,
+        "usd": 25000,
+        "instruments": "SP500 · NAS100 · DAX · FTSE100",
+        "expo_actual": 0.76,
+        "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
+       },
+       {
+        "name": "TSMOM 12 meses · Cruces JPY",
+        "weight": 0.25,
+        "usd": 25000,
+        "instruments": "EURJPY · GBPJPY · AUDJPY",
+        "expo_actual": 0.67,
+        "rule": "Largo cada activo si su retorno a 12 meses (252 días) es positivo; en efectivo si es negativo. Revisión al cierre del día."
+       },
+       {
+        "name": "Donchian 50/25 (breakout) · Energía",
+        "weight": 0.25,
+        "usd": 25000,
+        "instruments": "WTI · BRENT",
+        "expo_actual": 0.0,
+        "rule": "Largo al cerrar por encima del máximo de 50 días; sale al cerrar por debajo del mínimo de 25 días."
+       },
+       {
+        "name": "Tendencia MA200 · Cripto",
+        "weight": 0.25,
+        "usd": 25000,
+        "instruments": "BTCUSD · ETHUSD · LTCUSD",
+        "expo_actual": 1.0,
+        "rule": "Largo mientras el precio cierre por encima de su media de 200 días; en efectivo si cae por debajo."
+       }
+      ],
+      "cagr": 0.0782,
+      "withdraw_rate": 0.0469,
+      "withdraw_month": 391,
+      "maxdd": -0.2132
+     },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía + Tendencia MA200·Cripto",
      "periodo": "2017 → 2025",
      "rationale": "Añade una pata de tendencia en cripto (muy volátil pero poco correlacionada). Más diversificación, pero la muestra empieza en 2018 (cripto) → menos historia.",

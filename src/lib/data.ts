@@ -91,6 +91,12 @@ export const getRoadmap = () => readJSON<RoadmapChapter[]>("roadmap.json", []);
 export type ForjaLev2 = {
   s_total: number; s_maxdd: number; s_calmar: number; cap_final: number; ok: boolean;
 };
+export type ForjaLeg = {
+  name: string; weight: number; usd: number; instruments: string; expo_actual: number; rule: string;
+};
+export type ForjaOps = {
+  capital: number; legs: ForjaLeg[]; cagr: number; withdraw_rate: number; withdraw_month: number; maxdd: number;
+};
 export type ForjaStrategy = {
   id: string;
   name: string;
@@ -102,6 +108,7 @@ export type ForjaStrategy = {
   npass: number;
   metrics: Record<string, number>;
   lev2: ForjaLev2;
+  ops?: ForjaOps;
   filters: { name: string; pass: boolean; detail: string }[];
   equity: { x: string[]; strat: number[]; bh: number[] };
 };
