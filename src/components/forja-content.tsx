@@ -176,6 +176,10 @@ function MapBox({ x, y, w, h, tag, sub, onPick, muted }: {
   );
 }
 
+function MapHeader({ x, y, text }: { x: number; y: number; text: string }) {
+  return <text x={x} y={y} fontSize="10" fontWeight={700} className="fill-muted-foreground" letterSpacing="0.5">{text}</text>;
+}
+
 function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
   const { t } = useI18n();
   return (
@@ -184,27 +188,39 @@ function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
         <Layers className="size-4 text-primary" /> {t("forja.universeMap")}
       </div>
       <p className="mb-3 text-xs text-muted-foreground">{t("forja.mapNote")}</p>
-      <svg viewBox="0 0 760 270" className="w-full" role="img" aria-label="mapa de universos">
-        {/* contenedor U7 Diversificado */}
-        <MapBox x={14} y={20} w={440} h={232} tag="U7 · Diversificado" onPick={() => onPick("U7")} />
-        {/* contenedor U3 Índices global */}
-        <MapBox x={28} y={58} w={272} h={128} tag="U3 · Índices global" onPick={() => onPick("U3")} />
-        <MapBox x={40} y={92} w={122} h={82} tag="U1 · Índices US" sub="SP500 · NAS100" onPick={() => onPick("U1")} />
-        <MapBox x={168} y={92} w={120} h={82} tag="U2 · Europa" sub="DAX · FTSE100" onPick={() => onPick("U2")} />
-        <MapBox x={314} y={58} w={126} h={56} tag="U4 · Energía" sub="WTI · BRENT" onPick={() => onPick("U4")} />
-        <MapBox x={314} y={124} w={126} h={48} tag="oro" sub="XAUUSD" muted />
-        {/* FX majors (padre no testeado) */}
-        <MapBox x={478} y={20} w={266} h={120} tag="FX majors" muted />
-        <MapBox x={492} y={56} w={120} h={72} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" onPick={() => onPick("U6a")} />
-        <MapBox x={618} y={56} w={114} h={72} tag="U6b · commodity" sub="AUD · NZD · CAD" onPick={() => onPick("U6b")} />
-        {/* metales y refugio */}
-        <MapBox x={478} y={160} w={128} h={88} tag="U5 · Metales" sub="oro · plata" onPick={() => onPick("U5")} />
-        <MapBox x={616} y={160} w={128} h={88} tag="U8 · Refugio" sub="oro · JPY · CHF" onPick={() => onPick("U8")} />
-        {/* enlaces de solapamiento (comparte oro / CHF) */}
-        <line x1={377} y1={172} x2={377} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
-        <line x1={377} y1={204} x2={542} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
-        <line x1={542} y1={204} x2={680} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
-        <text x={460} y={200} fontSize="8.5" className="fill-amber-500">comparte oro</text>
+      <svg viewBox="0 0 760 432" className="w-full" role="img" aria-label="mapa de universos">
+        {/* --- ÍNDICES DEL MUNDO --- */}
+        <MapHeader x={14} y={14} text="ÍNDICES DEL MUNDO" />
+        <MapBox x={14} y={22} w={300} h={120} tag="U3 · Índices global" onPick={() => onPick("U3")} />
+        <MapBox x={26} y={54} w={136} h={78} tag="U1 · US" sub="SP500 · NAS100" onPick={() => onPick("U1")} />
+        <MapBox x={168} y={54} w={134} h={78} tag="U2 · Europa" sub="DAX · FTSE100" onPick={() => onPick("U2")} />
+        <MapBox x={326} y={22} w={160} h={120} tag="U11 · Asia-Pac" sub="NIKKEI·HANGSENG·ASX" onPick={() => onPick("U11")} />
+        <MapBox x={498} y={22} w={248} h={120} tag="U7 · Diversificado" sub="contiene U3 + U4 + oro" onPick={() => onPick("U7")} />
+
+        {/* --- MATERIAS PRIMAS Y REFUGIO --- */}
+        <MapHeader x={14} y={166} text="MATERIAS PRIMAS Y REFUGIO" />
+        <MapBox x={14} y={174} w={236} h={64} tag="U4 · Energía" sub="WTI · BRENT" onPick={() => onPick("U4")} />
+        <MapBox x={262} y={174} w={236} h={64} tag="U5 · Metales" sub="oro · plata" onPick={() => onPick("U5")} />
+        <MapBox x={510} y={174} w={236} h={64} tag="U8 · Refugio" sub="oro · JPY · CHF" onPick={() => onPick("U8")} />
+        <line x1={380} y1={238} x2={380} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
+        <line x1={380} y1={250} x2={628} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
+        <line x1={628} y1={250} x2={628} y2={238} className="stroke-amber-500" strokeDasharray="3 3" />
+        <text x={470} y={248} fontSize="8.5" className="fill-amber-500">comparten oro</text>
+
+        {/* --- DIVISAS (FX) --- */}
+        <MapHeader x={14} y={278} text="DIVISAS (FX)" />
+        <MapBox x={14} y={286} w={236} h={64} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" onPick={() => onPick("U6a")} />
+        <MapBox x={262} y={286} w={236} h={64} tag="U6b · commodity" sub="AUD · NZD · CAD" onPick={() => onPick("U6b")} />
+        <MapBox x={510} y={286} w={236} h={64} tag="U10 · Cruces JPY" sub="EURJPY · GBPJPY · AUDJPY" onPick={() => onPick("U10")} />
+
+        {/* --- ALTERNATIVOS Y CARTERAS --- */}
+        <MapHeader x={14} y={378} text="ALTERNATIVOS Y CARTERAS" />
+        <MapBox x={14} y={386} w={236} h={40} tag="U9 · Cripto" sub="BTC · ETH · LTC" onPick={() => onPick("U9")} />
+        <g onClick={() => onPick("UP")} style={{ cursor: "pointer" }} className="group/box">
+          <rect x={262} y={386} width={484} height={40} rx={6} className="fill-primary/10 stroke-primary group-hover/box:stroke-2" />
+          <text x={270} y={403} fontSize="11" fontWeight={700} className="fill-primary">UP · Portafolios combinados</text>
+          <text x={270} y={417} fontSize="8.5" className="fill-muted-foreground">carteras equal-weight de mercados independientes → el menor drawdown</text>
+        </g>
       </svg>
     </Card>
   );
