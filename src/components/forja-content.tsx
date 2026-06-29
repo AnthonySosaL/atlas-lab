@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { FlaskConical, ShieldCheck } from "lucide-react";
-import type { ForjaData, ForjaStrategy } from "@/lib/data";
+import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2 } from "lucide-react";
+import type { ForjaData, ForjaStrategy, ForjaUniverse } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -49,91 +49,226 @@ function Metric({ label, s, b, bh }: { label: string; s: string; b: string; bh: 
   );
 }
 
+function StrategyCard({ s }: { s: ForjaStrategy }) {
+  const { t } = useI18n();
+  const [lev, setLev] = React.useState<1 | 2>(1);
+  const m = s.metrics;
+  const inv = Math.round((m.expo_actual ?? 0) * 100);
+  // a 2x se muestran las metricas apalancadas; el B&H es siempre 1x (referencia)
+  const sTotal = lev === 2 ? s.lev2.s_total : m.s_total;
+  const sMdd = lev === 2 ? s.lev2.s_maxdd : m.s_maxdd;
+  const sCalmar = lev === 2 ? s.lev2.s_calmar : m.s_calmar;
+  const cap = lev === 2 ? s.lev2.cap_final : (m.cap_final ?? 0);
+  const hold = Math.round(cap * (m.expo_actual ?? 0));
+
+  return (
+    <Card className="p-5">
+      <div className="flex flex-wrap items-center gap-2">
+        <FlaskConical className="size-4 shrink-0 text-primary" />
+        <span className="font-semibold">{s.name}</span>
+        <Badge variant={s.verdict === "viable" ? "survived" : s.verdict === "descartada" ? "died" : "neutral"}>
+          {t(`forja.${s.verdict}`)} · {s.npass}/5
+        </Badge>
+        <div className="ml-auto inline-flex overflow-hidden rounded-md border text-xs">
+          {([1, 2] as const).map((L) => (
+            <button
+              key={L}
+              onClick={() => setLev(L)}
+              className={cn("px-2 py-0.5 tabular-nums", lev === L ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted")}
+            >{L}×</button>
+          ))}
+        </div>
+      </div>
+      <div className="mt-1 text-xs text-muted-foreground">{s.instrument} · {s.periodo}</div>
+
+      <div className="mt-4 grid grid-cols-3 gap-px overflow-hidden rounded-lg border bg-border text-center">
+        <Metric label={t("forja.return")} s={pct(sTotal)} b={pct(m.b_total)} bh={t("forja.bh")} />
+        <Metric label={t("forja.maxdd")} s={pct(sMdd)} b={pct(m.b_maxdd)} bh={t("forja.bh")} />
+        <Metric label={t("forja.calmar")} s={sCalmar.toFixed(2)} b={m.b_calmar.toFixed(2)} bh={t("forja.bh")} />
+      </div>
+
+      {lev === 2 && (
+        <div className={cn(
+          "mt-2 rounded-md px-3 py-1.5 text-xs",
+          s.lev2.ok ? "bg-[var(--gain)]/12 text-[var(--gain)]" : "bg-[var(--loss)]/12 text-[var(--loss)]"
+        )}>
+          {s.lev2.ok ? t("forja.lev2ok") : t("forja.lev2bad")}
+        </div>
+      )}
+
+      <div className="mt-4">
+        <EquityMini eq={s.equity} />
+        <div className="mt-1 flex items-center justify-center gap-4 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-primary" />{t("forja.strat")} (1×)</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-muted-foreground" />{t("forja.bh")}</span>
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border p-3">
+        <div className="mb-1.5 text-xs text-muted-foreground">{t("forja.exposure")} · {t("forja.fromStart")} · {lev}×</div>
+        <div className="flex h-5 overflow-hidden rounded bg-muted">
+          <div className="bg-primary/70" style={{ width: `${inv}%` }} />
+        </div>
+        <div className="mt-1 text-xs">
+          <span className="font-medium text-primary">{inv}% {t("forja.invested")}</span> · {100 - inv}% {t("forja.cash")}
+        </div>
+        <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+          <div>
+            <div className="text-muted-foreground">{t("forja.capNet")}</div>
+            <div className="font-bold tabular-nums">${cap.toLocaleString("en-US")}</div>
+          </div>
+          <div>
+            <div className="text-muted-foreground">{t("forja.capHold")}</div>
+            <div className="font-bold tabular-nums text-primary">${hold.toLocaleString("en-US")}</div>
+          </div>
+          <div>
+            <div className="text-muted-foreground">{t("forja.capCash")}</div>
+            <div className="font-bold tabular-nums">${(cap - hold).toLocaleString("en-US")}</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <div className="mb-2 flex items-center gap-1.5 text-sm font-medium">
+          <ShieldCheck className="size-4 text-primary" /> {t("forja.filters")}
+        </div>
+        <div className="grid gap-1.5 sm:grid-cols-2">
+          {s.filters.map((f, i) => (
+            <div key={i} className="flex items-start gap-2 text-xs">
+              <span className={cn(
+                "mt-0.5 grid size-4 shrink-0 place-items-center rounded-full text-[10px] font-bold",
+                f.pass ? "bg-[var(--gain)]/15 text-[var(--gain)]" : "bg-[var(--loss)]/15 text-[var(--loss)]"
+              )}>{f.pass ? "✓" : "✕"}</span>
+              <span>
+                <span className="font-medium text-foreground">{f.name}</span>
+                <span className="text-muted-foreground"> — {f.detail}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg bg-muted/40 p-3 text-xs text-muted-foreground">
+        <span className="font-medium text-foreground">{t("forja.rationale")}:</span> {s.rationale}
+      </div>
+    </Card>
+  );
+}
+
+function UniverseGrid({ universes, onPick }: { universes: ForjaUniverse[]; onPick: (k: string) => void }) {
+  const { t } = useI18n();
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {universes.map((u) => (
+        <button
+          key={u.key}
+          onClick={() => onPick(u.key)}
+          className="group flex flex-col rounded-lg border bg-card p-4 text-left transition-colors hover:border-primary/50 hover:bg-muted/40"
+        >
+          <div className="flex items-center gap-2">
+            <Layers className="size-4 shrink-0 text-primary" />
+            <span className="font-semibold">{u.key} · {u.label}</span>
+            <ChevronRight className="ml-auto size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+          </div>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {u.n_viable > 0 && <Badge variant="survived">{u.n_viable} {t("forja.viable")}</Badge>}
+            {u.n_candidata > 0 && <Badge variant="neutral">{u.n_candidata} {t("forja.candidata")}</Badge>}
+            <Badge variant="outline">{u.n_test}/{u.max_tests} {t("forja.tests")}</Badge>
+          </div>
+          <div className="mt-2 text-xs text-muted-foreground">{u.instrument}</div>
+          {u.relates.length > 0 && (
+            <div className="mt-2 space-y-0.5">
+              {u.relates.map((r, i) => (
+                <div key={i} className="flex items-center gap-1 text-[11px] text-muted-foreground">
+                  <Link2 className="size-3 shrink-0" /> {r}
+                </div>
+              ))}
+            </div>
+          )}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function UniverseDetail({ u, onBack }: { u: ForjaUniverse; onBack: () => void }) {
+  const { t } = useI18n();
+  return (
+    <div className="space-y-4">
+      <button onClick={onBack} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {t("forja.allUniverses")}
+      </button>
+      <Card className="p-5">
+        <div className="flex items-center gap-2">
+          <Layers className="size-5 text-primary" />
+          <h3 className="text-lg font-semibold">{u.key} · {u.label}</h3>
+        </div>
+        <div className="mt-1 text-sm text-muted-foreground">{u.instrument} · {u.periodo}</div>
+        <div className="mt-3 rounded-md bg-muted/50 px-3 py-2 text-xs text-muted-foreground">
+          {t("forja.capNote").replace("{n}", String(u.max_tests))} — {u.n_test}/{u.max_tests}.
+        </div>
+        {u.relates.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-0.5">
+            {u.relates.map((r, i) => (
+              <span key={i} className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
+                <Link2 className="size-3" /> {r}
+              </span>
+            ))}
+          </div>
+        )}
+      </Card>
+
+      {u.strategies.map((s) => <StrategyCard key={s.id} s={s} />)}
+    </div>
+  );
+}
+
 export function ForjaContent({ data }: { data: ForjaData }) {
   const { t } = useI18n();
-  if (data.strategies.length === 0)
+  const [selected, setSelected] = React.useState<string | null>(null);
+
+  if (!data.universes || data.universes.length === 0)
     return <p className="rounded-lg border bg-card px-4 py-10 text-center text-sm text-muted-foreground">—</p>;
+
+  const current = data.universes.find((u) => u.key === selected) ?? null;
+
+  if (current) return <UniverseDetail u={current} onBack={() => setSelected(null)} />;
 
   return (
     <div className="space-y-6">
-      {data.strategies.map((s) => {
-        const m = s.metrics;
-        const inv = Math.round((m.expo_actual ?? 0) * 100);
-        return (
-          <Card key={s.id} className="p-5">
-            <div className="flex flex-wrap items-center gap-2">
-              <FlaskConical className="size-4 shrink-0 text-primary" />
-              <span className="font-semibold">{s.name}</span>
-              <Badge variant={s.verdict === "viable" ? "survived" : s.verdict === "descartada" ? "died" : "neutral"}>
-                {t(`forja.${s.verdict}`)} · {s.npass}/5
-              </Badge>
-              <span className="text-xs text-muted-foreground">{s.instrument} · {s.periodo}</span>
-            </div>
+      <UniverseGrid universes={data.universes} onPick={setSelected} />
 
-            <div className="mt-4 grid grid-cols-3 gap-px overflow-hidden rounded-lg border bg-border text-center">
-              <Metric label={t("forja.return")} s={pct(m.s_total)} b={pct(m.b_total)} bh={t("forja.bh")} />
-              <Metric label={t("forja.maxdd")} s={pct(m.s_maxdd)} b={pct(m.b_maxdd)} bh={t("forja.bh")} />
-              <Metric label={t("forja.calmar")} s={m.s_calmar.toFixed(2)} b={m.b_calmar.toFixed(2)} bh={t("forja.bh")} />
-            </div>
-
-            <div className="mt-4">
-              <EquityMini eq={s.equity} />
-              <div className="mt-1 flex items-center justify-center gap-4 text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-primary" />{t("forja.strat")}</span>
-                <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-muted-foreground" />{t("forja.bh")}</span>
-              </div>
-            </div>
-
-            <div className="mt-4 rounded-lg border p-3">
-              <div className="mb-1.5 text-xs text-muted-foreground">{t("forja.exposure")} · {t("forja.fromStart")}</div>
-              <div className="flex h-5 overflow-hidden rounded bg-muted">
-                <div className="bg-primary/70" style={{ width: `${inv}%` }} />
-              </div>
-              <div className="mt-1 text-xs">
-                <span className="font-medium text-primary">{inv}% {t("forja.invested")}</span> · {100 - inv}% {t("forja.cash")}
-              </div>
-              <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
-                <div>
-                  <div className="text-muted-foreground">{t("forja.capNet")}</div>
-                  <div className="font-bold tabular-nums">${(m.cap_final ?? 0).toLocaleString("en-US")}</div>
-                </div>
-                <div>
-                  <div className="text-muted-foreground">{t("forja.capHold")}</div>
-                  <div className="font-bold tabular-nums text-primary">${(m.en_holdings ?? 0).toLocaleString("en-US")}</div>
-                </div>
-                <div>
-                  <div className="text-muted-foreground">{t("forja.capCash")}</div>
-                  <div className="font-bold tabular-nums">${(m.en_efectivo ?? 0).toLocaleString("en-US")}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <div className="mb-2 flex items-center gap-1.5 text-sm font-medium">
-                <ShieldCheck className="size-4 text-primary" /> {t("forja.filters")}
-              </div>
-              <div className="grid gap-1.5 sm:grid-cols-2">
-                {s.filters.map((f, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs">
-                    <span className={cn(
-                      "mt-0.5 grid size-4 shrink-0 place-items-center rounded-full text-[10px] font-bold",
-                      f.pass ? "bg-[var(--gain)]/15 text-[var(--gain)]" : "bg-[var(--loss)]/15 text-[var(--loss)]"
-                    )}>{f.pass ? "✓" : "✕"}</span>
-                    <span>
-                      <span className="font-medium text-foreground">{f.name}</span>
-                      <span className="text-muted-foreground"> — {f.detail}</span>
-                    </span>
-                  </div>
+      {data.challenge && data.challenge.length > 0 && (
+        <Card className="p-5">
+          <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
+            <Target className="size-4 text-primary" /> {t("forja.challenge")}
+          </div>
+          <p className="mb-3 text-xs text-muted-foreground">{t("forja.challengeNote")}</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs">
+              <thead className="text-muted-foreground">
+                <tr className="border-b">
+                  <th className="py-1.5 pr-2 text-left font-medium">{t("forja.strat")}</th>
+                  <th className="px-2 text-right font-medium">1×</th>
+                  <th className="px-2 text-right font-medium">3×</th>
+                  <th className="pl-2 text-right font-medium">5×</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.challenge.map((c, i) => (
+                  <tr key={i} className="border-b border-border/50">
+                    <td className="py-1.5 pr-2">{c.name}</td>
+                    <td className="px-2 text-right tabular-nums">{(c.x1 * 100).toFixed(1)}%</td>
+                    <td className="px-2 text-right tabular-nums font-medium text-primary">{(c.x3 * 100).toFixed(1)}%</td>
+                    <td className="pl-2 text-right tabular-nums">{(c.x5 * 100).toFixed(1)}%</td>
+                  </tr>
                 ))}
-              </div>
-            </div>
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      )}
 
-            <div className="mt-4 rounded-lg bg-muted/40 p-3 text-xs text-muted-foreground">
-              <span className="font-medium text-foreground">{t("forja.rationale")}:</span> {s.rationale}
-            </div>
-          </Card>
-        );
-      })}
       <p className="text-xs text-muted-foreground">{t("forja.note")}</p>
     </div>
   );

@@ -88,20 +88,39 @@ export const getSummary = () =>
     total: 0, families: [], n_families: 0, survived: 0, died: 0, generated_at: "",
   });
 export const getRoadmap = () => readJSON<RoadmapChapter[]>("roadmap.json", []);
+export type ForjaLev2 = {
+  s_total: number; s_maxdd: number; s_calmar: number; cap_final: number; ok: boolean;
+};
 export type ForjaStrategy = {
   id: string;
   name: string;
+  hyp: string;
   instrument: string;
   periodo: string;
   rationale: string;
   verdict: "viable" | "candidata" | "descartada";
   npass: number;
   metrics: Record<string, number>;
+  lev2: ForjaLev2;
   filters: { name: string; pass: boolean; detail: string }[];
   equity: { x: string[]; strat: number[]; bh: number[] };
 };
-export type ForjaData = { updated: string; strategies: ForjaStrategy[] };
-export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", strategies: [] });
+export type ForjaUniverse = {
+  key: string;
+  label: string;
+  assets: string[];
+  instrument: string;
+  periodo: string;
+  relates: string[];
+  max_tests: number;
+  n_test: number;
+  n_viable: number;
+  n_candidata: number;
+  strategies: ForjaStrategy[];
+};
+export type ForjaChallenge = { name: string; x1: number; x3: number; x5: number };
+export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[] };
+export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", universes: [] });
 
 export const getLab = () =>
   readJSON<LabData>("lab.json", {
