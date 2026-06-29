@@ -9,7 +9,12 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const pct = (n: number) => (n >= 0 ? "+" : "") + (n * 100).toFixed(0) + "%";
+const dotColor = (v: ForjaStrategy["verdict"]) =>
+  v === "viable" ? "bg-[var(--gain)]" : v === "candidata" ? "bg-amber-500" : "bg-[var(--loss)]";
 
+// ---------------------------------------------------------------------------
+// Curva de capital (estrategia 1× vs Buy&Hold)
+// ---------------------------------------------------------------------------
 function EquityMini({ eq }: { eq: ForjaStrategy["equity"] }) {
   const { strat, bh, x } = eq;
   const W = 600, H = 230, pad = 32;
@@ -54,7 +59,6 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
   const [lev, setLev] = React.useState<1 | 2>(1);
   const m = s.metrics;
   const inv = Math.round((m.expo_actual ?? 0) * 100);
-  // a 2x se muestran las metricas apalancadas; el B&H es siempre 1x (referencia)
   const sTotal = lev === 2 ? s.lev2.s_total : m.s_total;
   const sMdd = lev === 2 ? s.lev2.s_maxdd : m.s_maxdd;
   const sCalmar = lev === 2 ? s.lev2.s_calmar : m.s_calmar;
@@ -155,6 +159,60 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
   );
 }
 
+// ---------------------------------------------------------------------------
+// Mapa de universos: cajas anidadas = contención (no son independientes)
+// ---------------------------------------------------------------------------
+function MapBox({ x, y, w, h, tag, sub, onPick, muted }: {
+  x: number; y: number; w: number; h: number; tag: string; sub?: string;
+  onPick?: () => void; muted?: boolean;
+}) {
+  return (
+    <g onClick={onPick} style={{ cursor: onPick ? "pointer" : "default" }} className={onPick ? "group/box" : ""}>
+      <rect x={x} y={y} width={w} height={h} rx={6}
+        className={cn("stroke-border", muted ? "fill-muted/20" : "fill-card", onPick && "group-hover/box:stroke-primary group-hover/box:stroke-2")} />
+      <text x={x + 8} y={y + 15} fontSize="11" fontWeight={600} className={cn(onPick ? "fill-foreground" : "fill-muted-foreground")}>{tag}</text>
+      {sub && <text x={x + 8} y={y + 28} fontSize="8.5" className="fill-muted-foreground">{sub}</text>}
+    </g>
+  );
+}
+
+function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
+  const { t } = useI18n();
+  return (
+    <Card className="p-4">
+      <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
+        <Layers className="size-4 text-primary" /> {t("forja.universeMap")}
+      </div>
+      <p className="mb-3 text-xs text-muted-foreground">{t("forja.mapNote")}</p>
+      <svg viewBox="0 0 760 270" className="w-full" role="img" aria-label="mapa de universos">
+        {/* contenedor U7 Diversificado */}
+        <MapBox x={14} y={20} w={440} h={232} tag="U7 · Diversificado" onPick={() => onPick("U7")} />
+        {/* contenedor U3 Índices global */}
+        <MapBox x={28} y={58} w={272} h={128} tag="U3 · Índices global" onPick={() => onPick("U3")} />
+        <MapBox x={40} y={92} w={122} h={82} tag="U1 · Índices US" sub="SP500 · NAS100" onPick={() => onPick("U1")} />
+        <MapBox x={168} y={92} w={120} h={82} tag="U2 · Europa" sub="DAX · FTSE100" onPick={() => onPick("U2")} />
+        <MapBox x={314} y={58} w={126} h={56} tag="U4 · Energía" sub="WTI · BRENT" onPick={() => onPick("U4")} />
+        <MapBox x={314} y={124} w={126} h={48} tag="oro" sub="XAUUSD" muted />
+        {/* FX majors (padre no testeado) */}
+        <MapBox x={478} y={20} w={266} h={120} tag="FX majors" muted />
+        <MapBox x={492} y={56} w={120} h={72} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" onPick={() => onPick("U6a")} />
+        <MapBox x={618} y={56} w={114} h={72} tag="U6b · commodity" sub="AUD · NZD · CAD" onPick={() => onPick("U6b")} />
+        {/* metales y refugio */}
+        <MapBox x={478} y={160} w={128} h={88} tag="U5 · Metales" sub="oro · plata" onPick={() => onPick("U5")} />
+        <MapBox x={616} y={160} w={128} h={88} tag="U8 · Refugio" sub="oro · JPY · CHF" onPick={() => onPick("U8")} />
+        {/* enlaces de solapamiento (comparte oro / CHF) */}
+        <line x1={377} y1={172} x2={377} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
+        <line x1={377} y1={204} x2={542} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
+        <line x1={542} y1={204} x2={680} y2={204} className="stroke-amber-500" strokeDasharray="3 3" />
+        <text x={460} y={200} fontSize="8.5" className="fill-amber-500">comparte oro</text>
+      </svg>
+    </Card>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Nivel 0: grilla de universos (estado + entrada)
+// ---------------------------------------------------------------------------
 function UniverseGrid({ universes, onPick }: { universes: ForjaUniverse[]; onPick: (k: string) => void }) {
   const { t } = useI18n();
   return (
@@ -191,7 +249,10 @@ function UniverseGrid({ universes, onPick }: { universes: ForjaUniverse[]; onPic
   );
 }
 
-function UniverseDetail({ u, onBack }: { u: ForjaUniverse; onBack: () => void }) {
+// ---------------------------------------------------------------------------
+// Nivel 1: dentro de un universo — lista COMPACTA de sus experimentos
+// ---------------------------------------------------------------------------
+function UniverseList({ u, onOpen, onBack }: { u: ForjaUniverse; onOpen: (id: string) => void; onBack: () => void }) {
   const { t } = useI18n();
   return (
     <div className="space-y-4">
@@ -218,25 +279,98 @@ function UniverseDetail({ u, onBack }: { u: ForjaUniverse; onBack: () => void })
         )}
       </Card>
 
-      {u.strategies.map((s) => <StrategyCard key={s.id} s={s} />)}
+      <Card className="overflow-hidden">
+        {u.strategies.map((s, i) => (
+          <button
+            key={s.id}
+            onClick={() => onOpen(s.id)}
+            className={cn(
+              "flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-muted/50",
+              i > 0 && "border-t"
+            )}
+          >
+            <span className={cn("size-2.5 shrink-0 rounded-full", dotColor(s.verdict))} />
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-medium">{s.name}</span>
+                <Badge variant={s.verdict === "viable" ? "survived" : s.verdict === "descartada" ? "died" : "neutral"}>
+                  {t(`forja.${s.verdict}`)} · {s.npass}/5
+                </Badge>
+              </div>
+            </div>
+            <div className="hidden shrink-0 gap-4 text-xs tabular-nums sm:flex">
+              <div className="text-right">
+                <div className="text-muted-foreground">{t("forja.maxdd")}</div>
+                <div className="font-semibold text-primary">{pct(s.metrics.s_maxdd)} <span className="font-normal text-muted-foreground">/ {pct(s.metrics.b_maxdd)}</span></div>
+              </div>
+              <div className="text-right">
+                <div className="text-muted-foreground">{t("forja.calmar")}</div>
+                <div className="font-semibold text-primary">{s.metrics.s_calmar.toFixed(2)} <span className="font-normal text-muted-foreground">/ {s.metrics.b_calmar.toFixed(2)}</span></div>
+              </div>
+            </div>
+            <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
+          </button>
+        ))}
+      </Card>
     </div>
   );
 }
 
+// ---------------------------------------------------------------------------
+// Nivel 2: un experimento abierto — card completa con curva
+// ---------------------------------------------------------------------------
+function ExperimentView({ u, s, onBack }: { u: ForjaUniverse; s: ForjaStrategy; onBack: () => void }) {
+  const { t } = useI18n();
+  return (
+    <div className="space-y-4">
+      <button onClick={onBack} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {u.key} · {u.label}
+      </button>
+      <StrategyCard s={s} />
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Contenedor: routing por hash (#U1 , #U1/<idExperimento>) -> "atrás" funciona
+// ---------------------------------------------------------------------------
 export function ForjaContent({ data }: { data: ForjaData }) {
   const { t } = useI18n();
-  const [selected, setSelected] = React.useState<string | null>(null);
+  const [route, setRoute] = React.useState<{ u?: string; s?: string }>({});
+
+  React.useEffect(() => {
+    const read = () => {
+      const h = typeof window !== "undefined" ? window.location.hash.replace(/^#/, "") : "";
+      if (!h) return setRoute({});
+      const [u, s] = h.split("/");
+      setRoute({ u, s });
+    };
+    read();
+    window.addEventListener("hashchange", read);
+    return () => window.removeEventListener("hashchange", read);
+  }, []);
+
+  const go = (hash: string) => { window.location.hash = hash; };
 
   if (!data.universes || data.universes.length === 0)
     return <p className="rounded-lg border bg-card px-4 py-10 text-center text-sm text-muted-foreground">—</p>;
 
-  const current = data.universes.find((u) => u.key === selected) ?? null;
+  const universe = route.u ? data.universes.find((u) => u.key === route.u) ?? null : null;
 
-  if (current) return <UniverseDetail u={current} onBack={() => setSelected(null)} />;
+  // Nivel 2: experimento abierto
+  if (universe && route.s) {
+    const strat = universe.strategies.find((x) => x.id === route.s);
+    if (strat) return <ExperimentView u={universe} s={strat} onBack={() => go(universe.key)} />;
+  }
+  // Nivel 1: dentro de un universo
+  if (universe)
+    return <UniverseList u={universe} onOpen={(id) => go(`${universe.key}/${id}`)} onBack={() => go("")} />;
 
+  // Nivel 0: mapa + grilla + reto de fondeo
   return (
     <div className="space-y-6">
-      <UniverseGrid universes={data.universes} onPick={setSelected} />
+      <UniverseMap onPick={(k) => go(k)} />
+      <UniverseGrid universes={data.universes} onPick={(k) => go(k)} />
 
       {data.challenge && data.challenge.length > 0 && (
         <Card className="p-5">
