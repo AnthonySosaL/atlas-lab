@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet } from "lucide-react";
-import type { ForjaData, ForjaStrategy, ForjaUniverse } from "@/lib/data";
+import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet, Trophy, Info } from "lucide-react";
+import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5 } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -113,12 +113,15 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
       </div>
 
       {lev === 2 && (
-        <div className={cn(
-          "mt-2 rounded-md px-3 py-1.5 text-xs",
-          s.lev2.ok ? "bg-[var(--gain)]/12 text-[var(--gain)]" : "bg-[var(--loss)]/12 text-[var(--loss)]"
-        )}>
-          {s.lev2.ok ? t("forja.lev2ok") : t("forja.lev2bad")}
-        </div>
+        <>
+          <div className={cn(
+            "mt-2 rounded-md px-3 py-1.5 text-xs",
+            s.lev2.ok ? "bg-[var(--gain)]/12 text-[var(--gain)]" : "bg-[var(--loss)]/12 text-[var(--loss)]"
+          )}>
+            {s.lev2.ok ? t("forja.lev2ok") : t("forja.lev2bad")}
+          </div>
+          <p className="mt-1 text-[10px] text-muted-foreground">{t("forja.lev2explain")}</p>
+        </>
       )}
 
       <div className="mt-4">
@@ -168,6 +171,42 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
             </div>
           </div>
           <p className="mt-2 text-[11px] text-muted-foreground">{t("forja.withdrawNote").replace("{rate}", (s.ops.withdraw_rate * 100).toFixed(1))}</p>
+
+          {s.ops.withdraw_sim && (
+            <div className="mt-3 rounded-md border p-2.5">
+              <div className="mb-1.5 flex items-center gap-1 text-xs font-medium">
+                <Info className="size-3 text-primary" /> {t("forja.withdrawSim")}
+              </div>
+              <div className="mb-2 text-[10px] text-muted-foreground">
+                {t("forja.withdrawSafe")}: <span className="font-bold text-primary">${s.ops.withdraw_sim.retiro_max_seguro.toLocaleString("en-US")}{t("forja.withdrawPerMonth")}</span>
+                {" "}(B&H: ${s.ops.withdraw_sim.retiro_max_seguro_bh.toLocaleString("en-US")}{t("forja.withdrawPerMonth")})
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-[10px]">
+                  <thead className="text-muted-foreground">
+                    <tr className="border-b">
+                      <th className="py-1 text-left font-medium">{t("forja.withdrawRate")}</th>
+                      <th className="px-1 text-right font-medium">{t("forja.withdrawPerMonth")}</th>
+                      <th className="px-1 text-right font-medium">{t("forja.withdrawPreserve")}</th>
+                      <th className="px-1 text-right font-medium">{t("forja.withdrawSemiRuin")}</th>
+                      <th className="px-1 text-right font-medium">{t("forja.withdrawWorst")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {s.ops.withdraw_sim.tasas.filter(r => r.horizonte === "5a").map((r, i) => (
+                      <tr key={i} className="border-b border-border/30">
+                        <td className="py-1">{(r.rate * 100).toFixed(0)}%</td>
+                        <td className="px-1 text-right tabular-nums">${r.usd_mes}</td>
+                        <td className="px-1 text-right tabular-nums font-medium text-[var(--gain)]">{(r.pct_preserva * 100).toFixed(0)}%</td>
+                        <td className="px-1 text-right tabular-nums">{(r.pct_semiruina * 100).toFixed(0)}%</td>
+                        <td className="px-1 text-right tabular-nums">${r.peor_final.toLocaleString("en-US")}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -285,6 +324,61 @@ function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
           <text x={270} y={417} fontSize="8.5" className="fill-muted-foreground">carteras equal-weight de mercados independientes → el menor drawdown</text>
         </g>
       </svg>
+    </Card>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Top 5 algoritmos
+// ---------------------------------------------------------------------------
+function Top5Section({ items, onPick }: { items: ForjaTop5[]; onPick: (ukey: string, id: string) => void }) {
+  const { t } = useI18n();
+  const medals = ["🥇", "🥈", "🥉", "4", "5"];
+  return (
+    <Card className="p-5">
+      <div className="mb-3 flex items-center gap-1.5 text-sm font-medium">
+        <Trophy className="size-4 text-primary" /> {t("forja.top5")}
+      </div>
+      <div className="space-y-2">
+        {items.map((item, i) => (
+          <button
+            key={item.id}
+            onClick={() => onPick(item.ukey, item.id)}
+            className="flex w-full items-center gap-3 rounded-lg border bg-card p-3 text-left transition-colors hover:border-primary/50 hover:bg-muted/40"
+          >
+            <span className="text-lg">{medals[i] ?? (i + 1)}</span>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-medium">{item.name}</span>
+                <Badge variant={item.verdict === "viable" ? "survived" : item.verdict === "candidata" ? "neutral" : "died"}>
+                  {t(`forja.${item.verdict}`)}
+                </Badge>
+              </div>
+              <div className="mt-0.5 text-xs text-muted-foreground">
+                {item.ulabel}
+                {item.also_viable_in.length > 0 && (
+                  <span> · {t("forja.top5also")}: {item.also_viable_in.join(", ")}</span>
+                )}
+              </div>
+            </div>
+            <div className="hidden shrink-0 gap-4 text-xs tabular-nums sm:flex">
+              <div className="text-right">
+                <div className="text-muted-foreground">MaxDD</div>
+                <div className="font-semibold text-primary">{item.maxdd}% <span className="font-normal text-muted-foreground">/ {item.maxdd_bh}%</span></div>
+              </div>
+              <div className="text-right">
+                <div className="text-muted-foreground">Calmar</div>
+                <div className="font-semibold text-primary">{item.calmar.toFixed(2)}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-muted-foreground">CAGR</div>
+                <div className="font-semibold">{item.cagr}%</div>
+              </div>
+            </div>
+            <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
+          </button>
+        ))}
+      </div>
     </Card>
   );
 }
@@ -445,10 +539,13 @@ export function ForjaContent({ data }: { data: ForjaData }) {
   if (universe)
     return <UniverseList u={universe} onOpen={(id) => go(`${universe.key}/${id}`)} onBack={() => go("")} />;
 
-  // Nivel 0: mapa + grilla + reto de fondeo
+  // Nivel 0: mapa + top5 + grilla + reto de fondeo
   return (
     <div className="space-y-6">
       <UniverseMap onPick={(k) => go(k)} />
+      {data.top5 && data.top5.length > 0 && (
+        <Top5Section items={data.top5} onPick={(ukey, id) => go(`${ukey}/${id}`)} />
+      )}
       <UniverseGrid universes={data.universes} onPick={(k) => go(k)} />
 
       {data.challenge && data.challenge.length > 0 && (
@@ -456,7 +553,8 @@ export function ForjaContent({ data }: { data: ForjaData }) {
           <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
             <Target className="size-4 text-primary" /> {t("forja.challenge")}
           </div>
-          <p className="mb-3 text-xs text-muted-foreground">{t("forja.challengeNote")}</p>
+          <p className="mb-2 text-xs text-muted-foreground">{t("forja.challengeNote")}</p>
+          <p className="mb-3 rounded-md bg-muted/50 px-2 py-1.5 text-[10px] text-muted-foreground">{t("forja.challengeExplain")}</p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs">
               <thead className="text-muted-foreground">

@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07 17:49",
+ "updated": "2026-07-07 18:19",
  "universes": [
   {
    "key": "UP",
@@ -50,7 +50,118 @@
       "cagr": 0.0474,
       "withdraw_rate": 0.0285,
       "withdraw_month": 237,
-      "maxdd": -0.1173
+      "maxdd": -0.1173,
+      "withdraw_sim": {
+       "tasas": [
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "5a",
+         "pct_preserva": 0.959,
+         "pct_semiruina": 0.0,
+         "peor_final": 98773,
+         "peor_minimo": 86879,
+         "bh_pct_preserva": 0.794,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 76876,
+         "bh_peor_minimo": 66106
+        },
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 139543,
+         "peor_minimo": 89991,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 129568,
+         "bh_peor_minimo": 65076
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "5a",
+         "pct_preserva": 0.856,
+         "pct_semiruina": 0.0,
+         "peor_final": 93655,
+         "peor_minimo": 84810,
+         "bh_pct_preserva": 0.742,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 72929,
+         "bh_peor_minimo": 64975
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 125521,
+         "peor_minimo": 87928,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 114800,
+         "bh_peor_minimo": 60529
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "5a",
+         "pct_preserva": 0.701,
+         "pct_semiruina": 0.0,
+         "peor_final": 88487,
+         "peor_minimo": 82740,
+         "bh_pct_preserva": 0.598,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 68983,
+         "bh_peor_minimo": 63666
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 111498,
+         "peor_minimo": 83431,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 100033,
+         "bh_peor_minimo": 55981
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "5a",
+         "pct_preserva": 0.577,
+         "pct_semiruina": 0.0,
+         "peor_final": 83256,
+         "peor_minimo": 80646,
+         "bh_pct_preserva": 0.515,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 64988,
+         "bh_peor_minimo": 59805
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "10a",
+         "pct_preserva": 0.892,
+         "pct_semiruina": 0.0,
+         "peor_final": 97307,
+         "peor_minimo": 76928,
+         "bh_pct_preserva": 0.324,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 85088,
+         "bh_peor_minimo": 51379
+        }
+       ],
+       "retiro_max_seguro": 925,
+       "retiro_max_seguro_bh": 625,
+       "horizonte_seguro": "5a"
+      }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía",
      "periodo": "2012 → 2025",
@@ -101,10 +212,10 @@
       "en_efectivo": 108823
      },
      "lev2": {
-      "s_total": 2.956,
-      "s_maxdd": -0.2306,
-      "s_calmar": 0.4,
-      "cap_final": 395606,
+      "s_total": 1.593,
+      "s_maxdd": -0.2679,
+      "s_calmar": 0.23,
+      "cap_final": 259327,
       "ok": true
      },
      "equity": {
@@ -623,7 +734,118 @@
       "cagr": 0.0489,
       "withdraw_rate": 0.0294,
       "withdraw_month": 245,
-      "maxdd": -0.1469
+      "maxdd": -0.1469,
+      "withdraw_sim": {
+       "tasas": [
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "5a",
+         "pct_preserva": 0.935,
+         "pct_semiruina": 0.0,
+         "peor_final": 96743,
+         "peor_minimo": 87935,
+         "bh_pct_preserva": 0.978,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 93329,
+         "bh_peor_minimo": 76245
+        },
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 113437,
+         "peor_minimo": 89973,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 146755,
+         "bh_peor_minimo": 87971
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "5a",
+         "pct_preserva": 0.761,
+         "pct_semiruina": 0.0,
+         "peor_final": 91703,
+         "peor_minimo": 86237,
+         "bh_pct_preserva": 0.935,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 88614,
+         "bh_peor_minimo": 76028
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 102112,
+         "peor_minimo": 88570,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 134091,
+         "bh_peor_minimo": 87006
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "5a",
+         "pct_preserva": 0.576,
+         "pct_semiruina": 0.0,
+         "peor_final": 86663,
+         "peor_minimo": 81968,
+         "bh_pct_preserva": 0.88,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 83899,
+         "bh_peor_minimo": 75779
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "10a",
+         "pct_preserva": 0.844,
+         "pct_semiruina": 0.0,
+         "peor_final": 90787,
+         "peor_minimo": 86040,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 121426,
+         "bh_peor_minimo": 86042
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "5a",
+         "pct_preserva": 0.38,
+         "pct_semiruina": 0.0,
+         "peor_final": 81563,
+         "peor_minimo": 77331,
+         "bh_pct_preserva": 0.761,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 79126,
+         "bh_peor_minimo": 73938
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "10a",
+         "pct_preserva": 0.156,
+         "pct_semiruina": 0.0,
+         "peor_final": 79326,
+         "peor_minimo": 76137,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 108609,
+         "bh_peor_minimo": 83638
+        }
+       ],
+       "retiro_max_seguro": 875,
+       "retiro_max_seguro_bh": 900,
+       "horizonte_seguro": "5a"
+      }
      },
      "instrument": "Vol-targeting 10%·Índices US + Vol-targeting 10%·Índices Europa + Vol-targeting 10%·Índices Asia-Pac",
      "periodo": "2012 → 2025",
@@ -674,10 +896,10 @@
       "en_efectivo": 44408
      },
      "lev2": {
-      "s_total": 2.797,
-      "s_maxdd": -0.279,
-      "s_calmar": 0.33,
-      "cap_final": 379681,
+      "s_total": 1.256,
+      "s_maxdd": -0.2989,
+      "s_calmar": 0.19,
+      "cap_final": 225581,
       "ok": true
      },
      "equity": {
@@ -1181,7 +1403,118 @@
       "cagr": 0.0333,
       "withdraw_rate": 0.02,
       "withdraw_month": 166,
-      "maxdd": -0.156
+      "maxdd": -0.156,
+      "withdraw_sim": {
+       "tasas": [
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "5a",
+         "pct_preserva": 0.711,
+         "pct_semiruina": 0.0,
+         "peor_final": 84266,
+         "peor_minimo": 81655,
+         "bh_pct_preserva": 0.794,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 76876,
+         "bh_peor_minimo": 66106
+        },
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 104843,
+         "peor_minimo": 83252,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 129568,
+         "bh_peor_minimo": 65076
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "5a",
+         "pct_preserva": 0.546,
+         "pct_semiruina": 0.0,
+         "peor_final": 79616,
+         "peor_minimo": 79565,
+         "bh_pct_preserva": 0.742,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 72929,
+         "bh_peor_minimo": 64975
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "10a",
+         "pct_preserva": 0.73,
+         "pct_semiruina": 0.0,
+         "peor_final": 92960,
+         "peor_minimo": 78208,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 114800,
+         "bh_peor_minimo": 60529
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "5a",
+         "pct_preserva": 0.309,
+         "pct_semiruina": 0.0,
+         "peor_final": 74967,
+         "peor_minimo": 74967,
+         "bh_pct_preserva": 0.598,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 68983,
+         "bh_peor_minimo": 63666
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "10a",
+         "pct_preserva": 0.243,
+         "pct_semiruina": 0.0,
+         "peor_final": 81076,
+         "peor_minimo": 72708,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 100033,
+         "bh_peor_minimo": 55981
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "5a",
+         "pct_preserva": 0.155,
+         "pct_semiruina": 0.0,
+         "peor_final": 70261,
+         "peor_minimo": 70261,
+         "bh_pct_preserva": 0.515,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 64988,
+         "bh_peor_minimo": 59805
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "10a",
+         "pct_preserva": 0.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 69050,
+         "peor_minimo": 66706,
+         "bh_pct_preserva": 0.324,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 85088,
+         "bh_peor_minimo": 51379
+        }
+       ],
+       "retiro_max_seguro": 775,
+       "retiro_max_seguro_bh": 625,
+       "horizonte_seguro": "5a"
+      }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía",
      "periodo": "2012 → 2025",
@@ -1232,10 +1565,10 @@
       "en_efectivo": 87876
      },
      "lev2": {
-      "s_total": 1.619,
-      "s_maxdd": -0.2974,
-      "s_calmar": 0.21,
-      "cap_final": 261938,
+      "s_total": 0.688,
+      "s_maxdd": -0.334,
+      "s_calmar": 0.1,
+      "cap_final": 168819,
       "ok": true
      },
      "equity": {
@@ -1762,7 +2095,118 @@
       "cagr": 0.038,
       "withdraw_rate": 0.0228,
       "withdraw_month": 190,
-      "maxdd": -0.0803
+      "maxdd": -0.0803,
+      "withdraw_sim": {
+       "tasas": [
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "5a",
+         "pct_preserva": 0.866,
+         "pct_semiruina": 0.0,
+         "peor_final": 95310,
+         "peor_minimo": 89106,
+         "bh_pct_preserva": 0.784,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 80898,
+         "bh_peor_minimo": 74857
+        },
+        {
+         "rate": 0.02,
+         "usd_mes": 167,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 123385,
+         "peor_minimo": 91218,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 125676,
+         "bh_peor_minimo": 72418
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "5a",
+         "pct_preserva": 0.67,
+         "pct_semiruina": 0.0,
+         "peor_final": 90189,
+         "peor_minimo": 87015,
+         "bh_pct_preserva": 0.619,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 76639,
+         "bh_peor_minimo": 72282
+        },
+        {
+         "rate": 0.03,
+         "usd_mes": 250,
+         "horizonte": "10a",
+         "pct_preserva": 1.0,
+         "pct_semiruina": 0.0,
+         "peor_final": 110498,
+         "peor_minimo": 86639,
+         "bh_pct_preserva": 1.0,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 111653,
+         "bh_peor_minimo": 67513
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "5a",
+         "pct_preserva": 0.536,
+         "pct_semiruina": 0.0,
+         "peor_final": 85069,
+         "peor_minimo": 84924,
+         "bh_pct_preserva": 0.515,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 72380,
+         "bh_peor_minimo": 68165
+        },
+        {
+         "rate": 0.04,
+         "usd_mes": 333,
+         "horizonte": "10a",
+         "pct_preserva": 0.892,
+         "pct_semiruina": 0.0,
+         "peor_final": 97506,
+         "peor_minimo": 80292,
+         "bh_pct_preserva": 0.892,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 97595,
+         "bh_peor_minimo": 62608
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "5a",
+         "pct_preserva": 0.515,
+         "pct_semiruina": 0.0,
+         "peor_final": 79886,
+         "peor_minimo": 79886,
+         "bh_pct_preserva": 0.515,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 68070,
+         "bh_peor_minimo": 63998
+        },
+        {
+         "rate": 0.05,
+         "usd_mes": 417,
+         "horizonte": "10a",
+         "pct_preserva": 0.054,
+         "pct_semiruina": 0.0,
+         "peor_final": 84265,
+         "peor_minimo": 73868,
+         "bh_pct_preserva": 0.135,
+         "bh_pct_semiruina": 0.0,
+         "bh_peor_final": 83368,
+         "bh_peor_minimo": 57644
+        }
+       ],
+       "retiro_max_seguro": 875,
+       "retiro_max_seguro_bh": 675,
+       "horizonte_seguro": "5a"
+      }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía + Tendencia MA200·Refugio risk-off",
      "periodo": "2012 → 2025",
@@ -1813,10 +2257,10 @@
       "en_efectivo": 70761
      },
      "lev2": {
-      "s_total": 2.066,
-      "s_maxdd": -0.1566,
-      "s_calmar": 0.47,
-      "cap_final": 306580,
+      "s_total": 1.018,
+      "s_maxdd": -0.206,
+      "s_calmar": 0.22,
+      "cap_final": 201847,
       "ok": true
      },
      "equity": {
@@ -2394,10 +2838,10 @@
       "en_efectivo": 79148
      },
      "lev2": {
-      "s_total": 2.486,
-      "s_maxdd": -0.3912,
-      "s_calmar": 0.37,
-      "cap_final": 348608,
+      "s_total": 1.621,
+      "s_maxdd": -0.4099,
+      "s_calmar": 0.27,
+      "cap_final": 262105,
       "ok": true
      },
      "equity": {
@@ -2775,10 +3219,10 @@
       "en_efectivo": 42764
      },
      "lev2": {
-      "s_total": 2.389,
-      "s_maxdd": -0.5132,
-      "s_calmar": 0.16,
-      "cap_final": 338939,
+      "s_total": 1.004,
+      "s_maxdd": -0.5223,
+      "s_calmar": 0.09,
+      "cap_final": 200401,
       "ok": false
      },
      "equity": {
@@ -3293,10 +3737,10 @@
       "en_efectivo": 131801
      },
      "lev2": {
-      "s_total": 10.176,
-      "s_maxdd": -0.2996,
-      "s_calmar": 0.55,
-      "cap_final": 1117603,
+      "s_total": 5.543,
+      "s_maxdd": -0.3207,
+      "s_calmar": 0.4,
+      "cap_final": 654301,
       "ok": true
      },
      "filters": [
@@ -3830,10 +4274,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 8.972,
-      "s_maxdd": -0.3316,
-      "s_calmar": 0.47,
-      "cap_final": 997201,
+      "s_total": 4.67,
+      "s_maxdd": -0.358,
+      "s_calmar": 0.33,
+      "cap_final": 567013,
       "ok": false
      },
      "filters": [
@@ -4367,10 +4811,10 @@
       "en_efectivo": 87245
      },
      "lev2": {
-      "s_total": 1.712,
-      "s_maxdd": -0.3634,
-      "s_calmar": 0.18,
-      "cap_final": 271181,
+      "s_total": 0.799,
+      "s_maxdd": -0.3916,
+      "s_calmar": 0.1,
+      "cap_final": 179857,
       "ok": false
      },
      "filters": [
@@ -4904,10 +5348,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 10.176,
-      "s_maxdd": -0.4869,
-      "s_calmar": 0.34,
-      "cap_final": 1117559,
+      "s_total": 5.32,
+      "s_maxdd": -0.4886,
+      "s_calmar": 0.25,
+      "cap_final": 632048,
       "ok": false
      },
      "filters": [
@@ -5441,10 +5885,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": -0.018,
-      "s_maxdd": -0.2944,
-      "s_calmar": -0.0,
-      "cap_final": 98220,
+      "s_total": -0.111,
+      "s_maxdd": -0.3196,
+      "s_calmar": -0.02,
+      "cap_final": 88928,
       "ok": true
      },
      "filters": [
@@ -5997,11 +6441,11 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.737,
-      "s_maxdd": -0.3884,
-      "s_calmar": 0.1,
-      "cap_final": 173657,
-      "ok": true
+      "s_total": -0.009,
+      "s_maxdd": -0.4611,
+      "s_calmar": -0.0,
+      "cap_final": 99134,
+      "ok": false
      },
      "filters": [
       {
@@ -6519,10 +6963,10 @@
       "en_efectivo": 60107
      },
      "lev2": {
-      "s_total": 0.288,
-      "s_maxdd": -0.4112,
-      "s_calmar": 0.04,
-      "cap_final": 128790,
+      "s_total": -0.181,
+      "s_maxdd": -0.4984,
+      "s_calmar": -0.03,
+      "cap_final": 81937,
       "ok": false
      },
      "filters": [
@@ -7041,10 +7485,10 @@
       "en_efectivo": 39295
      },
      "lev2": {
-      "s_total": -0.422,
-      "s_maxdd": -0.5207,
-      "s_calmar": -0.07,
-      "cap_final": 57781,
+      "s_total": -0.57,
+      "s_maxdd": -0.6268,
+      "s_calmar": -0.09,
+      "cap_final": 43018,
       "ok": false
      },
      "filters": [
@@ -7584,10 +8028,10 @@
       "en_efectivo": 42012
      },
      "lev2": {
-      "s_total": 3.672,
-      "s_maxdd": -0.2772,
-      "s_calmar": 0.37,
-      "cap_final": 467188,
+      "s_total": 1.679,
+      "s_maxdd": -0.2985,
+      "s_calmar": 0.22,
+      "cap_final": 267905,
       "ok": true
      },
      "filters": [
@@ -8121,11 +8565,11 @@
       "en_efectivo": 52194
      },
      "lev2": {
-      "s_total": 2.856,
-      "s_maxdd": -0.3275,
-      "s_calmar": 0.27,
-      "cap_final": 385578,
-      "ok": true
+      "s_total": 1.312,
+      "s_maxdd": -0.3712,
+      "s_calmar": 0.15,
+      "cap_final": 231153,
+      "ok": false
      },
      "filters": [
       {
@@ -8658,11 +9102,11 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 3.154,
-      "s_maxdd": -0.3542,
-      "s_calmar": 0.27,
-      "cap_final": 415431,
-      "ok": true
+      "s_total": 1.474,
+      "s_maxdd": -0.4114,
+      "s_calmar": 0.14,
+      "cap_final": 247411,
+      "ok": false
      },
      "filters": [
       {
@@ -9195,10 +9639,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 4.206,
-      "s_maxdd": -0.4198,
-      "s_calmar": 0.26,
-      "cap_final": 520573,
+      "s_total": 1.969,
+      "s_maxdd": -0.4725,
+      "s_calmar": 0.15,
+      "cap_final": 296917,
       "ok": false
      },
      "filters": [
@@ -9751,10 +10195,10 @@
       "en_efectivo": 251648
      },
      "lev2": {
-      "s_total": 3.196,
-      "s_maxdd": -0.6606,
-      "s_calmar": 0.14,
-      "cap_final": 419601,
+      "s_total": 2.193,
+      "s_maxdd": -0.6755,
+      "s_calmar": 0.11,
+      "cap_final": 319250,
       "ok": true
      },
      "filters": [
@@ -10288,10 +10732,10 @@
       "en_efectivo": 94165
      },
      "lev2": {
-      "s_total": -0.492,
-      "s_maxdd": -0.8281,
-      "s_calmar": -0.05,
-      "cap_final": 50764,
+      "s_total": -0.64,
+      "s_maxdd": -0.8602,
+      "s_calmar": -0.07,
+      "cap_final": 35954,
       "ok": true
      },
      "filters": [
@@ -10825,10 +11269,10 @@
       "en_efectivo": 158322
      },
      "lev2": {
-      "s_total": 0.437,
-      "s_maxdd": -0.7418,
-      "s_calmar": 0.03,
-      "cap_final": 143707,
+      "s_total": 0.026,
+      "s_maxdd": -0.7671,
+      "s_calmar": 0.0,
+      "cap_final": 102642,
       "ok": true
      },
      "filters": [
@@ -11381,10 +11825,10 @@
       "en_efectivo": 65372
      },
      "lev2": {
-      "s_total": 0.352,
-      "s_maxdd": -0.5918,
-      "s_calmar": 0.04,
-      "cap_final": 135224,
+      "s_total": -0.07,
+      "s_maxdd": -0.6425,
+      "s_calmar": -0.01,
+      "cap_final": 93017,
       "ok": false
      },
      "filters": [
@@ -11810,10 +12254,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.362,
-      "s_maxdd": -0.4558,
-      "s_calmar": 0.06,
-      "cap_final": 136231,
+      "s_total": -0.05,
+      "s_maxdd": -0.5133,
+      "s_calmar": -0.01,
+      "cap_final": 95025,
       "ok": false
      },
      "filters": [
@@ -12260,10 +12704,10 @@
       "en_efectivo": 92587
      },
      "lev2": {
-      "s_total": -0.149,
-      "s_maxdd": -0.2285,
-      "s_calmar": -0.03,
-      "cap_final": 85141,
+      "s_total": -0.255,
+      "s_maxdd": -0.2868,
+      "s_calmar": -0.04,
+      "cap_final": 74512,
       "ok": true
      },
      "filters": [
@@ -12977,10 +13421,10 @@
       "en_efectivo": 21413
      },
      "lev2": {
-      "s_total": -0.601,
-      "s_maxdd": -0.6311,
-      "s_calmar": -0.06,
-      "cap_final": 39939,
+      "s_total": -0.761,
+      "s_maxdd": -0.7728,
+      "s_calmar": -0.08,
+      "cap_final": 23888,
       "ok": false
      },
      "filters": [
@@ -13714,10 +14158,10 @@
       "en_efectivo": 102936
      },
      "lev2": {
-      "s_total": 0.047,
-      "s_maxdd": -0.1274,
-      "s_calmar": 0.02,
-      "cap_final": 104725,
+      "s_total": -0.087,
+      "s_maxdd": -0.1556,
+      "s_calmar": -0.03,
+      "cap_final": 91250,
       "ok": true
      },
      "filters": [
@@ -14431,10 +14875,10 @@
       "en_efectivo": 26421
      },
      "lev2": {
-      "s_total": -0.405,
-      "s_maxdd": -0.5277,
-      "s_calmar": -0.04,
-      "cap_final": 59525,
+      "s_total": -0.648,
+      "s_maxdd": -0.6705,
+      "s_calmar": -0.07,
+      "cap_final": 35187,
       "ok": false
      },
      "filters": [
@@ -15172,10 +15616,10 @@
       "en_efectivo": 58246
      },
      "lev2": {
-      "s_total": 2.74,
-      "s_maxdd": -0.2837,
-      "s_calmar": 0.29,
-      "cap_final": 374040,
+      "s_total": 1.337,
+      "s_maxdd": -0.3192,
+      "s_calmar": 0.17,
+      "cap_final": 233669,
       "ok": true
      },
      "filters": [
@@ -15709,10 +16153,10 @@
       "en_efectivo": 44823
      },
      "lev2": {
-      "s_total": 1.793,
-      "s_maxdd": -0.3673,
-      "s_calmar": 0.17,
-      "cap_final": 279332,
+      "s_total": 0.679,
+      "s_maxdd": -0.3915,
+      "s_calmar": 0.08,
+      "cap_final": 167921,
       "ok": true
      },
      "filters": [
@@ -16267,10 +16711,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.432,
-      "s_maxdd": -0.3882,
-      "s_calmar": 0.04,
-      "cap_final": 143205,
+      "s_total": -0.22,
+      "s_maxdd": -0.4183,
+      "s_calmar": -0.02,
+      "cap_final": 77962,
       "ok": false
      },
      "filters": [
@@ -16984,10 +17428,10 @@
       "en_efectivo": 16166
      },
      "lev2": {
-      "s_total": 1.075,
-      "s_maxdd": -0.2218,
-      "s_calmar": 0.14,
-      "cap_final": 207494,
+      "s_total": -0.217,
+      "s_maxdd": -0.4186,
+      "s_calmar": -0.02,
+      "cap_final": 78334,
       "ok": false
      },
      "filters": [
@@ -17722,10 +18166,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 2.539,
-      "s_maxdd": -0.8958,
-      "s_calmar": 0.15,
-      "cap_final": 353935,
+      "s_total": 1.694,
+      "s_maxdd": -0.8992,
+      "s_calmar": 0.12,
+      "cap_final": 269416,
       "ok": false
      },
      "filters": [
@@ -18043,10 +18487,10 @@
       "en_efectivo": 138981
      },
      "lev2": {
-      "s_total": 1.604,
-      "s_maxdd": -0.4681,
-      "s_calmar": 0.22,
-      "cap_final": 260361,
+      "s_total": 1.331,
+      "s_maxdd": -0.4729,
+      "s_calmar": 0.19,
+      "cap_final": 233071,
       "ok": true
      },
      "filters": [
@@ -18364,10 +18808,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 1.002,
-      "s_maxdd": -0.8876,
-      "s_calmar": 0.08,
-      "cap_final": 200218,
+      "s_total": 0.463,
+      "s_maxdd": -0.8886,
+      "s_calmar": 0.04,
+      "cap_final": 146290,
       "ok": false
      },
      "filters": [
@@ -18706,10 +19150,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.247,
-      "s_maxdd": -0.3558,
-      "s_calmar": 0.03,
-      "cap_final": 124678,
+      "s_total": -0.241,
+      "s_maxdd": -0.3764,
+      "s_calmar": -0.04,
+      "cap_final": 75935,
       "ok": false
      },
      "filters": [
@@ -19315,10 +19759,10 @@
       "en_efectivo": 65960
      },
      "lev2": {
-      "s_total": -0.081,
-      "s_maxdd": -0.3932,
-      "s_calmar": -0.01,
-      "cap_final": 91885,
+      "s_total": -0.427,
+      "s_maxdd": -0.4783,
+      "s_calmar": -0.06,
+      "cap_final": 57292,
       "ok": false
      },
      "filters": [
@@ -19944,11 +20388,11 @@
       "en_efectivo": 65745
      },
      "lev2": {
-      "s_total": 1.148,
-      "s_maxdd": -0.3324,
-      "s_calmar": 0.16,
-      "cap_final": 214810,
-      "ok": true
+      "s_total": 0.335,
+      "s_maxdd": -0.3664,
+      "s_calmar": 0.05,
+      "cap_final": 133488,
+      "ok": false
      },
      "filters": [
       {
@@ -20445,10 +20889,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.646,
-      "s_maxdd": -0.3911,
-      "s_calmar": 0.09,
-      "cap_final": 164617,
+      "s_total": 0.086,
+      "s_maxdd": -0.4766,
+      "s_calmar": 0.01,
+      "cap_final": 108591,
       "ok": false
      },
      "filters": [
@@ -20946,10 +21390,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": 0.476,
-      "s_maxdd": -0.3598,
-      "s_calmar": 0.07,
-      "cap_final": 147600,
+      "s_total": -0.042,
+      "s_maxdd": -0.4419,
+      "s_calmar": -0.01,
+      "cap_final": 95839,
       "ok": false
      },
      "filters": [
@@ -21447,10 +21891,10 @@
       "en_efectivo": 67984
      },
      "lev2": {
-      "s_total": -0.027,
-      "s_maxdd": -0.3905,
-      "s_calmar": -0.0,
-      "cap_final": 97347,
+      "s_total": -0.266,
+      "s_maxdd": -0.4622,
+      "s_calmar": -0.05,
+      "cap_final": 73415,
       "ok": false
      },
      "filters": [
@@ -21968,10 +22412,10 @@
       "en_efectivo": 86642
      },
      "lev2": {
-      "s_total": -0.259,
-      "s_maxdd": -0.4254,
-      "s_calmar": -0.08,
-      "cap_final": 74085,
+      "s_total": -0.379,
+      "s_maxdd": -0.4769,
+      "s_calmar": -0.12,
+      "cap_final": 62061,
       "ok": false
      },
      "filters": [
@@ -22289,10 +22733,10 @@
       "en_efectivo": 0
      },
      "lev2": {
-      "s_total": -0.467,
-      "s_maxdd": -0.6571,
-      "s_calmar": -0.11,
-      "cap_final": 53299,
+      "s_total": -0.654,
+      "s_maxdd": -0.7441,
+      "s_calmar": -0.16,
+      "cap_final": 34607,
       "ok": false
      },
      "filters": [
@@ -22591,32 +23035,119 @@
   {
    "name": "Vol-targeting 10% · Índices global",
    "x1": 0.0,
-   "x3": 0.197,
-   "x5": 0.046
+   "x3": 0.143,
+   "x5": 0.031
   },
   {
    "name": "Tendencia MA200 · Índices global",
    "x1": 0.013,
-   "x3": 0.174,
-   "x5": 0.049
+   "x3": 0.128,
+   "x5": 0.026
   },
   {
    "name": "Tendencia MA200 · Índices US",
    "x1": 0.059,
-   "x3": 0.138,
+   "x3": 0.136,
    "x5": 0.02
   },
   {
    "name": "TSMOM 12m · Índices global",
    "x1": 0.005,
-   "x3": 0.176,
-   "x5": 0.061
+   "x3": 0.146,
+   "x5": 0.033
   },
   {
    "name": "Cruce 50/200 · Índices global",
    "x1": 0.013,
-   "x3": 0.174,
-   "x5": 0.054
+   "x3": 0.141,
+   "x5": 0.018
   }
- ]
+ ],
+ "top5": [
+  {
+   "rank": 1,
+   "id": "voltarget_10-U1",
+   "name": "Vol-targeting 10%",
+   "ukey": "U1",
+   "ulabel": "Índices US",
+   "verdict": "viable",
+   "calmar": 0.54,
+   "maxdd": -16,
+   "maxdd_bh": -33,
+   "cagr": 8.5,
+   "also_viable_in": [
+    "Índices global",
+    "Índices Asia-Pac",
+    "Cripto"
+   ]
+  },
+  {
+   "rank": 2,
+   "id": "port_allweather",
+   "name": "Cartera all-weather (4 patas)",
+   "ukey": "UP",
+   "ulabel": "Portafolios combinados",
+   "verdict": "viable",
+   "calmar": 0.47,
+   "maxdd": -8,
+   "maxdd_bh": -28,
+   "cagr": 3.8,
+   "also_viable_in": [
+    "Portafolios combinados",
+    "Portafolios combinados",
+    "Portafolios combinados"
+   ]
+  },
+  {
+   "rank": 3,
+   "id": "port_3mkt",
+   "name": "Cartera 3 mercados",
+   "ukey": "UP",
+   "ulabel": "Portafolios combinados",
+   "verdict": "viable",
+   "calmar": 0.4,
+   "maxdd": -12,
+   "maxdd_bh": -36,
+   "cagr": 4.7,
+   "also_viable_in": [
+    "Portafolios combinados",
+    "Portafolios combinados",
+    "Portafolios combinados"
+   ]
+  },
+  {
+   "rank": 4,
+   "id": "port_idx_world",
+   "name": "Cartera índices del mundo",
+   "ukey": "UP",
+   "ulabel": "Portafolios combinados",
+   "verdict": "viable",
+   "calmar": 0.33,
+   "maxdd": -15,
+   "maxdd_bh": -35,
+   "cagr": 4.9,
+   "also_viable_in": [
+    "Portafolios combinados",
+    "Portafolios combinados",
+    "Portafolios combinados"
+   ]
+  },
+  {
+   "rank": 5,
+   "id": "trend_ma200-U1",
+   "name": "Tendencia MA200",
+   "ukey": "U1",
+   "ulabel": "Índices US",
+   "verdict": "candidata",
+   "calmar": 0.47,
+   "maxdd": -18,
+   "maxdd_bh": -33,
+   "cagr": 8.3,
+   "also_viable_in": [
+    "Índices global",
+    "Cripto"
+   ]
+  }
+ ],
+ "fin_note": "USD rate + 3% spread broker"
 }

@@ -94,8 +94,18 @@ export type ForjaLev2 = {
 export type ForjaLeg = {
   name: string; weight: number; usd: number; instruments: string; expo_actual: number; rule: string;
 };
+export type ForjaWithdrawTasa = {
+  rate: number; usd_mes: number; horizonte: string;
+  pct_preserva: number; pct_semiruina: number; peor_final: number; peor_minimo: number;
+  bh_pct_preserva: number; bh_pct_semiruina: number; bh_peor_final: number; bh_peor_minimo: number;
+};
+export type ForjaWithdrawSim = {
+  tasas: ForjaWithdrawTasa[];
+  retiro_max_seguro: number; retiro_max_seguro_bh: number; horizonte_seguro: string;
+};
 export type ForjaOps = {
   capital: number; legs: ForjaLeg[]; cagr: number; withdraw_rate: number; withdraw_month: number; maxdd: number;
+  withdraw_sim?: ForjaWithdrawSim;
 };
 export type ForjaStrategy = {
   id: string;
@@ -126,7 +136,12 @@ export type ForjaUniverse = {
   strategies: ForjaStrategy[];
 };
 export type ForjaChallenge = { name: string; x1: number; x3: number; x5: number };
-export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[] };
+export type ForjaTop5 = {
+  rank: number; id: string; name: string; ukey: string; ulabel: string;
+  verdict: string; calmar: number; maxdd: number; maxdd_bh: number; cagr: number;
+  also_viable_in: string[];
+};
+export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[]; top5?: ForjaTop5[]; fin_note?: string };
 export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", universes: [] });
 
 export const getLab = () =>
