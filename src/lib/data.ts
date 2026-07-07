@@ -101,7 +101,9 @@ export type ForjaWithdrawTasa = {
 };
 export type ForjaWithdrawSim = {
   tasas: ForjaWithdrawTasa[];
-  retiro_max_seguro: number; retiro_max_seguro_bh: number; horizonte_seguro: string;
+  retiro_perpetuo: number; retiro_perpetuo_bh: number;
+  retiro_max_consumo: number; retiro_max_consumo_bh: number;
+  horizonte_seguro: string;
 };
 export type ForjaOps = {
   capital: number; legs: ForjaLeg[]; cagr: number; withdraw_rate: number; withdraw_month: number; maxdd: number;
@@ -135,7 +137,7 @@ export type ForjaUniverse = {
   n_candidata: number;
   strategies: ForjaStrategy[];
 };
-export type ForjaChallenge = { name: string; x1: number; x3: number; x5: number };
+export type ForjaChallenge = { name: string; x1: number; x2: number; x3: number; x5: number };
 export type ForjaTop5 = {
   rank: number; id: string; name: string; ukey: string; ulabel: string;
   verdict: string; calmar: number; maxdd: number; maxdd_bh: number; cagr: number;

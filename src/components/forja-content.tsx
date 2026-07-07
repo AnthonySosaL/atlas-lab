@@ -177,9 +177,13 @@ function StrategyCard({ s }: { s: ForjaStrategy }) {
               <div className="mb-1.5 flex items-center gap-1 text-xs font-medium">
                 <Info className="size-3 text-primary" /> {t("forja.withdrawSim")}
               </div>
+              <div className="mb-1 text-[10px] text-muted-foreground">
+                {t("forja.withdrawPerpetuo")}: <span className="font-bold text-primary">${s.ops.withdraw_sim.retiro_perpetuo.toLocaleString("en-US")}{t("forja.withdrawPerMonth")}</span>
+                {" "}(B&H: ${s.ops.withdraw_sim.retiro_perpetuo_bh.toLocaleString("en-US")}{t("forja.withdrawPerMonth")})
+              </div>
               <div className="mb-2 text-[10px] text-muted-foreground">
-                {t("forja.withdrawSafe")}: <span className="font-bold text-primary">${s.ops.withdraw_sim.retiro_max_seguro.toLocaleString("en-US")}{t("forja.withdrawPerMonth")}</span>
-                {" "}(B&H: ${s.ops.withdraw_sim.retiro_max_seguro_bh.toLocaleString("en-US")}{t("forja.withdrawPerMonth")})
+                {t("forja.withdrawConsumo")}: <span className="font-medium">${s.ops.withdraw_sim.retiro_max_consumo.toLocaleString("en-US")}{t("forja.withdrawPerMonth")}</span>
+                {" "}(B&H: ${s.ops.withdraw_sim.retiro_max_consumo_bh.toLocaleString("en-US")}{t("forja.withdrawPerMonth")})
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-[10px]">
@@ -561,6 +565,7 @@ export function ForjaContent({ data }: { data: ForjaData }) {
                 <tr className="border-b">
                   <th className="py-1.5 pr-2 text-left font-medium">{t("forja.strat")}</th>
                   <th className="px-2 text-right font-medium">1×</th>
+                  <th className="px-2 text-right font-medium">2×</th>
                   <th className="px-2 text-right font-medium">3×</th>
                   <th className="pl-2 text-right font-medium">5×</th>
                 </tr>
@@ -570,6 +575,7 @@ export function ForjaContent({ data }: { data: ForjaData }) {
                   <tr key={i} className="border-b border-border/50">
                     <td className="py-1.5 pr-2">{c.name}</td>
                     <td className="px-2 text-right tabular-nums">{(c.x1 * 100).toFixed(1)}%</td>
+                    <td className="px-2 text-right tabular-nums text-muted-foreground">{((c.x2 ?? 0) * 100).toFixed(1)}%</td>
                     <td className="px-2 text-right tabular-nums font-medium text-primary">{(c.x3 * 100).toFixed(1)}%</td>
                     <td className="pl-2 text-right tabular-nums">{(c.x5 * 100).toFixed(1)}%</td>
                   </tr>
