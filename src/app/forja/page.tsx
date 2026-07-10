@@ -1,4 +1,4 @@
-import { getForja } from "@/lib/data";
+import { getForja, getForjaForward } from "@/lib/data";
 import { ForjaContent } from "@/components/forja-content";
 import { Tr } from "@/lib/i18n";
 
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default async function ForjaPage() {
-  const data = await getForja();
+  const [data, forward] = await Promise.all([getForja(), getForjaForward()]);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
@@ -25,7 +25,7 @@ export default async function ForjaPage() {
         <Tr k="forja.subtitle" />
       </p>
 
-      <ForjaContent data={data} />
+      <ForjaContent data={data} forward={forward} />
     </div>
   );
 }

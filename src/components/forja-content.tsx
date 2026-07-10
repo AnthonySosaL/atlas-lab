@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet, Trophy, Info } from "lucide-react";
-import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5 } from "@/lib/data";
+import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5, ForjaOOS, ForjaForward } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -388,6 +388,116 @@ function Top5Section({ items, onPick }: { items: ForjaTop5[]; onPick: (ukey: str
 }
 
 // ---------------------------------------------------------------------------
+// OOS 2025-26: datos jamás vistos
+// ---------------------------------------------------------------------------
+function OOS2025Section({ items }: { items: ForjaOOS[] }) {
+  const { t } = useI18n();
+  return (
+    <Card className="p-5">
+      <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
+        <ShieldCheck className="size-4 text-primary" /> {t("forja.oos2025")}
+      </div>
+      <p className="mb-3 text-[11px] text-muted-foreground">{t("forja.oos2025note")}</p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead className="text-muted-foreground">
+            <tr className="border-b">
+              <th className="py-1.5 pr-2 text-left font-medium">{t("forja.strat")}</th>
+              <th className="px-1 text-right font-medium">{t("forja.return")}</th>
+              <th className="px-1 text-right font-medium">MaxDD</th>
+              <th className="px-1 text-right font-medium">Calmar</th>
+              <th className="px-1 text-right font-medium">B&H ret</th>
+              <th className="px-1 text-right font-medium">B&H DD</th>
+              <th className="px-1 text-right font-medium">{t("forja.oos2025protected")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((o) => (
+              <tr key={o.id} className="border-b border-border/50">
+                <td className="py-1.5 pr-2">{o.name}</td>
+                <td className="px-1 text-right tabular-nums">{(o.ret * 100).toFixed(1)}%</td>
+                <td className="px-1 text-right tabular-nums text-[var(--loss)]">{(o.maxdd * 100).toFixed(0)}%</td>
+                <td className="px-1 text-right tabular-nums">{o.calmar.toFixed(2)}</td>
+                <td className="px-1 text-right tabular-nums text-muted-foreground">{(o.bh_ret * 100).toFixed(1)}%</td>
+                <td className="px-1 text-right tabular-nums text-muted-foreground">{(o.bh_maxdd * 100).toFixed(0)}%</td>
+                <td className={cn("px-1 text-right font-medium", o.protected ? "text-[var(--gain)]" : "text-[var(--loss)]")}>
+                  {o.protected ? "✓" : "✕"} {o.days}d
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Card>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Forward test (paper)
+// ---------------------------------------------------------------------------
+function ForwardSection({ data }: { data: ForjaForward }) {
+  const { t } = useI18n();
+  const portfolios = Object.values(data.portfolios);
+  if (portfolios.length === 0 && data.baseline) {
+    return (
+      <Card className="p-5">
+        <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
+          <Target className="size-4 text-primary" /> {t("forja.forward")}
+        </div>
+        <p className="text-xs text-muted-foreground">{t("forja.forwardStarted").replace("{date}", data.baseline.started)}</p>
+        <Badge variant="outline" className="mt-2">paper — {t("forja.forwardPaper")}</Badge>
+      </Card>
+    );
+  }
+  return (
+    <Card className="p-5">
+      <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
+        <Target className="size-4 text-primary" /> {t("forja.forward")}
+      </div>
+      <p className="mb-3 text-[11px] text-muted-foreground">{t("forja.forwardNote")}</p>
+      <div className="space-y-3">
+        {portfolios.map((pf) => (
+          <div key={pf.name} className="rounded-md border p-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-medium">{pf.name}</span>
+              <Badge variant="outline">paper — {t("forja.forwardPaper")}</Badge>
+            </div>
+            <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
+              <div>
+                <div className="text-muted-foreground">NAV</div>
+                <div className="font-bold tabular-nums text-primary">{pf.navs.length > 0 ? pf.navs[pf.navs.length - 1].toFixed(1) : "—"}</div>
+              </div>
+              <div>
+                <div className="text-muted-foreground">{t("forja.forwardDays")}</div>
+                <div className="font-bold tabular-nums">{pf.days}</div>
+              </div>
+              <div>
+                <div className="text-muted-foreground">{t("forja.exposure")}</div>
+                <div className="font-bold tabular-nums">{(pf.expo * 100).toFixed(0)}%</div>
+              </div>
+            </div>
+            {pf.navs.length > 5 && (
+              <div className="mt-2">
+                <svg viewBox="0 0 300 60" className="w-full" role="img">
+                  {(() => {
+                    const n = pf.navs;
+                    const mn = Math.min(...n); const mx = Math.max(...n);
+                    const r = mx - mn || 1;
+                    const pts = n.map((v, i) => `${(i / (n.length - 1)) * 290 + 5},${55 - ((v - mn) / r) * 45}`).join(" ");
+                    return <polyline points={pts} fill="none" className="stroke-primary" strokeWidth="1.5" />;
+                  })()}
+                  <line x1={5} y1={55 - ((100 - Math.min(...pf.navs)) / (Math.max(...pf.navs) - Math.min(...pf.navs) || 1)) * 45} x2={295} y2={55 - ((100 - Math.min(...pf.navs)) / (Math.max(...pf.navs) - Math.min(...pf.navs) || 1)) * 45} className="stroke-muted-foreground" strokeDasharray="3 3" strokeWidth="0.5" />
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Nivel 0: grilla de universos (estado + entrada)
 // ---------------------------------------------------------------------------
 function UniverseGrid({ universes, onPick }: { universes: ForjaUniverse[]; onPick: (k: string) => void }) {
@@ -511,7 +621,7 @@ function ExperimentView({ u, s, onBack }: { u: ForjaUniverse; s: ForjaStrategy; 
 // ---------------------------------------------------------------------------
 // Contenedor: routing por hash (#U1 , #U1/<idExperimento>) -> "atrás" funciona
 // ---------------------------------------------------------------------------
-export function ForjaContent({ data }: { data: ForjaData }) {
+export function ForjaContent({ data, forward }: { data: ForjaData; forward?: ForjaForward | null }) {
   const { t } = useI18n();
   const [route, setRoute] = React.useState<{ u?: string; s?: string }>({});
 
@@ -549,6 +659,12 @@ export function ForjaContent({ data }: { data: ForjaData }) {
       <UniverseMap onPick={(k) => go(k)} />
       {data.top5 && data.top5.length > 0 && (
         <Top5Section items={data.top5} onPick={(ukey, id) => go(`${ukey}/${id}`)} />
+      )}
+      {data.oos_2025 && data.oos_2025.length > 0 && (
+        <OOS2025Section items={data.oos_2025} />
+      )}
+      {forward && forward.baseline && (
+        <ForwardSection data={forward} />
       )}
       <UniverseGrid universes={data.universes} onPick={(k) => go(k)} />
 

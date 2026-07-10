@@ -143,7 +143,20 @@ export type ForjaTop5 = {
   verdict: string; calmar: number; maxdd: number; maxdd_bh: number; cagr: number;
   also_viable_in: string[];
 };
-export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[]; top5?: ForjaTop5[]; fin_note?: string };
+export type ForjaOOS = {
+  id: string; name: string; ret: number; sharpe: number; maxdd: number; calmar: number;
+  bh_ret: number; bh_maxdd: number; days: number; protected: boolean; period: string;
+};
+export type ForjaForwardPortfolio = {
+  name: string; dates: string[]; navs: number[]; days: number; expo: number;
+  positions: Record<string, number>;
+};
+export type ForjaForward = {
+  baseline: { started: string; note: string };
+  portfolios: Record<string, ForjaForwardPortfolio>;
+};
+export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[]; top5?: ForjaTop5[]; oos_2025?: ForjaOOS[]; fin_note?: string };
+export const getForjaForward = () => readJSON<ForjaForward | null>("forja_forward.json", null);
 export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", universes: [] });
 
 export const getLab = () =>

@@ -1,0 +1,49 @@
+{
+ "baseline": {
+  "started": "2026-07-10",
+  "portfolios": [
+   {
+    "id": "port_allweather",
+    "name": "Cartera all-weather (4 patas)",
+    "sleeves": [
+     [
+      "voltarget_10",
+      "U3"
+     ],
+     [
+      "tsmom_12m",
+      "U10"
+     ],
+     [
+      "donchian_50_25",
+      "U4"
+     ],
+     [
+      "trend_ma200",
+      "U8"
+     ]
+    ]
+   },
+   {
+    "id": "port_3mkt",
+    "name": "Cartera 3 mercados",
+    "sleeves": [
+     [
+      "voltarget_10",
+      "U3"
+     ],
+     [
+      "tsmom_12m",
+      "U10"
+     ],
+     [
+      "donchian_50_25",
+      "U4"
+     ]
+    ]
+   }
+  ],
+  "note": "Línea base congelada. Si la estrategia cambia, el reloj se reinicia."
+ },
+ "portfolios": {}
+}
