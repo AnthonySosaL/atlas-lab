@@ -153,6 +153,7 @@ export type ForjaForwardPortfolio = {
 };
 export type ForjaForward = {
   baseline: { started: string; note: string };
+  last_update: string | null;
   portfolios: Record<string, ForjaForwardPortfolio>;
 };
 export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[]; top5?: ForjaTop5[]; oos_2025?: ForjaOOS[]; fin_note?: string };
