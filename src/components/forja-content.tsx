@@ -458,6 +458,22 @@ function Heartbeat({ lastUpdate, baselineStarted }: { lastUpdate: string | null;
   );
 }
 
+function ForwardCriteria() {
+  const { t } = useI18n();
+  return (
+    <div className="mt-3 rounded-md border border-primary/30 bg-primary/5 p-3">
+      <div className="mb-1.5 text-xs font-semibold text-primary">{t("forja.forwardCriteriaTitle")}</div>
+      <p className="mb-1.5 text-[11px] text-muted-foreground">{t("forja.forwardCriteriaEval")}</p>
+      <ul className="space-y-1 text-[11px] text-muted-foreground">
+        <li>{t("forja.forwardC1")}</li>
+        <li>{t("forja.forwardC2")}</li>
+        <li>{t("forja.forwardC3")}</li>
+      </ul>
+      <p className="mt-2 text-[11px] font-medium text-foreground">{t("forja.forwardCriteriaRule")}</p>
+    </div>
+  );
+}
+
 function ForwardSection({ data }: { data: ForjaForward }) {
   const { t } = useI18n();
   const portfolios = Object.values(data.portfolios);
@@ -470,6 +486,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
         <p className="text-xs text-muted-foreground">{t("forja.forwardStarted").replace("{date}", data.baseline.started)}</p>
         <Badge variant="outline" className="mt-2">paper — {t("forja.forwardPaper")}</Badge>
         <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
+        <ForwardCriteria />
       </Card>
     );
   }
@@ -518,6 +535,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
         ))}
       </div>
       <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
+      <ForwardCriteria />
     </Card>
   );
 }
