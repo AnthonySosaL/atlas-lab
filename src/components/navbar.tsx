@@ -41,6 +41,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
+                onClick={() => { if (active && window.location.hash) window.location.hash = ""; }}
                 className={cn(
                   "relative px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
                   active && "text-foreground"
@@ -73,7 +74,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={() => { setOpen(false); if (pathname === l.href && window.location.hash) window.location.hash = ""; }}
                 className={cn(
                   "rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
                   pathname === l.href && "text-foreground"

@@ -677,7 +677,8 @@ export function ForjaContent({ data, forward }: { data: ForjaData; forward?: For
     };
     read();
     window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
+    window.addEventListener("popstate", read);
+    return () => { window.removeEventListener("hashchange", read); window.removeEventListener("popstate", read); };
   }, []);
 
   const go = (hash: string) => { window.location.hash = hash; };

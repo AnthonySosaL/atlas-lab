@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin, FileText, FlaskConical } from "lucide-react";
+import { Mail, MapPin, FileText, FlaskConical } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
-const EMAIL = "anthonysosa44@gmail.com";
-const PHONE = "+593 099 582 2812";
+const EMAIL = "canalautomatizadogpt@gmail.com";
 const GITHUB = "https://github.com/AnthonySosaL";
 const LINKEDIN = "https://www.linkedin.com/in/anthony-sosa-942475187/";
 const CV = "https://curricula-fawn.vercel.app/";
@@ -28,7 +27,6 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 const links = [
   { href: `mailto:${EMAIL}`, label: EMAIL, sub: "Email", Icon: Mail },
-  { href: `tel:${PHONE.replace(/\s/g, "")}`, label: PHONE, sub: "Teléfono", Icon: Phone },
   { href: GITHUB, label: "github.com/AnthonySosaL", sub: "GitHub", Icon: GithubIcon },
   { href: LINKEDIN, label: "anthony-sosa", sub: "LinkedIn", Icon: LinkedinIcon },
   { href: CV, label: "curricula-fawn.vercel.app", sub: "Currículum", Icon: FileText },
