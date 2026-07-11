@@ -1,12 +1,12 @@
 {
- "updated": "2026-07-10 11:43",
+ "updated": "2026-07-10 20:10",
  "universes": [
   {
    "key": "UP",
    "label": "Portafolios combinados",
    "assets": [],
    "instrument": "carteras equal-weight de mercados independientes",
-   "periodo": "2012 → 2026",
+   "periodo": "2012 → 2024",
    "relates": [
     "Combinan sleeves de universos DISJUNTOS para bajar el drawdown por diversificación"
    ],
@@ -27,7 +27,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "SP500 · NAS100 · DAX · FTSE100",
-        "expo_actual": 0.77,
+        "expo_actual": 0.82,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        },
        {
@@ -47,8 +47,8 @@
         "rule": "Largo al cerrar por encima del máximo de 50 días; sale al cerrar por debajo del mínimo de 25 días."
        }
       ],
-      "cagr": 0.0547,
-      "withdraw_rate": 0.0328,
+      "cagr": 0.0474,
+      "withdraw_rate": 0.0284,
       "withdraw_month": 175,
       "maxdd": -0.1173,
       "withdraw_sim": {
@@ -166,7 +166,7 @@
       }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía",
-     "periodo": "2012 → 2026",
+     "periodo": "2012 → 2024",
      "rationale": "Equal-weight de 3 mercados INDEPENDIENTES: vol-targeting en índices globales + momentum en cruces JPY + breakout en energía. Mercados poco correlacionados: cuando uno sufre, los otros amortiguan → menor drawdown que cualquiera por separado (diversificación, Markowitz).",
      "verdict": "viable",
      "npass": 5,
@@ -184,7 +184,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": true,
-       "detail": "0.47 vs 0.16 B&H (+184%)"
+       "detail": "0.40 vs 0.15 B&H (+174%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -198,26 +198,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0547,
+      "s_cagr": 0.0474,
       "s_maxdd": -0.1173,
-      "s_calmar": 0.47,
-      "s_total": 1.537,
-      "b_cagr": 0.0592,
+      "s_calmar": 0.4,
+      "s_total": 1.068,
+      "b_cagr": 0.0532,
       "b_maxdd": -0.3602,
-      "b_calmar": 0.16,
-      "b_total": 1.734,
+      "b_calmar": 0.15,
+      "b_total": 1.254,
       "expo_media": 0.59,
-      "expo_actual": 0.59,
+      "expo_actual": 0.61,
       "cap_inicial": 100000,
-      "cap_final": 253737,
-      "en_holdings": 149419,
-      "en_efectivo": 104318
+      "cap_final": 206786,
+      "en_holdings": 125287,
+      "en_efectivo": 81499
      },
      "lev2": {
-      "s_total": 2.55,
+      "s_total": 1.588,
       "s_maxdd": -0.2679,
-      "s_calmar": 0.28,
-      "cap_final": 354991,
+      "s_calmar": 0.23,
+      "cap_final": 258843,
       "ok": true
      },
      "equity": {
@@ -377,26 +377,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        0.9994,
@@ -554,26 +535,7 @@
        2.0648,
        2.0707,
        2.0722,
-       2.0679,
-       2.1048,
-       2.0891,
-       2.067,
-       2.0497,
-       2.0694,
-       2.0683,
-       2.1397,
-       2.0897,
-       2.1086,
-       2.1336,
-       2.1373,
-       2.1455,
-       2.1887,
-       2.2142,
-       2.615,
-       2.5924,
-       2.5443,
-       2.535,
-       2.5374
+       2.0679
       ],
       "bh": [
        1.0082,
@@ -731,26 +693,7 @@
        2.1986,
        2.2218,
        2.2226,
-       2.2537,
-       2.3067,
-       2.2681,
-       2.2498,
-       2.1527,
-       2.2317,
-       2.3157,
-       2.3898,
-       2.3621,
-       2.3846,
-       2.429,
-       2.4196,
-       2.421,
-       2.4989,
-       2.5434,
-       2.7239,
-       2.8919,
-       2.8534,
-       2.7117,
-       2.7338
+       2.2537
       ]
      },
      "orden": 0
@@ -767,7 +710,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "SP500 · NAS100",
-        "expo_actual": 0.74,
+        "expo_actual": 0.64,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        },
        {
@@ -775,7 +718,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "DAX · FTSE100",
-        "expo_actual": 0.79,
+        "expo_actual": 1.0,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        },
        {
@@ -783,12 +726,12 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "NIKKEI · HANGSENG · ASX200",
-        "expo_actual": 0.62,
+        "expo_actual": 0.57,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        }
       ],
-      "cagr": 0.0515,
-      "withdraw_rate": 0.0309,
+      "cagr": 0.0489,
+      "withdraw_rate": 0.0293,
       "withdraw_month": 150,
       "maxdd": -0.1469,
       "withdraw_sim": {
@@ -906,7 +849,7 @@
       }
      },
      "instrument": "Vol-targeting 10%·Índices US + Vol-targeting 10%·Índices Europa + Vol-targeting 10%·Índices Asia-Pac",
-     "periodo": "2012 → 2026",
+     "periodo": "2012 → 2024",
      "rationale": "Vol-targeting de índices en TRES regiones independientes: US + Europa + Asia-Pacífico. Misma estrategia (ya viable) repartida geográficamente para suavizar aún más los sustos regionales.",
      "verdict": "viable",
      "npass": 5,
@@ -924,7 +867,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": true,
-       "detail": "0.35 vs 0.25 B&H (+40%)"
+       "detail": "0.33 vs 0.23 B&H (+47%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -938,26 +881,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0515,
+      "s_cagr": 0.0489,
       "s_maxdd": -0.1469,
-      "s_calmar": 0.35,
-      "s_total": 1.338,
-      "b_cagr": 0.0867,
+      "s_calmar": 0.33,
+      "s_total": 1.049,
+      "b_cagr": 0.0782,
       "b_maxdd": -0.3458,
-      "b_calmar": 0.25,
-      "b_total": 3.086,
-      "expo_media": 0.74,
-      "expo_actual": 0.72,
+      "b_calmar": 0.23,
+      "b_total": 2.105,
+      "expo_media": 0.75,
+      "expo_actual": 0.74,
       "cap_inicial": 100000,
-      "cap_final": 233784,
-      "en_holdings": 167662,
-      "en_efectivo": 66122
+      "cap_final": 204918,
+      "en_holdings": 150829,
+      "en_efectivo": 54089
      },
      "lev2": {
-      "s_total": 1.626,
+      "s_total": 1.25,
       "s_maxdd": -0.2989,
-      "s_calmar": 0.2,
-      "cap_final": 262598,
+      "s_calmar": 0.19,
+      "cap_final": 225015,
       "ok": true
      },
      "equity": {
@@ -1112,26 +1055,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        1.0052,
@@ -1284,26 +1208,7 @@
        2.0232,
        2.0023,
        2.0546,
-       2.0492,
-       2.1256,
-       2.129,
-       2.07,
-       2.0014,
-       2.0495,
-       2.1061,
-       2.1426,
-       2.171,
-       2.2174,
-       2.2633,
-       2.2297,
-       2.2487,
-       2.296,
-       2.3296,
-       2.2267,
-       2.2951,
-       2.355,
-       2.3391,
-       2.3378
+       2.0492
       ],
       "bh": [
        1.0343,
@@ -1456,26 +1361,7 @@
        3.0633,
        3.03,
        3.1045,
-       3.1045,
-       3.2095,
-       3.2416,
-       3.1247,
-       3.1012,
-       3.261,
-       3.3717,
-       3.437,
-       3.5098,
-       3.6076,
-       3.7504,
-       3.7099,
-       3.7383,
-       3.8437,
-       3.9403,
-       3.6799,
-       3.9366,
-       4.0896,
-       4.0874,
-       4.0857
+       3.1045
       ]
      },
      "orden": 0
@@ -1492,7 +1378,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "SP500 · NAS100 · DAX · FTSE100",
-        "expo_actual": 0.63,
+        "expo_actual": 0.94,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Factor de escala congelado mensualmente."
        },
        {
@@ -1512,8 +1398,8 @@
         "rule": "Largo al cerrar por encima del máximo de 50 días; sale al cerrar por debajo del mínimo de 25 días."
        }
       ],
-      "cagr": 0.0662,
-      "withdraw_rate": 0.0397,
+      "cagr": 0.0276,
+      "withdraw_rate": 0.0165,
       "withdraw_month": 0,
       "maxdd": -0.1567,
       "withdraw_sim": {
@@ -1631,7 +1517,7 @@
       }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía",
-     "periodo": "2012 → 2026",
+     "periodo": "2012 → 2024",
      "rationale": "MISMA cartera 3 mercados con sizing mensual risk-parity: pesos entre patas ∝ 1/volatilidad 63d, recalculados al cierre de cada mes. El vol-target dentro de cada pata también se congela mensualmente. Objetivo: menor turnover y pesos adaptativos sin señales nuevas.",
      "verdict": "viable",
      "npass": 5,
@@ -1649,7 +1535,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": true,
-       "detail": "0.42 vs 0.16 B&H (+157%)"
+       "detail": "0.18 vs 0.15 B&H (+19%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -1663,26 +1549,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0662,
+      "s_cagr": 0.0276,
       "s_maxdd": -0.1567,
-      "s_calmar": 0.42,
-      "s_total": 2.068,
-      "b_cagr": 0.0592,
+      "s_calmar": 0.18,
+      "s_total": 0.532,
+      "b_cagr": 0.0532,
       "b_maxdd": -0.3602,
-      "b_calmar": 0.16,
-      "b_total": 1.734,
+      "b_calmar": 0.15,
+      "b_total": 1.254,
       "expo_media": 0.59,
-      "expo_actual": 0.54,
+      "expo_actual": 0.65,
       "cap_inicial": 100000,
-      "cap_final": 306829,
-      "en_holdings": 166736,
-      "en_efectivo": 140093
+      "cap_final": 153211,
+      "en_holdings": 99019,
+      "en_efectivo": 54192
      },
      "lev2": {
-      "s_total": 2.56,
+      "s_total": 0.236,
       "s_maxdd": -0.3619,
-      "s_calmar": 0.21,
-      "cap_final": 355982,
+      "s_calmar": 0.04,
+      "cap_final": 123599,
       "ok": false
      },
      "equity": {
@@ -1842,26 +1728,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        0.9994,
@@ -2019,26 +1886,7 @@
        1.5245,
        1.5321,
        1.5321,
-       1.5321,
-       1.542,
-       1.536,
-       1.5223,
-       1.5229,
-       1.5262,
-       1.5354,
-       1.5594,
-       1.5559,
-       1.5706,
-       1.5998,
-       1.5998,
-       1.5998,
-       1.6839,
-       1.702,
-       2.9945,
-       3.0425,
-       3.0719,
-       3.0608,
-       3.0683
+       1.5321
       ],
       "bh": [
        1.0082,
@@ -2196,26 +2044,7 @@
        2.1986,
        2.2218,
        2.2226,
-       2.2537,
-       2.3067,
-       2.2681,
-       2.2498,
-       2.1527,
-       2.2317,
-       2.3157,
-       2.3898,
-       2.3621,
-       2.3846,
-       2.429,
-       2.4196,
-       2.421,
-       2.4989,
-       2.5434,
-       2.7239,
-       2.8919,
-       2.8534,
-       2.7117,
-       2.7338
+       2.2537
       ]
      },
      "orden": 0
@@ -2232,7 +2061,7 @@
         "weight": 0.25,
         "usd": 25000,
         "instruments": "SP500 · NAS100 · DAX · FTSE100",
-        "expo_actual": 0.77,
+        "expo_actual": 0.82,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        },
        {
@@ -2256,12 +2085,12 @@
         "weight": 0.25,
         "usd": 25000,
         "instruments": "XAUUSD · USDJPY · USDCHF",
-        "expo_actual": 0.67,
+        "expo_actual": 1.0,
         "rule": "Largo mientras el precio cierre por encima de su media de 200 días; en efectivo si cae por debajo."
        }
       ],
-      "cagr": 0.0454,
-      "withdraw_rate": 0.0272,
+      "cagr": 0.0379,
+      "withdraw_rate": 0.0227,
       "withdraw_month": 125,
       "maxdd": -0.0803,
       "withdraw_sim": {
@@ -2379,7 +2208,7 @@
       }
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía + Tendencia MA200·Refugio risk-off",
-     "periodo": "2012 → 2026",
+     "periodo": "2012 → 2024",
      "rationale": "All-weather: 3 patas pro-crecimiento (índices + JPY carry + energía) + pata refugio (oro/JPY/CHF con tendencia MA200). Los bonos U12 NO pasaron el núcleo de riesgo (CFD sin cupón → retorno subestimado, DD no protege), así que la pata defensiva usa U8 (activos refugio clásicos). El overlay dinámico de régimen se descartó a propósito (regime-switching whipsea en #59-62, #77). Equal-weight diario (el risk-parity mensual resultó peor en la Tarea A).",
      "verdict": "viable",
      "npass": 5,
@@ -2397,7 +2226,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": true,
-       "detail": "0.56 vs 0.19 B&H (+194%)"
+       "detail": "0.47 vs 0.17 B&H (+176%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -2411,26 +2240,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0454,
+      "s_cagr": 0.0379,
       "s_maxdd": -0.0803,
-      "s_calmar": 0.56,
-      "s_total": 1.172,
-      "b_cagr": 0.0529,
+      "s_calmar": 0.47,
+      "s_total": 0.793,
+      "b_cagr": 0.0471,
       "b_maxdd": -0.2756,
-      "b_calmar": 0.19,
-      "b_total": 1.461,
+      "b_calmar": 0.17,
+      "b_total": 1.06,
       "expo_media": 0.58,
-      "expo_actual": 0.61,
+      "expo_actual": 0.7,
       "cap_inicial": 100000,
-      "cap_final": 217213,
-      "en_holdings": 132136,
-      "en_efectivo": 85077
+      "cap_final": 179273,
+      "en_holdings": 126281,
+      "en_efectivo": 52992
      },
      "lev2": {
-      "s_total": 1.713,
+      "s_total": 1.015,
       "s_maxdd": -0.206,
-      "s_calmar": 0.29,
-      "cap_final": 271341,
+      "s_calmar": 0.22,
+      "cap_final": 201461,
       "ok": true
      },
      "equity": {
@@ -2590,26 +2419,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        0.9971,
@@ -2767,26 +2577,7 @@
        1.7882,
        1.7969,
        1.789,
-       1.7927,
-       1.8252,
-       1.8108,
-       1.8035,
-       1.7985,
-       1.8126,
-       1.8133,
-       1.8607,
-       1.8302,
-       1.8566,
-       1.8854,
-       1.8985,
-       1.9069,
-       1.9489,
-       1.9805,
-       2.2286,
-       2.207,
-       2.1712,
-       2.1714,
-       2.1721
+       1.7927
       ],
       "bh": [
        1.0062,
@@ -2944,26 +2735,7 @@
        1.9949,
        2.031,
        2.0264,
-       2.0597,
-       2.1057,
-       2.0768,
-       2.0756,
-       2.0007,
-       2.0572,
-       2.1102,
-       2.1729,
-       2.1554,
-       2.1919,
-       2.2386,
-       2.2446,
-       2.2475,
-       2.3134,
-       2.3607,
-       2.4727,
-       2.5765,
-       2.5504,
-       2.4412,
-       2.4613
+       2.0597
       ]
      },
      "orden": 0
@@ -2980,7 +2752,7 @@
         "weight": 0.25,
         "usd": 25000,
         "instruments": "SP500 · NAS100 · DAX · FTSE100",
-        "expo_actual": 0.77,
+        "expo_actual": 0.82,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Rebalanceo diario al cierre."
        },
        {
@@ -3004,17 +2776,17 @@
         "weight": 0.25,
         "usd": 25000,
         "instruments": "BTCUSD · ETHUSD · LTCUSD",
-        "expo_actual": 0.0,
+        "expo_actual": 1.0,
         "rule": "Largo mientras el precio cierre por encima de su media de 200 días; en efectivo si cae por debajo."
        }
       ],
-      "cagr": 0.0778,
-      "withdraw_rate": 0.0467,
-      "withdraw_month": 389,
+      "cagr": 0.0783,
+      "withdraw_rate": 0.047,
+      "withdraw_month": 392,
       "maxdd": -0.2132
      },
      "instrument": "Vol-targeting 10%·Índices global + TSMOM 12 meses·Cruces JPY + Donchian 50/25 (breakout)·Energía + Tendencia MA200·Cripto",
-     "periodo": "2017 → 2026",
+     "periodo": "2017 → 2024",
      "rationale": "Añade una pata de tendencia en cripto (muy volátil pero poco correlacionada). Más diversificación, pero la muestra empieza en 2018 (cripto) → menos historia.",
      "verdict": "candidata",
      "npass": 4,
@@ -3032,7 +2804,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": true,
-       "detail": "0.36 vs 0.25 B&H (+44%)"
+       "detail": "0.37 vs 0.30 B&H (+21%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -3046,26 +2818,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0778,
+      "s_cagr": 0.0783,
       "s_maxdd": -0.2132,
-      "s_calmar": 0.36,
-      "s_total": 1.288,
-      "b_cagr": 0.1043,
+      "s_calmar": 0.37,
+      "s_total": 1.01,
+      "b_cagr": 0.1252,
       "b_maxdd": -0.413,
-      "b_calmar": 0.25,
-      "b_total": 1.991,
-      "expo_media": 0.56,
-      "expo_actual": 0.44,
+      "b_calmar": 0.3,
+      "b_total": 1.978,
+      "expo_media": 0.57,
+      "expo_actual": 0.7,
       "cap_inicial": 100000,
-      "cap_final": 228782,
-      "en_holdings": 101043,
-      "en_efectivo": 127739
+      "cap_final": 200974,
+      "en_holdings": 141568,
+      "en_efectivo": 59406
      },
      "lev2": {
-      "s_total": 2.114,
+      "s_total": 1.628,
       "s_maxdd": -0.4099,
-      "s_calmar": 0.26,
-      "cap_final": 311378,
+      "s_calmar": 0.27,
+      "cap_final": 262784,
       "ok": true
      },
      "equity": {
@@ -3161,26 +2933,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        1.0002,
@@ -3274,26 +3027,7 @@
        1.898,
        1.8982,
        1.9991,
-       2.0097,
-       2.1009,
-       2.0506,
-       1.9541,
-       1.9431,
-       1.959,
-       1.9618,
-       2.0761,
-       2.0722,
-       2.0856,
-       2.0675,
-       2.0087,
-       2.0145,
-       2.0448,
-       2.0629,
-       2.3391,
-       2.3248,
-       2.2925,
-       2.2862,
-       2.2878
+       2.0097
       ],
       "bh": [
        1.0401,
@@ -3387,26 +3121,7 @@
        2.7072,
        2.7275,
        2.9233,
-       2.9782,
-       3.1191,
-       2.9519,
-       2.7963,
-       2.6977,
-       2.869,
-       2.9665,
-       3.1939,
-       3.2189,
-       3.2418,
-       3.2544,
-       3.0671,
-       3.0518,
-       3.0104,
-       2.9213,
-       3.1225,
-       3.324,
-       3.219,
-       2.9212,
-       2.9911
+       2.9782
       ]
      },
      "orden": 101
@@ -3423,7 +3138,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "SP500 · NAS100",
-        "expo_actual": 0.55,
+        "expo_actual": 0.88,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Factor de escala congelado mensualmente."
        },
        {
@@ -3431,7 +3146,7 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "DAX · FTSE100",
-        "expo_actual": 0.71,
+        "expo_actual": 1.0,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Factor de escala congelado mensualmente."
        },
        {
@@ -3439,17 +3154,17 @@
         "weight": 0.333,
         "usd": 33333,
         "instruments": "NIKKEI · HANGSENG · ASX200",
-        "expo_actual": 0.54,
+        "expo_actual": 0.59,
         "rule": "Dimensiona cada activo por 1/volatilidad (objetivo 10% anual): baja la posición cuando sube la volatilidad. Factor de escala congelado mensualmente."
        }
       ],
-      "cagr": 0.0502,
-      "withdraw_rate": 0.0301,
-      "withdraw_month": 251,
+      "cagr": 0.0462,
+      "withdraw_rate": 0.0277,
+      "withdraw_month": 231,
       "maxdd": -0.2931
      },
      "instrument": "Vol-targeting 10%·Índices US + Vol-targeting 10%·Índices Europa + Vol-targeting 10%·Índices Asia-Pac",
-     "periodo": "2012 → 2026",
+     "periodo": "2012 → 2024",
      "rationale": "MISMA cartera índices del mundo con sizing mensual risk-parity: pesos entre regiones ∝ 1/volatilidad 63d, recalculados al cierre de cada mes. Vol-target congelado mensualmente dentro de cada pata.",
      "verdict": "descartada",
      "npass": 3,
@@ -3467,7 +3182,7 @@
       {
        "name": "Calmar ≥15% mejor que B&H",
        "pass": false,
-       "detail": "0.17 vs 0.25 B&H (-32%)"
+       "detail": "0.16 vs 0.23 B&H (-30%)"
       },
       {
        "name": "Estable a la composición (quitar 1 pata)",
@@ -3481,26 +3196,26 @@
       }
      ],
      "metrics": {
-      "s_cagr": 0.0502,
+      "s_cagr": 0.0462,
       "s_maxdd": -0.2931,
-      "s_calmar": 0.17,
-      "s_total": 1.292,
-      "b_cagr": 0.0867,
+      "s_calmar": 0.16,
+      "s_total": 0.973,
+      "b_cagr": 0.0782,
       "b_maxdd": -0.3458,
-      "b_calmar": 0.25,
-      "b_total": 3.086,
+      "b_calmar": 0.23,
+      "b_total": 2.105,
       "expo_media": 0.75,
-      "expo_actual": 0.6,
+      "expo_actual": 0.82,
       "cap_inicial": 100000,
-      "cap_final": 229205,
-      "en_holdings": 137814,
-      "en_efectivo": 91391
+      "cap_final": 197305,
+      "en_holdings": 162157,
+      "en_efectivo": 35148
      },
      "lev2": {
-      "s_total": 1.404,
+      "s_total": 0.998,
       "s_maxdd": -0.5223,
-      "s_calmar": 0.1,
-      "cap_final": 240391,
+      "s_calmar": 0.09,
+      "cap_final": 199848,
       "ok": false
      },
      "equity": {
@@ -3655,26 +3370,7 @@
        "2024-09",
        "2024-10",
        "2024-11",
-       "2024-12",
-       "2025-01",
-       "2025-02",
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06",
-       "2026-07"
+       "2024-12"
       ],
       "strat": [
        1.007,
@@ -3827,26 +3523,7 @@
        1.9494,
        1.93,
        1.9836,
-       1.9731,
-       2.04,
-       2.0441,
-       1.9863,
-       1.9837,
-       2.0057,
-       2.0191,
-       2.0532,
-       2.0888,
-       2.1296,
-       2.1991,
-       2.1845,
-       2.2019,
-       2.2479,
-       2.3065,
-       2.1735,
-       2.236,
-       2.2975,
-       2.2911,
-       2.2921
+       1.9731
       ],
       "bh": [
        1.0343,
@@ -3999,26 +3676,7 @@
        3.0633,
        3.03,
        3.1045,
-       3.1045,
-       3.2095,
-       3.2416,
-       3.1247,
-       3.1012,
-       3.261,
-       3.3717,
-       3.437,
-       3.5098,
-       3.6076,
-       3.7504,
-       3.7099,
-       3.7383,
-       3.8437,
-       3.9403,
-       3.6799,
-       3.9366,
-       4.0896,
-       4.0874,
-       4.0857
+       3.1045
       ]
      },
      "orden": 202
@@ -23365,18 +23023,18 @@
  ],
  "challenge": [
   {
-   "name": "Cartera all-weather (4 patas)",
-   "x1": 0.021,
-   "x2": 0.071,
-   "x3": 0.083,
-   "x5": 0.092
-  },
-  {
    "name": "Vol-targeting 10% · Índices US",
    "x1": 0.016,
    "x2": 0.187,
    "x3": 0.201,
    "x5": 0.027
+  },
+  {
+   "name": "Cartera all-weather (4 patas)",
+   "x1": 0.021,
+   "x2": 0.071,
+   "x3": 0.083,
+   "x5": 0.092
   },
   {
    "name": "Cartera 3 mercados",
@@ -23403,23 +23061,6 @@
  "top5": [
   {
    "rank": 1,
-   "id": "port_allweather",
-   "name": "Cartera all-weather (4 patas)",
-   "ukey": "UP",
-   "ulabel": "Portafolios combinados",
-   "verdict": "viable",
-   "calmar": 0.56,
-   "maxdd": -8,
-   "maxdd_bh": -28,
-   "cagr": 4.5,
-   "also_viable_in": [
-    "Portafolios combinados",
-    "Portafolios combinados",
-    "Portafolios combinados"
-   ]
-  },
-  {
-   "rank": 2,
    "id": "voltarget_10-U1",
    "name": "Vol-targeting 10%",
    "ukey": "U1",
@@ -23436,16 +23077,33 @@
    ]
   },
   {
+   "rank": 2,
+   "id": "port_allweather",
+   "name": "Cartera all-weather (4 patas)",
+   "ukey": "UP",
+   "ulabel": "Portafolios combinados",
+   "verdict": "viable",
+   "calmar": 0.47,
+   "maxdd": -8,
+   "maxdd_bh": -28,
+   "cagr": 3.8,
+   "also_viable_in": [
+    "Portafolios combinados",
+    "Portafolios combinados",
+    "Portafolios combinados"
+   ]
+  },
+  {
    "rank": 3,
    "id": "port_3mkt",
    "name": "Cartera 3 mercados",
    "ukey": "UP",
    "ulabel": "Portafolios combinados",
    "verdict": "viable",
-   "calmar": 0.47,
+   "calmar": 0.4,
    "maxdd": -12,
    "maxdd_bh": -36,
-   "cagr": 5.5,
+   "cagr": 4.7,
    "also_viable_in": [
     "Portafolios combinados",
     "Portafolios combinados",
@@ -23459,10 +23117,10 @@
    "ukey": "UP",
    "ulabel": "Portafolios combinados",
    "verdict": "viable",
-   "calmar": 0.35,
+   "calmar": 0.33,
    "maxdd": -15,
    "maxdd_bh": -35,
-   "cagr": 5.1,
+   "cagr": 4.9,
    "also_viable_in": [
     "Portafolios combinados",
     "Portafolios combinados",
@@ -23488,69 +23146,69 @@
  ],
  "oos_2025": [
   {
-   "id": "port_allweather",
-   "name": "Cartera all-weather (4 patas)",
-   "ret": 0.2116,
-   "sharpe": 1.34,
-   "maxdd": -0.0625,
-   "calmar": 1.81,
-   "bh_ret": 0.195,
-   "bh_maxdd": -0.1122,
-   "days": 452,
-   "protected": true,
-   "period": "2025-01-01 → 2026-07-09"
-  },
-  {
    "id": "voltarget_10-U1",
    "name": "Vol-targeting 10%",
-   "ret": 0.1491,
-   "sharpe": 0.74,
+   "ret": 0.1527,
+   "sharpe": 0.76,
    "maxdd": -0.1346,
-   "calmar": 0.57,
-   "bh_ret": 0.3472,
+   "calmar": 0.58,
+   "bh_ret": 0.3527,
    "bh_maxdd": -0.2284,
-   "days": 474,
+   "days": 475,
    "protected": true,
-   "period": "2025-01-01 → 2026-07-09"
+   "period": "2025-01-01 → 2026-07-10"
+  },
+  {
+   "id": "port_allweather",
+   "name": "Cartera all-weather (4 patas)",
+   "ret": 0.2109,
+   "sharpe": 1.33,
+   "maxdd": -0.0625,
+   "calmar": 1.8,
+   "bh_ret": 0.1941,
+   "bh_maxdd": -0.1122,
+   "days": 453,
+   "protected": true,
+   "period": "2025-01-01 → 2026-07-10"
   },
   {
    "id": "port_3mkt",
    "name": "Cartera 3 mercados",
-   "ret": 0.2271,
+   "ret": 0.2264,
    "sharpe": 1.13,
    "maxdd": -0.0765,
-   "calmar": 1.58,
-   "bh_ret": 0.213,
+   "calmar": 1.57,
+   "bh_ret": 0.2121,
    "bh_maxdd": -0.1412,
-   "days": 452,
+   "days": 453,
    "protected": true,
-   "period": "2025-01-01 → 2026-07-09"
+   "period": "2025-01-01 → 2026-07-10"
   },
   {
    "id": "port_idx_world",
    "name": "Cartera índices del mundo",
-   "ret": 0.1409,
-   "sharpe": 0.86,
+   "ret": 0.1447,
+   "sharpe": 0.88,
    "maxdd": -0.1091,
-   "calmar": 0.67,
-   "bh_ret": 0.316,
+   "calmar": 0.68,
+   "bh_ret": 0.322,
    "bh_maxdd": -0.174,
-   "days": 474,
+   "days": 475,
    "protected": true,
-   "period": "2025-01-01 → 2026-07-09"
+   "period": "2025-01-01 → 2026-07-10"
   },
   {
    "id": "trend_ma200-U1",
    "name": "Tendencia MA200",
-   "ret": 0.2084,
-   "sharpe": 0.9,
+   "ret": 0.2134,
+   "sharpe": 0.92,
    "maxdd": -0.0929,
-   "calmar": 1.14,
-   "bh_ret": 0.3472,
+   "calmar": 1.16,
+   "bh_ret": 0.3527,
    "bh_maxdd": -0.2284,
-   "days": 474,
+   "days": 475,
    "protected": true,
-   "period": "2025-01-01 → 2026-07-09"
+   "period": "2025-01-01 → 2026-07-10"
   }
  ],
  "fin_note": "USD rate + 3% spread broker"
