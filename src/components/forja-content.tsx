@@ -435,12 +435,21 @@ function OOS2025Section({ items }: { items: ForjaOOS[] }) {
 // ---------------------------------------------------------------------------
 // Forward test (paper)
 // ---------------------------------------------------------------------------
-function Heartbeat({ lastUpdate }: { lastUpdate: string | null }) {
+function Heartbeat({ lastUpdate, baselineStarted }: { lastUpdate: string | null; baselineStarted?: string }) {
   const { t } = useI18n();
-  if (!lastUpdate) return null;
-  const diffMs = Date.now() - new Date(lastUpdate + "T00:00:00Z").getTime();
+  const refDate = lastUpdate ?? baselineStarted;
+  if (!refDate) return null;
+  const diffMs = Date.now() - new Date(refDate + "T00:00:00Z").getTime();
   const days = Math.max(0, Math.floor(diffMs / 86400000));
   const stale = days > 3;
+  if (!lastUpdate) {
+    if (!stale) return null;
+    return (
+      <div className="mt-2 rounded-md bg-amber-500/15 px-3 py-1.5 text-[11px] text-amber-600 dark:text-amber-400">
+        ⚠ {t("forja.forwardNoEntries").replace("{n}", String(days))}
+      </div>
+    );
+  }
   return (
     <div className={cn("mt-2 rounded-md px-3 py-1.5 text-[11px]", stale ? "bg-amber-500/15 text-amber-600 dark:text-amber-400" : "text-muted-foreground")}>
       {stale && "⚠ "}{t("forja.forwardLastUpdate").replace("{date}", lastUpdate).replace("{n}", String(days))}
@@ -460,7 +469,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
         </div>
         <p className="text-xs text-muted-foreground">{t("forja.forwardStarted").replace("{date}", data.baseline.started)}</p>
         <Badge variant="outline" className="mt-2">paper — {t("forja.forwardPaper")}</Badge>
-        <Heartbeat lastUpdate={data.last_update} />
+        <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
       </Card>
     );
   }
@@ -508,7 +517,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
           </div>
         ))}
       </div>
-      <Heartbeat lastUpdate={data.last_update} />
+      <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
     </Card>
   );
 }

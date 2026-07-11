@@ -45,5 +45,54 @@
   ],
   "note": "Línea base congelada. Si la estrategia cambia, el reloj se reinicia."
  },
- "portfolios": {}
+ "last_update": "2026-07-10",
+ "portfolios": {
+  "port_allweather": {
+   "name": "Cartera all-weather (4 patas)",
+   "dates": [
+    "2026-07-10"
+   ],
+   "navs": [
+    217.09
+   ],
+   "days": 1,
+   "expo": 0.6092,
+   "positions": {
+    "SP500": 1.0,
+    "NAS100": 0.4773,
+    "DAX": 0.6689,
+    "FTSE100": 0.9343,
+    "EURJPY": 1.0,
+    "GBPJPY": 1.0,
+    "AUDJPY": 1.0,
+    "WTI": 0.0,
+    "BRENT": 0.0,
+    "XAUUSD": 0.0,
+    "USDJPY": 1.0,
+    "USDCHF": 1.0
+   }
+  },
+  "port_3mkt": {
+   "name": "Cartera 3 mercados",
+   "dates": [
+    "2026-07-10"
+   ],
+   "navs": [
+    253.6
+   ],
+   "days": 1,
+   "expo": 0.59,
+   "positions": {
+    "SP500": 1.0,
+    "NAS100": 0.4773,
+    "DAX": 0.6689,
+    "FTSE100": 0.9343,
+    "EURJPY": 1.0,
+    "GBPJPY": 1.0,
+    "AUDJPY": 1.0,
+    "WTI": 0.0,
+    "BRENT": 0.0
+   }
+  }
+ }
 }
