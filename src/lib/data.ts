@@ -147,9 +147,14 @@ export type ForjaOOS = {
   id: string; name: string; ret: number; sharpe: number; maxdd: number; calmar: number;
   bh_ret: number; bh_maxdd: number; days: number; protected: boolean; period: string;
 };
+export type ForjaForwardZone = {
+  symbol: string; weight: number; entry_date: string;
+  entry_price: number; current_price: number; pnl_pct: number; days: number;
+};
 export type ForjaForwardPortfolio = {
   name: string; dates: string[]; navs: number[]; days: number; expo: number;
   positions: Record<string, number>;
+  zones?: ForjaForwardZone[];
 };
 export type ForjaForward = {
   baseline: { started: string; note: string };

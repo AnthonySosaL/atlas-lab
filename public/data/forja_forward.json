@@ -43,25 +43,55 @@
     ]
    }
   ],
-  "note": "Línea base congelada. Si la estrategia cambia, el reloj se reinicia."
+  "note": "Línea base congelada. Si la estrategia cambia, el reloj se reinicia.",
+  "criteria": {
+   "locked": "2026-07-11",
+   "eval_date": "2026-12-10",
+   "C1": "Fiabilidad operativa: el tracker registró ≥95% de los días hábiles del período.",
+   "C2": "El riesgo se comportó: MaxDD forward all-weather no superó −12% (1.5× peor histórico diseño −8%). No se exige retorno positivo.",
+   "C3": "Integridad: la baseline nunca se reinició (cero cambios de estrategia desde 2026-07-10).",
+   "rule": "Si pasan los 3 → despliegue real PEQUEÑO (10-20% capital, 1×, sin apalancar) y re-evaluación 3 meses después. Si falla cualquiera → investigar antes de un solo dólar real."
+  }
  },
- "last_update": "2026-07-10",
+ "last_update": "2026-07-23",
  "portfolios": {
   "port_allweather": {
    "name": "Cartera all-weather (4 patas)",
    "dates": [
-    "2026-07-10"
+    "2026-07-10",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23"
    ],
    "navs": [
-    99.94
+    99.94,
+    99.9,
+    99.89,
+    100.03,
+    100.1,
+    100.04,
+    99.91,
+    99.97,
+    99.87,
+    100.24,
+    100.27,
+    100.14
    ],
-   "days": 1,
-   "expo": 0.6092,
+   "days": 12,
+   "expo": 0.6061,
    "positions": {
     "SP500": 1.0,
-    "NAS100": 0.4773,
-    "DAX": 0.6689,
-    "FTSE100": 0.9343,
+    "NAS100": 0.5038,
+    "DAX": 0.6892,
+    "FTSE100": 0.838,
     "EURJPY": 1.0,
     "GBPJPY": 1.0,
     "AUDJPY": 1.0,
@@ -70,29 +100,199 @@
     "XAUUSD": 0.0,
     "USDJPY": 1.0,
     "USDCHF": 1.0
-   }
+   },
+   "zones": [
+    {
+     "symbol": "SP500",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 7575.8,
+     "current_price": 7412.55,
+     "pnl_pct": -0.021549,
+     "days": 14
+    },
+    {
+     "symbol": "EURJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 184.61,
+     "current_price": 186.39,
+     "pnl_pct": 0.009631,
+     "days": 14
+    },
+    {
+     "symbol": "GBPJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 216.67,
+     "current_price": 218.1,
+     "pnl_pct": 0.0066,
+     "days": 14
+    },
+    {
+     "symbol": "AUDJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 112.42,
+     "current_price": 114.15,
+     "pnl_pct": 0.015371,
+     "days": 14
+    },
+    {
+     "symbol": "USDJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 161.66,
+     "current_price": 163.84,
+     "pnl_pct": 0.013491,
+     "days": 14
+    },
+    {
+     "symbol": "USDCHF",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 0.81,
+     "current_price": 0.82,
+     "pnl_pct": 0.010577,
+     "days": 14
+    },
+    {
+     "symbol": "FTSE100",
+     "weight": 0.838,
+     "entry_date": "2026-07-10",
+     "entry_price": 10527.91,
+     "current_price": 10614.19,
+     "pnl_pct": 0.008195,
+     "days": 14
+    },
+    {
+     "symbol": "DAX",
+     "weight": 0.6892,
+     "entry_date": "2026-07-10",
+     "entry_price": 25107.16,
+     "current_price": 24776.28,
+     "pnl_pct": -0.013179,
+     "days": 14
+    },
+    {
+     "symbol": "NAS100",
+     "weight": 0.5038,
+     "entry_date": "2026-07-10",
+     "entry_price": 29832.69,
+     "current_price": 28524.3,
+     "pnl_pct": -0.043858,
+     "days": 14
+    }
+   ]
   },
   "port_3mkt": {
    "name": "Cartera 3 mercados",
    "dates": [
-    "2026-07-10"
+    "2026-07-10",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23"
    ],
    "navs": [
+    99.94,
+    99.86,
+    99.74,
+    100.02,
+    100.18,
+    100.03,
+    99.86,
+    99.92,
+    99.76,
+    100.18,
+    100.2,
     99.94
    ],
-   "days": 1,
-   "expo": 0.59,
+   "days": 12,
+   "expo": 0.5859,
    "positions": {
     "SP500": 1.0,
-    "NAS100": 0.4773,
-    "DAX": 0.6689,
-    "FTSE100": 0.9343,
+    "NAS100": 0.5038,
+    "DAX": 0.6892,
+    "FTSE100": 0.838,
     "EURJPY": 1.0,
     "GBPJPY": 1.0,
     "AUDJPY": 1.0,
     "WTI": 0.0,
     "BRENT": 0.0
-   }
+   },
+   "zones": [
+    {
+     "symbol": "SP500",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 7575.8,
+     "current_price": 7412.55,
+     "pnl_pct": -0.021549,
+     "days": 14
+    },
+    {
+     "symbol": "EURJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 184.61,
+     "current_price": 186.39,
+     "pnl_pct": 0.009631,
+     "days": 14
+    },
+    {
+     "symbol": "GBPJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 216.67,
+     "current_price": 218.1,
+     "pnl_pct": 0.0066,
+     "days": 14
+    },
+    {
+     "symbol": "AUDJPY",
+     "weight": 1.0,
+     "entry_date": "2026-07-10",
+     "entry_price": 112.42,
+     "current_price": 114.15,
+     "pnl_pct": 0.015371,
+     "days": 14
+    },
+    {
+     "symbol": "FTSE100",
+     "weight": 0.838,
+     "entry_date": "2026-07-10",
+     "entry_price": 10527.91,
+     "current_price": 10614.19,
+     "pnl_pct": 0.008195,
+     "days": 14
+    },
+    {
+     "symbol": "DAX",
+     "weight": 0.6892,
+     "entry_date": "2026-07-10",
+     "entry_price": 25107.16,
+     "current_price": 24776.28,
+     "pnl_pct": -0.013179,
+     "days": 14
+    },
+    {
+     "symbol": "NAS100",
+     "weight": 0.5038,
+     "entry_date": "2026-07-10",
+     "entry_price": 29832.69,
+     "current_price": 28524.3,
+     "pnl_pct": -0.043858,
+     "days": 14
+    }
+   ]
   }
  }
 }

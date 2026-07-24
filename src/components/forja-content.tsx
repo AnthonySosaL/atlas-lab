@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet, Trophy, Info } from "lucide-react";
-import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5, ForjaOOS, ForjaForward } from "@/lib/data";
+import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5, ForjaOOS, ForjaForward, ForjaForwardZone } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -474,10 +474,39 @@ function ForwardCriteria() {
   );
 }
 
+function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
+  const gain = zone.pnl_pct >= 0;
+  const pct = Math.min(Math.abs(zone.pnl_pct) * 100, 20);
+  const barW = Math.max(pct / 20 * 100, 8);
+  return (
+    <div className="flex items-center gap-2 py-1">
+      <div className="w-full">
+        <div className="mb-0.5 flex items-center justify-between text-[11px]">
+          <span className="font-medium">{zone.symbol} · {(zone.weight * 100).toFixed(0)}% · {zone.days}d</span>
+          <span className={cn("font-bold tabular-nums", gain ? "text-[var(--gain)]" : "text-[var(--loss)]")}>
+            {gain ? "+" : ""}{(zone.pnl_pct * 100).toFixed(2)}%
+          </span>
+        </div>
+        <svg viewBox="0 0 200 10" className="w-full" role="img" aria-label={`${zone.symbol} ${gain ? "gain" : "loss"}`}>
+          <rect x={0} y={0} width={200} height={10} rx={3} className="fill-muted/40" />
+          <rect x={0} y={0} width={barW * 2} height={10} rx={3} className={gain ? "fill-[var(--gain)]/30" : "fill-[var(--loss)]/30"} />
+          <rect x={0} y={0} width={barW * 2} height={10} rx={3} className={gain ? "stroke-[var(--gain)]" : "stroke-[var(--loss)]"} strokeWidth="1" fill="none" />
+        </svg>
+        <div className="mt-0.5 flex justify-between text-[9px] text-muted-foreground tabular-nums">
+          <span>{zone.entry_date} → {zone.entry_price.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span>
+          <span>{zone.current_price.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ForwardSection({ data }: { data: ForjaForward }) {
   const { t } = useI18n();
-  const portfolios = Object.values(data.portfolios);
-  if (portfolios.length === 0 && data.baseline) {
+  const entries = Object.entries(data.portfolios);
+  const [expanded, setExpanded] = React.useState<string | null>(null);
+
+  if (entries.length === 0 && data.baseline) {
     return (
       <Card className="p-5">
         <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
@@ -497,11 +526,18 @@ function ForwardSection({ data }: { data: ForjaForward }) {
       </div>
       <p className="mb-3 text-[11px] text-muted-foreground">{t("forja.forwardNote")}</p>
       <div className="space-y-3">
-        {portfolios.map((pf) => (
-          <div key={pf.name} className="rounded-md border p-3">
+        {entries.map(([pid, pf]) => (
+          <button
+            key={pid}
+            onClick={() => setExpanded(expanded === pid ? null : pid)}
+            className="w-full rounded-md border p-3 text-left transition-colors hover:border-primary/40"
+          >
             <div className="flex items-center justify-between">
               <span className="text-xs font-medium">{pf.name}</span>
-              <Badge variant="outline">paper — {t("forja.forwardPaper")}</Badge>
+              <div className="flex items-center gap-1.5">
+                <Badge variant="outline">paper — {t("forja.forwardPaper")}</Badge>
+                <ChevronRight className={cn("size-3.5 text-muted-foreground transition-transform", expanded === pid && "rotate-90")} />
+              </div>
             </div>
             <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
               <div>
@@ -531,7 +567,19 @@ function ForwardSection({ data }: { data: ForjaForward }) {
                 </svg>
               </div>
             )}
-          </div>
+            {expanded === pid && (
+              <div className="mt-3 border-t pt-3">
+                <div className="mb-1.5 text-[11px] font-semibold text-primary">{t("forja.forwardPositions")}</div>
+                {(!pf.zones || pf.zones.length === 0) ? (
+                  <p className="text-[11px] text-muted-foreground">{t("forja.forwardCash")}</p>
+                ) : (
+                  <div className="space-y-1">
+                    {pf.zones.map((z) => <ZoneBar key={z.symbol} zone={z} />)}
+                  </div>
+                )}
+              </div>
+            )}
+          </button>
         ))}
       </div>
       <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
