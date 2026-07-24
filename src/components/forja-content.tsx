@@ -474,29 +474,42 @@ function ForwardCriteria() {
   );
 }
 
+function ZonePriceChart({ zone }: { zone: ForjaForwardZone }) {
+  const { prices, dates, entry_price } = zone;
+  if (!prices || prices.length < 2) return null;
+  const gain = zone.pnl_pct >= 0;
+  const W = 300, H = 80, pad = 6;
+  const mn = Math.min(...prices, entry_price);
+  const mx = Math.max(...prices, entry_price);
+  const r = mx - mn || 1;
+  const px = (i: number) => pad + (i / (prices.length - 1)) * (W - 2 * pad);
+  const py = (v: number) => H - pad - ((v - mn) / r) * (H - 2 * pad);
+  const entryY = py(entry_price);
+  const priceLine = prices.map((v, i) => `${px(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ");
+  const areaPoints = prices.map((v, i) => `${px(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ")
+    + ` ${px(prices.length - 1).toFixed(1)},${entryY.toFixed(1)} ${px(0).toFixed(1)},${entryY.toFixed(1)}`;
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="mt-0.5 w-full" role="img" aria-label={`${zone.symbol} price`}>
+      <polygon points={areaPoints} className={gain ? "fill-[var(--gain)]/12" : "fill-[var(--loss)]/12"} />
+      <line x1={pad} y1={entryY} x2={W - pad} y2={entryY} className="stroke-muted-foreground" strokeDasharray="3 3" strokeWidth="0.8" />
+      <polyline points={priceLine} fill="none" className={gain ? "stroke-[var(--gain)]" : "stroke-[var(--loss)]"} strokeWidth="1.4" />
+      <text x={pad} y={entryY - 3} fontSize="7" className="fill-muted-foreground">{entry_price.toLocaleString("en-US")}</text>
+      <text x={W - pad} y={py(prices[prices.length - 1]) - 3} textAnchor="end" fontSize="7" className={gain ? "fill-[var(--gain)]" : "fill-[var(--loss)]"}>{zone.current_price.toLocaleString("en-US")}</text>
+    </svg>
+  );
+}
+
 function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
   const gain = zone.pnl_pct >= 0;
-  const pct = Math.min(Math.abs(zone.pnl_pct) * 100, 20);
-  const barW = Math.max(pct / 20 * 100, 8);
   return (
-    <div className="flex items-center gap-2 py-1">
-      <div className="w-full">
-        <div className="mb-0.5 flex items-center justify-between text-[11px]">
-          <span className="font-medium">{zone.symbol} · {(zone.weight * 100).toFixed(0)}% · {zone.days}d</span>
-          <span className={cn("font-bold tabular-nums", gain ? "text-[var(--gain)]" : "text-[var(--loss)]")}>
-            {gain ? "+" : ""}{(zone.pnl_pct * 100).toFixed(2)}%
-          </span>
-        </div>
-        <svg viewBox="0 0 200 10" className="w-full" role="img" aria-label={`${zone.symbol} ${gain ? "gain" : "loss"}`}>
-          <rect x={0} y={0} width={200} height={10} rx={3} className="fill-muted/40" />
-          <rect x={0} y={0} width={barW * 2} height={10} rx={3} className={gain ? "fill-[var(--gain)]/30" : "fill-[var(--loss)]/30"} />
-          <rect x={0} y={0} width={barW * 2} height={10} rx={3} className={gain ? "stroke-[var(--gain)]" : "stroke-[var(--loss)]"} strokeWidth="1" fill="none" />
-        </svg>
-        <div className="mt-0.5 flex justify-between text-[9px] text-muted-foreground tabular-nums">
-          <span>{zone.entry_date} → {zone.entry_price.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span>
-          <span>{zone.current_price.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span>
-        </div>
+    <div className="py-1">
+      <div className="mb-0.5 flex items-center justify-between text-[11px]">
+        <span className="font-medium">{zone.symbol} · {(zone.weight * 100).toFixed(0)}% · {zone.days}d</span>
+        <span className={cn("font-bold tabular-nums", gain ? "text-[var(--gain)]" : "text-[var(--loss)]")}>
+          {gain ? "+" : ""}{(zone.pnl_pct * 100).toFixed(2)}%
+        </span>
       </div>
+      <ZonePriceChart zone={zone} />
     </div>
   );
 }

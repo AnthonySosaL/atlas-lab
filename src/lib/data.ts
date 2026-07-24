@@ -150,6 +150,7 @@ export type ForjaOOS = {
 export type ForjaForwardZone = {
   symbol: string; weight: number; entry_date: string;
   entry_price: number; current_price: number; pnl_pct: number; days: number;
+  prices: number[]; dates: string[];
 };
 export type ForjaForwardPortfolio = {
   name: string; dates: string[]; navs: number[]; days: number; expo: number;
