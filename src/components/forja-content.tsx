@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useTheme } from "next-themes";
 import { FlaskConical, ShieldCheck, Target, Layers, ArrowLeft, ChevronRight, Link2, Wallet, Trophy, Info } from "lucide-react";
 import type { ForjaData, ForjaStrategy, ForjaUniverse, ForjaTop5, ForjaOOS, ForjaForward, ForjaForwardZone } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
@@ -474,29 +475,66 @@ function ForwardCriteria() {
   );
 }
 
-function ZonePriceChart({ zone }: { zone: ForjaForwardZone }) {
-  const { prices, dates, entry_price } = zone;
-  if (!prices || prices.length < 2) return null;
-  const gain = zone.pnl_pct >= 0;
-  const W = 300, H = 80, pad = 6;
-  const mn = Math.min(...prices, entry_price);
-  const mx = Math.max(...prices, entry_price);
-  const r = mx - mn || 1;
-  const px = (i: number) => pad + (i / (prices.length - 1)) * (W - 2 * pad);
-  const py = (v: number) => H - pad - ((v - mn) / r) * (H - 2 * pad);
-  const entryY = py(entry_price);
-  const priceLine = prices.map((v, i) => `${px(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ");
-  const areaPoints = prices.map((v, i) => `${px(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ")
-    + ` ${px(prices.length - 1).toFixed(1)},${entryY.toFixed(1)} ${px(0).toFixed(1)},${entryY.toFixed(1)}`;
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="mt-0.5 w-full" role="img" aria-label={`${zone.symbol} price`}>
-      <polygon points={areaPoints} className={gain ? "fill-[var(--gain)]/12" : "fill-[var(--loss)]/12"} />
-      <line x1={pad} y1={entryY} x2={W - pad} y2={entryY} className="stroke-muted-foreground" strokeDasharray="3 3" strokeWidth="0.8" />
-      <polyline points={priceLine} fill="none" className={gain ? "stroke-[var(--gain)]" : "stroke-[var(--loss)]"} strokeWidth="1.4" />
-      <text x={pad} y={entryY - 3} fontSize="7" className="fill-muted-foreground">{entry_price.toLocaleString("en-US")}</text>
-      <text x={W - pad} y={py(prices[prices.length - 1]) - 3} textAnchor="end" fontSize="7" className={gain ? "fill-[var(--gain)]" : "fill-[var(--loss)]"}>{zone.current_price.toLocaleString("en-US")}</text>
-    </svg>
-  );
+function ZoneCandleChart({ zone }: { zone: ForjaForwardZone }) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+
+  React.useEffect(() => {
+    if (!ref.current || !mounted || !zone.candles || zone.candles.length < 2) return;
+    let removed = false;
+
+    import("lightweight-charts").then(({ createChart, CandlestickSeries, ColorType, LineStyle }) => {
+      if (removed || !ref.current) return;
+      const dark = resolvedTheme === "dark";
+      const grid = dark ? "#27272a" : "#e4e4e7";
+      const text = dark ? "#a1a1aa" : "#71717a";
+
+      const chart = createChart(ref.current!, {
+        layout: {
+          background: { type: ColorType.Solid, color: "transparent" },
+          textColor: text,
+          attributionLogo: false,
+        },
+        grid: { vertLines: { color: grid }, horzLines: { color: grid } },
+        rightPriceScale: { borderColor: grid },
+        timeScale: { borderColor: grid, timeVisible: false },
+        crosshair: { mode: 0 },
+        handleScroll: true,
+        handleScale: true,
+        autoSize: true,
+      });
+
+      const series = chart.addSeries(CandlestickSeries, {
+        upColor: "#22c55e", downColor: "#ef4444",
+        borderVisible: false,
+        wickUpColor: "#22c55e", wickDownColor: "#ef4444",
+      });
+      series.setData(zone.candles as { time: string; open: number; high: number; low: number; close: number }[]);
+
+      series.createPriceLine({
+        price: zone.entry_price,
+        color: "#eab308",
+        lineStyle: LineStyle.Dashed,
+        lineWidth: 1,
+        title: "Entrada",
+      });
+
+      chart.timeScale().fitContent();
+
+      (ref.current as HTMLDivElement & { _chart?: ReturnType<typeof createChart> })._chart = chart;
+    });
+
+    return () => {
+      removed = true;
+      const el = ref.current as HTMLDivElement & { _chart?: { remove: () => void } } | null;
+      if (el?._chart) { el._chart.remove(); el._chart = undefined; }
+    };
+  }, [zone, resolvedTheme, mounted]);
+
+  if (!zone.candles || zone.candles.length < 2) return null;
+  return <div ref={ref} className="mt-1 h-[220px] w-full" />;
 }
 
 function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
@@ -509,7 +547,7 @@ function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
           {gain ? "+" : ""}{(zone.pnl_pct * 100).toFixed(2)}%
         </span>
       </div>
-      <ZonePriceChart zone={zone} />
+      <ZoneCandleChart zone={zone} />
     </div>
   );
 }
