@@ -164,6 +164,15 @@ export type ForjaForward = {
 };
 export type ForjaData = { updated: string; universes: ForjaUniverse[]; challenge?: ForjaChallenge[]; top5?: ForjaTop5[]; oos_2025?: ForjaOOS[]; fin_note?: string };
 export const getForjaForward = () => readJSON<ForjaForward | null>("forja_forward.json", null);
+
+export type BotForwardRow = { date: string; equity: number; vix: number; risk_off: boolean; n_orders: number };
+export type BotForwardData = {
+  start_date: string; initial_equity: number; latest_equity: number; latest_date: string;
+  days: number; return_pct: number; worst_equity: number; peak_equity: number;
+  risk_off_days: number; total_orders: number; current_risk_off: boolean; current_vix: number;
+  series: BotForwardRow[];
+};
+export const getBotForward = () => readJSON<BotForwardData | null>("bot_forward.json", null);
 export const getForja = () => readJSON<ForjaData>("forja.json", { updated: "", universes: [] });
 
 export const getLab = () =>

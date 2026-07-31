@@ -130,7 +130,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
       </motion.div>
 
       {filtered.length === 0 && (
-        <p className="py-12 text-center text-sm text-muted-foreground">Sin resultados.</p>
+        <p className="py-12 text-center text-sm text-muted-foreground">{t("experiments.noResults")}</p>
       )}
     </div>
   );

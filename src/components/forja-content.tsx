@@ -475,7 +475,7 @@ function ForwardCriteria() {
   );
 }
 
-function ZoneCandleChart({ zone }: { zone: ForjaForwardZone }) {
+function ZoneCandleChart({ zone, entryLabel }: { zone: ForjaForwardZone; entryLabel: string }) {
   const ref = React.useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
@@ -518,7 +518,7 @@ function ZoneCandleChart({ zone }: { zone: ForjaForwardZone }) {
         color: "#eab308",
         lineStyle: LineStyle.Dashed,
         lineWidth: 1,
-        title: "Entrada",
+        title: entryLabel,
       });
 
       chart.timeScale().fitContent();
@@ -537,7 +537,7 @@ function ZoneCandleChart({ zone }: { zone: ForjaForwardZone }) {
   return <div ref={ref} className="mt-1 h-[220px] w-full" />;
 }
 
-function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
+function ZoneBar({ zone, entryLabel }: { zone: ForjaForwardZone; entryLabel: string }) {
   const gain = zone.pnl_pct >= 0;
   return (
     <div className="py-1">
@@ -547,7 +547,7 @@ function ZoneBar({ zone }: { zone: ForjaForwardZone }) {
           {gain ? "+" : ""}{(zone.pnl_pct * 100).toFixed(2)}%
         </span>
       </div>
-      <ZoneCandleChart zone={zone} />
+      <ZoneCandleChart zone={zone} entryLabel={entryLabel} />
     </div>
   );
 }
@@ -625,7 +625,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
                   <p className="text-[11px] text-muted-foreground">{t("forja.forwardCash")}</p>
                 ) : (
                   <div className="space-y-1">
-                    {pf.zones.map((z) => <ZoneBar key={z.symbol} zone={z} />)}
+                    {pf.zones.map((z) => <ZoneBar key={z.symbol} zone={z} entryLabel={t("forja.forwardEntry")} />)}
                   </div>
                 )}
               </div>
