@@ -436,18 +436,43 @@ function OOS2025Section({ items }: { items: ForjaOOS[] }) {
 // ---------------------------------------------------------------------------
 // Forward test (paper)
 // ---------------------------------------------------------------------------
+/** Dias HABILES (lun-vie) transcurridos desde una fecha, sin contar ese mismo dia.
+ *  Evita la falsa alarma del fin de semana: si el ultimo dato es de un viernes, el
+ *  domingo han pasado 0 dias habiles (no 2 de calendario) y el lunes solo 1. */
+function diasHabiles(desdeISO: string): number {
+  const desde = new Date(desdeISO + "T00:00:00Z");
+  if (isNaN(desde.getTime())) return 0;
+  const ahora = new Date();
+  const hoy = new Date(Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate()));
+  let n = 0;
+  const cur = new Date(desde.getTime());
+  cur.setUTCDate(cur.getUTCDate() + 1);
+  for (let i = 0; i < 400 && cur <= hoy; i++) {   // tope de seguridad anti-bucle
+    const dow = cur.getUTCDay();
+    if (dow !== 0 && dow !== 6) n++;
+    cur.setUTCDate(cur.getUTCDate() + 1);
+  }
+  return n;
+}
+
 function Heartbeat({ lastUpdate, baselineStarted }: { lastUpdate: string | null; baselineStarted?: string }) {
   const { t } = useI18n();
   const refDate = lastUpdate ?? baselineStarted;
   if (!refDate) return null;
-  const diffMs = Date.now() - new Date(refDate + "T00:00:00Z").getTime();
-  const days = Math.max(0, Math.floor(diffMs / 86400000));
-  const stale = days > 3;
+  const days = diasHabiles(refDate);   // dias HABILES, no de calendario
+  const stale = days > 2;              // 3+ dias habiles sin dato = algo pasa
   if (!lastUpdate) {
     if (!stale) return null;
     return (
       <div className="mt-2 rounded-md bg-amber-500/15 px-3 py-1.5 text-[11px] text-amber-600 dark:text-amber-400">
         ⚠ {t("forja.forwardNoEntries").replace("{n}", String(days))}
+      </div>
+    );
+  }
+  if (days === 0) {
+    return (
+      <div className="mt-2 rounded-md px-3 py-1.5 text-[11px] text-muted-foreground">
+        {t("forja.forwardUpToDate").replace("{date}", lastUpdate)}
       </div>
     );
   }
