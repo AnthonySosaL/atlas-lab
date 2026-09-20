@@ -207,7 +207,7 @@
      "entry_price": 7575.8,
      "current_price": 7657.35,
      "pnl_pct": 0.010765,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -645,7 +645,7 @@
      "entry_price": 10527.91,
      "current_price": 10624.8,
      "pnl_pct": 0.009203,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1083,7 +1083,7 @@
      "entry_price": 216.67,
      "current_price": 210.09,
      "pnl_pct": -0.030341,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1521,7 +1521,7 @@
      "entry_price": 112.42,
      "current_price": 111.75,
      "pnl_pct": -0.005942,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1959,7 +1959,7 @@
      "entry_price": 94.58,
      "current_price": 95.44,
      "pnl_pct": 0.009104,
-     "days": 11,
+     "days": 12,
      "candles": [
       {
        "time": "2026-09-08",
@@ -2040,7 +2040,7 @@
      "entry_price": 108.94,
      "current_price": 103.2,
      "pnl_pct": -0.052752,
-     "days": 9,
+     "days": 10,
      "candles": [
       {
        "time": "2026-09-10",
@@ -2100,7 +2100,7 @@
      "entry_price": 0.81,
      "current_price": 0.82,
      "pnl_pct": 0.016886,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -2538,7 +2538,7 @@
      "entry_price": 25107.16,
      "current_price": 25301.2,
      "pnl_pct": 0.007728,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -2976,7 +2976,7 @@
      "entry_price": 29832.69,
      "current_price": 29681.15,
      "pnl_pct": -0.00508,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -3558,7 +3558,7 @@
      "entry_price": 7575.8,
      "current_price": 7657.35,
      "pnl_pct": 0.010765,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -3996,7 +3996,7 @@
      "entry_price": 10527.91,
      "current_price": 10624.8,
      "pnl_pct": 0.009203,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -4434,7 +4434,7 @@
      "entry_price": 216.67,
      "current_price": 210.09,
      "pnl_pct": -0.030341,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -4872,7 +4872,7 @@
      "entry_price": 112.42,
      "current_price": 111.75,
      "pnl_pct": -0.005942,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -5310,7 +5310,7 @@
      "entry_price": 94.58,
      "current_price": 95.44,
      "pnl_pct": 0.009104,
-     "days": 11,
+     "days": 12,
      "candles": [
       {
        "time": "2026-09-08",
@@ -5391,7 +5391,7 @@
      "entry_price": 108.94,
      "current_price": 103.2,
      "pnl_pct": -0.052752,
-     "days": 9,
+     "days": 10,
      "candles": [
       {
        "time": "2026-09-10",
@@ -5451,7 +5451,7 @@
      "entry_price": 25107.16,
      "current_price": 25301.2,
      "pnl_pct": 0.007728,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
@@ -5889,7 +5889,7 @@
      "entry_price": 29832.69,
      "current_price": 29681.15,
      "pnl_pct": -0.00508,
-     "days": 71,
+     "days": 72,
      "candles": [
       {
        "time": "2026-07-10",
