@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Mail, MapPin, FileText, FlaskConical } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { OtherProjects } from "@/components/other-projects";
+import { PORTFOLIO_URL } from "@/lib/site";
 
 const EMAIL = "canalautomatizadogpt@gmail.com";
 const GITHUB = "https://github.com/AnthonySosaL";
@@ -84,7 +85,10 @@ export function SiteFooter() {
       </div>
       <OtherProjects />
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Anthony Sosa · ATLAS Lab
+        © {new Date().getFullYear()} Anthony Sosa · ATLAS Lab ·{" "}
+        <a href={`${PORTFOLIO_URL}/privacidad/`} className="underline hover:text-primary">
+          Privacidad
+        </a>
       </div>
     </footer>
   );

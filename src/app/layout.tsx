@@ -51,6 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteJsonLd />
         {/* AdSense: inactivo hasta poner el ID real en public/adsense.js */}
         <Script src="/adsense.js" strategy="afterInteractive" />
+        <Script src="/analytics.js" strategy="afterInteractive" />
       </body>
     </html>
   );
