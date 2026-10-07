@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Mail, MapPin, FileText, FlaskConical } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { OtherProjects } from "@/components/other-projects";
 
 const EMAIL = "canalautomatizadogpt@gmail.com";
 const GITHUB = "https://github.com/AnthonySosaL";
@@ -81,6 +82,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+      <OtherProjects />
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Anthony Sosa · ATLAS Lab
       </div>
