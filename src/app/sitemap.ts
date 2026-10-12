@@ -14,7 +14,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...experiments.map((e) => ({
       url: `${SITE_URL}/exp/${e.id}`,
-      lastModified: e.date || undefined,
+      // Solo la fecha: Google rechaza fecha+hora sin zona horaria.
+      lastModified: e.date ? e.date.slice(0, 10) : undefined,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
