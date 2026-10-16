@@ -1,16 +1,16 @@
 {
   "start_date": "2026-06-09",
   "initial_equity": 50000.0,
-  "latest_equity": 50068.86,
-  "latest_date": "2026-07-30",
-  "days": 38,
-  "return_pct": 0.14,
+  "latest_equity": 50472.11,
+  "latest_date": "2026-08-10",
+  "days": 45,
+  "return_pct": 0.94,
   "worst_equity": 48840.49,
-  "peak_equity": 50289.55,
+  "peak_equity": 50472.11,
   "risk_off_days": 5,
-  "total_orders": 214,
+  "total_orders": 259,
   "current_risk_off": false,
-  "current_vix": 17.09,
+  "current_vix": 15.46,
   "series": [
     {
       "date": "2026-06-09",
@@ -277,6 +277,55 @@
       "vix": 17.09,
       "risk_off": false,
       "n_orders": 3
+    },
+    {
+      "date": "2026-07-31",
+      "equity": 49934.35,
+      "vix": 15.99,
+      "risk_off": false,
+      "n_orders": 8
+    },
+    {
+      "date": "2026-08-03",
+      "equity": 49822.51,
+      "vix": 15.86,
+      "risk_off": false,
+      "n_orders": 8
+    },
+    {
+      "date": "2026-08-04",
+      "equity": 50091.16,
+      "vix": 16.5,
+      "risk_off": false,
+      "n_orders": 4
+    },
+    {
+      "date": "2026-08-05",
+      "equity": 50132.86,
+      "vix": 15.81,
+      "risk_off": false,
+      "n_orders": 3
+    },
+    {
+      "date": "2026-08-06",
+      "equity": 50235.78,
+      "vix": 15.15,
+      "risk_off": false,
+      "n_orders": 5
+    },
+    {
+      "date": "2026-08-07",
+      "equity": 50358.96,
+      "vix": 14.9,
+      "risk_off": false,
+      "n_orders": 3
+    },
+    {
+      "date": "2026-08-10",
+      "equity": 50472.11,
+      "vix": 15.46,
+      "risk_off": false,
+      "n_orders": 14
     }
   ]
 }

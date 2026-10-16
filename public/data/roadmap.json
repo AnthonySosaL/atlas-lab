@@ -1,5 +1,331 @@
 [
  {
+  "title": "ESTADO AL 2026-10-16 — hecho, en curso y pendiente",
+  "emoji": "📍",
+  "items": [
+   "**✅ HECHO — Búsqueda de alpha cerrada:** 90 experimentos numerados (#1–#90) más el laboratorio automático (34,751 estrategias probadas, 0 sobrevivieron). Veredicto sin cambios: con datos retail no hay alpha explotable. En la tanda #51–#90: 5 sobrevivieron (#52, #57, #64, #69, #80), 25 murieron y 10 quedaron neutrales.",
+   "**✅ HECHO — Experimento 1 del bot MT5 (demo), cerrado el 2026-08-10:** +0.94% (de $50,000.00 a $50,472.11), MaxDD −2.43%, reglas tipo FTMO nunca violadas. Protege el riesgo, no genera alpha. Detalle en el capítulo de cierre.",
+   "**✅ HECHO — Forja, rondas 2 a 6 (2026-07-07 → 2026-07-30):** universo U12 de bonos, cartera all-weather, retiros simulados, Top 5, OOS 2025-26 con datos jamás vistos, zonas de posición con velas japonesas, pestaña «Bot en vivo» y traducción completa es/en/pt.",
+   "**✅ HECHO — Web lista para difusión (2026-10-06 → 2026-10-12):** metadata SEO, sitemap, robots y JSON-LD, verificación de Google Search Console, Google Analytics 4 con enlace a la política de privacidad y AdSense activado; sitemap corregido el 2026-10-12.",
+   "**🟡 EN CURSO — Forward test de Forja (paper):** corre desde 2026-07-10 con criterios congelados C1–C3; al 2026-10-14 suma 83 registros diarios (NAV base 100: all-weather 99.36, 3 mercados 99.92). Evaluación el 2026-12-10.",
+   "**⏳ PENDIENTE — Evaluación del forward el 2026-12-10:** si pasan C1, C2 y C3 → despliegue real PEQUEÑO (10-20% del capital, 1×, sin apalancar) y re-evaluación 3 meses después; si falla alguno → investigar antes de poner un solo dólar real.",
+   "**⏳ PENDIENTE — Experimento 2 del bot (multi-cuenta):** varias estrategias en paralelo, cada una en su propia cuenta demo de Pepperstone, con el horario de ejecución corregido y las 5 correcciones del cierre desde el día uno. En los archivos del proyecto no hay evidencia de que ya haya arrancado.",
+   "**⏳ PENDIENTE (heredado del plan de fronteras, sin cambios verificados desde 2026-06-27):** pivote a ingresos (vender la habilidad; los textos de credencial están en CREDENCIAL.md, 2026-07-16), VRP en IBKR paper y plan de ingreso con vol-targeting cuando haya capital.",
+   "**⏳ PRÓXIMO — Canal de YouTube de ATLAS y difusión:** pendiente. Siguiente paso después de dejar la web lista para difusión."
+  ],
+  "title_i18n": {
+   "es": "ESTADO AL 2026-10-16 — hecho, en curso y pendiente",
+   "en": "STATUS AS OF 2026-10-16 — done, in progress and pending",
+   "pt": "ESTADO EM 2026-10-16 — feito, em andamento e pendente"
+  },
+  "items_i18n": {
+   "es": [
+    "**✅ HECHO — Búsqueda de alpha cerrada:** 90 experimentos numerados (#1–#90) más el laboratorio automático (34,751 estrategias probadas, 0 sobrevivieron). Veredicto sin cambios: con datos retail no hay alpha explotable. En la tanda #51–#90: 5 sobrevivieron (#52, #57, #64, #69, #80), 25 murieron y 10 quedaron neutrales.",
+    "**✅ HECHO — Experimento 1 del bot MT5 (demo), cerrado el 2026-08-10:** +0.94% (de $50,000.00 a $50,472.11), MaxDD −2.43%, reglas tipo FTMO nunca violadas. Protege el riesgo, no genera alpha. Detalle en el capítulo de cierre.",
+    "**✅ HECHO — Forja, rondas 2 a 6 (2026-07-07 → 2026-07-30):** universo U12 de bonos, cartera all-weather, retiros simulados, Top 5, OOS 2025-26 con datos jamás vistos, zonas de posición con velas japonesas, pestaña «Bot en vivo» y traducción completa es/en/pt.",
+    "**✅ HECHO — Web lista para difusión (2026-10-06 → 2026-10-12):** metadata SEO, sitemap, robots y JSON-LD, verificación de Google Search Console, Google Analytics 4 con enlace a la política de privacidad y AdSense activado; sitemap corregido el 2026-10-12.",
+    "**🟡 EN CURSO — Forward test de Forja (paper):** corre desde 2026-07-10 con criterios congelados C1–C3; al 2026-10-14 suma 83 registros diarios (NAV base 100: all-weather 99.36, 3 mercados 99.92). Evaluación el 2026-12-10.",
+    "**⏳ PENDIENTE — Evaluación del forward el 2026-12-10:** si pasan C1, C2 y C3 → despliegue real PEQUEÑO (10-20% del capital, 1×, sin apalancar) y re-evaluación 3 meses después; si falla alguno → investigar antes de poner un solo dólar real.",
+    "**⏳ PENDIENTE — Experimento 2 del bot (multi-cuenta):** varias estrategias en paralelo, cada una en su propia cuenta demo de Pepperstone, con el horario de ejecución corregido y las 5 correcciones del cierre desde el día uno. En los archivos del proyecto no hay evidencia de que ya haya arrancado.",
+    "**⏳ PENDIENTE (heredado del plan de fronteras, sin cambios verificados desde 2026-06-27):** pivote a ingresos (vender la habilidad; los textos de credencial están en CREDENCIAL.md, 2026-07-16), VRP en IBKR paper y plan de ingreso con vol-targeting cuando haya capital.",
+    "**⏳ PRÓXIMO — Canal de YouTube de ATLAS y difusión:** pendiente. Siguiente paso después de dejar la web lista para difusión."
+   ],
+   "en": [
+    "**✅ DONE — Alpha search closed:** 90 numbered experiments (#1–#90) plus the automated lab (34,751 strategies tested, 0 survived). Verdict unchanged: with retail data there is no exploitable alpha. In the #51–#90 batch: 5 survived (#52, #57, #64, #69, #80), 25 died and 10 ended up neutral.",
+    "**✅ DONE — Bot experiment 1 (MT5 demo), closed on 2026-08-10:** +0.94% (from $50,000.00 to $50,472.11), MaxDD −2.43%, FTMO-style rules never violated. It protects risk, it does not generate alpha. Details in the closing chapter.",
+    "**✅ DONE — Forja, rounds 2 to 6 (2026-07-07 → 2026-07-30):** bonds universe U12, all-weather portfolio, simulated withdrawals, Top 5, OOS 2025-26 on never-seen data, position zones with candlesticks, «Live bot» tab and full es/en/pt translation.",
+    "**✅ DONE — Website ready for outreach (2026-10-06 → 2026-10-12):** SEO metadata, sitemap, robots and JSON-LD, Google Search Console verification, Google Analytics 4 with a link to the privacy policy and AdSense enabled; sitemap fixed on 2026-10-12.",
+    "**🟡 IN PROGRESS — Forja forward test (paper):** running since 2026-07-10 with frozen criteria C1–C3; as of 2026-10-14 it has 83 daily records (NAV base 100: all-weather 99.36, 3 markets 99.92). Evaluation on 2026-12-10.",
+    "**⏳ PENDING — Forward evaluation on 2026-12-10:** if C1, C2 and C3 all pass → SMALL real deployment (10-20% of capital, 1×, unleveraged) and re-evaluation 3 months later; if any fails → investigate before putting a single real dollar in.",
+    "**⏳ PENDING — Bot experiment 2 (multi-account):** several strategies in parallel, each on its own Pepperstone demo account, with the execution schedule fixed and the 5 corrections from the closing report in place from day one. There is no evidence in the project files that it has started.",
+    "**⏳ PENDING (inherited from the frontier plan, no verified changes since 2026-06-27):** pivot to income (selling the skill; the credential texts are in CREDENCIAL.md, 2026-07-16), VRP on IBKR paper and an income plan with vol-targeting once there is capital.",
+    "**⏳ NEXT — ATLAS YouTube channel and outreach:** pending. Next step now that the website is ready for outreach."
+   ],
+   "pt": [
+    "**✅ FEITO — Busca de alpha encerrada:** 90 experimentos numerados (#1–#90) mais o laboratório automático (34.751 estratégias testadas, 0 sobreviveram). Veredito inalterado: com dados de varejo não há alpha explorável. Na leva #51–#90: 5 sobreviveram (#52, #57, #64, #69, #80), 25 morreram e 10 ficaram neutros.",
+    "**✅ FEITO — Experimento 1 do bot MT5 (demo), encerrado em 2026-08-10:** +0,94% (de $50.000,00 a $50.472,11), MaxDD −2,43%, regras tipo FTMO nunca violadas. Protege o risco, não gera alpha. Detalhes no capítulo de encerramento.",
+    "**✅ FEITO — Forja, rodadas 2 a 6 (2026-07-07 → 2026-07-30):** universo U12 de títulos, carteira all-weather, retiradas simuladas, Top 5, OOS 2025-26 com dados nunca vistos, zonas de posição com candles, aba «Bot ao vivo» e tradução completa es/en/pt.",
+    "**✅ FEITO — Web pronta para divulgação (2026-10-06 → 2026-10-12):** metadata SEO, sitemap, robots e JSON-LD, verificação do Google Search Console, Google Analytics 4 com link para a política de privacidade e AdSense ativado; sitemap corrigido em 2026-10-12.",
+    "**🟡 EM ANDAMENTO — Forward test da Forja (paper):** roda desde 2026-07-10 com critérios congelados C1–C3; em 2026-10-14 soma 83 registros diários (NAV base 100: all-weather 99,36, 3 mercados 99,92). Avaliação em 2026-12-10.",
+    "**⏳ PENDENTE — Avaliação do forward em 2026-12-10:** se C1, C2 e C3 passarem → implantação real PEQUENA (10-20% do capital, 1×, sem alavancar) e reavaliação 3 meses depois; se qualquer uma falhar → investigar antes de colocar um único dólar real.",
+    "**⏳ PENDENTE — Experimento 2 do bot (multiconta):** várias estratégias em paralelo, cada uma em sua própria conta demo da Pepperstone, com o horário de execução corrigido e as 5 correções do encerramento desde o primeiro dia. Nos arquivos do projeto não há evidência de que já tenha começado.",
+    "**⏳ PENDENTE (herdado do plano de fronteiras, sem mudanças verificadas desde 2026-06-27):** pivô para renda (vender a habilidade; os textos de credencial estão em CREDENCIAL.md, 2026-07-16), VRP no IBKR paper e plano de renda com vol-targeting quando houver capital.",
+    "**⏳ PRÓXIMO — Canal do YouTube do ATLAS e divulgação:** pendente. Próximo passo agora que a web está pronta para divulgação."
+   ]
+  }
+ },
+ {
+  "title": "WEB Y DIFUSIÓN (2026-10-06 → 2026-10-12)",
+  "emoji": "🌐",
+  "items": [
+   "**SEO técnico (2026-10-07):** metadata, sitemap, robots, datos estructurados JSON-LD y enlaces a otros proyectos.",
+   "**Google Search Console (2026-10-07):** archivo de verificación añadido. El 2026-10-12 se corrigió el sitemap: Search Console marcaba 91 fechas `lastmod` no válidas y ahora llevan solo la fecha.",
+   "**Google Analytics 4 (2026-10-07):** activado, con enlace a la política de privacidad.",
+   "**AdSense (2026-10-07):** activado con el ID de editor real.",
+   "**El forward publica solo:** cada día el tracker sube su JSON a la web (commits «forward tracker al …» hasta el 2026-10-15) y la pestaña muestra el latido de la última actualización.",
+   "**⏳ PRÓXIMO — Canal de YouTube de ATLAS y difusión:** pendiente."
+  ],
+  "title_i18n": {
+   "es": "WEB Y DIFUSIÓN (2026-10-06 → 2026-10-12)",
+   "en": "WEB AND OUTREACH (2026-10-06 → 2026-10-12)",
+   "pt": "WEB E DIVULGAÇÃO (2026-10-06 → 2026-10-12)"
+  },
+  "items_i18n": {
+   "es": [
+    "**SEO técnico (2026-10-07):** metadata, sitemap, robots, datos estructurados JSON-LD y enlaces a otros proyectos.",
+    "**Google Search Console (2026-10-07):** archivo de verificación añadido. El 2026-10-12 se corrigió el sitemap: Search Console marcaba 91 fechas `lastmod` no válidas y ahora llevan solo la fecha.",
+    "**Google Analytics 4 (2026-10-07):** activado, con enlace a la política de privacidad.",
+    "**AdSense (2026-10-07):** activado con el ID de editor real.",
+    "**El forward publica solo:** cada día el tracker sube su JSON a la web (commits «forward tracker al …» hasta el 2026-10-15) y la pestaña muestra el latido de la última actualización.",
+    "**⏳ PRÓXIMO — Canal de YouTube de ATLAS y difusión:** pendiente."
+   ],
+   "en": [
+    "**Technical SEO (2026-10-07):** metadata, sitemap, robots, JSON-LD structured data and links to other projects.",
+    "**Google Search Console (2026-10-07):** verification file added. On 2026-10-12 the sitemap was fixed: Search Console flagged 91 invalid `lastmod` dates and they now carry the date only.",
+    "**Google Analytics 4 (2026-10-07):** enabled, with a link to the privacy policy.",
+    "**AdSense (2026-10-07):** enabled with the real publisher ID.",
+    "**The forward publishes itself:** every day the tracker pushes its JSON to the website (commits «forward tracker al …» up to 2026-10-15) and the tab shows the last-update heartbeat.",
+    "**⏳ NEXT — ATLAS YouTube channel and outreach:** pending."
+   ],
+   "pt": [
+    "**SEO técnico (2026-10-07):** metadata, sitemap, robots, dados estruturados JSON-LD e links para outros projetos.",
+    "**Google Search Console (2026-10-07):** arquivo de verificação adicionado. Em 2026-10-12 o sitemap foi corrigido: o Search Console marcava 91 datas `lastmod` inválidas e agora elas levam apenas a data.",
+    "**Google Analytics 4 (2026-10-07):** ativado, com link para a política de privacidade.",
+    "**AdSense (2026-10-07):** ativado com o ID de editor real.",
+    "**O forward publica sozinho:** todo dia o tracker envia seu JSON para a web (commits «forward tracker al …» até 2026-10-15) e a aba mostra o batimento da última atualização.",
+    "**⏳ PRÓXIMO — Canal do YouTube do ATLAS e divulgação:** pendente."
+   ]
+  }
+ },
+ {
+  "title": "FORWARD TEST DE FORJA — criterios congelados (2026-07-10 → evaluación 2026-12-10)",
+  "emoji": "🔭",
+  "items": [
+   "**Qué es:** seguimiento diario en paper (sin dinero real, sin MT5) de dos carteras de Forja a 1× y equal-weight: all-weather (4 patas: vol-target U3, TSMOM U10, Donchian U4, MA200 U8) y 3 mercados (vol-target U3, TSMOM U10, Donchian U4). Usa las funciones de forja_run.py, sin reimplementar señales.",
+   "**Línea base congelada (2026-07-10):** si la estrategia cambia, el reloj se reinicia. Los criterios de decisión se fijaron el 2026-07-11.",
+   "**C1 — Fiabilidad operativa:** el tracker registró ≥95% de los días hábiles del período.",
+   "**C2 — El riesgo se comportó:** el MaxDD forward del all-weather no supera −12% (1.5× el peor histórico de diseño, −8%). No se exige retorno positivo.",
+   "**C3 — Integridad:** la baseline nunca se reinició (cero cambios de estrategia desde 2026-07-10).",
+   "**Regla de decisión (evaluación el 2026-12-10):** si pasan los 3 → despliegue real PEQUEÑO (10-20% del capital, 1×, sin apalancar) y re-evaluación 3 meses después. Si falla cualquiera → investigar antes de un solo dólar real.",
+   "**🟡 Estado al 2026-10-14 (en curso):** 83 registros desde 2026-07-10. C1: los 69 días hábiles del período están registrados. C2: MaxDD calculado sobre la serie NAV, all-weather −3.11% (límite −12%) y 3 mercados −4.21%. C3: la baseline sigue con inicio 2026-07-10. NAV 99.36 (all-weather) y 99.92 (3 mercados): prácticamente planos; el criterio no exige retorno.",
+   "**Robustez del tracker (2026-07-10):** tarea diaria de Windows con recuperación de ejecuciones perdidas (StartWhenAvailable y disparador al iniciar sesión), registra solo velas D1 finalizadas, es idempotente y la web muestra el latido («última actualización», con aviso ámbar si pasan más de 3 días; cuenta días hábiles desde 2026-08-30).",
+   "**Zonas de posición (2026-07-24):** por cada instrumento de las carteras, zona de entrada a precio actual al estilo del indicador ZonaEntrada de MT5 (verde si gana, rojo si pierde), con velas japonesas interactivas y línea de entrada. Es solo visualización: no toca estrategias."
+  ],
+  "title_i18n": {
+   "es": "FORWARD TEST DE FORJA — criterios congelados (2026-07-10 → evaluación 2026-12-10)",
+   "en": "FORJA FORWARD TEST — frozen criteria (2026-07-10 → evaluation 2026-12-10)",
+   "pt": "FORWARD TEST DA FORJA — critérios congelados (2026-07-10 → avaliação 2026-12-10)"
+  },
+  "items_i18n": {
+   "es": [
+    "**Qué es:** seguimiento diario en paper (sin dinero real, sin MT5) de dos carteras de Forja a 1× y equal-weight: all-weather (4 patas: vol-target U3, TSMOM U10, Donchian U4, MA200 U8) y 3 mercados (vol-target U3, TSMOM U10, Donchian U4). Usa las funciones de forja_run.py, sin reimplementar señales.",
+    "**Línea base congelada (2026-07-10):** si la estrategia cambia, el reloj se reinicia. Los criterios de decisión se fijaron el 2026-07-11.",
+    "**C1 — Fiabilidad operativa:** el tracker registró ≥95% de los días hábiles del período.",
+    "**C2 — El riesgo se comportó:** el MaxDD forward del all-weather no supera −12% (1.5× el peor histórico de diseño, −8%). No se exige retorno positivo.",
+    "**C3 — Integridad:** la baseline nunca se reinició (cero cambios de estrategia desde 2026-07-10).",
+    "**Regla de decisión (evaluación el 2026-12-10):** si pasan los 3 → despliegue real PEQUEÑO (10-20% del capital, 1×, sin apalancar) y re-evaluación 3 meses después. Si falla cualquiera → investigar antes de un solo dólar real.",
+    "**🟡 Estado al 2026-10-14 (en curso):** 83 registros desde 2026-07-10. C1: los 69 días hábiles del período están registrados. C2: MaxDD calculado sobre la serie NAV, all-weather −3.11% (límite −12%) y 3 mercados −4.21%. C3: la baseline sigue con inicio 2026-07-10. NAV 99.36 (all-weather) y 99.92 (3 mercados): prácticamente planos; el criterio no exige retorno.",
+    "**Robustez del tracker (2026-07-10):** tarea diaria de Windows con recuperación de ejecuciones perdidas (StartWhenAvailable y disparador al iniciar sesión), registra solo velas D1 finalizadas, es idempotente y la web muestra el latido («última actualización», con aviso ámbar si pasan más de 3 días; cuenta días hábiles desde 2026-08-30).",
+    "**Zonas de posición (2026-07-24):** por cada instrumento de las carteras, zona de entrada a precio actual al estilo del indicador ZonaEntrada de MT5 (verde si gana, rojo si pierde), con velas japonesas interactivas y línea de entrada. Es solo visualización: no toca estrategias."
+   ],
+   "en": [
+    "**What it is:** daily paper tracking (no real money, no MT5) of two Forja portfolios at 1× and equal-weight: all-weather (4 legs: vol-target U3, TSMOM U10, Donchian U4, MA200 U8) and 3 markets (vol-target U3, TSMOM U10, Donchian U4). It reuses the functions of forja_run.py, with no re-implemented signals.",
+    "**Frozen baseline (2026-07-10):** if the strategy changes, the clock restarts. The decision criteria were locked on 2026-07-11.",
+    "**C1 — Operational reliability:** the tracker logged ≥95% of the business days in the period.",
+    "**C2 — Risk behaved:** the all-weather forward MaxDD does not exceed −12% (1.5× the worst design-period drawdown, −8%). Positive return is not required.",
+    "**C3 — Integrity:** the baseline never restarted (zero strategy changes since 2026-07-10).",
+    "**Decision rule (evaluation on 2026-12-10):** if all 3 pass → SMALL real deployment (10-20% of capital, 1×, unleveraged) and re-evaluation 3 months later. If any fails → investigate before a single real dollar.",
+    "**🟡 Status on 2026-10-14 (in progress):** 83 records since 2026-07-10. C1: all 69 business days of the period are logged. C2: MaxDD computed on the NAV series, all-weather −3.11% (limit −12%) and 3 markets −4.21%. C3: the baseline still starts on 2026-07-10. NAV 99.36 (all-weather) and 99.92 (3 markets): practically flat; the criterion does not require return.",
+    "**Tracker robustness (2026-07-10):** daily Windows task that recovers missed runs (StartWhenAvailable plus a logon trigger), logs only finalized D1 candles, is idempotent, and the website shows the heartbeat («last update», with an amber warning after more than 3 days; counts business days since 2026-08-30).",
+    "**Position zones (2026-07-24):** for each instrument in the portfolios, an entry-to-current-price zone in the style of the MT5 ZonaEntrada indicator (green if winning, red if losing), with interactive candlesticks and an entry line. Visualization only: it does not touch strategies."
+   ],
+   "pt": [
+    "**O que é:** acompanhamento diário em paper (sem dinheiro real, sem MT5) de duas carteiras da Forja a 1× e equal-weight: all-weather (4 pernas: vol-target U3, TSMOM U10, Donchian U4, MA200 U8) e 3 mercados (vol-target U3, TSMOM U10, Donchian U4). Usa as funções de forja_run.py, sem reimplementar sinais.",
+    "**Linha de base congelada (2026-07-10):** se a estratégia mudar, o relógio reinicia. Os critérios de decisão foram fixados em 2026-07-11.",
+    "**C1 — Confiabilidade operacional:** o tracker registrou ≥95% dos dias úteis do período.",
+    "**C2 — O risco se comportou:** o MaxDD forward da all-weather não passa de −12% (1,5× o pior histórico de desenho, −8%). Não se exige retorno positivo.",
+    "**C3 — Integridade:** a baseline nunca reiniciou (zero mudanças de estratégia desde 2026-07-10).",
+    "**Regra de decisão (avaliação em 2026-12-10):** se os 3 passarem → implantação real PEQUENA (10-20% do capital, 1×, sem alavancar) e reavaliação 3 meses depois. Se qualquer um falhar → investigar antes de um único dólar real.",
+    "**🟡 Estado em 2026-10-14 (em andamento):** 83 registros desde 2026-07-10. C1: os 69 dias úteis do período estão registrados. C2: MaxDD calculado sobre a série NAV, all-weather −3,11% (limite −12%) e 3 mercados −4,21%. C3: a baseline continua com início em 2026-07-10. NAV 99,36 (all-weather) e 99,92 (3 mercados): praticamente planos; o critério não exige retorno.",
+    "**Robustez do tracker (2026-07-10):** tarefa diária do Windows com recuperação de execuções perdidas (StartWhenAvailable e gatilho no logon), registra apenas candles D1 finalizados, é idempotente e a web mostra o batimento («última atualização», com aviso âmbar após mais de 3 dias; conta dias úteis desde 2026-08-30).",
+    "**Zonas de posição (2026-07-24):** para cada instrumento das carteiras, zona do preço de entrada ao preço atual no estilo do indicador ZonaEntrada do MT5 (verde se ganha, vermelho se perde), com candles interativos e linha de entrada. Apenas visualização: não toca nas estratégias."
+   ]
+  }
+ },
+ {
+  "title": "CIERRE DEL EXPERIMENTO 1 DEL BOT — demo Pepperstone (2026-06-09 → 2026-08-10)",
+  "emoji": "🧾",
+  "items": [
+   "**Resultado:** 61 días naturales (44 sesiones). Equity $50,000.00 → $50,472.11 (**+0.94%**). Pico $50,472.11 (2026-08-10), valle $48,840.49 (2026-06-26). La cuenta demo ya no es accesible (las demos de Pepperstone expiran por inactividad); los datos quedaron en experiments/forward_log.csv.",
+   "**Riesgo:** MaxDD **−2.43%**, peor día −1.44%, mejor día +1.21%, volatilidad anualizada 7.5%, 5 de 44 sesiones en risk-off (11%), 244 órdenes ejecutadas, VIX entre 14.9 y 22.2. Pérdida diaria −5% y drawdown máximo −10% (reglas tipo FTMO): nunca violadas.",
+   "**Veredicto 1 — la gestión de riesgo funcionó:** drawdown de −2.43% y volatilidad de 7.5% anual; el sistema hizo lo que prometía y nunca se acercó a los límites de una prop firm.",
+   "**Veredicto 2 — el retorno confirma el #57:** +0.94% en dos meses ≈ ~6% anualizado, pero sobre un período corto y favorable (el VIX nunca pasó de 22.2, sin crisis real). Este sistema protege, no genera alpha.",
+   "**Veredicto 3 — el filtro macro nunca se probó de verdad:** solo 5 días de risk-off, todos por señales suaves (crédito), nunca por un shock real. La protección ante un crash sigue sin validar en vivo.",
+   "**⚠️ Limitación 1 — horario vs. sesión:** a las 17:30 GER40, UK100 y SpotBrent ya tienen el mercado cerrado y el bróker rechaza la orden (retcode 10018). Desde el 2026-06-23 esas 3 de 15 posiciones no pudieron cerrarse en el risk-off. Arreglo: ejecutar antes del cierre europeo o reintentar los rechazados al día siguiente.",
+   "**Bugs corregidos durante el test:** modo Hedge (2026-06-11: al reducir posiciones, las órdenes opuestas abrían shorts espejo; se resolvió cerrando por ticket FIFO) y peso 0 (2026-06-25: el risk-off nunca aplanaba porque un `continue` saltaba el cierre).",
+   "**Otras limitaciones:** las demos de Pepperstone expiran por inactividad (hay que contarlo al planificar experimentos largos) y no había publicación automática del log (se subía a mano).",
+   "**Para el experimento 2 (⏳ pendiente):** Pepperstone permite varias cuentas demo, así que se pueden correr varias estrategias en paralelo, cada una en su cuenta, y compararlas. Las 5 correcciones de arriba deben estar desde el día uno."
+  ],
+  "title_i18n": {
+   "es": "CIERRE DEL EXPERIMENTO 1 DEL BOT — demo Pepperstone (2026-06-09 → 2026-08-10)",
+   "en": "CLOSING OF BOT EXPERIMENT 1 — Pepperstone demo (2026-06-09 → 2026-08-10)",
+   "pt": "ENCERRAMENTO DO EXPERIMENTO 1 DO BOT — demo Pepperstone (2026-06-09 → 2026-08-10)"
+  },
+  "items_i18n": {
+   "es": [
+    "**Resultado:** 61 días naturales (44 sesiones). Equity $50,000.00 → $50,472.11 (**+0.94%**). Pico $50,472.11 (2026-08-10), valle $48,840.49 (2026-06-26). La cuenta demo ya no es accesible (las demos de Pepperstone expiran por inactividad); los datos quedaron en experiments/forward_log.csv.",
+    "**Riesgo:** MaxDD **−2.43%**, peor día −1.44%, mejor día +1.21%, volatilidad anualizada 7.5%, 5 de 44 sesiones en risk-off (11%), 244 órdenes ejecutadas, VIX entre 14.9 y 22.2. Pérdida diaria −5% y drawdown máximo −10% (reglas tipo FTMO): nunca violadas.",
+    "**Veredicto 1 — la gestión de riesgo funcionó:** drawdown de −2.43% y volatilidad de 7.5% anual; el sistema hizo lo que prometía y nunca se acercó a los límites de una prop firm.",
+    "**Veredicto 2 — el retorno confirma el #57:** +0.94% en dos meses ≈ ~6% anualizado, pero sobre un período corto y favorable (el VIX nunca pasó de 22.2, sin crisis real). Este sistema protege, no genera alpha.",
+    "**Veredicto 3 — el filtro macro nunca se probó de verdad:** solo 5 días de risk-off, todos por señales suaves (crédito), nunca por un shock real. La protección ante un crash sigue sin validar en vivo.",
+    "**⚠️ Limitación 1 — horario vs. sesión:** a las 17:30 GER40, UK100 y SpotBrent ya tienen el mercado cerrado y el bróker rechaza la orden (retcode 10018). Desde el 2026-06-23 esas 3 de 15 posiciones no pudieron cerrarse en el risk-off. Arreglo: ejecutar antes del cierre europeo o reintentar los rechazados al día siguiente.",
+    "**Bugs corregidos durante el test:** modo Hedge (2026-06-11: al reducir posiciones, las órdenes opuestas abrían shorts espejo; se resolvió cerrando por ticket FIFO) y peso 0 (2026-06-25: el risk-off nunca aplanaba porque un `continue` saltaba el cierre).",
+    "**Otras limitaciones:** las demos de Pepperstone expiran por inactividad (hay que contarlo al planificar experimentos largos) y no había publicación automática del log (se subía a mano).",
+    "**Para el experimento 2 (⏳ pendiente):** Pepperstone permite varias cuentas demo, así que se pueden correr varias estrategias en paralelo, cada una en su cuenta, y compararlas. Las 5 correcciones de arriba deben estar desde el día uno."
+   ],
+   "en": [
+    "**Result:** 61 calendar days (44 sessions). Equity $50,000.00 → $50,472.11 (**+0.94%**). Peak $50,472.11 (2026-08-10), trough $48,840.49 (2026-06-26). The demo account is no longer accessible (Pepperstone demos expire from inactivity); the data was kept in experiments/forward_log.csv.",
+    "**Risk:** MaxDD **−2.43%**, worst day −1.44%, best day +1.21%, annualized volatility 7.5%, 5 of 44 sessions in risk-off (11%), 244 orders executed, VIX between 14.9 and 22.2. Daily loss −5% and maximum drawdown −10% (FTMO-style rules): never violated.",
+    "**Verdict 1 — risk management worked:** drawdown of −2.43% and 7.5% annual volatility; the system did what it promised and never came close to a prop firm's limits.",
+    "**Verdict 2 — the return confirms #57:** +0.94% in two months ≈ ~6% annualized, but over a short, favorable period (VIX never went above 22.2, no real crisis). This system protects, it does not generate alpha.",
+    "**Verdict 3 — the macro filter was never truly tested:** only 5 risk-off days, all from soft signals (credit), never from a real shock. Crash protection is still unvalidated live.",
+    "**⚠️ Limitation 1 — schedule vs. market session:** at 17:30 GER40, UK100 and SpotBrent are already closed and the broker rejects the order (retcode 10018). From 2026-06-23 those 3 of 15 positions could not be closed during risk-off. Fix: execute before the European close or retry the rejected orders the next day.",
+    "**Bugs fixed during the test:** Hedge mode (2026-06-11: when reducing positions, opposite orders opened mirror shorts; solved by closing by FIFO ticket) and weight 0 (2026-06-25: risk-off never flattened because a `continue` skipped the close).",
+    "**Other limitations:** Pepperstone demos expire from inactivity (must be accounted for when planning long experiments) and there was no automatic log publishing (it was uploaded by hand).",
+    "**For experiment 2 (⏳ pending):** Pepperstone allows several demo accounts, so several strategies can run in parallel, each in its own account, and be compared. The 5 fixes above must be in place from day one."
+   ],
+   "pt": [
+    "**Resultado:** 61 dias corridos (44 sessões). Equity $50.000,00 → $50.472,11 (**+0,94%**). Pico $50.472,11 (2026-08-10), vale $48.840,49 (2026-06-26). A conta demo não está mais acessível (as demos da Pepperstone expiram por inatividade); os dados ficaram em experiments/forward_log.csv.",
+    "**Risco:** MaxDD **−2,43%**, pior dia −1,44%, melhor dia +1,21%, volatilidade anualizada 7,5%, 5 de 44 sessões em risk-off (11%), 244 ordens executadas, VIX entre 14,9 e 22,2. Perda diária −5% e drawdown máximo −10% (regras tipo FTMO): nunca violadas.",
+    "**Veredito 1 — a gestão de risco funcionou:** drawdown de −2,43% e volatilidade de 7,5% ao ano; o sistema fez o que prometia e nunca chegou perto dos limites de uma prop firm.",
+    "**Veredito 2 — o retorno confirma o #57:** +0,94% em dois meses ≈ ~6% anualizado, mas sobre um período curto e favorável (o VIX nunca passou de 22,2, sem crise real). Este sistema protege, não gera alpha.",
+    "**Veredito 3 — o filtro macro nunca foi testado de verdade:** apenas 5 dias de risk-off, todos por sinais suaves (crédito), nunca por um choque real. A proteção contra um crash continua sem validação ao vivo.",
+    "**⚠️ Limitação 1 — horário vs. sessão:** às 17:30 GER40, UK100 e SpotBrent já estão com o mercado fechado e a corretora rejeita a ordem (retcode 10018). Desde 2026-06-23 essas 3 de 15 posições não puderam ser fechadas no risk-off. Correção: executar antes do fechamento europeu ou reenviar as rejeitadas no dia seguinte.",
+    "**Bugs corrigidos durante o teste:** modo Hedge (2026-06-11: ao reduzir posições, as ordens opostas abriam shorts espelho; resolvido fechando por ticket FIFO) e peso 0 (2026-06-25: o risk-off nunca zerava porque um `continue` pulava o fechamento).",
+    "**Outras limitações:** as demos da Pepperstone expiram por inatividade (é preciso considerar isso ao planejar experimentos longos) e não havia publicação automática do log (era enviado à mão).",
+    "**Para o experimento 2 (⏳ pendente):** a Pepperstone permite várias contas demo, então dá para rodar várias estratégias em paralelo, cada uma em sua conta, e compará-las. As 5 correções acima devem estar prontas desde o primeiro dia."
+   ]
+  }
+ },
+ {
+  "title": "FORJA — beta gestionada para ingreso, rondas 2 a 6 (2026-07-07 → 2026-07-30)",
+  "emoji": "🔨",
+  "items": [
+   "**Qué es:** sistema calibrado de beta gestionada para ingreso (no busca alpha). Hipótesis curadas, no minadas, en 14 universos (portafolios combinados más U1–U12), con costos de 3 bps por turnover, lag-1 y filtros de riesgo. Estado de forja.json al 2026-07-10: 42 pruebas, 7 viables (4 carteras y 3 estrategias), 13 candidatas y 22 descartadas.",
+   "**Ronda 2 (2026-07-07) — bonos y all-weather:** el universo U12 de bonos (MA200 y vol-target 10%) quedó descartado en sus 2 pruebas; los CFD de bonos son solo precio, sin cupón, así que el retorno está subestimado. La cartera all-weather salió viable 5/5: MaxDD −8% vs −28% del Buy&Hold, Calmar 0.47 vs 0.17, CAGR 3.8%.",
+   "**Lo que salió PEOR — risk-parity mensual:** la cartera 3 mercados con risk-parity mensual rinde CAGR 2.8% (vs 4.7%), MaxDD −15.7% (vs −11.7%) y Calmar 0.18 (vs 0.40); la versión risk-parity de índices del mundo quedó descartada. Se mantiene el equal-weight como versión principal.",
+   "**Rondas 3 y 3.1 (2026-07-07) — honestidad del 2×, retiros y Top 5:** el 2× ahora incluye el costo de financiamiento (tasa USD + 3% de spread del bróker); simulación de retiros con ventanas móviles de 5 y 10 años sobre $100,000. Retiro mensual perpetuo simulado: 3 mercados $175 (Buy&Hold $0), all-weather $125 (Buy&Hold $25), índices del mundo $150 (aquí el Buy&Hold aguanta más: $225) y la versión risk-parity de 3 mercados $0.",
+   "**Top 5 publicado:** 1) Vol-targeting 10% en índices US (viable, Calmar 0.54, MaxDD −16% vs −33%, CAGR 8.5%); 2) cartera all-weather; 3) cartera 3 mercados; 4) cartera índices del mundo; 5) Tendencia MA200 en índices US (candidata, Calmar 0.47, MaxDD −18% vs −33%).",
+   "**Reto de fondeo, otra vez −EV:** la probabilidad de pasar un challenge alcanza su pico en ~20% a 2×–3× según la estrategia (máx 20.1%) y cae a 5× (entre 1.8% y 9.2%). Sigue sin valer la pena pagar challenges.",
+   "**Ronda 4 (2026-07-10) — OOS 2025-26 con datos jamás vistos (2025-01-01 → 2026-07-10), estrategias congeladas.** Lo malo primero: en 3 de las 5 entradas el retorno quedó por debajo del Buy&Hold (vol-target US +15.3% vs +35.3%, índices del mundo +14.5% vs +32.2%, MA200 US +21.3% vs +35.3%). Lo bueno: la protección se mantuvo en las 5, con MaxDD menor que el Buy&Hold (all-weather −6.3% vs −11.2%; 3 mercados −7.7% vs −14.1%), y all-weather (+21.1% vs +19.4%) y 3 mercados (+22.6% vs +21.2%) incluso rindieron más.",
+   "**Micro-correcciones de la ronda 4:** el retiro de la cartera risk-parity se corrigió a $0 (regla: el mínimo entre el 60% del CAGR y el retiro perpetuo) y se actualizó el texto del reto de fondeo. Además arrancó el forward test (ver el capítulo del forward test).",
+   "**Rondas 5, 5.1 y 5.2 (2026-07-24):** zonas de posición estilo MT5 para el forward; del mini-gráfico de línea se pasó a velas japonesas interactivas con línea de entrada. Solo visualización: 0 cambios a estrategias.",
+   "**Ronda 6 (2026-07-30):** traducción al portugués completada (es, en y pt tienen hoy 282 claves cada uno en la web), pestaña «Bot en vivo» publicada con datos reales del forward_log.csv y su letra pequeña honesta, y plantilla del cierre del experimento 1. Sin tocar el bot en ejecución ni las estrategias."
+  ],
+  "title_i18n": {
+   "es": "FORJA — beta gestionada para ingreso, rondas 2 a 6 (2026-07-07 → 2026-07-30)",
+   "en": "FORJA — managed beta for income, rounds 2 to 6 (2026-07-07 → 2026-07-30)",
+   "pt": "FORJA — beta gerenciada para renda, rodadas 2 a 6 (2026-07-07 → 2026-07-30)"
+  },
+  "items_i18n": {
+   "es": [
+    "**Qué es:** sistema calibrado de beta gestionada para ingreso (no busca alpha). Hipótesis curadas, no minadas, en 14 universos (portafolios combinados más U1–U12), con costos de 3 bps por turnover, lag-1 y filtros de riesgo. Estado de forja.json al 2026-07-10: 42 pruebas, 7 viables (4 carteras y 3 estrategias), 13 candidatas y 22 descartadas.",
+    "**Ronda 2 (2026-07-07) — bonos y all-weather:** el universo U12 de bonos (MA200 y vol-target 10%) quedó descartado en sus 2 pruebas; los CFD de bonos son solo precio, sin cupón, así que el retorno está subestimado. La cartera all-weather salió viable 5/5: MaxDD −8% vs −28% del Buy&Hold, Calmar 0.47 vs 0.17, CAGR 3.8%.",
+    "**Lo que salió PEOR — risk-parity mensual:** la cartera 3 mercados con risk-parity mensual rinde CAGR 2.8% (vs 4.7%), MaxDD −15.7% (vs −11.7%) y Calmar 0.18 (vs 0.40); la versión risk-parity de índices del mundo quedó descartada. Se mantiene el equal-weight como versión principal.",
+    "**Rondas 3 y 3.1 (2026-07-07) — honestidad del 2×, retiros y Top 5:** el 2× ahora incluye el costo de financiamiento (tasa USD + 3% de spread del bróker); simulación de retiros con ventanas móviles de 5 y 10 años sobre $100,000. Retiro mensual perpetuo simulado: 3 mercados $175 (Buy&Hold $0), all-weather $125 (Buy&Hold $25), índices del mundo $150 (aquí el Buy&Hold aguanta más: $225) y la versión risk-parity de 3 mercados $0.",
+    "**Top 5 publicado:** 1) Vol-targeting 10% en índices US (viable, Calmar 0.54, MaxDD −16% vs −33%, CAGR 8.5%); 2) cartera all-weather; 3) cartera 3 mercados; 4) cartera índices del mundo; 5) Tendencia MA200 en índices US (candidata, Calmar 0.47, MaxDD −18% vs −33%).",
+    "**Reto de fondeo, otra vez −EV:** la probabilidad de pasar un challenge alcanza su pico en ~20% a 2×–3× según la estrategia (máx 20.1%) y cae a 5× (entre 1.8% y 9.2%). Sigue sin valer la pena pagar challenges.",
+    "**Ronda 4 (2026-07-10) — OOS 2025-26 con datos jamás vistos (2025-01-01 → 2026-07-10), estrategias congeladas.** Lo malo primero: en 3 de las 5 entradas el retorno quedó por debajo del Buy&Hold (vol-target US +15.3% vs +35.3%, índices del mundo +14.5% vs +32.2%, MA200 US +21.3% vs +35.3%). Lo bueno: la protección se mantuvo en las 5, con MaxDD menor que el Buy&Hold (all-weather −6.3% vs −11.2%; 3 mercados −7.7% vs −14.1%), y all-weather (+21.1% vs +19.4%) y 3 mercados (+22.6% vs +21.2%) incluso rindieron más.",
+    "**Micro-correcciones de la ronda 4:** el retiro de la cartera risk-parity se corrigió a $0 (regla: el mínimo entre el 60% del CAGR y el retiro perpetuo) y se actualizó el texto del reto de fondeo. Además arrancó el forward test (ver el capítulo del forward test).",
+    "**Rondas 5, 5.1 y 5.2 (2026-07-24):** zonas de posición estilo MT5 para el forward; del mini-gráfico de línea se pasó a velas japonesas interactivas con línea de entrada. Solo visualización: 0 cambios a estrategias.",
+    "**Ronda 6 (2026-07-30):** traducción al portugués completada (es, en y pt tienen hoy 282 claves cada uno en la web), pestaña «Bot en vivo» publicada con datos reales del forward_log.csv y su letra pequeña honesta, y plantilla del cierre del experimento 1. Sin tocar el bot en ejecución ni las estrategias."
+   ],
+   "en": [
+    "**What it is:** a calibrated managed-beta system for income (it does not look for alpha). Curated, not mined, hypotheses across 14 universes (combined portfolios plus U1–U12), with costs of 3 bps per turnover, lag-1 and risk filters. State of forja.json on 2026-07-10: 42 tests, 7 viable (4 portfolios and 3 strategies), 13 candidates and 22 discarded.",
+    "**Round 2 (2026-07-07) — bonds and all-weather:** the bonds universe U12 (MA200 and vol-target 10%) was discarded in both tests; bond CFDs are price-only, with no coupon, so the return is understated. The all-weather portfolio came out viable 5/5: MaxDD −8% vs −28% for Buy&Hold, Calmar 0.47 vs 0.17, CAGR 3.8%.",
+    "**What came out WORSE — monthly risk-parity:** the 3-markets portfolio with monthly risk-parity yields CAGR 2.8% (vs 4.7%), MaxDD −15.7% (vs −11.7%) and Calmar 0.18 (vs 0.40); the risk-parity version of world indices was discarded. Equal-weight stays as the main version.",
+    "**Rounds 3 and 3.1 (2026-07-07) — honest 2×, withdrawals and Top 5:** the 2× now includes the financing cost (USD rate + 3% broker spread); withdrawal simulation with rolling 5- and 10-year windows on $100,000. Simulated perpetual monthly withdrawal: 3 markets $175 (Buy&Hold $0), all-weather $125 (Buy&Hold $25), world indices $150 (here Buy&Hold holds up better: $225) and the risk-parity 3-markets version $0.",
+    "**Published Top 5:** 1) Vol-targeting 10% on US indices (viable, Calmar 0.54, MaxDD −16% vs −33%, CAGR 8.5%); 2) all-weather portfolio; 3) 3-markets portfolio; 4) world indices portfolio; 5) MA200 trend on US indices (candidate, Calmar 0.47, MaxDD −18% vs −33%).",
+    "**Funding challenge, −EV once more:** the probability of passing a challenge peaks at ~20% at 2×–3× depending on the strategy (max 20.1%) and drops at 5× (between 1.8% and 9.2%). Paying for challenges is still not worth it.",
+    "**Round 4 (2026-07-10) — OOS 2025-26 on never-seen data (2025-01-01 → 2026-07-10), frozen strategies.** The bad first: in 3 of the 5 entries the return fell short of Buy&Hold (US vol-target +15.3% vs +35.3%, world indices +14.5% vs +32.2%, US MA200 +21.3% vs +35.3%). The good: protection held in all 5, with a lower MaxDD than Buy&Hold (all-weather −6.3% vs −11.2%; 3 markets −7.7% vs −14.1%), and all-weather (+21.1% vs +19.4%) and 3 markets (+22.6% vs +21.2%) even returned more.",
+    "**Round 4 micro-fixes:** the risk-parity portfolio's withdrawal was corrected to $0 (rule: the minimum of 60% of CAGR and the perpetual withdrawal) and the funding-challenge text was updated. The forward test also started (see the forward test chapter).",
+    "**Rounds 5, 5.1 and 5.2 (2026-07-24):** MT5-style position zones for the forward; the line mini-chart was replaced by interactive candlesticks with an entry line. Visualization only: 0 changes to strategies.",
+    "**Round 6 (2026-07-30):** Portuguese translation completed (es, en and pt currently have 282 keys each on the website), «Live bot» tab published with real data from forward_log.csv and its honest fine print, and a template for the closing of experiment 1. The running bot and the strategies were not touched."
+   ],
+   "pt": [
+    "**O que é:** sistema calibrado de beta gerenciada para renda (não busca alpha). Hipóteses curadas, não mineradas, em 14 universos (portfólios combinados mais U1–U12), com custos de 3 bps por turnover, lag-1 e filtros de risco. Estado do forja.json em 2026-07-10: 42 testes, 7 viáveis (4 carteiras e 3 estratégias), 13 candidatas e 22 descartadas.",
+    "**Rodada 2 (2026-07-07) — títulos e all-weather:** o universo U12 de títulos (MA200 e vol-target 10%) ficou descartado nos 2 testes; os CFDs de títulos são só preço, sem cupom, então o retorno fica subestimado. A carteira all-weather saiu viável 5/5: MaxDD −8% vs −28% do Buy&Hold, Calmar 0,47 vs 0,17, CAGR 3,8%.",
+    "**O que saiu PIOR — risk-parity mensal:** a carteira 3 mercados com risk-parity mensal rende CAGR 2,8% (vs 4,7%), MaxDD −15,7% (vs −11,7%) e Calmar 0,18 (vs 0,40); a versão risk-parity de índices do mundo ficou descartada. O equal-weight continua como versão principal.",
+    "**Rodadas 3 e 3.1 (2026-07-07) — honestidade do 2×, retiradas e Top 5:** o 2× agora inclui o custo de financiamento (taxa USD + 3% de spread da corretora); simulação de retiradas com janelas móveis de 5 e 10 anos sobre $100.000. Retirada mensal perpétua simulada: 3 mercados $175 (Buy&Hold $0), all-weather $125 (Buy&Hold $25), índices do mundo $150 (aqui o Buy&Hold aguenta mais: $225) e a versão risk-parity de 3 mercados $0.",
+    "**Top 5 publicado:** 1) Vol-targeting 10% em índices US (viável, Calmar 0,54, MaxDD −16% vs −33%, CAGR 8,5%); 2) carteira all-weather; 3) carteira 3 mercados; 4) carteira índices do mundo; 5) Tendência MA200 em índices US (candidata, Calmar 0,47, MaxDD −18% vs −33%).",
+    "**Desafio de funding, −EV de novo:** a probabilidade de passar um challenge chega ao pico de ~20% a 2×–3× conforme a estratégia (máx. 20,1%) e cai a 5× (entre 1,8% e 9,2%). Continua não valendo a pena pagar challenges.",
+    "**Rodada 4 (2026-07-10) — OOS 2025-26 com dados nunca vistos (2025-01-01 → 2026-07-10), estratégias congeladas.** O ruim primeiro: em 3 das 5 entradas o retorno ficou abaixo do Buy&Hold (vol-target US +15,3% vs +35,3%, índices do mundo +14,5% vs +32,2%, MA200 US +21,3% vs +35,3%). O bom: a proteção se manteve nas 5, com MaxDD menor que o do Buy&Hold (all-weather −6,3% vs −11,2%; 3 mercados −7,7% vs −14,1%), e all-weather (+21,1% vs +19,4%) e 3 mercados (+22,6% vs +21,2%) até renderam mais.",
+    "**Microcorreções da rodada 4:** a retirada da carteira risk-parity foi corrigida para $0 (regra: o mínimo entre 60% do CAGR e a retirada perpétua) e o texto do desafio de funding foi atualizado. Além disso, o forward test começou (ver o capítulo do forward test).",
+    "**Rodadas 5, 5.1 e 5.2 (2026-07-24):** zonas de posição estilo MT5 para o forward; o minigráfico de linha foi trocado por candles interativos com linha de entrada. Apenas visualização: 0 mudanças nas estratégias.",
+    "**Rodada 6 (2026-07-30):** tradução para o português concluída (es, en e pt têm hoje 282 chaves cada um na web), aba «Bot ao vivo» publicada com dados reais do forward_log.csv e sua letra miúda honesta, e modelo do encerramento do experimento 1. Sem tocar no bot em execução nem nas estratégias."
+   ]
+  }
+ },
+ {
+  "title": "INFLUENCERS Y TIKTOKS — #83-#90 (2026-06-28)",
+  "emoji": "🎬",
+  "items": [
+   "**Balance de la tanda:** 8 experimentos, 6 murieron (#83, #84, #85, #86, #88, #89) y 2 quedaron neutrales (#87 no testeable, #90 índices). Ninguna estrategia de influencer bate al Buy&Hold. Los veredictos quedan registrados en la pestaña Experimentos y en estrategias-influencers.md.",
+   "**#83 EMAs a favor de tendencia (tier-list de TikTok):** 8 formas, 8/8 murieron (máx 1/5 filtros); el Buy&Hold (IS +0.13) les gana. Además se contradice (llama «mierda» a los indicadores y su favorito es una EMA) y aconseja operar sin stop loss e índices sintéticos.",
+   "**#84 Filtro multi-temporalidad (MA como filtro alto, entrada baja):** 12 formas, 12/12 murieron (máx 2/5). Varias tienen buen OOS1 (hasta +0.58) pero se desmoronan en OOS2 (hasta −1.01): funcionan en una época y colapsan en la otra.",
+   "**#85 TikTok 1 — breakout del rango del día previo + retroceso (ProRealAlgos, «71% de aciertos»):** 6 formas en daily, todas mueren y pierden fuerte (IS −1.0 a −1.6). Perseguir el rompimiento compra el techo; la parte de retroceso y vela es intradía discrecional.",
+   "**#86 TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR), «+30% al año, 30 años»:** 10 formas, 10/10 murieron (0/5) y la mayoría pierde fuerte (OOS2 hasta −1.55). Entrar en la vela de mayor volumen es comprar el clímax; piramidar sobre una entrada sin edge solo amplifica la pérdida.",
+   "**#87 TikTok 3 — noticias + breaker block (ICT):** neutral, no testeable de forma mecánica (requiere calendario de noticias y conceptos ICT discrecionales). Lo relacionado que sí se probó, el sentimiento y las noticias (#56), ya falló.",
+   "**#88 TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30, «+214%, 20 años»:** murió. El ORB intradía ya se había probado en el #6 (EUR/USD M1, Sharpe −0.96) y su núcleo de breakout en daily también pierde (#85).",
+   "**#89 TikTok 5 — Candle Range Theory (sweep + FVG):** 8 formas del núcleo sweep-reversión en daily, ninguna sobrevive y pierden duro (IS −0.8 a −1.7). Tanto el breakout (TikTok 1 y 4) como su opuesto, el fade, pierden: no hay edge direccional y manda la fricción.",
+   "**#90 ¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)?** Con SP500, NAS100, DAX y FTSE100 (2012-2024), la tendencia (MA, EMA, momentum) sí gana dinero (entre +$6k y +$15k, según la variante), mientras que en FX moría. Pero ninguna bate al Buy&Hold de los índices (+$29,368, Sharpe 0.68): es beta, no alpha. Los setups de TikTok (breakout, sweep, volumen) fallan incluso en índices.",
+   "**Entrada #6 del registro de influencers (agosto de 2026) — @tradingstraty, breakout de volatilidad normalizada en NQ 30m:** 11,224 variantes sobre 161,700 barras (2012-2026). La mejor in-sample (PF 1.20, Sharpe 1.16) no llega a lo anunciado (PF 1.30, Sharpe 1.40) y fuera de muestra cae a PF 0.88 y Sharpe −0.99 (−20,413 puntos). Deflated Sharpe 0.0000; ninguna de las 83 mejores in-sample alcanza lo anunciado en OOS; el Buy&Hold del NQ da Sharpe 0.75. ❌ No sirve."
+  ],
+  "title_i18n": {
+   "es": "INFLUENCERS Y TIKTOKS — #83-#90 (2026-06-28)",
+   "en": "INFLUENCERS AND TIKTOKS — #83-#90 (2026-06-28)",
+   "pt": "INFLUENCERS E TIKTOKS — #83-#90 (2026-06-28)"
+  },
+  "items_i18n": {
+   "es": [
+    "**Balance de la tanda:** 8 experimentos, 6 murieron (#83, #84, #85, #86, #88, #89) y 2 quedaron neutrales (#87 no testeable, #90 índices). Ninguna estrategia de influencer bate al Buy&Hold. Los veredictos quedan registrados en la pestaña Experimentos y en estrategias-influencers.md.",
+    "**#83 EMAs a favor de tendencia (tier-list de TikTok):** 8 formas, 8/8 murieron (máx 1/5 filtros); el Buy&Hold (IS +0.13) les gana. Además se contradice (llama «mierda» a los indicadores y su favorito es una EMA) y aconseja operar sin stop loss e índices sintéticos.",
+    "**#84 Filtro multi-temporalidad (MA como filtro alto, entrada baja):** 12 formas, 12/12 murieron (máx 2/5). Varias tienen buen OOS1 (hasta +0.58) pero se desmoronan en OOS2 (hasta −1.01): funcionan en una época y colapsan en la otra.",
+    "**#85 TikTok 1 — breakout del rango del día previo + retroceso (ProRealAlgos, «71% de aciertos»):** 6 formas en daily, todas mueren y pierden fuerte (IS −1.0 a −1.6). Perseguir el rompimiento compra el techo; la parte de retroceso y vela es intradía discrecional.",
+    "**#86 TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR), «+30% al año, 30 años»:** 10 formas, 10/10 murieron (0/5) y la mayoría pierde fuerte (OOS2 hasta −1.55). Entrar en la vela de mayor volumen es comprar el clímax; piramidar sobre una entrada sin edge solo amplifica la pérdida.",
+    "**#87 TikTok 3 — noticias + breaker block (ICT):** neutral, no testeable de forma mecánica (requiere calendario de noticias y conceptos ICT discrecionales). Lo relacionado que sí se probó, el sentimiento y las noticias (#56), ya falló.",
+    "**#88 TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30, «+214%, 20 años»:** murió. El ORB intradía ya se había probado en el #6 (EUR/USD M1, Sharpe −0.96) y su núcleo de breakout en daily también pierde (#85).",
+    "**#89 TikTok 5 — Candle Range Theory (sweep + FVG):** 8 formas del núcleo sweep-reversión en daily, ninguna sobrevive y pierden duro (IS −0.8 a −1.7). Tanto el breakout (TikTok 1 y 4) como su opuesto, el fade, pierden: no hay edge direccional y manda la fricción.",
+    "**#90 ¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)?** Con SP500, NAS100, DAX y FTSE100 (2012-2024), la tendencia (MA, EMA, momentum) sí gana dinero (entre +$6k y +$15k, según la variante), mientras que en FX moría. Pero ninguna bate al Buy&Hold de los índices (+$29,368, Sharpe 0.68): es beta, no alpha. Los setups de TikTok (breakout, sweep, volumen) fallan incluso en índices.",
+    "**Entrada #6 del registro de influencers (agosto de 2026) — @tradingstraty, breakout de volatilidad normalizada en NQ 30m:** 11,224 variantes sobre 161,700 barras (2012-2026). La mejor in-sample (PF 1.20, Sharpe 1.16) no llega a lo anunciado (PF 1.30, Sharpe 1.40) y fuera de muestra cae a PF 0.88 y Sharpe −0.99 (−20,413 puntos). Deflated Sharpe 0.0000; ninguna de las 83 mejores in-sample alcanza lo anunciado en OOS; el Buy&Hold del NQ da Sharpe 0.75. ❌ No sirve."
+   ],
+   "en": [
+    "**Batch summary:** 8 experiments, 6 died (#83, #84, #85, #86, #88, #89) and 2 ended up neutral (#87 not testable, #90 indices). No influencer strategy beats Buy&Hold. The verdicts are recorded in the Experiments tab and in estrategias-influencers.md.",
+    "**#83 Trend-following EMAs (TikTok tier list):** 8 forms, 8/8 died (max 1/5 filters); Buy&Hold (IS +0.13) beats them. It also contradicts itself (calls indicators garbage while its favorite is an EMA) and advises trading without a stop loss and on synthetic indices.",
+    "**#84 Multi-timeframe filter (MA as high-timeframe filter, low-timeframe entry):** 12 forms, 12/12 died (max 2/5). Several have a good OOS1 (up to +0.58) but fall apart in OOS2 (down to −1.01): they work in one era and collapse in the other.",
+    "**#85 TikTok 1 — previous-day range breakout + pullback (ProRealAlgos, «71% win rate»):** 6 forms on daily, all die and lose heavily (IS −1.0 to −1.6). Chasing the breakout buys the top; the pullback and candle part is discretionary intraday.",
+    "**#86 TikTok 2 — MA200 trend-following + high-volume/range candle (ADR), «+30% a year, 30 years»:** 10 forms, 10/10 died (0/5) and most lose heavily (OOS2 down to −1.55). Entering on the highest-volume candle is buying the climax; pyramiding onto an entry with no edge only amplifies the loss.",
+    "**#87 TikTok 3 — news + breaker block (ICT):** neutral, not mechanically testable (needs a news calendar and discretionary ICT concepts). The related thing that was tested, sentiment and news (#56), already failed.",
+    "**#88 TikTok 4 — Nasdaq 9:30 ORB (Opening Range Breakout), «+214%, 20 years»:** died. The intraday ORB had already been tested in #6 (EUR/USD M1, Sharpe −0.96) and its breakout core on daily also loses (#85).",
+    "**#89 TikTok 5 — Candle Range Theory (sweep + FVG):** 8 forms of the sweep-reversal core on daily, none survive and they lose hard (IS −0.8 to −1.7). Both the breakout (TikTok 1 and 4) and its opposite, the fade, lose: there is no directional edge and friction rules.",
+    "**#90 Does it change if I test on INDICES (what influencers say)?** On SP500, NAS100, DAX and FTSE100 (2012-2024), trend (MA, EMA, momentum) does make money (between +$6k and +$15k, depending on the variant), whereas in FX it died. But none beats the indices' Buy&Hold (+$29,368, Sharpe 0.68): it is beta, not alpha. The TikTok setups (breakout, sweep, volume) fail even on indices.",
+    "**Entry #6 of the influencer log (August 2026) — @tradingstraty, normalized-volatility breakout on NQ 30m:** 11,224 variants over 161,700 bars (2012-2026). The best in-sample (PF 1.20, Sharpe 1.16) falls short of what was advertised (PF 1.30, Sharpe 1.40) and out of sample drops to PF 0.88 and Sharpe −0.99 (−20,413 points). Deflated Sharpe 0.0000; none of the top 83 in-sample reaches the advertised level in OOS; NQ Buy&Hold gives Sharpe 0.75. ❌ It does not work."
+   ],
+   "pt": [
+    "**Balanço da leva:** 8 experimentos, 6 morreram (#83, #84, #85, #86, #88, #89) e 2 ficaram neutros (#87 não testável, #90 índices). Nenhuma estratégia de influencer bate o Buy&Hold. Os veredictos ficam registrados na aba Experimentos e em estrategias-influencers.md.",
+    "**#83 EMAs a favor da tendência (tier list do TikTok):** 8 formas, 8/8 morreram (máx. 1/5 filtros); o Buy&Hold (IS +0,13) vence todas. Além disso se contradiz (chama os indicadores de lixo e seu favorito é uma EMA) e aconselha operar sem stop loss e em índices sintéticos.",
+    "**#84 Filtro multi-temporalidade (MA como filtro alto, entrada baixa):** 12 formas, 12/12 morreram (máx. 2/5). Várias têm bom OOS1 (até +0,58) mas desmoronam no OOS2 (até −1,01): funcionam numa época e colapsam na outra.",
+    "**#85 TikTok 1 — breakout do range do dia anterior + retração (ProRealAlgos, «71% de acerto»):** 6 formas em daily, todas morrem e perdem forte (IS −1,0 a −1,6). Perseguir o rompimento compra o topo; a parte de retração e candle é intradiária discricionária.",
+    "**#86 TikTok 2 — MA200 a favor da tendência + candle de alto volume/range (ADR), «+30% ao ano, 30 anos»:** 10 formas, 10/10 morreram (0/5) e a maioria perde forte (OOS2 até −1,55). Entrar no candle de maior volume é comprar o clímax; piramidar sobre uma entrada sem edge só amplifica a perda.",
+    "**#87 TikTok 3 — notícias + breaker block (ICT):** neutro, não testável de forma mecânica (exige calendário de notícias e conceitos ICT discricionários). O que é relacionado e foi testado, sentimento e notícias (#56), já falhou.",
+    "**#88 TikTok 4 — ORB (Opening Range Breakout) da Nasdaq 9:30, «+214%, 20 anos»:** morreu. O ORB intradiário já tinha sido testado no #6 (EUR/USD M1, Sharpe −0,96) e seu núcleo de breakout em daily também perde (#85).",
+    "**#89 TikTok 5 — Candle Range Theory (sweep + FVG):** 8 formas do núcleo sweep-reversão em daily, nenhuma sobrevive e perdem duro (IS −0,8 a −1,7). Tanto o breakout (TikTok 1 e 4) quanto seu oposto, o fade, perdem: não há edge direcional e quem manda é o atrito.",
+    "**#90 Muda se eu testar em ÍNDICES (o que os influencers dizem)?** Com SP500, NAS100, DAX e FTSE100 (2012-2024), a tendência (MA, EMA, momentum) ganha dinheiro (entre +$6k e +$15k, conforme a variante), enquanto em FX morria. Mas nenhuma bate o Buy&Hold dos índices (+$29.368, Sharpe 0,68): é beta, não alpha. Os setups do TikTok (breakout, sweep, volume) falham até em índices.",
+    "**Entrada #6 do registro de influencers (agosto de 2026) — @tradingstraty, breakout de volatilidade normalizada no NQ 30m:** 11.224 variantes sobre 161.700 barras (2012-2026). A melhor in-sample (PF 1,20, Sharpe 1,16) não chega ao anunciado (PF 1,30, Sharpe 1,40) e fora da amostra cai para PF 0,88 e Sharpe −0,99 (−20.413 pontos). Deflated Sharpe 0,0000; nenhuma das 83 melhores in-sample alcança o anunciado no OOS; o Buy&Hold do NQ dá Sharpe 0,75. ❌ Não serve."
+   ]
+  }
+ },
+ {
   "title": "LABORATORIO AUTOMÁTICO — 34,751 estrategias (2026-06-28)",
   "emoji": "🤖",
   "items": [
@@ -46,7 +372,7 @@
    "**🥇 PIVOTE A INGRESOS (la prioridad #1, sin capital):** vender la habilidad. El laboratorio de 80 experimentos + la web atlas-lab ES el portafolio. Upwork/empleos/artículo. **Aquí está el dinero rápido y sin capital.**",
    "**📊 Plan de ingreso con vol-targeting (para cuando haya capital):** implementarlo con ETFs en un broker normal (NO necesita opciones). ~8%/año con riesgo controlado. Es inversión sensata, no jackpot; necesita capital.",
    "**🛡️ VRP en IBKR paper (pendiente, gratis):** testear el único edge real con opciones simuladas, sin capital. Pieza de portafolio fuerte. Requiere abrir cuenta IBKR (KYC) + IB Gateway.",
-   "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva.",
+   "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva. **Actualización 2026-10-16:** cerrado el 2026-08-10 (+0.94%, MaxDD −2.43%); ver el capítulo «CIERRE DEL EXPERIMENTO 1 DEL BOT».",
    "**🔬 Testear estrategias nuevas a demanda:** con `/probar-estrategia`, cualquier afirmación de influencer/curso → veredicto documentado.",
    "**❌ Lo que NO hacer:** pagar challenges de prop firms (−EV probado #9-40); pagar cursos/links de influencers (sus estrategias son las que ya probamos, muertas); buscar más \"alpha\" en datos retail (el muro es real)."
   ],
@@ -69,7 +395,7 @@
     "**🥇 PIVOTE A INGRESOS (la prioridad #1, sin capital):** vender la habilidad. El laboratorio de 80 experimentos + la web atlas-lab ES el portafolio. Upwork/empleos/artículo. **Aquí está el dinero rápido y sin capital.**",
     "**📊 Plan de ingreso con vol-targeting (para cuando haya capital):** implementarlo con ETFs en un broker normal (NO necesita opciones). ~8%/año con riesgo controlado. Es inversión sensata, no jackpot; necesita capital.",
     "**🛡️ VRP en IBKR paper (pendiente, gratis):** testear el único edge real con opciones simuladas, sin capital. Pieza de portafolio fuerte. Requiere abrir cuenta IBKR (KYC) + IB Gateway.",
-    "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva.",
+    "**🤖 Forward test del bot:** sigue corriendo en demo (NO tocar hasta terminar) como instrumento de medición + pieza viva. **Actualización 2026-10-16:** cerrado el 2026-08-10 (+0.94%, MaxDD −2.43%); ver el capítulo «CIERRE DEL EXPERIMENTO 1 DEL BOT».",
     "**🔬 Testear estrategias nuevas a demanda:** con `/probar-estrategia`, cualquier afirmación de influencer/curso → veredicto documentado.",
     "**❌ Lo que NO hacer:** pagar challenges de prop firms (−EV probado #9-40); pagar cursos/links de influencers (sus estrategias son las que ya probamos, muertas); buscar más \"alpha\" en datos retail (el muro es real)."
    ],
@@ -86,7 +412,7 @@
     "**🥇 PIVOT TO INCOME (priority #1, no capital):** sell the skill. The 80-experiment lab + the atlas-lab site IS the portfolio. Upwork/jobs/article. **This is the fast money, no capital needed.**",
     "**📊 Income plan with vol-targeting (for when there's capital):** implement it with ETFs in a normal broker (NO options needed). ~8%/year with controlled risk. Sensible investing, not a jackpot; needs capital.",
     "**🛡️ VRP on IBKR paper (pending, free):** test the only real edge with simulated options, no capital. Strong portfolio piece. Requires opening an IBKR account (KYC) + IB Gateway.",
-    "**🤖 Bot forward test:** still running on demo (NOT touched until it ends) as a measurement instrument + living piece.",
+    "**🤖 Bot forward test:** still running on demo (NOT touched until it ends) as a measurement instrument + living piece. **Update 2026-10-16:** closed on 2026-08-10 (+0.94%, MaxDD −2.43%); see the chapter «CLOSING OF BOT EXPERIMENT 1».",
     "**🔬 Test new strategies on demand:** with `/probar-estrategia`, any influencer/course claim → documented verdict.",
     "**❌ What NOT to do:** pay prop-firm challenges (−EV proven #9-40); pay influencer courses/links (their strategies are the ones we already tested, dead); search for more 'alpha' in retail data (the wall is real)."
    ],
@@ -103,7 +429,7 @@
     "**🥇 PIVÔ PARA RENDA (prioridade #1, sem capital):** vender a habilidade. O laboratório de 80 experimentos + o site atlas-lab É o portfólio. Upwork/empregos/artigo. **Aqui está o dinheiro rápido, sem capital.**",
     "**📊 Plano de renda com vol-targeting (para quando houver capital):** implementá-lo com ETFs num broker normal (NÃO precisa de opções). ~8%/ano com risco controlado. Investimento sensato, não jackpot; precisa de capital.",
     "**🛡️ VRP em IBKR paper (pendente, grátis):** testar o único edge real com opções simuladas, sem capital. Peça de portfólio forte. Requer abrir conta IBKR (KYC) + IB Gateway.",
-    "**🤖 Forward test do bot:** continua rodando em demo (NÃO tocar até terminar) como instrumento de medição + peça viva.",
+    "**🤖 Forward test do bot:** continua rodando em demo (NÃO tocar até terminar) como instrumento de medição + peça viva. **Atualização 2026-10-16:** encerrado em 2026-08-10 (+0,94%, MaxDD −2,43%); ver o capítulo «ENCERRAMENTO DO EXPERIMENTO 1 DO BOT».",
     "**🔬 Testar estratégias novas sob demanda:** com `/probar-estrategia`, qualquer afirmação de influencer/curso → veredicto documentado.",
     "**❌ O que NÃO fazer:** pagar challenges de prop firms (−EV provado #9-40); pagar cursos/links de influencers (suas estratégias são as que já testamos, mortas); buscar mais 'alpha' em dados retail (o muro é real)."
    ]
@@ -171,7 +497,7 @@
   "title_i18n": {
    "es": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)",
    "en": "FINAL VERDICT — 40 EXPERIMENTS (2026-06-10)",
-   "pt": "VEREDICTO FINAL — 40 EXPERIMENTOS (2026-06-10)"
+   "pt": "VEREDITO FINAL — 40 EXPERIMENTOS (2026-06-10)"
   },
   "items_i18n": {
    "es": [
