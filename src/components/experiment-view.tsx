@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { EquityChart } from "@/components/equity-chart";
 import { ExpReclassNotice } from "@/components/exp-reclass-notice";
 import { ExpAlgoCard } from "@/components/exp-algo-card";
+import { ExpDataCard, ExpEquityTitle } from "@/components/exp-data-card";
 import { ExpFiltersCard } from "@/components/exp-filters-card";
 import { ExpCurveFallback } from "@/components/exp-curve-fallback";
 import { fmtMetric, metricLabel, cn } from "@/lib/utils";
@@ -91,13 +92,13 @@ export function ExperimentView({
 
       {series.length > 0 ? (
         <Card className="mt-8 p-5">
-          <div className="mb-3 text-sm font-medium">{t("detail.equity")}</div>
+          <ExpEquityTitle data={detail?.data} />
           <EquityChart series={series} />
         </Card>
       ) : (
         <ExpCurveFallback forms={exp.forms ?? []} />
       )}
-      {detail && <ExpAlgoCard detail={detail} />}
+      {detail && (<><ExpAlgoCard detail={detail} /><ExpDataCard data={detail.data} /></>)}
       {detail && <ExpFiltersCard filters={detail.filters} />}
 
       {metrics.length > 0 && (

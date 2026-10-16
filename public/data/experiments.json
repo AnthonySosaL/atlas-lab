@@ -38,7 +38,7 @@
   },
   "forms": [],
   "status": "neutral",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false
  },
@@ -171,9 +171,9 @@
   },
   "params": {},
   "verdict": {
-   "es": "no sirvió: el ORB ya lo probamos intradía en #6 (EUR/USD M1, Sharpe −0.96, pierde significativo); su núcleo (breakout) en daily también pierde (ver #85). Los breakouts en estos mercados revierten.",
-   "en": "did not work: we already tested ORB intraday in #6 (EUR/USD M1, Sharpe −0.96, significant loser); its core (breakout) on daily also loses (see #85). Breakouts in these markets mean-revert.",
-   "pt": "não serviu: o ORB já testamos intradia no #6 (EUR/USD M1, Sharpe −0.96, perde de forma significativa); seu núcleo (breakout) no daily também perde (ver #85). Os breakouts nestes mercados revertem."
+   "es": "no sirvió: probado directamente en el Nasdaq-100 (velas de 30 min, 2012-2026), 0 de 32 formas pasan. La forma literal (rango 9:30, objetivo 1:3) da Sharpe IS −1.73 y ni sin costos gana (−0.35); el Buy&Hold del Nasdaq la supera de lejos.",
+   "en": "didn't work: tested directly on the Nasdaq-100 (30-min bars, 2012-2026), 0 of 32 forms pass. The literal form (9:30 range, 1:3 target) has IS Sharpe −1.73 and loses even without costs (−0.35); Nasdaq Buy&Hold beats it by far.",
+   "pt": "não funcionou: testado diretamente no Nasdaq-100 (velas de 30 min, 2012-2026), 0 de 32 formas passam. A forma literal (faixa das 9:30, alvo 1:3) tem Sharpe IS −1,73 e perde mesmo sem custos (−0,35); o Buy&Hold do Nasdaq a supera com folga."
   },
   "notes": {
    "es": "",
@@ -183,22 +183,305 @@
   "metrics": {
    "ORB_intradia": "#6: Sharpe -0.96",
    "breakout_daily": "pierde (#85)",
-   "sobrevivieron": 0
+   "sobrevivieron": 0,
+   "prueba directa 2026-10-16": "0 de 32 formas pasan",
+   "forma literal Sharpe IS": -1.73,
+   "Sharpe IS sin costos": -0.35
   },
-  "forms": [],
-  "status": "neutral",
-  "has_equity": false,
-  "has_trades_chart": false,
-  "has_trades_csv": false,
-  "reclass": {
-   "from": "died",
-   "to": "neutral",
-   "reason": {
-    "es": "No se probó el ORB de Nasdaq directamente; el veredicto se infería de #6 (EUR/USD M1) y #85 (diario).",
-    "en": "The Nasdaq ORB was not tested directly; the verdict was inferred from #6 (EUR/USD M1) and #85 (daily).",
-    "pt": "O ORB do Nasdaq não foi testado diretamente; o veredito foi inferido do #6 (EUR/USD M1) e do #85 (diário)."
+  "forms": [
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -0.69,
+    "oos1": -1.46,
+    "oos2": -0.46,
+    "oos3": 0.23,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:3",
+    "is": -0.73,
+    "oos1": -1.48,
+    "oos2": -0.55,
+    "oos3": 0.14,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:2",
+    "is": -1.07,
+    "oos1": -1.38,
+    "oos2": -0.83,
+    "oos3": -0.26,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.18,
+    "oos1": -2.23,
+    "oos2": 0.04,
+    "oos3": 0.54,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.43,
+    "oos1": -1.11,
+    "oos2": 0.06,
+    "oos3": -0.74,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:2",
+    "is": -1.46,
+    "oos1": -1.28,
+    "oos2": 0.14,
+    "oos3": -1.09,
+    "dsr": 0.0,
+    "mc": 0.89
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:3",
+    "is": -1.49,
+    "oos1": -1.13,
+    "oos2": 0.1,
+    "oos3": -1.09,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:1",
+    "is": -1.54,
+    "oos1": -1.76,
+    "oos2": -0.29,
+    "oos3": -1.37,
+    "dsr": 0.0,
+    "mc": 0.84
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:1",
+    "is": -1.58,
+    "oos1": -1.33,
+    "oos2": -1.58,
+    "oos3": -0.65,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.7,
+    "oos1": -0.83,
+    "oos2": 0.32,
+    "oos3": -0.51,
+    "dsr": 0.0,
+    "mc": 0.47
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:3",
+    "is": -1.73,
+    "oos1": -1.02,
+    "oos2": 0.36,
+    "oos3": -0.67,
+    "dsr": 0.0,
+    "mc": 0.38
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:2",
+    "is": -1.8,
+    "oos1": -1.46,
+    "oos2": 0.22,
+    "oos3": -0.95,
+    "dsr": 0.0,
+    "mc": 0.36
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:1",
+    "is": -1.95,
+    "oos1": -1.67,
+    "oos2": -0.34,
+    "oos3": -0.71,
+    "dsr": 0.0,
+    "mc": 0.3
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:3",
+    "is": -2.5,
+    "oos1": -2.69,
+    "oos2": -1.21,
+    "oos3": -0.77,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -3.23,
+    "oos1": -1.96,
+    "oos2": -1.69,
+    "oos3": -2.21,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:3",
+    "is": -3.34,
+    "oos1": -2.4,
+    "oos2": -1.77,
+    "oos3": -3.07,
+    "dsr": 0.0,
+    "mc": 0.88
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:2",
+    "is": -3.5,
+    "oos1": -3.43,
+    "oos2": -2.17,
+    "oos3": -2.24,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:2",
+    "is": -3.57,
+    "oos1": -2.74,
+    "oos2": -2.36,
+    "oos3": -3.53,
+    "dsr": 0.0,
+    "mc": 0.9
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.11,
+    "oos1": -2.85,
+    "oos2": -3.47,
+    "oos3": -2.42,
+    "dsr": 0.0,
+    "mc": 0.34
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.23,
+    "oos1": -4.71,
+    "oos2": -3.3,
+    "oos3": -3.85,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:1",
+    "is": -4.28,
+    "oos1": -3.46,
+    "oos2": -2.93,
+    "oos3": -4.03,
+    "dsr": 0.0,
+    "mc": 0.96
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.6,
+    "oos1": -3.06,
+    "oos2": -3.25,
+    "oos3": -5.0,
+    "dsr": 0.0,
+    "mc": 0.74
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:3",
+    "is": -5.12,
+    "oos1": -4.28,
+    "oos2": -3.57,
+    "oos3": -4.52,
+    "dsr": 0.0,
+    "mc": 0.85
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:3",
+    "is": -5.23,
+    "oos1": -3.86,
+    "oos2": -4.41,
+    "oos3": -4.49,
+    "dsr": 0.0,
+    "mc": 0.63
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:2",
+    "is": -5.36,
+    "oos1": -5.28,
+    "oos2": -4.77,
+    "oos3": -4.61,
+    "dsr": 0.0,
+    "mc": 0.85
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:2",
+    "is": -5.89,
+    "oos1": -3.85,
+    "oos2": -5.36,
+    "oos3": -5.45,
+    "dsr": 0.0,
+    "mc": 0.78
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:1",
+    "is": -5.92,
+    "oos1": -4.78,
+    "oos2": -5.35,
+    "oos3": -5.35,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:1",
+    "is": -7.05,
+    "oos1": -7.55,
+    "oos2": -6.76,
+    "oos3": -6.24,
+    "dsr": 0.0,
+    "mc": 1.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:1",
+    "is": -7.67,
+    "oos1": -4.67,
+    "oos2": -6.9,
+    "oos3": -7.22,
+    "dsr": 0.0,
+    "mc": 1.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:3",
+    "is": -10.42,
+    "oos1": -6.04,
+    "oos2": -10.49,
+    "oos3": -11.4,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:2",
+    "is": -11.8,
+    "oos1": -6.95,
+    "oos2": -14.39,
+    "oos3": -14.83,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:1",
+    "is": -18.57,
+    "oos1": -7.81,
+    "oos2": -20.61,
+    "oos3": -21.35,
+    "dsr": 0.0,
+    "mc": 0.34
    }
-  }
+  ],
+  "status": "died",
+  "has_equity": true,
+  "has_trades_chart": false,
+  "has_trades_csv": false
  },
  {
   "id": "extra-v87",
@@ -1803,7 +2086,7 @@
   },
   "forms": [],
   "status": "neutral",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false
  },
@@ -3198,7 +3481,7 @@
   },
   "forms": [],
   "status": "died",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false
  },
