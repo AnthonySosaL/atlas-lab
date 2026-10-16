@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { AlertTriangle } from "lucide-react";
 import type { Experiment } from "@/lib/data";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -25,6 +26,8 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
   const [family, setFamily] = React.useState("todas");
   const [status, setStatus] = React.useState<"todos" | Experiment["status"]>("todos");
   const [q, setQ] = React.useState("");
+  const [sortBy, setSortBy] = React.useState<"num" | "date">("num");
+  const [sortDir, setSortDir] = React.useState<"asc" | "desc">("desc");
 
   const filtered = experiments
     .filter(
@@ -33,7 +36,12 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
         (status === "todos" || e.status === status) &&
         (q === "" || (pick(e.name, locale) + pick(e.description, locale)).toLowerCase().includes(q.toLowerCase()))
     )
-    .sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
+    .sort((a, b) => {
+      const dir = sortDir === "asc" ? 1 : -1;
+      if (sortBy === "date") return dir * a.date.localeCompare(b.date) || dir * ((a.v ?? -1) - (b.v ?? -1));
+      if (a.v == null || b.v == null) return a.v == null ? (b.v == null ? 0 : 1) : -1; // sin n.º, al final
+      return dir * (a.v - b.v);
+    });
 
   return (
     <div>
@@ -62,6 +70,29 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
               </button>
             ))}
           </div>
+        </div>
+        {/* orden: criterio + direccion */}
+        <div role="group" aria-label={t("exp.sortLabel")} className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+          <span>{t("exp.sortLabel")}</span>
+          {(["num", "date"] as const).map((k) => (
+            <button
+              key={k}
+              onClick={() => setSortBy(k)}
+              aria-pressed={sortBy === k}
+              className={cn(
+                "rounded-full border px-2.5 py-1 transition-colors",
+                sortBy === k ? "border-primary bg-primary/10 text-primary" : "hover:bg-muted"
+              )}
+            >
+              {t(k === "num" ? "exp.sortNum" : "exp.sortDate")}
+            </button>
+          ))}
+          <button
+            onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+            className="rounded-full border px-2.5 py-1 transition-colors hover:bg-muted"
+          >
+            {sortDir === "asc" ? "↑ " : "↓ "}{t(sortDir === "asc" ? "lab.asc" : "lab.desc")}
+          </button>
         </div>
         {/* filtro por familia */}
         <div className="flex flex-wrap gap-1.5">
@@ -108,7 +139,14 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                       )}
                       {e.family && <Badge variant="muted">{t(`fam.${e.family}`)}</Badge>}
                     </div>
-                    <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
+                    <div className="flex items-center gap-1.5">
+                      {e.reclass && (
+                        <span title={`${t("exp.reclassed")}: ${pick(e.reclass.reason, locale)}`} className="inline-flex items-center gap-0.5 text-[10px] text-amber-500">
+                          <AlertTriangle className="size-3" /> {t("exp.reclassed")}
+                        </span>
+                      )}
+                      <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
+                    </div>
                   </div>
                   <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{pick(e.name, locale)}</h3>
                   <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{pick(e.description, locale)}</p>

@@ -9,9 +9,9 @@ import { useI18n } from "@/lib/i18n";
 type Top = { v: number; id: string; key: string };
 
 const TOP: Top[] = [
-  { v: 16, id: "20260608_160317_validacion-filtro-macro-multi-crisis-v16", key: "s1" },
-  { v: 57, id: "20260613_200850_vol-targeting-vs-leverage-fijo-bot-live", key: "s2" },
-  { v: 19, id: "20260609_210756_leverage-graduado-por-vix-v19", key: "s3" },
+  { v: 27, id: "20260610_135143_prueba-de-fuego-lag-1-re-entrada-v27", key: "s1" },
+  { v: 81, id: "extra-v81", key: "s2" },
+  { v: 52, id: "extra-v52", key: "s3" },
 ];
 
 export function TopStrategies() {

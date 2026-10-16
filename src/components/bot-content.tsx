@@ -56,7 +56,7 @@ function BotEquityChart({ data }: { data: BotForwardData }) {
         color: dark ? "#52525b" : "#a1a1aa",
         lineStyle: LineStyle.Dashed,
         lineWidth: 1,
-        title: "$50,000",
+        title: `$${data.initial_equity.toLocaleString("en-US")}`,
       });
 
       const riskOffSeries = chart.addSeries(HistogramSeries, {
@@ -121,7 +121,7 @@ export function BotContent({ data }: { data: BotForwardData | null }) {
       </div>
 
       <p className="mt-1 text-xs text-muted-foreground">
-        {t("bot.dates").replace("{start}", "2026-06-09").replace("{end}", "2026-08-04")}
+        {t("bot.dates").replace("{start}", data.start_date).replace("{end}", data.latest_date)}
       </p>
 
       <p className="mt-4 mb-6 text-sm text-muted-foreground leading-relaxed">{t("bot.intro")}</p>

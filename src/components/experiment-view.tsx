@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { ArrowLeft, Lightbulb } from "lucide-react";
 import type { Experiment, Serie } from "@/lib/data";
+import type { ExpDetail } from "@/lib/exp-detail";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { EquityChart } from "@/components/equity-chart";
+import { ExpReclassNotice } from "@/components/exp-reclass-notice";
+import { ExpAlgoCard } from "@/components/exp-algo-card";
+import { ExpFiltersCard } from "@/components/exp-filters-card";
+import { ExpCurveFallback } from "@/components/exp-curve-fallback";
 import { fmtMetric, metricLabel, cn } from "@/lib/utils";
 import { useI18n, pick } from "@/lib/i18n";
 
@@ -25,10 +30,12 @@ export function ExperimentView({
   exp,
   series,
   related,
+  detail,
 }: {
   exp: Experiment;
   series: Serie[];
   related: Experiment[];
+  detail?: ExpDetail | null;
 }) {
   const { t, locale } = useI18n();
   const metrics = Object.entries(exp.metrics);
@@ -58,6 +65,8 @@ export function ExperimentView({
       </h1>
       <p className="mt-3 max-w-3xl text-muted-foreground">{pick(exp.description, locale)}</p>
 
+      {exp.reclass && <ExpReclassNotice reclass={exp.reclass} />}
+
       {lesson && (
         <Card className="mt-6 flex gap-3 border-primary/30 bg-primary/[0.04] p-4">
           <Lightbulb className="size-5 shrink-0 text-primary" />
@@ -65,7 +74,7 @@ export function ExperimentView({
             <div className="text-xs font-semibold uppercase tracking-wide text-primary">
               {t("detail.lesson")}
             </div>
-            {verdictTxt && verdictTxt !== notesTxt && (
+            {!exp.reclass && verdictTxt && verdictTxt !== notesTxt && (
               <p className="mt-1 text-sm font-medium">{verdictTxt}</p>
             )}
             <p className="mt-1 text-sm text-muted-foreground">{lesson}</p>
@@ -79,6 +88,17 @@ export function ExperimentView({
           <p className="text-sm leading-relaxed text-muted-foreground">{analysisText}</p>
         </Card>
       )}
+
+      {series.length > 0 ? (
+        <Card className="mt-8 p-5">
+          <div className="mb-3 text-sm font-medium">{t("detail.equity")}</div>
+          <EquityChart series={series} />
+        </Card>
+      ) : (
+        <ExpCurveFallback forms={exp.forms ?? []} />
+      )}
+      {detail && <ExpAlgoCard detail={detail} />}
+      {detail && <ExpFiltersCard filters={detail.filters} />}
 
       {metrics.length > 0 && (
         <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border sm:grid-cols-4">
@@ -131,13 +151,6 @@ export function ExperimentView({
             </table>
           </div>
           <p className="mt-2 text-[11px] text-muted-foreground">{t("lab.legend")}</p>
-        </Card>
-      )}
-
-      {series.length > 0 && (
-        <Card className="mt-8 p-5">
-          <div className="mb-3 text-sm font-medium">{t("detail.equity")}</div>
-          <EquityChart series={series} />
         </Card>
       )}
 

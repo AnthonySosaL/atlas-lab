@@ -17,6 +17,7 @@ const dotColor = (v: ForjaStrategy["verdict"]) =>
 // Curva de capital (estrategia 1× vs Buy&Hold)
 // ---------------------------------------------------------------------------
 function EquityMini({ eq }: { eq: ForjaStrategy["equity"] }) {
+  const { t } = useI18n();
   const { strat, bh, x } = eq;
   const W = 600, H = 230, pad = 32;
   const all = [...strat, ...bh];
@@ -29,7 +30,7 @@ function EquityMini({ eq }: { eq: ForjaStrategy["equity"] }) {
     .map((d, i) => ({ i, y: d.slice(0, 4) }))
     .filter((o, idx, a) => o.y !== a[idx - 1]?.y);
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="curva de capital">
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={t("aria.equity")}>
       {[1, 2, 3].filter((g) => g <= vmax).map((g) => (
         <g key={g}>
           <line x1={pad} y1={py(g)} x2={W - pad} y2={py(g)} className="stroke-border" strokeDasharray="3 4" />
@@ -47,6 +48,7 @@ function EquityMini({ eq }: { eq: ForjaStrategy["equity"] }) {
 
 /** Curva de "bajo el agua": cuánto y cuánto tiempo estuvo en pérdida desde el último máximo. */
 function DrawdownMini({ strat, x }: { strat: number[]; x: string[] }) {
+  const { t } = useI18n();
   const W = 600, H = 120, pad = 32;
   let peak = -Infinity;
   const dd = strat.map((v) => { peak = Math.max(peak, v); return v / peak - 1; });
@@ -56,7 +58,7 @@ function DrawdownMini({ strat, x }: { strat: number[]; x: string[] }) {
   const area = `${px(0)},${pad} ` + dd.map((v, i) => `${px(i).toFixed(0)},${py(v).toFixed(1)}`).join(" ") + ` ${px(dd.length - 1)},${pad}`;
   const years = x.map((d, i) => ({ i, y: d.slice(0, 4) })).filter((o, idx, a) => o.y !== a[idx - 1]?.y);
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="drawdown">
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={t("aria.drawdown")}>
       <polygon points={area} className="fill-[var(--loss)]/15 stroke-[var(--loss)]" strokeWidth="1.4" />
       <text x={pad - 6} y={py(worst) + 3} textAnchor="end" fontSize="9" className="fill-[var(--loss)]">{(worst * 100).toFixed(0)}%</text>
       {years.map((o) => (
@@ -295,38 +297,38 @@ function UniverseMap({ onPick }: { onPick: (k: string) => void }) {
         <Layers className="size-4 text-primary" /> {t("forja.universeMap")}
       </div>
       <p className="mb-3 text-xs text-muted-foreground">{t("forja.mapNote")}</p>
-      <svg viewBox="0 0 760 432" className="w-full" role="img" aria-label="mapa de universos">
+      <svg viewBox="0 0 760 432" className="w-full" role="img" aria-label={t("aria.universeMap")}>
         {/* --- ÍNDICES DEL MUNDO --- */}
-        <MapHeader x={14} y={14} text="ÍNDICES DEL MUNDO" />
-        <MapBox x={14} y={22} w={300} h={120} tag="U3 · Índices global" color="stroke-indigo-500" onPick={() => onPick("U3")} />
+        <MapHeader x={14} y={14} text={t("map.hWorld")} />
+        <MapBox x={14} y={22} w={300} h={120} tag={t("map.u3")} color="stroke-indigo-500" onPick={() => onPick("U3")} />
         <MapBox x={26} y={54} w={136} h={78} tag="U1 · US" sub="SP500 · NAS100" color="stroke-blue-500" onPick={() => onPick("U1")} />
-        <MapBox x={168} y={54} w={134} h={78} tag="U2 · Europa" sub="DAX · FTSE100" color="stroke-sky-500" onPick={() => onPick("U2")} />
+        <MapBox x={168} y={54} w={134} h={78} tag={t("map.u2")} sub="DAX · FTSE100" color="stroke-sky-500" onPick={() => onPick("U2")} />
         <MapBox x={326} y={22} w={160} h={120} tag="U11 · Asia-Pac" sub="NIKKEI·HANGSENG·ASX" color="stroke-cyan-500" onPick={() => onPick("U11")} />
-        <MapBox x={498} y={22} w={248} h={120} tag="U7 · Diversificado" sub="contiene U3 + U4 + oro" color="stroke-teal-500" onPick={() => onPick("U7")} />
+        <MapBox x={498} y={22} w={248} h={120} tag={t("map.u7")} sub={t("map.u7sub")} color="stroke-teal-500" onPick={() => onPick("U7")} />
 
         {/* --- MATERIAS PRIMAS Y REFUGIO --- */}
-        <MapHeader x={14} y={166} text="MATERIAS PRIMAS Y REFUGIO" />
-        <MapBox x={14} y={174} w={236} h={64} tag="U4 · Energía" sub="WTI · BRENT" color="stroke-amber-500" onPick={() => onPick("U4")} />
-        <MapBox x={262} y={174} w={236} h={64} tag="U5 · Metales" sub="oro · plata" color="stroke-yellow-500" onPick={() => onPick("U5")} />
-        <MapBox x={510} y={174} w={236} h={64} tag="U8 · Refugio" sub="oro · JPY · CHF" color="stroke-orange-500" onPick={() => onPick("U8")} />
+        <MapHeader x={14} y={166} text={t("map.hCommod")} />
+        <MapBox x={14} y={174} w={236} h={64} tag={t("map.u4")} sub="WTI · BRENT" color="stroke-amber-500" onPick={() => onPick("U4")} />
+        <MapBox x={262} y={174} w={236} h={64} tag={t("map.u5")} sub={t("map.u5sub")} color="stroke-yellow-500" onPick={() => onPick("U5")} />
+        <MapBox x={510} y={174} w={236} h={64} tag={t("map.u8")} sub={t("map.u8sub")} color="stroke-orange-500" onPick={() => onPick("U8")} />
         <line x1={380} y1={238} x2={380} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
         <line x1={380} y1={250} x2={628} y2={250} className="stroke-amber-500" strokeDasharray="3 3" />
         <line x1={628} y1={250} x2={628} y2={238} className="stroke-amber-500" strokeDasharray="3 3" />
-        <text x={470} y={248} fontSize="8.5" className="fill-amber-500">comparten oro</text>
+        <text x={470} y={248} fontSize="8.5" className="fill-amber-500">{t("forja.sharesGold")}</text>
 
         {/* --- DIVISAS (FX) --- */}
-        <MapHeader x={14} y={278} text="DIVISAS (FX)" />
+        <MapHeader x={14} y={278} text={t("map.hFx")} />
         <MapBox x={14} y={286} w={236} h={64} tag="U6a · EUR-bloc" sub="EUR · GBP · CHF" color="stroke-emerald-500" onPick={() => onPick("U6a")} />
         <MapBox x={262} y={286} w={236} h={64} tag="U6b · commodity" sub="AUD · NZD · CAD" color="stroke-green-500" onPick={() => onPick("U6b")} />
-        <MapBox x={510} y={286} w={236} h={64} tag="U10 · Cruces JPY" sub="EURJPY · GBPJPY · AUDJPY" color="stroke-lime-600" onPick={() => onPick("U10")} />
+        <MapBox x={510} y={286} w={236} h={64} tag={t("map.u10")} sub="EURJPY · GBPJPY · AUDJPY" color="stroke-lime-600" onPick={() => onPick("U10")} />
 
         {/* --- ALTERNATIVOS Y CARTERAS --- */}
-        <MapHeader x={14} y={378} text="ALTERNATIVOS Y CARTERAS" />
-        <MapBox x={14} y={386} w={236} h={40} tag="U9 · Cripto" sub="BTC · ETH · LTC" color="stroke-violet-500" onPick={() => onPick("U9")} />
+        <MapHeader x={14} y={378} text={t("map.hAlt")} />
+        <MapBox x={14} y={386} w={236} h={40} tag={t("map.u9")} sub="BTC · ETH · LTC" color="stroke-violet-500" onPick={() => onPick("U9")} />
         <g onClick={() => onPick("UP")} style={{ cursor: "pointer" }} className="group/box">
           <rect x={262} y={386} width={484} height={40} rx={6} className="fill-primary/10 stroke-primary group-hover/box:stroke-2" />
-          <text x={270} y={403} fontSize="11" fontWeight={700} className="fill-primary">UP · Portafolios combinados</text>
-          <text x={270} y={417} fontSize="8.5" className="fill-muted-foreground">carteras equal-weight de mercados independientes → el menor drawdown</text>
+          <text x={270} y={403} fontSize="11" fontWeight={700} className="fill-primary">{t("forja.upTitle")}</text>
+          <text x={270} y={417} fontSize="8.5" className="fill-muted-foreground">{t("forja.upDesc")}</text>
         </g>
       </svg>
     </Card>
@@ -393,12 +395,13 @@ function Top5Section({ items, onPick }: { items: ForjaTop5[]; onPick: (ukey: str
 // ---------------------------------------------------------------------------
 function OOS2025Section({ items }: { items: ForjaOOS[] }) {
   const { t } = useI18n();
+  const [start, end] = (items[0]?.period ?? "").split("→").map((d) => d.trim()); // ventana real de los datos
   return (
     <Card className="p-5">
       <div className="mb-1 flex items-center gap-1.5 text-sm font-medium">
         <ShieldCheck className="size-4 text-primary" /> {t("forja.oos2025")}
       </div>
-      <p className="mb-3 text-[11px] text-muted-foreground">{t("forja.oos2025note")}</p>
+      <p className="mb-3 text-[11px] text-muted-foreground">{t("forja.oos2025note").replace("{start}", start ?? "2025-01-01").replace("{end}", end ?? "—")}</p>
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead className="text-muted-foreground">
@@ -589,7 +592,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
           <Target className="size-4 text-primary" /> {t("forja.forward")}
         </div>
         <p className="text-xs text-muted-foreground">{t("forja.forwardStarted").replace("{date}", data.baseline.started)}</p>
-        <Badge variant="outline" className="mt-2">paper — {t("forja.forwardPaper")}</Badge>
+        <Badge variant="outline" className="mt-2">{t("forja.paperTag")} — {t("forja.forwardPaper")}</Badge>
         <Heartbeat lastUpdate={data.last_update} baselineStarted={data.baseline?.started} />
         <ForwardCriteria />
       </Card>
@@ -611,7 +614,7 @@ function ForwardSection({ data }: { data: ForjaForward }) {
             <div className="flex items-center justify-between">
               <span className="text-xs font-medium">{pf.name}</span>
               <div className="flex items-center gap-1.5">
-                <Badge variant="outline">paper — {t("forja.forwardPaper")}</Badge>
+                <Badge variant="outline">{t("forja.paperTag")} — {t("forja.forwardPaper")}</Badge>
                 <ChevronRight className={cn("size-3.5 text-muted-foreground transition-transform", expanded === pid && "rotate-90")} />
               </div>
             </div>
