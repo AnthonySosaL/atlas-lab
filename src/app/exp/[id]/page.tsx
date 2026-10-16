@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getExperiment, getExperiments, getSeries } from "@/lib/data";
 import { ExperimentView } from "@/components/experiment-view";
@@ -5,6 +6,20 @@ import { ExperimentView } from "@/components/experiment-view";
 export async function generateStaticParams() {
   const all = await getExperiments();
   return all.map((e) => ({ id: e.id }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const exp = await getExperiment(id);
+  if (!exp) return {};
+  const title = `${exp.name.es} — ATLAS Lab`;
+  const description = exp.description.es.slice(0, 160);
+  return {
+    title,
+    description,
+    alternates: { canonical: `/exp/${id}` },
+    openGraph: { type: "article", title, description, url: `/exp/${id}` },
+  };
 }
 
 export default async function ExperimentPage({ params }: { params: Promise<{ id: string }> }) {
