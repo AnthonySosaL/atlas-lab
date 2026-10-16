@@ -61,7 +61,7 @@ export function Navbar() {
         <div className="flex items-center gap-1 md:hidden">
           <LanguageSwitcher />
           <ThemeToggle />
-          <Button variant="ghost" size="icon" aria-label="Menú" onClick={() => setOpen((v) => !v)}>
+          <Button variant="ghost" size="icon" aria-label={t("common.menu")} onClick={() => setOpen((v) => !v)}>
             {open ? <X /> : <Menu />}
           </Button>
         </div>

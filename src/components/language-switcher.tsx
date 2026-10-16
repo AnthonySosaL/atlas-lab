@@ -6,7 +6,7 @@ import { useI18n, LOCALES } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher() {
-  const { locale, setLocale } = useI18n();
+  const { locale, setLocale, t } = useI18n();
   const [open, setOpen] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
 
@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
       <button
         onClick={() => setOpen((v) => !v)}
         className="inline-flex h-9 items-center gap-1.5 rounded-md px-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-        aria-label="Idioma"
+        aria-label={t("common.language")}
       >
         <Languages className="size-4" />
         <span className="tabular text-xs font-bold">{locale.toUpperCase()}</span>

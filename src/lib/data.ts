@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import type { ExpDetail } from "@/lib/exp-detail";
 
 const DATA = path.join(process.cwd(), "public", "data");
 
@@ -22,6 +23,7 @@ export type Experiment = {
   has_equity: boolean;
   has_trades_chart: boolean;
   has_trades_csv: boolean;
+  reclass?: { from: string; to: string; reason: Loc }; // auditoría 2026-10-16
 };
 
 export type Summary = {
@@ -188,4 +190,9 @@ export async function getExperiment(id: string) {
 
 export async function getSeries(id: string): Promise<Serie[]> {
   return readJSON<Serie[]>(path.join("series", `${id}.json`), []);
+}
+
+export async function getExpDetail(id: string): Promise<ExpDetail | null> {
+  const all = await readJSON<Record<string, ExpDetail>>("exp_details.json", {});
+  return all[id] ?? null;
 }

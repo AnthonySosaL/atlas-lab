@@ -6,7 +6,7 @@ import { I18nProvider } from "@/lib/i18n";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteJsonLd } from "@/components/site-json-ld";
-import { getLab, getSummary } from "@/lib/data";
+import { getExperiments, getLab } from "@/lib/data";
 import { PORTFOLIO_URL, SITE_URL } from "@/lib/site";
 import Script from "next/script";
 
@@ -14,8 +14,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const [summary, lab] = await Promise.all([getSummary(), getLab()]);
-  const description = `${summary.total} experimentos y ${lab.total.toLocaleString("en")} estrategias de trading probadas con out-of-sample, Deflated Sharpe y Monte Carlo. Resultados públicos, incluidos los negativos.`;
+  const [exps, lab] = await Promise.all([getExperiments(), getLab()]);
+  const description = `${exps.length} experimentos y ${lab.total.toLocaleString("en")} estrategias de trading probadas con out-of-sample, Deflated Sharpe y Monte Carlo. Resultados públicos, incluidos los negativos.`;
   return {
     metadataBase: new URL(SITE_URL),
     title: "ATLAS Lab — Laboratorio cuantitativo",
