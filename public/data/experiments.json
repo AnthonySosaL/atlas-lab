@@ -8,9 +8,9 @@
    "pt": "Uma crítica acertada do usuário: \"você testou nos instrumentos que os influenciadores dizem operar?\". Vários especificam futuros ou índices (TikTok 1, \"futuros ou ações\"; TikTok 4, \"abertura do Nasdaq\"), não forex. Meus testes foram em 7 pares de forex + ouro, que é o contrário: o forex reverte dentro do dia e os índices tendem a subir. Então testei de novo em índices (S&P 500, Nasdaq 100, DAX, FTSE 100, dados 2012-2024) as tendências clássicas e os núcleos do TikTok, medindo duas coisas: ganha dinheiro? e supera comprar e esperar os índices? Resultado revelador: a tendência (MA200, cruzamento de EMA 50/200, momentum), que no forex morria, em índices ganha dinheiro (+$10k a +$15k sobre $10k, Sharpe positivo nos 3 períodos). Por isso um influenciador pode mostrar \"+X% ao ano\": opera índices, que sobem, e fica comprado. Mas, e aqui está a armadilha, nenhuma supera comprar e esperar (+$29.368): você teria ganhado o dobro simplesmente comprando e mantendo. Sua \"rentabilidade\" é beta pura (o mercado subiu), não habilidade. E seus setups específicos (rompimento TikTok 1/4 = −$424; varrida TikTok 5 = +$353; volume TikTok 2 = +$707) falham até em índices: a única coisa que ganha é o viés genérico de estar comprado no índice. Conclusão: o instrumento muda quanta beta você captura, mas a vantagem continua sem existir. E isto valida o plano de renda (#80): estar comprado em índices com gestão de risco é uma renda de beta sensata, não alfa; o caminho realista, não o atalho."
   },
   "name": {
-   "es": "¿Cambia si pruebo en ÍNDICES (lo que dicen los influencers)? Nasdaq/SP500/DAX/FTSE",
-   "en": "Does it change if I test on INDICES (what influencers say)? Nasdaq/SP500/DAX/FTSE",
-   "pt": "Muda se eu testar em ÍNDICES (o que os influencers dizem)? Nasdaq/SP500/DAX/FTSE"
+   "es": "¿Cambia en índices? Nasdaq, S&P 500, DAX y FTSE",
+   "en": "Does it change on indices? Nasdaq, S&P 500, DAX and FTSE",
+   "pt": "Muda em índices? Nasdaq, S&P 500, DAX e FTSE"
   },
   "family": "lab-automatico",
   "date": "2026-06-28T13:00:00",
@@ -226,9 +226,9 @@
    "pt": "TikTok 5 (\"Candle Range Theory\", publicidade do financiamento AXY). Marca a máxima/mínima do dia anterior; em 1 hora espera o preço varrer um nível e fechar de volta dentro (uma varrida ou falso rompimento = sinal de reversão); em 5 minutos entra por quebra de estrutura + FVG, ratio 1:2-3. Seu núcleo testável no diário é ir contra o falso rompimento: o dia varre a mínima de N dias e fecha acima → compra. Testado em 8 formas (1 a 5 dias, com e sem filtro de média): todas morrem e perdem duríssimo (Sharpe 2014-2020 de −0,8 a −1,7). Ir contra as varridas no diário é pura rotação de carteira sem vantagem: os custos comem tudo e a \"reversão\" é ruído. Curiosamente, tanto o rompimento (TikTok 1/4) quanto seu oposto (TikTok 5) perdem: não é que falte o lado certo, é que não há vantagem direcional e a fricção manda. A parte de FVG e quebra de estrutura é intradiária e discricionária. É marketing de um programa de financiamento."
   },
   "name": {
-   "es": "TikTok 5 — Candle Range Theory (sweep + FVG)",
+   "es": "TikTok 5 — Candle Range Theory (barrido + FVG)",
    "en": "TikTok 5 — Candle Range Theory (sweep + FVG)",
-   "pt": "TikTok 5 — Candle Range Theory (sweep + FVG)"
+   "pt": "TikTok 5 — Candle Range Theory (varrida + FVG)"
   },
   "family": "influencer",
   "date": "2026-06-28T12:20:00",
@@ -468,9 +468,9 @@
    "pt": "TikTok 4 (ORB, rompimento do range de abertura, \"+214%, 20 anos\"). Esperar a abertura do Nasdaq (9:30 de Nova York), marcar a última máxima/mínima da estrutura e colocar buy stop na máxima ou sell stop na mínima, ratio 1:3. É intradiário puro. Um ORB de sessão já testamos de forma intradiária no experimento #6 (EUR/USD de 1 minuto, sessões de Londres/Nova York): Sharpe −0,96, perda significativa (os rompimentos no forex falham e o par reverte). Seu núcleo (rompimento do range) no diário também perde (ver #85). Fazer sempre o mesmo não transforma um setup sem vantagem em lucrativo; o 1:3 não compensa uma taxa de acerto que o acaso e os custos deixam abaixo do ponto de equilíbrio."
   },
   "name": {
-   "es": "TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30",
-   "en": "TikTok 4 — Nasdaq 9:30 ORB (Opening Range Breakout)",
-   "pt": "TikTok 4 — ORB (Opening Range Breakout) do Nasdaq às 9:30"
+   "es": "TikTok 4 — ORB del Nasdaq a las 9:30",
+   "en": "TikTok 4 — Nasdaq 9:30 ORB",
+   "pt": "TikTok 4 — ORB do Nasdaq às 9:30"
   },
   "family": "influencer",
   "date": "2026-06-28T12:15:00",
@@ -851,9 +851,9 @@
    "pt": "TikTok 2 (\"+30% ao ano, 30 anos de backtest\"). Reversão à média operando a favor da tendência: MA200 como direção + entrar numa vela de alto volume ou range que supera o range diário médio (ADR), piramidando até 3 vezes (mesmo risco), ratio 1:3. Testado em 10 formas (filtro MA/EMA 100/200 + gatilho de expansão de range ou de volume). As 10 morreram (0/5) e a maioria perde forte (até −1,55 fora da amostra em 2021-2024). O motivo é claro: entrar na vela de maior volume ou range a favor da tendência é comprar o clímax, justamente onde costuma reverter. Piramidar (fazer preço médio) sobre uma entrada sem vantagem só amplifica a perda."
   },
   "name": {
-   "es": "TikTok 2 — MA200 a favor de tendencia + vela de alto volumen/rango (ADR)",
-   "en": "TikTok 2 — MA200 with the trend + high volume/range candle (ADR)",
-   "pt": "TikTok 2 — MA200 a favor da tendência + candle de alto volume/range (ADR)"
+   "es": "TikTok 2 — MA200 a favor de la tendencia + vela de alto rango",
+   "en": "TikTok 2 — MA200 with the trend + high-range candle",
+   "pt": "TikTok 2 — MA200 a favor da tendência + candle de alto range"
   },
   "family": "influencer",
   "date": "2026-06-28T12:05:00",
@@ -1123,9 +1123,9 @@
    "pt": "TikTok 1 (Carl Ericsson / ProRealAlgos, \"71% de acertos\"). Rompimento + retração: marca a máxima/mínima do dia anterior, espera em 15 minutos um fechamento fora do range, depois uma retração ao nível, e em 5 minutos uma vela de engolfo ou martelo para entrar (ratio 1:3). É intradiário e por operação; seu núcleo testável no diário é o rompimento de continuação do range anterior. Testado em 6 formas (rompimento de 1 a 5 dias, com e sem filtro MA200): todas morrem e perdem forte (Sharpe 2014-2020 de −1,0 a −1,6). Nestes mercados, perseguir o rompimento do range anterior é comprar o topo: o preço reverte e os custos de entrar e sair com tanta frequência arrematam. A parte de retração + vela de entrada é intradiária e discricionária, não pode ser mecanizada aqui. Marketing de copy-trading."
   },
   "name": {
-   "es": "TikTok 1 — Breakout del rango del día previo + retroceso (ProRealAlgos)",
-   "en": "TikTok 1 — Previous-day range breakout + pullback (ProRealAlgos)",
-   "pt": "TikTok 1 — Breakout do range do dia anterior + pullback (ProRealAlgos)"
+   "es": "TikTok 1 — Ruptura del rango del día previo + retroceso",
+   "en": "TikTok 1 — Previous-day range breakout + pullback",
+   "pt": "TikTok 1 — Rompimento do range do dia anterior + pullback"
   },
   "family": "influencer",
   "date": "2026-06-28T12:00:00",
@@ -1357,9 +1357,9 @@
    "pt": "Ideia de um comentário do TikTok (mais refinada que o vídeo): a média móvel não serve para decidir a entrada; use-a só como filtro de direção (quem manda, comprador ou vendedor) no tempo gráfico alto, e busque a entrada no tempo gráfico baixo, sem entrar no rompimento da média. É uma abordagem sensata de vários tempos gráficos. Testamos em 12 formas: filtro MA/EMA de 100/200 (viés do tempo gráfico alto) combinado com entradas mais rápidas (compra na queda pelo RSI, cruzamento de EMAs, rompimento de Donchian, momentum, IBS). Resultado: 12/12 morreram, máximo 2/5 filtros. O padrão revelador: várias têm bom resultado fora da amostra em 2007-2013 (até +0,58) mas desmoronam em 2021-2024 (até −1,01): funcionam numa época e desabam na outra. O filtro de vários tempos gráficos parece lógico mas não cria vantagem: continua sendo beta e ruído que não se generaliza entre épocas."
   },
   "name": {
-   "es": "Filtro multi-temporalidad (MA filtro alto + entrada baja) — 12 formas",
-   "en": "Multi-timeframe filter (high-timeframe MA filter + low-timeframe entry) — 12 forms",
-   "pt": "Filtro multi-timeframe (MA de timeframe alto como filtro + entrada em timeframe baixo) — 12 formas"
+   "es": "Filtro multitemporalidad (MA superior + entrada inferior) — 12 formas",
+   "en": "Multi-timeframe filter (higher MA + lower entry) — 12 ways",
+   "pt": "Filtro multi-timeframe (MA superior + entrada inferior) — 12 formas"
   },
   "family": "influencer",
   "date": "2026-06-28T11:15:00",
@@ -1637,9 +1637,9 @@
    "pt": "Testamos o influenciador de um vídeo tier-list do TikTok (excelente/médio/ruim). Seu método \"excelente\", concreto e testável: EMAs operando a favor da tendência (o que diz tê-lo tornado lucrativo). Testamos em 8 formas (EMA-trend de 20/50/100/200 e cruzamentos de EMA 9/21, 12/26, 20/50 e 50/200, o golden cross) com os 5 filtros. As 8 morreram (máximo 1/5); comprar e esperar (Sharpe +0,13 em 2014-2020) as supera. As EMAs a favor da tendência são justamente o que o laboratório descartou 34.751 vezes. Além do backtest, há bandeiras vermelhas graves: (1) se contradiz: diz que \"os indicadores são lixo\", mas seu método excelente são EMAs, que são um indicador; (2) conselho perigoso: \"o stop loss é lixo\", quando é o contrário, a gestão de risco é a única coisa que evita estourar a conta; (3) empurra índices sintéticos (Deriv) como \"onde estão os vencedores\", que são números aleatórios da corretora, um cassino de soma negativa. Opinião e marketing, não método."
   },
   "name": {
-   "es": "EMAs a favor de tendencia (TikTok tier-list) — 8 formas",
-   "en": "EMAs with the trend (TikTok tier-list) — 8 forms",
-   "pt": "EMAs a favor da tendência (tier-list do TikTok) — 8 formas"
+   "es": "EMAs a favor de la tendencia (ranking de TikTok) — 8 formas",
+   "en": "EMAs with the trend (TikTok tier list) — 8 ways",
+   "pt": "EMAs a favor da tendência (ranking do TikTok) — 8 formas"
   },
   "family": "influencer",
   "date": "2026-06-28T11:00:00",
@@ -1884,9 +1884,9 @@
    "pt": "A prova de fogo para o uso real: alguma das 50 melhores (das 34.751) serve para financiamento? Simulamos um challenge tipo FTMO (meta +10%, drawdown máximo −10%, limite diário −5%, janela de 3 meses) com cada uma, em centenas de janelas de épocas diferentes, sem alavancagem e com x5. Resposta direta: nenhuma serve. Sem alavancagem jamais chegam a +10% em 3 meses (100% ficam sem tempo): ficam em caixa 94% do tempo e fazem ~1% ao ano, são lentas demais. Com x5, a melhor (RSI5<18) só passa em 3,5% das janelas… mas estoura em 4,7%: perde mais vezes do que ganha. Confirma o visto nos experimentos #9-40: a alavancagem de que você precisa para passar (+10% rápido) é justamente a que estoura seu drawdown. Pagar um challenge com qualquer uma delas seria jogar dinheiro fora (você falharia 96-100% das vezes). Nem mesmo as melhores de dezenas de milhares servem para prop firms."
   },
   "name": {
-   "es": "¿Sirven las 50 mejores para FONDEO? (challenge tipo FTMO en 3 meses)",
-   "en": "Are the top 50 any good for FUNDING? (FTMO-style challenge in 3 months)",
-   "pt": "As 50 melhores servem para FINANCIAMENTO? (challenge tipo FTMO em 3 meses)"
+   "es": "¿Sirven las 50 mejores para fondeo? (desafío tipo FTMO en 3 meses)",
+   "en": "Do the top 50 work for funding? (FTMO-style challenge in 3 months)",
+   "pt": "As 50 melhores servem para mesa proprietária? (desafio FTMO em 3 meses)"
   },
   "family": "lab-automatico",
   "date": "2026-06-28T09:30:00",
@@ -2100,9 +2100,9 @@
    "pt": "O experimento definitivo. Construímos um laboratório que gera e testa estratégias automaticamente: sementes + um modelo (DeepSeek/Qwen) que propõe ideias + um explorador que garante novidade sem fim, tudo sem duplicados graças a uma impressão digital. Cada estratégia passa pelos mesmos 5 filtros: período de teste 2014-2020 + dois testes fora da amostra (2007-2013 com a crise de 2008, e 2021-2024) + Deflated Sharpe (Bailey e López de Prado, corrige os testes múltiplos com um contador global) + Monte Carlo de 5000 permutações (desloca o sinal no tempo: se não supera suas versões desalinhadas, seu timing é sorte) + superar comprar e esperar. Uma noite inteira: 34.751 estratégias testadas, todas únicas. Resultado: 0 sobreviveram. O Deflated Sharpe nunca foi superado (máximo 0,70 dos 0,95 necessários). O mais longe foi 4/5 filtros: combinações que enganaram os dois testes fora da amostra e o Monte Carlo e superaram o mercado, mas ao examinar a melhor ano a ano, ela perde dinheiro (um único ano de sorte). A única coisa \"real\" é um viés fraco de reversão RSI (49 das 50 melhores são positivas em 18 anos), mas fica em caixa 94% do tempo, faz ~1% ao ano e perde para simplesmente manter: real, mensurável… e inexplorável. É a demonstração ao vivo de por que os fundos de machine learning falham (López de Prado): minerar milhares de estratégias garante falsos positivos, e só o ajuste por testes múltiplos os captura. Veredito inapelável: não há alfa explorável em dados de preço para o investidor de varejo."
   },
   "name": {
-   "es": "Laboratorio automático — 34,751 estrategias con gauntlet de 5 filtros",
-   "en": "Automated lab — 34,751 strategies with a 5-filter gauntlet",
-   "pt": "Laboratório automático — 34,751 estratégias com gauntlet de 5 filtros"
+   "es": "Laboratorio automático — 34,751 estrategias con 5 filtros",
+   "en": "Automated lab — 34,751 strategies through 5 filters",
+   "pt": "Laboratório automático — 34,751 estratégias com 5 filtros"
   },
   "family": "lab-automatico",
   "date": "2026-06-28T09:00:00",
@@ -2360,9 +2360,9 @@
    "pt": "O primeiro entregável prático. Partindo do ponto do usuário (#78: para renda importa o Calmar, não o retorno total), otimizou-se uma estratégia de renda sobre índices e ouro medindo o Calmar e a retirada máxima sustentável. Resultado: o vol-target (B3) é o ponto ideal, com crescimento anual de +8,7% (igual a comprar e esperar) mas drawdown máximo de −26% (contra −31%), e suporta retirar 8% ao ano. O Turtle tem o melhor Calmar (0,44, com drawdown de apenas −7%) mas menos retorno (retirada de 5%). Conclusão: para viver disso (retirar enquanto ganha) a chave é o Calmar, e o vol-target dá o melhor equilíbrio entre retorno e risco. Não é alfa, é beta gerenciado com inteligência, mas é um plano de renda real e sensato (o que fazem os investidores táticos sérios)."
   },
   "name": {
-   "es": "Estrategia de INGRESO óptima por Calmar (índices+oro)",
-   "en": "Optimal INCOME strategy by Calmar (indices+gold)",
-   "pt": "Estratégia de RENDA ótima por Calmar (índices+ouro)"
+   "es": "Estrategia de ingreso óptima por Calmar (índices + oro)",
+   "en": "Optimal income strategy by Calmar (indices + gold)",
+   "pt": "Estratégia de renda ótima por Calmar (índices + ouro)"
   },
   "family": "risk-mgmt",
   "date": "2026-06-27T13:20:00",
@@ -2529,9 +2529,9 @@
    "pt": "Pesquisa a fundo do regime adaptativo: há como corrigir as entradas e saídas fora de hora do #77? Testamos histerese (faixa 0,45/0,25), confirmação (regime sustentado por 5 dias) e mistura contínua. Elas melhoram: a confirmação chegou a um Sharpe fora da amostra de 0,60 (contra 0,36 do binário). Mas (1) mal iguala só tendência (a adaptação não acrescenta nada) e (2) continua abaixo de comprar e esperar (0,68), com Sharpe negativo em 2012-2018. Só brilha em 2019-2024 (período tendencial). É seguimento de tendência dependente do período, não uma vantagem robusta. A única forma exigiria adivinhar o regime perfeito, o que é impossível. Muro confirmado com todas as melhorias testadas."
   },
   "name": {
-   "es": "Régimen adaptativo v2 — histéresis/confirmación/mezcla",
-   "en": "Adaptive regime v2 — hysteresis/confirmation/blending",
-   "pt": "Regime adaptativo v2 — histerese/confirmação/mistura"
+   "es": "Régimen adaptativo — histéresis, confirmación y mezcla",
+   "en": "Adaptive regime — hysteresis, confirmation and blending",
+   "pt": "Regime adaptativo — histerese, confirmação e mistura"
   },
   "family": "regime-switch",
   "date": "2026-06-27T13:00:00",
@@ -2703,9 +2703,9 @@
    "pt": "O ponto certeiro do usuário: comparar tudo com comprar e esperar pelo retorno total é injusto, porque isso é só manter. Para retirar renda o que importa é o drawdown (o risco da sequência de retornos). A métrica correta é o Calmar (retorno/drawdown), e aí Turtle (0,22) e Faber (0,16) superam comprar e esperar (0,14): menos retorno, mas muito menos drawdown. Nuance: na simulação de retirada de 4% ao ano, comprar e esperar terminou mais alto ($45k), porque seu retorno (+4%) sustenta a retirada enquanto as de +2% se esgotam. Conclusão: para segurança e dormir tranquilo, Turtle/Faber (melhor Calmar); para retiradas altas você precisa de um retorno igual ou maior que a retirada; o ideal (retorno alto + drawdown baixo) é justamente o difícil. O vol-target (B3) é o melhor equilíbrio."
   },
   "name": {
-   "es": "Calmar y retiros: ¿mejor que Buy&Hold para ingreso?",
-   "en": "Calmar and withdrawals: better than Buy&Hold for income?",
-   "pt": "Calmar e retiradas: melhor que Buy&Hold para renda?"
+   "es": "Calmar y retiros: ¿mejor que comprar y mantener para ingreso?",
+   "en": "Calmar and withdrawals: better than buy-and-hold for income?",
+   "pt": "Calmar e retiradas: melhor que buy and hold para renda?"
   },
   "family": "risk-mgmt",
   "date": "2026-06-27T12:20:00",
@@ -2880,9 +2880,9 @@
    "pt": "Tese de um TikTok: \"nenhuma estratégia serve sempre; meça o regime e adapte\": reversão à média quando o mercado está lateral e seguimento de tendência quando há tendência (~80/20). Conceitualmente correto (medimos 27% de dias em tendência, perto dos 20% dele). Mas ao testar, a versão adaptativa (detector Efficiency Ratio defasado) é pior do que aplicar sempre uma única estratégia (Sharpe 2012-2018 −0,27 contra +0,02 de só tendência; fora da amostra +0,37 contra +0,59). O detector chega tarde: quando mede \"tendência\", o regime já mudou. É o mesmo muro de detecção dos #59-62. Comprar e esperar (0,68) supera tudo. Tinha razão no diagnóstico, não na solução."
   },
   "name": {
-   "es": "Régimen adaptativo (mean-rev en rango, trend en tendencia)",
-   "en": "Adaptive regime (mean-rev in range, trend in trend)",
-   "pt": "Regime adaptativo (mean-rev em rango, trend em tendência)"
+   "es": "Régimen adaptativo (reversión en rango, tendencia en tendencia)",
+   "en": "Adaptive regime (reversion in ranges, trend-following in trends)",
+   "pt": "Regime adaptativo (reversão em lateralidade, tendência em tendência)"
   },
   "family": "regime-switch",
   "date": "2026-06-27T12:00:00",
@@ -3222,9 +3222,9 @@
    "pt": "IBS (Internal Bar Strength), da QuantifiedStrategies, vendida com \"13% ao ano e 68% de acertos\". Comprar quando o fechamento está perto da mínima do dia (IBS < 0,2) e sair quando está perto da máxima. Com custos, ganha (+32% fora da amostra) mas muito menos do que comprar e esperar (+109%), com Sharpe 0,42 contra 0,68. Os 68% de acertos são comprar a queda num mercado em alta: muitos ganhos pequenos, mas você rende menos do que ficando parado. Ganha dinheiro, não supera o mercado."
   },
   "name": {
-   "es": "IBS — Internal Bar Strength (QuantifiedStrategies)",
-   "en": "IBS — Internal Bar Strength (QuantifiedStrategies)",
-   "pt": "IBS — Força Interna da Barra (QuantifiedStrategies)"
+   "es": "IBS — Fuerza interna de la barra",
+   "en": "IBS — Internal Bar Strength",
+   "pt": "IBS — Força interna da barra"
   },
   "family": "estrategia-publica",
   "date": "2026-06-27T11:00:00",
@@ -3398,9 +3398,9 @@
    "pt": "Turtle Trading (Richard Dennis, o experimento de 1983): comprar ao romper a máxima de 20 dias e sair ao perder a mínima de 10 (canal de Donchian). Fora da amostra (2019-2024) deu Sharpe de 0,75, um pouco acima de comprar e esperar (0,67), mas em 2012-2018 só 0,21: inconsistente e dependente do período (2019-2024 foi muito tendencial). Seguimento de tendência clássico: colhe tendências quando existem e sofre em mercados laterais. Não é uma vantagem estável."
   },
   "name": {
-   "es": "Turtle Trading — breakout Donchian (Richard Dennis)",
+   "es": "Turtle Trading — ruptura de Donchian (Richard Dennis)",
    "en": "Turtle Trading — Donchian breakout (Richard Dennis)",
-   "pt": "Turtle Trading — rompimento Donchian (Richard Dennis)"
+   "pt": "Turtle Trading — rompimento de Donchian (Richard Dennis)"
   },
   "family": "estrategia-publica",
   "date": "2026-06-27T10:20:00",
@@ -3563,7 +3563,7 @@
    "pt": "Faber GTAA (Meb Faber, a base da alocação tática de ativos): manter cada ativo se estiver acima da média de 10 meses (≈MA200); se não, caixa. Reduz o drawdown de forma brutal (−10% contra −30% sem estratégia), mas seu Sharpe (0,58) continua abaixo de comprar e esperar (0,67): é gestão de risco, não alfa. Mesmo perfil do nosso trend-flat (#59), que morreu no teste triplo. Útil para dormir tranquilo, não para bater o mercado."
   },
   "name": {
-   "es": "Faber GTAA — timing por MA200 (Meb Faber)",
+   "es": "Faber GTAA — timing con MA200 (Meb Faber)",
    "en": "Faber GTAA — MA200 timing (Meb Faber)",
    "pt": "Faber GTAA — timing pela MA200 (Meb Faber)"
   },
@@ -3740,7 +3740,7 @@
    "pt": "Nova categoria: testar estratégias públicas famosas com suas regras exatas. O Connors RSI(2), de Larry Connors, é uma das reversões mais documentadas: comprar se o preço está acima da média de 200 dias e o RSI(2) < 10, e sair se o RSI(2) > 70. Líquido de custos: Sharpe 0,17 em 2012-2018 e 0,48 fora da amostra (2019-2024), sempre abaixo de não usar estratégia (comprar e esperar: 0,67). A reversão de curto prazo não acrescenta vantagem após custos. Confirma nosso #65."
   },
   "name": {
-   "es": "Connors RSI(2) — reversion (Larry Connors)",
+   "es": "Connors RSI(2) — reversión (Larry Connors)",
    "en": "Connors RSI(2) — reversion (Larry Connors)",
    "pt": "Connors RSI(2) — reversão (Larry Connors)"
   },
@@ -3887,9 +3887,9 @@
    "pt": "Teste triplo do efeito noturno com custos reais da corretora. O efeito é estatisticamente real em bruto (ouro Sharpe 0,99, Deflated Sharpe 1,00: não é acaso). Mas capturá-lo exige entrar no fechamento e sair na abertura todos os dias, e o spread e o swap reais (ouro 2,5 bps/dia, petróleo 4,5-4,7 bps/dia) o destroem: líquido, −4,7% a −8,0% ao ano. Até o ouro, o mais barato, passa de +0,99 bruto para −3,11 líquido. É o mesmo muro que matou todas as estratégias de alta frequência (#6, #7, #65): a vantagem existe, mas os custos do trading frequente a enterram. Confirma a vantagem institucional: eles têm execução barata; o investidor de varejo não. Fecha o último fio acessível da pesquisa."
   },
   "name": {
-   "es": "Overnight con costos reales + OOS (validacion)",
-   "en": "Overnight with real costs + OOS (validation)",
-   "pt": "Overnight com custos reais + OOS (validação)"
+   "es": "Efecto nocturno con costos reales + validación fuera de muestra",
+   "en": "Overnight effect with real costs + out-of-sample validation",
+   "pt": "Efeito overnight com custos reais + validação fora da amostra"
   },
   "family": "anomalia",
   "date": "2026-06-25T15:00:00",
@@ -4048,8 +4048,8 @@
    "pt": "Cada estratégia recebeu uma gestão de risco individual (volatilidade-alvo de 10% + freio por drawdown) em vez de colocar todo o capital. Lição-chave: a gestão de risco não é mágica universal; depende da estratégia. Nas de beta (o bot, a cesta) não ajuda e até piora: a volatilidade-alvo aumenta a posição na calmaria (logo antes do colapso) e o freio entra e sai na hora errada. No VRP é transformadora (Sharpe 1,36 → 3,38, drawdown −62% → −26%), porque ali o perigo é a volatilidade e dimensionar pela volatilidade ataca exatamente esse risco. A verdade de fundo: a gestão de risco controla quanto você perde, não se você tem vantagem; não transforma beta em alfa."
   },
   "name": {
-   "es": "Gestion de riesgo por estrategia (no todo el capital)",
-   "en": "Per-strategy risk management (not whole capital)",
+   "es": "Gestión de riesgo por estrategia (no todo el capital)",
+   "en": "Per-strategy risk management (not all the capital)",
    "pt": "Gestão de risco por estratégia (não todo o capital)"
   },
   "family": "risk-mgmt",
@@ -4216,9 +4216,9 @@
    "pt": "A versão segura de vender o prêmio de volatilidade: vender o prêmio e, ao mesmo tempo, comprar uma put distante e barata (custa ~12% do prêmio) que limita a perda. Surpresa honesta: não só deixa de liquidar a conta (pior dia −7,8% contra −27% sem cobertura), como o Sharpe sobe para 1,85, porque tirar a \"bomba\" reduz a volatilidade. No backtest cresce +18,4% ao ano, com volatilidade de 9%, 92% de anos positivos, pior ano −6% (2018) e drawdown máximo de −32%. Em dinheiro, num cenário realista (metade do backtest por fricções): $10k → ~$900 por ano; $50k → ~$4.600 por ano. Não é \"ficar rico\": é ~9-18% ao ano com capital real, aguentando quedas de −32%, e exige uma conta de opções (não o bot de CFD). É o mais promissor dos 69 experimentos, mas falta o teste triplo (fora da amostra + Deflated Sharpe) com dados reais de opções."
   },
   "name": {
-   "es": "VRP protegido (tail-hedged)",
-   "en": "Tail-hedged VRP (protected)",
-   "pt": "VRP protegido (com hedge de cauda)"
+   "es": "VRP protegido (cobertura de cola)",
+   "en": "Tail-hedged VRP",
+   "pt": "VRP protegido (hedge de cauda)"
   },
   "family": "vol-premium",
   "date": "2026-06-15T13:00:00",
@@ -4395,9 +4395,9 @@
    "pt": "Estacionalidade no SP500 (dia da semana, turn-of-month). Retornos quase planos por dia (+3 a +9 bps, ruído); turn-of-month +5 vs +4 bps = sem efeito real. As anomalias de calendário, se existiram, já foram arbitradas."
   },
   "name": {
-   "es": "Estacionalidad (dia de semana, turn-of-month)",
-   "en": "Seasonality (day-of-week, turn-of-month)",
-   "pt": "Estacionalidade (dia da semana, turn-of-month)"
+   "es": "Estacionalidad (día de la semana, cambio de mes)",
+   "en": "Seasonality (day of week, turn of month)",
+   "pt": "Sazonalidade (dia da semana, virada do mês)"
   },
   "family": "estacionalidad",
   "date": "2026-06-15T12:00:00",
@@ -4540,9 +4540,9 @@
    "pt": "Lead-lag entre ativos: o retorno defasado do petróleo prevê o CAD? O ouro prevê o AUD? Correlações defasadas ~0 (0,007, −0,005), Sharpe ~0. Não há relação de antecipação explorável em 1 dia: os mercados já arbitraram qualquer lead-lag óbvio."
   },
   "name": {
-   "es": "Lead-lag cross-asset (petroleo->CAD, oro->AUD)",
+   "es": "Adelanto-retraso entre activos (petróleo→CAD, oro→AUD)",
    "en": "Cross-asset lead-lag (oil→CAD, gold→AUD)",
-   "pt": "Lead-lag cross-asset (petróleo→CAD, ouro→AUD)"
+   "pt": "Lead-lag entre ativos (petróleo→CAD, ouro→AUD)"
   },
   "family": "cross-asset",
   "date": "2026-06-15T11:30:00",
@@ -4664,7 +4664,7 @@
    "pt": "CAPTURA DE ANOMALIAS (ideia do usuário): detectar extremos |z|>2 e apostar na reversão em toda a cesta. Sharpe −0,21 mesmo SEM custos. Os extremos não revertem de forma confiável aqui (61% de dias com sinal = demais); com custos seria pior. Boa intuição, mas sem vantagem nesses ativos: os extremos às vezes são o início de uma tendência, não uma reversão."
   },
   "name": {
-   "es": "Captura de anomalias (|z|>2 -> reversion)",
+   "es": "Captura de anomalías (|z|>2 → reversión)",
    "en": "Anomaly capture (|z|>2 → reversion)",
    "pt": "Captura de anomalias (|z|>2 → reversão)"
   },
@@ -4779,8 +4779,8 @@
    "pt": "Reversão de curto prazo (z-score de 5 dias) em índices: comprar sobrevenda, vender sobrecompra. Em bruto dá Sharpe de 0,02 a 0,48, SEMPRE pior que comprar e esperar, e faz muitíssimas operações, então os custos a enterram. Não há vantagem de reversão explorável."
   },
   "name": {
-   "es": "Reversion corto plazo (z-score 5d) en indices",
-   "en": "Short-term reversion (5d z-score) in indices",
+   "es": "Reversión de corto plazo (z-score 5d) en índices",
+   "en": "Short-term reversion (5-day z-score) in indices",
    "pt": "Reversão de curto prazo (z-score 5d) em índices"
   },
   "family": "reversion",
@@ -4911,9 +4911,9 @@
    "pt": "FRONTEIRA VRP: a única com uma vantagem real de fundo dos 68 experimentos. Vender volatilidade (receber o prêmio de variância: VIX implícito − realizado) dá Sharpe de 1,56 (o dobro do mercado, 0,80), positivo em 82% dos dias. MAS a assimetria de −16,4 e o pior dia de −28,6σ são a armadilha: é exatamente o que matou o XIV no «Volmageddon» de 2018. NÃO é lucro grátis: é o PAGAMENTO por assumir risco de cauda (você vende um seguro contra quedas). Real e vendável (os fundos de volatilidade fazem isso), mas exige opções + proteção de cauda estrita; sem gestão, estoura até zero. A lição de fundo: a única vantagem persistente não é PREVER o mercado, é RECEBER para aguentar um risco que os outros não querem."
   },
   "name": {
-   "es": "VRP — Volatility Risk Premium",
+   "es": "VRP — Prima de riesgo de volatilidad",
    "en": "VRP — Volatility Risk Premium",
-   "pt": "VRP — Prêmio de Risco de Volatilidade"
+   "pt": "VRP — Prêmio de risco de volatilidade"
   },
   "family": "vol-premium",
   "date": "2026-06-15T10:00:00",
@@ -5065,9 +5065,9 @@
    "pt": "FRONTEIRA NOVA: decompor o retorno diário em NOTURNO (fechamento → abertura) e INTRADIÁRIO (abertura → fechamento). Nos índices domina o intradiário (SP500 Sharpe 0,84 vs noturno −0,33), o OPOSTO da anomalia clássica de ações dos EUA. Mas há um achado real: o ouro e o petróleo têm o retorno quase todo NOTURNO (ouro noturno Sharpe 0,99; Brent +149% noturno vs −72% intradiário). Padrão de sessão específico por classe de ativo. Falta validar com custos (swaps + spread) e fora da amostra, mas é uma fronteira viva que merece ser seguida."
   },
   "name": {
-   "es": "Efecto overnight (sesion dia/noche)",
-   "en": "Overnight effect (day/night session)",
-   "pt": "Efeito overnight (sessão dia/noite)"
+   "es": "Efecto nocturno (sesión diurna vs. nocturna)",
+   "en": "Overnight effect (day vs. night session)",
+   "pt": "Efeito overnight (sessão diurna vs. noturna)"
   },
   "family": "anomalia",
   "date": "2026-06-15T09:00:00",
@@ -5209,9 +5209,9 @@
    "pt": "Teste triplo do B3 (o melhor candidato de risco). Morreu do mesmo jeito: em forex + ouro é negativo dentro da amostra, Deflated Sharpe 0,20, fora da amostra Sharpe −0,03. Sua melhora de retorno também era beta dos índices, e seu drawdown não supera claramente simplesmente investir a 1x. ENCERRAMENTO da saga de troca de regime: 8 ataques, nenhum passa no teste triplo; nada supera o 1x; não há vantagem. O muro é a detecção executável + os dados de varejo, não a falta de ideias."
   },
   "name": {
-   "es": "B3 continuo (triple test)",
+   "es": "B3 continuo (prueba triple)",
    "en": "B3 continuous (triple test)",
-   "pt": "B3 contínuo (triple test)"
+   "pt": "B3 contínuo (teste triplo)"
   },
   "family": "regime-switch",
   "date": "2026-06-14T12:30:00",
@@ -5362,9 +5362,9 @@
    "pt": "Segunda tentativa. B1 (comprado/vendido NEUTRO EM DÓLARES): sem vantagem, −28,0% (os custos vencem; confirma que o neutro entre ativos está morto). B2 (núcleo 1x + camada neutra): a camada perdedora envenenou o núcleo vencedor (−9,6% vs +23,1%). B3 (exposição CONTÍNUA, sem troca binária): o melhor em risco, iguala o 1x com o menor drawdown nas duas crises, sem entradas e saídas fora de hora."
   },
   "name": {
-   "es": "Ataques regime-switch — ronda 2",
+   "es": "Ataques al cambio de régimen — ronda 2",
    "en": "Regime-switch attacks — round 2",
-   "pt": "Ataques regime-switch — rodada 2"
+   "pt": "Ataques à troca de regime — rodada 2"
   },
   "family": "regime-switch",
   "date": "2026-06-14T12:00:00",
@@ -5514,9 +5514,9 @@
    "pt": "Primeira tentativa de corrigir a perda no mercado de baixa. A1 (tendência + VIX) se envenenou: o filtro VIX defasado entra e sai fora de hora e arrastou tudo para −16,8%. A3 (comprado/vendido direcional) ganha no mercado de baixa de 2022 (+6,7%) mas perde no de alta (−24,1%): é a aposta oposta, não uma correção. A2 (vol-targeting) não agregou. Cada «correção» só muda onde você ganha e onde perde."
   },
   "name": {
-   "es": "Ataques regime-switch — ronda 1",
+   "es": "Ataques al cambio de régimen — ronda 1",
    "en": "Regime-switch attacks — round 1",
-   "pt": "Ataques regime-switch — rodada 1"
+   "pt": "Ataques à troca de regime — rodada 1"
   },
   "family": "regime-switch",
   "date": "2026-06-14T11:30:00",
@@ -5665,9 +5665,9 @@
    "pt": "A ideia do usuário: detectar mercado de baixa com a MA200 e ficar de fora. Na cesta completa dava +30,3% (2014-2024)… mas o teste triplo o matou: na cesta que vai até 2007 (forex + ouro, sem índices) é negativo, Deflated Sharpe 0,21, fora da amostra (OOS) 2007-2013 Sharpe −0,09. O +30,3% era BETA dos índices disfarçado de vantagem por regime. Lição: um detector lento (tendência) sobrevive à execução melhor que um rápido (VIX), mas ainda não gera vantagem."
   },
   "name": {
-   "es": "Trend-flat (regime switch por MA200)",
-   "en": "Trend-flat (regime switch via MA200)",
-   "pt": "Trend-flat (regime switch via MA200)"
+   "es": "Tendencia o fuera (cambio de régimen con MA200)",
+   "en": "Trend or flat (regime switch via MA200)",
+   "pt": "Tendência ou fora (troca de regime via MA200)"
   },
   "family": "regime-switch",
   "date": "2026-06-14T11:00:00",
@@ -5825,9 +5825,9 @@
    "pt": "Quanto o bot renderia? Simulado com preços reais: 1 mês −1,0%, 6 meses +6,7%, COVID 2020 +13,1%, mercado de baixa 2022 −17,0% (tudo a 2x). Mesmo bot, sinal conforme o mercado: é beta alavancado, não uma vantagem própria. Os custos de operar são mínimos (~$192 em 6 meses); o risco real é a direção do mercado + os swaps. Num ano de baixa você perderia e a 2x o drawdown estouraria uma conta de financiamento."
   },
   "name": {
-   "es": "What-if: capital del bot (1x / 2x / vol-target)",
-   "en": "What-if: bot capital (1x / 2x / vol-target)",
-   "pt": "What-if: capital do bot (1x / 2x / vol-target)"
+   "es": "Escenarios: capital del bot (1x / 2x / volatilidad objetivo)",
+   "en": "What-if: bot capital (1x / 2x / vol targeting)",
+   "pt": "Cenários: capital do bot (1x / 2x / volatilidade-alvo)"
   },
   "family": "forward-test",
   "date": "2026-06-14T10:00:00",
@@ -6008,9 +6008,9 @@
    "pt": "A melhoria do bot ao vivo: o vol-targeting supera a alavancagem fixa? Com a mesma exposição média e com o sinal macro defasado (honesto), reduz o drawdown nas crises que importam (COVID −10,3% → −9,0%, 2022 −13,9% → −10,9%). Mas ambas as versões fazem ~0% executável: melhora o RISCO, não o RETORNO. Fica pronto como opção ativável, sem mexer no bot em produção."
   },
   "name": {
-   "es": "vol-targeting vs leverage fijo (bot live)",
-   "en": "vol-targeting vs fixed leverage (live bot)",
-   "pt": "vol-targeting vs alavancagem fixa (bot live)"
+   "es": "Volatilidad objetivo vs. apalancamiento fijo (bot en vivo)",
+   "en": "Vol targeting vs. fixed leverage (live bot)",
+   "pt": "Volatilidade-alvo vs. alavancagem fixa (bot ao vivo)"
   },
   "family": "bot-upgrade",
   "date": "2026-06-13T20:08:50",
@@ -6184,9 +6184,9 @@
    "pt": "Sentimento testado de 4 formas (VIX como medo, estrutura a termo VIX/VIX3M, entre ativos risk-on/risk-off, tudo junto). As 4 NÃO superam a taxa base em direção (0,55-0,58 < 0,613) e o modelo nulo as supera → o sentimento não prevê a direção. O famoso «+30%» não se reproduz sem vazar informação do futuro."
   },
   "name": {
-   "es": "sentimiento probado de 4 formas",
-   "en": "sentiment tested 4 ways",
-   "pt": "sentimento testado de 4 formas"
+   "es": "Sentimiento probado de 4 formas",
+   "en": "Sentiment tested 4 ways",
+   "pt": "Sentimento testado de 4 formas"
   },
   "family": "sentimiento",
   "date": "2026-06-13T19:30:00",
@@ -6371,9 +6371,9 @@
    "pt": "Navalha de Occam aplicada à volatilidade: o machine learning agrega algo sobre um EWMA de uma linha? Não. O EWMA clássico previu a volatilidade melhor (R² 0,225 vs 0,113 do machine learning). Conclusão honesta: para prever volatilidade, usar o simples."
   },
   "name": {
-   "es": "EWMA clásico vs ML (vol)",
-   "en": "Classic EWMA vs ML (vol)",
-   "pt": "EWMA clássico vs ML (vol)"
+   "es": "EWMA clásico vs. machine learning (volatilidad)",
+   "en": "Classic EWMA vs. machine learning (volatility)",
+   "pt": "EWMA clássico vs. machine learning (volatilidade)"
   },
   "family": "volatilidad",
   "date": "2026-06-13T19:15:00",
@@ -6506,9 +6506,9 @@
    "pt": "É possível prever o volume ou a amplitude? O volume não (R² ≈ 0; é volume de ticks, que depende de fatores externos), mas a AMPLITUDE sim (R² 0,15-0,27 em índices e energia). Confirma o sinal de volatilidade por outra porta; útil para escolher quando executar, não para a direção."
   },
   "name": {
-   "es": "predicción de volumen y rango",
-   "en": "volume and range prediction",
-   "pt": "previsão de volume e rango"
+   "es": "Predicción de volumen y rango",
+   "en": "Volume and range prediction",
+   "pt": "Previsão de volume e range"
   },
   "family": "volatilidad",
   "date": "2026-06-13T19:00:00",
@@ -6660,9 +6660,9 @@
    "pt": "Vol-breakout sem direção: operar a expansão (rompendo para cima ou para baixo) quando se prevê volatilidade alta. Falhou (Sharpe −0,44 contra +0,65 sem estratégia, comprar e esperar). Mesmo sabendo que VEM um movimento, você ainda precisa da direção, e isso está morto. Lucrar com volatilidade pura exigiria opções."
   },
   "name": {
-   "es": "vol-breakout direction-agnostic",
-   "en": "vol-breakout direction-agnostic",
-   "pt": "vol-breakout sem direção"
+   "es": "Ruptura de volatilidad sin dirección",
+   "en": "Direction-agnostic volatility breakout",
+   "pt": "Rompimento de volatilidade sem direção"
   },
   "family": "volatilidad",
   "date": "2026-06-13T18:45:00",
@@ -6752,9 +6752,9 @@
    "pt": "Vol-targeting: dimensionar a posição pela volatilidade. Reduz o drawdown máximo de −68% (alavancagem fixa) para −20%, cravando o alvo de volatilidade. E a navalha de Occam: um EWMA simples prevê a volatilidade melhor que o machine learning (R² 0,225 vs 0,113). A única entrega real da rodada: controle de risco, não lucro extra."
   },
   "name": {
-   "es": "vol-targeting (control de drawdown)",
-   "en": "vol-targeting (drawdown control)",
-   "pt": "vol-targeting (controle de drawdown)"
+   "es": "Volatilidad objetivo (control de drawdown)",
+   "en": "Vol targeting (drawdown control)",
+   "pt": "Volatilidade-alvo (controle de drawdown)"
   },
   "family": "volatilidad",
   "date": "2026-06-13T18:30:00",
@@ -6895,9 +6895,9 @@
    "pt": "Novo teste da abordagem mais divulgada (swing de 5 dias + classificação com RSI/MACD/Bollinger/volume + filtro híbrido). Acerto de 0,516 (≈ acaso), e o modelo NULO (rótulos embaralhados, Sharpe 0,36) superou o real (0,15): a «previsão» era só beta. Mas apareceu o importante: a VOLATILIDADE pode ser prevista (R² 0,27 no SP500, 0,40 no WTI)."
   },
   "name": {
-   "es": "swing + clasificación + sentimiento (re-test)",
-   "en": "swing + classification + sentiment (re-test)",
-   "pt": "swing + classificação + sentimento (re-test)"
+   "es": "Swing + clasificación + sentimiento (nueva prueba)",
+   "en": "Swing + classification + sentiment (retest)",
+   "pt": "Swing + classificação + sentimento (novo teste)"
   },
   "family": "volatilidad",
   "date": "2026-06-13T18:00:00",
@@ -7047,9 +7047,9 @@
    "pt": "Encerramento das fronteiras matemáticas: 50 experimentos, 11 classes de estratégia, nenhuma passa no teste triplo (fora da amostra + executável + Deflated Sharpe). A vantagem dos fundos quantitativos não está na matemática (é pública e a testamos): está nos DADOS (tick, fluxo de ordens), nos CUSTOS (acesso direto) e na AMPLITUDE (milhares de instrumentos)."
   },
   "name": {
-   "es": "CIERRE: 11 clases probadas v50",
-   "en": "CLOSURE: 11 classes tested v50",
-   "pt": "FECHAMENTO: 11 classes testadas v50"
+   "es": "Cierre: 11 clases de estrategia probadas",
+   "en": "Wrap-up: 11 strategy classes tested",
+   "pt": "Encerramento: 11 classes de estratégia testadas"
   },
   "family": "quant",
   "date": "2026-06-10T14:28:44",
@@ -7173,9 +7173,9 @@
    "pt": "Efeito turn-of-month (calendário): comprar índices nos últimos e primeiros dias do mês. Morreu. Os efeitos de calendário, se existiram, já foram arbitrados."
   },
   "name": {
-   "es": "Turn-of-month indices v49",
-   "en": "Turn-of-month indices v49",
-   "pt": "Turn-of-month índices v49"
+   "es": "Cambio de mes en índices",
+   "en": "Turn of the month in indices",
+   "pt": "Virada do mês em índices"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -7319,9 +7319,9 @@
    "pt": "Momentum entre ativos (Jegadeesh-Titman): comprado nos melhores e vendido nos piores da cesta segundo o momentum relativo. Morreu nos dois períodos. Outro clássico acadêmico que não sobrevive aos CFD."
   },
   "name": {
-   "es": "Momentum cross-sectional v48",
-   "en": "Cross-sectional momentum v48",
-   "pt": "Momentum cross-sectional (seccional) v48"
+   "es": "Momentum transversal",
+   "en": "Cross-sectional momentum",
+   "pt": "Momentum transversal"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -7482,9 +7482,9 @@
    "pt": "Stat-arb por PCA (Avellaneda e Lee, 2010): operar o resíduo de cada ativo contra os fatores comuns. A técnica institucional por excelência… morreu no varejo. Sem dados tick nem acesso direto, os resíduos não pagam os custos."
   },
   "name": {
-   "es": "Stat-arb PCA residual v47",
-   "en": "Stat-arb PCA residual v47",
-   "pt": "Stat-arb resíduo PCA v47"
+   "es": "Arbitraje estadístico (residuo PCA)",
+   "en": "Statistical arbitrage (PCA residual)",
+   "pt": "Arbitragem estatística (resíduo PCA)"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:56",
@@ -7645,9 +7645,9 @@
    "pt": "Pairs trading por cointegração (Engle-Granger) sobre 6 pares relacionados (Brent-WTI, ouro-prata, SP500-Nasdaq 100…). A reversão do spread morreu com os custos e a granularidade de um operador de varejo. A relação existe; a vantagem líquida, não."
   },
   "name": {
-   "es": "Pairs cointegracion v46",
-   "en": "Pairs cointegration v46",
-   "pt": "Pairs cointegração v46"
+   "es": "Pares por cointegración",
+   "en": "Cointegration pairs",
+   "pt": "Pares por cointegração"
   },
   "family": "quant",
   "date": "2026-06-10T14:27:55",
@@ -7808,9 +7808,9 @@
    "pt": "Posicionamento COT: estratégia contrária nos extremos (quando os especuladores estão muito comprados, vender). Morreu nos dois períodos. O \"dinheiro inteligente\" do COT não antecipa o retorno em prazos operáveis para um investidor de varejo."
   },
   "name": {
-   "es": "COT contrarian extremos v45",
-   "en": "COT contrarian extremes v45",
-   "pt": "COT contrária em extremos v45"
+   "es": "COT contrario en extremos",
+   "en": "COT contrarian at extremes",
+   "pt": "COT contrário em extremos"
   },
   "family": "cot",
   "date": "2026-06-10T14:21:18",
@@ -7959,7 +7959,7 @@
    "pt": "Etapa de dados: download do posicionamento COT (CFTC, 40 anos) via API pública, que tornou possível o teste contrário do #45."
   },
   "name": {
-   "es": "posicionamiento COT (datos)",
+   "es": "Posicionamiento COT (datos)",
    "en": "COT positioning (data)",
    "pt": "Posicionamento COT (dados)"
   },
@@ -8107,9 +8107,9 @@
    "pt": "Combinação de carry + tendência + filtro macro, tentando resgatar o carry. Também não sobreviveu a 2014–2024. Combinar dois fatores fracos não cria um forte."
   },
   "name": {
-   "es": "Carry+Trend combo v43",
-   "en": "Carry+Trend combo v43",
-   "pt": "Combo Carry+Trend v43"
+   "es": "Combinación carry + tendencia",
+   "en": "Carry + trend combo",
+   "pt": "Combinação carry + tendência"
   },
   "family": "carry",
   "date": "2026-06-10T14:20:06",
@@ -8274,9 +8274,9 @@
    "pt": "Carry de forex executável: comprar as moedas com maior taxa e vender as de menor (diferencial FRED, defasado 1 mês). O carry puro morreu nos dois períodos: os seus crashes coincidem com todo o resto. É um fator que enfraqueceu depois de 2008, com as taxas do G10 em ~0 durante uma década."
   },
   "name": {
-   "es": "Carry FX ejecutable v42",
-   "en": "Executable FX carry v42",
-   "pt": "Carry FX executável v42"
+   "es": "Carry de divisas ejecutable",
+   "en": "Executable FX carry",
+   "pt": "Carry de moedas executável"
   },
   "family": "carry",
   "date": "2026-06-10T14:20:06",
@@ -8451,9 +8451,9 @@
    "pt": "Etapa de dados: download e integração das taxas do FRED (8 moedas, 1956–2026) para construir o fator carry. A infraestrutura que tornou possível testar o carry com rigor no #42 e no #43."
   },
   "name": {
-   "es": "tasas FRED (datos de carry)",
+   "es": "Tasas de FRED (datos de carry)",
    "en": "FRED rates (carry data)",
-   "pt": "Taxas FRED (dados de carry)"
+   "pt": "Taxas do FRED (dados de carry)"
   },
   "family": "datos",
   "date": "2026-06-10T14:20:00",
@@ -8609,9 +8609,9 @@
    "pt": "Veredito após 40 experimentos: com dados ao alcance de qualquer investidor (preço + macro grátis) e rebalanceamento diário, não existe uma vantagem aplicável que passe challenges com expectativa real. Os ~7% de aprovação do setor são matemática, não só indisciplina. Decisão: o bot demo cai para ×2 como instrumento de medição, e zero dinheiro em challenges com esta classe de estratégia."
   },
   "name": {
-   "es": "VEREDICTO FINAL 40 experimentos v40",
-   "en": "FINAL VERDICT 40 experiments v40",
-   "pt": "VEREDITO FINAL 40 experimentos v40"
+   "es": "Veredicto final de 40 experimentos",
+   "en": "Final verdict on 40 experiments",
+   "pt": "Veredito final de 40 experimentos"
   },
   "family": "risk",
   "date": "2026-06-10T14:10:58",
@@ -8740,9 +8740,9 @@
    "pt": "Valor esperado do negócio com a versão executável e honesta: impraticável (crescimento anual de 1,9%, mediana de 2,3 anos para passar). Os números nominais positivos evaporam ao medir o tempo real."
   },
   "name": {
-   "es": "EV del negocio ejecutable v39",
-   "en": "EV of executable business v39",
-   "pt": "EV do negócio executável v39"
+   "es": "Valor esperado del negocio ejecutable",
+   "en": "Expected value of the executable business",
+   "pt": "Valor esperado do negócio executável"
   },
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -8903,9 +8903,9 @@
    "pt": "O juiz final: o Deflated Sharpe Ratio (Bailey e López de Prado), que corrige por ter testado mais de 40 configurações. O melhor sistema executável (Sharpe 0,38) deu um valor de 0,35: não se distingue do melhor resultado que o puro acaso daria depois de tantas tentativas. A prova estatística de que não havia vantagem."
   },
   "name": {
-   "es": "Deflated Sharpe del ejecutable v38",
-   "en": "Deflated Sharpe of executable v38",
-   "pt": "Deflated Sharpe do executável v38"
+   "es": "Deflated Sharpe de la versión ejecutable",
+   "en": "Deflated Sharpe of the executable version",
+   "pt": "Deflated Sharpe da versão executável"
   },
   "family": "risk",
   "date": "2026-06-10T14:09:55",
@@ -9048,9 +9048,9 @@
    "pt": "Probabilidade real de passar com a versão executável: 8,6% em 1 ano; 69% sem limite de tempo, mas com uma mediana de 2,3 anos. Na prática: tecnicamente possível, praticamente inviável como fonte de renda."
   },
   "name": {
-   "es": "P(pasar) ejecutable v37",
-   "en": "P(pass) executable v37",
-   "pt": "P(passar) executável v37"
+   "es": "Probabilidad de aprobar (versión ejecutable)",
+   "en": "Probability of passing (executable version)",
+   "pt": "Probabilidade de aprovação (versão executável)"
   },
   "family": "risk",
   "date": "2026-06-10T14:09:54",
@@ -9221,9 +9221,9 @@
    "pt": "Qual é a qualidade própria do sistema sem as regras da prop firm que o protegem? Com ×3 ou mais se autodestrói do mesmo jeito (drawdown máximo de −38% a −94%). Revelou um teto próprio da estratégia: as regras da prop firm escondiam a sua fragilidade real."
   },
   "name": {
-   "es": "Calidad intrinseca sin reglas prop v36",
-   "en": "Intrinsic quality without prop rules v36",
-   "pt": "Qualidade intrínseca sem regras prop v36"
+   "es": "Calidad intrínseca sin reglas de prop firm",
+   "en": "Intrinsic quality without prop firm rules",
+   "pt": "Qualidade intrínseca sem regras de mesa proprietária"
   },
   "family": "bot",
   "date": "2026-06-10T14:08:35",
@@ -9380,9 +9380,9 @@
    "pt": "Testar a curva de juros (diferença TNX−IRX) como filtro adicional. Não acrescentou nada. Mais uma fonte macro descartada com rigor."
   },
   "name": {
-   "es": "Curva de tasas como filtro v35",
-   "en": "Yield curve as filter v35",
-   "pt": "Curva de juros como filtro v35"
+   "es": "Curva de tasas como filtro",
+   "en": "Yield curve as a filter",
+   "pt": "Curva de juros como filtro"
   },
   "family": "bot",
   "date": "2026-06-10T14:08:33",
@@ -9517,9 +9517,9 @@
    "pt": "Alavancagem graduada, mas na versão executável (sinais de ontem). Só aguenta até ~×2,5; além disso, a proteção defasada não basta. Coerente com a fronteira de risco de toda a série."
   },
   "name": {
-   "es": "Graduado VIX<14 ejecutable v34",
-   "en": "Graduated VIX<14 executable v34",
-   "pt": "Graduado VIX<14 executável v34"
+   "es": "Escalonado VIX<14 ejecutable",
+   "en": "Executable graduated VIX<14",
+   "pt": "Escalonado VIX<14 executável"
   },
   "family": "bot",
   "date": "2026-06-10T14:07:20",
@@ -9696,9 +9696,9 @@
    "pt": "E se o filtro disparar mais cedo? Não ajuda: o disparo antecipado gera alarmes falsos (você entra e sai sem motivo) e piora o resultado. O momento de sair tem um ponto ótimo, não é \"quanto antes melhor\"."
   },
   "name": {
-   "es": "Disparo temprano del filtro v33",
-   "en": "Early filter trigger v33",
-   "pt": "Disparo antecipado do filtro v33"
+   "es": "Activación temprana del filtro",
+   "en": "Early filter trigger",
+   "pt": "Acionamento antecipado do filtro"
   },
   "family": "bot",
   "date": "2026-06-10T14:07:18",
@@ -9850,9 +9850,9 @@
    "pt": "Validação do filtro que reage dentro do dia, com gaps de abertura reais e uma mínima intradiária conservadora. Confirmou a sobrevivência: Sharpe ~0,40, ~2% ao ano com ×2. Real e executável… mas modesto, muito longe do que um challenge curto precisa."
   },
   "name": {
-   "es": "Validacion ejecutable-reactivo v32",
-   "en": "Executable-reactive validation v32",
-   "pt": "Validação executável-reativo v32"
+   "es": "Validación ejecutable-reactiva",
+   "en": "Executable-reactive validation",
+   "pt": "Validação executável-reativa"
   },
   "family": "bot",
   "date": "2026-06-10T14:06:03",
@@ -10006,9 +10006,9 @@
    "pt": "Se o problema é reagir tarde, e um filtro que reage dentro do dia? Um monitor que fecha no meio da sessão (φ = a fração do dia que você consegue cobrir), implementável consultando o VIX a cada 15 minutos. Foi a primeira configuração executável que sobreviveu a 2007–2024, mas só com ×2 ou menos."
   },
   "name": {
-   "es": "Filtro reactivo intradia v31",
-   "en": "Intraday reactive filter v31",
-   "pt": "Filtro reativo intradiário v31"
+   "es": "Filtro reactivo intradía",
+   "en": "Intraday reactive filter",
+   "pt": "Filtro reativo intradiário"
   },
   "family": "bot",
   "date": "2026-06-10T14:06:02",
@@ -10178,9 +10178,9 @@
    "pt": "Kill-switch combinado com menos alavancagem. Sobrevive um pouco mais, mas o retorno cai tanto que deixa de servir para passar um challenge. Uma troca sem saída."
   },
   "name": {
-   "es": "kill-switch + leverage bajo",
-   "en": "kill-switch + low leverage",
-   "pt": "kill-switch + alavancagem baixa"
+   "es": "Interruptor de emergencia + apalancamiento bajo",
+   "en": "Kill switch + low leverage",
+   "pt": "Kill switch + alavancagem baixa"
   },
   "family": "ejecutable",
   "date": "2026-06-10T14:02:00",
@@ -10352,9 +10352,9 @@
    "pt": "Variante do kill-switch com disparo mais cedo. Mesmo desfecho: o estrago dos primeiros dias já estava feito quando reagia."
   },
   "name": {
-   "es": "kill-switch disparo temprano",
-   "en": "kill-switch early trigger",
-   "pt": "kill-switch disparo antecipado"
+   "es": "Interruptor de emergencia con disparo temprano",
+   "en": "Kill switch with early trigger",
+   "pt": "Kill switch com acionamento antecipado"
   },
   "family": "ejecutable",
   "date": "2026-06-10T14:01:00",
@@ -10502,9 +10502,9 @@
    "pt": "Sinais defasados em 1 dia mais um kill-switch intradiário (fechar tudo a ~−3% do dia). Morreu: num crash prolongado o drawdown se acumula durante a primeira semana, antes que o kill-switch faça diferença."
   },
   "name": {
-   "es": "lag-1 + kill-switch",
-   "en": "lag-1 + kill-switch",
-   "pt": "lag-1 + kill-switch"
+   "es": "Retraso de 1 día + interruptor de emergencia",
+   "en": "1-day lag + kill switch",
+   "pt": "Atraso de 1 dia + kill switch"
   },
   "family": "ejecutable",
   "date": "2026-06-10T14:00:00",
@@ -10681,9 +10681,9 @@
    "pt": "A prova de fogo. Ao defasar todos os sinais em 1 dia (a única versão que um bot real consegue executar: decide às 17:30 e aplica no dia seguinte), a reentrada e a própria base morreram nos dois períodos. O Sharpe de 1,23 do filtro estava inflado por usar o VIX do fechamento do mesmo dia. Como morre: um dia de crash com ×3–4 rompe o limite diário de 5% antes de dar tempo de reagir. Este experimento mudou todo o veredito."
   },
   "name": {
-   "es": "Prueba de fuego lag-1 re-entrada v27",
-   "en": "Lag-1 fire test re-entry v27",
-   "pt": "Teste de fogo lag-1 re-entrada v27"
+   "es": "Prueba de fuego: reentrada con retraso de 1 día",
+   "en": "Acid test: re-entry with 1-day lag",
+   "pt": "Teste de fogo: reentrada com atraso de 1 dia"
   },
   "family": "bot",
   "date": "2026-06-10T13:51:43",
@@ -10843,9 +10843,9 @@
    "pt": "Reentrada \"pânico esfriando\": voltar ao mercado quando o VIX cai da sua máxima recente. Marcou um Sharpe espetacular de 2,12 em toda a grade… bom demais. Usava informação do mesmo dia que um bot real ainda não teria. Uma das ilusões mais perigosas, porque passava em todos os testes menos no de executabilidade."
   },
   "name": {
-   "es": "Re-entrada panico enfriandose v26",
-   "en": "Re-entry panic cooling off v26",
-   "pt": "Re-entrada pânico esfriando v26"
+   "es": "Reentrada cuando el pánico se enfría",
+   "en": "Re-entry as panic cools off",
+   "pt": "Reentrada quando o pânico esfria"
   },
   "family": "bot",
   "date": "2026-06-10T13:50:36",
@@ -10991,9 +10991,9 @@
    "pt": "Machine learning para o tamanho da posição (não para a direção), mantendo intacta a proteção manual. Sobreviveu aos dois períodos mas não acrescentou nada (1,20/1,04 contra 1,23/1,06): os dados macro não têm sinal de retorno além do liga/desliga que o filtro simples já dava. Além disso, herda o filtro manual decidido com o fechamento do mesmo dia, informação que um bot real ainda não teria."
   },
   "name": {
-   "es": "ML sizing con proteccion manual v25",
-   "en": "ML sizing with manual protection v25",
-   "pt": "ML sizing com proteção manual v25"
+   "es": "Tamaño de posición con ML y protección manual",
+   "en": "ML position sizing with manual protection",
+   "pt": "Dimensionamento com ML e proteção manual"
   },
   "family": "ml",
   "date": "2026-06-10T13:49:40",
@@ -11139,9 +11139,9 @@
    "pt": "Segunda versão do regime supervisionado (residual, com balanceamento de classes e limite adaptativo). Mesmo resultado: morreu. Reforçou que o problema não era o ajuste do modelo, e sim a natureza do fenômeno."
   },
   "name": {
-   "es": "Regimen supervisado v2 residual v24",
-   "en": "Supervised regime v2 residual v24",
-   "pt": "Regime supervisado v2 residual v24"
+   "es": "Régimen supervisado residual",
+   "en": "Residual supervised regime",
+   "pt": "Regime supervisionado residual"
   },
   "family": "ml",
   "date": "2026-06-10T13:48:31",
@@ -11303,9 +11303,9 @@
    "pt": "Regime supervisionado: XGBoost com dados macro e walk-forward para aprender quando sair do mercado. A conta bateu no limite de perda aos 81 dias com exatamente o mesmo resultado da carteira ×3 sem filtro: o modelo não chegou a agir. Mesmo assim deixa um alerta válido: os crashes são eventos raríssimos (~2 exemplos por janela) e cada crise é diferente, então há pouquíssimos exemplos para um modelo aprender."
   },
   "name": {
-   "es": "Regimen supervisado XGB walk-forward v23",
-   "en": "Supervised regime XGB walk-forward v23",
-   "pt": "Regime supervisado XGB walk-forward v23"
+   "es": "Régimen supervisado con XGBoost (walk-forward)",
+   "en": "Supervised regime with XGBoost (walk-forward)",
+   "pt": "Regime supervisionado com XGBoost (walk-forward)"
   },
   "family": "ml",
   "date": "2026-06-10T13:47:00",
@@ -11480,9 +11480,9 @@
    "pt": "E se uma IA aprender o regime melhor que as regras feitas à mão? Um HMM gaussiano de 2 estados (Hamilton), sem usar informação futura. Em 2014-2024 o resultado (Sharpe −2,31, −10,4%) é idêntico a operar a x3 sem filtro: o HMM não age durante seus 500 dias de aquecimento e a conta estoura em janeiro de 2015, antes que o modelo decida qualquer coisa. Em 2007-2013 o HMM sozinho deu Sharpe −0,54 (−11,9%), e combinado com o filtro manual ficou abaixo dele (0,98 e 1,03 contra 1,23 e 1,06). O teste não chega a medir o HMM."
   },
   "name": {
-   "es": "HMM regime detection (IA) v22",
-   "en": "HMM regime detection (AI) v22",
-   "pt": "HMM detecção de regime (IA) v22"
+   "es": "Detección de régimen con HMM (IA)",
+   "en": "Regime detection with HMM (AI)",
+   "pt": "Detecção de regime com HMM (IA)"
   },
   "family": "ml",
   "date": "2026-06-10T13:42:00",
@@ -11642,9 +11642,9 @@
    "pt": "O teste contra o sobreajuste: congelar as regras de 2014-2024 e aplicá-las sem mexer a 2007-2013 (dados nunca vistos, com a crise de 2008). O filtro sobreviveu a 2008 com todos os anos positivos (Sharpe 1,06, uma queda razoável desde 1,23), enquanto sem filtro a x3 perdia −11% (Sharpe −0,59). Parecia que a vantagem generalizava, mas o sinal do dia continuava usando o fechamento desse mesmo dia; com o sinal defasado um dia (#27), a base de 2007-2013 tem Sharpe −0,46 e não sobrevive."
   },
   "name": {
-   "es": "OOS temporal 2007-2013 (anti-overfit) v21",
-   "en": "Temporal OOS 2007-2013 (anti-overfit) v21",
-   "pt": "OOS temporal 2007-2013 (anti-sobreajuste) v21"
+   "es": "Fuera de muestra temporal 2007-2013 (anti-sobreajuste)",
+   "en": "Temporal out-of-sample 2007-2013 (anti-overfitting)",
+   "pt": "Fora da amostra temporal 2007-2013 (anti-sobreajuste)"
   },
   "family": "bot",
   "date": "2026-06-10T02:25:56",
@@ -11809,9 +11809,9 @@
    "pt": "Tendência comprada e vendida: adicionar vendas a descoberto conforme o sinal do momentum. Estourou: as vendas atrapalham numa cesta com viés de alta de longo prazo. A versão só comprada com filtro é melhor."
   },
   "name": {
-   "es": "Trend long-short filtrado v20",
-   "en": "Trend long-short filtered v20",
-   "pt": "Trend long-short com filtro v20"
+   "es": "Tendencia largo-corto con filtro",
+   "en": "Filtered long-short trend",
+   "pt": "Tendência long-short com filtro"
   },
   "family": "bot",
   "date": "2026-06-09T21:07:57",
@@ -11939,9 +11939,9 @@
    "pt": "Alavancagem graduada pelo VIX: aumentá-la só quando há calmaria estrita. Foi o melhor Sharpe dentro da amostra (1,39 contra 1,23 da base), mas a grade mostrou uma fronteira dura: só aguenta com VIX<14; com VIX<16 já morre a x6. Com drawdown máximo de −17,2% só serviria em firmas de drawdown estático, nunca dinâmico (trailing). Além disso, decide com o VIX do fechamento do mesmo dia, informação que um bot real ainda não teria."
   },
   "name": {
-   "es": "Leverage graduado por VIX v19",
-   "en": "VIX-graduated leverage v19",
-   "pt": "Alavancagem graduada por VIX v19"
+   "es": "Apalancamiento escalonado por VIX",
+   "en": "VIX-graduated leverage",
+   "pt": "Alavancagem escalonada por VIX"
   },
   "family": "bot",
   "date": "2026-06-09T21:07:56",
@@ -12088,9 +12088,9 @@
    "pt": "Variante: girar para refúgios (ouro + iene) em vez de ficar fora do mercado quando há risco. Estourou em 2014: os «refúgios» também caem em certos choques de mercado. Confirmou que, quando há risco, o certo é simplesmente não estar no mercado."
   },
   "name": {
-   "es": "Rotacion defensiva oro+yen v18",
-   "en": "Defensive rotation gold+yen v18",
-   "pt": "Rotação defensiva ouro+iene v18"
+   "es": "Rotación defensiva oro + yen",
+   "en": "Defensive rotation gold + yen",
+   "pt": "Rotação defensiva ouro + iene"
   },
   "family": "bot",
   "date": "2026-06-09T21:07:55",
@@ -12228,9 +12228,9 @@
    "pt": "O fator decisivo para o dinheiro: o limite de tempo do challenge. Com 30 dias o filtro é lento demais (probabilidade de passar de 1-6%), mas sem limite de tempo e a x4 passa ~82% das vezes. Chave operacional: usar firmas sem limite de tempo, onde o bot avança aos poucos até +10% sem estourar. Atenção: usa o mesmo filtro com informação do mesmo dia que um bot real ainda não teria."
   },
   "name": {
-   "es": "Dinero real con filtro macro v17",
-   "en": "Real money with macro filter v17",
-   "pt": "Dinheiro real com filtro macro v17"
+   "es": "Dinero real con filtro macro",
+   "en": "Real money with macro filter",
+   "pt": "Dinheiro real com filtro macro"
   },
   "family": "risk",
   "date": "2026-06-08T16:45:06",
@@ -12369,9 +12369,9 @@
    "pt": "Validação do filtro em 2014-2024 (4 crises). Sharpe 1,23, +267%, e os anos de crise (2020, 2022) saíram positivos. A grade de sensibilidade (9 combinações) sobreviveu inteira com Sharpe de 1,04 a 1,47, o que parecia robusto e não sobreajustado. Foi o melhor resultado da pesquisa até a prova de fogo do #27: com o sinal defasado um dia, como um bot real o executaria, a base morre."
   },
   "name": {
-   "es": "Validacion filtro macro multi-crisis v16",
-   "en": "Macro filter validation multi-crisis v16",
-   "pt": "Validação filtro macro multi-crise v16"
+   "es": "Validación del filtro macro en múltiples crisis",
+   "en": "Macro filter validation across multiple crises",
+   "pt": "Validação do filtro macro em múltiplas crises"
   },
   "family": "bot",
   "date": "2026-06-08T16:03:17",
@@ -12527,9 +12527,9 @@
    "pt": "A opção que faltava: dados que não estão no preço. Um filtro de regime macro (VIX + crédito HYG/LQD do Yahoo) tira o bot do mercado diante de sinais de risco entre ativos. Com o filtro, o bot sobreviveu ao COVID a x4 (Sharpe 1,38) onde antes estourava. Mas o sinal de cada dia usava o fechamento desse mesmo dia, ou seja, informação do mesmo dia que um bot real ainda não teria; com o sinal defasado um dia (#27), a base morre."
   },
   "name": {
-   "es": "Bot + filtro macro regimen v15",
-   "en": "Bot + macro regime filter v15",
-   "pt": "Bot + filtro de regime macro v15"
+   "es": "Bot + filtro de régimen macro",
+   "en": "Bot + macro regime filter",
+   "pt": "Bot + filtro de regime macro"
   },
   "family": "bot",
   "date": "2026-06-08T16:01:39",
@@ -12694,9 +12694,9 @@
    "pt": "Tentou-se proteger a carteira com ajuste por volatilidade… e estourou pior (−21,6%). Causa: a volatilidade defasada estava baixa logo antes do salto repentino, então o sistema colocou mais alavancagem ao entrar na queda. Lição que marcou o design do bot atual."
   },
   "name": {
-   "es": "Bot ATLAS vol-target paper v14",
-   "en": "ATLAS vol-target paper bot v14",
-   "pt": "Bot ATLAS vol-target paper v14"
+   "es": "Bot ATLAS con volatilidad objetivo (simulación)",
+   "en": "ATLAS bot with vol targeting (paper)",
+   "pt": "Bot ATLAS com volatilidade-alvo (simulação)"
   },
   "family": "bot",
   "date": "2026-06-07T21:42:33",
@@ -12869,9 +12869,9 @@
    "pt": "Primeiro bot pronto para operar, testado com dados reais. A x2 estourou no COVID (drawdown máximo −15%): o Monte Carlo não reproduzia uma queda prolongada e correlacionada. A teoria sobrevivia; a realidade não."
   },
   "name": {
-   "es": "Bot ATLAS paper-run funded v13",
-   "en": "ATLAS paper-run funded bot v13",
-   "pt": "Bot ATLAS paper-run fondeado v13"
+   "es": "Bot ATLAS: simulación en cuenta fondeada",
+   "en": "ATLAS bot: paper run on a funded account",
+   "pt": "Bot ATLAS: simulação em conta financiada"
   },
   "family": "bot",
   "date": "2026-06-07T21:40:22",
@@ -13034,9 +13034,9 @@
    "pt": "Teste de estresse por regime (histórico 2006-2024). O valor esperado se mantém positivo em todas as crises (2008, COVID, 2022), mas cai para quase zero (ponto de equilíbrio) num mercado de baixa prolongado. É resistente mas depende do regime; além disso, a reamostragem (bootstrap) subestima os drawdowns longos, então um mercado de baixa real seria pior."
   },
   "name": {
-   "es": "Stress test por regimen v12",
-   "en": "Stress test by regime v12",
-   "pt": "Stress test por regime v12"
+   "es": "Prueba de estrés por régimen",
+   "en": "Stress test by regime",
+   "pt": "Teste de estresse por regime"
   },
   "family": "risk",
   "date": "2026-06-07T21:25:32",
@@ -13171,9 +13171,9 @@
    "pt": "Valor esperado do negócio completo: challenge mais fase financiada, com tamanho agressivo para passar e conservador para receber. Deu ≈ +$5.900 por tentativa. Sendo honestos, esse número é só a alta geral (beta) da cesta num período de alta: é aproveitar um mercado em alta com capital da prop firm, não uma vantagem própria."
   },
   "name": {
-   "es": "EV real prop firm (challenge+fondeo) v11",
-   "en": "Real EV prop firm (challenge+funded) v11",
-   "pt": "EV real prop firm (challenge+funded) v11"
+   "es": "Valor esperado real de prop firm (desafío + fondeo)",
+   "en": "Real expected value of a prop firm (challenge + funded)",
+   "pt": "Valor esperado real de mesa proprietária (desafio + conta)"
   },
   "family": "risk",
   "date": "2026-06-07T21:17:42",
@@ -13351,9 +13351,9 @@
    "pt": "O risk parity melhora a probabilidade de passar? Não: fica em ~45-48%, igual aos pesos iguais. O que manda é a volatilidade total para atingir a meta a tempo, não a sofisticação do tamanho de posição."
   },
   "name": {
-   "es": "Risk parity + sizing optimo v10",
-   "en": "Risk parity + optimal sizing v10",
-   "pt": "Risk parity + sizing ótimo v10"
+   "es": "Paridad de riesgo + tamaño óptimo",
+   "en": "Risk parity + optimal sizing",
+   "pt": "Paridade de risco + dimensionamento ótimo"
   },
   "family": "risk",
   "date": "2026-06-07T21:16:10",
@@ -13534,9 +13534,9 @@
    "pt": "Virada estratégica: se não há vantagem, o que decide passar num challenge? Um simulador Monte Carlo das regras FTMO mostrou que passar é 90% tamanho de posição e disciplina. Uma carteira diversificada bem dimensionada passa ~48% das vezes, e ~38% mesmo num mercado lateral sem vantagem, contra só ~7% de traders reais que chegam a receber porque falham no comportamento."
   },
   "name": {
-   "es": "Simulador prop-firm (cartera) v9",
-   "en": "Prop-firm simulator (portfolio) v9",
-   "pt": "Simulador prop-firm (carteira) v9"
+   "es": "Simulador de prop firm (cartera)",
+   "en": "Prop firm simulator (portfolio)",
+   "pt": "Simulador de mesa proprietária (carteira)"
   },
   "family": "risk",
   "date": "2026-06-07T21:05:48",
@@ -13717,9 +13717,9 @@
    "pt": "Meta-labeling para filtrar só as melhores reversões do #7. Falhou: fora da amostra o Sharpe bruto era −1,41, e o detalhamento por ano mostrou o Sharpe mudando de sinal a cada ano. Aquele +0,20 era ruído que na média saiu positivo, não uma vantagem: uma ilusão detectada."
   },
   "name": {
-   "es": "Meta-labeling reversion sesion v8",
-   "en": "Meta-labeling session reversion v8",
-   "pt": "Meta-labeling reversão de sessão v8"
+   "es": "Meta-etiquetado de reversión de sesión",
+   "en": "Session reversion meta-labeling",
+   "pt": "Meta-rotulagem de reversão de sessão"
   },
   "family": "intraday",
   "date": "2026-06-07T20:59:14",
@@ -13917,9 +13917,9 @@
    "pt": "Se o forex reverte, era hora de testar a reversão (ir contra o movimento da sessão). Apareceu uma vantagem antes dos custos (Sharpe bruto +0,20)… mas o líquido foi −1,99: 1.553 operações a enterraram. O muro não era a falta de sinal, eram os custos."
   },
   "name": {
-   "es": "Reversion de sesion (fade) v7",
-   "en": "Session reversion (fade) v7",
-   "pt": "Reversão de sessão (fade) v7"
+   "es": "Reversión de sesión (contratendencia)",
+   "en": "Session reversion (fade)",
+   "pt": "Reversão de sessão (contratendência)"
   },
   "family": "intraday",
   "date": "2026-06-07T20:54:35",
@@ -14086,9 +14086,9 @@
    "pt": "Vantagem intradiária de sessão: rompimento dos ranges de abertura de Londres/Nova York em velas de 1 minuto. Perdeu de forma significativa (Sharpe −0,96, PSR 0,009). O forex não rompe, reverte dentro do dia (ao contrário dos índices), como descrevem Zarattini e Aziz (2023)."
   },
   "name": {
-   "es": "ORB sesion Londres-NY v6",
-   "en": "ORB London-NY session v6",
-   "pt": "ORB sessão Londres-NY v6"
+   "es": "ORB de la sesión Londres-Nueva York",
+   "en": "London-New York session ORB",
+   "pt": "ORB da sessão Londres-Nova York"
   },
   "family": "intraday",
   "date": "2026-06-07T20:53:10",
@@ -14254,9 +14254,9 @@
    "pt": "A literatura diz que o momentum precisa de diversificação: momentum de série temporal sobre 15 instrumentos com ajuste por volatilidade. O p de Monte Carlo de 0,003 parecia promissor… até ver que o Sharpe sem custos era −0,003 (vantagem zero) e que a cesta sem estratégia (comprar e esperar, Sharpe 0,39) a superava. O p baixo era um efeito da rotação de posições, não uma vantagem real: uma das ilusões detectadas."
   },
   "name": {
-   "es": "TSMOM cartera 15 activos v5",
-   "en": "TSMOM portfolio 15 assets v5",
-   "pt": "TSMOM carteira 15 ativos v5"
+   "es": "TSMOM cartera de 15 activos",
+   "en": "TSMOM 15-asset portfolio",
+   "pt": "TSMOM carteira de 15 ativos"
   },
   "family": "trend",
   "date": "2026-06-07T20:44:55",
@@ -14458,9 +14458,9 @@
    "pt": "Mudança de abordagem: momentum de série temporal diário (Moskowitz et al., 2012). Ir para o diário resolveu os custos (só 75 operações), mas o sinal voltou a ser praticamente aleatório (PSR 0,47, p = 0,58, Sharpe ≈ 0). O momentum clássico também não funciona só no EUR/USD."
   },
   "name": {
-   "es": "Time-Series Momentum diario v4",
-   "en": "Daily Time-Series Momentum v4",
-   "pt": "Time-Series Momentum diário v4"
+   "es": "Momentum de serie temporal diario",
+   "en": "Daily time-series momentum",
+   "pt": "Momentum de série temporal diário"
   },
   "family": "trend",
   "date": "2026-06-07T15:23:09",
@@ -14655,9 +14655,9 @@
    "pt": "Meta-labeling clássico (López de Prado, 2018): uma SMA dá o sinal principal e o XGBoost decide quais tomar. O sinal filtrado saiu praticamente aleatório (PSR 0,51, p = 0,48) e o Sharpe líquido foi −3,28 por causa dos custos. Confirmou que filtrar ruído continua dando ruído."
   },
   "name": {
-   "es": "ML Meta-labeling SMA+XGBoost v3",
-   "en": "ML Meta-labeling SMA+XGBoost v3",
-   "pt": "ML Meta-labeling SMA+XGBoost v3"
+   "es": "Meta-etiquetado con ML: SMA + XGBoost",
+   "en": "ML meta-labeling: SMA + XGBoost",
+   "pt": "Meta-rotulagem com ML: SMA + XGBoost"
   },
   "family": "ml",
   "date": "2026-06-07T15:16:24",
@@ -14863,9 +14863,9 @@
    "pt": "Foi adicionado um filtro de convicção (operar só se a probabilidade do modelo passar de 0,5). Em vez de melhorar, o resultado afundou para um Sharpe de −4,79 com 1.822 operações: os custos levaram $2.097 (21% do capital) e a «confiança» do modelo se invertia fora da amostra. Mais operações = mais custos, não mais vantagem."
   },
   "name": {
-   "es": "ML XGBoost + filtro conviccion v2",
-   "en": "ML XGBoost + conviction filter v2",
-   "pt": "ML XGBoost + filtro de convicção v2"
+   "es": "ML XGBoost + filtro de convicción",
+   "en": "ML XGBoost + conviction filter",
+   "pt": "ML XGBoost + filtro de convicção"
   },
   "family": "ml",
   "date": "2026-06-07T15:15:00",
@@ -15071,9 +15071,9 @@
    "pt": "Primeiro modelo de machine learning real: XGBoost com rotulagem de barreira tripla (López de Prado) prevendo a direção em cada vela. Fora da amostra (OOS) foi indistinguível de jogar uma moeda (p de Monte Carlo 0,78, PSR 0,19). Lição precoce e dura: não há sinal de direção no preço de 1 hora com variáveis simples de preço e volume (OHLCV)."
   },
   "name": {
-   "es": "ML XGBoost triple-barrier v1",
-   "en": "ML XGBoost triple-barrier v1",
-   "pt": "ML XGBoost barreira tripla v1"
+   "es": "ML XGBoost con triple barrera",
+   "en": "ML XGBoost with triple barrier",
+   "pt": "ML XGBoost com barreira tripla"
   },
   "family": "ml",
   "date": "2026-06-07T15:13:19",
@@ -15297,7 +15297,7 @@
    "pt": "O ponto de partida: um cruzamento de médias (SMA 20/50) que compra e vende a descoberto o EUR/USD, com custos reais. Deu um Sharpe de 0,25 e superou não usar estratégia (−9,7%), mas os custos consumiram quase toda a vantagem. Serve apenas como régua mínima: qualquer modelo de machine learning tinha que superar isto."
   },
   "name": {
-   "es": "Baseline SMA 20/50",
+   "es": "Línea base SMA 20/50",
    "en": "Baseline SMA 20/50",
    "pt": "Linha de base SMA 20/50"
   },
