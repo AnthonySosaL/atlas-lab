@@ -1,5 +1,7 @@
 # Regenerar curvas de capital (para correr en la PC con los datos)
 
+> **Hecho el 2026-10-21.** Ver el resumen en `docs/handoff.md`. #18 y #20 sin curva completa (señal del mismo día); #30 sin curva.
+
 Esto NO se puede hacer en la nube: necesita los datos de `D:\ATLAS\data` y el código de investigación
 (`atlas-quant-lab` para #0–#50; `lab/engine.py` para #51 en adelante). Ningún número de la web se
 inventa: cada curva nueva sale de re-correr el script original del experimento.

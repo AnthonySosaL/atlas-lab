@@ -38,7 +38,7 @@ Un experimento puede dar **varios videos** cuando tiene varias formas o una lecc
 ### Serie C — "El experimento grande"
 | # | Experimento | Estado | Videos |
 |---|---|---|---|
-| 81 | 34,751 estrategias, 0 sobrevivieron | murió | 2 largos (qué es el gauntlet de 5 filtros / por qué el Deflated Sharpe las mata) + 3 shorts |
+| 81 | 33,363 estrategias probadas, 0 sobrevivieron | murió | 2 largos (qué es el gauntlet de 5 filtros / por qué el Deflated Sharpe las mata) + 3 shorts |
 | 82 | ¿Sirven las 50 mejores para fondeo (FTMO)? | murió | 1 + 1 |
 
 ### Serie D — "Machine learning en trading: lo que pasó"

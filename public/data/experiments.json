@@ -38,7 +38,7 @@
   },
   "forms": [],
   "status": "neutral",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false,
   "market": {
@@ -145,11 +145,11 @@
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "No hay curva de capital: el experimento compara resultados en dinero de varias estrategias sobre índices. Escalado a $100,000: comprar y esperar habría ganado +$293,680, la tendencia entre +$60,000 y +$150,000, y los setups de TikTok entre −$4,240 y +$7,070.",
-    "en": "There is no equity curve: the experiment compares money results of several strategies on indices. Scaled to $100,000: buy and wait would have made +$293,680, trend between +$60,000 and +$150,000, and the TikTok setups between −$4,240 and +$7,070.",
-    "pt": "Não há curva de capital: o experimento compara resultados em dinheiro de várias estratégias sobre índices. Escalado para $100.000: comprar e esperar teria ganhado +$293.680, a tendência entre +$60.000 e +$150.000, e os setups do TikTok entre −$4.240 e +$7.070."
+    "es": "El código original de este experimento no se conserva. Las curvas se rehicieron con parámetros reconstruidos y reproducen al dólar todas las cifras publicadas: comprar y esperar +$29,368, tendencias entre +$10,878 y +$14,814, y los setups de TikTok −$424, +$353 y +$707.",
+    "en": "The original code of this experiment was not kept. The curves were rebuilt with reconstructed parameters and reproduce every published figure to the dollar: buy and hold +$29,368, trend variants between +$10,878 and +$14,814, and the TikTok setups −$424, +$353 and +$707.",
+    "pt": "O código original deste experimento não foi guardado. As curvas foram refeitas com parâmetros reconstruídos e reproduzem ao dólar todos os números publicados: comprar e esperar +$29.368, tendências entre +$10.878 e +$14.814, e os setups do TikTok −$424, +$353 e +$707."
    }
   },
   "chart": {
@@ -473,9 +473,9 @@
   "id": "extra-v88",
   "v": 88,
   "analysis": {
-   "es": "TikTok 4 (ORB, ruptura del rango de apertura, \"+214%, 20 años\"). Esperar la apertura del Nasdaq (9:30 de Nueva York), marcar el último alto/bajo de la estructura y poner buy stop en el máximo o sell stop en el mínimo, ratio 1:3. Es intradía puro. Un ORB de sesión ya lo probamos de forma intradía en el experimento #6 (EUR/USD de 1 minuto, sesiones de Londres/Nueva York): Sharpe −0.96, pérdida significativa (las rupturas en forex fallan y el par revierte). Su núcleo (ruptura del rango) en diario también pierde (ver #85). Hacer siempre lo mismo no convierte un setup sin ventaja en uno rentable; el 1:3 no compensa una tasa de acierto que el azar y los costos dejan por debajo del punto de equilibrio.",
-   "en": "TikTok 4 (ORB, opening range breakout, \"+214%, 20 years\"). Wait for the Nasdaq open (9:30 New York), mark the last high/low of the structure and place a buy stop at the high or a sell stop at the low, 1:3 ratio. It is pure intraday. We already tested a session ORB intraday in experiment #6 (1-minute EUR/USD, London/New York sessions): Sharpe −0.96, a significant loss (breakouts in forex fail and the pair reverts). Its core (range breakout) on daily data also loses (see #85). Always doing the same thing does not turn a setup with no edge into a profitable one; the 1:3 does not offset a win rate that chance and costs leave below break-even.",
-   "pt": "TikTok 4 (ORB, rompimento do range de abertura, \"+214%, 20 anos\"). Esperar a abertura do Nasdaq (9:30 de Nova York), marcar a última máxima/mínima da estrutura e colocar buy stop na máxima ou sell stop na mínima, ratio 1:3. É intradiário puro. Um ORB de sessão já testamos de forma intradiária no experimento #6 (EUR/USD de 1 minuto, sessões de Londres/Nova York): Sharpe −0,96, perda significativa (os rompimentos no forex falham e o par reverte). Seu núcleo (rompimento do range) no diário também perde (ver #85). Fazer sempre o mesmo não transforma um setup sem vantagem em lucrativo; o 1:3 não compensa uma taxa de acerto que o acaso e os custos deixam abaixo do ponto de equilíbrio."
+   "es": "TikTok 4 (ORB, ruptura del rango de apertura, \"+214%, 20 años\"). Se probó sobre el Nasdaq 100 en velas de 30 minutos de 2012 a 2026 (3,594 sesiones de Nueva York, sin feriados ni medias sesiones). Se marca un rango de referencia, se pone una orden de compra en su máximo y de venta en su mínimo, con stop en el lado opuesto o a mitad del rango y objetivo 1:1, 1:2, 1:3 o ninguno; si no sale antes, se cierra a las 16:00. Se probaron 4 rangos (vela de las 9:30, primera hora, vela de 9:00 a 9:30 y pre-mercado de 4:00 a 9:30): 32 formas en total, con 3 bps por lado. Como una vela de 30 minutos no muestra si se tocó antes el stop o el objetivo, se asumió siempre el orden desfavorable. La versión del video pierde en 2014-2020 (Sharpe −1.73), en 2012-2013 (−1.02) y en 2025-2026 (−0.67); solo 2021-2024 sale positivo (+0.36). Ninguna forma supera los filtros y comprar y mantener el Nasdaq (Sharpe 1.01 en 2014-2020) la supera de lejos. Los rangos previos a la apertura tienen una ventaja bruta mínima (+3 a +4 bps por operación) que el costo de 6 bps ida y vuelta se come entera.",
+   "en": "TikTok 4 (ORB, opening range breakout, \"+214%, 20 years\"). It was tested on the Nasdaq 100 with 30-minute bars from 2012 to 2026 (3,594 New York sessions, holidays and half days removed). A reference range is marked, a buy order goes at its high and a sell order at its low, with the stop on the opposite side or mid-range and a 1:1, 1:2, 1:3 or no target; if not out earlier, the trade closes at 16:00. Four ranges were tested (9:30 bar, first hour, 9:00–9:30 bar and 4:00–9:30 pre-market): 32 variants in total, at 3 bps per side. Since a 30-minute bar does not show whether the stop or the target was hit first, the unfavorable order was always assumed. The video's version loses in 2014-2020 (Sharpe −1.73), in 2012-2013 (−1.02) and in 2025-2026 (−0.67); only 2021-2024 is positive (+0.36). No variant passes the filters and buying and holding the Nasdaq (Sharpe 1.01 in 2014-2020) beats it by far. The pre-open ranges have a tiny gross edge (+3 to +4 bps per trade) that the 6 bps round-trip cost wipes out.",
+   "pt": "TikTok 4 (ORB, rompimento da faixa de abertura, \"+214%, 20 anos\"). Foi testado no Nasdaq 100 com velas de 30 minutos de 2012 a 2026 (3.594 sessões de Nova York, sem feriados nem meias sessões). Marca-se uma faixa de referência, coloca-se uma ordem de compra na máxima e de venda na mínima, com stop no lado oposto ou no meio da faixa e alvo 1:1, 1:2, 1:3 ou nenhum; se não sair antes, fecha às 16:00. Foram testadas 4 faixas (vela das 9:30, primeira hora, vela das 9:00 às 9:30 e pré-mercado das 4:00 às 9:30): 32 formas no total, com 3 bps por lado. Como uma vela de 30 minutos não mostra se o stop ou o alvo foi tocado primeiro, assumiu-se sempre a ordem desfavorável. A versão do vídeo perde em 2014-2020 (Sharpe −1,73), em 2012-2013 (−1,02) e em 2025-2026 (−0,67); só 2021-2024 fica positivo (+0,36). Nenhuma forma supera os filtros e comprar e manter o Nasdaq (Sharpe 1,01 em 2014-2020) a supera com folga. As faixas anteriores à abertura têm uma vantagem bruta mínima (+3 a +4 bps por operação) que o custo de 6 bps ida e volta consome inteira."
   },
   "name": {
    "es": "TikTok 4 — ORB del Nasdaq a las 9:30",
@@ -491,9 +491,9 @@
   },
   "params": {},
   "verdict": {
-   "es": "No concluyente: no se probó en el Nasdaq; la evidencia indirecta pierde (#6: Sharpe −0.96 en EUR/USD de 1 minuto; #85: la ruptura diaria también pierde).",
-   "en": "Inconclusive: it was not tested on the Nasdaq; the indirect evidence loses (#6: Sharpe −0.96 on 1-minute EUR/USD; #85: the daily breakout also loses).",
-   "pt": "Não conclusivo: não foi testado no Nasdaq; a evidência indireta perde (#6: Sharpe −0,96 no EUR/USD de 1 minuto; #85: o rompimento diário também perde)."
+   "es": "No sirvió: ninguna de las 32 formas pasa. La versión del video (rango de las 9:30, objetivo 1:3) da Sharpe −1.73 en 2014-2020 y pierde incluso sin costos (−0.35).",
+   "en": "Did not work: none of the 32 variants pass. The video's version (9:30 range, 1:3 target) has a 2014-2020 Sharpe of −1.73 and loses even without costs (−0.35).",
+   "pt": "Não serviu: nenhuma das 32 formas passa. A versão do vídeo (faixa das 9:30, alvo 1:3) tem Sharpe −1,73 em 2014-2020 e perde até sem custos (−0,35)."
   },
   "notes": {
    "es": "Las rupturas que se probaron en estos mercados revierten. Hacer siempre lo mismo no convierte un setup sin ventaja en rentable, y el 1:3 no compensa una tasa de acierto que los costos dejan bajo el equilibrio.",
@@ -501,88 +501,364 @@
    "pt": "Os rompimentos testados nestes mercados revertem. Fazer sempre o mesmo não transforma um setup sem vantagem em lucrativo, e o 1:3 não compensa uma taxa de acerto que os custos deixam abaixo do equilíbrio."
   },
   "metrics": {
-   "ORB_intradia": "#6: Sharpe -0.96",
-   "breakout_daily": "pierde (#85)",
-   "sobrevivieron": 0
+   "formas": 32,
+   "sobrevivieron": 0,
+   "Sharpe 2014-2020 (versión del video)": -1.73,
+   "Sharpe 2014-2020 sin costos": -0.35,
+   "Sharpe 2014-2020 comprar y esperar": 1.01
   },
-  "forms": [],
-  "status": "neutral",
-  "has_equity": false,
+  "forms": [
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -0.69,
+    "oos1": -1.46,
+    "oos2": -0.46,
+    "oos3": 0.23,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:3",
+    "is": -0.73,
+    "oos1": -1.48,
+    "oos2": -0.55,
+    "oos3": 0.14,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:2",
+    "is": -1.07,
+    "oos1": -1.38,
+    "oos2": -0.83,
+    "oos3": -0.26,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.18,
+    "oos1": -2.23,
+    "oos2": 0.04,
+    "oos3": 0.54,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.43,
+    "oos1": -1.11,
+    "oos2": 0.06,
+    "oos3": -0.74,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:2",
+    "is": -1.46,
+    "oos1": -1.28,
+    "oos2": 0.14,
+    "oos3": -1.09,
+    "dsr": 0.0,
+    "mc": 0.89
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:3",
+    "is": -1.49,
+    "oos1": -1.13,
+    "oos2": 0.1,
+    "oos3": -1.09,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL lado opuesto, TP 1:1",
+    "is": -1.54,
+    "oos1": -1.76,
+    "oos2": -0.29,
+    "oos3": -1.37,
+    "dsr": 0.0,
+    "mc": 0.84
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL lado opuesto, TP 1:1",
+    "is": -1.58,
+    "oos1": -1.33,
+    "oos2": -1.58,
+    "oos3": -0.65,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, sin TP (cierre 16:00)",
+    "is": -1.7,
+    "oos1": -0.83,
+    "oos2": 0.32,
+    "oos3": -0.51,
+    "dsr": 0.0,
+    "mc": 0.47
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:3",
+    "is": -1.73,
+    "oos1": -1.02,
+    "oos2": 0.36,
+    "oos3": -0.67,
+    "dsr": 0.0,
+    "mc": 0.38
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:2",
+    "is": -1.8,
+    "oos1": -1.46,
+    "oos2": 0.22,
+    "oos3": -0.95,
+    "dsr": 0.0,
+    "mc": 0.36
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL lado opuesto, TP 1:1",
+    "is": -1.95,
+    "oos1": -1.67,
+    "oos2": -0.34,
+    "oos3": -0.71,
+    "dsr": 0.0,
+    "mc": 0.3
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:3",
+    "is": -2.5,
+    "oos1": -2.69,
+    "oos2": -1.21,
+    "oos3": -0.77,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -3.23,
+    "oos1": -1.96,
+    "oos2": -1.69,
+    "oos3": -2.21,
+    "dsr": 0.0,
+    "mc": 0.91
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:3",
+    "is": -3.34,
+    "oos1": -2.4,
+    "oos2": -1.77,
+    "oos3": -3.07,
+    "dsr": 0.0,
+    "mc": 0.88
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:2",
+    "is": -3.5,
+    "oos1": -3.43,
+    "oos2": -2.17,
+    "oos3": -2.24,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:2",
+    "is": -3.57,
+    "oos1": -2.74,
+    "oos2": -2.36,
+    "oos3": -3.53,
+    "dsr": 0.0,
+    "mc": 0.9
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.11,
+    "oos1": -2.85,
+    "oos2": -3.47,
+    "oos3": -2.42,
+    "dsr": 0.0,
+    "mc": 0.34
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.23,
+    "oos1": -4.71,
+    "oos2": -3.3,
+    "oos3": -3.85,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a hora (9:30-10:30), SL mitad del rango, TP 1:1",
+    "is": -4.28,
+    "oos1": -3.46,
+    "oos2": -2.93,
+    "oos3": -4.03,
+    "dsr": 0.0,
+    "mc": 0.96
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, sin TP (cierre 16:00)",
+    "is": -4.6,
+    "oos1": -3.06,
+    "oos2": -3.25,
+    "oos3": -5.0,
+    "dsr": 0.0,
+    "mc": 0.74
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:3",
+    "is": -5.12,
+    "oos1": -4.28,
+    "oos2": -3.57,
+    "oos3": -4.52,
+    "dsr": 0.0,
+    "mc": 0.85
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:3",
+    "is": -5.23,
+    "oos1": -3.86,
+    "oos2": -4.41,
+    "oos3": -4.49,
+    "dsr": 0.0,
+    "mc": 0.63
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:2",
+    "is": -5.36,
+    "oos1": -5.28,
+    "oos2": -4.77,
+    "oos3": -4.61,
+    "dsr": 0.0,
+    "mc": 0.85
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:2",
+    "is": -5.89,
+    "oos1": -3.85,
+    "oos2": -5.36,
+    "oos3": -5.45,
+    "dsr": 0.0,
+    "mc": 0.78
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL lado opuesto, TP 1:1",
+    "is": -5.92,
+    "oos1": -4.78,
+    "oos2": -5.35,
+    "oos3": -5.35,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango 1a vela 30m (9:30), SL mitad del rango, TP 1:1",
+    "is": -7.05,
+    "oos1": -7.55,
+    "oos2": -6.76,
+    "oos3": -6.24,
+    "dsr": 0.0,
+    "mc": 1.0
+   },
+   {
+    "name": "ORB rango pre-mercado 4:00-9:30, SL mitad del rango, TP 1:1",
+    "is": -7.67,
+    "oos1": -4.67,
+    "oos2": -6.9,
+    "oos3": -7.22,
+    "dsr": 0.0,
+    "mc": 1.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:3",
+    "is": -10.42,
+    "oos1": -6.04,
+    "oos2": -10.49,
+    "oos3": -11.4,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:2",
+    "is": -11.8,
+    "oos1": -6.95,
+    "oos2": -14.39,
+    "oos3": -14.83,
+    "dsr": 0.0,
+    "mc": 0.0
+   },
+   {
+    "name": "ORB rango vela 9:00-9:30 previa, SL mitad del rango, TP 1:1",
+    "is": -18.57,
+    "oos1": -7.81,
+    "oos2": -20.61,
+    "oos3": -21.35,
+    "dsr": 0.0,
+    "mc": 0.34
+   }
+  ],
+  "status": "died",
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false,
   "market": {
-   "es": "Nasdaq 100 · apertura 9:30 NY, intradía (no probado directamente)",
-   "en": "Nasdaq 100 · 9:30 NY open, intraday (not tested directly)",
-   "pt": "Nasdaq 100 · abertura 9:30 NY, intradiário (não testado diretamente)"
+   "es": "Nasdaq 100 (CFD de Dukascopy) · velas de 30 minutos, sesión de Nueva York",
+   "en": "Nasdaq 100 (Dukascopy CFD) · 30-minute bars, New York session",
+   "pt": "Nasdaq 100 (CFD da Dukascopy) · velas de 30 minutos, sessão de Nova York"
   },
   "kpis": [
    {
     "label": {
-     "es": "Pruebas directas en el Nasdaq",
-     "en": "Direct tests on the Nasdaq",
-     "pt": "Testes diretos no Nasdaq"
+     "es": "Formas probadas",
+     "en": "Variants tested",
+     "pt": "Formas testadas"
+    },
+    "value": "32"
+   },
+   {
+    "label": {
+     "es": "Sobrevivieron",
+     "en": "Survived",
+     "pt": "Sobreviveram"
     },
     "value": "0",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "#6 ORB EUR/USD: Sharpe",
-     "en": "#6 ORB EUR/USD: Sharpe",
-     "pt": "#6 ORB EUR/USD: Sharpe"
+     "es": "Versión del video: Sharpe 2014–20",
+     "en": "Video's version: Sharpe 2014–20",
+     "pt": "Versão do vídeo: Sharpe 2014–20"
     },
-    "value": "−0.96",
+    "value": "−1.73",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "#6 ORB EUR/USD: retorno total",
-     "en": "#6 ORB EUR/USD: total return",
-     "pt": "#6 ORB EUR/USD: retorno total"
+     "es": "Versión del video sin costos: Sharpe 2014–20",
+     "en": "Video's version without costs: Sharpe 2014–20",
+     "pt": "Versão do vídeo sem custos: Sharpe 2014–20"
     },
-    "value": "−19.1%",
+    "value": "−0.35",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "#6 ORB EUR/USD: operaciones",
-     "en": "#6 ORB EUR/USD: trades",
-     "pt": "#6 ORB EUR/USD: operações"
+     "es": "Mejor forma: Sharpe 2014–20",
+     "en": "Best variant: Sharpe 2014–20",
+     "pt": "Melhor forma: Sharpe 2014–20"
     },
-    "value": "1,553"
-   },
-   {
-    "label": {
-     "es": "#6 ORB EUR/USD: operaciones ganadoras",
-     "en": "#6 ORB EUR/USD: winning trades",
-     "pt": "#6 ORB EUR/USD: operações vencedoras"
-    },
-    "value": "49.9%"
-   },
-   {
-    "label": {
-     "es": "#6 ORB EUR/USD: factor de beneficio",
-     "en": "#6 ORB EUR/USD: profit factor",
-     "pt": "#6 ORB EUR/USD: fator de lucro"
-    },
-    "value": "0.87"
-   },
-   {
-    "label": {
-     "es": "#85 ruptura diaria: mejor Sharpe 2014–20",
-     "en": "#85 daily breakout: best Sharpe 2014–20",
-     "pt": "#85 rompimento diário: melhor Sharpe 2014–20"
-    },
-    "value": "−0.54",
+    "value": "−0.69",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Retorno anunciado (20 años)",
-     "en": "Advertised return (20 years)",
-     "pt": "Retorno anunciado (20 anos)"
+     "es": "Comprar y esperar el Nasdaq: Sharpe 2014–20",
+     "en": "Buy and hold the Nasdaq: Sharpe 2014–20",
+     "pt": "Comprar e esperar o Nasdaq: Sharpe 2014–20"
     },
-    "value": "+214%"
+    "value": "1.01",
+    "tone": "gain"
    }
   ],
   "params_view": [
@@ -596,87 +872,58 @@
    },
    {
     "label": {
-     "es": "Hora de apertura",
-     "en": "Opening time",
-     "pt": "Hora de abertura"
+     "es": "Velas",
+     "en": "Bars",
+     "pt": "Velas"
     },
-    "value": "9:30 NY"
+    "value": "30 min"
    },
    {
     "label": {
-     "es": "Entrada",
-     "en": "Entry",
-     "pt": "Entrada"
+     "es": "Rangos probados",
+     "en": "Ranges tested",
+     "pt": "Faixas testadas"
     },
-    "value": "Buy stop / sell stop"
+    "value": "9:30 · 1ª hora · 9:00–9:30 · 4:00–9:30"
    },
    {
     "label": {
-     "es": "Ratio riesgo/beneficio",
-     "en": "Risk/reward ratio",
-     "pt": "Ratio risco/retorno"
+     "es": "Objetivo",
+     "en": "Target",
+     "pt": "Alvo"
     },
-    "value": "1:3"
+    "value": "1:1 / 1:2 / 1:3 / —"
+   },
+   {
+    "label": {
+     "es": "Costo",
+     "en": "Cost",
+     "pt": "Custo"
+    },
+    "value": "3 bps"
+   },
+   {
+    "label": {
+     "es": "Salida forzada",
+     "en": "Forced exit",
+     "pt": "Saída forçada"
+    },
+    "value": "16:00 NY"
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "No hay curva de capital: el ORB del Nasdaq no se probó directamente. El gráfico muestra la evidencia indirecta de los experimentos #6 (ORB en EUR/USD) y #85 (ruptura diaria).",
-    "en": "There is no equity curve: the Nasdaq ORB was not tested directly. The chart shows the indirect evidence from experiments #6 (ORB on EUR/USD) and #85 (daily breakout).",
-    "pt": "Não há curva de capital: o ORB do Nasdaq não foi testado diretamente. O gráfico mostra a evidência indireta dos experimentos #6 (ORB no EUR/USD) e #85 (rompimento diário)."
+    "es": "La primera curva es la versión del video. Con velas de 30 minutos se asumió siempre que se tocaba antes el stop que el objetivo (el peor caso).",
+    "en": "The first curve is the video's version. With 30-minute bars it was always assumed the stop was hit before the target (worst case).",
+    "pt": "A primeira curva é a versão do vídeo. Com velas de 30 minutos assumiu-se sempre que o stop era tocado antes do alvo (pior caso)."
    }
   },
-  "chart": {
-   "title": {
-    "es": "Evidencia indirecta: Sharpe de las rupturas probadas (#6 y #85)",
-    "en": "Indirect evidence: Sharpe of the breakouts tested (#6 and #85)",
-    "pt": "Evidência indireta: Sharpe dos rompimentos testados (#6 e #85)"
-   },
-   "unit": "num",
-   "bars": [
-    {
-     "label": {
-      "es": "#6 sin estrategia (EUR/USD)",
-      "en": "#6 no strategy (EUR/USD)",
-      "pt": "#6 sem estratégia (EUR/USD)"
-     },
-     "value": -0.21,
-     "tone": "ref"
-    },
-    {
-     "label": {
-      "es": "#6 ORB EUR/USD 1 minuto",
-      "en": "#6 ORB EUR/USD 1-minute",
-      "pt": "#6 ORB EUR/USD 1 minuto"
-     },
-     "value": -0.96,
-     "tone": "loss"
-    },
-    {
-     "label": {
-      "es": "#85 ruptura diaria: mejor forma (2014–20)",
-      "en": "#85 daily breakout: best variant (2014–20)",
-      "pt": "#85 rompimento diário: melhor forma (2014–20)"
-     },
-     "value": -0.54,
-     "tone": "loss"
-    },
-    {
-     "label": {
-      "es": "#85 ruptura diaria: peor forma (2014–20)",
-      "en": "#85 daily breakout: worst variant (2014–20)",
-      "pt": "#85 rompimento diário: pior forma (2014–20)"
-     },
-     "value": -1.58,
-     "tone": "loss"
-    }
-   ]
-  },
+  "chart": null,
   "period": {
-   "es": "No probado directamente · evidencia de #6 (2019–2024) y #85",
-   "en": "Not tested directly · evidence from #6 (2019–2024) and #85",
-   "pt": "Não testado diretamente · evidência do #6 (2019–2024) e #85"
+   "es": "2014–2020 (diseño) · 2012–2013, 2021–2024 y 2025–2026 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2012–2013, 2021–2024 and 2025–2026 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2012–2013, 2021–2024 e 2025–2026 (fora da amostra)"
   }
  },
  {
@@ -1667,9 +1914,9 @@
   "id": "extra-v83",
   "v": 83,
   "analysis": {
-   "es": "Probamos al influencer de un video tier-list de TikTok (excelente/medio/malo). Su método \"excelente\", concreto y comprobable: EMAs operando a favor de la tendencia (lo que dice que lo hizo rentable). Lo probamos en 8 formas (EMA-trend de 20/50/100/200 y cruces de EMA 9/21, 12/26, 20/50 y 50/200, el golden cross) con los 5 filtros. Las 8 murieron (máximo 1/5); comprar y esperar (Sharpe +0.13 en 2014-2020) les gana. Las EMAs a favor de tendencia son justo lo que el laboratorio descartó 34,751 veces. Más allá del backtest, hay banderas rojas graves: (1) se contradice: dice que \"los indicadores son basura\", pero su método excelente son EMAs, que son un indicador; (2) consejo peligroso: \"el stop loss es basura\", cuando es al revés, la gestión de riesgo es lo único que evita reventar la cuenta; (3) empuja a índices sintéticos (Deriv) como \"donde están los ganadores\", que son números aleatorios del bróker, un casino de suma negativa. Opinión y marketing, no método.",
-   "en": "We tested the influencer from a TikTok tier-list video (excellent/medium/bad). Their \"excellent\" method, concrete and testable: EMAs trading with the trend (what they say made them profitable). We tested it in 8 variants (EMA-trend 20/50/100/200 and EMA crosses 9/21, 12/26, 20/50 and 50/200, the golden cross) with the 5 filters. All 8 died (max 1/5); buy and wait (Sharpe +0.13 in 2014-2020) beats them. EMAs with the trend are exactly what the lab discarded 34,751 times. Beyond the backtest, there are serious red flags: (1) it contradicts itself: it says \"indicators are garbage\", but its excellent method is EMAs, which are an indicator; (2) dangerous advice: \"stop loss is garbage\", when it is the other way around, risk management is the only thing that keeps you from blowing up the account; (3) it pushes synthetic indices (Deriv) as \"where the winners are\", which are random numbers from the broker, a negative-sum casino. Opinion and marketing, not a method.",
-   "pt": "Testamos o influenciador de um vídeo tier-list do TikTok (excelente/médio/ruim). Seu método \"excelente\", concreto e testável: EMAs operando a favor da tendência (o que diz tê-lo tornado lucrativo). Testamos em 8 formas (EMA-trend de 20/50/100/200 e cruzamentos de EMA 9/21, 12/26, 20/50 e 50/200, o golden cross) com os 5 filtros. As 8 morreram (máximo 1/5); comprar e esperar (Sharpe +0,13 em 2014-2020) as supera. As EMAs a favor da tendência são justamente o que o laboratório descartou 34.751 vezes. Além do backtest, há bandeiras vermelhas graves: (1) se contradiz: diz que \"os indicadores são lixo\", mas seu método excelente são EMAs, que são um indicador; (2) conselho perigoso: \"o stop loss é lixo\", quando é o contrário, a gestão de risco é a única coisa que evita estourar a conta; (3) empurra índices sintéticos (Deriv) como \"onde estão os vencedores\", que são números aleatórios da corretora, um cassino de soma negativa. Opinião e marketing, não método."
+   "es": "Probamos al influencer de un video tier-list de TikTok (excelente/medio/malo). Su método \"excelente\", concreto y comprobable: EMAs operando a favor de la tendencia (lo que dice que lo hizo rentable). Lo probamos en 8 formas (EMA-trend de 20/50/100/200 y cruces de EMA 9/21, 12/26, 20/50 y 50/200, el golden cross) con los 5 filtros. Las 8 murieron (máximo 1/5); comprar y esperar (Sharpe +0.13 en 2014-2020) les gana. Las EMAs a favor de tendencia son justo lo que el laboratorio descartó 33,363 veces. Más allá del backtest, hay banderas rojas graves: (1) se contradice: dice que \"los indicadores son basura\", pero su método excelente son EMAs, que son un indicador; (2) consejo peligroso: \"el stop loss es basura\", cuando es al revés, la gestión de riesgo es lo único que evita reventar la cuenta; (3) empuja a índices sintéticos (Deriv) como \"donde están los ganadores\", que son números aleatorios del bróker, un casino de suma negativa. Opinión y marketing, no método.",
+   "en": "We tested the influencer from a TikTok tier-list video (excellent/medium/bad). Their \"excellent\" method, concrete and testable: EMAs trading with the trend (what they say made them profitable). We tested it in 8 variants (EMA-trend 20/50/100/200 and EMA crosses 9/21, 12/26, 20/50 and 50/200, the golden cross) with the 5 filters. All 8 died (max 1/5); buy and wait (Sharpe +0.13 in 2014-2020) beats them. EMAs with the trend are exactly what the lab discarded 33,363 times. Beyond the backtest, there are serious red flags: (1) it contradicts itself: it says \"indicators are garbage\", but its excellent method is EMAs, which are an indicator; (2) dangerous advice: \"stop loss is garbage\", when it is the other way around, risk management is the only thing that keeps you from blowing up the account; (3) it pushes synthetic indices (Deriv) as \"where the winners are\", which are random numbers from the broker, a negative-sum casino. Opinion and marketing, not a method.",
+   "pt": "Testamos o influenciador de um vídeo tier-list do TikTok (excelente/médio/ruim). Seu método \"excelente\", concreto e testável: EMAs operando a favor da tendência (o que diz tê-lo tornado lucrativo). Testamos em 8 formas (EMA-trend de 20/50/100/200 e cruzamentos de EMA 9/21, 12/26, 20/50 e 50/200, o golden cross) com os 5 filtros. As 8 morreram (máximo 1/5); comprar e esperar (Sharpe +0,13 em 2014-2020) as supera. As EMAs a favor da tendência são justamente o que o laboratório descartou 33.363 vezes. Além do backtest, há bandeiras vermelhas graves: (1) se contradiz: diz que \"os indicadores são lixo\", mas seu método excelente são EMAs, que são um indicador; (2) conselho perigoso: \"o stop loss é lixo\", quando é o contrário, a gestão de risco é a única coisa que evita estourar a conta; (3) empurra índices sintéticos (Deriv) como \"onde estão os vencedores\", que são números aleatórios da corretora, um cassino de soma negativa. Opinião e marketing, não método."
   },
   "name": {
    "es": "EMAs a favor de la tendencia (ranking de TikTok) — 8 formas",
@@ -1919,9 +2166,9 @@
   "id": "extra-v82",
   "v": 82,
   "analysis": {
-   "es": "La prueba de fuego para el uso real: ¿alguna de las 50 mejores (de las 34,751) sirve para fondeo? Simulamos un challenge tipo FTMO (objetivo +10%, drawdown máximo −10%, límite diario −5%, ventana de 3 meses) con cada una, en cientos de ventanas de distintas épocas, sin apalancamiento y con x5. Respuesta tajante: ninguna sirve. Sin apalancamiento jamás llegan a +10% en 3 meses (100% se queda sin tiempo): están en efectivo el 94% del tiempo y hacen ~1% al año, son demasiado lentas. Con x5, la mejor (RSI5<18) solo pasa el 3.5% de las ventanas… pero revienta el 4.7%: pierde más veces de las que gana. Confirma lo visto en los experimentos #9-40: el apalancamiento que necesitas para pasar (+10% rápido) es justo el que te revienta el drawdown. Pagar un challenge con cualquiera de estas sería tirar el dinero (fallarías el 96-100% de las veces). Ni siquiera las mejores de decenas de miles sirven para prop firms.",
-   "en": "The acid test for real use: does any of the 50 best (out of 34,751) work for funding? We simulated an FTMO-style challenge (+10% target, −10% max drawdown, −5% daily limit, 3-month window) with each one, over hundreds of windows from different eras, without leverage and at x5. Blunt answer: none works. Without leverage they never reach +10% in 3 months (100% run out of time): they are in cash 94% of the time and make ~1% a year, they are too slow. At x5, the best one (RSI5<18) passes only 3.5% of the windows… but blows up 4.7%: it loses more often than it wins. It confirms what was seen in experiments #9-40: the leverage you need to pass (+10% quickly) is exactly what blows up your drawdown. Paying for a challenge with any of these would be throwing money away (you would fail 96-100% of the time). Not even the best of tens of thousands work for prop firms.",
-   "pt": "A prova de fogo para o uso real: alguma das 50 melhores (das 34.751) serve para financiamento? Simulamos um challenge tipo FTMO (meta +10%, drawdown máximo −10%, limite diário −5%, janela de 3 meses) com cada uma, em centenas de janelas de épocas diferentes, sem alavancagem e com x5. Resposta direta: nenhuma serve. Sem alavancagem jamais chegam a +10% em 3 meses (100% ficam sem tempo): ficam em caixa 94% do tempo e fazem ~1% ao ano, são lentas demais. Com x5, a melhor (RSI5<18) só passa em 3,5% das janelas… mas estoura em 4,7%: perde mais vezes do que ganha. Confirma o visto nos experimentos #9-40: a alavancagem de que você precisa para passar (+10% rápido) é justamente a que estoura seu drawdown. Pagar um challenge com qualquer uma delas seria jogar dinheiro fora (você falharia 96-100% das vezes). Nem mesmo as melhores de dezenas de milhares servem para prop firms."
+   "es": "La prueba de fuego para el uso real: ¿alguna de las 50 mejores (de las 33,363 probadas) sirve para fondeo? Simulamos un challenge tipo FTMO (objetivo +10%, drawdown máximo −10%, límite diario −5%, ventana de 3 meses) con cada una, en cientos de ventanas de distintas épocas, sin apalancamiento y con x5. Respuesta tajante: ninguna sirve. Sin apalancamiento jamás llegan a +10% en 3 meses (100% se queda sin tiempo): están en efectivo el 94% del tiempo y hacen ~1% al año, son demasiado lentas. Con x5, la mejor (RSI5<18) solo pasa el 3.5% de las ventanas… pero revienta el 4.7%: pierde más veces de las que gana. Confirma lo visto en los experimentos #9-40: el apalancamiento que necesitas para pasar (+10% rápido) es justo el que te revienta el drawdown. Pagar un challenge con cualquiera de estas sería tirar el dinero (fallarías el 96-100% de las veces). Ni siquiera las mejores de decenas de miles sirven para prop firms.",
+   "en": "The acid test for real use: does any of the 50 best (out of 33,363 tested) work for funding? We simulated an FTMO-style challenge (+10% target, −10% max drawdown, −5% daily limit, 3-month window) with each one, over hundreds of windows from different eras, without leverage and at x5. Blunt answer: none works. Without leverage they never reach +10% in 3 months (100% run out of time): they are in cash 94% of the time and make ~1% a year, they are too slow. At x5, the best one (RSI5<18) passes only 3.5% of the windows… but blows up 4.7%: it loses more often than it wins. It confirms what was seen in experiments #9-40: the leverage you need to pass (+10% quickly) is exactly what blows up your drawdown. Paying for a challenge with any of these would be throwing money away (you would fail 96-100% of the time). Not even the best of tens of thousands work for prop firms.",
+   "pt": "A prova de fogo para o uso real: alguma das 50 melhores (das 33.363 testadas) serve para financiamento? Simulamos um challenge tipo FTMO (meta +10%, drawdown máximo −10%, limite diário −5%, janela de 3 meses) com cada uma, em centenas de janelas de épocas diferentes, sem alavancagem e com x5. Resposta direta: nenhuma serve. Sem alavancagem jamais chegam a +10% em 3 meses (100% ficam sem tempo): ficam em caixa 94% do tempo e fazem ~1% ao ano, são lentas demais. Com x5, a melhor (RSI5<18) só passa em 3,5% das janelas… mas estoura em 4,7%: perde mais vezes do que ganha. Confirma o visto nos experimentos #9-40: a alavancagem de que você precisa para passar (+10% rápido) é justamente a que estoura seu drawdown. Pagar um challenge com qualquer uma delas seria jogar dinheiro fora (você falharia 96-100% das vezes). Nem mesmo as melhores de dezenas de milhares servem para prop firms."
   },
   "name": {
    "es": "¿Sirven las 50 mejores para fondeo? (desafío tipo FTMO en 3 meses)",
@@ -2140,14 +2387,14 @@
   "id": "extra-v81",
   "v": 81,
   "analysis": {
-   "es": "El experimento definitivo. Construimos un laboratorio que genera y prueba estrategias en automático: semillas + un modelo (DeepSeek/Qwen) que propone ideas + un explorador que garantiza novedad sin fin, todo sin duplicados gracias a una huella. Cada estrategia pasa los mismos 5 filtros: periodo de prueba 2014-2020 + dos pruebas fuera de muestra (2007-2013 con la crisis de 2008, y 2021-2024) + Deflated Sharpe (Bailey y López de Prado, corrige las pruebas múltiples con un contador global) + Monte Carlo de 5000 permutaciones (desplaza la señal en el tiempo: si no le gana a sus versiones desalineadas, su timing es suerte) + batir a comprar y esperar. Una noche entera: 34,751 estrategias probadas, todas únicas. Resultado: 0 sobrevivieron. El Deflated Sharpe nunca se superó (máximo 0.70 de 0.95 necesario). Lo más lejos fue 4/5 filtros: combinaciones que engañaron a las dos pruebas fuera de muestra y al Monte Carlo y batieron al mercado, pero al revisar la mejor año por año, pierde dinero (un solo año de suerte). Lo único \"real\" es un sesgo débil de reversión RSI (49 de las 50 mejores son positivas en 18 años), pero está en efectivo el 94% del tiempo, hace ~1% al año y pierde frente a solo mantener: real, medible… e inexplotable. Es la demostración en vivo de por qué fallan los fondos de machine learning (López de Prado): minar miles de estrategias garantiza falsos positivos, y solo el ajuste por pruebas múltiples los caza. Veredicto inapelable: no hay alfa explotable en datos de precio para el inversor minorista.",
-   "en": "The definitive experiment. We built a lab that generates and tests strategies automatically: seeds + a model (DeepSeek/Qwen) that proposes ideas + an explorer that guarantees endless novelty, all deduplicated by a fingerprint. Each strategy goes through the same 5 filters: 2014-2020 test period + two out-of-sample tests (2007-2013 with the 2008 crisis, and 2021-2024) + Deflated Sharpe (Bailey and López de Prado, corrects multiple testing with a global counter) + a 5000-permutation Monte Carlo (shifts the signal in time: if it does not beat its misaligned versions, its timing is luck) + beating buy and wait. A whole night: 34,751 strategies tested, all unique. Result: 0 survived. The Deflated Sharpe was never passed (max 0.70 of the 0.95 needed). The furthest was 4/5 filters: combinations that fooled both out-of-sample tests and the Monte Carlo and beat the market, but when the best one is examined year by year, it loses money (a single lucky year). The only \"real\" thing is a weak RSI reversion tilt (49 of the 50 best are positive over 18 years), but it is in cash 94% of the time, makes ~1% a year and loses to simply holding: real, measurable… and unexploitable. It is the live demonstration of why machine-learning funds fail (López de Prado): mining thousands of strategies guarantees false positives, and only the multiple-testing adjustment catches them. Final verdict: there is no exploitable alpha in price data for the retail investor.",
-   "pt": "O experimento definitivo. Construímos um laboratório que gera e testa estratégias automaticamente: sementes + um modelo (DeepSeek/Qwen) que propõe ideias + um explorador que garante novidade sem fim, tudo sem duplicados graças a uma impressão digital. Cada estratégia passa pelos mesmos 5 filtros: período de teste 2014-2020 + dois testes fora da amostra (2007-2013 com a crise de 2008, e 2021-2024) + Deflated Sharpe (Bailey e López de Prado, corrige os testes múltiplos com um contador global) + Monte Carlo de 5000 permutações (desloca o sinal no tempo: se não supera suas versões desalinhadas, seu timing é sorte) + superar comprar e esperar. Uma noite inteira: 34.751 estratégias testadas, todas únicas. Resultado: 0 sobreviveram. O Deflated Sharpe nunca foi superado (máximo 0,70 dos 0,95 necessários). O mais longe foi 4/5 filtros: combinações que enganaram os dois testes fora da amostra e o Monte Carlo e superaram o mercado, mas ao examinar a melhor ano a ano, ela perde dinheiro (um único ano de sorte). A única coisa \"real\" é um viés fraco de reversão RSI (49 das 50 melhores são positivas em 18 anos), mas fica em caixa 94% do tempo, faz ~1% ao ano e perde para simplesmente manter: real, mensurável… e inexplorável. É a demonstração ao vivo de por que os fundos de machine learning falham (López de Prado): minerar milhares de estratégias garante falsos positivos, e só o ajuste por testes múltiplos os captura. Veredito inapelável: não há alfa explorável em dados de preço para o investidor de varejo."
+   "es": "El experimento definitivo. Construimos un laboratorio que genera y prueba estrategias en automático: semillas + un modelo (DeepSeek/Qwen) que propone ideas + un explorador que garantiza novedad sin fin, todo sin duplicados gracias a una huella. Cada estrategia pasa los mismos 5 filtros (se diseña sobre 2014-2020): dos pruebas fuera de muestra (2007-2013 con la crisis de 2008, y 2021-2024) + Deflated Sharpe (Bailey y López de Prado, corrige las pruebas múltiples con un contador global) + Monte Carlo de 5000 permutaciones (desplaza la señal en el tiempo: si no le gana a sus versiones desalineadas, su timing es suerte) + batir a comprar y esperar. Una corrida nocturna completa (33,016 estrategias nuevas sobre 1,735 de pruebas previas): 34,751 generadas en total, todas únicas; 33,363 se probaron de verdad (las otras 1,388 casi nunca operaron). Resultado: 0 sobrevivieron. El Deflated Sharpe nunca se superó (máximo 0.70 de 0.95 necesario). Lo más lejos fue 4/5 filtros: combinaciones que engañaron a las dos pruebas fuera de muestra y al Monte Carlo y batieron al mercado, pero al revisar la mejor año por año, pierde dinero (un solo año de suerte). Lo único \"real\" es un sesgo débil de reversión RSI (49 de las 50 mejores son positivas en 18 años), pero está en efectivo el 94% del tiempo, hace ~1% al año y pierde frente a solo mantener: real, medible… e inexplotable. Es la demostración en vivo de por qué fallan los fondos de machine learning (López de Prado): minar miles de estrategias garantiza falsos positivos, y solo el ajuste por pruebas múltiples los caza. Veredicto inapelable: no hay alfa explotable en datos de precio para el inversor minorista.",
+   "en": "The definitive experiment. We built a lab that generates and tests strategies automatically: seeds + a model (DeepSeek/Qwen) that proposes ideas + an explorer that guarantees endless novelty, all deduplicated by a fingerprint. Each strategy goes through the same 5 filters (designed on 2014-2020): two out-of-sample tests (2007-2013 with the 2008 crisis, and 2021-2024) + Deflated Sharpe (Bailey and López de Prado, corrects multiple testing with a global counter) + a 5000-permutation Monte Carlo (shifts the signal in time: if it does not beat its misaligned versions, its timing is luck) + beating buy and wait. A full overnight run (33,016 new strategies on top of 1,735 from earlier tests): 34,751 generated in total, all unique; 33,363 were truly tested (the other 1,388 almost never traded). Result: 0 survived. The Deflated Sharpe was never passed (max 0.70 of the 0.95 needed). The furthest was 4/5 filters: combinations that fooled both out-of-sample tests and the Monte Carlo and beat the market, but when the best one is examined year by year, it loses money (a single lucky year). The only \"real\" thing is a weak RSI reversion tilt (49 of the 50 best are positive over 18 years), but it is in cash 94% of the time, makes ~1% a year and loses to simply holding: real, measurable… and unexploitable. It is the live demonstration of why machine-learning funds fail (López de Prado): mining thousands of strategies guarantees false positives, and only the multiple-testing adjustment catches them. Final verdict: there is no exploitable alpha in price data for the retail investor.",
+   "pt": "O experimento definitivo. Construímos um laboratório que gera e testa estratégias automaticamente: sementes + um modelo (DeepSeek/Qwen) que propõe ideias + um explorador que garante novidade sem fim, tudo sem duplicados graças a uma impressão digital. Cada estratégia passa pelos mesmos 5 filtros (desenhada sobre 2014-2020): dois testes fora da amostra (2007-2013 com a crise de 2008, e 2021-2024) + Deflated Sharpe (Bailey e López de Prado, corrige os testes múltiplos com um contador global) + Monte Carlo de 5000 permutações (desloca o sinal no tempo: se não supera suas versões desalinhadas, seu timing é sorte) + superar comprar e esperar. Uma corrida noturna completa (33.016 estratégias novas sobre 1.735 de testes anteriores): 34.751 geradas no total, todas únicas; 33.363 foram testadas de verdade (as outras 1.388 quase nunca operaram). Resultado: 0 sobreviveram. O Deflated Sharpe nunca foi superado (máximo 0,70 dos 0,95 necessários). O mais longe foi 4/5 filtros: combinações que enganaram os dois testes fora da amostra e o Monte Carlo e superaram o mercado, mas ao examinar a melhor ano a ano, ela perde dinheiro (um único ano de sorte). A única coisa \"real\" é um viés fraco de reversão RSI (49 das 50 melhores são positivas em 18 anos), mas fica em caixa 94% do tempo, faz ~1% ao ano e perde para simplesmente manter: real, mensurável… e inexplorável. É a demonstração ao vivo de por que os fundos de machine learning falham (López de Prado): minerar milhares de estratégias garante falsos positivos, e só o ajuste por testes múltiplos os captura. Veredito inapelável: não há alfa explorável em dados de preço para o investidor de varejo."
   },
   "name": {
-   "es": "Laboratorio automático — 34,751 estrategias con 5 filtros",
-   "en": "Automated lab — 34,751 strategies through 5 filters",
-   "pt": "Laboratório automático — 34,751 estratégias com 5 filtros"
+   "es": "Laboratorio automático — 33,363 estrategias probadas con 5 filtros",
+   "en": "Automated lab — 33,363 strategies tested through 5 filters",
+   "pt": "Laboratório automático — 33.363 estratégias testadas com 5 filtros"
   },
   "family": "lab-automatico",
   "date": "2026-06-28T09:00:00",
@@ -2158,9 +2405,9 @@
   },
   "params": {},
   "verdict": {
-   "es": "No sirvió: de 34,751 estrategias ninguna sobrevivió; el Deflated Sharpe máximo fue 0.70, lejos del 0.95 requerido.",
-   "en": "Did not work: out of 34,751 strategies none survived; the maximum Deflated Sharpe was 0.70, far from the 0.95 required.",
-   "pt": "Não serviu: de 34.751 estratégias nenhuma sobreviveu; o Deflated Sharpe máximo foi 0,70, longe dos 0,95 exigidos."
+   "es": "No sirvió: de 33,363 estrategias probadas ninguna sobrevivió; el Deflated Sharpe máximo fue 0.70, lejos del 0.95 requerido.",
+   "en": "Did not work: out of 33,363 strategies tested none survived; the maximum Deflated Sharpe was 0.70, far from the 0.95 required.",
+   "pt": "Não serviu: de 33.363 estratégias testadas nenhuma sobreviveu; o Deflated Sharpe máximo foi 0,70, longe dos 0,95 exigidos."
   },
   "notes": {
    "es": "Minar miles de estrategias garantiza falsos positivos; solo el ajuste por pruebas múltiples los caza. Lo único real, un leve sesgo de reversión RSI, hace ~1% al año y pierde frente a solo mantener.",
@@ -2168,7 +2415,8 @@
    "pt": "Minerar milhares de estratégias garante falsos positivos; só o ajuste por testes múltiplos os captura. A única coisa real, um leve viés de reversão RSI, faz ~1% ao ano e perde para simplesmente manter."
   },
   "metrics": {
-   "probadas": 34751,
+   "probadas": 33363,
+   "sin_operar": 1388,
    "sobrevivieron": 0,
    "DSR_max": 0.7,
    "max_filtros": "4/5",
@@ -2191,7 +2439,7 @@
      "en": "Strategies tested",
      "pt": "Estratégias testadas"
     },
-    "value": "34,751"
+    "value": "33,363"
    },
    {
     "label": {
@@ -2321,9 +2569,9 @@
   "capital": {
    "warn": false,
    "note": {
-    "es": "No hay curva de capital: este experimento mide cuántas estrategias superan cada filtro, no una cartera. Ninguna de las 34,751 llegó a ser apta para operar.",
-    "en": "There is no equity curve: this experiment measures how many strategies pass each filter, not a portfolio. None of the 34,751 became fit to trade.",
-    "pt": "Não há curva de capital: este experimento mede quantas estratégias superam cada filtro, não uma carteira. Nenhuma das 34.751 ficou apta para operar."
+    "es": "No hay curva de capital: este experimento mide cuántas estrategias superan cada filtro, no una cartera. Ninguna de las 33,363 probadas llegó a ser apta para operar.",
+    "en": "There is no equity curve: this experiment measures how many strategies pass each filter, not a portfolio. None of the 33,363 tested became fit to trade.",
+    "pt": "Não há curva de capital: este experimento mede quantas estratégias superam cada filtro, não uma carteira. Nenhuma das 33.363 testadas ficou apta para operar."
    }
   },
   "chart": {
@@ -6016,7 +6264,7 @@
   },
   "forms": [],
   "status": "neutral",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false,
   "market": {
@@ -6105,11 +6353,11 @@
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "Este experimento no guarda una curva: calcula el retorno del bot en ventanas concretas (1 mes, 6 meses, 2020 y 2022) a 2x. Los porcentajes valen igual para cualquier capital; los costos de 6 meses fueron unos $192 en la cuenta simulada.",
-    "en": "This experiment does not keep a curve: it computes the bot's return over specific windows (1 month, 6 months, 2020 and 2022) at 2x. The percentages apply to any capital; 6-month costs were about $192 in the simulated account.",
-    "pt": "Este experimento não guarda uma curva: calcula o retorno do bot em janelas concretas (1 mês, 6 meses, 2020 e 2022) a 2x. As porcentagens valem para qualquer capital; os custos de 6 meses foram cerca de $192 na conta simulada."
+    "es": "Los escenarios de 1 y 6 meses se calcularon con precios de Dukascopy y Yahoo Finance (los precios originales de MetaTrader 5 no se conservan): dan −1.5% y +6.2%, frente a −1.0% y +6.7% con los precios originales. Los escenarios de 2020 y 2022 coinciden exactamente.",
+    "en": "The 1- and 6-month scenarios were computed with Dukascopy and Yahoo Finance prices (the original MetaTrader 5 prices were not kept): they give −1.5% and +6.2%, versus −1.0% and +6.7% with the original prices. The 2020 and 2022 scenarios match exactly.",
+    "pt": "Os cenários de 1 e 6 meses foram calculados com preços da Dukascopy e do Yahoo Finance (os preços originais do MetaTrader 5 não foram guardados): dão −1,5% e +6,2%, frente a −1,0% e +6,7% com os preços originais. Os cenários de 2020 e 2022 coincidem exatamente."
    }
   },
   "chart": {
@@ -7509,9 +7757,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando.",
-    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
-    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
+    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -7677,9 +7925,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando.",
-    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
-    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
+    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -7845,9 +8093,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando.",
-    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
-    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
+    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -8013,9 +8261,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando.",
-    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
-    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
+    "es": "La simulación aplica reglas de prop firm (drawdown 10% / pérdida diaria 5%) con apalancamiento x2 y se corta cuando la cuenta toca el límite: por eso la curva termina antes de tiempo y con pérdida. No representa una cartera que siga operando. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -8169,9 +8417,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida y se corta el 2022-04-28. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo.",
-    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit and stops on 2022-04-28. With your capital you would see that closed account, not an investment that keeps running.",
-    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda e é encerrada em 2022-04-28. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
+    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida y se corta el 2022-04-28. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit and stops on 2022-04-28. With your capital you would see that closed account, not an investment that keeps running. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda e é encerrada em 2022-04-28. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -8494,9 +8742,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida a los 1,266 días y se corta con −10.0%. Con tu capital verías esa cuenta cerrada.",
-    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 1,266 days and stops at −10.0%. With your capital you would see that closed account.",
-    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 1.266 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada."
+    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida a los 1,266 días y se corta con −10.0%. Con tu capital verías esa cuenta cerrada. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 1,266 days and stops at −10.0%. With your capital you would see that closed account. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 1.266 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -8676,9 +8924,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida a los 243 días y se corta con −10.2%. Con tu capital verías esa cuenta cerrada.",
-    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 243 days and stops at −10.2%. With your capital you would see that closed account.",
-    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 243 dias e é encerrada com −10,2%. Com o seu capital você veria essa conta fechada."
+    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2: la cuenta toca el límite de pérdida a los 243 días y se corta con −10.2%. Con tu capital verías esa cuenta cerrada. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 243 days and stops at −10.2%. With your capital you would see that closed account. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 243 dias e é encerrada com −10,2%. Com o seu capital você veria essa conta fechada. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -10684,7 +10932,7 @@
   },
   "forms": [],
   "status": "died",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false,
   "market": {
@@ -10762,11 +11010,11 @@
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "No hay curva de cartera: el experimento solo mide si la cuenta sobrevive las reglas de la prop firm. En el gráfico, 1 = sobrevive y 0 = no sobrevive; con disparo temprano no sobrevive en ningún periodo.",
-    "en": "There is no portfolio curve: the experiment only measures whether the account survives prop firm rules. In the chart, 1 = survives and 0 = does not survive; with an earlier trigger it survives in no period.",
-    "pt": "Não há curva de carteira: o experimento só mede se a conta sobrevive às regras da prop firm. No gráfico, 1 = sobrevive e 0 = não sobrevive; com disparo antecipado não sobrevive em nenhum período."
+    "es": "Apalancamiento x3 con kill-switch y señal con un día de retraso. La simulación aplica las reglas de la prop firm y la curva se detiene cuando la cuenta las rompe. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "x3 leverage with a kill-switch and a one-day signal lag. The simulation applies the prop firm rules and the curve stops when the account breaks them. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "Alavancagem x3 com kill-switch e sinal com um dia de atraso. A simulação aplica as regras da prop firm e a curva para quando a conta as rompe. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "chart": {
@@ -10840,7 +11088,7 @@
   },
   "forms": [],
   "status": "died",
-  "has_equity": false,
+  "has_equity": true,
   "has_trades_chart": false,
   "has_trades_csv": false,
   "market": {
@@ -10937,11 +11185,11 @@
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "No hay curva de cartera: el experimento mide si la versión ejecutable con kill-switch sobrevive las reglas de la prop firm, y ningún apalancamiento (×2, ×3, ×4) lo logra en ambos periodos.",
-    "en": "There is no portfolio curve: the experiment measures whether the executable version with a kill-switch survives prop firm rules, and no leverage level (×2, ×3, ×4) manages it in both periods.",
-    "pt": "Não há curva de carteira: o experimento mede se a versão executável com kill-switch sobrevive às regras da prop firm, e nenhuma alavancagem (×2, ×3, ×4) consegue nos dois períodos."
+    "es": "Apalancamiento x3 con kill-switch y señal con un día de retraso. La simulación aplica las reglas de la prop firm y la curva se detiene cuando la cuenta las rompe. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "x3 leverage with a kill-switch and a one-day signal lag. The simulation applies the prop firm rules and the curve stops when the account breaks them. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "Alavancagem x3 com kill-switch e sinal com um dia de atraso. A simulação aplica as regras da prop firm e a curva para quando a conta as rompe. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "chart": {
@@ -11143,9 +11391,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm: la cuenta toca el límite de pérdida a los 241 días y se corta con −10.0%. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo.",
-    "en": "The simulation applies prop firm rules: the account hits the loss limit after 241 days and stops at −10.0%. With your capital you would see that closed account, not an investment that keeps running.",
-    "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 241 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
+    "es": "La simulación aplica las reglas de la prop firm: la cuenta toca el límite de pérdida a los 241 días y se corta con −10.0%. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop firm rules: the account hits the loss limit after 241 days and stops at −10.0%. With your capital you would see that closed account, not an investment that keeps running. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 241 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -11618,9 +11866,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm: la cuenta toca el límite de pérdida a los 89 días y se corta con −7.0%. Con tu capital verías esa cuenta cerrada; en la práctica el challenge se habría perdido.",
-    "en": "The simulation applies prop firm rules: the account hits the loss limit after 89 days and stops at −7.0%. With your capital you would see that closed account; in practice the challenge would have been lost.",
-    "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 89 dias e é encerrada com −7,0%. Com o seu capital você veria essa conta fechada; na prática o challenge teria sido perdido."
+    "es": "La simulación aplica las reglas de la prop firm: la cuenta toca el límite de pérdida a los 89 días y se corta con −7.0%. Con tu capital verías esa cuenta cerrada; en la práctica el challenge se habría perdido. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies prop firm rules: the account hits the loss limit after 89 days and stops at −7.0%. With your capital you would see that closed account; in practice the challenge would have been lost. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 89 dias e é encerrada com −7,0%. Com o seu capital você veria essa conta fechada; na prática o challenge teria sido perdido. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -11800,9 +12048,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "Esta curva es la misma de #22: la cartera ×3 sin filtro efectivo, con las reglas de la prop firm, que toca el límite de pérdida a los 81 días y se corta con −10.4%. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo.",
-    "en": "This curve is the same as #22: the ×3 portfolio with no effective filter, under prop firm rules, which hits the loss limit after 81 days and stops at −10.4%. With your capital you would see that closed account, not an investment that keeps running.",
-    "pt": "Esta curva é a mesma do #22: a carteira ×3 sem filtro efetivo, com as regras da prop firm, que bate no limite de perda aos 81 dias e é encerrada com −10,4%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
+    "es": "Esta curva es la misma de #22: la cartera ×3 sin filtro efectivo, con las reglas de la prop firm, que toca el límite de pérdida a los 81 días y se corta con −10.4%. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "This curve is the same as #22: the ×3 portfolio with no effective filter, under prop firm rules, which hits the loss limit after 81 days and stops at −10.4%. With your capital you would see that closed account, not an investment that keeps running. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "Esta curva é a mesma do #22: a carteira ×3 sem filtro efetivo, com as regras da prop firm, que bate no limite de perda aos 81 dias e é encerrada com −10,4%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -11967,9 +12215,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm: la curva se corta en enero de 2015, cuando la cuenta tocó el límite de pérdida. Es la misma curva que la de operar a x3 sin filtro (la comparte el #23), porque el HMM aún no había empezado a decidir.",
-    "en": "The simulation applies the prop firm's rules: the curve is cut in January 2015, when the account hit the loss limit. It is the same curve as trading at x3 without a filter (shared with #23), because the HMM had not started deciding yet.",
-    "pt": "A simulação aplica as regras da prop firm: a curva é cortada em janeiro de 2015, quando a conta atingiu o limite de perda. É a mesma curva de operar a x3 sem filtro (compartilhada com o #23), porque o HMM ainda não tinha começado a decidir."
+    "es": "La simulación aplica las reglas de la prop firm: la curva se corta en enero de 2015, cuando la cuenta tocó el límite de pérdida. Es la misma curva que la de operar a x3 sin filtro (la comparte el #23), porque el HMM aún no había empezado a decidir. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies the prop firm's rules: the curve is cut in January 2015, when the account hit the loss limit. It is the same curve as trading at x3 without a filter (shared with #23), because the HMM had not started deciding yet. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm: a curva é cortada em janeiro de 2015, quando a conta atingiu o limite de perda. É a mesma curva de operar a x3 sem filtro (compartilhada com o #23), porque o HMM ainda não tinha começado a decidir. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -13234,9 +13482,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm: la curva se detiene en marzo de 2020, cuando la cuenta rompió el límite de pérdida diaria. Además opera con apalancamiento variable de hasta x4 (x3.15 de media).",
-    "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account broke the daily loss limit. It also trades with variable leverage of up to x4 (x3.15 on average).",
-    "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta rompeu o limite de perda diária. Além disso opera com alavancagem variável de até x4 (x3,15 em média)."
+    "es": "La simulación aplica las reglas de la prop firm: la curva se detiene en marzo de 2020, cuando la cuenta rompió el límite de pérdida diaria. Además opera con apalancamiento variable de hasta x4 (x3.15 de media). La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account broke the daily loss limit. It also trades with variable leverage of up to x4 (x3.15 on average). The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta rompeu o limite de perda diária. Além disso opera com alavancagem variável de até x4 (x3,15 em média). A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {
@@ -13404,9 +13652,9 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm: la curva se detiene en marzo de 2020, cuando la cuenta tocó el límite de pérdida y el bot se apagó. Además opera con apalancamiento x2.",
-    "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account hit the loss limit and the bot shut down. It also trades with x2 leverage.",
-    "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta atingiu o limite de perda e o bot desligou. Além disso opera com alavancagem x2."
+    "es": "La simulación aplica las reglas de la prop firm: la curva se detiene en marzo de 2020, cuando la cuenta tocó el límite de pérdida y el bot se apagó. Además opera con apalancamiento x2. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte; es hipotética, porque en la realidad la cuenta se cierra ese día.",
+    "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account hit the loss limit and the bot shut down. It also trades with x2 leverage. The «No prop firm rules» line shows how the same strategy would have continued without the cut; it is hypothetical, because in reality the account closes that day.",
+    "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta atingiu o limite de perda e o bot desligou. Além disso opera com alavancagem x2. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte; é hipotética, porque na realidade a conta fecha nesse dia."
    }
   },
   "period": {

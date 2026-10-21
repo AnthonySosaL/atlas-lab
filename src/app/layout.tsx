@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export async function generateMetadata(): Promise<Metadata> {
   const [exps, lab] = await Promise.all([getExperiments(), getLab()]);
-  const description = `${exps.length} experimentos y ${lab.total.toLocaleString("en")} estrategias de trading probadas con out-of-sample, Deflated Sharpe y Monte Carlo. Resultados públicos, incluidos los negativos.`;
+  const description = `${exps.length} experimentos y ${(lab.tested ?? lab.total).toLocaleString("en")} estrategias de trading probadas con out-of-sample, Deflated Sharpe y Monte Carlo. Resultados públicos, incluidos los negativos.`;
   return {
     metadataBase: new URL(SITE_URL),
     title: "ATLAS Lab — Laboratorio cuantitativo",

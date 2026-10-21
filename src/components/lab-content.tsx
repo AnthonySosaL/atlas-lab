@@ -192,7 +192,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
       {/* barra de estado + controles */}
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border bg-card p-4">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <Stat label={t("lab.total")} value={String(data.total)} />
+          <Stat label={t("lab.total")} value={String(data.tested ?? data.total)} />
           <Stat label={t("lab.survived")} value={String(data.survived)} accent />
           <div className="flex items-center gap-2">
             <span className="text-muted-foreground">{t("lab.state")}</span>
@@ -435,7 +435,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
           </div>
           {data.shown !== undefined && data.total > data.shown && (
             <span className="text-[11px] text-muted-foreground">
-              {t("lab.shownOf").replace("{shown}", String(data.shown)).replace("{total}", String(data.total))}
+              {t("lab.shownOf").replace("{shown}", String(data.shown)).replace("{total}", String(data.tested ?? data.total))}
             </span>
           )}
         </div>

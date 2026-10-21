@@ -15,7 +15,7 @@ export default async function HallazgosPage() {
   return (
     <HallazgosContent
       stats={{
-        tested: lab.total,
+        tested: lab.tested ?? lab.total,
         survived: lab.survived,
         dsrMin: lab.thresholds?.dsr_min ?? 0.95,
         counts: { survived: count("survived"), neutral: count("neutral"), died: count("died") },
