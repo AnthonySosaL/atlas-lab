@@ -215,6 +215,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -457,7 +462,12 @@
     },
     "value": "2021–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v88",
@@ -662,6 +672,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "No probado directamente · evidencia de #6 (2019–2024) y #85",
+   "en": "Not tested directly · evidence from #6 (2019–2024) and #85",
+   "pt": "Não testado diretamente · evidência do #6 (2019–2024) e #85"
   }
  },
  {
@@ -840,6 +855,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "No probado (sin periodo)",
+   "en": "Not tested (no period)",
+   "pt": "Não testado (sem período)"
   }
  },
  {
@@ -1112,7 +1132,12 @@
     },
     "value": "2021–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v85",
@@ -1346,7 +1371,12 @@
     },
     "value": "2021–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v84",
@@ -1626,7 +1656,12 @@
     },
     "value": "2021–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v83",
@@ -1873,7 +1908,12 @@
     },
     "value": "2021–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v82",
@@ -2089,6 +2129,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "Ventanas de 3 meses dentro de 2007–2024",
+   "en": "3-month windows within 2007–2024",
+   "pt": "Janelas de 3 meses dentro de 2007–2024"
   }
  },
  {
@@ -2349,6 +2394,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "2014–2020 (diseño) · 2007–2013 y 2021–2024 (fuera de muestra)",
+   "en": "2014–2020 (design) · 2007–2013 and 2021–2024 (out of sample)",
+   "pt": "2014–2020 (desenho) · 2007–2013 e 2021–2024 (fora da amostra)"
   }
  },
  {
@@ -2518,6 +2568,11 @@
     "en": "The curve uses leverage of up to 2x and includes neither trading costs nor the financing of that leverage; in real trading the result would be lower.",
     "pt": "A curva usa alavancagem de até 2x e não inclui custos de operação nem o financiamento dessa alavancagem; no real o resultado seria menor."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -2692,7 +2747,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v78",
@@ -2869,6 +2929,11 @@
     "en": "The curve is the same Turtle portfolio (Donchian 20/10 on 11 assets) analyzed in experiment #74; here it is evaluated by Calmar and withdrawals, not by total return.",
     "pt": "A curva é a mesma carteira Turtle (Donchian 20/10 sobre 11 ativos) analisada no experimento #74; aqui é avaliada pelo Calmar e pelas retiradas, não pelo retorno total."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -3035,7 +3100,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v76",
@@ -3211,7 +3281,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v75",
@@ -3387,7 +3462,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v74",
@@ -3552,6 +3632,11 @@
     "en": "This curve (Turtle Donchian 20/10 on 11 assets) is the same base portfolio analyzed in experiment #78, where it is compared by Calmar and withdrawals.",
     "pt": "Esta curva (Turtle Donchian 20/10 sobre 11 ativos) é a mesma carteira base analisada no experimento #78, onde é comparada por Calmar e retiradas."
    }
+  },
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
   }
  },
  {
@@ -3729,7 +3814,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v72",
@@ -3876,7 +3966,12 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2018 (diseño) · 2019–2024 (fuera de muestra)",
+   "en": "2012–2018 (design) · 2019–2024 (out of sample)",
+   "pt": "2012–2018 (desenho) · 2019–2024 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v71",
@@ -4037,7 +4132,12 @@
     },
     "value": "2007–2013"
    }
-  ]
+  ],
+  "period": {
+   "es": "2012–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2012–2024 · 2007–2013 (out of sample)",
+   "pt": "2012–2024 · 2007–2013 (fora da amostra)"
+  }
  },
  {
   "id": "extra-v70",
@@ -4205,6 +4305,11 @@
     "en": "The curve is gross, without costs, on an approximated VRP and with variable leverage of up to 1.5x depending on volatility. In real trading the result would be lower.",
     "pt": "A curva é bruta, sem custos, sobre um VRP aproximado e com alavancagem variável de até 1,5x conforme a volatilidade. No real o resultado seria menor."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -4384,6 +4489,11 @@
     "en": "The curve is gross, without costs: the put price is an assumption (12% of the premium) and it does not include the bid-ask of real options. The analysis itself estimates the realistic result at half of the backtest (~+9% a year), and trading it requires an options account.",
     "pt": "A curva é bruta, sem custos: o preço da put é uma suposição (12% do prêmio) e não inclui o bid-ask de opções reais. A própria análise estima o resultado realista em metade do backtest (~+9% ao ano), e operá-lo exige uma conta de opções."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -4529,6 +4639,11 @@
      "tone": "ref"
     }
    ]
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -4653,6 +4768,11 @@
     "en": "The curve is gross, without trading costs: in real trading the result would be worse. The curve is the oil → USD/CAD pair.",
     "pt": "A curva é bruta, sem custos operacionais: na prática o resultado seria pior. A curva é a do par petróleo → USD/CAD."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -4768,6 +4888,11 @@
     "en": "The curve is gross, without trading costs: in real trading the result would be worse.",
     "pt": "A curva é bruta, sem custos operacionais: na prática o resultado seria pior."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -4900,6 +5025,11 @@
     "en": "The curve is gross, without trading costs: in real trading the result would be worse. The curve is the Nasdaq 100's, the best of the 4 indices, and even so it falls far below buy and wait.",
     "pt": "A curva é bruta, sem custos operacionais: na prática o resultado seria pior. A curva é a do Nasdaq 100, o melhor dos 4 índices, e mesmo assim fica muito abaixo de comprar e esperar."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -5054,6 +5184,11 @@
     "en": "The curve is gross, without trading costs: in real trading the result would be worse. It is an approximation without real options and with extreme tail risk: a single day like the one in 2018 can wipe out years of profit.",
     "pt": "A curva é bruta, sem custos operacionais: na prática o resultado seria pior. É uma aproximação sem opções reais e com risco de cauda extremo: um único dia como o de 2018 pode apagar anos de lucro."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -5198,6 +5333,11 @@
     "en": "The curve is gross, without trading costs: in real trading the result would be worse. It shows only gold's overnight leg; holding positions overnight with CFDs incurs swaps that are not subtracted here.",
     "pt": "A curva é bruta, sem custos operacionais: na prática o resultado seria pior. Mostra só o trecho noturno do ouro; manter posições à noite com CFD cobra swaps que aqui não foram descontados."
    }
+  },
+  "period": {
+   "es": "2012–2024",
+   "en": "2012–2024",
+   "pt": "2012–2024"
   }
  },
  {
@@ -5351,6 +5491,11 @@
     "en": "The curve uses exposure of up to x2 on the forex + gold basket (2007-2024); gains and losses are amplified in that proportion.",
     "pt": "A curva usa exposição de até x2 na cesta de forex + ouro (2007-2024); ganhos e perdas são amplificados nessa proporção."
    }
+  },
+  "period": {
+   "es": "2014–2024 (diseño) · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 (design) · 2007–2013 (out of sample)",
+   "pt": "2014–2024 (desenho) · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -5503,6 +5648,11 @@
     "en": "The curve shown is B3, with exposure reaching up to x2 when all assets are above their average; gains and losses are amplified in that proportion.",
     "pt": "A curva mostrada é a B3, com exposição que chega a x2 quando todos os ativos estão acima da média; ganhos e perdas são amplificados nessa proporção."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -5654,6 +5804,11 @@
     "en": "The curve shown is variant A2 (trend + vol-targeting), with variable leverage between x0.5 and x3; A1 and A3 have no curve here and did worse.",
     "pt": "A curva mostrada é a variante A2 (tendência + vol-targeting), com alavancagem variável entre x0,5 e x3; A1 e A3 não têm curva aqui e se saíram pior."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -5814,6 +5969,11 @@
     "en": "The curve trades with x2 leverage when invested, on the full basket; its gain comes from index beta and does not hold on the basket without indices or out of sample.",
     "pt": "A curva opera com alavancagem x2 quando investida, na cesta completa; seu ganho vem do beta dos índices e não se sustenta na cesta sem índices nem fora da amostra."
    }
+  },
+  "period": {
+   "es": "2014–2024 (diseño) · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 (design) · 2007–2013 (out of sample)",
+   "pt": "2014–2024 (desenho) · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -5997,6 +6157,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "Último mes · últimos 6 meses · 2020 · 2022",
+   "en": "Last month · last 6 months · 2020 · 2022",
+   "pt": "Último mês · últimos 6 meses · 2020 · 2022"
   }
  },
  {
@@ -6173,6 +6338,11 @@
     "en": "The curve trades with variable leverage around x2 (x3 cap), like the live bot; gains and losses are amplified in the same proportion.",
     "pt": "A curva opera com alavancagem variável em torno de x2 (teto x3), igual ao bot ao vivo; ganhos e perdas são amplificados na mesma proporção."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -6360,6 +6530,11 @@
      "tone": "ref"
     }
    ]
+  },
+  "period": {
+   "es": "Desde 2010 (datos de SPY)",
+   "en": "Since 2010 (SPY data)",
+   "pt": "Desde 2010 (dados do SPY)"
   }
  },
  {
@@ -6495,6 +6670,11 @@
      "tone": "ref"
     }
    ]
+  },
+  "period": {
+   "es": "2019–2024 (mismos datos que #52)",
+   "en": "2019–2024 (same data as #52)",
+   "pt": "2019–2024 (mesmos dados do #52)"
   }
  },
  {
@@ -6649,6 +6829,11 @@
      "tone": "gain"
     }
    ]
+  },
+  "period": {
+   "es": "2019–2024 (mismos datos que #52)",
+   "en": "2019–2024 (same data as #52)",
+   "pt": "2019–2024 (mesmos dados do #52)"
   }
  },
  {
@@ -6741,7 +6926,12 @@
     },
     "value": "2 bps por cambio de posición"
    }
-  ]
+  ],
+  "period": {
+   "es": "2020–2024 (fuera de muestra, walk-forward)",
+   "en": "2020–2024 (out of sample, walk-forward)",
+   "pt": "2020–2024 (fora da amostra, walk-forward)"
+  }
  },
  {
   "id": "extra-v52",
@@ -6884,6 +7074,11 @@
     "en": "The curve uses variable leverage of up to x4 depending on forecast volatility. The comparison curve is not buy and wait but the same basket with fixed x2 leverage.",
     "pt": "A curva usa alavancagem variável de até x4 conforme a volatilidade prevista. A curva de comparação não é comprar e esperar, e sim a mesma cesta com alavancagem fixa x2."
    }
+  },
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
   }
  },
  {
@@ -7036,7 +7231,12 @@
     },
     "value": "2 bps por cambio de posición"
    }
-  ]
+  ],
+  "period": {
+   "es": "2020–2024 (fuera de muestra, walk-forward)",
+   "en": "2020–2024 (out of sample, walk-forward)",
+   "pt": "2020–2024 (fora da amostra, walk-forward)"
+  }
  },
  {
   "id": "20260610_142844_cierre-11-clases-probadas-v50",
@@ -7162,6 +7362,11 @@
     "en": "This curve is the same base portfolio analyzed in #37 to #40: the executable configuration with x2 leverage from #40. This experiment trades nothing of its own; it summarizes the whole program.",
     "pt": "Esta curva é a mesma carteira base analisada em #37 a #40: a configuração executável com alavancagem x2 do #40. Este experimento não opera nada próprio; resume o programa completo."
    }
+  },
+  "period": {
+   "es": "2007–2024 (resumen de #0–#49)",
+   "en": "2007–2024 (summary of #0–#49)",
+   "pt": "2007–2024 (resumo de #0–#49)"
   }
  },
  {
@@ -7308,6 +7513,11 @@
     "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
     "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
    }
+  },
+  "period": {
+   "es": "2014–2024 planeado · la cuenta reventó el 30-abr-2015 (día 179)",
+   "en": "2014–2024 planned · the account blew up on Apr 30, 2015 (day 179)",
+   "pt": "2014–2024 planejado · a conta quebrou em 30-abr-2015 (dia 179)"
   }
  },
  {
@@ -7471,6 +7681,11 @@
     "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
     "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 3-abr-2015 (día 156)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Apr 3, 2015 (day 156)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 3-abr-2015 (dia 156)"
   }
  },
  {
@@ -7634,6 +7849,11 @@
     "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
     "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 23-jul-2017 (día 876)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Jul 23, 2017 (day 876)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 23-jul-2017 (dia 876)"
   }
  },
  {
@@ -7797,6 +8017,11 @@
     "en": "The simulation applies prop-firm rules (10% drawdown / 5% daily loss) with x2 leverage and stops when the account hits the limit: that is why the curve ends early and at a loss. It does not represent a portfolio that keeps trading.",
     "pt": "A simulação aplica regras de prop firm (drawdown de 10% / perda diária de 5%) com alavancagem x2 e é interrompida quando a conta atinge o limite: por isso a curva termina antes do tempo e com perda. Não representa uma carteira que continue operando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 21-abr-2016 (día 484)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Apr 21, 2016 (day 484)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 21-abr-2016 (dia 484)"
   }
  },
  {
@@ -7948,6 +8173,11 @@
     "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit and stops on 2022-04-28. With your capital you would see that closed account, not an investment that keeps running.",
     "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda e é encerrada em 2022-04-28. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 28-abr-2022 (día 2560)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Apr 28, 2022 (day 2560)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 28-abr-2022 (dia 2560)"
   }
  },
  {
@@ -8096,6 +8326,11 @@
      "value": 7
     }
    ]
+  },
+  "period": {
+   "es": "~40 años de datos COT (CFTC)",
+   "en": "~40 years of COT data (CFTC)",
+   "pt": "~40 anos de dados COT (CFTC)"
   }
  },
  {
@@ -8263,6 +8498,11 @@
     "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 1,266 days and stops at −10.0%. With your capital you would see that closed account.",
     "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 1.266 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 9-mar-2018 (día 1266)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Mar 9, 2018 (day 1266)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 9-mar-2018 (dia 1266)"
   }
  },
  {
@@ -8440,6 +8680,11 @@
     "en": "The simulation applies prop firm rules with ×2 leverage: the account hits the loss limit after 243 days and stops at −10.2%. With your capital you would see that closed account.",
     "pt": "A simulação aplica as regras da prop firm com alavancagem ×2: a conta bate no limite de perda aos 243 dias e é encerrada com −10,2%. Com o seu capital você veria essa conta fechada."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 30-nov-2014 (día 243)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Nov 30, 2014 (day 243)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 30-nov-2014 (dia 243)"
   }
  },
  {
@@ -8598,6 +8843,11 @@
      "tone": "ref"
     }
    ]
+  },
+  "period": {
+   "es": "1956–2026 (datos)",
+   "en": "1956–2026 (data)",
+   "pt": "1956–2026 (dados)"
   }
  },
  {
@@ -8729,6 +8979,11 @@
     "en": "It is the executable portfolio at ×2 (2007–2024), the same as #37, #38 and #39: what was left standing after 40 experiments, useful as a measuring instrument, not as a challenge strategy.",
     "pt": "É a carteira executável com ×2 (2007–2024), a mesma do #37, #38 e #39: o que ficou de pé após 40 experimentos, útil como instrumento de medição, não como estratégia para challenges."
    }
+  },
+  "period": {
+   "es": "2007–2024",
+   "en": "2007–2024",
+   "pt": "2007–2024"
   }
  },
  {
@@ -8892,6 +9147,11 @@
     "en": "It is the executable portfolio at ×2 (2007–2024), the same as #37, #38 and #40; this experiment uses it to compute the expected value of paying for challenges, not as a portfolio to invest in.",
     "pt": "É a carteira executável com ×2 (2007–2024), a mesma do #37, #38 e #40; este experimento a usa para calcular o valor esperado de pagar challenges, não como carteira para investir."
    }
+  },
+  "period": {
+   "es": "2007–2024",
+   "en": "2007–2024",
+   "pt": "2007–2024"
   }
  },
  {
@@ -9037,6 +9297,11 @@
     "en": "It is the executable portfolio at ×2 (2007–2024), the same as #37, #39 and #40; this experiment tests whether its Sharpe beats chance, not how much an account would earn.",
     "pt": "É a carteira executável com ×2 (2007–2024), a mesma do #37, #39 e #40; este experimento avalia se o seu Sharpe supera o acaso, não quanto uma conta renderia."
    }
+  },
+  "period": {
+   "es": "2007–2024",
+   "en": "2007–2024",
+   "pt": "2007–2024"
   }
  },
  {
@@ -9210,6 +9475,11 @@
     "en": "It is the executable portfolio at ×2 (2007–2024), the same one #38, #39 and #40 analyze; here its returns are used to simulate the challenge 4,000 times, not as the result of one account.",
     "pt": "É a carteira executável com ×2 (2007–2024), a mesma que o #38, o #39 e o #40 analisam; aqui os seus retornos são usados para simular o challenge 4.000 vezes, não como o resultado de uma conta."
    }
+  },
+  "period": {
+   "es": "2007–2024",
+   "en": "2007–2024",
+   "pt": "2007–2024"
   }
  },
  {
@@ -9369,6 +9639,11 @@
     "en": "The curve shown is the base portfolio at ×2 (the same as #33 and #35); this experiment measures the quality without rules at ×2, ×3 and ×4, and those results are in the metrics.",
     "pt": "A curva mostrada é a carteira base com ×2 (a mesma do #33 e do #35); este experimento mede a qualidade sem regras com ×2, ×3 e ×4, e esses resultados estão nas métricas."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -9506,6 +9781,11 @@
     "en": "The curve shown is the base portfolio without the rates condition (VIX 28, 40-day credit, ×2), the same as #33 and #36; this experiment compares the Sharpe with and without that condition.",
     "pt": "A curva mostrada é a carteira base sem a condição de juros (VIX 28, crédito 40 dias, ×2), a mesma do #33 e do #36; este experimento compara o Sharpe com e sem essa condição."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -9685,6 +9965,11 @@
     "en": "The curve uses ×2.5 leverage on days when yesterday's VIX is below 14 and ×1.5 the rest: gains and losses are amplified. Above ×2.5 the account does not survive 2014–2024.",
     "pt": "A curva usa alavancagem ×2,5 nos dias com o VIX de ontem abaixo de 14 e ×1,5 nos demais: ganhos e perdas se amplificam. Acima de ×2,5 a conta não sobrevive a 2014–2024."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -9839,6 +10124,11 @@
     "en": "It is the base portfolio at ×2 (VIX 28, 40-day credit, φ = 0.5), the same one #35 and #36 use. The ×2 leverage doubles gains and losses.",
     "pt": "É a carteira base com ×2 (VIX 28, crédito 40 dias, φ = 0,5), a mesma que o #35 e o #36 usam. A alavancagem ×2 duplica ganhos e perdas."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -9995,6 +10285,11 @@
     "en": "It is the same portfolio as #31 (φ = 0.5, ×1.5): here it is validated year by year, it is not a different curve.",
     "pt": "É a mesma carteira do #31 (φ = 0,5, ×1,5): aqui é validada ano a ano, não é uma curva diferente."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -10167,6 +10462,11 @@
     "en": "This is the portfolio of the best setting (φ = 0.5, ×1.5), the same one #32 validates year by year. On the day the filter fires it assumes the bot covers half of the move, an assumption that would have to be measured live.",
     "pt": "É a carteira do melhor ajuste (φ = 0,5, ×1,5), a mesma que o #32 valida ano a ano. No dia em que o filtro dispara assume que o bot cobre metade do movimento, uma suposição que precisaria ser medida na vida real."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -10341,6 +10641,11 @@
      "tone": "ref"
     }
    ]
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -10491,6 +10796,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 planeado · la cuenta reventó (fecha no registrada)",
+   "en": "2014–2024 + 2007–2013 planned · the account blew up (date not recorded)",
+   "pt": "2014–2024 + 2007–2013 planejado · a conta quebrou (data não registrada)"
   }
  },
  {
@@ -10670,6 +10980,11 @@
      "tone": "loss"
     }
    ]
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 planeado · la cuenta reventó (fecha no registrada)",
+   "en": "2014–2024 + 2007–2013 planned · the account blew up (date not recorded)",
+   "pt": "2014–2024 + 2007–2013 planejado · a conta quebrou (data não registrada)"
   }
  },
  {
@@ -10832,6 +11147,11 @@
     "en": "The simulation applies prop firm rules: the account hits the loss limit after 241 days and stops at −10.0%. With your capital you would see that closed account, not an investment that keeps running.",
     "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 241 dias e é encerrada com −10,0%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 12-jul-2015 (día 241)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Jul 12, 2015 (day 241)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 12-jul-2015 (dia 241)"
   }
  },
  {
@@ -10980,6 +11300,11 @@
     "en": "The curve (+1,226.7%) uses the VIX and the filter from the same day's close, information a real bot would not have yet, with ×3 leverage (×2 on re-entry). It cannot be replicated live: with yesterday's signals the Sharpe drops to −1.00.",
     "pt": "A curva (+1.226,7%) usa o VIX e o filtro do fechamento do mesmo dia, informação que um bot real ainda não teria, com alavancagem ×3 (×2 na reentrada). Na vida real não dá para replicar: com os sinais de ontem o Sharpe cai para −1,00."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -11128,6 +11453,11 @@
     "en": "The curve (+203.8%) uses the macro filter decided with the same day's close, information a real bot would not have yet, and leverage from ×2 to ×4. It cannot be replicated live: with signals lagged one day (#27), the base portfolio dies.",
     "pt": "A curva (+203,8%) usa o filtro macro decidido com o fechamento do mesmo dia, informação que um bot real ainda não teria, e alavancagem de ×2 a ×4. Na vida real não dá para replicar: com os sinais defasados em um dia (#27), a carteira base morre."
    }
+  },
+  "period": {
+   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
+   "en": "2014–2024 · 2007–2013 (out of sample)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
   }
  },
  {
@@ -11292,6 +11622,11 @@
     "en": "The simulation applies prop firm rules: the account hits the loss limit after 89 days and stops at −7.0%. With your capital you would see that closed account; in practice the challenge would have been lost.",
     "pt": "A simulação aplica as regras da prop firm: a conta bate no limite de perda aos 89 dias e é encerrada com −7,0%. Com o seu capital você veria essa conta fechada; na prática o challenge teria sido perdido."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 15-ene-2015 (día 89)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Jan 15, 2015 (day 89)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 15-jan-2015 (dia 89)"
   }
  },
  {
@@ -11469,6 +11804,11 @@
     "en": "This curve is the same as #22: the ×3 portfolio with no effective filter, under prop firm rules, which hits the loss limit after 81 days and stops at −10.4%. With your capital you would see that closed account, not an investment that keeps running.",
     "pt": "Esta curva é a mesma do #22: a carteira ×3 sem filtro efetivo, com as regras da prop firm, que bate no limite de perda aos 81 dias e é encerrada com −10,4%. Com o seu capital você veria essa conta fechada, não um investimento que continua rodando."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 6-ene-2015 (día 81)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Jan 6, 2015 (day 81)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 6-jan-2015 (dia 81)"
   }
  },
  {
@@ -11631,6 +11971,11 @@
     "en": "The simulation applies the prop firm's rules: the curve is cut in January 2015, when the account hit the loss limit. It is the same curve as trading at x3 without a filter (shared with #23), because the HMM had not started deciding yet.",
     "pt": "A simulação aplica as regras da prop firm: a curva é cortada em janeiro de 2015, quando a conta atingiu o limite de perda. É a mesma curva de operar a x3 sem filtro (compartilhada com o #23), porque o HMM ainda não tinha começado a decidir."
    }
+  },
+  "period": {
+   "es": "2014–2024 + 2007–2013 (fuera de muestra) planeado · la cuenta reventó el 6-ene-2015 (día 81)",
+   "en": "2014–2024 + 2007–2013 (out of sample) planned · the account blew up on Jan 6, 2015 (day 81)",
+   "pt": "2014–2024 + 2007–2013 (fora da amostra) planejado · a conta quebrou em 6-jan-2015 (dia 81)"
   }
  },
  {
@@ -11798,6 +12143,11 @@
     "en": "The curve decides with same-day closing VIX and credit, information a real bot would not have yet: it cannot be replicated live. It also trades with x3 leverage.",
     "pt": "A curva decide com o VIX e o crédito do fechamento do mesmo dia, informação que um bot real ainda não teria: não pode ser replicada no real. Além disso opera com alavancagem x3."
    }
+  },
+  "period": {
+   "es": "2007–2013 (fuera de muestra; reglas fijadas en 2014–2024)",
+   "en": "2007–2013 (out of sample; rules set on 2014–2024)",
+   "pt": "2007–2013 (fora da amostra; regras fixadas em 2014–2024)"
   }
  },
  {
@@ -11928,6 +12278,11 @@
     "en": "The simulation applies the prop firm's rules: the curve is cut in November 2022, when the account broke the drawdown limit. Also, the risk signal uses the same-day close, which a real bot would not have yet, and it trades with x3 leverage.",
     "pt": "A simulação aplica as regras da prop firm: a curva é cortada em novembro de 2022, quando a conta rompeu o limite de drawdown. Além disso, o sinal de risco usa o fechamento do mesmo dia, que um bot real ainda não teria, e opera com alavancagem x3."
    }
+  },
+  "period": {
+   "es": "2014–2024 planeado · la cuenta reventó el 4-nov-2022 (día 2529)",
+   "en": "2014–2024 planned · the account blew up on Nov 4, 2022 (day 2529)",
+   "pt": "2014–2024 planejado · a conta quebrou em 4-nov-2022 (dia 2529)"
   }
  },
  {
@@ -12077,6 +12432,11 @@
     "en": "The curve decides with the same-day closing VIX, information a real bot would not have yet: it cannot be replicated live. It also trades with x3 to x5 leverage.",
     "pt": "A curva decide com o VIX do fechamento do mesmo dia, informação que um bot real ainda não teria: não pode ser replicada no real. Além disso opera com alavancagem de x3 a x5."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -12217,6 +12577,11 @@
     "en": "The simulation applies the prop firm's rules: the curve is cut in October 2014, after 24 days, when the account broke the rules. Also, the risk signal uses the same-day close, which a real bot would not have yet.",
     "pt": "A simulação aplica as regras da prop firm: a curva é cortada em outubro de 2014, após 24 dias, quando a conta rompeu as regras. Além disso, o sinal de risco usa o fechamento do mesmo dia, que um bot real ainda não teria."
    }
+  },
+  "period": {
+   "es": "2014–2024 planeado · la cuenta reventó el 31-oct-2014 (día 24)",
+   "en": "2014–2024 planned · the account blew up on Oct 31, 2014 (day 24)",
+   "pt": "2014–2024 planejado · a conta quebrou em 31-out-2014 (dia 24)"
   }
  },
  {
@@ -12358,6 +12723,11 @@
     "en": "The curve decides with same-day closing VIX and credit, information a real bot would not have yet: it cannot be replicated live.",
     "pt": "A curva decide com o VIX e o crédito do fechamento do mesmo dia, informação que um bot real ainda não teria: não pode ser replicada no real."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -12516,6 +12886,11 @@
     "en": "The curve decides with same-day closing VIX and credit, information a real bot would not have yet: it cannot be replicated live. It also trades with x3 leverage.",
     "pt": "A curva decide com o VIX e o crédito do fechamento do mesmo dia, informação que um bot real ainda não teria: não pode ser replicada no real. Além disso opera com alavancagem x3."
    }
+  },
+  "period": {
+   "es": "2014–2024",
+   "en": "2014–2024",
+   "pt": "2014–2024"
   }
  },
  {
@@ -12683,6 +13058,11 @@
     "en": "The curve decides with same-day closing VIX and credit, information a real bot would not have yet: it cannot be replicated live. It also trades with x4 leverage.",
     "pt": "A curva decide com o VIX e o crédito do fechamento do mesmo dia, informação que um bot real ainda não teria: não pode ser replicada no real. Além disso opera com alavancagem x4."
    }
+  },
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
   }
  },
  {
@@ -12858,6 +13238,11 @@
     "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account broke the daily loss limit. It also trades with variable leverage of up to x4 (x3.15 on average).",
     "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta rompeu o limite de perda diária. Além disso opera com alavancagem variável de até x4 (x3,15 em média)."
    }
+  },
+  "period": {
+   "es": "2019–2024 planeado · la cuenta reventó el 12-mar-2020 (día 313)",
+   "en": "2019–2024 planned · the account blew up on Mar 12, 2020 (day 313)",
+   "pt": "2019–2024 planejado · a conta quebrou em 12-mar-2020 (dia 313)"
   }
  },
  {
@@ -13023,6 +13408,11 @@
     "en": "The simulation applies the prop firm's rules: the curve stops in March 2020, when the account hit the loss limit and the bot shut down. It also trades with x2 leverage.",
     "pt": "A simulação aplica as regras da prop firm: a curva para em março de 2020, quando a conta atingiu o limite de perda e o bot desligou. Além disso opera com alavancagem x2."
    }
+  },
+  "period": {
+   "es": "2019–2024 planeado · la cuenta reventó el 12-mar-2020 (día 313)",
+   "en": "2019–2024 planned · the account blew up on Mar 12, 2020 (day 313)",
+   "pt": "2019–2024 planejado · a conta quebrou em 12-mar-2020 (dia 313)"
   }
  },
  {
@@ -13160,6 +13550,11 @@
     "en": "The curve is the unleveraged base basket over 2006-2024; the experiment uses it at x4 in the challenge and at x2 in the funded account, which amplifies gains and drawdowns.",
     "pt": "A curva é a cesta base sem alavancagem em 2006-2024; o experimento a usa a x4 no challenge e a x2 na conta financiada, o que amplifica ganhos e quedas."
    }
+  },
+  "period": {
+   "es": "2006–2024 · ventanas 2008, 2014–15, 2020 y 2022",
+   "en": "2006–2024 · windows 2008, 2014–15, 2020 and 2022",
+   "pt": "2006–2024 · janelas 2008, 2014–15, 2020 e 2022"
   }
  },
  {
@@ -13340,6 +13735,11 @@
     "en": "The curve is the same unleveraged equal-weight base portfolio as #9; this experiment uses it to simulate the challenge at x4 and the funded account at x2.",
     "pt": "A curva é a mesma carteira base com pesos iguais e sem alavancagem do #9; este experimento a usa para simular o challenge a x4 e a conta financiada a x2."
    }
+  },
+  "period": {
+   "es": "2019–2024 (remuestreo Monte Carlo)",
+   "en": "2019–2024 (Monte Carlo resampling)",
+   "pt": "2019–2024 (reamostragem Monte Carlo)"
   }
  },
  {
@@ -13523,6 +13923,11 @@
     "en": "The curve is the unleveraged risk-parity portfolio; the experiment uses it at x6 in the challenge, which multiplies both gains and drawdowns.",
     "pt": "A curva é a carteira risk parity sem alavancagem; o experimento a usa com x6 no challenge, o que multiplica tanto os ganhos quanto as quedas."
    }
+  },
+  "period": {
+   "es": "2019–2024 (remuestreo Monte Carlo)",
+   "en": "2019–2024 (Monte Carlo resampling)",
+   "pt": "2019–2024 (reamostragem Monte Carlo)"
   }
  },
  {
@@ -13706,6 +14111,11 @@
     "en": "The curve is the equal-weight base portfolio without leverage, the same one used by #11. The simulator resamples it; the challenge result depends on applying x4, which the curve does not show.",
     "pt": "A curva é a carteira base com pesos iguais e sem alavancagem, a mesma usada pelo #11. O simulador a reamostra; o resultado do challenge depende de aplicar x4, que a curva não mostra."
    }
+  },
+  "period": {
+   "es": "2019–2024 (remuestreo Monte Carlo)",
+   "en": "2019–2024 (Monte Carlo resampling)",
+   "pt": "2019–2024 (reamostragem Monte Carlo)"
   }
  },
  {
@@ -13906,7 +14316,12 @@
     },
     "value": "5"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024 · fuera de muestra: 30% final de operaciones (mar-2023–dic-2024)",
+   "en": "2019–2024 · out of sample: last 30% of trades (Mar 2023–Dec 2024)",
+   "pt": "2019–2024 · fora da amostra: 30% final das operações (mar-2023–dez-2024)"
+  }
  },
  {
   "id": "20260607_205435_reversion-de-sesion-fade-v7",
@@ -14075,7 +14490,12 @@
     },
     "value": "0.002%"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
+  }
  },
  {
   "id": "20260607_205310_orb-sesion-londres-ny-v6",
@@ -14243,7 +14663,12 @@
     },
     "value": "0.002%"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
+  }
  },
  {
   "id": "20260607_204455_tsmom-cartera-15-activos-v5",
@@ -14447,7 +14872,12 @@
     },
     "value": "1,754"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
+  }
  },
  {
   "id": "20260607_152309_time-series-momentum-diario-v4",
@@ -14644,7 +15074,12 @@
     },
     "value": "1,877"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
+  }
  },
  {
   "id": "20260607_151624_ml-meta-labeling-sma-xgboost-v3",
@@ -14852,7 +15287,12 @@
     },
     "value": "11,200"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024 · fuera de muestra mar-2023–dic-2024",
+   "en": "2019–2024 · out of sample Mar 2023–Dec 2024",
+   "pt": "2019–2024 · fora da amostra mar-2023–dez-2024"
+  }
  },
  {
   "id": "20260607_151500_ml-xgboost-filtro-conviccion-v2",
@@ -15060,7 +15500,12 @@
     },
     "value": "11,200"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024 · fuera de muestra mar-2023–dic-2024",
+   "en": "2019–2024 · out of sample Mar 2023–Dec 2024",
+   "pt": "2019–2024 · fora da amostra mar-2023–dez-2024"
+  }
  },
  {
   "id": "20260607_151319_ml-xgboost-triple-barrier-v1",
@@ -15286,7 +15731,12 @@
     },
     "value": "11,200"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024 · fuera de muestra mar-2023–dic-2024",
+   "en": "2019–2024 · out of sample Mar 2023–Dec 2024",
+   "pt": "2019–2024 · fora da amostra mar-2023–dez-2024"
+  }
  },
  {
   "id": "20260607_144908_baseline-sma-20-50",
@@ -15481,6 +15931,11 @@
     },
     "value": "2019–2024"
    }
-  ]
+  ],
+  "period": {
+   "es": "2019–2024",
+   "en": "2019–2024",
+   "pt": "2019–2024"
+  }
  }
 ]
