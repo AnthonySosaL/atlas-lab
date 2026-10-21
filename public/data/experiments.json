@@ -4843,9 +4843,9 @@
   "id": "20260607_144908_baseline-sma-20-50",
   "v": 0,
   "analysis": {
-   "es": "El punto de partida: un cruce de medias (SMA 20/50) largo/corto en EUR/USD con costos reales. Dio Sharpe 0.245 y le ganó al Buy&Hold (−9.7%), pero los costos se comieron casi todo el edge. Sirve solo como vara mínima: cualquier modelo de ML tenía que superar esto.",
-   "en": "The starting point: an SMA 20/50 long/short crossover on EUR/USD with real costs. Sharpe 0.245, beating Buy&Hold (−9.7%), but costs consumed almost all the edge. Serves only as the minimum benchmark: every ML model had to beat this.",
-   "pt": "O ponto de partida: um cruzamento SMA 20/50 long/short em EUR/USD com custos reais. Sharpe 0,245, superando o Buy&Hold (−9,7%), mas os custos consumiram quase todo o edge. Serve apenas como vara mínima: qualquer modelo de ML precisava superar isso."
+   "es": "El punto de partida: un cruce de medias (SMA 20/50) que compra y vende en corto el EUR/USD, con costos reales. Dio un Sharpe de 0.25 y le ganó a no usar estrategia (−9.7%), pero los costos se comieron casi toda la ventaja. Sirve solo como vara mínima: cualquier modelo de machine learning tenía que superar esto.",
+   "en": "The starting point: a moving-average crossover (SMA 20/50) going long and short EUR/USD, with real costs. It reached a Sharpe of 0.25 and beat using no strategy (−9.7%), but costs ate almost all of the edge. It only serves as the minimum bar: any machine-learning model had to beat this.",
+   "pt": "O ponto de partida: um cruzamento de médias (SMA 20/50) que compra e vende a descoberto o EUR/USD, com custos reais. Deu um Sharpe de 0,25 e superou não usar estratégia (−9,7%), mas os custos consumiram quase toda a vantagem. Serve apenas como régua mínima: qualquer modelo de machine learning tinha que superar isto."
   },
   "name": {
    "es": "Baseline SMA 20/50",
@@ -4855,9 +4855,9 @@
   "family": "baseline",
   "date": "2026-06-07T14:49:08",
   "description": {
-   "es": "Cruce de medias SMA 20/50 long/short sobre EUR/USD H1 (2019-2024), parametros fijos, con costes (0.7 pip fees + slippage).",
-   "en": "SMA 20/50 long/short crossover on EUR/USD H1 (2019-2024), fixed parameters, with real costs (0.7 pip fees + slippage).",
-   "pt": "Cruzamento SMA 20/50 long/short em EUR/USD H1 (2019-2024), parâmetros fixos, com custos reais (0,7 pip de taxa + slippage)."
+   "es": "Cruce de medias móviles SMA 20/50, largo y corto, sobre EUR/USD en velas de 1 hora (2019-2024). Parámetros fijos y costos reales: comisión de 0.7 pips más deslizamiento.",
+   "en": "SMA 20/50 moving-average crossover, long and short, on EUR/USD 1-hour bars (2019-2024). Fixed parameters and real costs: 0.7-pip fee plus slippage.",
+   "pt": "Cruzamento de médias móveis SMA 20/50, comprado e vendido, no EUR/USD em velas de 1 hora (2019-2024). Parâmetros fixos e custos reais: comissão de 0,7 pip mais slippage."
   },
   "params": {
    "timeframe": "H1",
@@ -4870,48 +4870,168 @@
    "period": "2019-2024"
   },
   "verdict": {
-   "es": "parcial",
-   "en": "partial",
-   "pt": "parcial"
+   "es": "Parcial: gana poco (+7.9% en 6 años) y le gana a no usar estrategia (comprar y esperar: −9.7%), pero con un Sharpe de 0.25 la ventaja es mínima.",
+   "en": "Partial: it earns little (+7.9% in 6 years) and beats using no strategy (buy and wait: −9.7%), but with a Sharpe of 0.25 the edge is minimal.",
+   "pt": "Parcial: ganha pouco (+7,9% em 6 anos) e supera não usar estratégia (comprar e esperar: −9,7%), mas com um Sharpe de 0,25 a vantagem é mínima."
   },
   "notes": {
-   "es": "Le gana al Buy&Hold pero Sharpe 0.245 (flojo) y los costes se comen casi todo el edge (~$1273 en 822 trades). Sirve como vara minima para el ML.",
-   "en": "Beats Buy&Hold but Sharpe 0.245 (weak) and costs eat up almost all the edge (~$1273 in 822 trades). Serves as minimum benchmark for ML.",
-   "pt": "Supera o Buy&Hold mas Sharpe 0,245 (fraco) e os custos consomem quase todo o edge (~$1273 em 822 trades). Serve como vara mínima para o ML."
+   "es": "Los costos se comen casi toda la ganancia: $1,273 en comisiones en 822 operaciones sobre una cuenta de $10,000. Sirve como vara mínima: cualquier modelo de machine learning tiene que superar esto.",
+   "en": "Costs eat almost all of the profit: $1,273 in fees over 822 trades on a $10,000 account. It serves as the minimum bar: any machine-learning model has to beat this.",
+   "pt": "Os custos consomem quase todo o lucro: $1.273 em comissões em 822 operações numa conta de $10.000. Serve como régua mínima: qualquer modelo de machine learning precisa superar isto."
   },
   "metrics": {
-   "Start": "2019-01-01 22:00:00+00:00",
-   "End": "2024-12-31 21:00:00+00:00",
-   "Period": "1559 days 15:00:00",
-   "Start Value": 10000.0,
-   "End Value": 10788.782648233137,
-   "Total Return [%]": 7.8878264823313655,
-   "Benchmark Return [%]": -9.667905694291756,
-   "Max Gross Exposure [%]": 100.0,
-   "Total Fees Paid": 1273.2002948999052,
-   "Max Drawdown [%]": 14.78030233254124,
-   "Max Drawdown Duration": "399 days 14:00:00",
-   "Total Trades": "822",
-   "Total Closed Trades": "821",
-   "Total Open Trades": "1",
-   "Open Trade PnL": 41.939083708005185,
-   "Win Rate [%]": 37.028014616321556,
-   "Best Trade [%]": 3.388468611688648,
-   "Worst Trade [%]": -1.6655802270389364,
-   "Avg Winning Trade [%]": 0.538604982231693,
-   "Avg Losing Trade [%]": -0.30022217788825134,
-   "Avg Winning Trade Duration": "3 days 04:03:21.315789473",
-   "Avg Losing Trade Duration": "1 days 03:31:06.150870406",
-   "Profit Factor": 1.043145416028294,
-   "Expectancy": 0.909675474452051,
-   "Sharpe Ratio": 0.24505309601788008,
-   "Calmar Ratio": 0.12128865448628738,
-   "Omega Ratio": 1.0082498805895528,
-   "Sortino Ratio": 0.34989304148857414
+   "Retorno total": "+7.9%",
+   "Sin estrategia (comprar y esperar)": "−9.7%",
+   "Sharpe": 0.245,
+   "Drawdown máximo": "−14.8%",
+   "Operaciones": 822,
+   "Operaciones ganadoras": "37.0%",
+   "Factor de beneficio": 1.04,
+   "Costos pagados": "$1,273"
   },
   "status": "neutral",
   "has_equity": true,
   "has_trades_chart": true,
-  "has_trades_csv": true
+  "has_trades_csv": true,
+  "market": {
+   "es": "EUR/USD (forex) · velas de 1 hora",
+   "en": "EUR/USD (forex) · 1-hour bars",
+   "pt": "EUR/USD (forex) · velas de 1 hora"
+  },
+  "kpis": [
+   {
+    "label": {
+     "es": "Retorno total",
+     "en": "Total return",
+     "pt": "Retorno total"
+    },
+    "value": "+7.9%",
+    "tone": "gain"
+   },
+   {
+    "label": {
+     "es": "Sin estrategia (comprar y esperar)",
+     "en": "No strategy (buy and wait)",
+     "pt": "Sem estratégia (comprar e esperar)"
+    },
+    "value": "−9.7%",
+    "tone": "loss"
+   },
+   {
+    "label": {
+     "es": "Sharpe",
+     "en": "Sharpe",
+     "pt": "Sharpe"
+    },
+    "value": "0.25"
+   },
+   {
+    "label": {
+     "es": "Drawdown máximo",
+     "en": "Max drawdown",
+     "pt": "Drawdown máximo"
+    },
+    "value": "−14.8%",
+    "tone": "loss"
+   },
+   {
+    "label": {
+     "es": "Operaciones",
+     "en": "Trades",
+     "pt": "Operações"
+    },
+    "value": "822"
+   },
+   {
+    "label": {
+     "es": "Operaciones ganadoras",
+     "en": "Winning trades",
+     "pt": "Operações vencedoras"
+    },
+    "value": "37.0%"
+   },
+   {
+    "label": {
+     "es": "Factor de beneficio",
+     "en": "Profit factor",
+     "pt": "Fator de lucro"
+    },
+    "value": "1.04"
+   },
+   {
+    "label": {
+     "es": "Costos pagados (cuenta de $10,000)",
+     "en": "Costs paid ($10,000 account)",
+     "pt": "Custos pagos (conta de $10.000)"
+    },
+    "value": "$1,273"
+   }
+  ],
+  "params_view": [
+   {
+    "label": {
+     "es": "Mercado",
+     "en": "Market",
+     "pt": "Mercado"
+    },
+    "value": "EUR/USD"
+   },
+   {
+    "label": {
+     "es": "Temporalidad",
+     "en": "Timeframe",
+     "pt": "Tempo gráfico"
+    },
+    "value": "1 h"
+   },
+   {
+    "label": {
+     "es": "Media rápida",
+     "en": "Fast average",
+     "pt": "Média rápida"
+    },
+    "value": "SMA 20"
+   },
+   {
+    "label": {
+     "es": "Media lenta",
+     "en": "Slow average",
+     "pt": "Média lenta"
+    },
+    "value": "SMA 50"
+   },
+   {
+    "label": {
+     "es": "Comisión",
+     "en": "Fee",
+     "pt": "Comissão"
+    },
+    "value": "0.007% (≈0.7 pips)"
+   },
+   {
+    "label": {
+     "es": "Deslizamiento",
+     "en": "Slippage",
+     "pt": "Slippage"
+    },
+    "value": "0.002%"
+   },
+   {
+    "label": {
+     "es": "Capital inicial",
+     "en": "Initial capital",
+     "pt": "Capital inicial"
+    },
+    "value": "$10,000"
+   },
+   {
+    "label": {
+     "es": "Periodo",
+     "en": "Period",
+     "pt": "Período"
+    },
+    "value": "2019–2024"
+   }
+  ]
  }
 ]

@@ -23,7 +23,17 @@ export type Experiment = {
   has_equity: boolean;
   has_trades_chart: boolean;
   has_trades_csv: boolean;
-  reclass?: { from: string; to: string; reason: Loc }; // auditoría 2026-10-16
+  capital?: { warn: boolean; note: Loc }; // aviso para la tarjeta "Con tu capital"
+  market?: Loc; // mercado(s) y temporalidad en que opera
+  chart?: ExpChart; // gráfico de barras cuando el experimento no produce curva de capital
+  kpis?: { label: Loc; value: string | number; tone?: "gain" | "loss" }[]; // métricas legibles
+  params_view?: { label: Loc; value: string }[]; // parámetros legibles
+};
+
+export type ExpChart = {
+  title: Loc;
+  unit: "usd" | "pct" | "num";
+  bars: { label: Loc; value: number; tone?: "gain" | "loss" | "ref" }[];
 };
 
 export type Summary = {
