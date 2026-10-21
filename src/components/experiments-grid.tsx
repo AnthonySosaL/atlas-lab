@@ -3,7 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AlertTriangle } from "lucide-react";
 import type { Experiment } from "@/lib/data";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +26,7 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
   const [status, setStatus] = React.useState<"todos" | Experiment["status"]>("todos");
   const [q, setQ] = React.useState("");
   const [sortBy, setSortBy] = React.useState<"num" | "date">("num");
-  const [sortDir, setSortDir] = React.useState<"asc" | "desc">("desc");
+  const [sortDir, setSortDir] = React.useState<"asc" | "desc">("asc");
 
   const filtered = experiments
     .filter(
@@ -118,7 +117,9 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
         variants={{ show: { transition: { staggerChildren: 0.03 } } }}
       >
         {filtered.map((e) => {
-          const metrics = headlineMetrics(e.metrics);
+          const metrics = e.kpis
+            ? e.kpis.slice(0, 3).map((k) => ({ key: pick(k.label, locale), value: k.value }))
+            : headlineMetrics(e.metrics);
           return (
             <motion.div
               key={e.id}
@@ -140,15 +141,11 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                       {e.family && <Badge variant="muted">{t(`fam.${e.family}`)}</Badge>}
                     </div>
                     <div className="flex items-center gap-1.5">
-                      {e.reclass && (
-                        <span title={`${t("exp.reclassed")}: ${pick(e.reclass.reason, locale)}`} className="inline-flex items-center gap-0.5 text-[10px] text-amber-500">
-                          <AlertTriangle className="size-3" /> {t("exp.reclassed")}
-                        </span>
-                      )}
                       <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
                     </div>
                   </div>
                   <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{pick(e.name, locale)}</h3>
+                  {e.market && <p className="mb-1.5 text-xs font-medium text-primary">{pick(e.market, locale)}</p>}
                   <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{pick(e.description, locale)}</p>
                   {metrics.length > 0 && (
                     <div className="flex flex-wrap gap-x-4 gap-y-1 border-t pt-3">

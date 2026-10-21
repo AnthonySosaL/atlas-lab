@@ -18,6 +18,13 @@ export function fmtMetric(key: string, value: number | string): string {
 }
 
 const METRIC_LABELS: Record<string, { en: string; pt: string }> = {
+  "retorno total":         { en: "Total return",  pt: "Retorno total" },
+  "sin estrategia":        { en: "No strategy (buy and wait)", pt: "Sem estratégia (comprar e esperar)" },
+  "drawdown máximo":       { en: "Max drawdown",  pt: "Drawdown máximo" },
+  "operaciones ganadoras": { en: "Winning trades", pt: "Operações vencedoras" },
+  "operaciones":           { en: "Trades",        pt: "Operações" },
+  "factor de beneficio":   { en: "Profit factor", pt: "Fator de lucro" },
+  "costos pagados":        { en: "Costs paid",    pt: "Custos pagos" },
   peor_dia:   { en: "Worst day",      pt: "Pior dia" },
   peor_anio:  { en: "Worst year",     pt: "Pior ano" },
   anios_pos:  { en: "Positive yrs",   pt: "Anos pos." },
@@ -46,7 +53,7 @@ export function metricLabel(key: string, locale: "es" | "en" | "pt"): string {
 
 /** Métricas destacadas para mostrar en las tarjetas, según existan. */
 export function headlineMetrics(m: Record<string, number | string>) {
-  const order = ["Sharpe", "CAGR", "MaxDD", "acc", "r2_vol", "PSR", "DSR"];
+  const order = ["Retorno total", "Sharpe", "CAGR", "MaxDD", "Drawdown", "acc", "r2_vol", "PSR", "DSR"];
   const out: { key: string; value: number | string }[] = [];
   for (const key of Object.keys(m)) {
     if (order.some((o) => key.toLowerCase().includes(o.toLowerCase()))) out.push({ key, value: m[key] });

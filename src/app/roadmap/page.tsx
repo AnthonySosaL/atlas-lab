@@ -29,10 +29,6 @@ export default async function RoadmapPage() {
         <Tr k="roadmap.subtitle" />
       </p>
 
-      <p className="mb-8 rounded-lg border border-amber-500/40 bg-amber-500/[0.06] px-4 py-3 text-sm text-muted-foreground">
-        <Tr k="roadmap.auditNote" />
-      </p>
-
       <RoadmapTimeline chapters={chapters} />
     </div>
   );
