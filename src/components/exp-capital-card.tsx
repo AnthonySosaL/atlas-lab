@@ -36,7 +36,8 @@ export function ExpCapitalCard({ exp, series }: { exp: Experiment; series: Serie
   const [capital, setCapital] = React.useState(100_000);
   const main = series[0] ? stats(series[0]) : null;
   const bhSerie = series.slice(1).find((s) => /buy|bench|sin estrategia/i.test(s.name));
-  const bh = bhSerie ? stats(bhSerie) : null;
+  const bhPct = Number(exp.metrics["Benchmark Return [%]"]); // sin curva de referencia: usa el retorno guardado
+  const bh = bhSerie ? stats(bhSerie) : Number.isFinite(bhPct) && main ? { ...main, ratio: 1 + bhPct / 100 } : null;
   const note = exp.capital ? pick(exp.capital.note, locale) : "";
 
   return (
