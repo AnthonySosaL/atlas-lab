@@ -95,7 +95,7 @@ Generado de `public/data/series/*.json` (curvas de capital del sitio). Cada curv
 - **#56** sentimiento probado de 4 formas — métricas: {"acc_dir": 0.57, "base_rate": 0.613, "R2_vol_VIX": 0.395, "R2_vol_precio": 0.378}
 - **#58** What-if: capital del bot (1x / 2x / vol-target) — métricas: {"1_mes_2x": "-1.0%", "6_meses_2x": "+6.7%", "2020_2x": "+13.1%", "2022_2x": "-17.0%", "costos_6m": "$192"}
 - **#68** Estacionalidad (dia de semana, turn-of-month) — métricas: {"turn_of_month": "+5 bps", "resto_del_mes": "+4 bps", "dia_semana": "plano"}
-- **#81** Laboratorio automático — 34,751 estrategias con gauntlet de 5 filtros — métricas: {"probadas": 34751, "sobrevivieron": 0, "DSR_max": 0.7, "max_filtros": "4/5", "tilt_RSI": "real pero inutil: 6% exposici
+- **#81** Laboratorio automático — 33,363 estrategias probadas (34,751 generadas; 1,388 casi nunca operaron) con gauntlet de 5 filtros — métricas: {"probadas": 33363, "sin_operar": 1388, "sobrevivieron": 0, "DSR_max": 0.7, "max_filtros": "4/5", "tilt_RSI": "real pero inutil: 6% exposici
 - **#82** ¿Sirven las 50 mejores para FONDEO? (challenge tipo FTMO en 3 meses) — métricas: {"P_pasar_x1": "0.0%", "P_pasar_x5_promedio": "0.4%", "mejor_x5": "RSI5<18: 3.5%", "mejor_paso": 21, "mejor_revento": 28
 - **#87** TikTok 3 — Noticias + Breaker Block (ICT) — métricas: {"testeable": "no", "relacionado": "#56 sentimiento (falló)"}
 - **#88** TikTok 4 — ORB (Opening Range Breakout) del Nasdaq 9:30 — métricas: {"ORB_intradia": "#6: Sharpe -0.96", "breakout_daily": "pierde (#85)", "sobrevivieron": 0}

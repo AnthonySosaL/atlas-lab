@@ -27,6 +27,12 @@ function stats(s: Serie): Stats | null {
   return { ratio: pts[pts.length - 1][0] / pts[0][0], maxDD, from, to, years };
 }
 
+/** Recorta una curva al rango de fechas [from, to] (YYYY-MM-DD). */
+function clip(s: Serie, from: string, to: string): Serie {
+  const keep = s.x.map((d) => d.slice(0, 10) >= from && d.slice(0, 10) <= to);
+  return { ...s, x: s.x.filter((_, i) => keep[i]), y: s.y.filter((_, i) => keep[i]) };
+}
+
 const usd = (n: number) => (n < 0 ? "−" : "") + "$" + Math.round(Math.abs(n)).toLocaleString("en-US");
 const signed = (n: number) => (n >= 0 ? "+" : "−") + usd(Math.abs(n)).replace("−", "");
 const pct = (n: number) => (n >= 0 ? "+" : "−") + Math.abs(n * 100).toFixed(1) + "%";
@@ -37,7 +43,9 @@ export function ExpCapitalCard({ exp, series }: { exp: Experiment; series: Serie
   const main = series[0] ? stats(series[0]) : null;
   const bhSerie = series.slice(1).find((s) => /buy|bench|sin estrategia/i.test(s.name));
   const bhPct = Number(exp.metrics["Benchmark Return [%]"]); // sin curva de referencia: usa el retorno guardado
-  const bh = bhSerie ? stats(bhSerie) : Number.isFinite(bhPct) && main ? { ...main, ratio: 1 + bhPct / 100 } : null;
+  // La referencia se mide en las MISMAS fechas que la estrategia (si la cuenta se cortó, solo hasta el corte).
+  const bh = bhSerie ? stats(main ? clip(bhSerie, main.from, main.to) : bhSerie)
+    : Number.isFinite(bhPct) && main ? { ...main, ratio: 1 + bhPct / 100 } : null;
   const note = exp.capital ? pick(exp.capital.note, locale) : "";
 
   return (

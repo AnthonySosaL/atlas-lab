@@ -79,6 +79,8 @@ export type LabItem = {
 export type LabData = {
   updated: string;
   total: number;
+  tested?: number;
+  noop?: number;
   survived: number;
   state: "running" | "stopped";
   bh_is?: number;

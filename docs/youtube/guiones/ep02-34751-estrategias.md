@@ -1,22 +1,23 @@
-# EP02 — Experimento #81: "34,751 estrategias, 0 sobrevivieron"
+# EP02 — Experimento #81: "33,363 estrategias probadas, 0 sobrevivieron"
 
 Estado del guion: **BORRADOR — pendiente de aprobación**
+Cifras (verificadas en lab/registry.json): se generaron 34,751 estrategias; 33,363 se probaron de verdad (murieron en los filtros) y 1,388 casi nunca operaron (el motor no las cuenta como intento). La corrida nocturna del 28-jun-2026 (terminó a las 07:24) añadió 33,016 al registro, que ya traía 1,735 de pruebas anteriores: NO todo fue en una noche.
 Datos: `experiments.json` (v=81) y `exp_details.json`. Da para 2 largos; este es el primero (qué pasó). El segundo: el Deflated Sharpe explicado.
 
 ## Título (opciones)
-1. Probé 34,751 estrategias de trading en una noche. Sobrevivieron 0
+1. Probé 33,363 estrategias de trading (33,016 en una sola noche). Sobrevivieron 0
 2. Puse a una IA a inventar estrategias de trading toda la noche: este fue el resultado
-3. 34,751 estrategias y ninguna pasó: por qué casi todo backtest miente
+3. 33,363 estrategias y ninguna pasó: por qué casi todo backtest miente
 
 ## Miniatura
-"34,751" en blanco gigante → "0" rojo debajo. Texto pequeño: "sobrevivieron".
+"33,363" en blanco gigante → "0" rojo debajo. Texto pequeño: "sobrevivieron".
 
 ---
 
 ## VIDEO LARGO (≈ 10 min)
 
-**[0:00 — Gancho]** (pantalla: contador subiendo hasta 34,751)
-Dejé una máquina toda la noche inventando y probando estrategias de trading. 34,751, todas distintas. Por la mañana, ¿cuántas habían sobrevivido? Cero. Y ese cero es lo más útil que he aprendido.
+**[0:00 — Gancho]** (pantalla: contador subiendo hasta 33,363)
+Dejé una máquina toda la noche inventando y probando estrategias de trading: en esa corrida se sumaron 33,016 al registro, que ya traía 1,735, así que 34,751 en total, todas distintas; 33,363 llegaron a probarse de verdad (las otras 1,388 casi nunca operaron). Por la mañana, ¿cuántas habían sobrevivido? Cero. Y ese cero es lo más útil que he aprendido.
 
 **[0:40 — Qué construí]** (pantalla: diagrama semillas → modelo → explorador → motor)
 Un laboratorio automático con tres fuentes de ideas: unas semillas clásicas (medias móviles, Donchian, momentum, RSI, IBS, Double Seven y combinaciones), un modelo de lenguaje (DeepSeek/Qwen) que propone variantes, y un explorador que garantiza que ninguna se repita. Cada idea se convierte en una especificación que un motor fijo prueba siempre igual.
@@ -31,7 +32,7 @@ Todas operan lo mismo: una cesta de 7 pares de divisas más oro, señal ejecutad
 4. Monte Carlo con 5000 rotaciones de la señal: si no le gana a sus propias versiones desalineadas en el tiempo, su timing es suerte.
 5. Batir a comprar y mantener en 2014-2020 (Sharpe 0.13).
 
-**[5:00 — El resultado]** (pantalla: embudo 34,751 → 0)
+**[5:00 — El resultado]** (pantalla: embudo 33,363 → 0)
 Cero sobrevivieron. El máximo que alguna logró fue pasar 4 de los 5 filtros: engañó a los dos periodos fuera de muestra, al Monte Carlo y batió al mercado. Pero al revisarla año por año, pierde dinero: todo su resultado venía de un solo año de suerte.
 
 **[6:15 — El filtro que nadie pasó]** (pantalla: barra DSR 0.70 vs meta 0.95)
@@ -49,7 +50,7 @@ Todo está publicado en atlas-lab-one.vercel.app, experimento 81. Contenido educ
 ---
 
 ## SHORT 1 (≈ 45 s) — "El contador"
-**[0-3 s]** (contador rápido) "34,751 estrategias de trading probadas en una noche."
+**[0-3 s]** (contador rápido) "33,363 estrategias de trading probadas, la mayoría en una sola noche."
 **[3-20 s]** "Cinco filtros: dos periodos que nunca vieron, Deflated Sharpe, Monte Carlo y batir al mercado."
 **[20-38 s]** (embudo cayendo a 0, en rojo) "¿Cuántas pasaron? Cero. La mejor pasó 4 de 5… y año por año perdía dinero."
 **[38-45 s]** "Video completo en el canal. No es asesoría financiera."
@@ -61,7 +62,7 @@ Deflated Sharpe: máximo 0.70 de 0.95. Qué es en una frase y por qué caza a lo
 La reversión RSI: positiva en 49 de 50, pero 6% del tiempo en el mercado y ~1% al año.
 
 ## Descripción (YouTube)
-Construí un laboratorio que genera y prueba estrategias de trading automáticamente. En una noche probó 34,751 estrategias únicas contra 5 filtros (dos out-of-sample, Deflated Sharpe, Monte Carlo de 5000 permutaciones y batir Buy & Hold). Sobrevivieron 0.
+Construí un laboratorio que genera y prueba estrategias de trading automáticamente. Entre pruebas previas y una corrida nocturna, generó 34,751 estrategias únicas y probó de verdad 33,363 (las otras 1,388 casi nunca operaron) contra 5 filtros (dos out-of-sample, Deflated Sharpe, Monte Carlo de 5000 permutaciones y batir Buy & Hold). Sobrevivieron 0.
 
 Datos completos: https://atlas-lab-one.vercel.app (experimento #81)
 
