@@ -25,6 +25,7 @@ export type Experiment = {
   has_trades_csv: boolean;
   capital?: { warn: boolean; note: Loc }; // aviso para la tarjeta "Con tu capital"
   market?: Loc; // mercado(s) y temporalidad en que opera
+  period?: Loc; // periodo probado (y si la cuenta reventó antes)
   chart?: ExpChart; // gráfico de barras cuando el experimento no produce curva de capital
   kpis?: { label: Loc; value: string | number; tone?: "gain" | "loss" }[]; // métricas legibles
   params_view?: { label: Loc; value: string }[]; // parámetros legibles

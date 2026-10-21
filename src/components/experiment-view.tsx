@@ -51,7 +51,7 @@ export function ExperimentView({
         {exp.v != null && <span className="text-primary">#{exp.v} · </span>}
         {pick(exp.name, locale)}
       </h1>
-      {exp.market && <ExpMarket market={exp.market} />}
+      <ExpMarket market={exp.market} period={exp.period} />
       <p className="mt-3 max-w-3xl text-muted-foreground">{pick(exp.description, locale)}</p>
 
       {lesson && (
