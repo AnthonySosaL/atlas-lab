@@ -92,6 +92,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
   const [parsing, setParsing] = React.useState(false);
   const [parsed, setParsed] = React.useState<Parsed | null>(null);
   const [parseErr, setParseErr] = React.useState(false);
+  const [apiMsg, setApiMsg] = React.useState(""); // clave i18n de un error de la API (403 = solo local)
   const [testing, setTesting] = React.useState(false);
   const [myResult, setMyResult] = React.useState<TestOut | null>(null);
   const [modal, setModal] = React.useState<{ title: string; body: string; mono: boolean } | null>(null);
@@ -113,16 +114,17 @@ export function LabContent({ data: initial }: { data: LabData }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
+    if (r.status === 403) { setApiMsg("lab.devOnly"); return { forbidden: true }; }
     return r.json();
   };
 
   const interpret = async () => {
     if (!idea.trim()) return;
-    setParsing(true); setParseErr(false); setParsed(null); setMyResult(null);
+    setApiMsg(""); setParsing(true); setParseErr(false); setParsed(null); setMyResult(null);
     try {
       const res = await postLab({ action: "parse", text: idea });
       if (res?.spec) setParsed(res as Parsed);
-      else setParseErr(true);
+      else if (!res?.forbidden) setParseErr(true);
     } finally {
       setParsing(false);
     }
@@ -130,6 +132,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
   const confirmTest = async () => {
     if (!parsed) return;
+    setApiMsg("");
     setTesting(true);
     try {
       const res = await postLab({ action: "test", spec: parsed.spec });
@@ -146,16 +149,22 @@ export function LabContent({ data: initial }: { data: LabData }) {
 
   const act = async (action: "start" | "stop") => {
     setBusy(true);
+    setApiMsg("");
     if (action === "start") {
       setLog(t("lab.starting") + "\n");
       liveUntilRef.current = Date.now() + 25000; // 25s de refresco garantizado
     }
     try {
-      await fetch("/api/lab", {
+      const r = await fetch("/api/lab", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ action }),
       });
+      if (!r.ok) {
+        setApiMsg(r.status === 403 ? "lab.devOnly" : "lab.actionError");
+        liveUntilRef.current = 0;
+        return;
+      }
       setData((d) => ({ ...d, state: action === "start" ? "running" : "stopped" }));
       if (action === "stop") liveUntilRef.current = Date.now() + 3000;
       setTimeout(fetchLog, 800);
@@ -220,6 +229,12 @@ export function LabContent({ data: initial }: { data: LabData }) {
           ) : null}
         </div>
       </div>
+
+      {apiMsg && (
+        <p role="alert" className="rounded-lg border border-[var(--loss)]/40 bg-[var(--loss)]/5 px-4 py-3 text-sm">
+          {t(apiMsg)}
+        </p>
+      )}
 
       {!isLocal && (
         <p className="rounded-lg border border-dashed bg-muted/40 px-4 py-3 text-sm text-muted-foreground">
@@ -361,10 +376,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
                 </div>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-xs sm:grid-cols-3">
                   <Metric label={t("lab.colIS")} v={fmt(myResult.result.is_.sharpe)} />
-                  <Metric label={t("lab.colOOS1")} v={fmt(myResult.result.oos1.sharpe)} ok={myResult.result.oos1.sharpe > 0.3} />
-                  <Metric label={t("lab.colOOS2")} v={fmt(myResult.result.oos2.sharpe)} ok={myResult.result.oos2.sharpe > 0.3} />
-                  <Metric label={t("lab.colDSR")} v={myResult.result.dsr.toFixed(2)} ok={myResult.result.dsr > 0.95} />
-                  <Metric label={t("lab.colMC")} v={myResult.result.mc_p.toFixed(2)} ok={myResult.result.mc_p < 0.05} />
+                  <Metric label={t("lab.colOOS1")} v={fmt(myResult.result.oos1.sharpe)} ok={myResult.result.oos1.sharpe > thr.oos_min} />
+                  <Metric label={t("lab.colOOS2")} v={fmt(myResult.result.oos2.sharpe)} ok={myResult.result.oos2.sharpe > thr.oos_min} />
+                  <Metric label={t("lab.colDSR")} v={myResult.result.dsr.toFixed(2)} ok={myResult.result.dsr > thr.dsr_min} />
+                  <Metric label={t("lab.colMC")} v={myResult.result.mc_p.toFixed(2)} ok={myResult.result.mc_p < thr.mc_max} />
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">{myResult.result.verdict}</p>
               </div>
@@ -420,7 +435,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
           </div>
           {data.shown !== undefined && data.total > data.shown && (
             <span className="text-[11px] text-muted-foreground">
-              (mostrando las mejores {data.shown} de {data.total})
+              {t("lab.shownOf").replace("{shown}", String(data.shown)).replace("{total}", String(data.total))}
             </span>
           )}
         </div>
@@ -466,10 +481,10 @@ export function LabContent({ data: initial }: { data: LabData }) {
                     </span>
                   </td>
                   <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_is > bhIs))} title={`Buy&Hold IS: ${fmt(bhIs)}`}>{fmt(it.sharpe_is)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > 0.3))}>{fmt(it.sharpe_oos1)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > 0.3))}>{fmt(it.sharpe_oos2)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > 0.95))}>{it.dsr.toFixed(2)}</td>
-                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < 0.05))}>{it.mc_p.toFixed(2)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos1 > thr.oos_min))}>{fmt(it.sharpe_oos1)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.sharpe_oos2 > thr.oos_min))}>{fmt(it.sharpe_oos2)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.dsr > thr.dsr_min))}>{it.dsr.toFixed(2)}</td>
+                  <td className={cn("px-3 py-2.5 text-right tabular-nums", pass(it.mc_p < thr.mc_max))}>{it.mc_p.toFixed(2)}</td>
                   <td className="px-4 py-2.5 text-xs text-muted-foreground">{it.verdict}</td>
                 </tr>
               ))}
@@ -499,7 +514,7 @@ export function LabContent({ data: initial }: { data: LabData }) {
               <button
                 onClick={() => setModal(null)}
                 className="shrink-0 text-muted-foreground hover:text-foreground"
-                aria-label="cerrar"
+                aria-label={t("common.close")}
               >
                 <X className="size-4" />
               </button>

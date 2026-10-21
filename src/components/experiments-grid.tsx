@@ -25,6 +25,8 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
   const [family, setFamily] = React.useState("todas");
   const [status, setStatus] = React.useState<"todos" | Experiment["status"]>("todos");
   const [q, setQ] = React.useState("");
+  const [sortBy, setSortBy] = React.useState<"num" | "date">("num");
+  const [sortDir, setSortDir] = React.useState<"asc" | "desc">("asc");
 
   const filtered = experiments
     .filter(
@@ -33,7 +35,12 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
         (status === "todos" || e.status === status) &&
         (q === "" || (pick(e.name, locale) + pick(e.description, locale)).toLowerCase().includes(q.toLowerCase()))
     )
-    .sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
+    .sort((a, b) => {
+      const dir = sortDir === "asc" ? 1 : -1;
+      if (sortBy === "date") return dir * a.date.localeCompare(b.date) || dir * ((a.v ?? -1) - (b.v ?? -1));
+      if (a.v == null || b.v == null) return a.v == null ? (b.v == null ? 0 : 1) : -1; // sin n.º, al final
+      return dir * (a.v - b.v);
+    });
 
   return (
     <div>
@@ -63,6 +70,29 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
             ))}
           </div>
         </div>
+        {/* orden: criterio + direccion */}
+        <div role="group" aria-label={t("exp.sortLabel")} className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+          <span>{t("exp.sortLabel")}</span>
+          {(["num", "date"] as const).map((k) => (
+            <button
+              key={k}
+              onClick={() => setSortBy(k)}
+              aria-pressed={sortBy === k}
+              className={cn(
+                "rounded-full border px-2.5 py-1 transition-colors",
+                sortBy === k ? "border-primary bg-primary/10 text-primary" : "hover:bg-muted"
+              )}
+            >
+              {t(k === "num" ? "exp.sortNum" : "exp.sortDate")}
+            </button>
+          ))}
+          <button
+            onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+            className="rounded-full border px-2.5 py-1 transition-colors hover:bg-muted"
+          >
+            {sortDir === "asc" ? "↑ " : "↓ "}{t(sortDir === "asc" ? "lab.asc" : "lab.desc")}
+          </button>
+        </div>
         {/* filtro por familia */}
         <div className="flex flex-wrap gap-1.5">
           {families.map((f) => (
@@ -87,7 +117,9 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
         variants={{ show: { transition: { staggerChildren: 0.03 } } }}
       >
         {filtered.map((e) => {
-          const metrics = headlineMetrics(e.metrics);
+          const metrics = e.kpis
+            ? e.kpis.slice(0, 3).map((k) => ({ key: pick(k.label, locale), value: k.value }))
+            : headlineMetrics(e.metrics);
           return (
             <motion.div
               key={e.id}
@@ -108,9 +140,12 @@ export function ExperimentsGrid({ experiments }: { experiments: Experiment[] }) 
                       )}
                       {e.family && <Badge variant="muted">{t(`fam.${e.family}`)}</Badge>}
                     </div>
-                    <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
+                    <div className="flex items-center gap-1.5">
+                      <Badge variant={e.status}>{t(`status.${e.status}`)}</Badge>
+                    </div>
                   </div>
                   <h3 className="mb-1 line-clamp-2 font-semibold leading-snug">{pick(e.name, locale)}</h3>
+                  {e.market && <p className="mb-1.5 text-xs font-medium text-primary">{pick(e.market, locale)}</p>}
                   <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">{pick(e.description, locale)}</p>
                   {metrics.length > 0 && (
                     <div className="flex flex-wrap gap-x-4 gap-y-1 border-t pt-3">

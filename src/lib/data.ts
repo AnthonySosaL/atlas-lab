@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import type { ExpDetail } from "@/lib/exp-detail";
 
 const DATA = path.join(process.cwd(), "public", "data");
 
@@ -22,6 +23,18 @@ export type Experiment = {
   has_equity: boolean;
   has_trades_chart: boolean;
   has_trades_csv: boolean;
+  capital?: { warn: boolean; note: Loc }; // aviso para la tarjeta "Con tu capital"
+  market?: Loc; // mercado(s) y temporalidad en que opera
+  period?: Loc; // periodo probado (y si la cuenta reventó antes)
+  chart?: ExpChart; // gráfico de barras cuando el experimento no produce curva de capital
+  kpis?: { label: Loc; value: string | number; tone?: "gain" | "loss" }[]; // métricas legibles
+  params_view?: { label: Loc; value: string }[]; // parámetros legibles
+};
+
+export type ExpChart = {
+  title: Loc;
+  unit: "usd" | "pct" | "num";
+  bars: { label: Loc; value: number; tone?: "gain" | "loss" | "ref" }[];
 };
 
 export type Summary = {
@@ -188,4 +201,9 @@ export async function getExperiment(id: string) {
 
 export async function getSeries(id: string): Promise<Serie[]> {
   return readJSON<Serie[]>(path.join("series", `${id}.json`), []);
+}
+
+export async function getExpDetail(id: string): Promise<ExpDetail | null> {
+  const all = await readJSON<Record<string, ExpDetail>>("exp_details.json", {});
+  return all[id] ?? null;
 }

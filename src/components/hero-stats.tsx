@@ -86,7 +86,7 @@ export function HeroStats({
                 <button
                   onClick={() => setOpen(false)}
                   className="rounded-md p-1 text-muted-foreground hover:bg-muted"
-                  aria-label="Cerrar"
+                  aria-label={t("common.close")}
                 >
                   <X className="size-4" />
                 </button>
