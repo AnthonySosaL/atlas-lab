@@ -48,7 +48,7 @@ Seamos honestos: la parte del retroceso y de la vela en 5 minutos es discreciona
 Las seis variantes, negativas en los tres periodos. Cero de seis pasan el primer filtro. No es que gane poco: pierde, y pierde de forma consistente.
 
 **[5:30 — Por qué pierde]** (pantalla: gráfico de precio que rompe y revierte)
-En estos mercados, perseguir el rompimiento del rango anterior suele ser comprar el techo: el precio revierte. Y como la estrategia entra y sale muy seguido, los costos terminan de rematarla.
+En estos mercados, perseguir el rompimiento del rango anterior no deja ventaja bruta: la ruptura de 1 día, sin contar costos, da Sharpe −0.10 en 2014-2020. Y como la estrategia entra y sale muy seguido, los costos terminan de rematarla.
 
 **[6:15 — "Pero yo opero índices, no forex"]** (pantalla: resultado del experimento #90)
 Es una crítica justa, así que la repetí en índices (S&P 500, Nasdaq 100, DAX y FTSE 100, 2012-2024). El breakout de este video dio −424 dólares sobre 10.000. En índices otras ideas de tendencia sí ganan dinero, pero ninguna supera a simplemente comprar y mantener el índice, que dio +29,368 dólares. Eso lo cuento en su propio video.
@@ -66,7 +66,7 @@ Si quieres que pruebe otra estrategia de redes, déjala en los comentarios. Cont
 **[0-3 s]** (texto gigante "71% de aciertos") "Esta estrategia de TikTok promete un 71% de aciertos. La probé."
 **[3-15 s]** "Comprar cuando el precio rompe el máximo del día anterior. Seis variantes, 18 años de datos, con costos."
 **[15-35 s]** (barras rojas apareciendo) "Las seis pierden en los tres periodos. Sharpe de −0.54 a −1.69. Cero de seis pasan el primer filtro."
-**[35-45 s]** "Perseguir el rompimiento es comprar el techo. El análisis completo está en el canal. No es asesoría financiera."
+**[35-45 s]** "Perseguir el rompimiento no deja ventaja bruta y los costos rematan. El análisis completo está en el canal. No es asesoría financiera."
 
 ## Descripción (YouTube)
 Probé el núcleo de la estrategia de TikTok del "71% de aciertos" (breakout del rango del día anterior) con datos de 2007 a 2024, costos reales y 5 filtros estadísticos. Resultado: 0 de 6 variantes sobreviven.

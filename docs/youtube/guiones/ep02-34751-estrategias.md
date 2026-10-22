@@ -28,21 +28,21 @@ Todas operan lo mismo: una cesta de 7 pares de divisas más oro, señal ejecutad
 **[2:45 — El gauntlet de 5 filtros]** (pantalla: 5 puertas, una tras otra)
 1. Fuera de muestra 2007-2013, con la crisis de 2008: Sharpe mayor que 0.30.
 2. Fuera de muestra 2021-2024: Sharpe mayor que 0.30.
-3. Deflated Sharpe mayor que 0.95: corrige por cuántas estrategias probé.
+3. Deflated Sharpe mayor que 0.95: se ajusta por cuántas estrategias probé, con un contador global de intentos.
 4. Monte Carlo con 5000 rotaciones de la señal: si no le gana a sus propias versiones desalineadas en el tiempo, su timing es suerte.
 5. Batir a comprar y mantener en 2014-2020 (Sharpe 0.13).
 
 **[5:00 — El resultado]** (pantalla: embudo 33,363 → 0)
-Cero sobrevivieron. El máximo que alguna logró fue pasar 4 de los 5 filtros: engañó a los dos periodos fuera de muestra, al Monte Carlo y batió al mercado. Pero al revisarla año por año, pierde dinero: todo su resultado venía de un solo año de suerte.
+Cero sobrevivieron. El máximo que alguna logró fue pasar 4 de los 5 filtros (lo lograron 5 combinaciones): engañaron a los dos periodos fuera de muestra y al Monte Carlo, y batieron al mercado en muestra. Pero al revisarlas año por año, ganan apenas entre +0.3% y +0.5% al año, con 1 a 4 años negativos de 18: ventaja de ruido, no explotable.
 
-**[6:15 — El filtro que nadie pasó]** (pantalla: barra DSR 0.70 vs meta 0.95)
-El Deflated Sharpe nunca se superó. El mejor valor fue 0.70, cuando hacía falta 0.95. Cuando pruebas miles de ideas, alguna sale brillante por puro azar; este filtro es el que descuenta eso. Le dedico el próximo video.
+**[6:15 — El filtro que nadie pasó]** (pantalla: barra DSR 0.31 vs meta 0.95)
+El Deflated Sharpe nunca se superó. El mejor valor fue 0.31, con el contador global de los 33,363 intentos, cuando hacía falta 0.95. Cuando pruebas miles de ideas, alguna sale brillante por puro azar; este filtro es el que descuenta eso. Le dedico el próximo video.
 
 **[7:15 — Lo único "real"]** (pantalla: texto)
-Hubo una señal que se repite: una leve tendencia a la reversión con RSI. 49 de las 50 mejores son positivas en 18 años. Pero está fuera del mercado el 94% del tiempo, hace cerca de un 1% al año y pierde contra simplemente mantener. Real, medible… e inútil para ganar dinero.
+Hubo una señal que se repite: una leve tendencia a la reversión con RSI. 49 de las 50 mejores son positivas en 18 años. Pero está en efectivo cerca del 93% del tiempo, hace cerca de un 0.4% al año (la mejor, 0.9%) y pierde contra simplemente mantener la cesta (+0.8% al año). Real, medible… e inútil para ganar dinero.
 
 **[8:15 — La lección]**
-Si alguien te enseña la mejor de cientos de pruebas sin decirte cuántas hizo, te está enseñando ruido. Es exactamente por lo que López de Prado insiste en corregir el multiple testing. Mi conclusión, con datos de precio al alcance de un trader minorista: no encontré ventaja explotable.
+Si alguien te enseña la mejor de cientos de pruebas sin decirte cuántas hizo, te está enseñando ruido. Es exactamente por lo que López de Prado insiste en ajustar por multiple testing. Mi conclusión, con datos de precio al alcance de un trader minorista: no encontré ventaja explotable.
 
 **[9:15 — Cierre]**
 Todo está publicado en atlas-lab-one.vercel.app, experimento 81. Contenido educativo, no es asesoría financiera.
@@ -52,14 +52,14 @@ Todo está publicado en atlas-lab-one.vercel.app, experimento 81. Contenido educ
 ## SHORT 1 (≈ 45 s) — "El contador"
 **[0-3 s]** (contador rápido) "33,363 estrategias de trading probadas, la mayoría en una sola noche."
 **[3-20 s]** "Cinco filtros: dos periodos que nunca vieron, Deflated Sharpe, Monte Carlo y batir al mercado."
-**[20-38 s]** (embudo cayendo a 0, en rojo) "¿Cuántas pasaron? Cero. La mejor pasó 4 de 5… y año por año perdía dinero."
+**[20-38 s]** (embudo cayendo a 0, en rojo) "¿Cuántas pasaron? Cero. Las mejores pasaron 4 de 5… y año por año ganaban apenas +0.3% a +0.5%."
 **[38-45 s]** "Video completo en el canal. No es asesoría financiera."
 
 ## SHORT 2 (≈ 40 s) — "El filtro que nadie pasó"
-Deflated Sharpe: máximo 0.70 de 0.95. Qué es en una frase y por qué caza a los "ganadores" de suerte.
+Deflated Sharpe: máximo 0.31 de 0.95. Qué es en una frase y por qué caza a los "ganadores" de suerte.
 
 ## SHORT 3 (≈ 40 s) — "Real pero inútil"
-La reversión RSI: positiva en 49 de 50, pero 6% del tiempo en el mercado y ~1% al año.
+La reversión RSI: positiva en 49 de 50, pero ~7% del tiempo en el mercado y ~0.4% al año.
 
 ## Descripción (YouTube)
 Construí un laboratorio que genera y prueba estrategias de trading automáticamente. Entre pruebas previas y una corrida nocturna, generó 34,751 estrategias únicas y probó de verdad 33,363 (las otras 1,388 casi nunca operaron) contra 5 filtros (dos out-of-sample, Deflated Sharpe, Monte Carlo de 5000 permutaciones y batir Buy & Hold). Sobrevivieron 0.
