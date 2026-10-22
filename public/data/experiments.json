@@ -8703,9 +8703,9 @@
   "id": "20260610_142006_carry-trend-combo-v43",
   "v": 43,
   "analysis": {
-   "es": "Combinación de carry + tendencia + filtro macro, intentando rescatar el carry. Sumando el interés del carry, la combinación sobrevive 2007–2013 (Sharpe 0.29) y también 2014–2024 (Sharpe 0.14, +7.3% en 10.8 años): solo con el movimiento del precio la cuenta moriría el 9-mar-2018 (Sharpe −0.56), así que el interés es lo que la mantiene viva. Pero el resultado es frágil: con 3 bps de costo por rotación (el del laboratorio) la cuenta muere el 9-oct-2017 (con 1 bp, el 10-may-2018), y sin el supuesto de que el bot reacciona dentro del día del disparo (φ = 0.5) muere el 31-ene-2017.",
-   "en": "Carry + trend + macro filter combination, trying to rescue carry. Adding the carry interest, the combination survives 2007–2013 (Sharpe 0.29) and also 2014–2024 (Sharpe 0.14, +7.3% in 10.8 years): with the price move alone the account would die on Mar 9, 2018 (Sharpe −0.56), so the interest is what keeps it alive. But the result is fragile: with a 3 bps turnover cost (the lab's) the account dies on Oct 9, 2017 (with 1 bp, on May 10, 2018), and without the assumption that the bot reacts within the trigger day (φ = 0.5) it dies on Jan 31, 2017.",
-   "pt": "Combinação de carry + tendência + filtro macro, tentando resgatar o carry. Somando o juro do carry, a combinação sobrevive a 2007–2013 (Sharpe 0,29) e também a 2014–2024 (Sharpe 0,14, +7,3% em 10,8 anos): só com o movimento do preço a conta morreria em 9-mar-2018 (Sharpe −0,56), então o juro é o que a mantém viva. Mas o resultado é frágil: com 3 bps de custo por giro (o do laboratório) a conta morre em 9-out-2017 (com 1 bp, em 10-mai-2018), e sem a suposição de que o bot reage dentro do dia do disparo (φ = 0,5) morre em 31-jan-2017."
+   "es": "Combinación de carry + tendencia + filtro macro, intentando rescatar el carry. Con la salida medida del día de disparo (el bot sale con el VIX en vivo o al cierre de Nueva York y evita solo ~6% del movimiento de ese día: φ = 0.94) la cuenta muere en 2014–2024 el 25-ene-2017 (Sharpe −0.63, −10.1%) aun sumando el interés del carry, que hasta ese día aportó apenas +1.2% del capital; solo con el movimiento del precio muere el 23-ene-2017 (Sharpe −0.69). En 2007–2013 sobrevive (Sharpe 0.18; 0.08 sin el interés). Solo sobreviviría si el bot evitara la mitad del movimiento del día de disparo (φ = 0.5), algo que los datos horarios no respaldan; con rezago puro de un día muere el 31-ene-2017 y con 3 bps de costo por rotación (el del laboratorio), el 17-ene-2017. Sin las reglas de la prop firm habría terminado 2014–2024 en +6.3% (Sharpe 0.12, caída máxima −16.6%), por encima de comprar y esperar (−3.7%), pero con una caída mayor al 10% que la prop firm no tolera.",
+   "en": "Carry + trend + macro filter combination, trying to rescue carry. With the measured trigger-day exit (the bot exits with the live VIX or at the New York close and avoids only ~6% of that day's move: φ = 0.94) the account dies in 2014–2024 on Jan 25, 2017 (Sharpe −0.63, −10.1%) even after adding the carry interest, which up to that day contributed barely +1.2% of capital; with the price move alone it dies on Jan 23, 2017 (Sharpe −0.69). In 2007–2013 it survives (Sharpe 0.18; 0.08 without the interest). It would survive only if the bot avoided half of the trigger day's move (φ = 0.5), which the hourly data do not support; with a pure one-day lag it dies on Jan 31, 2017 and with a 3 bps turnover cost (the lab's), on Jan 17, 2017. Without the prop firm rules it would have ended 2014–2024 at +6.3% (Sharpe 0.12, max drawdown −16.6%), above buy and hold (−3.7%), but with a drawdown above the 10% the prop firm does not tolerate.",
+   "pt": "Combinação de carry + tendência + filtro macro, tentando resgatar o carry. Com a saída medida do dia de disparo (o bot sai com o VIX ao vivo ou no fechamento de Nova York e evita só ~6% do movimento desse dia: φ = 0,94) a conta morre em 2014–2024 em 25-jan-2017 (Sharpe −0,63, −10,1%) mesmo somando o juro do carry, que até esse dia contribuiu apenas +1,2% do capital; só com o movimento do preço morre em 23-jan-2017 (Sharpe −0,69). Em 2007–2013 sobrevive (Sharpe 0,18; 0,08 sem o juro). Só sobreviveria se o bot evitasse metade do movimento do dia de disparo (φ = 0,5), algo que os dados horários não respaldam; com defasagem pura de um dia morre em 31-jan-2017 e com 3 bps de custo por giro (o do laboratório), em 17-jan-2017. Sem as regras da prop firm teria terminado 2014–2024 em +6,3% (Sharpe 0,12, drawdown máximo −16,6%), acima de comprar e esperar (−3,7%), mas com um drawdown acima dos 10% que a prop firm não tolera."
   },
   "name": {
    "es": "Combinación carry + tendencia",
@@ -8724,27 +8724,29 @@
    "variantes": [
     "carry∧trend+filtro"
    ],
-   "mejor": "carry∧trend+filtro"
+   "mejor": "carry∧trend+filtro",
+   "phi_medido": 0.936
   },
   "verdict": {
-   "es": "Parcial: sumando el interés del carry sobrevive ambos periodos (Sharpe 0.14 en 2014–2024, +7.3%, y 0.29 en 2007–2013), pero queda por debajo del 0.30 que exige el laboratorio y es frágil: con 3 bps de costo por rotación la cuenta muere en 2017.",
-   "en": "Partial: adding the carry interest it survives both periods (Sharpe 0.14 in 2014–2024, +7.3%, and 0.29 in 2007–2013), but it stays below the 0.30 the lab requires and is fragile: with a 3 bps turnover cost the account dies in 2017.",
-   "pt": "Parcial: somando o juro do carry sobrevive aos dois períodos (Sharpe 0,14 em 2014–2024, +7,3%, e 0,29 em 2007–2013), mas fica abaixo do 0,30 que o laboratório exige e é frágil: com 3 bps de custo por giro a conta morre em 2017."
+   "es": "No sirvió: con la salida medida del día de disparo la cuenta muere en 2014–2024 (25-ene-2017, Sharpe −0.63) aun sumando el interés del carry; en 2007–2013 sobrevive con Sharpe 0.18, bajo el 0.30 que exige el laboratorio.",
+   "en": "Did not work: with the measured trigger-day exit the account dies in 2014–2024 (Jan 25, 2017, Sharpe −0.63) even after adding the carry interest; in 2007–2013 it survives with a Sharpe of 0.18, below the 0.30 the lab requires.",
+   "pt": "Não serviu: com a saída medida do dia de disparo a conta morre em 2014–2024 (25-jan-2017, Sharpe −0,63) mesmo somando o juro do carry; em 2007–2013 sobrevive com Sharpe 0,18, abaixo dos 0,30 que o laboratório exige."
   },
   "notes": {
-   "es": "Sumar el interés del carry cambia el resultado: sin él, la misma combinación muere en 2018 (Sharpe −0.56). Aun así queda en Sharpe 0.14, un margen demasiado pequeño frente a los costos, el margen del broker sobre el swap y el supuesto de reacción dentro del día.",
-   "en": "Adding the carry interest changes the result: without it, the same combination dies in 2018 (Sharpe −0.56). Even so it stays at a 0.14 Sharpe, a margin too small against costs, the broker's markup on the swap and the within-the-day reaction assumption.",
-   "pt": "Somar o juro do carry muda o resultado: sem ele, a mesma combinação morre em 2018 (Sharpe −0,56). Mesmo assim fica em Sharpe 0,14, uma margem pequena demais frente aos custos, à margem da corretora sobre o swap e à suposição de reação dentro do dia."
+   "es": "El interés del carry no alcanza a compensar la pérdida: la combinación muere en enero de 2017 con el interés (25-ene) y sin él (23-ene). Solo sobreviviría si el bot evitara la mitad del movimiento del día de disparo (φ = 0.5); con el φ medido de este filtro (0.94) muere, igual que con el rezago puro de un día (31-ene-2017).",
+   "en": "The carry interest is not enough to offset the loss: the combination dies in January 2017 both with the interest (Jan 25) and without it (Jan 23). It would survive only if the bot avoided half of the trigger day's move (φ = 0.5); with the measured φ of this filter (0.94) it dies, just as with the pure one-day lag (Jan 31, 2017).",
+   "pt": "O juro do carry não basta para compensar a perda: a combinação morre em janeiro de 2017 com o juro (25-jan) e sem ele (23-jan). Só sobreviveria se o bot evitasse metade do movimento do dia de disparo (φ = 0,5); com o φ medido deste filtro (0,94) morre, igual à defasagem pura de um dia (31-jan-2017)."
   },
   "metrics": {
-   "Total Return [%]": 7.3383998254271,
-   "Sharpe Ratio": 0.14443342438759973,
-   "Max Drawdown [%]": -12.73608440406485,
-   "Sharpe OOS 07-13": 0.2887116922897517,
-   "Sobrevive ambos": true,
-   "Total Trades": 3397
+   "Total Return [%]": -10.098246213533113,
+   "Sharpe Ratio": -0.634312712503714,
+   "Max Drawdown [%]": -13.843157655035798,
+   "Sharpe OOS 07-13": 0.18317227227767335,
+   "Sobrevive ambos": false,
+   "Total Trades": 917,
+   "phi medido filtro 07-24": 0.9363148080032216
   },
-  "status": "neutral",
+  "status": "died",
   "has_equity": true,
   "has_trades_chart": true,
   "has_trades_csv": true,
@@ -8756,20 +8758,21 @@
   "kpis": [
    {
     "label": {
-     "es": "Retorno total",
-     "en": "Total return",
-     "pt": "Retorno total"
+     "es": "Retorno total (hasta la quiebra)",
+     "en": "Total return (until blow-up)",
+     "pt": "Retorno total (até a quebra)"
     },
-    "value": "+7.3%",
-    "tone": "gain"
+    "value": "−10.1%",
+    "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024",
-     "en": "Sharpe 2014–2024",
-     "pt": "Sharpe 2014–2024"
+     "es": "Sharpe 2014–2024 (hasta la quiebra)",
+     "en": "Sharpe 2014–2024 (until blow-up)",
+     "pt": "Sharpe 2014–2024 (até a quebra)"
     },
-    "value": "0.14"
+    "value": "−0.63",
+    "tone": "loss"
    },
    {
     "label": {
@@ -8777,15 +8780,16 @@
      "en": "Sharpe 2007–2013 (out of sample)",
      "pt": "Sharpe 2007–2013 (fora da amostra)"
     },
-    "value": "0.29"
+    "value": "0.18",
+    "tone": "loss"
    },
    {
     "label": {
-     "es": "Drawdown máximo",
-     "en": "Max drawdown",
-     "pt": "Drawdown máximo"
+     "es": "Drawdown máximo (hasta la quiebra)",
+     "en": "Max drawdown (until blow-up)",
+     "pt": "Drawdown máximo (até a quebra)"
     },
-    "value": "−12.7%",
+    "value": "−13.8%",
     "tone": "loss"
    },
    {
@@ -8794,8 +8798,8 @@
      "en": "Survives both periods",
      "pt": "Sobrevive aos dois períodos"
     },
-    "value": "Sí",
-    "tone": "gain"
+    "value": "No",
+    "tone": "loss"
    },
    {
     "label": {
@@ -8803,15 +8807,15 @@
      "en": "Days traded",
      "pt": "Dias operados"
     },
-    "value": "3,397"
+    "value": "917"
    },
    {
     "label": {
-     "es": "Interés del carry sumado (2014–2024)",
-     "en": "Carry interest added (2014–2024)",
-     "pt": "Juro do carry somado (2014–2024)"
+     "es": "Interés del carry sumado (2014, hasta la quiebra)",
+     "en": "Carry interest added (2014, until blow-up)",
+     "pt": "Juro do carry somado (2014, até a quebra)"
     },
-    "value": "+7.0%"
+    "value": "+1.2%"
    },
    {
     "label": {
@@ -8819,8 +8823,16 @@
      "en": "Without the interest, the account dies on",
      "pt": "Sem o juro, a conta morre em"
     },
-    "value": "9-mar-2018",
+    "value": "23-ene-2017",
     "tone": "loss"
+   },
+   {
+    "label": {
+     "es": "φ medido del filtro (2014–2024 / 2007–2013)",
+     "en": "Measured φ of the filter (2014–2024 / 2007–2013)",
+     "pt": "φ medido do filtro (2014–2024 / 2007–2013)"
+    },
+    "value": "0.95 / 0.89"
    }
   ],
   "params_view": [
@@ -8862,7 +8874,15 @@
      "en": "φ (share of the trigger day absorbed)",
      "pt": "φ (parte do dia de disparo absorvida)"
     },
-    "value": "0.5"
+    "value": "0.94 (medido para este filtro)"
+   },
+   {
+    "label": {
+     "es": "Salida el día de disparo",
+     "en": "Exit on the trigger day",
+     "pt": "Saída no dia do disparo"
+    },
+    "value": "VIX en vivo (reconstruido con VXX) una hora después de cruzar; si no, al cierre de Nueva York"
    },
    {
     "label": {
@@ -8884,24 +8904,24 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2 y suma el interés del carry: la cuenta sobrevive los 3,397 días de 2014–2024 con +7.3% y una caída máxima de −12.7% desde su máximo (el piso de la prop firm es fijo sobre el saldo inicial). No incluye spread ni el margen del broker sobre el swap: con 3 bps de costo por rotación la cuenta muere el 9-oct-2017.",
-    "en": "The simulation applies prop firm rules with ×2 leverage and adds the carry interest: the account survives the 3,397 days of 2014–2024 with +7.3% and a maximum drop of −12.7% from its peak (the prop firm floor is fixed on the initial balance). It does not include spread or the broker's markup on the swap: with a 3 bps turnover cost the account dies on Oct 9, 2017.",
-    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2 e soma o juro do carry: a conta sobrevive aos 3.397 dias de 2014–2024 com +7,3% e uma queda máxima de −12,7% desde o seu máximo (o piso da prop firm é fixo sobre o saldo inicial). Não inclui spread nem a margem da corretora sobre o swap: com 3 bps de custo por giro a conta morre em 9-out-2017."
+    "es": "La simulación aplica las reglas de la prop firm con apalancamiento ×2 y suma el interés del carry: la cuenta toca el límite de pérdida a los 917 días (25-ene-2017) y se corta con −10.1%. Con tu capital verías esa cuenta cerrada. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte (+6.3% al final de 2024, con una caída máxima de −16.6%); es hipotética, porque en la realidad la cuenta se cierra ese día. No incluye spread ni el margen del broker sobre el swap.",
+    "en": "The simulation applies prop firm rules with ×2 leverage and adds the carry interest: the account hits the loss limit after 917 days (Jan 25, 2017) and stops at −10.1%. With your capital you would see that closed account. The «No prop firm rules» line shows how the same strategy would have continued without the cut (+6.3% at the end of 2024, with a maximum drawdown of −16.6%); it is hypothetical, because in reality the account closes that day. It does not include spread or the broker's markup on the swap.",
+    "pt": "A simulação aplica as regras da prop firm com alavancagem ×2 e soma o juro do carry: a conta bate no limite de perda aos 917 dias (25-jan-2017) e é encerrada com −10,1%. Com o seu capital você veria essa conta fechada. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria continuado sem o corte (+6,3% no fim de 2024, com um drawdown máximo de −16,6%); é hipotética, porque na realidade a conta fecha nesse dia. Não inclui spread nem a margem da corretora sobre o swap."
    }
   },
   "period": {
-   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
-   "en": "2014–2024 · 2007–2013 (out of sample)",
-   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
+   "es": "2014–2024 · 2007–2013 (fuera de muestra) · en 2014–2024 la cuenta reventó el 25-ene-2017 (día 917)",
+   "en": "2014–2024 · 2007–2013 (out of sample) · in 2014–2024 the account blew up on Jan 25, 2017 (day 917)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra) · em 2014–2024 a conta quebrou em 25-jan-2017 (dia 917)"
   }
  },
  {
   "id": "20260610_142006_carry-fx-ejecutable-v42",
   "v": 42,
   "analysis": {
-   "es": "Carry de forex ejecutable: en cada par, comprar la divisa de mayor tasa que el dólar y vender la de menor (diferencial FRED, rezagado 1 mes), cobrando o pagando cada día el diferencial de tasas sobre la posición. El carry puro murió en ambos periodos incluso sumando ese interés (Sharpe −1.79 en 2014–2024 y −2.86 en 2007–2013): sus crashes coinciden con todo lo demás y el interés no los compensa (sumó +1.4% del capital en los 256 días que vivió la cuenta de 2014). Con el filtro macro la cuenta sobrevive 2007–2013 (Sharpe 0.21) pero muere en 2014–2024 (Sharpe −0.73); sin las reglas de la prop firm ese carry con filtro habría ganado +30.3% en 2014–2024 (Sharpe 0.40, caída máxima −14.9%), pero con una caída mayor al 10% que la prop firm no tolera y suponiendo que el bot reacciona dentro del día del disparo (φ = 0.5).",
-   "en": "Executable forex carry: in each pair, buy the currency with the higher rate than the dollar and sell the lower one (FRED differential, lagged 1 month), earning or paying the rate differential every day on the position. Pure carry died in both periods even after adding that interest (Sharpe −1.79 in 2014–2024 and −2.86 in 2007–2013): its crashes coincide with everything else and the interest does not offset them (it added +1.4% of capital in the 256 days the 2014 account lasted). With the macro filter the account survives 2007–2013 (Sharpe 0.21) but dies in 2014–2024 (Sharpe −0.73); without the prop firm rules that filtered carry would have earned +30.3% in 2014–2024 (Sharpe 0.40, max drawdown −14.9%), but with a drawdown above the 10% the prop firm does not tolerate and assuming the bot reacts within the trigger day (φ = 0.5).",
-   "pt": "Carry de forex executável: em cada par, comprar a moeda de maior taxa que o dólar e vender a de menor (diferencial do FRED, defasado 1 mês), recebendo ou pagando todos os dias o diferencial de juros sobre a posição. O carry puro morreu nos dois períodos mesmo somando esse juro (Sharpe −1,79 em 2014–2024 e −2,86 em 2007–2013): os seus crashes coincidem com todo o resto e o juro não os compensa (somou +1,4% do capital nos 256 dias que a conta de 2014 durou). Com o filtro macro a conta sobrevive a 2007–2013 (Sharpe 0,21) mas morre em 2014–2024 (Sharpe −0,73); sem as regras da prop firm esse carry com filtro teria ganhado +30,3% em 2014–2024 (Sharpe 0,40, drawdown máximo −14,9%), mas com um drawdown acima dos 10% que a prop firm não tolera e supondo que o bot reage dentro do dia do disparo (φ = 0,5)."
+   "es": "Carry de forex ejecutable: en cada par, comprar la divisa de mayor tasa que el dólar y vender la de menor (diferencial FRED, rezagado 1 mes), cobrando o pagando cada día el diferencial de tasas sobre la posición. El carry puro murió en ambos periodos incluso sumando ese interés (Sharpe −1.79 en 2014–2024 y −2.86 en 2007–2013): sus crashes coinciden con todo lo demás y el interés no los compensa (sumó +1.4% del capital en los 256 días que vivió la cuenta de 2014). Con el filtro macro la cuenta sobrevive 2007–2013 (Sharpe −0.02) pero muere en 2014–2024 (Sharpe −0.86); sin las reglas de la prop firm ese carry con filtro habría ganado +25.7% en 2014–2024 (Sharpe 0.33, caída máxima −20.3%) con la salida medida del día de disparo (el bot evita solo ~6% del movimiento de ese día: φ = 0.94), pero con una caída mayor al 10% que la prop firm no tolera.",
+   "en": "Executable forex carry: in each pair, buy the currency with the higher rate than the dollar and sell the lower one (FRED differential, lagged 1 month), earning or paying the rate differential every day on the position. Pure carry died in both periods even after adding that interest (Sharpe −1.79 in 2014–2024 and −2.86 in 2007–2013): its crashes coincide with everything else and the interest does not offset them (it added +1.4% of capital in the 256 days the 2014 account lasted). With the macro filter the account survives 2007–2013 (Sharpe −0.02) but dies in 2014–2024 (Sharpe −0.86); without the prop firm rules that filtered carry would have earned +25.7% in 2014–2024 (Sharpe 0.33, max drawdown −20.3%) with the measured trigger-day exit (the bot avoids only ~6% of that day's move: φ = 0.94), but with a drawdown above the 10% the prop firm does not tolerate.",
+   "pt": "Carry de forex executável: em cada par, comprar a moeda de maior taxa que o dólar e vender a de menor (diferencial do FRED, defasado 1 mês), recebendo ou pagando todos os dias o diferencial de juros sobre a posição. O carry puro morreu nos dois períodos mesmo somando esse juro (Sharpe −1,79 em 2014–2024 e −2,86 em 2007–2013): os seus crashes coincidem com todo o resto e o juro não os compensa (somou +1,4% do capital nos 256 dias que a conta de 2014 durou). Com o filtro macro a conta sobrevive a 2007–2013 (Sharpe −0,02) mas morre em 2014–2024 (Sharpe −0,86); sem as regras da prop firm esse carry com filtro teria ganhado +25,7% em 2014–2024 (Sharpe 0,33, drawdown máximo −20,3%) com a saída medida do dia de disparo (o bot evita só ~6% do movimento desse dia: φ = 0,94), mas com um drawdown acima dos 10% que a prop firm não tolera."
   },
   "name": {
    "es": "Carry de divisas ejecutable",
@@ -8924,9 +8944,9 @@
    "mejor": "carry puro"
   },
   "verdict": {
-   "es": "No sirvió: aun sumando el interés del carry, el carry puro muere en ambos periodos (Sharpe −1.79 en 2014–2024 y −2.86 en 2007–2013) y ni con el filtro macro sobrevive 2014–2024 (−0.73).",
-   "en": "Did not work: even after adding the carry interest, pure carry dies in both periods (Sharpe −1.79 in 2014–2024 and −2.86 in 2007–2013), and even with the macro filter it does not survive 2014–2024 (−0.73).",
-   "pt": "Não serviu: mesmo somando o juro do carry, o carry puro morre nos dois períodos (Sharpe −1,79 em 2014–2024 e −2,86 em 2007–2013) e nem com o filtro macro sobrevive a 2014–2024 (−0,73)."
+   "es": "No sirvió: aun sumando el interés del carry, el carry puro muere en ambos periodos (Sharpe −1.79 en 2014–2024 y −2.86 en 2007–2013) y ni con el filtro macro sobrevive 2014–2024 (−0.86).",
+   "en": "Did not work: even after adding the carry interest, pure carry dies in both periods (Sharpe −1.79 in 2014–2024 and −2.86 in 2007–2013), and even with the macro filter it does not survive 2014–2024 (−0.86).",
+   "pt": "Não serviu: mesmo somando o juro do carry, o carry puro morre nos dois períodos (Sharpe −1,79 em 2014–2024 e −2,86 em 2007–2013) e nem com o filtro macro sobrevive a 2014–2024 (−0,86)."
   },
   "notes": {
    "es": "Los crashes del carry coinciden con los de todo lo demás, así que no diversifica. Además, con las tasas de los países desarrollados cerca de 0 durante la década de 2010, el interés del carry sumó poco: +1.4% del capital en los 256 días que duró la cuenta de 2014.",
@@ -8984,7 +9004,7 @@
      "en": "Carry + filter Sharpe 2014–2024 (until blow-up)",
      "pt": "Sharpe carry + filtro 2014–2024 (até a quebra)"
     },
-    "value": "−0.73",
+    "value": "−0.86",
     "tone": "loss"
    },
    {
@@ -8993,7 +9013,8 @@
      "en": "Carry + filter Sharpe 2007–2013",
      "pt": "Sharpe carry + filtro 2007–2013"
     },
-    "value": "0.21"
+    "value": "−0.02",
+    "tone": "loss"
    },
    {
     "label": {
@@ -9077,6 +9098,14 @@
      "pt": "Variantes"
     },
     "value": "Carry puro / carry + filtro macro"
+   },
+   {
+    "label": {
+     "es": "Salida el día de disparo (variante con filtro)",
+     "en": "Exit on the trigger day (filter variant)",
+     "pt": "Saída no dia do disparo (variante com filtro)"
+    },
+    "value": "VIX en vivo (reconstruido con VXX) una hora después de cruzar; si no, al cierre de Nueva York (φ medido 0.94)"
    }
   ],
   "capital": {
@@ -9270,9 +9299,9 @@
   "id": "20260610_141058_veredicto-final-40-experimentos-v40",
   "v": 40,
   "analysis": {
-   "es": "Veredicto tras 40 experimentos: con datos al alcance de cualquier inversionista (precio + macro gratis) y rebalanceo diario, en esta familia de estrategias no encontramos una ventaja aplicable que pase challenges con expectativa positiva. La versión ejecutable (señales de ayer) no gana nada con ×2 (Sharpe −0.03, valor esperado −$500 por intento); solo suponiendo que el bot reacciona dentro del día (φ = 0.5, #31–#34) aparece un Sharpe de ~0.4, un supuesto que no se ha medido. La baja tasa de aprobación de los challenges no se explica solo por indisciplina: con esta clase de estrategia también es cuestión de matemática. Decisión: el bot demo baja a ×2 como instrumento de medición, y cero dinero en challenges con esta clase de estrategia.",
-   "en": "Verdict after 40 experiments: with data available to any retail investor (price + free macro) and daily rebalancing, in this family of strategies we did not find a deployable edge that passes challenges with a positive expectation. The executable version (yesterday's signals) earns nothing at ×2 (Sharpe −0.03, expected value −$500 per attempt); only by assuming the bot reacts within the day (φ = 0.5, #31–#34) does a Sharpe of ~0.4 appear, an assumption that has not been measured. The low pass rate of challenges is not explained by lack of discipline alone: with this class of strategy it is also a matter of math. Decision: the demo bot drops to ×2 as a measuring instrument, and zero money goes into challenges with this class of strategy.",
-   "pt": "Veredito após 40 experimentos: com dados ao alcance de qualquer investidor (preço + macro grátis) e rebalanceamento diário, nesta família de estratégias não encontramos uma vantagem aplicável que passe challenges com expectativa positiva. A versão executável (sinais de ontem) não ganha nada com ×2 (Sharpe −0,03, valor esperado −$500 por tentativa); só supondo que o bot reage dentro do dia (φ = 0,5, #31–#34) aparece um Sharpe de ~0,4, uma suposição que não foi medida. A baixa taxa de aprovação dos challenges não se explica só por indisciplina: com esta classe de estratégia também é questão de matemática. Decisão: o bot demo cai para ×2 como instrumento de medição, e zero dinheiro em challenges com esta classe de estratégia."
+   "es": "Veredicto tras 40 experimentos: con datos al alcance de cualquier inversionista (precio + macro gratis) y rebalanceo diario, en esta familia de estrategias no encontramos una ventaja aplicable que pase challenges con expectativa positiva. La versión ejecutable (señales de ayer) no gana nada con ×2 (Sharpe −0.03, valor esperado −$500 por intento); con las salidas medidas del día de disparo (φ = 0.94, #31–#34) el Sharpe es 0.02, tampoco una ventaja. La baja tasa de aprobación de los challenges no se explica solo por indisciplina: con esta clase de estrategia también es cuestión de matemática. Decisión: el bot demo baja a ×2 como instrumento de medición, y cero dinero en challenges con esta clase de estrategia.",
+   "en": "Verdict after 40 experiments: with data available to any retail investor (price + free macro) and daily rebalancing, in this family of strategies we did not find a deployable edge that passes challenges with a positive expectation. The executable version (yesterday's signals) earns nothing at ×2 (Sharpe −0.03, expected value −$500 per attempt); with the measured trigger-day exits (φ = 0.94, #31–#34) the Sharpe is 0.02, not an edge either. The low pass rate of challenges is not explained by lack of discipline alone: with this class of strategy it is also a matter of math. Decision: the demo bot drops to ×2 as a measuring instrument, and zero money goes into challenges with this class of strategy.",
+   "pt": "Veredito após 40 experimentos: com dados ao alcance de qualquer investidor (preço + macro grátis) e rebalanceamento diário, nesta família de estratégias não encontramos uma vantagem aplicável que passe challenges com expectativa positiva. A versão executável (sinais de ontem) não ganha nada com ×2 (Sharpe −0,03, valor esperado −$500 por tentativa); com as saídas medidas do dia de disparo (φ = 0,94, #31–#34) o Sharpe é 0,02, também não é uma vantagem. A baixa taxa de aprovação dos challenges não se explica só por indisciplina: com esta classe de estratégia também é questão de matemática. Decisão: o bot demo cai para ×2 como instrumento de medição, e zero dinheiro em challenges com esta classe de estratégia."
   },
   "name": {
    "es": "Veredicto final de 40 experimentos",
@@ -9282,13 +9311,13 @@
   "family": "risk",
   "date": "2026-06-10T14:10:58",
   "description": {
-   "es": "Cierre tras 40 experimentos: el precio solo no tiene ventaja; el filtro macro de Sharpe 1.23 dependía de información del mismo día; la versión ejecutable con las señales de ayer queda en Sharpe −0.03 con ×2 (solo suponiendo que el bot reacciona dentro del día, φ = 0.5, sube a ~0.4 con ~2% al año), tiene 6.4% de probabilidad de pasar un challenge en 252 días de operación y no supera el Deflated Sharpe (0.010).",
-   "en": "Wrap-up after 40 experiments: price alone has no edge; the 1.23-Sharpe macro filter relied on same-day information; the executable version with yesterday's signals sits at a −0.03 Sharpe at ×2 (only by assuming the bot reacts within the day, φ = 0.5, does it rise to ~0.4 and ~2% a year), has a 6.4% probability of passing a challenge in 252 trading days and fails the Deflated Sharpe test (0.010).",
-   "pt": "Fechamento após 40 experimentos: o preço sozinho não tem vantagem; o filtro macro de Sharpe 1,23 dependia de informação do mesmo dia; a versão executável com os sinais de ontem fica em Sharpe −0,03 com ×2 (só supondo que o bot reage dentro do dia, φ = 0,5, sobe para ~0,4 e ~2% ao ano), tem 6,4% de probabilidade de passar um challenge em 252 dias de operação e não supera o Deflated Sharpe (0,010)."
+   "es": "Cierre tras 40 experimentos: el precio solo no tiene ventaja; el filtro macro de Sharpe 1.23 dependía de información del mismo día; la versión ejecutable con las señales de ayer queda en Sharpe −0.03 con ×2 (con las salidas medidas del día de disparo, φ = 0.94, queda en 0.02), tiene 6.4% de probabilidad de pasar un challenge en 252 días de operación y no supera el Deflated Sharpe (0.010).",
+   "en": "Wrap-up after 40 experiments: price alone has no edge; the 1.23-Sharpe macro filter relied on same-day information; the executable version with yesterday's signals sits at a −0.03 Sharpe at ×2 (with the measured trigger-day exits, φ = 0.94, it stays at 0.02), has a 6.4% probability of passing a challenge in 252 trading days and fails the Deflated Sharpe test (0.010).",
+   "pt": "Fechamento após 40 experimentos: o preço sozinho não tem vantagem; o filtro macro de Sharpe 1,23 dependia de informação do mesmo dia; a versão executável com os sinais de ontem fica em Sharpe −0,03 com ×2 (com as saídas medidas do dia de disparo, φ = 0,94, fica em 0,02), tem 6,4% de probabilidade de passar um challenge em 252 dias de operação e não supera o Deflated Sharpe (0,010)."
   },
   "params": {
    "experimentos_totales": 40,
-   "config_final": "basket+filtro VIX28/cw40, phi 0.5, kill 3%, x2"
+   "config_final": "basket+filtro VIX28/cw40 rezagado 1 dia, kill 3%, x2"
   },
   "verdict": {
    "es": "No sirvió: tras 40 experimentos, la mejor versión ejecutable (señales de ayer) da Sharpe −0.03, un Deflated Sharpe de 0.010 y solo 6.4% de probabilidad de pasar el challenge en 252 días de operación.",
@@ -9585,9 +9614,9 @@
   "id": "20260610_140955_deflated-sharpe-del-ejecutable-v38",
   "v": 38,
   "analysis": {
-   "es": "El juez final: el Deflated Sharpe Ratio (Bailey y López de Prado), que ajusta por haber probado ~40 configuraciones. La mejor versión ejecutable (señales de ayer) tiene un Sharpe de −0.03 y un valor de 0.010, muy lejos del 0.95 necesario: no hay evidencia estadística de ventaja, el Sharpe no se distingue del mejor que daría el azar (0.46). Con 20 o con 91 intentos el valor sigue siendo menor a 0.03. Si se supusiera que el bot reacciona dentro del día (φ = 0.5, como en #31–#34), el Sharpe sería 0.38 y el valor 0.353, también muy por debajo de 0.95.",
-   "en": "The final judge: the Deflated Sharpe Ratio (Bailey and López de Prado), which adjusts for having tested ~40 configurations. The best executable version (yesterday's signals) has a Sharpe of −0.03 and a value of 0.010, far from the 0.95 needed: there is no statistical evidence of an edge, the Sharpe cannot be told apart from the best that chance would give (0.46). With 20 or with 91 attempts the value is still below 0.03. If one assumed the bot reacts within the day (φ = 0.5, as in #31–#34), the Sharpe would be 0.38 and the value 0.353, also far below 0.95.",
-   "pt": "O juiz final: o Deflated Sharpe Ratio (Bailey e López de Prado), que ajusta por ter testado ~40 configurações. A melhor versão executável (sinais de ontem) tem Sharpe de −0,03 e um valor de 0,010, muito longe do 0,95 necessário: não há evidência estatística de vantagem, o Sharpe não se distingue do melhor que o acaso daria (0,46). Com 20 ou com 91 tentativas o valor continua abaixo de 0,03. Se se supusesse que o bot reage dentro do dia (φ = 0,5, como em #31–#34), o Sharpe seria 0,38 e o valor 0,353, também muito abaixo de 0,95."
+   "es": "El juez final: el Deflated Sharpe Ratio (Bailey y López de Prado), que ajusta por haber probado ~40 configuraciones. La mejor versión ejecutable (señales de ayer) tiene un Sharpe de −0.03 y un valor de 0.010, muy lejos del 0.95 necesario: no hay evidencia estadística de ventaja, el Sharpe no se distingue del mejor que daría el azar (0.46). Con 20 o con 91 intentos el valor sigue siendo menor a 0.03. Con las salidas medidas del día de disparo (el bot evita solo ~6% del movimiento de ese día: φ = 0.94, como en #31–#34), el Sharpe sería 0.02 y el valor 0.019, también muy por debajo de 0.95.",
+   "en": "The final judge: the Deflated Sharpe Ratio (Bailey and López de Prado), which adjusts for having tested ~40 configurations. The best executable version (yesterday's signals) has a Sharpe of −0.03 and a value of 0.010, far from the 0.95 needed: there is no statistical evidence of an edge, the Sharpe cannot be told apart from the best that chance would give (0.46). With 20 or with 91 attempts the value is still below 0.03. With the measured trigger-day exits (the bot avoids only ~6% of that day's move: φ = 0.94, as in #31–#34), the Sharpe would be 0.02 and the value 0.019, also far below 0.95.",
+   "pt": "O juiz final: o Deflated Sharpe Ratio (Bailey e López de Prado), que ajusta por ter testado ~40 configurações. A melhor versão executável (sinais de ontem) tem Sharpe de −0,03 e um valor de 0,010, muito longe do 0,95 necessário: não há evidência estatística de vantagem, o Sharpe não se distingue do melhor que o acaso daria (0,46). Com 20 ou com 91 tentativas o valor continua abaixo de 0,03. Com as saídas medidas do dia de disparo (o bot evita só ~6% do movimento desse dia: φ = 0,94, como em #31–#34), o Sharpe seria 0,02 e o valor 0,019, também muito abaixo de 0,95."
   },
   "name": {
    "es": "Deflated Sharpe de la versión ejecutable",
@@ -9622,8 +9651,8 @@
    "Significativo": false,
    "DSR con N=20": 0.02,
    "DSR con N=91": 0.004,
-   "Sharpe con φ=0.5": 0.383,
-   "DSR con φ=0.5": 0.353,
+   "Sharpe con salida medida": 0.025,
+   "DSR con salida medida": 0.019,
    "Sharpe Ratio": -0.02994352161090667
   },
   "status": "died",
@@ -9955,7 +9984,6 @@
   },
   "params": {
    "filtro": "VIX28/cw40",
-   "phi": 0.5,
    "levs": [
     2,
     3,
@@ -10280,9 +10308,9 @@
   "id": "20260610_140720_graduado-vix-14-ejecutable-v34",
   "v": 34,
   "analysis": {
-   "es": "Apalancamiento graduado: el nivel se decide con el VIX de ayer, pero el día del disparo del filtro sigue suponiendo φ = 0.5. Solo aguanta hasta ~×2.5; más allá, la protección rezagada no alcanza. Coherente con la frontera de riesgo de toda la serie. Y el ×2.5 tampoco resiste sin φ: con la señal rezagada 1 día, la cuenta muere en 2014–2024 el 11-nov-2016 (Sharpe −0.65) y en 2007–2013 sobrevive con Sharpe 0.03.",
-   "en": "Graduated leverage: the level is decided with yesterday's VIX, but on the day the filter fires it still assumes φ = 0.5. It only holds up to ~×2.5; beyond that, the lagged protection is not enough. Consistent with the risk frontier of the whole series. And ×2.5 does not hold up without φ either: with the signal lagged 1 day, the account dies in 2014–2024 on Nov 11, 2016 (Sharpe −0.65) and in 2007–2013 it survives with a Sharpe of 0.03.",
-   "pt": "Alavancagem graduada: o nível é decidido com o VIX de ontem, mas no dia em que o filtro dispara ainda se supõe φ = 0,5. Só aguenta até ~×2,5; além disso, a proteção defasada não basta. Coerente com a fronteira de risco de toda a série. E o ×2,5 também não resiste sem φ: com o sinal defasado em 1 dia, a conta morre em 2014–2024 em 11-nov-2016 (Sharpe −0,65) e em 2007–2013 sobrevive com Sharpe 0,03."
+   "es": "Apalancamiento graduado: el nivel se decide con el VIX de ayer y el día del disparo el bot sale con las salidas medidas (φ = 0.94 en el filtro VIX 28 / crédito 40). Ni el ×2.5 aguanta: la cuenta muere en 2014–2024 el 10-nov-2016 (Sharpe −0.60), igual que el ×3 (el 6-oct-2016) y el ×4 (el 5-may-2015); en 2007–2013 el ×2.5 sobrevive con Sharpe 0.08. Para sobrevivir 2014–2024 el ×2.5 necesitaría φ ≤ 0.75, muy por debajo del medido. Coherente con la frontera de riesgo de toda la serie: la protección rezagada no alcanza más allá de ~×1.5.",
+   "en": "Graduated leverage: the level is decided with yesterday's VIX, and on the day the filter fires the bot exits with the measured exits (φ = 0.94 in the VIX 28 / credit 40 filter). Not even ×2.5 holds up: the account dies in 2014–2024 on Nov 10, 2016 (Sharpe −0.60), as do ×3 (on Oct 6, 2016) and ×4 (on May 5, 2015); in 2007–2013 ×2.5 survives with a Sharpe of 0.08. To survive 2014–2024, ×2.5 would need φ ≤ 0.75, far below the measured one. Consistent with the risk frontier of the whole series: the lagged protection is not enough beyond ~×1.5.",
+   "pt": "Alavancagem graduada: o nível é decidido com o VIX de ontem e no dia em que o filtro dispara o bot sai com as saídas medidas (φ = 0,94 no filtro VIX 28 / crédito 40). Nem o ×2,5 aguenta: a conta morre em 2014–2024 em 10-nov-2016 (Sharpe −0,60), assim como o ×3 (em 6-out-2016) e o ×4 (em 5-mai-2015); em 2007–2013 o ×2,5 sobrevive com Sharpe 0,08. Para sobreviver a 2014–2024 o ×2,5 precisaria de φ ≤ 0,75, muito abaixo do medido. Coerente com a fronteira de risco de toda a série: a proteção defasada não basta além de ~×1,5."
   },
   "name": {
    "es": "Escalonado VIX<14 ejecutable",
@@ -10304,29 +10332,32 @@
     4
    ],
    "mejor_hi": 2.5,
-   "low": 1.5
+   "low": 1.5,
+   "phi_medido": 0.936
   },
   "verdict": {
-   "es": "Parcial: con ×2.5 en calma el Sharpe de 2014–2024 sube a 0.42, pero en 2007–2013 baja a 0.297, bajo el mínimo de 0.30 y peor que la base (0.365), y sigue sin batir a comprar y esperar (Sharpe 0.47 y +58.9% en 2014–2024). Todo con φ = 0.5, sin medir: con la señal rezagada 1 día y sin φ, el ×2.5 en calma muere en 2014–2024 (Sharpe −0.65).",
-   "en": "Partial: at ×2.5 in calm markets the 2014–2024 Sharpe rises to 0.42, but in 2007–2013 it drops to 0.297, below the 0.30 minimum and worse than the base (0.365), and it still does not beat buy and hold (Sharpe 0.47 and +58.9% in 2014–2024). All with an unmeasured φ = 0.5: with the signal lagged 1 day and no φ, ×2.5 in calm markets dies in 2014–2024 (Sharpe −0.65).",
-   "pt": "Parcial: com ×2,5 na calmaria o Sharpe de 2014–2024 sobe para 0,42, mas em 2007–2013 cai para 0,297, abaixo do mínimo de 0,30 e pior que a base (0,365), e continua sem bater comprar e esperar (Sharpe 0,47 e +58,9% em 2014–2024). Tudo com φ = 0,5, não medido: com o sinal defasado em 1 dia e sem φ, o ×2,5 na calmaria morre em 2014–2024 (Sharpe −0,65)."
+   "es": "No sirvió: con el φ medido (0.94) el ×2.5 en calma muere en 2014–2024 el 10-nov-2016 (Sharpe −0.60), igual que el ×3 y el ×4; en 2007–2013 sobrevive con Sharpe 0.08, bajo el mínimo de 0.30, y comprar y esperar en la misma cesta rinde +58.9% con Sharpe 0.47 en 2014–2024.",
+   "en": "Did not work: with the measured φ (0.94) ×2.5 in calm markets dies in 2014–2024 on Nov 10, 2016 (Sharpe −0.60), as do ×3 and ×4; in 2007–2013 it survives with a Sharpe of 0.08, below the 0.30 minimum, and buy and hold on the same basket returns +58.9% with a Sharpe of 0.47 in 2014–2024.",
+   "pt": "Não serviu: com o φ medido (0,94) o ×2,5 na calmaria morre em 2014–2024 em 10-nov-2016 (Sharpe −0,60), assim como o ×3 e o ×4; em 2007–2013 sobrevive com Sharpe 0,08, abaixo do mínimo de 0,30, e comprar e esperar na mesma cesta rende +58,9% com Sharpe 0,47 em 2014–2024."
   },
   "notes": {
-   "es": "Solo aguanta hasta ×2.5; con ×3 o ×4 la cuenta muere en 2014–2024. La mejora frente a la base (0.40) está dentro del ruido. Sin φ (señal rezagada 1 día) ni siquiera el ×2.5 aguanta: la cuenta muere el 11-nov-2016 (Sharpe −0.65).",
-   "en": "It only holds up to ×2.5; at ×3 or ×4 the account dies in 2014–2024. The improvement over the base (0.40) is within the noise. Without φ (signal lagged 1 day) not even ×2.5 holds up: the account dies on Nov 11, 2016 (Sharpe −0.65).",
-   "pt": "Só aguenta até ×2,5; com ×3 ou ×4 a conta morre em 2014–2024. A melhora frente à base (0,40) está dentro do ruído. Sem φ (sinal defasado em 1 dia) nem o ×2,5 aguenta: a conta morre em 11-nov-2016 (Sharpe −0,65)."
+   "es": "Ningún apalancamiento alto sobrevive 2014–2024: ×2.5 (Sharpe −0.60), ×3 (−0.62) y ×4 (−1.58). Sin las reglas de la prop firm el ×2.5 habría terminado en +4.3% (Sharpe 0.09, drawdown máximo −15.6%). Con φ = 0.5 (salir al abrir Wall Street sabiendo cómo cerrará el día) el ×2.5 daría Sharpe 0.42.",
+   "en": "No high leverage survives 2014–2024: ×2.5 (Sharpe −0.60), ×3 (−0.62) and ×4 (−1.58). Without the prop firm rules ×2.5 would have ended at +4.3% (Sharpe 0.09, maximum drawdown −15.6%). With φ = 0.5 (exiting at the Wall Street open while already knowing how the day will close) ×2.5 would get a Sharpe of 0.42.",
+   "pt": "Nenhuma alavancagem alta sobrevive a 2014–2024: ×2,5 (Sharpe −0,60), ×3 (−0,62) e ×4 (−1,58). Sem as regras da prop firm o ×2,5 teria terminado em +4,3% (Sharpe 0,09, drawdown máximo −15,6%). Com φ = 0,5 (sair na abertura de Wall Street já sabendo como o dia vai fechar) o ×2,5 daria Sharpe 0,42."
   },
   "metrics": {
-   "Total Return [%]": 29.368535923164373,
-   "Sharpe Ratio": 0.41774488861670517,
-   "Max Drawdown [%]": -11.162143942098513,
-   "Sharpe OOS 07-13": 0.29660548554092525,
-   "Sharpe base #33": 0.4013889014169609,
-   "Total Trades": 3203,
-   "Sharpe x2.5 sin phi 14-24": -0.651229447254463,
-   "Sharpe x2.5 sin phi 07-13": 0.02733212694213728
+   "Total Return [%]": -10.178259344184337,
+   "Sharpe Ratio": -0.600393723137735,
+   "Max Drawdown [%]": -12.924234144166824,
+   "Sharpe OOS 07-13": 0.08314498311435199,
+   "Sharpe base #33": -0.581823190246868,
+   "Total Trades": 658,
+   "Sharpe x3 14-24": -0.61683186665923,
+   "Sharpe x4 14-24": -1.5777495986892325,
+   "Sharpe x2.5 sin reglas de prop firm 14-24": 0.08720100819582097,
+   "phi medido 07-24": 0.9363148080032216
   },
-  "status": "neutral",
+  "status": "died",
   "has_equity": true,
   "has_trades_chart": true,
   "has_trades_csv": true,
@@ -10338,20 +10369,21 @@
   "kpis": [
    {
     "label": {
-     "es": "Retorno total",
-     "en": "Total return",
-     "pt": "Retorno total"
+     "es": "Retorno total (hasta la quiebra)",
+     "en": "Total return (until blow-up)",
+     "pt": "Retorno total (até a quebra)"
     },
-    "value": "+29.4%",
-    "tone": "gain"
+    "value": "−10.2%",
+    "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024",
-     "en": "Sharpe 2014–2024",
-     "pt": "Sharpe 2014–2024"
+     "es": "Sharpe 2014–2024 (hasta la quiebra)",
+     "en": "Sharpe 2014–2024 (until blow-up)",
+     "pt": "Sharpe 2014–2024 (até a quebra)"
     },
-    "value": "0.42"
+    "value": "−0.60",
+    "tone": "loss"
    },
    {
     "label": {
@@ -10359,52 +10391,51 @@
      "en": "Sharpe 2007–2013 (out of sample)",
      "pt": "Sharpe 2007–2013 (fora da amostra)"
     },
-    "value": "0.297",
+    "value": "0.08",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe de la base #33 (2014–2024)",
-     "en": "Base #33 Sharpe (2014–2024)",
-     "pt": "Sharpe da base #33 (2014–2024)"
+     "es": "Sharpe de la base #33 (2014–2024, hasta la quiebra)",
+     "en": "Base #33 Sharpe (2014–2024, until blow-up)",
+     "pt": "Sharpe da base #33 (2014–2024, até a quebra)"
     },
-    "value": "0.40"
+    "value": "−0.58"
    },
    {
     "label": {
-     "es": "Drawdown máximo",
-     "en": "Max drawdown",
-     "pt": "Drawdown máximo"
+     "es": "Drawdown máximo (hasta la quiebra)",
+     "en": "Max drawdown (until blow-up)",
+     "pt": "Drawdown máximo (até a quebra)"
     },
-    "value": "−11.2%",
+    "value": "−12.9%",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024 con ×3",
-     "en": "Sharpe 2014–2024 at ×3",
-     "pt": "Sharpe 2014–2024 com ×3"
+     "es": "Sharpe 2014–2024 con ×3 (la cuenta muere)",
+     "en": "Sharpe 2014–2024 at ×3 (the account dies)",
+     "pt": "Sharpe 2014–2024 com ×3 (a conta morre)"
     },
-    "value": "−0.60",
+    "value": "−0.62",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024 con ×4",
-     "en": "Sharpe 2014–2024 at ×4",
-     "pt": "Sharpe 2014–2024 com ×4"
+     "es": "Sharpe 2014–2024 con ×4 (la cuenta muere)",
+     "en": "Sharpe 2014–2024 at ×4 (the account dies)",
+     "pt": "Sharpe 2014–2024 com ×4 (a conta morre)"
     },
-    "value": "−1.24",
+    "value": "−1.58",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024 con ×2.5 sin φ (la cuenta muere)",
-     "en": "Sharpe 2014–2024 at ×2.5 without φ (the account dies)",
-     "pt": "Sharpe 2014–2024 com ×2,5 sem φ (a conta morre)"
+     "es": "φ medido (2014–2024 / 2007–2013)",
+     "en": "Measured φ (2014–2024 / 2007–2013)",
+     "pt": "φ medido (2014–2024 / 2007–2013)"
     },
-    "value": "−0.65",
-    "tone": "loss"
+    "value": "0.95 / 0.89"
    }
   ],
   "params_view": [
@@ -10446,7 +10477,7 @@
      "en": "φ (share of the trigger day absorbed)",
      "pt": "φ (parte do dia de disparo absorvida)"
     },
-    "value": "0.5"
+    "value": "0.94 (medido)"
    },
    {
     "label": {
@@ -10460,24 +10491,24 @@
   "capital": {
    "warn": true,
    "note": {
-    "es": "La curva usa apalancamiento ×2.5 los días con el VIX de ayer bajo 14 y ×1.5 el resto (con φ = 0.5 el día del disparo): ganancias y pérdidas se amplifican. Con más de ×2.5 la cuenta no sobrevive 2014–2024, y sin φ (señal rezagada 1 día) tampoco el ×2.5.",
-    "en": "The curve uses ×2.5 leverage on days when yesterday's VIX is below 14 and ×1.5 the rest (with φ = 0.5 on the trigger day): gains and losses are amplified. Above ×2.5 the account does not survive 2014–2024, and without φ (signal lagged 1 day) neither does ×2.5.",
-    "pt": "A curva usa alavancagem ×2,5 nos dias com o VIX de ontem abaixo de 14 e ×1,5 nos demais (com φ = 0,5 no dia do disparo): ganhos e perdas se amplificam. Acima de ×2,5 a conta não sobrevive a 2014–2024, e sem φ (sinal defasado em 1 dia) o ×2,5 também não."
+    "es": "La curva usa apalancamiento ×2.5 los días con el VIX de ayer bajo 14 y ×1.5 el resto, con las salidas medidas el día del disparo (φ = 0.94): con las reglas de la prop firm la cuenta toca el límite de pérdida a los 658 días (10-nov-2016) y se corta con −10.2%. Con tu capital verías esa cuenta cerrada. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte (+4.3% y un drawdown máximo de −15.6% hasta 2024); es hipotética, porque en la realidad la cuenta se cierra ese día. Ganancias y pérdidas se amplifican.",
+    "en": "The curve uses ×2.5 leverage on days when yesterday's VIX is below 14 and ×1.5 the rest, with the measured exits on the trigger day (φ = 0.94): under the prop firm rules the account touches the loss limit after 658 days (Nov 10, 2016) and is cut at −10.2%. With your capital you would see that account closed. The \"Without prop firm rules\" line shows how the same strategy would have continued without the cut (+4.3% and a maximum drawdown of −15.6% through 2024); it is hypothetical, because in reality the account is closed that day. Gains and losses are amplified.",
+    "pt": "A curva usa alavancagem ×2,5 nos dias com o VIX de ontem abaixo de 14 e ×1,5 nos demais, com as saídas medidas no dia do disparo (φ = 0,94): com as regras da prop firm a conta toca o limite de perda aos 658 dias (10-nov-2016) e é cortada com −10,2%. Com o seu capital você veria essa conta encerrada. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria seguido sem o corte (+4,3% e um drawdown máximo de −15,6% até 2024); é hipotética, porque na realidade a conta é encerrada nesse dia. Ganhos e perdas se amplificam."
    }
   },
   "period": {
-   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
-   "en": "2014–2024 · 2007–2013 (out of sample)",
-   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
+   "es": "2014–2024 · 2007–2013 (fuera de muestra) · en 2014–2024 la cuenta reventó el 10-nov-2016 (día 658)",
+   "en": "2014–2024 · 2007–2013 (out of sample) · in 2014–2024 the account blew up on Nov 10, 2016 (day 658)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra) · em 2014–2024 a conta quebrou em 10-nov-2016 (dia 658)"
   }
  },
  {
   "id": "20260610_140718_disparo-temprano-del-filtro-v33",
   "v": 33,
   "analysis": {
-   "es": "¿Y si el filtro dispara más temprano? No ayuda: el disparo anticipado genera falsas alarmas (entras y sales sin motivo) y empeora el resultado. El momento de salir tiene un punto óptimo, no es «cuanto antes mejor». Además, el Sharpe de 0.40 de la mejor combinación depende de φ = 0.5, un supuesto sin medir: con la señal rezagada 1 día y sin φ (como en #35 y #36), la cartera base con ×2 (VIX 28, crédito 40 días) muere en 2014–2024 el 11-nov-2016 (Sharpe −0.57; en 2007–2013 queda en 0.00) y con ×1.5 sobrevive con Sharpe 0.00 en 2014–2024 y 0.08 en 2007–2013.",
-   "en": "What if the filter fires earlier? It does not help: the early trigger generates false alarms (you go in and out for no reason) and worsens the result. Exit timing has an optimal point, it is not \"the sooner the better\". Besides, the 0.40 Sharpe of the best combination depends on φ = 0.5, an unmeasured assumption: with the signal lagged 1 day and no φ (as in #35 and #36), the base portfolio at ×2 (VIX 28, 40-day credit) dies in 2014–2024 on Nov 11, 2016 (Sharpe −0.57; in 2007–2013 it gets 0.00) and at ×1.5 it survives with a Sharpe of 0.00 in 2014–2024 and 0.08 in 2007–2013.",
-   "pt": "E se o filtro disparar mais cedo? Não ajuda: o disparo antecipado gera alarmes falsos (você entra e sai sem motivo) e piora o resultado. O momento de sair tem um ponto ótimo, não é \"quanto antes melhor\". Além disso, o Sharpe de 0,40 da melhor combinação depende de φ = 0,5, uma suposição não medida: com o sinal defasado em 1 dia e sem φ (como no #35 e no #36), a carteira base com ×2 (VIX 28, crédito 40 dias) morre em 2014–2024 em 11-nov-2016 (Sharpe −0,57; em 2007–2013 fica em 0,00) e com ×1,5 sobrevive com Sharpe 0,00 em 2014–2024 e 0,08 em 2007–2013."
+   "es": "¿Y si el filtro dispara más temprano? No ayuda: el disparo anticipado genera falsas alarmas (entras y sales sin motivo) y empeora el resultado. El momento de salir tiene un punto óptimo, no es «cuanto antes mejor». Con el φ medido de la base (0.94; IC 95%: 0.87–1.00), ninguna de las 6 combinaciones sobrevive 2014–2024 con ×2: la base (VIX 28, crédito 40 días) muere el 11-nov-2016 (Sharpe −0.58; en 2007–2013 queda en 0.04) y la de VIX 22 / crédito 40 muere antes, el 25-jul-2016 (−0.76). Para sobrevivir haría falta φ ≤ 0.90; el medido es 0.94 y su intervalo llega a 1.00. Con ×1.5 la base sobrevive con Sharpe 0.05 en 2014–2024 y 0.14 en 2007–2013.",
+   "en": "What if the filter fires earlier? It does not help: the early trigger generates false alarms (you go in and out for no reason) and worsens the result. Exit timing has an optimal point, it is not \"the sooner the better\". With the measured φ of the base (0.94; 95% CI: 0.87–1.00), none of the 6 combinations survives 2014–2024 at ×2: the base (VIX 28, 40-day credit) dies on Nov 11, 2016 (Sharpe −0.58; in 2007–2013 it gets 0.04) and VIX 22 / credit 40 dies earlier, on Jul 25, 2016 (−0.76). Surviving would take φ ≤ 0.90; the measured one is 0.94 and its interval reaches 1.00. At ×1.5 the base survives with a Sharpe of 0.05 in 2014–2024 and 0.14 in 2007–2013.",
+   "pt": "E se o filtro disparar mais cedo? Não ajuda: o disparo antecipado gera alarmes falsos (você entra e sai sem motivo) e piora o resultado. O momento de sair tem um ponto ótimo, não é \"quanto antes melhor\". Com o φ medido da base (0,94; IC 95%: 0,87–1,00), nenhuma das 6 combinações sobrevive a 2014–2024 com ×2: a base (VIX 28, crédito 40 dias) morre em 11-nov-2016 (Sharpe −0,58; em 2007–2013 fica em 0,04) e a de VIX 22 / crédito 40 morre antes, em 25-jul-2016 (−0,76). Para sobreviver seria preciso φ ≤ 0,90; o medido é 0,94 e seu intervalo chega a 1,00. Com ×1,5 a base sobrevive com Sharpe 0,05 em 2014–2024 e 0,14 em 2007–2013."
   },
   "name": {
    "es": "Activación temprana del filtro",
@@ -10487,36 +10518,39 @@
   "family": "bot",
   "date": "2026-06-10T14:07:18",
   "description": {
-   "es": "Sobre el filtro que reacciona dentro del día (φ = 0.5, ×2), bajar el umbral del VIX para que dispare antes y el día de salida duela menos. Grilla VIX 22/24/28 × media del crédito de 40/60 días.",
-   "en": "On top of the intraday-reacting filter (φ = 0.5, ×2), lowering the VIX threshold so it fires earlier and the exit day hurts less. Grid of VIX 22/24/28 × 40/60-day credit average.",
-   "pt": "Sobre o filtro que reage dentro do dia (φ = 0,5, ×2), baixar o limite do VIX para que dispare antes e o dia de saída doa menos. Grade VIX 22/24/28 × média do crédito de 40/60 dias."
+   "es": "Sobre el filtro que reacciona dentro del día (φ medido, ×2), bajar el umbral del VIX para que dispare antes y el día de salida duela menos. Grilla VIX 22/24/28 × media del crédito de 40/60 días.",
+   "en": "On top of the intraday-reacting filter (measured φ, ×2), lowering the VIX threshold so it fires earlier and the exit day hurts less. Grid of VIX 22/24/28 × 40/60-day credit average.",
+   "pt": "Sobre o filtro que reage dentro do dia (φ medido, ×2), baixar o limite do VIX para que dispare antes e o dia de saída doa menos. Grade VIX 22/24/28 × média do crédito de 40/60 dias."
   },
   "params": {
    "mejor": "(28, 40)",
-   "phi": 0.5,
+   "phi_medido": 0.936,
    "lev": 2.0
   },
   "verdict": {
-   "es": "Parcial: disparar antes no ayuda; la mejor combinación sigue siendo el umbral normal (VIX 28, crédito 40 días) con Sharpe 0.40, por debajo del 0.50 que se pedía y del 0.47 de comprar y esperar en la misma cesta (que además rinde +58.9% frente a +31.2% en 2014–2024). Ese 0.40 depende de φ = 0.5, sin medir: con la señal rezagada 1 día y sin φ, la base ×2 muere (Sharpe −0.57) y con ×1.5 queda en 0.00.",
-   "en": "Partial: firing earlier does not help; the best combination is still the normal threshold (VIX 28, 40-day credit) with a 0.40 Sharpe, below the 0.50 required and the 0.47 of buy and hold on the same basket (which also returns +58.9% versus +31.2% in 2014–2024). That 0.40 depends on an unmeasured φ = 0.5: with the signal lagged 1 day and no φ, the ×2 base dies (Sharpe −0.57) and at ×1.5 it gets 0.00.",
-   "pt": "Parcial: disparar antes não ajuda; a melhor combinação continua sendo o limite normal (VIX 28, crédito 40 dias) com Sharpe 0,40, abaixo do 0,50 exigido e do 0,47 de comprar e esperar na mesma cesta (que ainda rende +58,9% contra +31,2% em 2014–2024). Esse 0,40 depende de φ = 0,5, não medido: com o sinal defasado em 1 dia e sem φ, a base ×2 morre (Sharpe −0,57) e com ×1,5 fica em 0,00."
+   "es": "No sirvió: disparar antes no ayuda; con el φ medido (0.94 en la base) ninguna de las 6 combinaciones sobrevive 2014–2024 con ×2: la base (VIX 28, crédito 40 días) muere el 11-nov-2016 (Sharpe −0.58) y en 2007–2013 queda en 0.04. Comprar y esperar en la misma cesta rinde +58.9% con Sharpe 0.47 en 2014–2024; con ×1.5 la base sobrevive, pero con Sharpe 0.05.",
+   "en": "Did not work: firing earlier does not help; with the measured φ (0.94 in the base) none of the 6 combinations survives 2014–2024 at ×2: the base (VIX 28, 40-day credit) dies on Nov 11, 2016 (Sharpe −0.58) and in 2007–2013 it gets 0.04. Buy and hold on the same basket returns +58.9% with a Sharpe of 0.47 in 2014–2024; at ×1.5 the base survives, but with a Sharpe of 0.05.",
+   "pt": "Não serviu: disparar antes não ajuda; com o φ medido (0,94 na base) nenhuma das 6 combinações sobrevive a 2014–2024 com ×2: a base (VIX 28, crédito 40 dias) morre em 11-nov-2016 (Sharpe −0,58) e em 2007–2013 fica em 0,04. Comprar e esperar na mesma cesta rende +58,9% com Sharpe 0,47 em 2014–2024; com ×1,5 a base sobrevive, mas com Sharpe 0,05."
   },
   "notes": {
-   "es": "El momento de salir tiene un punto óptimo, no es «cuanto antes mejor»: con VIX 22 el Sharpe cae a 0.16 por las falsas alarmas. Y el 0.40 de la base depende del φ supuesto: sin φ (señal rezagada 1 día) la base ×2 muere el 11-nov-2016 (Sharpe −0.57).",
-   "en": "The exit timing has an optimal point, it is not \"the sooner the better\": with VIX 22 the Sharpe drops to 0.16 because of false alarms. And the 0.40 of the base depends on the assumed φ: without φ (signal lagged 1 day) the ×2 base dies on Nov 11, 2016 (Sharpe −0.57).",
-   "pt": "O momento de sair tem um ponto ótimo, não é \"quanto antes melhor\": com VIX 22 o Sharpe cai para 0,16 por causa dos alarmes falsos. E o 0,40 da base depende do φ suposto: sem φ (sinal defasado em 1 dia) a base ×2 morre em 11-nov-2016 (Sharpe −0,57)."
+   "es": "El momento de salir tiene un punto óptimo, no es «cuanto antes mejor»: con VIX 22 / crédito 40 la cuenta muere antes que con la base (25-jul-2016) por las falsas alarmas. La base muere por un margen estrecho (cae a 89,358 frente al piso de 90,000): con φ ≤ 0.90 sobreviviría con Sharpe 0.08, y con φ = 0.5 (salir al abrir Wall Street sabiendo cómo cerrará el día) el Sharpe sería 0.40.",
+   "en": "The exit timing has an optimal point, it is not \"the sooner the better\": with VIX 22 / credit 40 the account dies earlier than with the base (Jul 25, 2016) because of false alarms. The base dies by a narrow margin (it falls to 89,358 against the 90,000 floor): with φ ≤ 0.90 it would survive with a Sharpe of 0.08, and with φ = 0.5 (exiting at the Wall Street open while already knowing how the day will close) the Sharpe would be 0.40.",
+   "pt": "O momento de sair tem um ponto ótimo, não é \"quanto antes melhor\": com VIX 22 / crédito 40 a conta morre antes que com a base (25-jul-2016) por causa dos alarmes falsos. A base morre por uma margem estreita (cai para 89,358 contra o piso de 90,000): com φ ≤ 0,90 sobreviveria com Sharpe 0,08, e com φ = 0,5 (sair na abertura de Wall Street já sabendo como o dia vai fechar) o Sharpe seria 0,40."
   },
   "metrics": {
-   "Total Return [%]": 31.1962010621746,
-   "Sharpe Ratio": 0.4013889014169609,
-   "Max Drawdown [%]": -9.817677879615783,
-   "Sharpe OOS 07-13": 0.36533721231132593,
-   "Total Trades": 3203,
-   "Sharpe base x2 sin phi 14-24": -0.5656497521015207,
-   "Sharpe base x1.5 sin phi 14-24": 0.004014963817183446,
-   "Sharpe base x1.5 sin phi 07-13": 0.07820401403764
+   "Total Return [%]": -10.641946513375123,
+   "Sharpe Ratio": -0.581823190246868,
+   "Max Drawdown [%]": -12.889350566964108,
+   "Sharpe OOS 07-13": 0.035165903788388235,
+   "Total Trades": 659,
+   "Combinaciones que sobreviven 14-24": 0,
+   "Sharpe base x1.5 14-24": 0.05230270137114146,
+   "Sharpe base x1.5 07-13": 0.14002565443372364,
+   "phi medido base 14-24": 0.954291895964707,
+   "phi medido base 07-13": 0.8881094350326965,
+   "phi medido base 07-24": 0.9363148080032216
   },
-  "status": "neutral",
+  "status": "died",
   "has_equity": true,
   "has_trades_chart": true,
   "has_trades_csv": true,
@@ -10528,20 +10562,21 @@
   "kpis": [
    {
     "label": {
-     "es": "Retorno total",
-     "en": "Total return",
-     "pt": "Retorno total"
+     "es": "Retorno total (hasta la quiebra)",
+     "en": "Total return (until blow-up)",
+     "pt": "Retorno total (até a quebra)"
     },
-    "value": "+31.2%",
-    "tone": "gain"
+    "value": "−10.6%",
+    "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe 2014–2024",
-     "en": "Sharpe 2014–2024",
-     "pt": "Sharpe 2014–2024"
+     "es": "Sharpe 2014–2024 (hasta la quiebra)",
+     "en": "Sharpe 2014–2024 (until blow-up)",
+     "pt": "Sharpe 2014–2024 (até a quebra)"
     },
-    "value": "0.40"
+    "value": "−0.58",
+    "tone": "loss"
    },
    {
     "label": {
@@ -10549,49 +10584,49 @@
      "en": "Sharpe 2007–2013 (out of sample)",
      "pt": "Sharpe 2007–2013 (fora da amostra)"
     },
-    "value": "0.37"
+    "value": "0.04"
    },
    {
     "label": {
-     "es": "Drawdown máximo",
-     "en": "Max drawdown",
-     "pt": "Drawdown máximo"
+     "es": "Drawdown máximo (hasta la quiebra)",
+     "en": "Max drawdown (until blow-up)",
+     "pt": "Drawdown máximo (até a quebra)"
     },
-    "value": "−9.8%",
+    "value": "−12.9%",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe con VIX 22 / crédito 40",
-     "en": "Sharpe with VIX 22 / credit 40",
-     "pt": "Sharpe com VIX 22 / crédito 40"
+     "es": "Sharpe con VIX 22 / crédito 40 (hasta la quiebra)",
+     "en": "Sharpe with VIX 22 / credit 40 (until blow-up)",
+     "pt": "Sharpe com VIX 22 / crédito 40 (até a quebra)"
     },
-    "value": "0.16"
-   },
-   {
-    "label": {
-     "es": "Combinaciones que sobreviven",
-     "en": "Combinations that survive",
-     "pt": "Combinações que sobrevivem"
-    },
-    "value": "6 de 6"
-   },
-   {
-    "label": {
-     "es": "Sharpe 2014–2024 de la base ×2 sin φ (señal rezagada 1 día)",
-     "en": "Sharpe 2014–2024 of the ×2 base without φ (signal lagged 1 day)",
-     "pt": "Sharpe 2014–2024 da base ×2 sem φ (sinal defasado em 1 dia)"
-    },
-    "value": "−0.57",
+    "value": "−0.76",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe de la base ×1.5 sin φ (2014–2024 / 2007–2013)",
-     "en": "Sharpe of the ×1.5 base without φ (2014–2024 / 2007–2013)",
-     "pt": "Sharpe da base ×1.5 sem φ (2014–2024 / 2007–2013)"
+     "es": "Combinaciones que sobreviven 2014–2024",
+     "en": "Combinations that survive 2014–2024",
+     "pt": "Combinações que sobrevivem a 2014–2024"
     },
-    "value": "0.00 / 0.08"
+    "value": "0 de 6"
+   },
+   {
+    "label": {
+     "es": "Sharpe de la base ×1.5 (2014–2024 / 2007–2013)",
+     "en": "Sharpe of the ×1.5 base (2014–2024 / 2007–2013)",
+     "pt": "Sharpe da base ×1,5 (2014–2024 / 2007–2013)"
+    },
+    "value": "0.05 / 0.14"
+   },
+   {
+    "label": {
+     "es": "φ medido de la base (2014–2024 / 2007–2013)",
+     "en": "Measured φ of the base (2014–2024 / 2007–2013)",
+     "pt": "φ medido da base (2014–2024 / 2007–2013)"
+    },
+    "value": "0.95 / 0.89"
    }
   ],
   "params_view": [
@@ -10625,7 +10660,7 @@
      "en": "φ (share of the trigger day absorbed)",
      "pt": "φ (parte do dia de disparo absorvida)"
     },
-    "value": "0.5"
+    "value": "0.94 (medido en la base)"
    },
    {
     "label": {
@@ -10637,26 +10672,26 @@
    }
   ],
   "capital": {
-   "warn": false,
+   "warn": true,
    "note": {
-    "es": "Es la cartera base con ×2 (VIX 28, crédito 40 días, φ = 0.5); #35 y #36 usan el mismo filtro y apalancamiento pero con las señales de ayer, sin suponer φ, y esa cartera muere el 11-nov-2016 (Sharpe −0.57). El apalancamiento ×2 duplica ganancias y pérdidas.",
-    "en": "It is the base portfolio at ×2 (VIX 28, 40-day credit, φ = 0.5); #35 and #36 use the same filter and leverage but with yesterday's signals, without assuming φ, and that portfolio dies on Nov 11, 2016 (Sharpe −0.57). The ×2 leverage doubles gains and losses.",
-    "pt": "É a carteira base com ×2 (VIX 28, crédito 40 dias, φ = 0,5); #35 e #36 usam o mesmo filtro e alavancagem, mas com os sinais de ontem, sem supor φ, e essa carteira morre em 11-nov-2016 (Sharpe −0,57). A alavancagem ×2 duplica ganhos e perdas."
+    "es": "Es la cartera base con ×2 (VIX 28, crédito 40 días) con el φ medido (0.94): con las reglas de la prop firm la cuenta toca el límite de pérdida a los 659 días (11-nov-2016) y se corta con −10.6%. Con tu capital verías esa cuenta cerrada. La línea «Sin reglas de prop firm» muestra cómo habría seguido la misma estrategia sin el corte (−1.0% y un drawdown máximo de −16.1% hasta 2024); es hipotética, porque en la realidad la cuenta se cierra ese día. #35 y #36 usan el mismo filtro y apalancamiento con las señales de ayer y mueren el mismo día. El apalancamiento ×2 duplica ganancias y pérdidas.",
+    "en": "It is the base portfolio at ×2 (VIX 28, 40-day credit) with the measured φ (0.94): under the prop firm rules the account touches the loss limit after 659 days (Nov 11, 2016) and is cut at −10.6%. With your capital you would see that account closed. The \"Without prop firm rules\" line shows how the same strategy would have continued without the cut (−1.0% and a maximum drawdown of −16.1% through 2024); it is hypothetical, because in reality the account is closed that day. #35 and #36 use the same filter and leverage with yesterday's signals and die the same day. The ×2 leverage doubles gains and losses.",
+    "pt": "É a carteira base com ×2 (VIX 28, crédito 40 dias) com o φ medido (0,94): com as regras da prop firm a conta toca o limite de perda aos 659 dias (11-nov-2016) e é cortada com −10,6%. Com o seu capital você veria essa conta encerrada. A linha «Sem regras de prop firm» mostra como a mesma estratégia teria seguido sem o corte (−1,0% e um drawdown máximo de −16,1% até 2024); é hipotética, porque na realidade a conta é encerrada nesse dia. #35 e #36 usam o mesmo filtro e alavancagem com os sinais de ontem e morrem no mesmo dia. A alavancagem ×2 duplica ganhos e perdas."
    }
   },
   "period": {
-   "es": "2014–2024 · 2007–2013 (fuera de muestra)",
-   "en": "2014–2024 · 2007–2013 (out of sample)",
-   "pt": "2014–2024 · 2007–2013 (fora da amostra)"
+   "es": "2014–2024 · 2007–2013 (fuera de muestra) · en 2014–2024 la cuenta reventó el 11-nov-2016 (día 659)",
+   "en": "2014–2024 · 2007–2013 (out of sample) · in 2014–2024 the account blew up on Nov 11, 2016 (day 659)",
+   "pt": "2014–2024 · 2007–2013 (fora da amostra) · em 2014–2024 a conta quebrou em 11-nov-2016 (dia 659)"
   }
  },
  {
   "id": "20260610_140603_validacion-ejecutable-reactivo-v32",
   "v": 32,
   "analysis": {
-   "es": "Es la lectura año por año del mismo cálculo de #31 (no es otra corrida): se mira cada año de 2007 a 2024 y 6 crisis, con huecos de apertura reales y un mínimo intradía conservador. Confirma la supervivencia con φ = 0.5: 11 de 18 años positivos (61%) y 3 de las 6 crisis en positivo; el peor año es 2018 (−4.0%) y el mejor 2017 (+7.3%). En total, Sharpe 0.37 y un crecimiento de ≈1.9% al año con ×1.5. Todo eso supone que el bot absorbe solo la mitad del movimiento el día del disparo (φ = 0.5, sin medir): con rezago puro de un día (φ = 1) el mismo ×1.5 queda en Sharpe 0.02 y 0.05 (#31). Modesto, muy lejos de lo que necesita un challenge corto, y solo ejecutable si el bot consigue ese φ.",
-   "en": "It is the year-by-year reading of the same calculation as #31 (not a different run): each year from 2007 to 2024 and 6 crises are examined, with real opening gaps and a conservative intraday low. It confirms survival with φ = 0.5: 11 of 18 years positive (61%) and 3 of the 6 crises positive; the worst year is 2018 (−4.0%) and the best 2017 (+7.3%). Overall, a 0.37 Sharpe and growth of ≈1.9% a year at ×1.5. All of that assumes the bot absorbs only half of the move on the trigger day (φ = 0.5, unmeasured): with a pure one-day lag (φ = 1) the same ×1.5 gets a Sharpe of 0.02 and 0.05 (#31). Modest, far from what a short challenge needs, and executable only if the bot achieves that φ.",
-   "pt": "É a leitura ano a ano do mesmo cálculo do #31 (não é outra execução): olha-se cada ano de 2007 a 2024 e 6 crises, com gaps de abertura reais e uma mínima intradiária conservadora. Confirma a sobrevivência com φ = 0,5: 11 de 18 anos positivos (61%) e 3 das 6 crises positivas; o pior ano é 2018 (−4,0%) e o melhor 2017 (+7,3%). No total, Sharpe 0,37 e crescimento de ≈1,9% ao ano com ×1,5. Tudo isso supõe que o bot absorve só metade do movimento no dia do disparo (φ = 0,5, sem medir): com defasagem pura de um dia (φ = 1) o mesmo ×1,5 fica com Sharpe 0,02 e 0,05 (#31). Modesto, muito longe do que um challenge curto precisa, e só executável se o bot conseguir esse φ."
+   "es": "Es la lectura año por año del mismo cálculo de #31 (no es otra corrida): se mira cada año de 2007 a 2024 y 6 crisis, con huecos de apertura reales y un mínimo intradía conservador. Con el φ medido (0.90) la cartera ×1.5 sobrevive los dos periodos, pero solo 10 de 18 años son positivos (56%, bajo el mínimo de 60%) y 2 de las 6 crisis terminan en positivo; el peor año es 2018 (−6.2%) y el mejor 2017 (+6.5%). En total, Sharpe 0.09 y un crecimiento de ≈0.4% al año con ×1.5. Con φ = 0.5, que exigiría salir al abrir Wall Street sabiendo cómo cerrará el día, el mismo ×1.5 daría Sharpe 0.37 y 61% de años positivos, pero los datos horarios no respaldan esa reacción. Modesto, muy lejos de lo que necesita un challenge corto.",
+   "en": "It is the year-by-year reading of the same calculation as #31 (not a different run): each year from 2007 to 2024 and 6 crises are examined, with real opening gaps and a conservative intraday low. With the measured φ (0.90) the ×1.5 portfolio survives both periods, but only 10 of 18 years are positive (56%, below the 60% minimum) and 2 of the 6 crises end positive; the worst year is 2018 (−6.2%) and the best 2017 (+6.5%). Overall, a Sharpe of 0.09 and growth of ≈0.4% a year at ×1.5. With φ = 0.5, which would require exiting at the Wall Street open while already knowing how the day will close, the same ×1.5 would get a 0.37 Sharpe and 61% positive years, but the hourly data do not support that reaction. Modest, far from what a short challenge needs.",
+   "pt": "É a leitura ano a ano do mesmo cálculo do #31 (não é outra execução): olha-se cada ano de 2007 a 2024 e 6 crises, com gaps de abertura reais e uma mínima intradiária conservadora. Com o φ medido (0,90) a carteira ×1,5 sobrevive aos dois períodos, mas só 10 de 18 anos são positivos (56%, abaixo do mínimo de 60%) e 2 das 6 crises terminam positivas; o pior ano é 2018 (−6,2%) e o melhor 2017 (+6,5%). No total, Sharpe 0,09 e crescimento de ≈0,4% ao ano com ×1,5. Com φ = 0,5, que exigiria sair na abertura de Wall Street já sabendo como o dia vai fechar, o mesmo ×1,5 daria Sharpe 0,37 e 61% de anos positivos, mas os dados horários não respaldam essa reação. Modesto, muito longe do que um challenge curto precisa."
   },
   "name": {
    "es": "Validación ejecutable-reactiva",
@@ -10666,32 +10701,33 @@
   "family": "bot",
   "date": "2026-06-10T14:06:03",
   "description": {
-   "es": "Lectura año por año (2007–2024) y en 6 crisis (2008, 2011, 2015, 2018, 2020 y 2022) del mismo cálculo de #31: el mejor ajuste del filtro que reacciona dentro del día (φ = 0.5, ×1.5, kill-switch de −3%). Si aguanta, es el candidato para producción, siempre que el bot implemente el monitor intradía.",
-   "en": "Year-by-year reading (2007–2024) and across 6 crises (2008, 2011, 2015, 2018, 2020 and 2022) of the same calculation as #31: the best setting of the intraday-reacting filter (φ = 0.5, ×1.5, −3% kill-switch). If it holds, it is the production candidate, provided the bot implements the intraday monitor.",
-   "pt": "Leitura ano a ano (2007–2024) e em 6 crises (2008, 2011, 2015, 2018, 2020 e 2022) do mesmo cálculo do #31: o melhor ajuste do filtro que reage dentro do dia (φ = 0,5, ×1,5, kill-switch de −3%). Se aguentar, é o candidato para produção, desde que o bot implemente o monitor intradiário."
+   "es": "Lectura año por año (2007–2024) y en 6 crisis (2008, 2011, 2015, 2018, 2020 y 2022) del mismo cálculo de #31: el mejor ajuste del filtro que reacciona dentro del día (φ medido = 0.90, ×1.5, kill-switch de −3%). Si aguanta, es el candidato para producción, siempre que el bot implemente el monitor intradía.",
+   "en": "Year-by-year reading (2007–2024) and across 6 crises (2008, 2011, 2015, 2018, 2020 and 2022) of the same calculation as #31: the best setting of the intraday-reacting filter (measured φ = 0.90, ×1.5, −3% kill-switch). If it holds, it is the production candidate, provided the bot implements the intraday monitor.",
+   "pt": "Leitura ano a ano (2007–2024) e em 6 crises (2008, 2011, 2015, 2018, 2020 e 2022) do mesmo cálculo do #31: o melhor ajuste do filtro que reage dentro do dia (φ medido = 0,90, ×1,5, kill-switch de −3%). Se aguentar, é o candidato para produção, desde que o bot implemente o monitor intradiário."
   },
   "params": {
-   "phi": 0.5,
+   "phi_medido": 0.898,
    "lev": 1.5,
    "cap": 0.03
   },
   "verdict": {
-   "es": "Parcial: sobrevive 2007–2024 con Sharpe de 0.37 y 61% de años positivos (11 de 18), apenas sobre el mínimo de 60%, pero con un φ = 0.5 sin medir (con rezago puro de un día, φ = 1, el Sharpe baja a 0.02 y 0.05); no bate a comprar y esperar en 2014–2024 (Sharpe 0.47 y +58.9%) y el Deflated Sharpe de una configuración relacionada (×2, φ = 0.5; 0.353 en #38) no confirma una ventaja real.",
-   "en": "Partial: it survives 2007–2024 with a 0.37 Sharpe and 61% positive years (11 of 18), barely above the 60% minimum, but with an unmeasured φ = 0.5 (with a pure one-day lag, φ = 1, the Sharpe drops to 0.02 and 0.05); it does not beat buy and hold in 2014–2024 (Sharpe 0.47 and +58.9%) and the Deflated Sharpe of a related configuration (×2, φ = 0.5; 0.353 in #38) does not confirm a real edge.",
-   "pt": "Parcial: sobrevive a 2007–2024 com Sharpe de 0,37 e 61% de anos positivos (11 de 18), mal acima do mínimo de 60%, mas com um φ = 0,5 não medido (com defasagem pura de um dia, φ = 1, o Sharpe cai para 0,02 e 0,05); não bate comprar e esperar em 2014–2024 (Sharpe 0,47 e +58,9%) e o Deflated Sharpe de uma configuração relacionada (×2, φ = 0,5; 0,353 no #38) não confirma uma vantagem real."
+   "es": "Parcial: sobrevive 2007–2024 con ×1.5, pero con Sharpe de 0.09 y solo 56% de años positivos (10 de 18), bajo el mínimo de 60%, y 2 de 6 crisis en positivo; el φ medido es 0.90, no el 0.5 que daría 61%. No bate a comprar y esperar en 2014–2024 (Sharpe 0.47 y +58.9%) y el Deflated Sharpe de una configuración relacionada (×2 con las señales de ayer; 0.010 en #38) no confirma una ventaja real.",
+   "en": "Partial: it survives 2007–2024 at ×1.5, but with a 0.09 Sharpe and only 56% positive years (10 of 18), below the 60% minimum, and 2 of 6 crises positive; the measured φ is 0.90, not the 0.5 that would give 61%. It does not beat buy and hold in 2014–2024 (Sharpe 0.47 and +58.9%) and the Deflated Sharpe of a related configuration (×2 with yesterday's signals; 0.010 in #38) does not confirm a real edge.",
+   "pt": "Parcial: sobrevive a 2007–2024 com ×1,5, mas com Sharpe de 0,09 e só 56% de anos positivos (10 de 18), abaixo do mínimo de 60%, e 2 de 6 crises positivas; o φ medido é 0,90, não os 0,5 que dariam 61%. Não bate comprar e esperar em 2014–2024 (Sharpe 0,47 e +58,9%) e o Deflated Sharpe de uma configuração relacionada (×2 com os sinais de ontem; 0,010 no #38) não confirma uma vantagem real."
   },
   "notes": {
-   "es": "Es modesto: muy lejos de lo que necesita un challenge corto, y depende de φ = 0.5, un supuesto que hay que medir en la prueba en demo (con φ = 1 el Sharpe baja a 0.02 y 0.05).",
-   "en": "It is modest: far from what a short challenge needs, and it depends on φ = 0.5, an assumption that must be measured in the demo test (with φ = 1 the Sharpe drops to 0.02 and 0.05).",
-   "pt": "É modesto: muito longe do que um challenge curto precisa, e depende de φ = 0,5, uma suposição que precisa ser medida no teste em demo (com φ = 1 o Sharpe cai para 0,02 e 0,05)."
+   "es": "Es modesto: muy lejos de lo que necesita un challenge corto. Los retornos por año salen del φ medido (0.90); con φ = 0.5 (salir al abrir Wall Street sabiendo cómo cerrará el día) serían mejores, pero esa reacción no es alcanzable con la información disponible a esa hora.",
+   "en": "It is modest: far from what a short challenge needs. The returns by year come from the measured φ (0.90); with φ = 0.5 (exiting at the Wall Street open while already knowing how the day will close) they would be better, but that reaction is not reachable with the information available at that hour.",
+   "pt": "É modesto: muito longe do que um challenge curto precisa. Os retornos por ano saem do φ medido (0,90); com φ = 0,5 (sair na abertura de Wall Street já sabendo como o dia vai fechar) seriam melhores, mas essa reação não é alcançável com a informação disponível naquela hora."
   },
   "metrics": {
-   "Total Return [%]": 21.644224036310746,
-   "Sharpe Ratio": 0.3711481525234038,
-   "Max Drawdown [%]": -10.206546592165267,
-   "Sharpe OOS 07-13": 0.33654301242688794,
-   "Anos positivos (%)": 61.0,
-   "Total Trades": 3203
+   "Total Return [%]": 4.155135328389004,
+   "Sharpe Ratio": 0.09182305608696312,
+   "Max Drawdown [%]": -11.577408251154308,
+   "Sharpe OOS 07-13": 0.11250275607242971,
+   "Anos positivos (%)": 56.0,
+   "Total Trades": 3203,
+   "phi medido 07-24": 0.8975284347529162
   },
   "status": "neutral",
   "has_equity": true,
@@ -10709,7 +10745,7 @@
      "en": "Positive years",
      "pt": "Anos positivos"
     },
-    "value": "61% (11/18)"
+    "value": "56% (10/18)"
    },
    {
     "label": {
@@ -10717,7 +10753,7 @@
      "en": "Crises with a positive return",
      "pt": "Crises com retorno positivo"
     },
-    "value": "3/6"
+    "value": "2/6"
    },
    {
     "label": {
@@ -10725,7 +10761,7 @@
      "en": "Worst crisis (2018)",
      "pt": "Pior crise (2018)"
     },
-    "value": "−4.0%",
+    "value": "−6.2%",
     "tone": "loss"
    },
    {
@@ -10734,7 +10770,7 @@
      "en": "Best crisis (2020)",
      "pt": "Melhor crise (2020)"
     },
-    "value": "+4.6%",
+    "value": "+2.7%",
     "tone": "gain"
    }
   ],
@@ -10745,7 +10781,7 @@
      "en": "φ (share of the trigger day absorbed)",
      "pt": "φ (parte do dia de disparo absorvida)"
     },
-    "value": "0.5"
+    "value": "0.90 (medido)"
    },
    {
     "label": {
@@ -10783,9 +10819,9 @@
   "capital": {
    "warn": false,
    "note": {
-    "es": "Es la misma cartera de #31 (φ = 0.5, ×1.5): aquí se valida año por año, no es una curva distinta. Los retornos por año dependen de ese φ supuesto.",
-    "en": "It is the same portfolio as #31 (φ = 0.5, ×1.5): here it is validated year by year, it is not a different curve. The returns by year depend on that assumed φ.",
-    "pt": "É a mesma carteira do #31 (φ = 0,5, ×1,5): aqui é validada ano a ano, não é uma curva diferente. Os retornos por ano dependem desse φ suposto."
+    "es": "Es la misma cartera de #31 (φ medido 0.90, ×1.5): aquí se valida año por año, no es una curva distinta. Los retornos por año salen de ese φ medido.",
+    "en": "It is the same portfolio as #31 (measured φ 0.90, ×1.5): here it is validated year by year, it is not a different curve. The returns by year come from that measured φ.",
+    "pt": "É a mesma carteira do #31 (φ medido 0,90, ×1,5): aqui é validada ano a ano, não é uma curva diferente. Os retornos por ano saem desse φ medido."
    }
   },
   "period": {
@@ -10798,9 +10834,9 @@
   "id": "20260610_140602_filtro-reactivo-intradia-v31",
   "v": 31,
   "analysis": {
-   "es": "Si el problema es reaccionar tarde, ¿y un filtro que reacciona dentro del día? Un monitor que cierra a media sesión (φ = la fracción del día que alcanzas a cubrir), implementable consultando el VIX cada 15 minutos. Con φ = 0.5 fue la primera configuración que sobrevivió 2007–2024 con un Sharpe apreciable (0.37 y 0.34; la de #30 sobrevivía con Sharpe cerca de 0), pero solo con ×2 o menos. Ese resultado depende de φ, que es un supuesto sin medir: con φ = 0.75 el Sharpe baja a 0.20 y 0.19, y con φ = 1 (rezago puro de un día, sin suponer nada del día del disparo) a 0.02 y 0.05; con φ = 1 el ×2 ya muere en 2014–2024 (−0.55).",
-   "en": "If the problem is reacting late, what about a filter that reacts within the day? A monitor that closes mid-session (φ = the fraction of the day you manage to cover), implementable by polling the VIX every 15 minutes. With φ = 0.5 it was the first configuration that survived 2007–2024 with a meaningful Sharpe (0.37 and 0.34; the one in #30 survived with a Sharpe near 0), but only at ×2 or less. That result depends on φ, an unmeasured assumption: with φ = 0.75 the Sharpe drops to 0.20 and 0.19, and with φ = 1 (pure one-day lag, assuming nothing about the trigger day) to 0.02 and 0.05; with φ = 1, ×2 already dies in 2014–2024 (−0.55).",
-   "pt": "Se o problema é reagir tarde, e um filtro que reage dentro do dia? Um monitor que fecha no meio da sessão (φ = a fração do dia que você consegue cobrir), implementável consultando o VIX a cada 15 minutos. Com φ = 0,5 foi a primeira configuração que sobreviveu a 2007–2024 com um Sharpe apreciável (0,37 e 0,34; a do #30 sobrevivia com Sharpe perto de 0), mas só com ×2 ou menos. Esse resultado depende de φ, uma suposição não medida: com φ = 0,75 o Sharpe cai para 0,20 e 0,19, e com φ = 1 (defasagem pura de um dia, sem supor nada sobre o dia do disparo) para 0,02 e 0,05; com φ = 1, o ×2 já morre em 2014–2024 (−0,55)."
+   "es": "Si el problema es reaccionar tarde, ¿y un filtro que reacciona dentro del día? Un monitor que sigue el VIX en vivo y sale en cuanto cruza el umbral. φ (la fracción del movimiento del día de disparo que el bot alcanza a comerse) se mide con datos horarios en lugar de suponerse. En 3 de cada 4 días de disparo la señal es solo de crédito (HYG/LQD) y no hay datos intradía suyos (su mejor sustituto disponible explica solo el 68% de su variación diaria), así que esa señal solo existe tras el cierre de Nueva York. El VIX sí se puede seguir en vivo (reconstruido con VXX, desde mar-2017): en los 30 días en que dispara la salida, φ baja a 0.80. En conjunto φ = 0.90 (IC 95%: 0.83–0.96; 188 días de disparo en 2007–2024). Para comerse solo la mitad del día habría que salir al abrir Wall Street sabiendo ya cómo cerrará (φ de 0.44 en 2014–2024 y 0.58 en 2007–2013 es la cota, que ningún bot alcanza). Con φ = 0.90 solo sobrevive el ×1.5, con Sharpe 0.09 en 2014–2024 y 0.11 en 2007–2013; el ×2 muere el 11-nov-2016 (−0.53) y el ×3 también (−1.06).",
+   "en": "If the problem is reacting late, what about a filter that reacts within the day? A monitor that follows the live VIX and exits as soon as it crosses the threshold. φ (the fraction of the trigger day's move the bot ends up absorbing) is measured with hourly data instead of being assumed. On 3 out of 4 trigger days the signal is credit-only (HYG/LQD) and there is no intraday data for it (its best available substitute explains only 68% of its daily variation), so that signal only exists after the New York close. The VIX can be followed live (rebuilt from VXX, since Mar 2017): on the 30 days when it triggers the exit, φ drops to 0.80. Overall φ = 0.90 (95% CI: 0.83–0.96; 188 trigger days in 2007–2024). Absorbing only half of the day would require exiting at the Wall Street open while already knowing how it will close (φ of 0.44 in 2014–2024 and 0.58 in 2007–2013 is the bound, which no bot reaches). With φ = 0.90 only ×1.5 survives, with a Sharpe of 0.09 in 2014–2024 and 0.11 in 2007–2013; ×2 dies on Nov 11, 2016 (−0.53) and so does ×3 (−1.06).",
+   "pt": "Se o problema é reagir tarde, e um filtro que reage dentro do dia? Um monitor que acompanha o VIX ao vivo e sai assim que ele cruza o limite. φ (a fração do movimento do dia do disparo que o bot acaba absorvendo) é medida com dados horários em vez de suposta. Em 3 de cada 4 dias de disparo o sinal é só de crédito (HYG/LQD) e não há dados intradiários dele (o melhor substituto disponível explica só 68% da sua variação diária), então esse sinal só existe depois do fechamento de Nova York. O VIX pode ser acompanhado ao vivo (reconstruído com o VXX, desde mar-2017): nos 30 dias em que dispara a saída, φ cai para 0,80. No conjunto φ = 0,90 (IC 95%: 0,83–0,96; 188 dias de disparo em 2007–2024). Para absorver só metade do dia seria preciso sair na abertura de Wall Street já sabendo como ele vai fechar (φ de 0,44 em 2014–2024 e 0,58 em 2007–2013 é o limite, que nenhum bot alcança). Com φ = 0,90 só sobrevive o ×1,5, com Sharpe 0,09 em 2014–2024 e 0,11 em 2007–2013; o ×2 morre em 11-nov-2016 (−0,53) e o ×3 também (−1,06)."
   },
   "name": {
    "es": "Filtro reactivo intradía",
@@ -10810,32 +10846,37 @@
   "family": "bot",
   "date": "2026-06-10T14:06:02",
   "description": {
-   "es": "Bot que vigila el filtro macro en tiempo real (consulta el VIX cada 15 minutos) y cierra a media sesión el día que dispara; φ es la parte del movimiento de ese día que alcanza a comerse. Kill-switch de −3% y grilla de φ × apalancamiento en 2014–2024 y 2007–2013.",
-   "en": "Bot that watches the macro filter in real time (polls the VIX every 15 minutes) and closes mid-session on the day it fires; φ is the share of that day's move it ends up absorbing. −3% kill-switch and a φ × leverage grid in 2014–2024 and 2007–2013.",
-   "pt": "Bot que vigia o filtro macro em tempo real (consulta o VIX a cada 15 minutos) e fecha no meio da sessão no dia em que dispara; φ é a parte do movimento desse dia que acaba absorvendo. Kill-switch de −3% e grade de φ × alavancagem em 2014–2024 e 2007–2013."
+   "es": "Bot que vigila el filtro macro en tiempo real y sale cuando se dispara; φ es la parte del movimiento de ese día que alcanza a comerse y se mide con datos horarios de Dukascopy (VIX en vivo reconstruido con VXX y, para el crédito, el cierre de Nueva York) en lugar de suponerse. Kill-switch de −3% y grilla de apalancamiento (×1.5, ×2 y ×3) en 2014–2024 y 2007–2013.",
+   "en": "Bot that watches the macro filter in real time and exits when it fires; φ is the share of that day's move it ends up absorbing, measured with Dukascopy hourly data (live VIX rebuilt from VXX and, for credit, the New York close) instead of being assumed. −3% kill-switch and a leverage grid (×1.5, ×2 and ×3) in 2014–2024 and 2007–2013.",
+   "pt": "Bot que vigia o filtro macro em tempo real e sai quando ele dispara; φ é a parte do movimento desse dia que acaba absorvendo e é medida com dados horários da Dukascopy (VIX ao vivo reconstruído com o VXX e, para o crédito, o fechamento de Nova York) em vez de suposta. Kill-switch de −3% e grade de alavancagem (×1,5, ×2 e ×3) em 2014–2024 e 2007–2013."
   },
   "params": {
-   "mejor_phi": 0.5,
+   "phi_medido": 0.898,
    "mejor_lev": 1.5,
    "cap": 0.03,
    "slip": 0.002
   },
   "verdict": {
-   "es": "Parcial: con ×1.5 sobrevive 2007–2024 con Sharpe de 0.37 y 0.34 (+21.6% en 2014–2024), pero solo si el bot absorbe apenas la mitad del movimiento del día en que dispara el filtro (φ = 0.5, un supuesto sin medir): con rezago puro de un día (φ = 1) el Sharpe baja a 0.02 y 0.05. Además no bate a comprar y esperar en la misma cesta (Sharpe 0.47 y +58.9% en 2014–2024) y con ×3 muere (−1.11).",
-   "en": "Partial: at ×1.5 it survives 2007–2024 with Sharpes of 0.37 and 0.34 (+21.6% in 2014–2024), but only if the bot absorbs just half of the move on the day the filter fires (φ = 0.5, an unmeasured assumption): with a pure one-day lag (φ = 1) the Sharpe drops to 0.02 and 0.05. It also does not beat buy and hold on the same basket (Sharpe 0.47 and +58.9% in 2014–2024) and at ×3 it dies (−1.11).",
-   "pt": "Parcial: com ×1,5 sobrevive a 2007–2024 com Sharpe de 0,37 e 0,34 (+21,6% em 2014–2024), mas só se o bot absorver apenas metade do movimento do dia em que o filtro dispara (φ = 0,5, uma suposição não medida): com defasagem pura de um dia (φ = 1) o Sharpe cai para 0,02 e 0,05. Além disso, não bate comprar e esperar na mesma cesta (Sharpe 0,47 e +58,9% em 2014–2024) e com ×3 morre (−1,11)."
+   "es": "Parcial: con ×1.5 sobrevive 2007–2024, pero con Sharpe de 0.09 y 0.11 (+4.2% en 2014–2024), muy por debajo del 0.30 que pide el laboratorio. φ medido = 0.90 (IC 95%: 0.83–0.96), no el 0.5 que habría hecho falta para un Sharpe de 0.37. No bate a comprar y esperar en la misma cesta (Sharpe 0.47 y +58.9% en 2014–2024) y con ×2 o ×3 la cuenta muere (−0.53 y −1.06).",
+   "en": "Partial: at ×1.5 it survives 2007–2024, but with Sharpes of 0.09 and 0.11 (+4.2% in 2014–2024), far below the 0.30 the lab requires. Measured φ = 0.90 (95% CI: 0.83–0.96), not the 0.5 it would take to reach a Sharpe of 0.37. It does not beat buy and hold on the same basket (Sharpe 0.47 and +58.9% in 2014–2024) and at ×2 or ×3 the account dies (−0.53 and −1.06).",
+   "pt": "Parcial: com ×1,5 sobrevive a 2007–2024, mas com Sharpe de 0,09 e 0,11 (+4,2% em 2014–2024), muito abaixo dos 0,30 que o laboratório pede. φ medido = 0,90 (IC 95%: 0,83–0,96), não os 0,5 que seriam necessários para um Sharpe de 0,37. Não bate comprar e esperar na mesma cesta (Sharpe 0,47 e +58,9% em 2014–2024) e com ×2 ou ×3 a conta morre (−0,53 e −1,06)."
   },
   "notes": {
-   "es": "Con φ = 0.5 fue la primera configuración que sobrevivió con un Sharpe apreciable, pero solo hasta ×2. El resultado depende del φ supuesto, que no se midió: con φ = 0.75 el Sharpe baja a 0.20 y con φ = 1 (rezago puro de un día) a 0.02.",
-   "en": "With φ = 0.5 it was the first configuration that survived with a meaningful Sharpe, but only up to ×2. The result depends on the assumed φ, which was not measured: with φ = 0.75 the Sharpe drops to 0.20 and with φ = 1 (pure one-day lag) to 0.02.",
-   "pt": "Com φ = 0,5 foi a primeira configuração que sobreviveu com um Sharpe apreciável, mas só até ×2. O resultado depende do φ suposto, que não foi medido: com φ = 0,75 o Sharpe cai para 0,20 e com φ = 1 (defasagem pura de um dia) para 0,02."
+   "es": "φ se midió, no se supuso: 0.90 (IC 95%: 0.83–0.96). Con φ = 0.5 el Sharpe sería 0.37 y 0.34; con φ = 0.75, 0.20 y 0.19; con φ = 1 (rezago puro de un día), 0.02 y 0.05. Una regla de precio que sale si la cesta cae de 0.5 a 2 desviaciones logra φ de 0.46 a 0.94, pero sale en el 4–39% de los días sin disparo y, con 3 pb de costo por operación, su Sharpe es negativo (−0.77 a −0.01).",
+   "en": "φ was measured, not assumed: 0.90 (95% CI: 0.83–0.96). With φ = 0.5 the Sharpe would be 0.37 and 0.34; with φ = 0.75, 0.20 and 0.19; with φ = 1 (pure one-day lag), 0.02 and 0.05. A price rule that exits when the basket falls 0.5 to 2 standard deviations achieves φ of 0.46 to 0.94, but it exits on 4–39% of the non-trigger days and, with 3 bps of cost per trade, its Sharpe is negative (−0.77 to −0.01).",
+   "pt": "φ foi medido, não suposto: 0,90 (IC 95%: 0,83–0,96). Com φ = 0,5 o Sharpe seria 0,37 e 0,34; com φ = 0,75, 0,20 e 0,19; com φ = 1 (defasagem pura de um dia), 0,02 e 0,05. Uma regra de preço que sai se a cesta cai de 0,5 a 2 desvios consegue φ de 0,46 a 0,94, mas sai em 4–39% dos dias sem disparo e, com 3 pb de custo por operação, seu Sharpe é negativo (−0,77 a −0,01)."
   },
   "metrics": {
-   "Total Return [%]": 21.644224036310746,
-   "Sharpe Ratio": 0.3711481525234038,
-   "Max Drawdown [%]": -10.206546592165267,
-   "Sharpe OOS 07-13": 0.33654301242688794,
-   "Total Trades": 3203
+   "Total Return [%]": 4.155135328389004,
+   "Sharpe Ratio": 0.09182305608696312,
+   "Max Drawdown [%]": -11.577408251154308,
+   "Sharpe OOS 07-13": 0.11250275607242971,
+   "Total Trades": 3203,
+   "phi medido 14-24": 0.9023916442934611,
+   "phi medido 07-13": 0.8857113921332918,
+   "phi medido 07-24": 0.8975284347529162,
+   "Sharpe x2 14-24": -0.530610202208447,
+   "Sharpe x3 14-24": -1.05952956012966
   },
   "status": "neutral",
   "has_equity": true,
@@ -10853,7 +10894,7 @@
      "en": "Total return",
      "pt": "Retorno total"
     },
-    "value": "+21.6%",
+    "value": "+4.2%",
     "tone": "gain"
    },
    {
@@ -10862,7 +10903,7 @@
      "en": "Sharpe 2014–2024",
      "pt": "Sharpe 2014–2024"
     },
-    "value": "0.37"
+    "value": "0.09"
    },
    {
     "label": {
@@ -10870,7 +10911,7 @@
      "en": "Sharpe 2007–2013 (out of sample)",
      "pt": "Sharpe 2007–2013 (fora da amostra)"
     },
-    "value": "0.34"
+    "value": "0.11"
    },
    {
     "label": {
@@ -10878,33 +10919,42 @@
      "en": "Max drawdown",
      "pt": "Drawdown máximo"
     },
-    "value": "−10.2%",
+    "value": "−11.6%",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe con ×3",
-     "en": "Sharpe at ×3",
-     "pt": "Sharpe com ×3"
+     "es": "φ medido (2014–2024 / 2007–2013)",
+     "en": "Measured φ (2014–2024 / 2007–2013)",
+     "pt": "φ medido (2014–2024 / 2007–2013)"
     },
-    "value": "−1.11",
+    "value": "0.90 / 0.89"
+   },
+   {
+    "label": {
+     "es": "Sharpe con ×2 (la cuenta muere)",
+     "en": "Sharpe at ×2 (the account dies)",
+     "pt": "Sharpe com ×2 (a conta morre)"
+    },
+    "value": "−0.53",
     "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe con φ = 0.75",
-     "en": "Sharpe with φ = 0.75",
-     "pt": "Sharpe com φ = 0,75"
+     "es": "Sharpe con ×3 (la cuenta muere)",
+     "en": "Sharpe at ×3 (the account dies)",
+     "pt": "Sharpe com ×3 (a conta morre)"
     },
-    "value": "0.20"
+    "value": "−1.06",
+    "tone": "loss"
    },
    {
     "label": {
-     "es": "Sharpe con φ = 1 (rezago puro de 1 día)",
-     "en": "Sharpe with φ = 1 (pure 1-day lag)",
-     "pt": "Sharpe com φ = 1 (defasagem pura de 1 dia)"
+     "es": "Sharpe con φ = 0.5 (salida a media sesión, no respaldada por los datos)",
+     "en": "Sharpe with φ = 0.5 (mid-session exit, not supported by the data)",
+     "pt": "Sharpe com φ = 0,5 (saída no meio da sessão, não respaldada pelos dados)"
     },
-    "value": "0.02"
+    "value": "0.37"
    }
   ],
   "params_view": [
@@ -10914,7 +10964,7 @@
      "en": "φ (share of the trigger day absorbed)",
      "pt": "φ (parte do dia de disparo absorvida)"
     },
-    "value": "0.5"
+    "value": "0.90 (medido)"
    },
    {
     "label": {
@@ -10958,19 +11008,19 @@
    },
    {
     "label": {
-     "es": "Consulta del VIX",
-     "en": "VIX polling",
-     "pt": "Consulta do VIX"
+     "es": "Salida el día de disparo",
+     "en": "Exit on the trigger day",
+     "pt": "Saída no dia do disparo"
     },
-    "value": "Cada 15 minutos"
+    "value": "VIX en vivo (reconstruido con VXX) una hora después de cruzar; si no, al cierre de Nueva York"
    }
   ],
   "capital": {
    "warn": false,
    "note": {
-    "es": "Es la cartera del mejor ajuste (φ = 0.5, ×1.5), la misma que valida año por año #32. El día en que dispara el filtro asume que el bot absorbe solo la mitad del movimiento, un supuesto que habría que medir en real; con φ = 1 (rezago puro de un día) el mismo ×1.5 queda en Sharpe 0.02 y 0.05.",
-    "en": "This is the portfolio of the best setting (φ = 0.5, ×1.5), the same one #32 validates year by year. On the day the filter fires it assumes the bot absorbs only half of the move, an assumption that would have to be measured live; with φ = 1 (pure one-day lag) the same ×1.5 gets a Sharpe of 0.02 and 0.05.",
-    "pt": "É a carteira do melhor ajuste (φ = 0,5, ×1,5), a mesma que o #32 valida ano a ano. No dia em que o filtro dispara assume que o bot absorve só metade do movimento, uma suposição que precisaria ser medida na vida real; com φ = 1 (defasagem pura de um dia) o mesmo ×1,5 fica com Sharpe 0,02 e 0,05."
+    "es": "Es la cartera ×1.5 con las salidas medidas (φ = 0.90), la misma que valida año por año #32; es el único apalancamiento de la grilla que no revienta con las reglas de la prop firm (con ×2 la cuenta muere el 11-nov-2016). Si el bot pudiera salir a media sesión (φ = 0.5) el mismo ×1.5 daría Sharpe 0.37, pero los datos horarios no respaldan esa reacción.",
+    "en": "This is the ×1.5 portfolio with the measured exits (φ = 0.90), the same one #32 validates year by year; it is the only leverage in the grid that does not blow up under the prop firm rules (at ×2 the account dies on Nov 11, 2016). If the bot could exit mid-session (φ = 0.5) the same ×1.5 would get a Sharpe of 0.37, but the hourly data do not support that reaction.",
+    "pt": "É a carteira ×1,5 com as saídas medidas (φ = 0,90), a mesma que o #32 valida ano a ano; é a única alavancagem da grade que não quebra com as regras da prop firm (com ×2 a conta morre em 11-nov-2016). Se o bot pudesse sair no meio da sessão (φ = 0,5) o mesmo ×1,5 daria Sharpe 0,37, mas os dados horários não respaldam essa reação."
    }
   },
   "period": {

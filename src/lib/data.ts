@@ -81,6 +81,7 @@ export type LabData = {
   total: number;
   tested?: number;
   noop?: number;
+  dsr_max?: { value: number; id: string; name: string };
   survived: number;
   state: "running" | "stopped";
   bh_is?: number;
