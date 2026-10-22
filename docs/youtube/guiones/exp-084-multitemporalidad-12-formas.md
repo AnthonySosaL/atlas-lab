@@ -21,6 +21,10 @@ Fondo `#09090b`. Una montaña rusa dibujada con una curva real: sube en verde ha
 Esta estrategia sacó un Sharpe de 0.58 entre 2007 y 2013. En 2021–2024, esa misma forma dio −0.39. Otra, también con 0.58 en la primera época, dio −1.01 en la segunda. Probé 12 combinaciones de una idea que vi en un comentario de TikTok. Sobrevivieron 0.
 BOCETO: barras del `forms`: «EMA200 filtro + RSI4<15» 0.58 → −0.39 y «MA100 filtro + RSI3<15» 0.58 → −1.01; la barra verde cae a roja con golpe de bajo + sacudida. kb=in.
 
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #84 · Filtro multitemporalidad (MA superior + entrada inferior), 12 formas»)
+Este es el experimento #84 de ATLAS Lab: filtro multitemporalidad, media móvil superior y entrada inferior, 12 formas. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #84» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:45 — La idea]** (pantalla: texto de la idea)
 Viene de un comentario en TikTok, más fina que el video: la media móvil no sirve para decidir la entrada. Úsala solo como filtro de dirección, para saber quién manda, compradores o vendedores, en una temporalidad alta, y busca la entrada en una temporalidad más baja, sin entrar justo cuando se rompe la media. Es un enfoque de varias temporalidades y suena sensato.
 BOCETO: dos paneles ilustrativos (rotulados «ilustración»): arriba, gráfico lento con la media (dirección); abajo, gráfico rápido con la flecha de entrada. kb=out.
@@ -55,12 +59,16 @@ BOCETO: dos franjas de años, 2007–2013 en verde y 2021–2024 en rojo, con la
 Esta es la curva de la forma que mejor salió en el periodo de diseño, MA200 con RSI de 4 días menor que 20, sobre la cesta de 8 entre 2007 y 2024. Con 100,000 dólares gana 1,738. Comprar y esperar la misma cesta gana 14,407. Con 10,000 dólares serían unos +174 contra +1,441. Es lo que pasó, no una promesa.
 BOCETO: curvas reales de `series/extra-v84.json` (estrategia casi plana en verde pálido, «Sin estrategia» subiendo en blanco); contadores finales.
 
-**[6:25 — Conclusión y cierre]**
-Doce formas, ninguna sobrevive, máximo 2 de 5 filtros. La idea de varias temporalidades suena bien, pero en versión diaria no crea ventaja. El trading no se promete: se prueba. Todos los datos en atlas-lab-one.vercel.app, experimento 84. Contenido educativo, no es asesoría financiera.
+**[6:25 — Ficha del experimento #84]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 84. Estado: murió. Cifra clave: de 12 formas sobrevivieron 0, con un máximo de 2 de 5 filtros; algunas brillan hasta +0.58 en 2007–2013 y se hunden hasta −1.01 en 2021–2024. Filtro que decidió: el Deflated Sharpe, con un máximo de 0.01 cuando se exige 0.95. Lección: brillar en una época no es tener ventaja. Revísalo completo en atlas-lab-one.vercel.app/e/84.
+BOCETO: tarjeta con el número «#84», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/84» grande y resaltada en verde. kb=in.
+
+**[6:50 — Conclusión y cierre]**
+Doce formas, ninguna sobrevive, máximo 2 de 5 filtros. La idea de varias temporalidades suena bien, pero en versión diaria no crea ventaja. El trading no se promete: se prueba. Todos los datos en atlas-lab-one.vercel.app/e/84. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 52 s)
 
 **[0-3 s]** «Esta estrategia sacó 0.58 en una época y −1.01 en la siguiente.»
 BOCETO: barra verde 0.58 que cae a roja −1.01, sobre b-roll de gráfico (kb=in); golpe de bajo en la caída.
@@ -74,18 +82,24 @@ BOCETO: columna 2021–24 de la tabla en rojo, con −0.02 resaltado; cinco puer
 **[30-43 s]** «El Deflated Sharpe, el filtro contra la suerte, pedía 0.95. El máximo: 0.01. Cero sobrevivientes.»
 BOCETO: barra 0.01 contra línea 0.95; «0 / 12» rojo gigante con sacudida.
 
-**[43-48 s]** «El video completo está en el canal. Brilla en una época, se hunde en la otra: 0.58, menos 1.01.»
-BOCETO: texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «0.58, menos 1.01» vuelve al hook.
+**[43-52 s]** «El video completo está en el canal y experimento #84 completo en el enlace. Brilla en una época, se hunde en la otra: 0.58, menos 1.01.»
+BOCETO: texto final «Video completo en el canal · Experimento #84 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «0.58, menos 1.01» vuelve al hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/84?utm_source=youtube&utm_medium=video&utm_campaign=exp084-t1
+Ficha del experimento #84: murió · 12 formas, 0 sobrevivientes, máximo 2 de 5 filtros · algunas brillan hasta +0.58 en 2007–2013 y se hunden hasta −1.01 en 2021–2024 · Deflated Sharpe máximo 0.01 de 0.95.
 Probé la idea de un comentario de TikTok: usar la media móvil solo como filtro de dirección y buscar la entrada con una señal más rápida. Doce combinaciones (filtro MA/EMA 100/200 con RSI, cruce de EMAs, Donchian, momentum e IBS) sobre 7 pares de divisas y oro, versión diaria, con 5 filtros: 0 sobrevivieron y algunas pasan de +0.58 en 2007–2013 a −1.01 en 2021–2024.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #84)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/84?utm_source=youtube&utm_medium=short&utm_campaign=exp084-t1
+Ficha del experimento #84: murió · hasta +0.58 en una época y hasta −1.01 en otra · 0 de 12 sobreviven.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:45 La idea · 1:45 Cómo lo probé · 3:05 Resultados · 4:50 Por qué falla · 5:40 Con tu capital · 6:25 Conclusión
+0:00 Gancho · 0:20 Presentación · 0:45 La idea · 1:45 Cómo lo probé · 3:05 Resultados · 4:50 Por qué falla · 5:40 Con tu capital · 6:25 Ficha del experimento #84 · 6:50 Conclusión
 
 ## Etiquetas
 multitemporalidad, media móvil, filtro de tendencia, rsi, ibs, donchian, estrategia de tiktok, backtest, fuera de muestra, deflated sharpe, atlas lab, trading con datos

@@ -21,6 +21,10 @@ Fondo `#09090b`. Una fila de tier-list dorada con la etiqueta «S» y dos línea
 Un video de TikTok ordena métodos de trading en un ranking: excelente, medio, malo. En «excelente» pone operar con medias exponenciales a favor de la tendencia. Lo probé en 8 formas, con los mismos cinco filtros de siempre. Sobrevivieron 0. La mejor superó apenas 1 de los 5 filtros.
 BOCETO: tier-list animada (S/A/B) con la fila superior dorada; entra un sello rojo ✕ y el contador «0 / 8». kb=in. Texto: «Máximo de filtros: 1/5».
 
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #83 · EMAs a favor de la tendencia (ranking de TikTok), 8 formas»)
+Este es el experimento #83 de ATLAS Lab: EMAs a favor de la tendencia, el ranking de TikTok, 8 formas. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #83» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:45 — El método]** (pantalla: dos líneas de EMA)
 El autor del video dice que ese método fue lo que lo hizo rentable. Es concreto y comprobable. Una EMA, o media móvil exponencial, es un promedio de precios que pesa más los días recientes. Operar a favor de la tendencia significa comprar cuando el precio está sobre su EMA, o cuando una EMA rápida está sobre una lenta. Si eso fuera una ventaja, saldría en los datos.
 BOCETO: precio con una EMA rápida (verde) y una lenta (blanca); marca de compra cuando la rápida cruza hacia arriba (esquema ilustrativo, rotulado «ilustración»). kb=out.
@@ -58,12 +62,16 @@ BOCETO: curvas reales de `series/extra-v83.json` casi superpuestas (cruce 50/200
 **[7:10 — Conclusión]**
 Las 8 formas murieron, con un máximo de 1 de 5 filtros, y ninguna supera el Sharpe de 0.13 de comprar y esperar. El nivel «excelente» no resistió los datos. El trading no se promete: se prueba.
 
-**[7:40 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 83. Contenido educativo, no es asesoría financiera.
+**[7:40 — Ficha del experimento #83]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 83. Estado: murió. Cifra clave: ninguna de las 8 formas supera el Sharpe de 0.13 de comprar y esperar; la mejor da 0.10. Filtro que decidió: el Deflated Sharpe, con un máximo de 0.002 cuando se exige 0.95. Lección: un nivel «excelente» en un ranking no es una prueba. Revísalo completo en atlas-lab-one.vercel.app/e/83.
+BOCETO: tarjeta con el número «#83», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/83» grande y resaltada en verde. kb=in.
+
+**[8:05 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/83. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 51 s)
 
 **[0-3 s]** «Un TikTok pone esta estrategia en el nivel “excelente”. La probé: 0 de 8 sobreviven.»
 BOCETO: tier-list con la fila dorada y sello ✕ rojo sobre b-roll de gráfico (kb=in); contador «0/8».
@@ -77,18 +85,24 @@ BOCETO: cinco puertas; solo una se abre en verde; barra 0.002 contra 0.95; golpe
 **[30-43 s]** «Comprar y esperar da un Sharpe de 0.13. La mejor de las ocho, 0.10. Ninguna le gana.»
 BOCETO: barra blanca 0.13 y barra roja 0.10 por debajo; sello ✕.
 
-**[43-48 s]** «El video completo está en el canal. Nivel excelente… y no pasó ni dos filtros de cinco.»
-BOCETO: sello rojo sobre «excelente»; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «nivel excelente» vuelve al arranque.
+**[43-51 s]** «El video completo está en el canal y experimento #83 completo en el enlace. Nivel excelente… y no pasó ni dos filtros de cinco.»
+BOCETO: sello rojo sobre «excelente»; texto final «Video completo en el canal · Experimento #83 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «nivel excelente» vuelve al arranque.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/83?utm_source=youtube&utm_medium=video&utm_campaign=exp083-t1
+Ficha del experimento #83: murió · 8 formas, 0 sobrevivientes, máximo 1 de 5 filtros · mejor Sharpe 0.10 contra 0.13 de comprar y esperar · Deflated Sharpe máximo 0.002 de 0.95.
 Un TikTok tipo tier-list pone las medias exponenciales (EMA) a favor de la tendencia en el nivel «excelente». Las probé en 8 formas (EMA-trend 20/50/100/200 y cruces 9/21, 12/26, 20/50, 50/200) con 5 filtros, 3 puntos básicos de costo y señal del día siguiente: 0 sobrevivieron, máximo 1 de 5 filtros.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #83)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/83?utm_source=youtube&utm_medium=short&utm_campaign=exp083-t1
+Ficha del experimento #83: murió · la mejor de las 8 formas da 0.10 contra 0.13 de comprar y esperar.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:45 El método · 1:40 Cómo lo probé · 3:00 Resultados · 4:30 Por qué falla · 5:30 Más allá del backtest · 6:30 Con tu capital · 7:10 Conclusión
+0:00 Gancho · 0:20 Presentación · 0:45 El método · 1:40 Cómo lo probé · 3:00 Resultados · 4:30 Por qué falla · 5:30 Más allá del backtest · 6:30 Con tu capital · 7:10 Conclusión · 7:40 Ficha del experimento #83
 
 ## Etiquetas
 medias exponenciales, ema, golden cross, cruce de medias, seguimiento de tendencia, estrategia de tiktok, backtest, deflated sharpe, fuera de muestra, forex, atlas lab, trading con datos

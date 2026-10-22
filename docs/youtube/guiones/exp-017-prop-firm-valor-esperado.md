@@ -14,72 +14,80 @@ Fondo `#09090b`. Un calendario con «30 DÍAS» y un reloj de arena; al centro, 
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 6:16 min)
+## VIDEO LARGO (16:9, ≈ 6:58 min)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; los pasos de cada boceto van en orden. Fórmula del canal: b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte.
 
 **[0:00 — Gancho]** (pantalla: contador de intentos y dos cifras en rojo)
 Simulé 4,000 intentos de pasar un reto de prop firm —una empresa que te presta una cuenta si superas una prueba— con mi bot. Cada intento cuesta 500 dólares. En promedio, el resultado fue una pérdida de 429 dólares por intento. Y lo más raro: el filtro de pánico, que debía proteger al bot, empeoró el negocio. Sin filtro, la pérdida promedio era de 127 dólares. Te muestro por qué.
 > Boceto: contador 0 → 4,000 con cuadritos que se vuelven rojos; al final dos barras, «sin filtro −$127» y «con filtro −$429»; golpe de bass en la segunda.
 
-**[0:30 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
+**[0:30 — Presentación]** (pantalla: rótulo «Experimento #17 · Dinero real con filtro macro»)
+Este es el experimento #17 de ATLAS Lab: Dinero real con filtro macro. Todos los resultados están en la página del experimento.
+> Boceto: rótulo grande «EXPERIMENTO #17 · Dinero real con filtro macro» sobre velas de fondo con overlay oscuro; abajo, la URL pequeña «atlas-lab-one.vercel.app/e/17». Ken Burns «out».
+
+**[0:40 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
 Este experimento hereda el filtro macro de los experimentos 15 y 16 y lo conecta con la pregunta que más le interesa a quien busca un fondeo: cuánto dinero esperas ganar o perder. Más adelante, el experimento 27 prueba si ese filtro se puede ejecutar con la señal de ayer.
 > Boceto: línea con los puntos #15 al #30; el #17 se ilumina y une con una flecha al #16 (filtro) y al #27 (señal de ayer); texto «de la curva al negocio».
 
-**[0:51 — Cómo funciona el negocio de las prop firms]** (pantalla: línea de tiempo del reto)
+**[1:01 — Cómo funciona el negocio de las prop firms]** (pantalla: línea de tiempo del reto)
 Una prop firm te vende un reto. Pagas una cuota, aquí 500 dólares, y tienes 30 días para ganar 10% sin perder más de 10% del capital inicial ni más de 5% en un solo día. Si pasas, te dan una cuenta fondeada, con dinero de la empresa, donde ya puedes cobrar pagos. Si fallas, pierdes la cuota. La pregunta es simple: ¿cuánto ganas o pierdes, en promedio, por cada intento?
 > Boceto: línea de tiempo de 30 días con una meta «+10%» y dos muros rojos «−10%» y «−5% / día»; flecha verde hacia «cuenta fondeada» y flecha roja hacia «cuota perdida».
 
-**[1:21 — El valor esperado en 30 segundos]** (pantalla: dos monedas y una balanza)
+**[1:31 — El valor esperado en 30 segundos]** (pantalla: dos monedas y una balanza)
 Eso se llama valor esperado: el resultado promedio si repitieras el negocio miles de veces. Se calcula con la probabilidad de pasar el reto y con lo que cobrarías si pasas, menos la cuota. Para estimarlo tomé los retornos diarios reales del bot entre 2014 y 2024, con y sin el filtro macro, y mezclé bloques de días para simular 4,000 retos: el reto a ×3 con límite de 30 días y la cuenta fondeada a ×2.
 > Boceto: fórmula animada «P(pasar) × cobro − cuota»; bloques de la curva real de `series/…v17.json` barajándose como cartas; texto «4,000 simulaciones».
 
-**[1:53 — Cómo se simulan 4,000 retos]** (pantalla: bloques de días que se barajan)
+**[2:03 — Cómo se simulan 4,000 retos]** (pantalla: bloques de días que se barajan)
 Con una sola historia real no se pueden simular miles de intentos, así que se barajan trozos de esa historia. Se toman bloques de días consecutivos, para conservar las rachas y las calmas, y se pegan en un orden distinto. Así sale una versión alternativa de los diez años. Se repite 4,000 veces, y en cada una se mira si el reto se pasa o no dentro del plazo.
 > Boceto: la curva real cortada en bloques de colores que se reordenan; cada reordenación produce una curva nueva con un semáforo (pasa o no pasa) y un contador hasta 4,000.
 
-**[2:22 — Cómo se probó]** (pantalla: checklist de filtros)
+**[2:32 — Cómo se probó]** (pantalla: checklist de filtros)
 El criterio del experimento: el valor esperado debía ser positivo y mayor que el de operar sin filtro. Tres aclaraciones: no se aplicó una prueba fuera de muestra, es decir, con datos que el bot nunca vio, los retornos del bot salen del motor del experimento 16, que no descuenta costos de mercado, y el filtro hereda la señal del cierre del mismo día, información que un bot real no tendría.
 > Boceto: checklist tomada de `exp_details.json`: «Valor esperado > 0 y > sin filtro: FALLA», «Señal rezagada 1 día: FALLA» (sello rojo), «Fuera de muestra: no aplicado».
 
-**[2:52 — Resultados]** (pantalla: tarjetas de KPI)
+**[3:02 — Resultados]** (pantalla: tarjetas de KPI)
 Con filtro, la probabilidad de pasar el reto en 30 días es de 0.6%. El valor esperado: menos 429 dólares por intento. Sin filtro: menos 127. En la fase fondeada, el cobro esperado es de 12,322 dólares, y la probabilidad de cobrar al menos un pago es de 99%.
 > Boceto: cuatro tarjetas con tick (0.6% · −$429 · −$127 · $12,322 · 99%); las dos barras de valor esperado en rojo, la de −$429 más larga.
 
-**[3:13 — La paradoja]** (pantalla: embudo)
+**[3:23 — La paradoja]** (pantalla: embudo)
 Fíjate en el contraste. Si logras pasar el reto, es casi seguro que cobras: 99%, y el cobro esperado es de 12,322 dólares. El problema no es cobrar, es llegar. Con 0.6% de probabilidad de pasar, casi nadie llega.
 > Boceto: embudo estrecho: arriba «intentos», en el cuello «0.6% pasa», abajo «99% cobra al menos un pago»; el cuello brilla en rojo.
 
-**[3:30 — El plazo manda]** (pantalla: barras de probabilidad)
+**[3:40 — El plazo manda]** (pantalla: barras de probabilidad)
 ¿Por qué tan bajo? Porque el filtro pasa mucho tiempo fuera del mercado, y fuera del mercado no se ganan 10%. Con ×3 y 30 días: 0.6%. Con ×4 y 30 días: 3.3%. Con ×3 y 60 días: 6%. Y sin límite de tiempo, la probabilidad sube a alrededor de 89% con ×3 y 82% con ×4. El factor decisivo del negocio no es el filtro: es el plazo.
 > Boceto: barras horizontales que crecen en orden (0.6% · 3.3% · 6% · ≈89% · 82%) con el reloj de 30 días a un lado; las dos últimas en gris con el sello «sin plazo».
 
-**[4:00 — La advertencia]** (pantalla: aviso ámbar)
+**[4:10 — La advertencia]** (pantalla: aviso ámbar)
 Y cuidado con esas cifras sin límite de tiempo: usan el cierre del mismo día, información que un bot real no tiene al decidir. Por eso no son una conclusión operativa. Con la señal de ayer, la base muere, como verás en el experimento 27.
 > Boceto: aviso ámbar «información del mismo día» sobre las barras grises; cuadro pequeño con «señal de ayer: ver #27».
 
-**[4:19 — Qué haría falta para creerle]** (pantalla: tres candados)
+**[4:29 — Qué haría falta para creerle]** (pantalla: tres candados)
 Para creer estas cifras haría falta que el filtro decidiera con la señal de ayer, que los retornos incluyeran costos y que el resultado se repitiera fuera de muestra. Ninguna de las tres cosas se cumple aquí. Por eso lo útil de este experimento no es la cifra exacta, sino la forma: en un reto con plazo, un filtro que te saca del mercado juega en contra.
 > Boceto: tres candados que se abren uno por uno y quedan cerrados en rojo («señal de ayer», «costos», «fuera de muestra»); frase «la forma importa más que la cifra».
 
-**[4:47 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
+**[4:57 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
 La tarjeta del sitio muestra la curva de la cartera con filtro: con 10,000 dólares, +$5,593; con 100,000, +$55,935. Sin estrategia, comprando y esperando, serían +$5,904 y +$59,039. Pero esa curva no mide el negocio de fondeo: el negocio da menos 429 dólares por intento, y además depende de información del mismo día.
 > Boceto: tarjeta «Con tu capital» del sitio con el selector $10,000 / $100,000; curva de la estrategia frente a la gris «Sin estrategia»; aviso ámbar.
 
-**[5:10 — Lo que sí aporta este experimento]** (pantalla: regla práctica)
+**[5:20 — Lo que sí aporta este experimento]** (pantalla: regla práctica)
 Aunque la cifra no sea operativa, deja una regla útil para cualquier reto: calcula primero el plazo. El mismo bot pasa de 0.6% a 6% de probabilidad al duplicar el plazo, de 30 a 60 días. Cuando un reto tiene un límite de tiempo, la estrategia que más te saca del mercado es la que menos tiempo te deja para llegar.
 > Boceto: dos relojes, «30 días: 0.6%» y «60 días: 6%», con una flecha entre ambos; texto «primero calcula el plazo».
 
-**[5:36 — Conclusión]** (pantalla: texto grande)
+**[5:46 — Conclusión]** (pantalla: texto grande)
 No sirvió. El valor esperado fue de −429 dólares por intento, peor que los −127 sin filtro. Un filtro que te saca del mercado no llega a 10% en 30 días: en el negocio de los retos, el tiempo es parte del precio. Y eso, antes de preguntar si el bot puede operar con la señal de ayer.
 > Boceto: sello rojo «NO SIRVIÓ» sobre las barras; luego la frase «El trading no se promete: se prueba».
 
-**[6:01 — Cierre]** (pantalla: logo y enlace)
-En el siguiente video, qué pasa si el bot rota a oro y yen en lugar de quedarse en efectivo: el experimento 18. Todos los datos en atlas-lab-one.vercel.app, experimento 17. Contenido educativo, no es asesoría financiera.
+**[6:11 — Ficha del experimento #17]** (pantalla: tarjeta con la URL)
+Ficha del experimento 17. Estado: murió (veredicto del sitio: «No sirvió»). Cifra clave: valor esperado de menos 429 dólares por intento (sin filtro, menos 127) y 0.6% de probabilidad de pasar el reto en 30 días. Filtro que decidió: el criterio de valor esperado positivo y mayor que sin filtro, que falla. Lección: en los retos el tiempo es parte del precio; un filtro que pasa mucho tiempo fuera del mercado no llega al 10% en 30 días. Revísalo completo en atlas-lab-one.vercel.app/e/17.
+> Boceto: tarjeta oscura con el estado del experimento #17 arriba, las cifras clave en el centro y «atlas-lab-one.vercel.app/e/17» en grande al pie; las líneas de la ficha entran una a una; logo ATLAS.
+
+**[6:43 — Cierre]** (pantalla: logo y enlace)
+En el siguiente video, qué pasa si el bot rota a oro y yen en lugar de quedarse en efectivo: el experimento 18. Todos los datos en atlas-lab-one.vercel.app/e/17. Contenido educativo, no es asesoría financiera.
 > Boceto: pantalla final con enlace y logo ATLAS; fondo de velas animadas con opacidad 0.12.
 
 ---
 
-## SHORT (9:16, ≈ 43 s)
+## SHORT (9:16, ≈ 45 s)
 Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s y en el «0.6%»; ticker arriba, viñeta y velas con opacidad ≤ 0.12.
 
 **[0-2 s]** "500 dólares por intento. Pérdida promedio: 429."
@@ -96,16 +104,21 @@ Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternan
 > Boceto: curva plana (fuera del mercado) frente a la meta +10%; dos barras, −$127 y −$429.
 **[31-37 s]** "Con 60 días, la probabilidad sube a 6%. El plazo manda. El trading no se promete: se prueba."
 > Boceto: reloj 30 → 60 días y la barra «6%» creciendo; frase de marca.
-**[37-43 s]** "El video completo está en el canal. No es asesoría financiera. Antes de pagar un reto, recuerda:"
-> Boceto: logo ATLAS; corte directo al inicio (loop).
+**[37-45 s]** "El video completo está en el canal. Experimento #17 completo en el enlace. No es asesoría financiera. Antes de pagar un reto, recuerda:"
+> Boceto: logo ATLAS; corte directo al inicio (loop); texto «Experimento #17 completo en el enlace».
 
-## Descripción (YouTube)
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/17?utm_source=youtube&utm_medium=video&utm_campaign=exp017-t1
+Ficha del experimento #17 (Dinero real con filtro macro): estado murió · valor esperado −$429 por intento (sin filtro −$127) · 0.6% de pasar en 30 días · cobro esperado de $12,322.
 Simulé 4,000 retos de prop firm (30 días, cuota de $500) con los retornos del bot ATLAS entre 2014 y 2024: con filtro macro la probabilidad de pasar fue de 0.6% y el valor esperado, −$429 por intento (sin filtro, −$127).
 Si se pasa, el cobro esperado es de $12,322, pero el plazo es el factor decisivo.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #17)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:30 Dónde encaja en la serie · 0:51 Cómo funciona el negocio de las prop firms · 1:21 El valor esperado en 30 segundos · 1:53 Cómo se simulan 4,000 retos · 2:22 Cómo se probó · 2:52 Resultados · 3:13 La paradoja · 3:30 El plazo manda · 4:00 La advertencia · 4:19 Qué haría falta para creerle · 4:47 Con tu capital · 5:10 Lo que sí aporta este experimento · 5:36 Conclusión · 6:01 Cierre
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/17?utm_source=youtube&utm_medium=short&utm_campaign=exp017-t1
+Experimento #17 · murió · −$429 por intento y 0.6% de pasar el reto en 30 días. No es asesoría financiera.
+
+Capítulos: 0:00 Gancho · 0:30 Presentación · 0:40 Dónde encaja en la serie · 1:01 Cómo funciona el negocio de las prop firms · 1:31 El valor esperado en 30 segundos · 2:03 Cómo se simulan 4,000 retos · 2:32 Cómo se probó · 3:02 Resultados · 3:23 La paradoja · 3:40 El plazo manda · 4:10 La advertencia · 4:29 Qué haría falta para creerle · 4:57 Con tu capital · 5:20 Lo que sí aporta este experimento · 5:46 Conclusión · 6:11 Ficha del experimento #17 · 6:43 Cierre
 
 Etiquetas: prop firm, reto de fondeo, valor esperado, simulación Monte Carlo, bot de trading, trading con datos, backtest, probabilidad de pasar, cuenta fondeada, riesgo, ATLAS Lab, trading algorítmico
 

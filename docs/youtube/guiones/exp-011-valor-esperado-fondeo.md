@@ -15,48 +15,56 @@ Fondo negro de la marca. Texto gigante: «+$5,919» en verde. Debajo, en rojo y 
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 4:49 min — 4–6 min: experimento de una sola idea y pocas cifras)
+## VIDEO LARGO (16:9, ≈ 5:30 min — 4–6 min: experimento de una sola idea y pocas cifras)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte, golpe de bass solo en el momento clave.
 
 **[0:00 — Gancho]** (pantalla: «+$5,919» verde y «79%»)
 +5,919 dólares por intento. Eso es lo que sale de mi simulación del negocio completo de una empresa de fondeo, con un 79% de probabilidad de cobrar al menos un pago. Parece un negocio redondo. Pero hay una razón por la que este experimento tiene el veredicto parcial, y es lo más importante de este video: de dónde sale ese número, y qué pasó cuando lo comparé con el camino real.
 > Boceto: contador de 0 a +$5,919 verde con sonido de caja registradora; al final aparece un sello ámbar «PARCIAL» y la cifra «79%» parpadea. Ken Burns «in» sobre b-roll de una pantalla de trading.
 
-**[0:29 — El negocio completo]** (pantalla: diagrama de dos fases)
+**[0:29 — Presentación]** (pantalla: rótulo «Experimento #11 · Valor esperado real de prop firm (desafío + fondeo)»)
+Este es el experimento #11 de ATLAS Lab: Valor esperado real de prop firm (desafío + fondeo). Todos los resultados están en la página del experimento.
+> Boceto: rótulo grande «EXPERIMENTO #11 · Valor esperado real de prop firm (desafío + fondeo)» sobre velas de fondo con overlay oscuro; abajo, la URL pequeña «atlas-lab-one.vercel.app/e/11». Ken Burns «out».
+
+**[0:39 — El negocio completo]** (pantalla: diagrama de dos fases)
 El negocio tiene dos fases. Primera: pagas 500 dólares por el examen y lo intentas con apalancamiento ×4, que en el experimento anterior pasaba el 47.9% de las veces. Segunda: si pasas, operas una cuenta fondeada de 100,000 dólares con una caída máxima permitida de 10%, una pérdida diaria de 5% y un reparto en el que te quedas con el 80% de las ganancias, con retiros cada 21 días durante hasta 24 meses. En esa fase pruebo apalancamientos de ×1 a ×4. Es, traducido a números, el modelo de negocio de una empresa de fondeo.
 > Boceto: diagrama: «Fase 1: cuota $500 · ×4 · 47.9%» → «Fase 2: cuenta $100,000 · reparto 80% · retiros cada 21 días». Tarjeta `params_view` con los valores.
 
-**[1:09 — Cómo se calculó]** (pantalla: Monte Carlo por bloques)
+**[1:19 — Cómo se calculó]** (pantalla: Monte Carlo por bloques)
 Es un Monte Carlo: tomo los retornos de la cesta de 2019 a 2024 y los remuestreo por bloques para simular miles de caminos de la cuenta fondeada. En cada camino, la cuenta opera, y cada 21 días se retira la parte que te toca si hay ganancias; si toca uno de los límites, la cuenta se pierde. Calculo cuánto cobrarías en promedio y combino eso con la probabilidad de pasar el examen y con la cuota de 500 dólares. El modelo supone que los bloques de días son independientes entre sí, y no incluye costos de operación.
 > Boceto: curva real (series, curva 1) partida en bloques que se barajan; sobre ellos, una fórmula animada «prob. de pasar × cobro esperado − cuota → valor esperado».
 
-**[1:49 — Resultados]** (pantalla: tarjetas KPI)
+**[1:59 — Resultados]** (pantalla: tarjetas KPI)
 El mejor caso es operar la cuenta fondeada con ×2. El cobro esperado en la fase fondeada es de 13,402 dólares, la probabilidad de cobrar al menos un pago es del 79%, y de ahí sale un valor esperado de +5,919 dólares por intento, ya restando la cuota. Con otros apalancamientos fondeados, ×1, ×3 o ×4, el valor esperado era menor. Un apalancamiento moderado en la cuenta fondeada resulta mejor que uno agresivo: el dinero está en sobrevivir para cobrar varios pagos.
 > Boceto: `kpis` en cascada (valor esperado +$5,919, pasar 47.9%, mejor apalancamiento fondeado ×2, cobro esperado $13,402, algún pago 79%, cuenta $100,000).
 
-**[2:23 — Cómo leer un valor esperado]** (pantalla: dado con resultados)
+**[2:33 — Cómo leer un valor esperado]** (pantalla: dado con resultados)
 Un valor esperado es un promedio ponderado de todos los resultados posibles. +5,919 por intento no significa que ganarás eso cada vez: significa que, si repitieras el negocio muchísimas veces dentro de este modelo, ese sería el promedio. Algunos intentos perderían la cuota de 500 y nada más; otros cobrarían bastante más. Y no es un resultado del mercado real, es el resultado de un modelo con supuestos. Por eso importa tanto saber qué supone.
 > Boceto: un dado con caras «−$500», «+$13,402»… que gira y se detiene en una barra promedio «+$5,919»; texto «Promedio de un modelo, no un resultado garantizado».
 
-**[2:54 — De dónde sale ese número]** (pantalla: curva ascendente de la cesta)
+**[3:04 — De dónde sale ese número]** (pantalla: curva ascendente de la cesta)
 Aquí está lo importante. El propio experimento lo dice: ese valor esperado sale solo de la subida general de la cesta en 2019-2024, un periodo alcista, aprovechada con el capital de la empresa de fondeo. No es una ventaja propia, es la subida del mercado con dinero ajeno. No hay muestra fuera de ese periodo; la prueba con mercados malos se hizo aparte, en el experimento 12. Si el mercado hubiera estado de lado o a la baja, esta cifra no existiría.
 > Boceto: la curva real de la cesta subiendo con el texto «Beta: la subida del mercado, no ventaja propia»; sello ámbar «Solo 2019-2024».
 
-**[3:28 — Qué pasó en el camino real]** (pantalla: curva de la cuenta cortada)
+**[3:38 — Qué pasó en el camino real]** (pantalla: curva de la cuenta cortada)
 Y hay una prueba que lo contradice. En el experimento 13 probé una cuenta a ×2 sobre el camino histórico real, no sobre un remuestreo, y reventó en el COVID. Un Monte Carlo por bloques puede subestimar una caída larga y simultánea de muchos activos. Dos formas de mirar lo mismo: en el papel, +5,919; en el camino real, cuenta reventada.
 > Boceto: pantalla dividida: izquierda «Simulación: +$5,919»; derecha curva real que se corta en marzo de 2020 con sello rojo «CUENTA REVENTADA (#13)».
 
-**[3:53 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
+**[4:03 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
 Con 10,000 dólares, la curva base sin apalancar daría más 5,761, frente a más 5,175 de la cesta sin estrategia. Con 100,000, la tabla de ATLAS da más 57,609 contra más 51,747. Ojo: el experimento aplica ×4 al examen y ×2 a la cuenta fondeada, que esa curva no muestra, y todo depende de que la cesta suba como entonces.
 > Boceto: tarjeta de capital con aviso ámbar y las dos cifras en verde atenuado; selector $10,000 / $100,000.
 
-**[4:18 — Conclusión y cierre]**
-Veredicto: parcial. En simulación, +5,919 dólares por intento y 79% de cobrar un pago; en la realidad, el camino real reventó en el COVID. El dinero está en sobrevivir la fase fondeada con un tamaño conservador, no en pasar el examen. En el siguiente experimento pongo a prueba el negocio en cuatro mercados malos. Todos los datos en atlas-lab-one.vercel.app, experimento 11. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[4:28 — Ficha del experimento #11]** (pantalla: tarjeta con la URL)
+Ficha del experimento 11. Estado: parcial. Cifra clave: valor esperado simulado de más 5,919 dólares por intento, con fondeo a ×2 y 79% de probabilidad de cobrar al menos un pago. Filtros que decidieron: el criterio de valor esperado positivo se cumplió, pero sale solo de la subida de la cesta en 2019-2024, y el camino real del experimento 13 reventó en el COVID. Lección: el dinero está en sobrevivir la fase fondeada con un tamaño conservador. Revísalo completo en atlas-lab-one.vercel.app/e/11.
+> Boceto: tarjeta oscura con el estado del experimento #11 arriba, las cifras clave en el centro y «atlas-lab-one.vercel.app/e/11» en grande al pie; las líneas de la ficha entran una a una; logo ATLAS.
+
+**[4:59 — Conclusión y cierre]**
+Veredicto: parcial. En simulación, +5,919 dólares por intento y 79% de cobrar un pago; en la realidad, el camino real reventó en el COVID. El dinero está en sobrevivir la fase fondeada con un tamaño conservador, no en pasar el examen. En el siguiente experimento pongo a prueba el negocio en cuatro mercados malos. Todos los datos en atlas-lab-one.vercel.app/e/11. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 > Boceto: sello «PARCIAL»; frase de marca, logo y URL.
 
 ---
 
-## SHORT (9:16, ≈ 47 s)
+## SHORT (9:16, ≈ 49 s)
 Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s; ticker arriba.
 
 **[0-3 s]** «+5,919 dólares por intento de fondeo. Eso decía mi simulación.»
@@ -67,15 +75,20 @@ Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/o
 > Boceto: barras 47.9% y 79%; cifra $13,402; tarjeta de valor esperado; whoosh y flash blanco.
 **[24-36 s]** «Pero ese número sale solo de que la cesta subió en 2019-2024, con capital ajeno. No es una ventaja propia. Y no hay muestra fuera de ese periodo.»
 > Boceto: curva real de la cesta subiendo con «Beta, no ventaja»; sello ámbar «Solo 2019-2024»; Ken Burns «in».
-**[36-47 s]** «En la prueba real, la cuenta a ×2 reventó en el COVID. En el papel, +5,919. En la realidad, cuenta reventada. El video completo está en el canal. No es asesoría financiera.»
-> Boceto: el «+$5,919» del inicio se parte con una grieta roja (loop con el gancho); texto «Video completo en el canal» y logo.
+**[36-49 s]** «En la prueba real, la cuenta a ×2 reventó en el COVID. En el papel, +5,919. En la realidad, cuenta reventada. El video completo está en el canal. Experimento #11 completo en el enlace. No es asesoría financiera.»
+> Boceto: el «+$5,919» del inicio se parte con una grieta roja (loop con el gancho); textos «Video completo en el canal» y «Experimento #11 completo en el enlace»; logo.
 
-## Descripción (YouTube)
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/11?utm_source=youtube&utm_medium=video&utm_campaign=exp011-t1
+Ficha del experimento #11 (Valor esperado real de prop firm (desafío + fondeo)): estado parcial · valor esperado simulado de +$5,919 por intento · 79% de cobrar al menos un pago · cobro esperado de $13,402.
 Simulación Monte Carlo del negocio completo de una prop firm: examen a ×4 (47.9% de pasar, cuota $500) y cuenta fondeada de $100,000 con reparto del 80%. Resultado simulado: +$5,919 por intento (fondeo a ×2), 79% de cobrar al menos un pago. Explico por qué ese valor sale solo de la subida de la cesta en 2019-2024 y por qué el camino real reventó en el COVID.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #11)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:29 El negocio completo · 1:09 Cómo se calculó · 1:49 Resultados · 2:23 Cómo leer un valor esperado · 2:54 De dónde sale ese número · 3:28 Qué pasó en el camino real · 3:53 Con tu capital · 4:18 Conclusión y cierre
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/11?utm_source=youtube&utm_medium=short&utm_campaign=exp011-t1
+Experimento #11 · parcial · +$5,919 por intento en simulación, pero el camino real reventó en el COVID. No es asesoría financiera.
+
+Capítulos: 0:00 Gancho · 0:29 Presentación · 0:39 El negocio completo · 1:19 Cómo se calculó · 1:59 Resultados · 2:33 Cómo leer un valor esperado · 3:04 De dónde sale ese número · 3:38 Qué pasó en el camino real · 4:03 Con tu capital · 4:28 Ficha del experimento #11 · 4:59 Conclusión y cierre
 
 Etiquetas: prop firm, cuenta fondeada, FTMO, valor esperado, Monte Carlo, challenge de fondeo, gestión de riesgo, apalancamiento, simulación de trading, ATLAS Lab, trading con datos, drawdown
 

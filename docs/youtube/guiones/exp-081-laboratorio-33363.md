@@ -21,6 +21,10 @@ Fondo `#09090b`. Una cuadrícula densa de puntos rojos (cada punto, una estrateg
 Dejé una máquina inventando y probando estrategias de trading durante una noche entera. En total, el registro llegó a 34,751 estrategias distintas, y 33,363 se probaron de verdad. Por la mañana, ¿cuántas habían superado los cinco filtros? Cero. Y ese cero es lo más útil que he aprendido.
 BOCETO: contador animado 0 → 33,363 sobre b-roll de servidores (kb=in); al llegar, se congela y aparece «0» rojo gigante con sacudida. Texto: «Sobrevivieron: 0».
 
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #81 · Laboratorio automático: 33,363 estrategias probadas con 5 filtros»)
+Este es el experimento #81 de ATLAS Lab: laboratorio automático, 33,363 estrategias probadas con 5 filtros. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #81» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:45 — Qué construí]** (pantalla: diagrama semillas → modelo → explorador → motor)
 Un laboratorio automático con tres fuentes de ideas. Unas semillas clásicas: medias móviles, Donchian, momentum, RSI, IBS, Double Seven y combinaciones. Un modelo de lenguaje, DeepSeek y Qwen, que propone variantes. Y un explorador que garantiza novedad sin fin, con una huella para que ninguna estrategia se repita. Cada idea se convierte en una especificación y un motor fijo la prueba siempre igual. La corrida de esa noche agregó 33,016 estrategias nuevas a 1,735 de pruebas anteriores: 34,751 únicas. De ellas, 1,388 casi nunca operaron, y el motor no las cuenta como intento. Quedan 33,363.
 BOCETO: diagrama de tres cajas que desembocan en un embudo «motor fijo». Cuadro de cuentas: 33,016 + 1,735 = 34,751 → −1,388 «casi nunca operaron» → 33,363. kb=out.
@@ -60,8 +64,12 @@ BOCETO: tarjeta de capital con el texto de `capital.note` y un «—» grande do
 **[8:40 — La lección]**
 Si alguien te enseña la mejor de muchas pruebas sin decirte cuántas hizo, te está enseñando ruido. Es lo que insiste López de Prado, investigador de finanzas cuantitativas: minar miles de estrategias garantiza falsos positivos, y solo el ajuste por pruebas múltiples los atrapa. Mi conclusión: en esta cesta, con datos diarios y reglas simples, no encontré ventaja explotable. El trading no se promete: se prueba.
 
-**[9:30 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 81. El siguiente video explica el Deflated Sharpe paso a paso. Contenido educativo, no es asesoría financiera.
+**[9:30 — Ficha del experimento #81]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 81. Estado: murió. Cifra clave: de 33,363 estrategias probadas, sobrevivieron 0; el máximo fue 4 de 5 filtros. Filtro que decidió: el Deflated Sharpe, con un máximo de 0.31 cuando se exige 0.95. Lección: antes de creer en una estrategia, pregunta cuántas se probaron. Revísalo completo en atlas-lab-one.vercel.app/e/81.
+BOCETO: tarjeta con el número «#81», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/81» grande y resaltada en verde. kb=in.
+
+**[9:50 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/81. El siguiente video explica el Deflated Sharpe paso a paso. Contenido educativo, no es asesoría financiera.
 
 ---
 
@@ -79,18 +87,24 @@ BOCETO: cinco puertas que se abren en secuencia con tick en cada una; los puntos
 **[30-43 s]** «Las mejores pasaron cuatro de cinco. El Deflated Sharpe, el filtro contra la suerte, pedía 0.95. El máximo fue 0.31.»
 BOCETO: barra 0.31 contra la línea 0.95; golpe de bajo + sacudida en 0.31.
 
-**[43-50 s]** «El video completo está en el canal. Cero: de 33,363, ninguna sobrevivió.»
-BOCETO: «0» rojo gigante que late; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «Cero» responde la pregunta inicial.
+**[43-50 s]** «El video completo está en el canal y experimento #81 completo en el enlace. Cero: de 33,363, ninguna sobrevivió.»
+BOCETO: «0» rojo gigante que late; texto final «Video completo en el canal · Experimento #81 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «Cero» responde la pregunta inicial.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/81?utm_source=youtube&utm_medium=video&utm_campaign=exp081-t1
+Ficha del experimento #81: murió · 33,363 estrategias probadas, 0 sobrevivieron · Deflated Sharpe máximo 0.31 de 0.95 exigido · máximo de filtros superados: 4/5.
 Un laboratorio automático generó 34,751 estrategias únicas de trading; 33,363 se probaron de verdad (las otras 1,388 casi nunca operaron) contra 5 filtros: dos pruebas fuera de muestra, Deflated Sharpe, Monte Carlo de 5000 permutaciones y batir a comprar y esperar. Sobrevivieron 0; el Deflated Sharpe máximo fue 0.31 de 0.95.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #81)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/81?utm_source=youtube&utm_medium=short&utm_campaign=exp081-t1
+Ficha del experimento #81: murió · 0 de 33,363 sobrevivieron · Deflated Sharpe máximo 0.31 de 0.95.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:45 Qué construí · 2:00 Las reglas · 2:45 Los 5 filtros · 4:50 El resultado · 6:00 El filtro que nadie pasó · 7:10 Lo único real · 8:10 Con tu capital · 8:40 La lección
+0:00 Gancho · 0:20 Presentación · 0:45 Qué construí · 2:00 Las reglas · 2:45 Los 5 filtros · 4:50 El resultado · 6:00 El filtro que nadie pasó · 7:10 Lo único real · 8:10 Con tu capital · 8:40 La lección · 9:30 Ficha del experimento #81
 
 ## Etiquetas
 33363 estrategias, laboratorio de trading, deflated sharpe, sobreajuste, backtest, monte carlo, fuera de muestra, minería de estrategias, lópez de prado, trading con datos, atlas lab, estrategias de trading

@@ -21,6 +21,10 @@ Fondo `#09090b`. Una fila de 50 mini-curvas, cada una con una ✕ roja. Texto gr
 Tomé las 50 mejores estrategias de las 33,363 que probé y las puse en un challenge de fondeo: esas pruebas que te dan una cuenta grande si las superas. Sin apalancamiento, pasan 0.0%. Con apalancamiento x5, la mejor pasa el 3.5% de las veces… y revienta la cuenta el 4.7%. Pierde más veces de las que gana.
 BOCETO: 50 mini-curvas en cuadrícula; una a una se tachan con ✕ roja; al final, texto «0.0%». Luego dos barras: 3.5% verde y 4.7% rojo (del `chart` de la ficha). kb=in.
 
+**[0:25 — Presentación]** (pantalla: rótulo «Experimento #82 · ¿Sirven las 50 mejores para fondeo? (desafío tipo FTMO en 3 meses)»)
+Este es el experimento #82 de ATLAS Lab: ¿sirven las 50 mejores para fondeo?, un desafío tipo FTMO en 3 meses. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #82» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:40 — Qué es un challenge]** (pantalla: las reglas como contadores)
 Una empresa de fondeo te presta una cuenta si superas una prueba. Aquí uso las reglas tipo FTMO: objetivo de +10%, caída máxima de −10%, pérdida diaria máxima de −5% y una ventana de 3 meses. Si llegas a +10% sin romper los límites, pasas. Si rompes un límite, revientas la cuenta. Y si se acaba el tiempo sin llegar, te quedas sin llegar.
 BOCETO: tres medidores: objetivo «+10%» (verde), caída «−10%» y pérdida diaria «−5%» (rojos), reloj de 3 meses. Parámetros de `params_view`.
@@ -49,12 +53,16 @@ BOCETO: tarjeta de capital con el texto de `capital.note` y las dos cifras 3.5% 
 **[5:10 — Conclusión]**
 No sirvió. Ni las mejores de decenas de miles de estrategias sirven para pasar un challenge de fondeo: sin apalancamiento son lentas, y con x5 pierden más veces de las que ganan. El trading no se promete: se prueba.
 
-**[5:40 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 82. Contenido educativo, no es asesoría financiera.
+**[5:40 — Ficha del experimento #82]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 82. Estado: murió. Cifra clave: sin apalancamiento pasan 0.0%; con x5, la mejor pasa 3.5% y revienta 4.7%. Filtro que decidió: la meta de +10% en 3 meses sin romper la caída máxima de −10%. Lección: «mejor» depende de para qué. Revísalo completo en atlas-lab-one.vercel.app/e/82.
+BOCETO: tarjeta con el número «#82», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/82» grande y resaltada en verde. kb=in.
+
+**[6:00 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/82. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 45 s)
+## SHORT (9:16, ≈ 47 s)
 
 **[0-3 s]** «Puse a las 50 mejores estrategias en un challenge de fondeo. Pasaron: 0.0%.»
 BOCETO: 50 mini-curvas tachadas con ✕ sobre b-roll de oficina de trading (kb=in), overlay 0.6; «0.0%» gigante.
@@ -68,18 +76,24 @@ BOCETO: barra verde 3.5% y barra roja 4.7% que la supera; golpe de bajo + sacudi
 **[28-40 s]** «21 ventanas aprobadas. 28 cuentas reventadas. El apalancamiento para ganar rápido es justo el que te revienta.»
 BOCETO: contadores 21 (verde) y 28 (rojo); curva ×5 que choca con la línea de −10%.
 
-**[40-45 s]** «El video completo está en el canal. Las 50 mejores: pasan cero sin apalancamiento.»
-BOCETO: «0.0%» rojo; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «pasan cero» conecta con el «Pasaron: 0.0%» inicial.
+**[40-47 s]** «El video completo está en el canal y experimento #82 completo en el enlace. Las 50 mejores: pasan cero sin apalancamiento.»
+BOCETO: «0.0%» rojo; texto final «Video completo en el canal · Experimento #82 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «pasan cero» conecta con el «Pasaron: 0.0%» inicial.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/82?utm_source=youtube&utm_medium=video&utm_campaign=exp082-t1
+Ficha del experimento #82: murió · sin apalancamiento pasan 0.0% de las ventanas · con x5, la mejor pasa 3.5% y revienta 4.7%.
 Simulé un challenge de fondeo tipo FTMO (objetivo +10%, caída máxima −10%, pérdida diaria máxima −5%, 3 meses) con las 50 mejores estrategias de mi laboratorio. Sin apalancamiento pasan 0.0%; con x5, la mejor pasa 3.5% y revienta 4.7%. De este experimento se conservan las métricas, no el script.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #82)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/82?utm_source=youtube&utm_medium=short&utm_campaign=exp082-t1
+Ficha del experimento #82: murió · 0.0% pasan sin apalancamiento · con x5 la mejor pasa 3.5% y revienta 4.7%.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 Qué es un challenge · 1:35 Cómo lo probé · 2:30 Resultados · 3:40 Por qué · 4:40 Con tu capital · 5:10 Conclusión
+0:00 Gancho · 0:25 Presentación · 0:40 Qué es un challenge · 1:35 Cómo lo probé · 2:30 Resultados · 3:40 Por qué · 4:40 Con tu capital · 5:10 Conclusión · 5:40 Ficha del experimento #82
 
 ## Etiquetas
 fondeo, prop firm, ftmo, challenge de fondeo, cuenta fondeada, apalancamiento, drawdown, simulación, backtest, trading con datos, atlas lab, estrategias de trading

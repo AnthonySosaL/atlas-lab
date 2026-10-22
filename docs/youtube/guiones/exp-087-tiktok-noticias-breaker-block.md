@@ -15,11 +15,15 @@ Fondo `#09090b`. Un signo de interrogación enorme en blanco y, dentro de él, u
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 5 min)
+## VIDEO LARGO (16:9, ≈ 5½ min)
 
 **[0:00 — Gancho]** (pantalla: «Pruebas realizadas: 0»)
 Un TikTok dice que se pueden operar las noticias como lo hace el dinero institucional. Quise probarlo con los mismos cinco filtros de siempre. Pruebas mecánicas realizadas: cero. Y la razón de ese cero es lo más útil de este video.
 BOCETO: contador «Pruebas mecánicas realizadas: 0» (KPI de la ficha) en rojo sobre b-roll de pantallas de noticias financieras (kb=in), overlay 0.6.
+
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #87 · TikTok 3: Noticias + Breaker Block (ICT)»)
+Este es el experimento #87 de ATLAS Lab: TikTok 3, noticias más breaker block de ICT. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #87» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:35 — La estrategia]** (pantalla: línea de tiempo de una noticia)
 La idea es esta. Hay una noticia de alto impacto, como el informe de empleo de Estados Unidos, las tasas o la inflación. Dejas que cierre la vela diaria. Buscas lo que llaman aceptación: que el precio se acumule sin romper el máximo ni el mínimo de la vela de la noticia. Y entonces operas el breaker block del día previo, con una orden limitada, el stop bajo el día anterior y una relación de riesgo a beneficio de 1 a 2.
@@ -50,12 +54,16 @@ BOCETO: cuatro casillas que se marcan una a una; la primera queda en rojo con �
 **[4:30 — Conclusión]**
 Resultado: no concluyente. No concluyente no significa que funcione: significa que sin reglas objetivas queda como narrativa, no como una estrategia que se pueda validar. El trading no se promete: se prueba.
 
-**[4:55 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 87. Contenido educativo, no es asesoría financiera.
+**[4:55 — Ficha del experimento #87]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 87. Estado: no concluyente. Cifra clave: 0 pruebas mecánicas; lo más cercano que medí, el sentimiento del experimento 56, acierta la dirección 57% contra una tasa base de 61.3%. Filtro que decidió: faltan reglas exactas y un calendario de noticias para poder probarlo. Lección: sin reglas objetivas no hay prueba. Revísalo completo en atlas-lab-one.vercel.app/e/87.
+BOCETO: tarjeta con el número «#87», el sello «NO CONCLUYENTE» en ámbar y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/87» grande y resaltada en verde. kb=in.
+
+**[5:20 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/87. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 45 s)
+## SHORT (9:16, ≈ 49 s)
 
 **[0-3 s]** «Esta estrategia de TikTok no se puede probar. Pruebas realizadas: cero.»
 BOCETO: contador «0 pruebas» rojo gigante sobre b-roll de noticias financieras (kb=in), overlay 0.6.
@@ -69,18 +77,24 @@ BOCETO: checklist con tres ✗ rojas que aparecen con tick; dos gráficos iguale
 **[28-41 s]** «Lo más cercano que medí: el sentimiento acierta la dirección el 57% de las veces. La tasa base es 61.3%. Ni eso la supera.»
 BOCETO: barra 57% roja contra línea 61.3%; golpe de bajo + sacudida en 61.3%. Cartel «#56, no es prueba de noticias».
 
-**[41-45 s]** «El video completo está en el canal. Pruebas: cero. Y eso ya es parte de la respuesta.»
-BOCETO: «0» rojo; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «cero» vuelve al hook.
+**[41-49 s]** «El video completo está en el canal y experimento #87 completo en el enlace. Pruebas: cero. Y eso ya es parte de la respuesta.»
+BOCETO: «0» rojo; texto final «Video completo en el canal · Experimento #87 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «cero» vuelve al hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/87?utm_source=youtube&utm_medium=video&utm_campaign=exp087-t1
+Ficha del experimento #87: no concluyente · 0 pruebas mecánicas (sin reglas exactas ni calendario de noticias) · lo más cercano, el sentimiento del experimento 56, acierta la dirección 57% contra una tasa base de 61.3%.
 Un TikTok propone operar noticias de alto impacto con el «breaker block» de ICT. No se puede probar mecánicamente: faltan un calendario de noticias y reglas exactas de «aceptación» y «breaker block», así que hay 0 pruebas. Lo más cercano que sí medí (experimento 56): el sentimiento de mercado acierta la dirección 57% de las veces, por debajo de la tasa base de 61.3%.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #87)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/87?utm_source=youtube&utm_medium=short&utm_campaign=exp087-t1
+Ficha del experimento #87: no concluyente · 0 pruebas · el sentimiento acierta 57% contra una tasa base de 61.3%.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:35 La estrategia · 1:30 Por qué no se pudo probar · 2:30 Lo más cercano que medí · 3:30 Con tu capital · 3:55 Qué mirar · 4:30 Conclusión
+0:00 Gancho · 0:20 Presentación · 0:35 La estrategia · 1:30 Por qué no se pudo probar · 2:30 Lo más cercano que medí · 3:30 Con tu capital · 3:55 Qué mirar · 4:30 Conclusión · 4:55 Ficha del experimento #87
 
 ## Etiquetas
 breaker block, ict, trading de noticias, backtest, reglas objetivas, estrategia de tiktok, dinero institucional, sentimiento de mercado, vix, tasa base, atlas lab, trading con datos

@@ -14,47 +14,55 @@ Fondo `#09090b`. A la izquierda, silueta de edificio de oficinas (verde tenue, u
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 6 min — la cuenta duró 876 días)
+## VIDEO LARGO (16:9, ≈ 6½ min — la cuenta duró 876 días)
 
 **[0:00 — Gancho]** (pantalla: "TÉCNICA INSTITUCIONAL" y debajo un contador que baja a −10.1%)
 Esta es la técnica institucional por excelencia: el arbitraje estadístico. La que se asocia a los fondos cuantitativos. La puse a prueba con una cesta de 15 activos y la cuenta simulada se cortó a los 876 días, con una pérdida de 10.1%. Sharpe de −0.58 entre 2014 y 2024, y de −0.69 en 2007–2013, años que la estrategia nunca vio. ¿Por qué lo que se usa en un fondo no se sostiene en una cuenta de operador minorista?
 > BOCETO: título animado "ARBITRAJE ESTADÍSTICO" y la curva real (serie curva 0) cayendo; contador −10.1% en rojo; chip "15 ACTIVOS". Sacudida de pantalla solo en el −10.1%.
 
-**[0:40 — La idea]** (pantalla: 15 líneas que comparten un movimiento común; una se desvía)
+**[0:40 — Presentación]** (pantalla: rótulo «Experimento #47 · Arbitraje estadístico (residuo PCA)»)
+Este es el experimento #47 de ATLAS Lab: Arbitraje estadístico (residuo PCA). Todos los resultados están en la página del experimento.
+> BOCETO: rótulo «EXPERIMENTO #47 · Arbitraje estadístico (residuo PCA)» que entra con whoosh sobre el último cuadro del gancho a baja opacidad.
+
+**[0:50 — La idea]** (pantalla: 15 líneas que comparten un movimiento común; una se desvía)
 La idea viene de un trabajo de Avellaneda y Lee de 2010. Casi todos los activos comparten un movimiento común, el del mercado. Si le restas ese movimiento a cada activo, lo que queda es su residuo, su parte propia. La apuesta es que ese residuo, cuando se estira, regresa. Cada activo se compara con el factor común, se acumula su residuo de 60 días, y cuando su z-score pasa de 1.5 hacia arriba o hacia abajo, vendo en corto el estirado y compro el hundido. Dato clave de honestidad: el factor común es una aproximación, la media estandarizada de la cesta, no un PCA completo; el PCA es el método estadístico que lo calcularía de forma más fina.
 > BOCETO: ilustración rotulada (no es dato real): 15 líneas grises con una verde que se separa del grupo y vuelve; flechas "compro" y "vendo". Recuadro de code.snippet (3 líneas: factor = media estandarizada · residuo 60 d · |z| > 1.5).
 
-**[1:30 — Una analogía: el salón de clases]** (pantalla: aula con ruido general y un alumno que destaca)
+**[1:40 — Una analogía: el salón de clases]** (pantalla: aula con ruido general y un alumno que destaca)
 Piensa en un salón de clases. Si hoy hay ruido en toda la clase, no sirve mirar a cada alumno por separado: el ruido es del grupo. Lo interesante es el alumno que hace ruido por su cuenta cuando el grupo está tranquilo. El arbitraje estadístico hace lo mismo con los activos: resta el movimiento del grupo y se queda con lo propio de cada uno. Si ese residuo se disparó, apuesta a que va a calmarse. Para que valga, el factor común tiene que estar bien medido; aquí es una aproximación, así que parte del ruido del grupo puede quedarse dentro del residuo.
 > BOCETO: ilustración rotulada (no es dato real): aula con 15 siluetas; el "ruido general" como onda gris, un alumno con onda verde que se separa; flecha "el residuo regresa".
 
-**[2:20 — Cómo se probó]** (pantalla: checklist de reglas + línea de tiempo)
+**[2:30 — Cómo se probó]** (pantalla: checklist de reglas + línea de tiempo)
 Cesta de 15 activos entre 2014 y 2024 y de 8 entre 2007 y 2013, el periodo fuera de muestra. Beta móvil de 250 días, pesos acotados a ±3 y exposición bruta de 1. Apalancamiento 2, kill-switch de −3%, deslizamiento de 0.2% y las posiciones decididas un día antes, sin mirar el futuro. Además, las reglas de una prop firm: la cuenta se corta con una caída máxima de 10% o una pérdida de 5% en un día. Costos: lo único modelado es el deslizamiento del corte automático, sin spread por rotación.
 > BOCETO: checklist con ✓ en "señal del día anterior"; ámbar en "PCA aproximado" y "costos mínimos". Barra de tiempo: 2007–2013 (8 activos, gris) y 2014–2024 (15 activos, blanco).
 
-**[3:00 — Resultados]** (pantalla: 6 tarjetas KPI + curva)
+**[3:10 — Resultados]** (pantalla: 6 tarjetas KPI + curva)
 Retorno total: −10.1%. Sharpe, la ganancia por unidad de riesgo, que debería ser positiva: −0.58 en 2014–2024 y −0.69 en 2007–2013. En 2007–2013 la cesta tenía 8 activos y en 2014–2024, 15: son dos cestas distintas, así que comparar los periodos es un indicio y no una réplica exacta. Drawdown máximo, la mayor caída desde un pico: −12.2%. La cuenta duró 876 días, hasta el 23 de julio de 2017. Y no sobrevive en ningún periodo. En la curva, con $100,000 llegó a $102,404 y se hundió hasta $89,924.
 > BOCETO: tarjetas `kpis` en rojo con tick; luego curva 0 de la serie con zoom al máximo ($102,404) y al corte ($89,924), sello ✕ en el 23-jul-2017.
 
-**[3:45 — Por qué falla]** (pantalla: texto de la ficha + comparación fondo vs minorista)
+**[3:55 — Por qué falla]** (pantalla: texto de la ficha + comparación fondo vs minorista)
 El veredicto de la ficha es corto: sin datos tick ni acceso directo, los residuos no pagan los costos. Los datos tick son cada cambio de precio, y el acceso directo es operar sin intermediarios. Es decir, la técnica puede ser correcta en el papel y aun así no alcanzar para quien la ejecuta con otros medios.
 > BOCETO: pantalla dividida "Fondo" vs "Esta prueba": datos (tick vs diario), costos (acceso directo vs deslizamiento 0.2%), amplitud (miles vs 15 activos). Barras comparativas sin cifras inventadas: solo los números de la ficha.
 
-**[4:10 — Qué preguntar cuando dicen "lo usan los fondos"]** (pantalla: tres iconos: datos, costos, amplitud)
+**[4:20 — Qué preguntar cuando dicen "lo usan los fondos"]** (pantalla: tres iconos: datos, costos, amplitud)
 Al cierre del programa, en el experimento 50, lo resumí así: la ventaja de los fondos cuantitativos no está en la matemática, que es pública y la probamos. Cuando oigas que una técnica la usan los fondos, pregunta qué hace falta para replicarla. Primero, datos: aquí trabajé con cierres diarios, no con cada cambio de precio. Segundo, costos: un fondo opera con acceso directo, y esta prueba modela solo un deslizamiento de 0.2% en el corte automático. Tercero, amplitud: miles de instrumentos frente a 15. Eso no dice que la técnica sea mala. Dice que la ventaja no viene incluida con la fórmula, y que copiar la fórmula sin lo demás no es copiar la técnica.
 > BOCETO: tres tarjetas "pregunta" (datos, costos, amplitud) con las cifras de esta prueba a la derecha (diario · 0.2% · 15 activos). Tick sonoro al aparecer cada una.
 
-**[5:05 — Con tu capital]** (pantalla: tarjeta "Con tu capital")
+**[5:15 — Con tu capital]** (pantalla: tarjeta "Con tu capital")
 Con $10,000, la cuenta simulada termina en −$1,008. Con $100,000, en −$10,076. La referencia, comprar y esperar la cesta sin estrategia en esas mismas fechas, queda prácticamente plana: −$10 con $10,000 y −$99 con $100,000. La estrategia perdió dinero en un periodo en que no hacer nada no perdía casi nada.
 > BOCETO: tarjeta de capital con tres filas; la referencia en gris, casi en cero, contrasta con las dos cifras rojas. Aviso: "Simulación, no es una promesa".
 
-**[5:30 — Conclusión y cierre]** (pantalla: logo)
-La técnica institucional por excelencia no se sostiene con datos y costos de un operador minorista. No es que la matemática esté mal: es que la ventaja está en otra parte. Todos los datos en atlas-lab-one.vercel.app, experimento 47. Si quieres que pruebe otra técnica de fondos, dímelo en los comentarios. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[5:40 — Ficha del experimento #47]** (pantalla: tarjeta con la URL)
+Ficha del experimento #47. Estado: murió, no sirvió. Cifra clave: retorno de −10.1%, Sharpe de −0.58 en 2014–2024 y de −0.69 en 2007–2013, con la cuenta cortada a los 876 días. Filtro que decidió: sobrevivir en todos los periodos, que no se cumple; la señal del día anterior sí se cumplió. Lección: sin datos tick ni acceso directo, los residuos no pagan los costos. Revísalo completo en atlas-lab-one.vercel.app/e/47.
+> BOCETO: tarjeta «FICHA · EXPERIMENTO #47» con Estado · Cifra clave · Filtro que decidió · Lección, y la URL `atlas-lab-one.vercel.app/e/47` en grande.
+
+**[6:10 — Conclusión y cierre]** (pantalla: logo)
+La técnica institucional por excelencia no se sostiene con datos y costos de un operador minorista. No es que la matemática esté mal: es que la ventaja está en otra parte. Todos los datos en atlas-lab-one.vercel.app/e/47. Si quieres que pruebe otra técnica de fondos, dímelo en los comentarios. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 > BOCETO: la curva termina en el sello ✕; fundido a la frase de marca.
 
 ---
 
-## SHORT (9:16, ≈ 44 s) — "La técnica de los fondos"
+## SHORT (9:16, ≈ 46 s) — "La técnica de los fondos"
 Título del Short: La técnica de los fondos, con 15 activos: −10.1% #Shorts
 
 **[0-3 s]** "La técnica de los fondos: menos 10.1%."
@@ -69,19 +77,24 @@ Título del Short: La técnica de los fondos, con 15 activos: −10.1% #Shorts
 **[27-35 s]** "La ventaja de los fondos no es la matemática, que es pública. Son los datos, los costos y la amplitud: miles de instrumentos. Yo tenía quince."
 > BOCETO: tres iconos (datos, costos, amplitud) con contador "miles" vs "15"; la curva real de la serie (curva 0) cae por detrás a 0.12 de opacidad.
 
-**[35-44 s]** "La técnica de los fondos no se copia: se prueba. Con 15 activos, menos 10.1%. El video completo está en el canal. No es asesoría financiera."
-> BOCETO: congela en "−10.1%" y "15 ACTIVOS" (empalma con el primer cuadro: loop); texto pequeño "El trading no se promete: se prueba."
+**[35-46 s]** "La técnica de los fondos no se copia: se prueba. Con 15 activos, menos 10.1%. Experimento 47 completo en el enlace; el video completo está en el canal. No es asesoría financiera."
+> BOCETO: congela en "−10.1%" y "15 ACTIVOS" (empalma con el primer cuadro: loop); texto pequeño "El trading no se promete: se prueba." Abajo, «Experimento #47 completo en el enlace».
 
 ---
 
-## Descripción (YouTube)
+## Descripción (YouTube) — video largo
+https://atlas-lab-one.vercel.app/e/47?utm_source=youtube&utm_medium=video&utm_campaign=exp047-t1
+Ficha del experimento #47: murió (No sirvió) · retorno −10.1% · Sharpe −0.58 (2014–2024) y −0.69 (2007–2013) · cuenta cortada a los 876 días.
 Probé el arbitraje estadístico por residuos (estilo Avellaneda y Lee, 2010) en una cesta de 15 activos: factor común aproximado, z-score del residuo de 60 días, apalancamiento x2 y señal del día anterior. La cuenta simulada se cortó a los 876 días con −10.1% y Sharpe de −0.58 (2014-2024) y −0.69 (2007-2013).
-Datos completos: https://atlas-lab-one.vercel.app (experimento #47)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:40 La idea · 1:30 Una analogía: el salón de clases · 2:20 Cómo se probó · 3:00 Resultados · 3:45 Por qué falla · 4:10 Qué preguntar cuando dicen "lo usan los fondos" · 5:05 Con tu capital · 5:30 Conclusión y cierre
+Capítulos: 0:00 Gancho · 0:40 Presentación · 0:50 La idea · 1:40 Una analogía: el salón de clases · 2:30 Cómo se probó · 3:10 Resultados · 3:55 Por qué falla · 4:20 Qué preguntar cuando dicen "lo usan los fondos" · 5:15 Con tu capital · 5:40 Ficha del experimento #47 · 6:10 Conclusión y cierre
 
 Etiquetas: arbitraje estadístico, stat arb, Avellaneda y Lee, fondos cuantitativos, PCA, reversión a la media, backtest, Sharpe ratio, fuera de muestra, trading con datos, ATLAS Lab, estrategia de trading
+
+## Descripción (YouTube) — Short
+https://atlas-lab-one.vercel.app/e/47?utm_source=youtube&utm_medium=short&utm_campaign=exp047-t1
+Experimento #47 · Arbitraje estadístico (residuo PCA): murió · Sharpe −0.58 (2014–2024) y −0.69 (2007–2013) · cuenta cortada a los 876 días. Video completo en el canal. No es asesoría financiera.
 
 ## Rúbrica (autoevaluación, escala 1-5)
 | Criterio | Nota | Por qué |

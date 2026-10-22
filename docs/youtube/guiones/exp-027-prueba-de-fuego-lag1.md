@@ -14,68 +14,81 @@ Fondo `#09090b`. Dos calendarios: a la izquierda «HOY» en verde `#22c55e` con 
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 5:39 min)
+## VIDEO LARGO (16:9, ≈ 6:14 min)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; los pasos de cada boceto van en orden. Fórmula del canal: b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte.
 
 **[0:00 — Gancho]** (pantalla: dos barras que se separan)
 El mismo bot. Las mismas reglas. Los mismos datos. Con la señal de hoy: Sharpe —el retorno por unidad de riesgo— de 1.23. Con la señal de ayer: menos 0.17. Esta es la prueba que decide si las curvas de esta serie se pueden operar de verdad.
 > Boceto: dos barras iguales de 1.23 en verde; la segunda se invierte con golpe de bass y sacudida hasta −0.17 en rojo; texto «1 día de retraso».
 
-**[0:20 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #27 · Prueba de fuego: reentrada con retraso de 1 día»)
+Este es el experimento #27 de ATLAS Lab: Prueba de fuego, reentrada con retraso de 1 día. Todos los resultados están en la página del experimento.
+> Boceto: el rótulo «EXPERIMENTO #27 · Prueba de fuego: reentrada con retraso de 1 día» entra sobre velas animadas con opacidad 0.12.
+
+**[0:30 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
 Es la prueba que le pregunta a todas las anteriores si se pueden ejecutar. Del #15 al #26, el filtro de pánico decide con el cierre del mismo día. Este experimento cambia una sola cosa: usa la información de ayer. Después vendrán tres experimentos más, del #28 al #30, con una versión ejecutable y un interruptor de emergencia.
 > Boceto: línea de la serie con una lupa sobre los puntos #15 al #26; el #27 se ilumina; etiquetas «mismo día» y «señal de ayer».
 
-**[0:45 — El problema de ejecución]** (pantalla: reloj de un día de mercado)
+**[0:55 — El problema de ejecución]** (pantalla: reloj de un día de mercado)
 Un bot real tiene un horario. El mercado cierra, el bot calcula sus señales con ese cierre, por ejemplo a las 17:30, y la orden se aplica al día siguiente. En los experimentos anteriores, el VIX y el crédito del cierre del día decidían la exposición de ese mismo día. Eso es información que aún no existe cuando el bot decide: nadie puede operar con el cierre de hoy antes de que hoy cierre.
 > Boceto: reloj con tres marcas, «cierre», «17:30: decide» y «mañana: opera»; una flecha roja tachada que va de «cierre de hoy» a «retorno de hoy».
 
-**[1:16 — Una analogía]** (pantalla: pronóstico con la lluvia de mañana)
+**[1:26 — Una analogía]** (pantalla: pronóstico con la lluvia de mañana)
 Piénsalo así: es como armar un pronóstico del clima usando la lluvia de mañana. En la práctica nunca falla, y en la vida real no sirve de nada. Con la señal de hoy, el filtro conoce el día antes de sufrirlo; con la señal de ayer, tiene que adivinarlo, como cualquier bot real.
 > Boceto: dos pronósticos, uno con las nubes de mañana dibujadas (verde, «nunca falla») y otro con las nubes de ayer (rojo, «falla»); texto «hoy vs ayer».
 
-**[1:39 — La prueba]** (pantalla: dos versiones de la regla)
+**[1:49 — La prueba]** (pantalla: dos versiones de la regla)
 Se rezagan todas las señales un día: el filtro macro y el enfriamiento del VIX se deciden con los datos de ayer. Se comparan con una base igualmente rezagada, la cartera con filtro a ×3. Se prueba la re-entrada del experimento 26, con enfriamiento de 0.9 y ×2, y también la de 0.8 y ×2, en 2014 a 2024 y en 2007 a 2013, con las reglas de una prop firm, la empresa que presta la cuenta y la cierra si pierdes demasiado. No se descuentan costos.
 > Boceto: dos filas de código simplificado, «señal[hoy]» (tachada) y «señal[ayer]» (verde); checklist de `exp_details.json`: «señal rezagada: FALLA», «contra la base rezagada: FALLA», «2007–2013: FALLA», «costos: no aplicado».
 
-**[2:15 — Cómo leer un Sharpe negativo]** (pantalla: escala)
+**[2:25 — Cómo leer un Sharpe negativo]** (pantalla: escala)
 Un recordatorio para leer la tabla. El Sharpe mide el retorno por unidad de riesgo. Cuanto más alto, mejor; por debajo de cero significa que, en relación con el riesgo asumido, el bot perdió dinero. Todas las cifras de la tabla que sigue son negativas.
 > Boceto: escala horizontal con el cero al centro; a la derecha, zona verde «ganó»; a la izquierda, zona roja «perdió»; un marcador se desplaza de 1.23 a −0.17.
 
-**[2:35 — Resultados]** (pantalla: tabla animada)
+**[2:45 — Resultados]** (pantalla: tabla animada)
 Estos son los Sharpe, que miden el retorno por unidad de riesgo. La base filtrada con la señal de ayer: menos 0.17 en 2014 a 2024 y menos 0.46 en 2007 a 2013. La re-entrada con la señal de ayer: menos 1.00 y menos 0.76. Para comparar, con la señal del mismo día daban 1.23 y 1.06 la base, y 2.12 y 1.53 la re-entrada.
 > Boceto: tabla de dos filas y dos columnas (2014–2024 y 2007–2013) con las cifras de «señal de ayer» en rojo; debajo, en gris, las cifras del mismo día; las cifras negativas entran con golpe de bass.
 
-**[3:02 — La cuenta]** (pantalla: curva hasta el corte)
+**[3:12 — La cuenta]** (pantalla: curva hasta el corte)
 La versión con re-entrada pierde 10.0% en total, con una caída máxima de 12.6%, y la cuenta se cierra el 12 de julio de 2015, a los 241 días. Y la base rezagada también muere, en los dos periodos.
 > Boceto: la curva real de la estrategia dibujándose y cortándose el 2015-07-12; tarjetas (−10.0% · −12.6% · 241 días).
 
-**[3:19 — Cómo mueren las cuentas]** (pantalla: dos formas de morir)
+**[3:29 — Cómo mueren las cuentas]** (pantalla: dos formas de morir)
 Hay dos formas de morir. En 3 de los 4 casos, las pérdidas se acumulan durante varios días y cruzan el drawdown de 10%, la caída máxima permitida, antes de que el filtro rezagado reaccione: con las señales de ayer, el filtro llega tarde. Solo en la base de 2014 a 2024 la cuenta cae por una única jornada: el 24 de junio de 2016, con menos 6.2%, que rompe el límite diario de 5%.
 > Boceto: dos animaciones: una escalera de pérdidas pequeñas que baja hasta cruzar la línea de −10% y una sola barra de −6.2% que cruza la línea de −5% con sacudida; rótulos «3 de 4» y «1 de 4».
 
-**[3:51 — Qué significa para la serie]** (pantalla: lista de experimentos)
+**[4:01 — Qué significa para la serie]** (pantalla: lista de experimentos)
 El Sharpe de 1.23 del filtro depende de usar el VIX del cierre del mismo día. Y varios resultados anteriores descansan sobre esa misma señal: el más 267.3% del experimento 16, el más 591.5% del 19, el Sharpe de 1.06 del 21, el más 203.8% del 25 y el más 1,226.7% del 26.
 > Boceto: lista vertical de cinco tarjetas (#16 +267.3%, #19 +591.5%, #21 Sharpe 1.06, #25 +203.8%, #26 +1,226.7%) que se ponen en ámbar una a una con el rótulo «mismo día».
 
-**[4:13 — Qué no dice esta prueba]** (pantalla: texto)
+**[4:23 — Qué no dice esta prueba]** (pantalla: texto)
 Ojo con lo que no dice. No dice que ningún filtro funcione; dice que este, con la señal de ayer, no funciona. Y no descuenta costos: en real, el resultado sería peor, no mejor. La lección es el método: antes de medir si una regla gana, hay que comprobar que un bot real puede ejecutarla.
 > Boceto: dos frases en pantalla, «no dice: ningún filtro funciona» (tachada) y «dice: este filtro, con la señal de ayer, no funciona»; luego el check «¿se puede ejecutar?» en grande.
 
-**[4:37 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
+**[4:47 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
 Con 10,000 dólares, la curva termina en menos $996; con 100,000, en menos $9,959. Comprando y esperando en esas fechas: menos $443 y menos $4,428. Con tu capital verías esa cuenta cerrada, no una inversión que sigue corriendo. La línea hipotética «Sin reglas de prop firm» muestra cómo habría seguido sin el corte, pero en la realidad la cuenta se cierra ese día.
 > Boceto: tarjeta «Con tu capital» del sitio con el selector; curva roja cortada el 12 de julio de 2015 y curva punteada gris «hipotética».
 
-**[5:04 — Conclusión]** (pantalla: texto grande)
+**[5:14 — Conclusión]** (pantalla: texto grande)
 Veredicto: no sirvió. Con las señales rezagadas un día, la re-entrada cae a un Sharpe de menos 1.00, y hasta la base filtrada muere: menos 0.17 en 2014 a 2024 y menos 0.46 en 2007 a 2013. Es la única versión que un bot real puede ejecutar, y es la que cuenta.
 > Boceto: sello rojo «NO SIRVIÓ»; frase final «El trading no se promete: se prueba».
 
-**[5:26 — Cierre]** (pantalla: logo y enlace)
-En el siguiente video, la versión ejecutable con un interruptor de emergencia: el experimento 28. Todos los datos en atlas-lab-one.vercel.app, experimento 27. Contenido educativo, no es asesoría financiera.
+**[5:36 — Ficha del experimento #27]** (pantalla: tarjeta con la URL)
+Ficha del experimento #27.
+Estado: murió.
+Cifra clave: el Sharpe de la base pasa de 1.23 a menos 0.17, y el de la re-entrada, de 2.12 a menos 1.00.
+Filtro que decidió: con la señal de ayer, la re-entrada y la base mueren en los dos periodos.
+Lección: antes de medir si una regla gana, comprueba que se puede ejecutar.
+Revísalo completo en atlas-lab-one.vercel.app/e/27.
+> Boceto: tarjeta final con cuatro líneas (estado · cifra clave · filtro que decidió · lección) y la URL «atlas-lab-one.vercel.app/e/27» en grande; sello «NO SIRVIÓ»; fondo de velas con opacidad 0.12.
+
+**[6:01 — Cierre]** (pantalla: logo y enlace)
+En el siguiente video, la versión ejecutable con un interruptor de emergencia: el experimento 28. Todos los datos en atlas-lab-one.vercel.app/e/27. Contenido educativo, no es asesoría financiera.
 > Boceto: pantalla final con enlace y logo ATLAS; fondo de velas animadas con opacidad 0.12.
 
 ---
 
-## SHORT (9:16, ≈ 46 s)
+## SHORT (9:16, ≈ 48 s)
 Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s y en el −0.17; ticker arriba, viñeta y velas con opacidad ≤ 0.12.
 
 **[0-3 s]** "Un día de retraso: Sharpe 1.23 a menos 0.17."
@@ -94,19 +107,24 @@ Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternan
 > Boceto: escalera de pérdidas pequeñas que cruza la línea de −10%.
 **[30-37 s]** "Y una sola jornada de menos 6.2%, el 24 de junio de 2016, rompe el límite diario de 5%."
 > Boceto: una barra roja de −6.2% que cruza la línea de −5% con golpe de bass.
-**[37-46 s]** "El trading no se promete: se prueba. El video completo está en el canal. No es asesoría financiera. Antes de creerle a un Sharpe, pregunta qué pasa con:"
-> Boceto: frase de marca; logo ATLAS; corte directo al inicio (loop).
+**[37-48 s]** "El trading no se promete: se prueba. El video completo está en el canal. Experimento 27 completo en el enlace. No es asesoría financiera. Antes de creerle a un Sharpe, pregunta qué pasa con:"
+> Boceto: frase de marca; tarjeta «experimento #27 completo en el enlace» y la URL corta; logo ATLAS; corte directo al inicio (loop).
 
 ## Descripción (YouTube)
+https://atlas-lab-one.vercel.app/e/27?utm_source=youtube&utm_medium=video&utm_campaign=exp027-t1
+Ficha del experimento #27 (Prueba de fuego: reentrada con retraso de 1 día): murió (No sirvió) · la base pasa de Sharpe 1.23 a −0.17 y la re-entrada de 2.12 a −1.00 al usar la señal de ayer · cuenta cerrada el 12-jul-2015 (−10.0%).
 La prueba de fuego del bot: todas las señales rezagadas un día, como las ejecutaría un bot real (decide por la tarde, opera al día siguiente).
 La base filtrada da Sharpe −0.17 (2014–2024) y −0.46 (2007–2013); la re-entrada, −1.00 y −0.76; la cuenta se cierra a los 241 días con −10.0%.
 Con la señal del mismo día, la base daba 1.23 y 1.06.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #27)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:20 Dónde encaja en la serie · 0:45 El problema de ejecución · 1:16 Una analogía · 1:39 La prueba · 2:15 Cómo leer un Sharpe negativo · 2:35 Resultados · 3:02 La cuenta · 3:19 Cómo mueren las cuentas · 3:51 Qué significa para la serie · 4:13 Qué no dice esta prueba · 4:37 Con tu capital · 5:04 Conclusión · 5:26 Cierre
+Capítulos: 0:00 Gancho · 0:20 Presentación · 0:30 Dónde encaja en la serie · 0:55 El problema de ejecución · 1:26 Una analogía · 1:49 La prueba · 2:25 Cómo leer un Sharpe negativo · 2:45 Resultados · 3:12 La cuenta · 3:29 Cómo mueren las cuentas · 4:01 Qué significa para la serie · 4:23 Qué no dice esta prueba · 4:47 Con tu capital · 5:14 Conclusión · 5:36 Ficha del experimento #27 · 6:01 Cierre
 
 Etiquetas: sesgo de mirar el futuro, look-ahead bias, backtest, bot de trading, ejecutable, Sharpe ratio, VIX, prop firm, drawdown, trading con datos, ATLAS Lab, trading algorítmico
+
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/27?utm_source=youtube&utm_medium=short&utm_campaign=exp027-t1
+Ficha del experimento #27: murió · una línea de código cambia el Sharpe de 1.23 a −0.17. Video completo en el canal. Contenido educativo, no es asesoría financiera.
 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 5 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.50 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)

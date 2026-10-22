@@ -15,11 +15,15 @@ Fondo `#09090b`. Texto en dos líneas: «MEJOR CALMAR» en verde con un ✓ y «
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 7 min)
+## VIDEO LARGO (16:9, ≈ 7½ min)
 
 **[0:00 — Gancho]** (pantalla: dos frascos y dos cifras)
 Turtle, una famosa estrategia de tendencia, tiene mejor Calmar que comprar y esperar: 0.29 contra 0.17. Gana. Pero si empiezas con 50,000 dólares y retiras 4% al año, Turtle termina en 37,864. Comprar y esperar, en 56,401. ¿Cómo se explica? De eso va este video.
 BOCETO: dos frascos que se vacían a ritmo de retiros anuales; al final se congelan en $37,864 (rojo) y $56,401 (verde), cifras de las KPIs de la ficha. Texto: «Retiro 4% anual · $50,000».
+
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #78 · Calmar y retiros: ¿mejor que comprar y mantener para ingreso?»)
+Este es el experimento #78 de ATLAS Lab: Calmar y retiros, ¿mejor que comprar y mantener para ingreso? Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #78» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:40 — La pregunta]** (pantalla: texto y fórmula)
 Comparar todo con comprar y esperar por retorno total es injusto si lo tuyo es retirar dinero. En ese caso lo que pesa es el drawdown, la caída máxima, por el riesgo del orden de los retornos: una caída fuerte justo cuando ya estás retirando daña más que la misma caída cuando solo mantienes. La métrica para eso es el Calmar: el retorno anual dividido entre la caída máxima. Cuanto más alto, más retorno por cada punto de caída.
@@ -50,12 +54,16 @@ BOCETO: curvas reales de `series/extra-v78.json` (Turtle en verde, «Sin estrate
 **[6:20 — Conclusión]**
 Resultado parcial. Turtle y Faber superan a comprar y esperar en Calmar, 0.29 y 0.20 contra 0.17, pero retirando 4% al año comprar y esperar termina más alto: 56,401 contra 37,864. El Calmar sirve para dormir tranquilo; el retorno sirve para sostener un retiro. El trading no se promete: se prueba.
 
-**[6:50 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 78. Contenido educativo, no es asesoría financiera.
+**[6:50 — Ficha del experimento #78]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 78. Estado: parcial. Cifras clave: Calmar de Turtle 0.29 y de Faber 0.20, contra 0.17 de comprar y esperar; retirando 4% al año, comprar y esperar termina en 56,401 y Turtle en 37,864. Lo que decidió: el retiro, que exige un retorno al menos igual a lo que sacas. Lección: el mejor Calmar no es el mejor retiro. Revísalo completo en atlas-lab-one.vercel.app/e/78.
+BOCETO: tarjeta con el número «#78», el sello «PARCIAL» en ámbar y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/78» grande y resaltada en verde. kb=in.
+
+**[7:20 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/78. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 50 s)
 
 **[0-3 s]** «Retiras 4% al año de 50,000 dólares. Turtle te deja 37,864. Comprar y esperar, 56,401.»
 BOCETO: dos frascos de monedas que se vacían, cifras gigantes en rojo y verde, sobre b-roll de billetes (kb=in), overlay 0.6.
@@ -69,18 +77,24 @@ BOCETO: barras de saldo final cayendo; Turtle y Faber en rojo; golpe de bajo + s
 **[30-42 s]** «Turtle y Faber caen menos, pero ganan +2.7% al año, menos de lo que retiras. El retiro se come el capital.»
 BOCETO: curva roja descendiendo hasta cruzar la línea de $50,000; texto «+2.7% < 4%».
 
-**[42-48 s]** «Mejor Calmar no es mejor retiro: 37,864 contra 56,401. El video completo está en el canal.»
-BOCETO: sello ✕ sobre «Mejor Calmar»; texto «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: las dos cifras finales conectan con el hook.
+**[42-50 s]** «Mejor Calmar no es mejor retiro: 37,864 contra 56,401. El video completo está en el canal y experimento #78 completo en el enlace.»
+BOCETO: sello ✕ sobre «Mejor Calmar»; texto «Video completo en el canal · Experimento #78 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: las dos cifras finales conectan con el hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/78?utm_source=youtube&utm_medium=video&utm_campaign=exp078-t1
+Ficha del experimento #78: parcial · Calmar de Turtle 0.29, Faber 0.20 y comprar y esperar 0.17 · retirando 4% al año, comprar y esperar termina en $56,401 y Turtle en $37,864.
 Si vas a retirar dinero, importa la caída máxima: por eso existe el Calmar. Comparé comprar y esperar, Faber, Turtle y un vol-target en 11 activos (2012–2024): Turtle gana en Calmar (0.29 contra 0.17), pero retirando 4% al año sobre $50,000 termina en $37,864 y comprar y esperar en $56,401.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #78)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/78?utm_source=youtube&utm_medium=short&utm_campaign=exp078-t1
+Ficha del experimento #78: parcial · mejor Calmar (0.29 contra 0.17), pero con retiro de 4% termina en $37,864 contra $56,401.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 La pregunta · 1:45 Cómo lo probé · 3:00 Resultados · 4:20 Por qué · 5:30 Con tu capital · 6:20 Conclusión · 6:50 Cierre
+0:00 Gancho · 0:20 Presentación · 0:40 La pregunta · 1:45 Cómo lo probé · 3:00 Resultados · 4:20 Por qué · 5:30 Con tu capital · 6:20 Conclusión · 6:50 Ficha del experimento #78 · 7:20 Cierre
 
 ## Etiquetas
 calmar ratio, retiro del 4%, turtle trading, faber gtaa, drawdown, comprar y mantener, ingreso por retiros, orden de los retornos, backtest, atlas lab, trading con datos

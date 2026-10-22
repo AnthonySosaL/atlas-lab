@@ -15,11 +15,15 @@ Fondo `#09090b`. Dos flechas opuestas, → «ruptura» y ← «barrida», cada u
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 7 min)
+## VIDEO LARGO (16:9, ≈ 7½ min)
 
 **[0:00 — Gancho]** (pantalla: dos flechas opuestas con ✕)
 Ya vimos que comprar la ruptura del rango del día anterior pierde. Entonces un TikTok propone exactamente lo contrario: esperar a que el precio barra un nivel y operar la vuelta. Se llama Candle Range Theory. Probé 8 formas. Las ocho pierden: en el periodo de diseño, el Sharpe va de −0.82 a −1.67.
 BOCETO: dos flechas, → con «ruptura: pierde (#85, #88)» y ← con «barrida: ?»; la segunda se llena con una ✕ roja. Rango «−0.82 a −1.67» en rojo. kb=in.
+
+**[0:25 — Presentación]** (pantalla: rótulo «Experimento #89 · TikTok 5: Candle Range Theory (barrida + FVG)»)
+Este es el experimento #89 de ATLAS Lab: TikTok 5, Candle Range Theory, barrida más FVG. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #89» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:40 — La estrategia]** (pantalla: dibujo del rango previo con la barrida)
 Marcas el máximo y el mínimo del día anterior. En gráficos de 1 hora esperas que el precio barra un nivel, que se asome fuera del rango, y cierre de vuelta dentro. A esa barrida o falso rompimiento la leen como señal de reversión. Luego, en gráficos de 5 minutos, entras por un quiebre de estructura más un FVG, un tipo de hueco entre velas, con un ratio de 1 a 2 o 3. Este TikTok es publicidad de un programa de fondeo.
@@ -58,12 +62,16 @@ BOCETO: curvas reales de `series/extra-v89.json` (estrategia en rojo cayendo, «
 **[6:25 — Conclusión]**
 Las 8 formas pierden. Al derecho o al revés, el núcleo diario de este TikTok no deja ventaja en estos datos. No sirvió. El trading no se promete: se prueba.
 
-**[6:50 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 89. Contenido educativo, no es asesoría financiera.
+**[6:50 — Ficha del experimento #89]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 89. Estado: murió. Cifra clave: las 8 formas pierden, con Sharpe de 2014–2020 de −0.82 a −1.67; con 100,000 dólares, la mejor de diseño pierde 21,472 y comprar y esperar gana 14,407. Filtro que decidió: ninguna de las 8 formas supera ni uno de los 5 filtros. Lección: al derecho o al revés, sin ventaja manda la fricción. Revísalo completo en atlas-lab-one.vercel.app/e/89.
+BOCETO: tarjeta con el número «#89», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/89» grande y resaltada en verde. kb=in.
+
+**[7:20 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/89. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 45 s)
+## SHORT (9:16, ≈ 49 s)
 
 **[0-3 s]** «Comprar la ruptura pierde. Ir en contra, también: 8 formas, 8 pérdidas.»
 BOCETO: dos flechas opuestas con ✕ rojas sobre b-roll de velas (kb=in), overlay 0.6; «8/8» en rojo.
@@ -77,18 +85,24 @@ BOCETO: barras rojas cayendo con tick; golpe de bajo + sacudida en −1.74.
 **[30-40 s]** «Con 100,000 dólares, la mejor de diseño pierde 21,472. Comprar y esperar gana 14,407.»
 BOCETO: tarjeta de capital: −$21,472 rojo y +$14,407 blanco/verde.
 
-**[40-45 s]** «No falta el lado correcto: falta ventaja. El video completo está en el canal. Al derecho o al revés, pierde.»
-BOCETO: sello ✕ sobre las dos flechas; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «al derecho o al revés, pierde» responde al hook.
+**[40-49 s]** «No falta el lado correcto: falta ventaja. El video completo está en el canal y experimento #89 completo en el enlace. Al derecho o al revés, pierde.»
+BOCETO: sello ✕ sobre las dos flechas; texto final «Video completo en el canal · Experimento #89 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «al derecho o al revés, pierde» responde al hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/89?utm_source=youtube&utm_medium=video&utm_campaign=exp089-t1
+Ficha del experimento #89: murió · 8 formas, 0 de 5 filtros · Sharpe 2014–2020 de −0.82 a −1.67 · con $100,000, la mejor de diseño pierde $21,472 contra +$14,407 de comprar y esperar.
 Probé el núcleo diario del TikTok «Candle Range Theory» (barrida del mínimo del día previo y vuelta): 8 formas con y sin filtro de tendencia, en 7 pares de divisas + oro, 2007–2024, con 3 puntos básicos de costo y 5 filtros. Todas pierden (Sharpe de −0.82 a −1.67 en 2014–2020), igual que la ruptura: no hay ventaja direccional.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #89)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/89?utm_source=youtube&utm_medium=short&utm_campaign=exp089-t1
+Ficha del experimento #89: murió · al derecho o al revés, pierde: Sharpe de −0.82 a −1.67.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 La estrategia · 1:45 Qué probé · 2:35 Cómo lo probé · 3:35 Resultados · 4:50 Por qué pierde · 5:45 Con tu capital · 6:25 Conclusión
+0:00 Gancho · 0:25 Presentación · 0:40 La estrategia · 1:45 Qué probé · 2:35 Cómo lo probé · 3:35 Resultados · 4:50 Por qué pierde · 5:45 Con tu capital · 6:25 Conclusión · 6:50 Ficha del experimento #89
 
 ## Etiquetas
 candle range theory, barrida de liquidez, falso rompimiento, fvg, estrategia de tiktok, reversión, backtest, sharpe ratio, fuera de muestra, deflated sharpe, atlas lab, trading con datos

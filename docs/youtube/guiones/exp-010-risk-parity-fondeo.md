@@ -16,44 +16,52 @@ Fondo negro de la marca. Dos monedas enfrentadas: a la izquierda «46.0%» en ve
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 4:07 min — experimento corto: comparación contra el #9)
+## VIDEO LARGO (16:9, ≈ 4:44 min — experimento corto: comparación contra el #9)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte, golpe de bass solo en el momento clave.
 
 **[0:00 — Gancho]** (pantalla: dos monedas «46.0%» y «46.5%»)
 Con apalancamiento ×6, en mi simulador, la probabilidad de pasar el examen de fondeo es 46.0%. La de reventar la cuenta, 46.5%. Pasar o reventar: casi una moneda al aire. Y esto es con un método más sofisticado de repartir el riesgo que el del experimento anterior. La pregunta es si, además de más sofisticado, es mejor. Spoiler: casi no cambia nada.
 > Boceto: dos monedas que giran y caen en 46.0% (verde) y 46.5% (rojo); sacudida de pantalla al coincidir las cifras.
 
-**[0:26 — Dónde estábamos]** (pantalla: resultado del #9)
+**[0:26 — Presentación]** (pantalla: rótulo «Experimento #10 · Paridad de riesgo + tamaño óptimo»)
+Este es el experimento #10 de ATLAS Lab: Paridad de riesgo + tamaño óptimo. Todos los resultados están en la página del experimento.
+> Boceto: rótulo grande «EXPERIMENTO #10 · Paridad de riesgo + tamaño óptimo» sobre velas de fondo con overlay oscuro; abajo, la URL pequeña «atlas-lab-one.vercel.app/e/10». Ken Burns «out».
+
+**[0:36 — Dónde estábamos]** (pantalla: resultado del #9)
 Resumen del experimento 9: un simulador del examen de fondeo —ganar 10% sin perder más de 5% en un día ni 10% en total— sobre una cesta de forex, metales, índices y energía con pesos iguales, es decir, con la misma cantidad de dinero en cada mercado. Su mejor caso fue ×4, con 47.9% de pasar. La pregunta ahora es: ¿repartir mejor el riesgo mejora esa cifra? Es una pregunta lógica, porque no todos los mercados pesan lo mismo en el riesgo de la cartera: unos son mucho más nerviosos que otros.
 > Boceto: tarjeta «#9: pesos iguales ×4 → 47.9%» con interrogación sobre un logo «risk parity»; tres barras de distinta altura (mercados nerviosos y tranquilos) con el mismo dinero.
 
-**[1:04 — La idea: paridad de riesgo]** (pantalla: balanza de riesgo)
+**[1:14 — La idea: paridad de riesgo]** (pantalla: balanza de riesgo)
 Imagina una cartera con un mercado muy nervioso y otro muy tranquilo. Si les das el mismo dinero, el nervioso domina el riesgo total, y el tranquilo casi no cuenta. La paridad de riesgo corrige eso: da más peso a los mercados tranquilos y menos a los nerviosos, con pesos inversos a la volatilidad de los últimos 60 días, calculados con datos hasta el día anterior. La idea es que cada mercado aporte un riesgo parecido. Pruebo apalancamientos de ×2 a ×6 en el mismo simulador de 4,000 exámenes.
 > Boceto: balanza con barras de colores: mercado nervioso (barra pequeña) y mercado tranquilo (barra grande), ambas aportando igual riesgo; tarjeta `params_view` (Risk parity 60 d · x2, x3, x4, x5, x6).
 
-**[1:40 — Resultados]** (pantalla: tarjetas KPI)
+**[1:50 — Resultados]** (pantalla: tarjetas KPI)
 El mejor caso es ×6: pasa el 46.0% de las veces. Supera el umbral del 45% que fijé en el código, pero no mejora a los pesos iguales del experimento 9, que pasaban 47.9%. El Sharpe baja de 0.70 a 0.58. Y a ×6 la cuenta revienta el 46.5% de las veces: 23.0% por caída total y 23.5% por pérdida diaria. Es decir, la cartera más sofisticada pasa un poco menos, tiene menos retorno por unidad de riesgo y, además, necesita más apalancamiento para llegar a su mejor punto.
 > Boceto: tabla comparativa animada: «Pesos iguales ×4: pasa 47.9% · Sharpe 0.70» contra «Risk parity ×6: pasa 46.0% · Sharpe 0.58»; pastel del 46.5% de reventar en dos tonos de rojo.
 
-**[2:17 — La comparación justa]** (pantalla: sin los primeros 60 días)
+**[2:27 — La comparación justa]** (pantalla: sin los primeros 60 días)
 Una aclaración honesta. En los primeros 60 días la paridad de riesgo aún no tiene pesos, porque necesita esa ventana de volatilidad, y su retorno vale cero. Si quito esos 60 días en ambas carteras, el Sharpe sería 0.59 frente a 0.61, y la probabilidad de pasar a ×6 sería 43.9% frente a 43.7%. Prácticamente un empate. Dicho de otro modo: la ventaja de los pesos iguales en las cifras principales se explica, en buena parte, por esos 60 días iniciales. La sofisticación casi no cambia nada.
 > Boceto: dos pares de barras casi iguales (0.59/0.61 y 43.9%/43.7%) con el signo «≈»; texto «Quitando los primeros 60 días».
 
-**[2:53 — El valor esperado «ilustrativo»]** (pantalla: cuenta de resultados de un intento)
+**[3:03 — El valor esperado «ilustrativo»]** (pantalla: cuenta de resultados de un intento)
 El experimento incluye un valor esperado por intento de 3,410 dólares, con una cuota de 500 dólares y un pago supuesto de 8,000. Es un número optimista por construcción, porque supone que cobras un pago en la fase fondeada. No lo tomes como una expectativa de ganancia: solo muestra la mecánica de cómo se combinan la probabilidad de pasar, la cuota y el pago. En el experimento 11 calculo ese valor esperado con más cuidado.
 > Boceto: operación en pantalla: «−$500 de cuota» y «+$8,000 pago supuesto» con la etiqueta «ilustrativo» y un sello ámbar «optimista».
 
-**[3:24 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
+**[3:34 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
 Con 10,000 dólares, la curva risk parity sin apalancar daría unos más 2,189, frente a más 5,175 de la cesta sin estrategia. Con 100,000, la tabla de ATLAS da más 21,885 contra más 51,747. Esa curva no muestra el ×6 del examen, donde la cuenta revienta el 46.5% de las veces.
 > Boceto: tarjeta de capital con aviso ámbar y ambas curvas; la curva risk parity por debajo; selector $10,000 / $100,000.
 
-**[3:45 — Conclusión y cierre]**
-Veredicto: parcial. El método sofisticado no mejora al simple: 46.0% frente a 47.9%. Lo que manda es la volatilidad total para llegar al objetivo a tiempo, no la sofisticación del tamaño de posición. Todos los datos en atlas-lab-one.vercel.app, experimento 10. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[3:55 — Ficha del experimento #10]** (pantalla: tarjeta con la URL)
+Ficha del experimento 10. Estado: parcial. Cifra clave: con ×6 pasa el examen el 46.0% de las veces y revienta el 46.5%; el Sharpe baja de 0.70 a 0.58. Filtro que decidió: la comparación con los pesos iguales del experimento 9, que pasaban el 47.9%; la paridad de riesgo no los mejora. Lección: la sofisticación del tamaño de posición casi no cambia nada, manda la volatilidad total. Revísalo completo en atlas-lab-one.vercel.app/e/10.
+> Boceto: tarjeta oscura con el estado del experimento #10 arriba, las cifras clave en el centro y «atlas-lab-one.vercel.app/e/10» en grande al pie; las líneas de la ficha entran una a una; logo ATLAS.
+
+**[4:22 — Conclusión y cierre]**
+Veredicto: parcial. El método sofisticado no mejora al simple: 46.0% frente a 47.9%. Lo que manda es la volatilidad total para llegar al objetivo a tiempo, no la sofisticación del tamaño de posición. Todos los datos en atlas-lab-one.vercel.app/e/10. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 > Boceto: sello «PARCIAL»; frase de marca, logo y URL.
 
 ---
 
-## SHORT (9:16, ≈ 46 s)
+## SHORT (9:16, ≈ 48 s)
 Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s; ticker arriba.
 
 **[0-3 s]** «Pasar el examen de fondeo: 46.0%. Reventar: 46.5%.»
@@ -64,15 +72,20 @@ Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/o
 > Boceto: barras 47.9% contra 46.0%; Sharpe 0.70 → 0.58; whoosh y flash blanco.
 **[24-36 s]** «De esas, 23.0% por drawdown y 23.5% por pérdida diaria. Y si quito los primeros 60 días, cuando aún no hay pesos, ambas carteras empatan: 43.9% contra 43.7%.»
 > Boceto: pastel de reventar en dos rojos; dos barras casi iguales con «≈»; Ken Burns «in».
-**[36-46 s]** «Manda la volatilidad total para llegar a tiempo, no lo sofisticado del método. Pasar o reventar: casi lo mismo. El video completo está en el canal. No es asesoría financiera.»
-> Boceto: vuelven las dos monedas con 46.0% y 46.5% (loop con el gancho); texto «Video completo en el canal» y logo.
+**[36-48 s]** «Manda la volatilidad total para llegar a tiempo, no lo sofisticado del método. Pasar o reventar: casi lo mismo. El video completo está en el canal. Experimento #10 completo en el enlace. No es asesoría financiera.»
+> Boceto: vuelven las dos monedas con 46.0% y 46.5% (loop con el gancho); textos «Video completo en el canal» y «Experimento #10 completo en el enlace»; logo.
 
-## Descripción (YouTube)
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/10?utm_source=youtube&utm_medium=video&utm_campaign=exp010-t1
+Ficha del experimento #10 (Paridad de riesgo + tamaño óptimo): estado parcial · a ×6 pasa el 46.0% y revienta el 46.5% · Sharpe 0.58 frente a 0.70 de los pesos iguales (47.9%).
 Cambio los pesos iguales del experimento 9 por paridad de riesgo (pesos inversos a la volatilidad de 60 días) y pruebo apalancamientos de ×2 a ×6 en el simulador de challenge de fondeo. Mejor caso, ×6: pasa el 46.0% (pesos iguales a ×4: 47.9%), el Sharpe baja de 0.70 a 0.58 y la cuenta revienta el 46.5% de las veces.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #10)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:26 Dónde estábamos · 1:04 La idea: paridad de riesgo · 1:40 Resultados · 2:17 La comparación justa · 2:53 El valor esperado «ilustrativo» · 3:24 Con tu capital · 3:45 Conclusión y cierre
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/10?utm_source=youtube&utm_medium=short&utm_campaign=exp010-t1
+Experimento #10 · parcial · pasa el 46.0% frente al 47.9% de los pesos iguales. No es asesoría financiera.
+
+Capítulos: 0:00 Gancho · 0:26 Presentación · 0:36 Dónde estábamos · 1:14 La idea: paridad de riesgo · 1:50 Resultados · 2:27 La comparación justa · 3:03 El valor esperado «ilustrativo» · 3:34 Con tu capital · 3:55 Ficha del experimento #10 · 4:22 Conclusión y cierre
 
 Etiquetas: risk parity, paridad de riesgo, prop firm, challenge de fondeo, FTMO, apalancamiento, gestión de riesgo, Monte Carlo, simulación de trading, Sharpe ratio, ATLAS Lab, trading con datos
 

@@ -15,11 +15,15 @@ Fondo `#09090b`. Una vela verde gigante con un sello rojo ✕ encima. Texto: «C
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 7 min)
+## VIDEO LARGO (16:9, ≈ 7½ min)
 
 **[0:00 — Gancho]** (pantalla: «+30% al año» y una vela grande)
 Un TikTok promete +30% al año con 30 años de backtest. La receta: la media de 200 días para saber la dirección, entrar en una vela grande y piramidar hasta tres veces. Probé 10 versiones de su parte diaria. Ninguna pasó ni un solo filtro: 0 de 5. Y la peor llegó a un Sharpe de −1.55 en datos que nunca vio.
 BOCETO: «+30%» en blanco que se rompe en pedazos; contador «0 / 10» rojo. Barra de «Sharpe fuera de muestra» que cae hasta −1.55. kb=in.
+
+**[0:25 — Presentación]** (pantalla: rótulo «Experimento #86 · TikTok 2: MA200 a favor de la tendencia + vela de alto rango o volumen»)
+Este es el experimento #86 de ATLAS Lab: TikTok 2, MA200 a favor de la tendencia más vela de alto rango o volumen. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #86» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:40 — La receta]** (pantalla: esquema de vela, rango promedio y pirámide)
 Es reversión a la media operando a favor de la tendencia. Paso uno: la media de 200 días marca la dirección. Paso dos: esperar una vela de alto volumen o de alto rango, que supere el rango diario promedio. Paso tres: entrar y piramidar hasta tres veces, con el mismo riesgo. Paso cuatro: ratio de 1 a 3. Quien lo cuenta lo respalda con 30 años de backtest.
@@ -60,12 +64,16 @@ BOCETO: curvas reales de `series/extra-v86.json` (estrategia en rojo, ligerament
 **[6:25 — Conclusión]**
 Las 10 formas murieron sin pasar ningún filtro. El +30% al año no apareció. El trading no se promete: se prueba.
 
-**[6:50 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 86. Contenido educativo, no es asesoría financiera.
+**[6:50 — Ficha del experimento #86]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 86. Estado: murió. Cifra clave: las 10 formas pasan 0 de 5 filtros; la mejor de diseño da Sharpe de 0.08 contra 0.13 de comprar y esperar, y con 100,000 dólares pierde 5,692. Filtro que decidió: el Deflated Sharpe, con un máximo de 0.001 cuando se exige 0.95. Lección: el +30% al año anunciado no apareció. Revísalo completo en atlas-lab-one.vercel.app/e/86.
+BOCETO: tarjeta con el número «#86», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/86» grande y resaltada en verde. kb=in.
+
+**[7:15 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/86. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 45 s)
+## SHORT (9:16, ≈ 49 s)
 
 **[0-3 s]** «Un TikTok promete +30% al año. Probé 10 versiones: pasan cero de cinco filtros.»
 BOCETO: «+30%» gigante que se rompe; contador «0/10» rojo sobre b-roll de velas (kb=in), overlay 0.6.
@@ -79,18 +87,24 @@ BOCETO: barra 0.08 verde pálido frente a línea 0.13; barra −1.55 roja cayend
 **[30-42 s]** «Con 100,000 dólares, la mejor de diseño pierde 5,692. Comprar y esperar gana 14,407.»
 BOCETO: tarjeta de capital con contadores: −$5,692 rojo, +$14,407 blanco/verde.
 
-**[42-45 s]** «El video completo está en el canal. Prometen treinta por ciento… y pasan cero.»
-BOCETO: sello ✕; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «pasan cero» responde al hook.
+**[42-49 s]** «El video completo está en el canal y experimento #86 completo en el enlace. Prometen treinta por ciento… y pasan cero.»
+BOCETO: sello ✕; texto final «Video completo en el canal · Experimento #86 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «pasan cero» responde al hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/86?utm_source=youtube&utm_medium=video&utm_campaign=exp086-t1
+Ficha del experimento #86: murió · 10 formas, 0 de 5 filtros · mejor Sharpe de diseño 0.08 contra 0.13 de comprar y esperar · con $100,000, la mejor de diseño pierde $5,692.
 Un TikTok promete «+30% al año con 30 años de backtest»: MA200 como dirección y entrada en una vela de alto volumen o rango. Probé su versión diaria en 10 formas (7 pares de divisas + oro, 2007–2024, costos de 3 puntos básicos, 5 filtros): 0 pasan ningún filtro y la peor llega a −1.55 de Sharpe en 2021–2024.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #86)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/86?utm_source=youtube&utm_medium=short&utm_campaign=exp086-t1
+Ficha del experimento #86: murió · +30% anual anunciado: 0 de 10 formas pasan ningún filtro.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 La receta · 1:35 Qué probé · 2:25 Cómo lo probé · 3:30 Resultados · 4:50 Por qué pierde · 5:40 Con tu capital · 6:25 Conclusión
+0:00 Gancho · 0:25 Presentación · 0:40 La receta · 1:35 Qué probé · 2:25 Cómo lo probé · 3:30 Resultados · 4:50 Por qué pierde · 5:40 Con tu capital · 6:25 Conclusión · 6:50 Ficha del experimento #86
 
 ## Etiquetas
 estrategia de tiktok, media de 200 días, vela de alto volumen, reversión a la media, piramidar, backtest, sharpe ratio, fuera de muestra, deflated sharpe, forex, atlas lab, trading con datos

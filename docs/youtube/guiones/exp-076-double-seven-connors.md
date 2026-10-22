@@ -15,11 +15,15 @@ Fondo `#09090b`. Izquierda: «77%» enorme en blanco con una lupa. Derecha, text
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 7 min)
+## VIDEO LARGO (16:9, ≈ 7½ min)
 
 **[0:00 — Gancho]** (pantalla: «77% de aciertos» gigante; luego dos barras)
 Hay una estrategia que se vende con un 77% de aciertos. Suena imposible de perder. La probé en cuatro índices, de 2012 a 2024, con costos. Con 100,000 dólares habría ganado +45,736. Y simplemente comprar y esperar, +290,064. Te cuento por qué un porcentaje de aciertos alto engaña.
 BOCETO: «77%» late en blanco (kb=in). A los 8 s se parte la pantalla: barra verde +$45,736 (la estrategia) contra barra blanca de referencia +$290,064 (tarjeta de capital de la ficha, cifras de la tabla). Texto en pantalla: «Se vende con 77% de aciertos».
+
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #76 · Double Seven (Larry Connors)»)
+Este es el experimento #76 de ATLAS Lab: Double Seven, de Larry Connors. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #76» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:40 — La estrategia]** (pantalla: esquema de precio, media de 200 días, mínimo y máximo de 7 días)
 Se llama Double Seven y es de Larry Connors. La regla cabe en una frase: si el precio está por encima de su media de 200 días, es decir, en tendencia alcista de largo plazo, compras cuando el cierre cae por debajo del mínimo de los últimos 7 días y vendes cuando el cierre supera el máximo de los últimos 7. Comprar la caída dentro de una subida. Ese 77% es el que anuncia quien la vende; lo que yo voy a medir es otra cosa.
@@ -49,13 +53,17 @@ BOCETO: curvas reales de `series/extra-v76.json` (Double Seven en verde, «Sin e
 **[6:10 — Conclusión]**
 El 77% no es el número que importa; importan el riesgo y lo que pasa con datos nuevos. Double Seven no sirvió: el Sharpe cae de 0.58 a 0.16 y el drawdown llega a −35%. Hay estrategias que ganan dinero y aun así no aportan nada sobre comprar y esperar. El trading no se promete: se prueba.
 
-**[6:40 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 76. Si quieres que pruebe otra estrategia famosa, déjala en los comentarios. Contenido educativo, no es asesoría financiera.
+**[6:40 — Ficha del experimento #76]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 76. Estado: murió. Cifras clave: Sharpe de 0.58 en 2012–2018 y de 0.16 fuera de muestra; caída máxima de −9% a −35%; +8% fuera de muestra contra +109% de comprar y esperar. Lo que decidió: la prueba fuera de muestra. Lección: un porcentaje de aciertos alto esconde el riesgo. Revísalo completo en atlas-lab-one.vercel.app/e/76.
+BOCETO: tarjeta con el número «#76», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/76» grande y resaltada en verde. kb=in.
+
+**[7:05 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/76. Si quieres que pruebe otra estrategia famosa, déjala en los comentarios. Contenido educativo, no es asesoría financiera.
 BOCETO: logo ATLAS + URL; texto «El trading no se promete: se prueba».
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 50 s)
 
 **[0-3 s]** «Se vende con 77% de aciertos. ¿Y el dinero?»
 BOCETO: «77%» gigante en blanco sobre b-roll de pantalla de trading (kb=in), overlay 0.6; texto en pantalla «¿Y el dinero?». Sin logo de entrada.
@@ -69,18 +77,24 @@ BOCETO: dos barras verticales, 0.58 en verde cae a 0.16 en rojo; tick al aparece
 **[25-38 s]** «El drawdown pasa de −9% a −35%. Con 100,000 dólares: +45,736. Comprar y esperar: +290,064.»
 BOCETO: tarjeta de capital con contadores animados (verde y blanco); −35% en rojo parpadeando.
 
-**[38-48 s]** «Un porcentaje de aciertos alto esconde el riesgo. El video completo está en el canal. Setenta y siete por ciento de aciertos… y el dinero lo ganó comprar y esperar.»
-BOCETO: sello rojo ✕ sobre «77%»; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: la última frase desemboca en el «¿Y el dinero?» del inicio.
+**[38-50 s]** «Un porcentaje de aciertos alto esconde el riesgo. El video completo está en el canal y experimento #76 completo en el enlace. Setenta y siete por ciento de aciertos… y el dinero lo ganó comprar y esperar.»
+BOCETO: sello rojo ✕ sobre «77%»; texto final «Video completo en el canal · Experimento #76 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: la última frase desemboca en el «¿Y el dinero?» del inicio.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/76?utm_source=youtube&utm_medium=video&utm_campaign=exp076-t1
+Ficha del experimento #76: murió · Sharpe 0.58 en 2012–2018 y 0.16 fuera de muestra · drawdown −9% → −35% · +8% fuera de muestra contra +109% de comprar y esperar.
 Double Seven, de Larry Connors, se vende con «77% de aciertos». La probé en S&P 500, Nasdaq 100, DAX y FTSE 100 (2012–2024) con costos de 3 puntos básicos y señal del día siguiente: el Sharpe cae de 0.58 a 0.16 con datos nuevos y el drawdown llega a −35%.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #76)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/76?utm_source=youtube&utm_medium=short&utm_campaign=exp076-t1
+Ficha del experimento #76: murió · Sharpe 0.58 → 0.16 con datos nuevos · drawdown −9% → −35%.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 La estrategia · 1:45 Cómo la probé · 3:05 Resultados · 4:20 Por qué se cae · 5:20 Con tu capital · 6:10 Conclusión · 6:40 Cierre
+0:00 Gancho · 0:20 Presentación · 0:40 La estrategia · 1:45 Cómo la probé · 3:05 Resultados · 4:20 Por qué se cae · 5:20 Con tu capital · 6:10 Conclusión · 6:40 Ficha del experimento #76 · 7:05 Cierre
 
 ## Etiquetas
 double seven, larry connors, estrategia de trading, backtest, sharpe ratio, drawdown, comprar y mantener, fuera de muestra, índices bursátiles, trading con datos, atlas lab, estrategia 77% aciertos

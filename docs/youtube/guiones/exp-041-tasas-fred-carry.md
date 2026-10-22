@@ -16,41 +16,52 @@ Fondo #09090b. Texto gigante blanco "DESDE 1956"; debajo, en rojo (#e11d2a), "8 
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 4:12 · experimento de datos: rango de 4 a 6 min)
+## VIDEO LARGO (16:9, ≈ 4:44 · experimento de datos: rango de 4 a 6 min)
 
 **[0:00 — Gancho]** (pantalla — BOCETO: una tabla vacía de 8 columnas (USD, EUR, GBP, JPY, AUD, CAD, CHF, NZD) que se llena con números; sobre ella aparece «1956» en grande y luego «2026»)
 Hay una estrategia que te paga intereses por cambiar de moneda. Para probarla en serio, antes de cualquier backtest necesitas un dato: la tasa de interés de cada moneda, mes a mes. Las descargué, gratis, para 8 monedas. La más antigua empieza en 1956 y los datos llegan hasta 2026.
 
-**[0:22 — Qué es el carry]** (pantalla — BOCETO: dos monedas, una con «tasa alta» y otra con «tasa baja»; flecha de compra hacia la primera, de venta hacia la segunda; contador de interés cobrado día a día)
+**[0:22 — Presentación]** (pantalla — BOCETO: rótulo «Experimento #41 · Tasas de FRED (datos de carry)» sobre velas con opacidad 0.12; logo ATLAS)
+Este es el experimento #41 de ATLAS Lab: Tasas de FRED, datos de carry. Todos los resultados están en la página del experimento.
+
+**[0:32 — Qué es el carry]** (pantalla — BOCETO: dos monedas, una con «tasa alta» y otra con «tasa baja»; flecha de compra hacia la primera, de venta hacia la segunda; contador de interés cobrado día a día)
 La estrategia se llama carry. Compras la divisa que paga más interés, vendes la que paga menos y cobras la diferencia de tasas, un día tras otro, mientras el tipo de cambio no se mueva demasiado. Pero para saber cuál paga más en cada momento hay que tener las tasas. Sin esa tabla no hay carry que probar.
 
-**[0:48 — Qué descargué]** (pantalla — BOCETO: tarjeta params_view: fuente FRED (CSV público) · 8 monedas · tasa interbancaria a 3 meses · USD con respaldo de la letra del Tesoro a 3 meses · sin clave de API · datos mensuales)
+**[0:58 — Qué descargué]** (pantalla — BOCETO: tarjeta params_view: fuente FRED (CSV público) · 8 monedas · tasa interbancaria a 3 meses · USD con respaldo de la letra del Tesoro a 3 meses · sin clave de API · datos mensuales)
 Bajé la tasa interbancaria a 3 meses de ocho monedas, que es la tasa a la que los bancos se prestan entre sí a tres meses y sirve para comparar cuánto paga cada moneda: dólar estadounidense, euro, libra, yen, dólar australiano, canadiense, franco suizo y dólar neozelandés. La fuente es FRED, la base de datos económicos de la Reserva Federal de EE. UU., en un archivo CSV público: gratis y sin clave de API. Para el dólar añadí como respaldo la letra del Tesoro a 3 meses. Son datos mensuales, no diarios.
 
-**[1:27 — Desde cuándo hay datos]** (pantalla — BOCETO: gráfico de barras/línea de tiempo con el año de inicio de cada moneda: CAD 1956 · GBP 1957 · USD 1964 · AUD 1968 · NZD 1973 · EUR 1994 · CHF 1999 · JPY 2002; una banda vertical en 2002 rotulada «las 8 juntas»; es el chart del experimento)
+**[1:37 — Desde cuándo hay datos]** (pantalla — BOCETO: gráfico de barras/línea de tiempo con el año de inicio de cada moneda: CAD 1956 · GBP 1957 · USD 1964 · AUD 1968 · NZD 1973 · EUR 1994 · CHF 1999 · JPY 2002; una banda vertical en 2002 rotulada «las 8 juntas»; es el chart del experimento)
 Cada moneda empieza en un año distinto. El dólar canadiense, en 1956. La libra, en 1957. El dólar estadounidense, en 1964, y su letra del Tesoro, desde 1934. El australiano, 1968. El neozelandés, 1973. El euro, 1994. El franco suizo, 1999. Y el yen, 2002. Las ocho monedas juntas existen solo desde 2002, y ese es el límite para cualquier factor que las compare.
 
-**[1:55 — Por qué importan tantos años]** (pantalla — BOCETO: la línea de tiempo con tres franjas de color genéricas rotuladas «épocas distintas»; sin cifras nuevas)
+**[2:05 — Por qué importan tantos años]** (pantalla — BOCETO: la línea de tiempo con tres franjas de color genéricas rotuladas «épocas distintas»; sin cifras nuevas)
 Cuantos más años de tasas, más épocas distintas se pueden probar. Para el carry importa especialmente, porque el interés que se cobra cambia con cada época: lo que paga una moneda en una década no es lo que paga en otra, y una prueba honesta tiene que pasar por varias.
 
-**[2:17 — Hasta cuándo]** (pantalla — BOCETO: la misma línea de tiempo extendida hasta 2026 con tres marcadores: EUR y GBP «enero 2026», JPY «marzo 2026», resto «abril 2026»)
+**[2:27 — Hasta cuándo]** (pantalla — BOCETO: la misma línea de tiempo extendida hasta 2026 con tres marcadores: EUR y GBP «enero 2026», JPY «marzo 2026», resto «abril 2026»)
 Del otro lado, los datos llegan casi al presente: el euro y la libra hasta enero de 2026, el yen hasta marzo y las demás monedas hasta abril de 2026. Con eso se pueden probar épocas muy distintas, aunque en las pruebas del carry usé 2007–2013 y 2014–2024.
 
-**[2:39 — Los límites de estos datos]** (pantalla — BOCETO: checklist de exp_details.filters: «paso de datos: sin backtest» · «frecuencia mensual» · «la publicación real puede tardar más que el rezago de un mes»)
+**[2:49 — Los límites de estos datos]** (pantalla — BOCETO: checklist de exp_details.filters: «paso de datos: sin backtest» · «frecuencia mensual» · «la publicación real puede tardar más que el rezago de un mes»)
 Conviene ser claro sobre lo que este experimento no es. Es un paso de datos: no opera, no tiene curva de capital y no prueba rentabilidad. Y los datos son mensuales, así que en las pruebas la señal se rezaga un mes por la publicación; en la vida real puede tardar más. Por eso no hay un veredicto de ganancia: el resultado es una tabla lista para usar.
 
-**[3:09 — Para qué sirvió]** (pantalla — BOCETO: flecha desde la tabla de tasas hacia dos tarjetas «Experimento 42: carry de divisas» y «Experimento 43: carry + tendencia»; dato de la tarjeta de capital del 42: −$9,924 sobre $100,000 en 256 días, sello ✕)
+**[3:19 — Para qué sirvió]** (pantalla — BOCETO: flecha desde la tabla de tasas hacia dos tarjetas «Experimento 42: carry de divisas» y «Experimento 43: carry + tendencia»; dato de la tarjeta de capital del 42: −$9,924 sobre $100,000 en 256 días, sello ✕)
 Esta tabla alimenta los experimentos 42 y 43, donde probé el carry con siete pares de forex. Adelanto el resultado del primero: con el interés del carry sumado a la cuenta, el carry puro se cortó a los 256 días, con −$9,924 sobre $100,000 simulados. Lo cuento completo en el siguiente video.
 
-**[3:32 — Con tu capital]** (pantalla — BOCETO: la tarjeta «Con tu capital» vacía con el mensaje de la web: «No hay cartera: es la descarga de las tasas»)
+**[3:42 — Con tu capital]** (pantalla — BOCETO: la tarjeta «Con tu capital» vacía con el mensaje de la web: «No hay cartera: es la descarga de las tasas»)
 Este experimento no tiene cuenta ni curva de capital: es la descarga de las tasas de interés de 8 monedas, sin cifras en dinero. Para ver dólares en juego, mira el experimento 42.
 
-**[3:48 — Conclusión y cierre]** (pantalla — BOCETO: sello «NO CONCLUYENTE» sobre la tabla de 8 columnas; logo ATLAS + URL)
-Veredicto: no concluyente. Es un paso de datos, sin prueba de rentabilidad: deja listas las tasas mensuales de 8 monedas, con la más antigua desde 1956 y las ocho juntas desde 2002. Todos los datos están en atlas-lab-one.vercel.app, experimento 41. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[3:58 — Ficha del experimento #41]** (pantalla — BOCETO: tarjeta de ficha con sello «NO CONCLUYENTE», cuatro líneas y la URL atlas-lab-one.vercel.app/e/41; logo ATLAS)
+Ficha del experimento #41.
+Estado: no concluyente, es un paso de datos.
+Cifra clave: 8 monedas, la más antigua desde 1956 y las ocho juntas desde 2002, hasta 2026.
+Filtro que decidió: ninguno; aquí no hay backtest que filtrar.
+Lección: revisa siempre desde cuándo y hasta cuándo llega cada serie antes de usarla.
+Revísalo completo en atlas-lab-one.vercel.app/e/41.
+
+**[4:20 — Conclusión y cierre]** (pantalla — BOCETO: sello «NO CONCLUYENTE» sobre la tabla de 8 columnas; logo ATLAS + URL)
+Veredicto: no concluyente. Es un paso de datos, sin prueba de rentabilidad: deja listas las tasas mensuales de 8 monedas, con la más antigua desde 1956 y las ocho juntas desde 2002. Todos los datos están en atlas-lab-one.vercel.app/e/41. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 50 s)
 Título del Short: Una estrategia que te paga por cambiar de moneda #shorts
 Fórmula visual (CLAUDE.md del canal): b-roll vertical real con overlay 0.6, Ken Burns alternado, subtítulos karaoke en MAYÚSCULAS con cifras en rojo, ticker arriba, whoosh + flash en cada corte; golpe (bass + sacudida) solo en 0-3 s y 28-40 s.
 
@@ -66,19 +77,23 @@ Fórmula visual (CLAUDE.md del canal): b-roll vertical real con overlay 0.6, Ken
 **[28-40 s]** "¿Funcionó el carry? Con estos datos probé una versión con el interés sumado a la cuenta. La del carry puro se cortó a los 256 días."
 - Boceto: rótulo «DATO DEL EXPERIMENTO 42»; contador de días que llega a 256 y sello ✕; sacudida.
 
-**[40-48 s]** "Video completo en el canal. No es asesoría financiera. Una estrategia que te paga por cambiar de moneda… ¿y funciona?"
-- Boceto: logo ATLAS. Loop: la pregunta final enlaza con «Una estrategia que te paga intereses por cambiar de moneda».
+**[40-50 s]** "Video completo en el canal. Experimento 41 completo en el enlace. No es asesoría financiera. Una estrategia que te paga por cambiar de moneda… ¿y funciona?"
+- Boceto: tarjeta «experimento #41 completo en el enlace» y la URL corta; logo ATLAS. Loop: la pregunta final enlaza con «Una estrategia que te paga intereses por cambiar de moneda».
 
 ## Descripción (YouTube)
+https://atlas-lab-one.vercel.app/e/41?utm_source=youtube&utm_medium=video&utm_campaign=exp041-t1
+Ficha del experimento #41 (tasas de FRED, datos de carry): no concluyente, es un paso de datos · 8 monedas, la más antigua desde 1956 (dólar canadiense) y las ocho juntas desde 2002, hasta 2026; fuente FRED, gratis y sin clave de API.
 Paso de datos: descargué las tasas de interés a 3 meses de 8 monedas (USD, EUR, GBP, JPY, AUD, CAD, CHF y NZD) desde FRED, gratis y sin clave de API. La más antigua, el dólar canadiense, empieza en 1956; las ocho juntas existen desde 2002, hasta 2026. Son la base del carry de los experimentos 42 y 43. Experimento #41, no concluyente (no prueba rentabilidad).
 
-Datos completos: https://atlas-lab-one.vercel.app (experimento #41)
-
-Capítulos: 0:00 Gancho · 0:22 Qué es el carry · 0:48 Qué descargué · 1:27 Desde cuándo hay datos · 1:55 Por qué importan tantos años · 2:17 Hasta cuándo · 2:39 Los límites de estos datos · 3:09 Para qué sirvió · 3:32 Con tu capital · 3:48 Conclusión y cierre
+Capítulos: 0:00 Gancho · 0:22 Presentación · 0:32 Qué es el carry · 0:58 Qué descargué · 1:37 Desde cuándo hay datos · 2:05 Por qué importan tantos años · 2:27 Hasta cuándo · 2:49 Los límites de estos datos · 3:19 Para qué sirvió · 3:42 Con tu capital · 3:58 Ficha del experimento #41 · 4:20 Conclusión y cierre
 
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
 Etiquetas: carry trade, tasas de interés, FRED, forex, datos económicos, divisas, trading, backtest, datos gratis, Reserva Federal, ATLAS Lab
+
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/41?utm_source=youtube&utm_medium=short&utm_campaign=exp041-t1
+Ficha del experimento #41: tasas de interés de 8 monedas desde 1956, de FRED, gratis y sin clave de API. No concluyente (paso de datos). Video completo en el canal. Contenido educativo, no es asesoría financiera.
 
 ## Rúbrica (autoevaluación — criterios del CLAUDE.md del canal, 1-5)
 | hook_0_3s | ritmo | promesa_cumplida | potencial_loop | claridad_no_traders | honestidad_atlas | audio | cta |

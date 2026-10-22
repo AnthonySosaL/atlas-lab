@@ -21,6 +21,10 @@ Fondo `#09090b`. Tres engranajes numerados 1-2-3, el tercero iluminado en verde;
 Probé tres mejoras para una estrategia que cambia de modo según el mercado. Una de ellas subió el Sharpe fuera de muestra de 0.36 a 0.60. Parece un éxito. Pero usar solo tendencia, sin adaptar nada, ya daba 0.59. La mejora existe; la ventaja, no.
 BOCETO: barra que crece de 0.36 a 0.60 (verde) y de pronto una línea blanca en 0.59 («solo tendencia») y otra en 0.68 («comprar y esperar»). Texto: «Sharpe fuera de muestra, 2019–2024». kb=in.
 
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #79 · Régimen adaptativo: histéresis, confirmación y mezcla»)
+Este es el experimento #79 de ATLAS Lab: régimen adaptativo, histéresis, confirmación y mezcla. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #79» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:35 — El problema]** (pantalla: señal que entra y sale a destiempo)
 En el experimento anterior, la versión adaptativa medía el régimen con el Efficiency Ratio, una medida de qué tan en línea recta se movió el precio, y entraba y salía a destiempo, con señales falsas. Aquí intento arreglar eso con tres ideas. Una: histéresis, como un termostato: entra en tendencia cuando el ratio pasa de 0.45 y solo sale cuando baja de 0.25. Dos: confirmación, exigir que el ratio supere 0.35 durante 5 días seguidos. Tres: mezcla continua, un peso gradual según la fuerza del ratio en lugar de un interruptor.
 BOCETO: tres paneles ilustrativos (rotulados «ilustración»): termostato con dos umbrales 0.45 / 0.25; calendario con 5 casillas marcadas; regulador de volumen deslizante. Parámetros de `params_view`.
@@ -49,8 +53,12 @@ BOCETO: dos franjas: 2012–2018 gris/rojo (−0.05) y 2019–2024 verde (0.60).
 Con 100,000 dólares entre 2012 y 2024, la mejor variante, la confirmación de 5 días, gana 37,060. Comprar y esperar los mismos índices gana 290,064. Con 10,000 dólares serían unos +3,706 contra +29,006. Es lo que pasó, no una promesa.
 BOCETO: curvas reales de `series/extra-v79.json` (confirmación en verde, «Sin estrategia» en blanco), contadores finales.
 
-**[5:15 — Conclusión y cierre]**
-Las mejoras ayudan, pero la adaptación no aporta nada extra y comprar y esperar sigue por encima. No sirvió. El trading no se promete: se prueba. Todos los datos en atlas-lab-one.vercel.app, experimento 79. Contenido educativo, no es asesoría financiera.
+**[5:15 — Ficha del experimento #79]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 79. Estado: murió. Cifras clave: la mejor variante, la confirmación de 5 días, 0.60 fuera de muestra; solo tendencia, 0.59; comprar y esperar, 0.68. Lo que decidió: la adaptación no aporta nada extra y es negativa en 2012–2018. Lección: compárate siempre con la versión simple. Revísalo completo en atlas-lab-one.vercel.app/e/79.
+BOCETO: tarjeta con el número «#79», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/79» grande y resaltada en verde. kb=in.
+
+**[5:35 — Conclusión y cierre]**
+Las mejoras ayudan, pero la adaptación no aporta nada extra y comprar y esperar sigue por encima. No sirvió. El trading no se promete: se prueba. Todos los datos en atlas-lab-one.vercel.app/e/79. Contenido educativo, no es asesoría financiera.
 
 ---
 
@@ -65,18 +73,24 @@ BOCETO: tres iconos (termostato, calendario, regulador) entrando uno a uno (kb=o
 **[15-30 s]** «La mejor, la confirmación, saca 0.60 con datos nuevos. Pero solo tendencia, sin adaptar nada, saca 0.59. Comprar y esperar, 0.68.»
 BOCETO: barra 0.60 verde, línea blanca 0.59 que la iguala, línea 0.68 por encima; tick en cada número; golpe de bajo en 0.68.
 
-**[30-45 s]** «Y de 2012 a 2018 era negativa. La adaptación no aporta nada. El video completo está en el canal. Mejorar de 0.36 a 0.60… para igualar lo que ya había.»
-BOCETO: barra negativa roja en 2012–2018; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «para igualar lo que ya había» vuelve a «mejoré… de 0.36 a 0.60».
+**[30-45 s]** «Y de 2012 a 2018 era negativa. La adaptación no aporta nada. El video completo está en el canal y experimento #79 completo en el enlace. Mejorar de 0.36 a 0.60… para igualar lo que ya había.»
+BOCETO: barra negativa roja en 2012–2018; texto final «Video completo en el canal · Experimento #79 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «para igualar lo que ya había» vuelve a «mejoré… de 0.36 a 0.60».
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/79?utm_source=youtube&utm_medium=video&utm_campaign=exp079-t1
+Ficha del experimento #79: murió · mejor variante (confirmación de 5 días): Sharpe 0.60 fuera de muestra · solo tendencia 0.59 · comprar y esperar 0.68.
 Tres mejoras al régimen adaptativo (histéresis, confirmación de 5 días y mezcla continua), probadas en S&P 500, Nasdaq 100, DAX y FTSE 100 con costos. La mejor llega a un Sharpe de 0.60 fuera de muestra, pero solo tendencia ya daba 0.59 y comprar y esperar, 0.68.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #79)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/79?utm_source=youtube&utm_medium=short&utm_campaign=exp079-t1
+Ficha del experimento #79: murió · 0.60 contra 0.59 de solo tendencia: la adaptación no aporta nada extra.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:35 El problema · 1:45 Cómo lo probé · 2:40 Resultados · 3:55 Por qué no alcanza · 4:40 Con tu capital · 5:15 Conclusión
+0:00 Gancho · 0:20 Presentación · 0:35 El problema · 1:45 Cómo lo probé · 2:40 Resultados · 3:55 Por qué no alcanza · 4:40 Con tu capital · 5:15 Ficha del experimento #79 · 5:35 Conclusión
 
 ## Etiquetas
 régimen de mercado, histéresis, efficiency ratio, estrategia adaptativa, seguimiento de tendencia, backtest, sharpe ratio, fuera de muestra, índices bursátiles, atlas lab, trading con datos

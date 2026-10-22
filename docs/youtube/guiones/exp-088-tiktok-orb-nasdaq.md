@@ -15,11 +15,15 @@ Fondo `#09090b`. Dos curvas reales de `series/extra-v88.json`: una roja que se d
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 9 min)
+## VIDEO LARGO (16:9, ≈ 9½ min)
 
 **[0:00 — Gancho]** (pantalla: «+214% en 20 años» y dos curvas)
 Un TikTok promete +214% en 20 años con una sola regla en el Nasdaq. La probé directamente en el Nasdaq 100, en 32 formas y 3,594 sesiones de Nueva York. La versión del video, con 100,000 dólares entre 2012 y 2026, pierde 77,076. Comprar y esperar el Nasdaq, en cambio, gana 1,102,826.
 BOCETO: «+214%» en blanco que se desvanece; las dos curvas reales (versión del video roja, comprar y esperar verde) se dibujan de 2012 a 2026; contadores finales en pantalla. kb=in.
+
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #88 · TikTok 4: ORB del Nasdaq a las 9:30 (prueba directa, 32 formas)»)
+Este es el experimento #88 de ATLAS Lab: TikTok 4, ORB del Nasdaq a las 9:30. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #88» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
 
 **[0:50 — La estrategia]** (pantalla: velas de 30 minutos con el rango de las 9:30)
 Se llama ORB, ruptura del rango de apertura. Cuando abre Wall Street, a las 9:30 hora de Nueva York, marcas el rango de la primera vela de 30 minutos. Pones una orden de compra en su máximo y una de venta en su mínimo. La que se active primero abre la operación, con el stop en el lado opuesto y un objetivo de tres veces el riesgo, lo que llaman 1 a 3. Si no sale antes, cierras a las 16:00. Hacer siempre lo mismo, todos los días.
@@ -59,12 +63,16 @@ BOCETO: tres curvas reales de `series/extra-v88.json` (versión del video roja, 
 **[8:20 — Conclusión]**
 Ninguna de las 32 formas pasa. La versión del video pierde con costos y no le llega a la de comprar y esperar. Estas rupturas no dejan margen sobre el costo. El trading no se promete: se prueba.
 
-**[8:45 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 88. Contenido educativo, no es asesoría financiera.
+**[8:45 — Ficha del experimento #88]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 88. Estado: murió. Cifra clave: la versión del video da Sharpe de −1.73 en 2014–2020, y −0.35 sin costos; con 100,000 dólares pierde 77,076 contra +1,102,826 de comprar y esperar el Nasdaq. Filtro que decidió: ninguna de las 32 formas pasa; la ventaja de 2.1 puntos básicos no cubre un costo de 6. Lección: el costo es parte de la estrategia. Revísalo completo en atlas-lab-one.vercel.app/e/88.
+BOCETO: tarjeta con el número «#88», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/88» grande y resaltada en verde. kb=in.
+
+**[9:15 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/88. Contenido educativo, no es asesoría financiera.
 
 ---
 
-## SHORT (9:16, ≈ 50 s)
+## SHORT (9:16, ≈ 52 s)
 
 **[0-3 s]** «Prometía +214% en 20 años. Con 100,000 dólares, perdió 77,076.»
 BOCETO: «+214%» gigante en verde que se tacha y se transforma en «−$77,076» rojo, sobre b-roll de bolsa de Nueva York (kb=in), overlay 0.6; golpe de bajo + sacudida al cambiar la cifra.
@@ -78,18 +86,24 @@ BOCETO: contador «0/32» rojo; barra roja −1.73 frente a barra verde 1.01; ti
 **[28-42 s]** «Con los mismos 100,000 dólares, comprar y esperar el Nasdaq gana 1,102,826.»
 BOCETO: dos curvas reales de 2012 a 2026 con contadores finales: −$77,076 rojo y +$1,102,826 verde.
 
-**[42-50 s]** «La ventaja por operación es de 2.1 puntos básicos. Cuesta 6. El video completo está en el canal. Prometía 214%. Perdió 77,076.»
-BOCETO: barra de 2.1 frente a barra de 6; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «Perdió 77,076» responde a la promesa del hook.
+**[42-52 s]** «La ventaja por operación es de 2.1 puntos básicos. Cuesta 6. El video completo está en el canal y experimento #88 completo en el enlace. Prometía 214%. Perdió 77,076.»
+BOCETO: barra de 2.1 frente a barra de 6; texto final «Video completo en el canal · Experimento #88 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «Perdió 77,076» responde a la promesa del hook.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/88?utm_source=youtube&utm_medium=video&utm_campaign=exp088-t1
+Ficha del experimento #88: murió · 32 formas del ORB del Nasdaq 100, 0 pasan · versión del video: Sharpe −1.73 en 2014–2020 (−0.35 sin costos) · con $100,000: −$77,076 contra +$1,102,826 de comprar y esperar.
 Probé directamente en el Nasdaq 100 la estrategia ORB de TikTok (ruptura del rango de las 9:30, objetivo 1:3, «+214% en 20 años»): velas de 30 minutos de 2012 a 2026, 3,594 sesiones, 32 formas, 3 puntos básicos por lado y 5 filtros. 0 de 32 pasan; con $100,000, la versión del video pierde $77,076 y comprar y esperar el Nasdaq gana $1,102,826.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #88)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/88?utm_source=youtube&utm_medium=short&utm_campaign=exp088-t1
+Ficha del experimento #88: murió · ventaja de +2.1 puntos básicos contra un costo de 6 · con $100,000: −$77,076.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:50 La estrategia · 1:55 Prueba directa · 2:50 Cómo lo probé · 4:15 Resultados · 6:00 El Monte Carlo que engaña · 6:35 Por qué pierde · 7:35 Con tu capital · 8:20 Conclusión
+0:00 Gancho · 0:20 Presentación · 0:50 La estrategia · 1:55 Prueba directa · 2:50 Cómo lo probé · 4:15 Resultados · 6:00 El Monte Carlo que engaña · 6:35 Por qué pierde · 7:35 Con tu capital · 8:20 Conclusión · 8:45 Ficha del experimento #88
 
 ## Etiquetas
 orb, opening range breakout, nasdaq 100, estrategia de tiktok, ruptura del rango de apertura, trading intradía, backtest, costos de trading, sharpe ratio, deflated sharpe, atlas lab, trading con datos

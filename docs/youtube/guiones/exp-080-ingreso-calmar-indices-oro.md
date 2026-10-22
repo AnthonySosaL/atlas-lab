@@ -21,6 +21,10 @@ Fondo `#09090b`. Dos curvas casi pegadas, una verde y una blanca; entre ellas, t
 Una estrategia que rinde +11.2% al año, contra +11.0% de comprar y esperar. Casi lo mismo. Pero con una caída máxima de −26% en vez de −31%. Menos dolor, igual de ganancia. Suena a ventaja, ¿no? Te cuento por qué no lo es.
 BOCETO: dos curvas reales superpuestas de `series/extra-v80.json` (B3 verde, «Sin estrategia» blanca) dibujándose; contadores «+11.2%» y «+11.0%»; al final, marcas rojas en sus puntos más bajos: «−26%» y «−31%». kb=in.
 
+**[0:20 — Presentación]** (pantalla: rótulo «Experimento #80 · Estrategia de ingreso óptima por Calmar (índices + oro)»)
+Este es el experimento #80 de ATLAS Lab: estrategia de ingreso óptima por Calmar, índices y oro. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #80» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:35 — La pregunta]** (pantalla: texto)
 Quiero vivir de retiros: sacar dinero cada año mientras la cartera sigue creciendo. Para eso miro dos cosas: el Calmar, que es el retorno anual dividido entre la caída máxima, y el retiro anual máximo sostenible, es decir, la mayor tasa de retiro con la que la cartera no se agota y conserva al menos la mitad del capital.
 BOCETO: dos tarjetas con las definiciones: «Calmar = retorno ÷ caída máxima» y «Retiro sostenible = el mayor % anual que no agota la cartera y conserva ≥ 50%».
@@ -50,8 +54,12 @@ BOCETO: curvas reales de `series/extra-v80.json`; cartel ámbar fijo: «Sin cost
 **[5:50 — Conclusión]**
 Resultado parcial. Para vivir de retiros la clave es el Calmar, y B3 lo mejora sin perder retorno. Pero sostiene menos retiro, no mejora el Sharpe y es beta gestionada. Sirve como un plan de ingreso sensato, no como una ventaja. El trading no se promete: se prueba.
 
-**[6:30 — Cierre]**
-Todos los datos en atlas-lab-one.vercel.app, experimento 80. Contenido educativo, no es asesoría financiera.
+**[6:30 — Ficha del experimento #80]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 80. Estado: parcial. Cifra clave: la exposición por tendencia B3 rinde +11.2% anual contra +11.0% de comprar y esperar, con caída máxima de −26% contra −31%. Filtro que decidió: B3 no mejora el Sharpe, 0.67 contra 0.76, ni el retiro sostenible, 10.0% contra 12.0%. Lección: es beta gestionada, no ventaja. Revísalo completo en atlas-lab-one.vercel.app/e/80.
+BOCETO: tarjeta con el número «#80», el sello «PARCIAL» en ámbar y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/80» grande y resaltada en verde. kb=in.
+
+**[6:55 — Cierre]**
+Todos los datos en atlas-lab-one.vercel.app/e/80. Contenido educativo, no es asesoría financiera.
 
 ---
 
@@ -66,18 +74,24 @@ BOCETO: curvas reales de B3 y «Sin estrategia» dibujándose (kb=out).
 **[14-28 s]** «Caída máxima: −26% contra −31%. Calmar: 0.43 contra 0.36. Pero el Sharpe baja de 0.76 a 0.67 y el retiro sostenible, de 12% a 10%.»
 BOCETO: tres pares de cifras en pantalla; verdes los de B3 que ganan, rojos los que pierden; golpe de bajo + sacudida en 12% → 10%.
 
-**[28-45 s]** «Usa 2x, sin costos ni financiamiento. No es ventaja: es beta gestionada. El video completo está en el canal. Menos caída, mismo retorno… porque es el mismo mercado.»
-BOCETO: candado ámbar «2x»; texto final «Video completo en el canal» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «el mismo mercado» responde al «¿Ventaja?» del inicio.
+**[28-45 s]** «Usa 2x, sin costos ni financiamiento. No es ventaja: es beta gestionada. El video completo está en el canal y experimento #80 completo en el enlace. Menos caída, mismo retorno… porque es el mismo mercado.»
+BOCETO: candado ámbar «2x»; texto final «Video completo en el canal · Experimento #80 completo en el enlace» + pequeño «No es asesoría financiera · El trading no se promete: se prueba». Loop: «el mismo mercado» responde al «¿Ventaja?» del inicio.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/80?utm_source=youtube&utm_medium=video&utm_campaign=exp080-t1
+Ficha del experimento #80: parcial · exposición por tendencia B3: +11.2% anual contra +11.0% de comprar y esperar, caída −26% contra −31% · Sharpe 0.67 contra 0.76 · retiro sostenible 10.0% contra 12.0%.
 Busqué una estrategia para vivir de retiros en S&P 500, Nasdaq 100, DAX, FTSE 100 y oro (2012–2024), midiendo Calmar y retiro sostenible. La exposición por tendencia (B3, hasta 2x) crece +11.2% contra +11.0% de comprar y esperar, con caída de −26% contra −31%; pero es beta gestionada, no ventaja, y no incluye costos ni financiamiento.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #80)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/80?utm_source=youtube&utm_medium=short&utm_campaign=exp080-t1
+Ficha del experimento #80: parcial · +11.2% contra +11.0% anual y caída de −26% contra −31%: beta gestionada, no ventaja.
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:35 La pregunta · 1:30 Cómo lo probé · 2:40 Resultados · 3:50 Por qué es beta · 4:55 Con tu capital · 5:50 Conclusión · 6:30 Cierre
+0:00 Gancho · 0:20 Presentación · 0:35 La pregunta · 1:30 Cómo lo probé · 2:40 Resultados · 3:50 Por qué es beta · 4:55 Con tu capital · 5:50 Conclusión · 6:30 Ficha del experimento #80 · 6:55 Cierre
 
 ## Etiquetas
 calmar ratio, retiro sostenible, vivir de inversiones, exposición por tendencia, vol target, beta gestionada, drawdown, turtle, faber, backtest, atlas lab, trading con datos

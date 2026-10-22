@@ -14,68 +14,81 @@ Fondo `#09090b`. «2.12» enorme en blanco y Segoe UI Black, con la curva real d
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 5:18 min)
+## VIDEO LARGO (16:9, ≈ 5:54 min)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; los pasos de cada boceto van en orden. Fórmula del canal: b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte.
 
 **[0:00 — Gancho]** (pantalla: la curva real disparándose)
 Si alguien te enseña esta curva, tiene que explicarte una cosa: a qué hora conocía cada dato. Con 100,000 dólares, esta estrategia gana 1,227,815 dólares en diez años. Sharpe de 2.12, el retorno por unidad de riesgo. Más 1,226.7%. Es el Sharpe más alto de los experimentos 16 al 30. Y no se puede operar.
 > Boceto: la curva real de `series/…v26.json` disparándose con el contador «+$1,227,815»; el medidor de Sharpe llega a 2.12; al final, la alarma roja parpadea con golpe de bass y sacudida.
 
-**[0:24 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
+**[0:24 — Presentación]** (pantalla: rótulo «Experimento #26 · Reentrada cuando el pánico se enfría»)
+Este es el experimento #26 de ATLAS Lab: Reentrada cuando el pánico se enfría. Todos los resultados están en la página del experimento.
+> Boceto: el rótulo «EXPERIMENTO #26 · Reentrada cuando el pánico se enfría» entra sobre velas animadas con opacidad 0.12.
+
+**[0:34 — Dónde encaja en la serie]** (pantalla: mapa de la serie, #15 al #30)
 Este es el último experimento antes de la prueba de fuego del #27. Los anteriores muestran cómo cada idea nueva mejora o empeora al bot. Este mejora tanto, que la sospecha es inevitable.
 > Boceto: línea de la serie con el #26 iluminado y la flecha «sospecha» hacia el #27.
 
-**[0:38 — La idea: volver cuando el pánico se enfría]** (pantalla: VIX bajando de su máximo)
+**[0:48 — La idea: volver cuando el pánico se enfría]** (pantalla: VIX bajando de su máximo)
 La regla del filtro saca al bot del mercado cuando hay miedo. Esta idea lo trae de vuelta, con menos apalancamiento, es decir, posiciones más pequeñas, ×1.5 o ×2, cuando el VIX ya bajó por debajo de cierta fracción de su máximo de los últimos 10 días: 0.7, 0.8 o 0.9 veces ese máximo: cuando el pánico se está enfriando.
 > Boceto: curva del VIX con un máximo de 10 días marcado y tres líneas horizontales en 0.7, 0.8 y 0.9 veces el máximo; cuando la curva cruza hacia abajo, un cartel verde «re-entra a ×2».
 
-**[1:04 — Cómo se probó]** (pantalla: checklist de filtros)
+**[1:14 — Cómo se probó]** (pantalla: checklist de filtros)
 Una grilla de 6 combinaciones —3 niveles de enfriamiento por 2 apalancamientos—, con reglas fijadas de antemano y sin aprendizaje automático, en 2014 a 2024 y en 2007 a 2013, con las reglas de una prop firm, la empresa que presta la cuenta y la cierra si pierdes demasiado. Se publica la mejor que sobrevive en ambos periodos, elegida por el Sharpe de 2014–2024. No se descuentan costos ni se aplica el Deflated Sharpe.
 > Boceto: rejilla de 6 casillas (0.7/0.8/0.9 por ×1.5/×2) que se iluminan una a una; checklist de `exp_details.json`: «2014–2024: pasa», «2007–2013: pasa», «parámetros elegidos en la misma muestra: FALLA», «señal de ayer: FALLA», «costos y DSR: no aplicados».
 
-**[1:35 — Resultados]** (pantalla: tarjetas de KPI y las 6 barras)
+**[1:45 — Resultados]** (pantalla: tarjetas de KPI y las 6 barras)
 Las seis combinaciones superan a la base, que daba un Sharpe de 1.23: van de 1.36 hasta 2.12. La mejor, enfriamiento de 0.9 y apalancamiento ×2: Sharpe de 2.12, más 1,226.7% y caída máxima de menos 10.2%. Fuera de muestra, es decir, con datos que no se usaron para diseñar la regla, en 2007 a 2013: Sharpe de 1.53, contra 1.06 de la base.
 > Boceto: seis barras verdes de 1.36 a 2.12 con la línea de la base en 1.23; la barra de 2.12 se resalta; tarjetas con tick (+1,226.7% · −10.2% · 1.53).
 
-**[2:02 — Cómo se vería en un curso]** (pantalla: portada de curso imaginaria)
+**[2:12 — Cómo se vería en un curso]** (pantalla: portada de curso imaginaria)
 Piensa cómo se vería esta curva en un curso de trading: diez años, dos periodos que pasan, una variante mejor que la base y un Sharpe de 2.12. Se vería como una estrategia validada. Lo único que la separa de un espejismo es una pregunta que casi nadie hace: ¿a qué hora se conocía cada dato?
 > Boceto: portada genérica de curso con la curva real, un sello «VALIDADA» en dorado y, debajo, la pregunta «¿a qué hora se conocía el dato?» en rojo; el sello se desvanece al terminar la frase.
 
-**[2:26 — La alarma]** (pantalla: alarma y grilla)
+**[2:36 — La alarma]** (pantalla: alarma y grilla)
 Un resultado demasiado bueno en la grilla es una alarma, no un premio. Seis de seis superan a la base, y por mucho. Cuando todo mejora a la vez, conviene sospechar. Esta regla pasaba todas las pruebas menos la de ejecutabilidad.
 > Boceto: las seis barras parpadean en verde y pasan a ámbar con el rótulo «¿demasiado bueno?»; sonido de alarma breve.
 
-**[2:44 — Elegir la mejor de seis]** (pantalla: selección en la misma muestra)
+**[2:54 — Elegir la mejor de seis]** (pantalla: selección en la misma muestra)
 Hay una segunda sospecha, más sutil. La mejor combinación se eligió entre seis por su Sharpe en 2014–2024, el mismo periodo con el que luego se la califica. Eso se llama selección en la misma muestra: la regla elegida lleva ventaja de partida. No se aplicó el Deflated Sharpe, el ajuste estadístico por cuántas ideas se probaron.
 > Boceto: seis cajas cerradas, una se abre con el cartel «la mejor» y una flecha circular que vuelve a la misma muestra; etiqueta «ajuste por intentos: no aplicado».
 
-**[3:08 — Tres alarmas de un backtest]** (pantalla: tres luces rojas)
+**[3:18 — Tres alarmas de un backtest]** (pantalla: tres luces rojas)
 Resumamos las alarmas. Primera: un Sharpe muy por encima del de la base. Segunda: que todas las variantes de la grilla mejoren, no solo una. Tercera: elegir la mejor de pocas por el mismo periodo que la califica. Este experimento enciende las tres a la vez, y por eso se mira con lupa antes de celebrar.
 > Boceto: tres luces que se encienden una por una: «Sharpe muy alto», «todas mejoran», «mejor de seis en la misma muestra»; sirena breve en la tercera.
 
-**[3:32 — El detalle de siempre]** (pantalla: reloj y cierre de hoy)
+**[3:42 — El detalle de siempre]** (pantalla: reloj y cierre de hoy)
 Y el motivo principal: la regla usa el VIX y la señal del cierre del mismo día. Es información que un bot real aún no tendría al decidir. Con las señales de ayer, el Sharpe cae a menos 1.00 y la cuenta no sobrevive, como se mide en el experimento 27.
 > Boceto: dos barras, «señal del mismo día: 2.12» (verde, alta) y «señal de ayer: −1.00» (roja, hacia abajo); la verde se rompe con golpe de bass y sacudida.
 
-**[3:54 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
+**[4:04 — Con tu capital]** (pantalla: tarjeta de capital $10,000 / $100,000)
 Con 10,000 dólares, la curva termina en más $122,781; con 100,000, en más $1,227,815. Comprando y esperando, serían más $5,904 y más $59,039. Es la cifra más grande de los experimentos 16 al 30, y es justamente la que no se puede cobrar: usa el VIX y el filtro del cierre del mismo día, con apalancamiento ×3 y ×2 al re-entrar.
 > Boceto: tarjeta «Con tu capital» del sitio con el selector; curva verde disparada frente a la gris «Sin estrategia»; aviso ámbar «información del mismo día».
 
-**[4:20 — Qué haría falta para creerle]** (pantalla: tres candados)
+**[4:30 — Qué haría falta para creerle]** (pantalla: tres candados)
 Para creerle a esta curva haría falta la señal de ayer, costos y un ajuste por haber elegido la mejor de seis. Con la primera sola, se cae: el Sharpe pasa de 2.12 a menos 1.00. Por eso, cuando un resultado te parezca demasiado bueno, pregunta primero a qué hora se conocía el dato.
 > Boceto: tres candados; el primero se abre y cae la curva a la zona roja; texto «¿a qué hora se conocía el dato?».
 
-**[4:43 — Conclusión]** (pantalla: texto grande)
+**[4:53 — Conclusión]** (pantalla: texto grande)
 Veredicto: no sirvió. El Sharpe de 2.12 salía de usar información del mismo día que un bot real no tendría; con las señales de ayer cae a menos 1.00. Una de las ilusiones más peligrosas es la que pasa todas las pruebas menos la de si se puede ejecutar de verdad.
 > Boceto: sello rojo «NO SIRVIÓ»; frase final «El trading no se promete: se prueba».
 
-**[5:05 — Cierre]** (pantalla: logo y enlace)
-En el siguiente video, la prueba de fuego con la señal de ayer: el experimento 27. Todos los datos en atlas-lab-one.vercel.app, experimento 26. Contenido educativo, no es asesoría financiera.
+**[5:15 — Ficha del experimento #26]** (pantalla: tarjeta con la URL)
+Ficha del experimento #26.
+Estado: murió.
+Cifra clave: Sharpe de 2.12 y más 1,226.7%, la mejor de seis; con la señal de ayer, menos 1.00.
+Filtro que decidió: la selección de la mejor de seis en la misma muestra y el uso del cierre del mismo día.
+Lección: un resultado demasiado bueno es una alarma: pregunta a qué hora se conocía cada dato.
+Revísalo completo en atlas-lab-one.vercel.app/e/26.
+> Boceto: tarjeta final con cuatro líneas (estado · cifra clave · filtro que decidió · lección) y la URL «atlas-lab-one.vercel.app/e/26» en grande; sello «NO SIRVIÓ»; fondo de velas con opacidad 0.12.
+
+**[5:41 — Cierre]** (pantalla: logo y enlace)
+En el siguiente video, la prueba de fuego con la señal de ayer: el experimento 27. Todos los datos en atlas-lab-one.vercel.app/e/26. Contenido educativo, no es asesoría financiera.
 > Boceto: pantalla final con enlace y logo ATLAS; fondo de velas animadas con opacidad 0.12.
 
 ---
 
-## SHORT (9:16, ≈ 43 s)
+## SHORT (9:16, ≈ 45 s)
 Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s y en el giro del −1.00; ticker arriba, viñeta y velas con opacidad ≤ 0.12.
 
 **[0-2 s]** "Cien mil dólares ganan 1,227,815. Es imposible."
@@ -94,19 +107,24 @@ Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternan
 > Boceto: la alarma roja parpadea; reloj con el cierre de hoy.
 **[31-35 s]** "Con la señal de ayer: Sharpe menos 1.00 y la cuenta muere."
 > Boceto: dos barras, 2.12 verde y −1.00 roja; la verde se rompe con golpe de bass y sacudida.
-**[35-43 s]** "El trading no se promete: se prueba. El video completo está en el canal. No es asesoría financiera. Cuando veas una curva así:"
-> Boceto: frase de marca; logo ATLAS; corte directo al inicio (loop).
+**[35-45 s]** "El trading no se promete: se prueba. El video completo está en el canal. Experimento 26 completo en el enlace. No es asesoría financiera. Cuando veas una curva así:"
+> Boceto: frase de marca; tarjeta «experimento #26 completo en el enlace» y la URL corta; logo ATLAS; corte directo al inicio (loop).
 
 ## Descripción (YouTube)
+https://atlas-lab-one.vercel.app/e/26?utm_source=youtube&utm_medium=video&utm_campaign=exp026-t1
+Ficha del experimento #26 (Reentrada cuando el pánico se enfría): murió (No sirvió) · la mejor de 6 combinaciones: Sharpe 2.12, +1,226.7% y 1.53 fuera de muestra · con la señal de ayer: −1.00.
 Regla de re-entrada «pánico enfriándose»: volver al mercado a ×1.5 o ×2 cuando el VIX baja de su máximo de 10 días.
 Las 6 variantes superan a la base (Sharpe de 1.36 a 2.12); la mejor da +1,226.7% con Sharpe 2.12 y 1.53 fuera de muestra, pero usa el VIX y la señal del cierre del mismo día.
 Con las señales de ayer, el Sharpe cae a −1.00.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #26)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:24 Dónde encaja en la serie · 0:38 La idea: volver cuando el pánico se enfría · 1:04 Cómo se probó · 1:35 Resultados · 2:02 Cómo se vería en un curso · 2:26 La alarma · 2:44 Elegir la mejor de seis · 3:08 Tres alarmas de un backtest · 3:32 El detalle de siempre · 3:54 Con tu capital · 4:20 Qué haría falta para creerle · 4:43 Conclusión · 5:05 Cierre
+Capítulos: 0:00 Gancho · 0:24 Presentación · 0:34 Dónde encaja en la serie · 0:48 La idea: volver cuando el pánico se enfría · 1:14 Cómo se probó · 1:45 Resultados · 2:12 Cómo se vería en un curso · 2:36 La alarma · 2:54 Elegir la mejor de seis · 3:18 Tres alarmas de un backtest · 3:42 El detalle de siempre · 4:04 Con tu capital · 4:30 Qué haría falta para creerle · 4:53 Conclusión · 5:15 Ficha del experimento #26 · 5:41 Cierre
 
 Etiquetas: sesgo de mirar el futuro, demasiado bueno para ser verdad, VIX, bot de trading, backtest, Sharpe ratio, selección de la mejor variante, prop firm, trading con datos, ATLAS Lab, trading algorítmico, overfitting
+
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/26?utm_source=youtube&utm_medium=short&utm_campaign=exp026-t1
+Ficha del experimento #26: murió · la mejor de 6 variantes, Sharpe 2.12; con la señal de ayer, −1.00. Video completo en el canal. Contenido educativo, no es asesoría financiera.
 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 5 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.50 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)

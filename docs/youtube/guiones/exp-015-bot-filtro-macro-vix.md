@@ -16,52 +16,60 @@ Fondo negro de la marca. A la izquierda «+190%» en verde enorme; a la derecha 
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 5:01 min — 4–6 min: experimento de una sola idea y pocas cifras)
+## VIDEO LARGO (16:9, ≈ 5:43 min — 4–6 min: experimento de una sola idea y pocas cifras)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte, golpe de bass solo en el momento clave.
 
 **[0:00 — Gancho]** (pantalla: «+190.4%», «Sharpe 1.38», «−13.4%»)
 +190.4%, Sharpe de 1.38 y una caída máxima de solo −13.4%. Si vieras esos números en una cuenta de redes sociales, probablemente te emocionarías. Este bot los consiguió, y además sobrevivió al COVID a ×4. Pero no se pueden ejecutar. Te muestro por qué, y qué pasa cuando usas el dato de ayer en lugar del de hoy. Es una lección que cualquiera que mire backtests debería conocer.
 > Boceto: tres tarjetas verdes entran con tick sonoro; la curva real (series, curva 1) sube en diagonal hasta casi triplicar; de repente un sello rojo «NO EJECUTABLE» la cruza con sacudida de pantalla.
 
-**[0:28 — La idea]** (pantalla: VIX y crédito)
+**[0:28 — Presentación]** (pantalla: rótulo «Experimento #15 · Bot + filtro de régimen macro»)
+Este es el experimento #15 de ATLAS Lab: Bot + filtro de régimen macro. Todos los resultados están en la página del experimento.
+> Boceto: rótulo grande «EXPERIMENTO #15 · Bot + filtro de régimen macro» sobre velas de fondo con overlay oscuro; abajo, la URL pequeña «atlas-lab-one.vercel.app/e/15». Ken Burns «out».
+
+**[0:38 — La idea]** (pantalla: VIX y crédito)
 Hasta aquí, los dos bots miraban solo precios y reventaban en el COVID. La nueva idea: usar datos que no están en el precio. Primero, el VIX, el llamado índice del miedo, que mide la volatilidad que espera el mercado: cuando los inversionistas se asustan, sube. Segundo, el crédito: el cociente entre bonos de alto riesgo, HYG, y bonos de calidad, LQD, que se debilita cuando el mercado se pone nervioso. La regla saca al bot del mercado, con apalancamiento cero, si el VIX supera 28, si sube 50% en 5 días, o si el crédito cae por debajo de su media de 60 días. Tres señales de alarma, y basta con que suene una.
 > Boceto: tres semáforos: «VIX > 28», «VIX +50% en 5 días», «Crédito < media de 60 días»; si alguno se enciende en rojo, la cartera de 15 símbolos se apaga («apalancamiento 0»).
 
-**[1:15 — Cómo se probó]** (pantalla: tarjeta de parámetros)
+**[1:25 — Cómo se probó]** (pantalla: tarjeta de parámetros)
 La misma cartera de solo compras con paridad de riesgo sobre 15 instrumentos, con reglas de cuenta fondeada, de 2019 a 2024. Las reglas del filtro estaban fijadas de antemano, sin optimizar. Probé ×2, ×3 y ×4 y publico el de mayor Sharpe que sobrevive, que es ×4. Y eso es una debilidad: el apalancamiento se eligió en la misma muestra en la que se mide el resultado. El motor del bot tampoco descuenta costos de operación. Anoto las debilidades antes de mostrarte las cifras, para que las leas con ellas en la cabeza.
 > Boceto: `params_view` (×4 · VIX 28 · +50% en 5 d · crédito 60 d · 878 días fuera del mercado); aviso ámbar «Apalancamiento elegido en la misma muestra».
 
-**[1:54 — Resultado en papel]** (pantalla: tarjetas KPI)
+**[2:04 — Resultado en papel]** (pantalla: tarjetas KPI)
 Con el filtro, el bot sobrevivió el COVID a ×4. Retorno total: +190.4%. Sharpe: 1.38. Caída máxima: −13.4%. Pasó 878 días fuera del mercado, de 1,816 días en total. Sin filtro, el bot reventaba en el COVID. En el papel es un resultado espectacular: gana mucho, cae poco y, además, se salva del evento que mató a los bots anteriores. Por eso es importante mirar con lupa de dónde sale.
 > Boceto: `kpis` en cascada; la curva real con las zonas «fuera del mercado» sombreadas en gris.
 
-**[2:23 — El problema]** (pantalla: reloj del día)
+**[2:33 — El problema]** (pantalla: reloj del día)
 Aquí viene el problema. Para decidir si el día t está dentro o fuera del mercado, el filtro usa el cierre del VIX y del crédito del mismo día t, el mismo día cuyo retorno cobra. Un bot real todavía no conoce ese cierre cuando tiene que decidir: es información del mismo día que un bot real aún no tendría. Es como decidir si llevas paraguas mirando el pronóstico, pero con el pronóstico que sale al final del día, cuando ya te mojaste.
 > Boceto: reloj de 24 h: marca «cierre de hoy» a la derecha y «decisión del bot» a la izquierda; flecha roja imposible hacia atrás. Texto: «Usa el cierre de HOY para operar HOY».
 
-**[2:57 — La versión ejecutable]** (pantalla: dos Sharpe)
+**[3:07 — La versión ejecutable]** (pantalla: dos Sharpe)
 Con la señal rezagada un día, es decir, con el dato de ayer, que sí se conoce: a ×4 la cuenta revienta por pérdida diaria, y a ×2 y ×3 el Sharpe cae de 1.38 a 0.25. La diferencia entre 1.38 y 0.25 es lo que valía el dato del futuro. Y fíjate que la versión ejecutable ni siquiera tiene curva espectacular que mostrar: pierde la que era la mejor configuración, la de ×4.
 > Boceto: dos barras: «Dato de hoy: 1.38» (verde, alta) y «Dato de ayer: 0.25» (ámbar, baja); a un lado, «×4 → cuenta reventada» en rojo.
 
-**[3:28 — Y la base sin filtro]** (pantalla: Sharpe negativos)
+**[3:38 — Y la base sin filtro]** (pantalla: Sharpe negativos)
 Hay más. En una base más larga, con las señales de ayer, el experimento 27 muestra que la base muere: Sharpe de −0.17 en 2014-2024 a ×3, y −0.46 en 2007-2013. Es decir, sin el dato del futuro el filtro no rescata la estrategia: la mayor parte de lo que parecía ventaja venía del dato que aún no existía.
 > Boceto: barras: «2014-24 a ×3: −0.17» y «2007-13: −0.46» en rojo; sello «MUERE».
 
-**[3:52 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
+**[4:02 — Con tu capital]** (pantalla: tarjeta «Con tu capital» con aviso)
 Con 10,000 dólares serían más 19,201 para esta curva, frente a más 4,049 de comprar y esperar. Con 100,000, la tabla de ATLAS da más 192,009 contra más 40,488. Ese número no se puede replicar en real: usa el cierre del mismo día, y además opera a ×4.
 > Boceto: tarjeta de capital con aviso ámbar «No replicable en real» y las dos cifras; la cifra de la estrategia con sello «NO EJECUTABLE»; selector $10,000 / $100,000.
 
-**[4:12 — La lección]** (pantalla: texto)
+**[4:22 — La lección]** (pantalla: texto)
 Un filtro que decide con el cierre del mismo día en que opera no se puede ejecutar. Cualquier señal macro debe usarse con al menos un día de rezago. Antes de emocionarte con un número, pregunta qué dato necesitaba la estrategia para decidir, y si lo tenía a esa hora. Es una pregunta sencilla y sirve para cualquier backtest.
 > Boceto: checklist de `filters`: ventana de apalancamiento «misma muestra» ámbar; rezago ✗ rojo; costos «no aplicado»; pregunta final «¿Qué dato necesitaba y cuándo lo tenía?».
 
-**[4:37 — Conclusión y cierre]**
-Veredicto: no sirvió. El +190% con Sharpe 1.38 depende de usar el VIX y el crédito del cierre del mismo día. En el siguiente experimento valido este filtro en varias crisis, para ver si el patrón se repite. Todos los datos en atlas-lab-one.vercel.app, experimento 15. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[4:47 — Ficha del experimento #15]** (pantalla: tarjeta con la URL)
+Ficha del experimento 15. Estado: murió. Cifra clave: en papel, más 190.4% con un Sharpe de 1.38 y una caída máxima de menos 13.4% a ×4 entre 2019 y 2024. Filtro que decidió: el rezago de un día; con la señal del día anterior, a ×4 la cuenta revienta y a ×2 y ×3 el Sharpe cae de 1.38 a 0.25. Lección: un filtro que decide con el cierre del mismo día no se puede ejecutar en real. Revísalo completo en atlas-lab-one.vercel.app/e/15.
+> Boceto: tarjeta oscura con el estado del experimento #15 arriba, las cifras clave en el centro y «atlas-lab-one.vercel.app/e/15» en grande al pie; las líneas de la ficha entran una a una; logo ATLAS.
+
+**[5:19 — Conclusión y cierre]**
+Veredicto: no sirvió. El +190% con Sharpe 1.38 depende de usar el VIX y el crédito del cierre del mismo día. En el siguiente experimento valido este filtro en varias crisis, para ver si el patrón se repite. Todos los datos en atlas-lab-one.vercel.app/e/15. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 > Boceto: sello ✕ rojo sobre «1.38»; frase de marca, logo y URL.
 
 ---
 
-## SHORT (9:16, ≈ 48 s)
+## SHORT (9:16, ≈ 50 s)
 Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s; ticker arriba.
 
 **[0-3 s]** «Sharpe 1.38 y +190%. Y no se puede operar.»
@@ -72,15 +80,20 @@ Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/o
 > Boceto: curva real subiendo con zonas grises de «fuera del mercado»; contador de 878; whoosh y flash blanco.
 **[24-36 s]** «Pero cada día decide con el cierre de ese mismo día, un dato que un bot real no tiene antes de operar. Con la señal de un día antes, a ×4 la cuenta revienta.»
 > Boceto: reloj con la flecha imposible; cuenta reventada en rojo; Ken Burns «in».
-**[36-48 s]** «A ×2 y ×3, el Sharpe cae de 1.38 a 0.25: 1.38 con el dato de hoy, 0.25 con el de ayer. El video completo está en el canal. No es asesoría financiera.»
-> Boceto: dos barras 1.38 → 0.25; vuelve «Sharpe 1.38» con ✕ (loop con el gancho); texto «Video completo en el canal» y logo.
+**[36-50 s]** «A ×2 y ×3, el Sharpe cae de 1.38 a 0.25: 1.38 con el dato de hoy, 0.25 con el de ayer. El video completo está en el canal. Experimento #15 completo en el enlace. No es asesoría financiera.»
+> Boceto: dos barras 1.38 → 0.25; vuelve «Sharpe 1.38» con ✕ (loop con el gancho); textos «Video completo en el canal» y «Experimento #15 completo en el enlace»; logo.
 
-## Descripción (YouTube)
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/15?utm_source=youtube&utm_medium=video&utm_campaign=exp015-t1
+Ficha del experimento #15 (Bot + filtro de régimen macro): estado murió · +190.4% con Sharpe 1.38 en papel · con la señal de un día antes, el Sharpe cae de 1.38 a 0.25.
 Bot de paridad de riesgo (solo compras, 15 instrumentos, ×4, 2019-2024) con un filtro macro: fuera del mercado si el VIX supera 28, sube 50% en 5 días o el crédito (HYG/LQD) cae bajo su media de 60 días. Con el cierre del mismo día: +190.4%, Sharpe 1.38. Con la señal de un día antes, que es la ejecutable: a ×4 la cuenta revienta y a ×2/×3 el Sharpe cae a 0.25.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #15)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:28 La idea · 1:15 Cómo se probó · 1:54 Resultado en papel · 2:23 El problema · 2:57 La versión ejecutable · 3:28 Y la base sin filtro · 3:52 Con tu capital · 4:12 La lección · 4:37 Conclusión y cierre
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/15?utm_source=youtube&utm_medium=short&utm_campaign=exp015-t1
+Experimento #15 · murió · +190.4% y Sharpe 1.38 con el cierre del mismo día; con el de ayer, Sharpe 0.25. No es asesoría financiera.
+
+Capítulos: 0:00 Gancho · 0:28 Presentación · 0:38 La idea · 1:25 Cómo se probó · 2:04 Resultado en papel · 2:33 El problema · 3:07 La versión ejecutable · 3:38 Y la base sin filtro · 4:02 Con tu capital · 4:22 La lección · 4:47 Ficha del experimento #15 · 5:19 Conclusión y cierre
 
 Etiquetas: VIX, filtro de régimen, HYG LQD, crédito, bot de trading, backtest, look-ahead bias, información del mismo día, COVID 2020, gestión de riesgo, ATLAS Lab, trading con datos
 

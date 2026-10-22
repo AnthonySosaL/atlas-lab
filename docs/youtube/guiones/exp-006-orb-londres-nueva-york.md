@@ -16,44 +16,52 @@ Fondo negro de la marca. Texto grande: «ACIERTA, PIERDE» (blanco; «PIERDE» e
 
 ---
 
-## VIDEO LARGO (16:9, ≈ 4:14 min — experimento corto, con menos datos que otros)
+## VIDEO LARGO (16:9, ≈ 4:53 min — experimento corto, con menos datos que otros)
 Ritmo visual: algo cambia en pantalla cada 2-3 s; b-roll real detrás, Ken Burns alterno, subtítulos karaoke, whoosh + flash en cada corte, golpe de bass solo en el momento clave.
 
 **[0:00 — Gancho]** (pantalla: moneda con «49.9%» y cifra roja «−19.1%»)
 Acierta el 49.9% de las veces: casi una moneda al aire. Y aun así perdió −19.1% de una cuenta de 10,000 dólares. Su Sharpe fue −0.96; el de simplemente comprar y esperar, −0.21. Esta es la ruptura del rango de apertura de Londres y Nueva York, una estrategia clásica de trading intradía, probada con velas de un minuto. Y es un buen ejemplo de por qué acertar la mitad de las veces no basta.
 > Boceto: moneda que gira y cae en «49.9%»; la cuenta de $10,000 se encoge en la curva real (series, curva 1) hasta −19.1% con sacudida de pantalla.
 
-**[0:31 — La idea]** (pantalla: reloj de 24 horas con sesiones)
+**[0:31 — Presentación]** (pantalla: rótulo «Experimento #6 · ORB de la sesión Londres-Nueva York»)
+Este es el experimento #6 de ATLAS Lab: ORB de la sesión Londres-Nueva York. Todos los resultados están en la página del experimento.
+> Boceto: rótulo grande «EXPERIMENTO #6 · ORB de la sesión Londres-Nueva York» sobre velas de fondo con overlay oscuro; abajo, la URL pequeña «atlas-lab-one.vercel.app/e/6». Ken Burns «out».
+
+**[0:41 — La idea]** (pantalla: reloj de 24 horas con sesiones)
 ORB significa Opening Range Breakout: la ruptura del rango de apertura. Piensa en una carrera: durante la madrugada marco una línea de salida, y espero a ver quién la cruza primero. Concretamente, marco el rango de precios de la sesión asiática, de las 00:00 a las 07:00 UTC. Cuando abren Londres y Nueva York, entre las 07:00 y las 16:00 UTC, espero la primera ruptura de ese rango y entro en esa dirección. Si rompe hacia arriba, compro; si rompe hacia abajo, vendo en corto. La lógica es que cuando entra mucho dinero a la vez, el movimiento que empieza tiende a continuar.
 > Boceto: reloj con arco asiático (00–07 UTC) sombreado y arco de Londres/Nueva York (07–16 UTC); en el gráfico, caja del rango y una flecha que lo rompe, con etiqueta «COMPRA».
 
-**[1:13 — Las reglas]** (pantalla: tarjeta de parámetros)
+**[1:23 — Las reglas]** (pantalla: tarjeta de parámetros)
 Una sola operación al día. El stop está en el lado opuesto del rango: si el precio vuelve a cruzarlo, salgo con pérdida. El objetivo de ganancia es 1 vez el tamaño del rango. Y si no pasa ninguna de las dos cosas, salgo al cierre de la sesión. Euro-dólar con velas de un minuto, de 2019 a 2024, con una comisión de 0.007% y un deslizamiento de 0.002%, pagados a la entrada y a la salida. Todos los parámetros están fijados de antemano, sin optimizar: no probé otros horarios ni otros objetivos para quedarme con los que mejor salieran.
 > Boceto: tarjeta `params_view` (Rango asiático 00:00–07:00 UTC · Sesión 07:00–16:00 UTC · Take-profit 1× · Comisión 0.007% · Deslizamiento 0.002%) con tick sonoro; sello «Parámetros fijados de antemano».
 
-**[1:54 — Resultados]** (pantalla: tarjetas KPI)
+**[2:04 — Resultados]** (pantalla: tarjetas KPI)
 Resultado: 1,553 operaciones. Retorno total −19.1%. Sharpe −0.96. Peor caída −20.4%. Acierta el 49.9% y el factor de beneficio es 0.87: ganó 0.87 dólares por cada dólar que perdió. El PSR, la probabilidad de que el Sharpe real sea positivo, es 0.009, prácticamente cero. Comprar y esperar el euro-dólar tuvo un Sharpe de −0.21: también fue una época difícil para el euro, pero la estrategia lo hizo bastante peor.
 > Boceto: `kpis` en cascada con el contador de operaciones hasta 1,553; la curva real de la estrategia cayendo hasta su mínimo en octubre de 2024 frente a la curva 2 que también baja pero menos.
 
-**[2:22 — Por qué pierde (y qué no sé)]** (pantalla: lo que se ve y lo que falta)
+**[2:32 — Por qué pierde (y qué no sé)]** (pantalla: lo que se ve y lo que falta)
 El propio experimento lo resume así: en forex, el precio no siguió la ruptura al abrir Londres o Nueva York. Cuando aciertas la mitad de las veces, para ganar necesitas que cada ganancia sea mayor que cada pérdida. Con un factor de beneficio de 0.87, ocurre lo contrario. Y cada una de las 1,553 operaciones paga costos. Pero hay algo que este experimento no mide: el Sharpe antes de costos. No puedo separar cuánto de la pérdida son costos y cuánto es que la ruptura no funciona. Tampoco se aplicó la prueba de azar. Prefiero decírtelo antes que inventar una explicación.
 > Boceto: checklist de `filters`: parámetros ✓; costos incluidos pero «Sharpe bruto no reportado» en ámbar; PSR ✗ (0.009); comprar y esperar ✗; prueba de azar «no aplicado» en gris.
 
-**[3:04 — Lo que motivó el #7]** (pantalla: espejo)
+**[3:14 — Lo que motivó el #7]** (pantalla: espejo)
 Esa duda motivó probar lo contrario en el experimento 7: la misma señal, pero apostando contra la ruptura. Allí sí se midió antes de costos: Sharpe de +0.20, que después de pagar las mismas 1,553 operaciones se convirtió en −1.99. Es una lección que atraviesa este bloque de experimentos: una ventaja pequeña no sobrevive a operar todos los días. Si te interesa el detalle, lo cuento en el siguiente video.
 > Boceto: pantalla dividida: izquierda «#6 ruptura: −0.96» y derecha «#7 reversión: +0.20 → −1.99»; flecha de espejo en el centro.
 
-**[3:33 — Con tu capital]** (pantalla: tarjeta «Con tu capital»)
+**[3:43 — Con tu capital]** (pantalla: tarjeta «Con tu capital»)
 Con 10,000 dólares serían menos 1,947 para la estrategia, frente a menos 848 de comprar y esperar. Con 100,000, la tabla de ATLAS da menos 19,468 contra menos 8,482; en esas fechas el euro-dólar también bajó.
 > Boceto: tarjeta de capital con ambas cifras en rojo; la curva 1 más abajo que la 2; selector $10,000 / $100,000.
 
-**[3:48 — Conclusión y cierre]**
-Veredicto: no sirvió. En esta prueba, la ruptura no funcionó y perdió −19.1% con un Sharpe de −0.96, peor que sin estrategia. Acertar la mitad de las veces no alcanza si las pérdidas pesan más que las ganancias y cada operación paga costos. Todos los datos en atlas-lab-one.vercel.app, experimento 6. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[3:58 — Ficha del experimento #6]** (pantalla: tarjeta con la URL)
+Ficha del experimento 6. Estado: murió. Cifra clave: menos 19.1% con un Sharpe de menos 0.96, frente a un Sharpe de menos 0.21 de comprar y esperar; 1,553 operaciones y 49.9% de aciertos. Filtros que decidieron: el PSR de 0.009, muy por debajo del 0.95 exigido, y la comparación con comprar y esperar. Lección: acertar la mitad de las veces no alcanza si las pérdidas pesan más y cada operación paga costos. Revísalo completo en atlas-lab-one.vercel.app/e/6.
+> Boceto: tarjeta oscura con el estado del experimento #6 arriba, las cifras clave en el centro y «atlas-lab-one.vercel.app/e/6» en grande al pie; las líneas de la ficha entran una a una; logo ATLAS.
+
+**[4:27 — Conclusión y cierre]**
+Veredicto: no sirvió. En esta prueba, la ruptura no funcionó y perdió −19.1% con un Sharpe de −0.96, peor que sin estrategia. Acertar la mitad de las veces no alcanza si las pérdidas pesan más que las ganancias y cada operación paga costos. Todos los datos en atlas-lab-one.vercel.app/e/6. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 > Boceto: sello ✕ rojo sobre el rango roto; frase de marca, logo y URL.
 
 ---
 
-## SHORT (9:16, ≈ 46 s)
+## SHORT (9:16, ≈ 48 s)
 Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/out, subtítulos karaoke en MAYÚSCULAS con las cifras en rojo, whoosh + flash en cada corte, golpe de bass + sacudida solo en el 0-3 s; ticker arriba.
 
 **[0-3 s]** «Acierta el 49.9% de las veces y pierde −19.1%.»
@@ -64,15 +72,20 @@ Fórmula visual: b-roll vertical + overlay oscuro 0.6, Ken Burns alternando in/o
 > Boceto: contador de operaciones hasta 1,553; curva real cayendo; whoosh y flash blanco.
 **[24-36 s]** «El factor de beneficio fue 0.87: ganó 0.87 dólares por cada dólar que perdió. Comprar y esperar el euro tuvo un Sharpe de −0.21, y el PSR de la estrategia fue 0.009.»
 > Boceto: barras de Sharpe −0.96 contra −0.21; cifra 0.87 pulsando; Ken Burns «in».
-**[36-46 s]** «Acertar la mitad de las veces no basta si cada operación paga costos y las pérdidas pesan más. El video completo está en el canal. No es asesoría financiera.»
-> Boceto: vuelve la moneda del inicio, cae en «49.9%» y se tiñe de rojo con «−19.1%» (loop con el gancho); texto «Video completo en el canal» y logo.
+**[36-48 s]** «Acertar la mitad de las veces no basta si cada operación paga costos y las pérdidas pesan más. El video completo está en el canal. Experimento #6 completo en el enlace. No es asesoría financiera.»
+> Boceto: vuelve la moneda del inicio, cae en «49.9%» y se tiñe de rojo con «−19.1%» (loop con el gancho); textos «Video completo en el canal» y «Experimento #6 completo en el enlace»; logo.
 
-## Descripción (YouTube)
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/6?utm_source=youtube&utm_medium=video&utm_campaign=exp006-t1
+Ficha del experimento #6 (ORB de la sesión Londres-Nueva York): estado murió · −19.1% con Sharpe −0.96 (comprar y esperar: −0.21) · 1,553 operaciones · factor de beneficio 0.87.
 Probé la ruptura del rango de apertura (ORB) de la sesión Londres-Nueva York sobre el EUR/USD con velas de 1 minuto, 2019-2024: una operación al día, parámetros fijos y costos. Resultado: −19.1%, Sharpe −0.96, 1,553 operaciones, aciertos 49.9%.
-Todos los datos: https://atlas-lab-one.vercel.app (experimento #6)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:31 La idea · 1:13 Las reglas · 1:54 Resultados · 2:22 Por qué pierde (y qué no sé) · 3:04 Lo que motivó el #7 · 3:33 Con tu capital · 3:48 Conclusión y cierre
+## Descripción del Short
+https://atlas-lab-one.vercel.app/e/6?utm_source=youtube&utm_medium=short&utm_campaign=exp006-t1
+Experimento #6 · murió · 49.9% de aciertos y −19.1% en 1,553 operaciones. No es asesoría financiera.
+
+Capítulos: 0:00 Gancho · 0:31 Presentación · 0:41 La idea · 1:23 Las reglas · 2:04 Resultados · 2:32 Por qué pierde (y qué no sé) · 3:14 Lo que motivó el #7 · 3:43 Con tu capital · 3:58 Ficha del experimento #6 · 4:27 Conclusión y cierre
 
 Etiquetas: ORB, opening range breakout, ruptura de rango, sesión de Londres, sesión de Nueva York, EUR/USD, trading intradía, backtest, forex, Sharpe ratio, ATLAS Lab, trading con datos
 

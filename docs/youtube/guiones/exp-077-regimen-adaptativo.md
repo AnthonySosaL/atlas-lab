@@ -21,6 +21,10 @@ Fondo `#09090b`, dividido en dos: flecha ↗ «tendencia» a la izquierda y lín
 Un TikTok dice algo que suena a pura lógica: ninguna estrategia sirve siempre, así que mide el régimen del mercado y adapta. Tendencia cuando hay tendencia, reversión cuando está en rango. Lo probé en cuatro índices. Con datos que nunca vio, la versión adaptativa dio un Sharpe de 0.37. Usar solo tendencia, sin adaptar nada, dio 0.59. Y comprar y esperar, 0.68.
 BOCETO: tres barras de altura creciente (adaptativa 0.37 roja, solo tendencia 0.59 blanca, comprar y esperar 0.68 verde de referencia), texto «Sharpe fuera de muestra». kb=in.
 
+**[0:25 — Presentación]** (pantalla: rótulo «Experimento #77 · Régimen adaptativo (reversión en rango, tendencia en tendencia)»)
+Este es el experimento #77 de ATLAS Lab: régimen adaptativo, reversión en rango y tendencia en tendencia. Todos los resultados están en la página del experimento.
+BOCETO: rótulo en rojo y blanco «EXPERIMENTO #77» con el nombre debajo, sobre la última imagen del gancho atenuada (overlay 0.6); whoosh corto; logo en la esquina.
+
 **[0:40 — La idea]** (pantalla: dos mini-gráficos, uno en línea recta y otro de lado)
 Régimen es el «modo» del mercado. A veces avanza en línea recta, sube o baja: tendencia. A veces se mueve de lado: rango. En tendencia conviene seguir la dirección; en rango, comprar las caídas y vender las subidas, que se llama reversión a la media. El TikTok reparte el tiempo en más o menos 80% rango y 20% tendencia. Yo medí 27% de días en tendencia, así que el diagnóstico es razonable.
 BOCETO: dos esquemas ilustrativos (rotulados «ilustración»): flecha diagonal vs zigzag horizontal. Barra de 100 días con 27% en verde («días en tendencia, medido»).
@@ -46,8 +50,12 @@ BOCETO: línea de precio con franjas verde (tendencia) y gris (rango); una segun
 Con 100,000 dólares entre 2012 y 2024 en esos cuatro índices, el régimen adaptativo gana 2,179. Comprar y esperar gana 290,064. Con 10,000 dólares serían unos +218 contra +29,006. Es lo que pasó, no una promesa.
 BOCETO: curvas reales de `series/extra-v77.json`: adaptativa casi plana en verde pálido, «Sin estrategia» subiendo en blanco; contadores finales.
 
-**[5:30 — Conclusión y cierre]**
-Medir el régimen suena sensato, pero el detector llega tarde y la adaptación rinde menos que no adaptar. No sirvió. Todos los datos en atlas-lab-one.vercel.app, experimento 77. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
+**[5:30 — Ficha del experimento #77]** (pantalla: tarjeta con la ficha y la URL abajo)
+Ficha del experimento 77. Estado: murió. Cifras clave: Sharpe fuera de muestra de 0.37 contra 0.59 de solo tendencia y 0.68 de comprar y esperar; con 100,000 dólares, gana 2,179 contra 290,064. Lo que decidió: la adaptativa rinde peor que usar una sola estrategia. Lección: medir el régimen suena sensato, pero adaptar rindió menos que no adaptar. Revísalo completo en atlas-lab-one.vercel.app/e/77.
+BOCETO: tarjeta con el número «#77», el sello «MURIÓ» en rojo y cuatro líneas (estado, cifra clave, lo que decidió, lección) que entran con tick; al final, la URL «atlas-lab-one.vercel.app/e/77» grande y resaltada en verde. kb=in.
+
+**[5:55 — Conclusión y cierre]**
+Medir el régimen suena sensato, pero el detector llega tarde y la adaptación rinde menos que no adaptar. No sirvió. Todos los datos en atlas-lab-one.vercel.app/e/77. Contenido educativo, no es asesoría financiera. El trading no se promete: se prueba.
 
 ---
 
@@ -62,18 +70,24 @@ BOCETO: dos esquemas (flecha ↗ y zigzag ↔) alternando; ticker arriba (kb=out
 **[14-30 s]** «El Sharpe mide ganancia por unidad de riesgo. La adaptativa: −0.27 en 2012–2018 y 0.37 con datos nuevos. Solo tendencia: 0.59. Comprar y esperar: 0.68.»
 BOCETO: tabla de tres filas animada; −0.27 en rojo; golpe de bajo cuando aparece 0.68.
 
-**[30-45 s]** «El detector llega tarde: cuando mide tendencia, el régimen ya cambió. El video completo está en el canal. Adaptar al mercado… dio peor que no adaptar.»
-BOCETO: franja de régimen desfasada; texto final «Video completo en el canal» + «No es asesoría financiera · El trading no se promete: se prueba». Loop: «dio peor que no adaptar» vuelve al 0.37 vs 0.59 del inicio.
+**[30-45 s]** «El detector llega tarde: cuando mide tendencia, el régimen ya cambió. El video completo está en el canal y experimento #77 completo en el enlace. Adaptar al mercado… dio peor que no adaptar.»
+BOCETO: franja de régimen desfasada; texto final «Video completo en el canal · Experimento #77 completo en el enlace» + «No es asesoría financiera · El trading no se promete: se prueba». Loop: «dio peor que no adaptar» vuelve al 0.37 vs 0.59 del inicio.
 
 ---
 
-## Descripción de YouTube
+## Descripción de YouTube (video largo)
+https://atlas-lab-one.vercel.app/e/77?utm_source=youtube&utm_medium=video&utm_campaign=exp077-t1
+Ficha del experimento #77: murió · Sharpe fuera de muestra 0.37 contra 0.59 de solo tendencia y 0.68 de comprar y esperar · con $100,000: +$2,179 contra +$290,064.
 Un TikTok dice «mide el régimen y adapta»: tendencia cuando hay tendencia, reversión cuando hay rango. Lo probé en S&P 500, Nasdaq 100, DAX y FTSE 100 (2012–2024) con costos: la versión adaptativa da un Sharpe de 0.37 fuera de muestra, contra 0.59 de usar solo tendencia y 0.68 de comprar y esperar.
-Datos completos: https://atlas-lab-one.vercel.app (experimento #77)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
+## Descripción de YouTube (Short)
+https://atlas-lab-one.vercel.app/e/77?utm_source=youtube&utm_medium=short&utm_campaign=exp077-t1
+Ficha del experimento #77: murió · la adaptativa da 0.37 contra 0.59 de solo tendencia (fuera de muestra).
+Contenido educativo, no es asesoría financiera.
+
 ## Capítulos
-0:00 Gancho · 0:40 La idea · 1:40 Cómo lo probé · 3:00 Resultados · 4:10 Por qué falla · 5:00 Con tu capital · 5:30 Conclusión
+0:00 Gancho · 0:25 Presentación · 0:40 La idea · 1:40 Cómo lo probé · 3:00 Resultados · 4:10 Por qué falla · 5:00 Con tu capital · 5:30 Ficha del experimento #77 · 5:55 Conclusión
 
 ## Etiquetas
 régimen de mercado, estrategia adaptativa, efficiency ratio, reversión a la media, seguimiento de tendencia, backtest, sharpe ratio, fuera de muestra, tiktok trading, índices bursátiles, atlas lab, trading con datos
