@@ -93,3 +93,10 @@ Etiquetas: momentum trading, time series momentum, Moskowitz, EUR/USD, backtest,
 | **Promedio** | **4.25** | **4.13** |
 
 Notas: el gancho funciona por la paradoja (acierta poco y «pierde menos»); no promete ningún resultado y el Short aclara que perder menos no es ventaja. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Momentum de serie temporal diario
+- Tema 2: [exp-004-t2-2022-el-unico-ano.md](exp-004-t2-2022-el-unico-ano.md) — 2022, el único año que valió (+12.9%)
+- Tema 3: [exp-004-t3-dos-formas-de-seguir-tendencias.md](exp-004-t3-dos-formas-de-seguir-tendencias.md) — dos formas de seguir tendencias (822 operaciones contra 75)
+- Tema 4: [exp-004-t4-uno-o-quince-mercados.md](exp-004-t4-uno-o-quince-mercados.md) — un mercado o quince, el mismo −4% (cubre #4 y #5)

@@ -90,3 +90,10 @@ Etiquetas: risk parity, paridad de riesgo, prop firm, challenge de fondeo, FTMO,
 | **Promedio** | **4.25** | **3.75** |
 
 Notas: el largo no llega a 4.0 (material escaso, comparación contra el #9). Opciones: producir solo el Short, o unir el largo con el #9 en «Fondeo: lo que decide el resultado». El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Paridad de riesgo + tamaño óptimo
+- Tema 2: [exp-010-t2-el-precio-de-la-calma.md](exp-010-t2-el-precio-de-la-calma.md) — el precio de la calma, la paridad de riesgo en el COVID (−11.3% contra −24.2%)
+- Tema 3: [exp-010-t3-dos-valores-esperados.md](exp-010-t3-dos-valores-esperados.md) — dos valores esperados para el mismo negocio, $3,410 y $5,919 (cubre #10 y #11)
+- Tema 4: [exp-009-t4-un-mal-dia-o-una-caida-lenta.md](exp-009-t4-un-mal-dia-o-una-caida-lenta.md) — reventar de dos maneras, un mal día o una caída lenta (cubre #9 y #10)

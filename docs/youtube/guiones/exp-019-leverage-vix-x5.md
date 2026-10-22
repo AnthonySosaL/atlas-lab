@@ -115,3 +115,9 @@ Etiquetas: apalancamiento, VIX, bot de trading, backtest, Sharpe ratio, prop fir
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.38 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es un número alto y específico con apalancamiento visible; la honestidad es 5 porque la caída de −17.2%, el veredicto y la limitación del VIX del mismo día se dicen en el propio Short.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-019-leverage-vix-x5.md` — Apalancamiento escalonado por VIX (×5 en calma) (este archivo).
+- Tema 2 — `exp-019-t2-drawdown-estatico-o-dinamico.md` — Drawdown estático o dinámico: la letra pequeña que decide si una caída de −17.2% te cierra la cuenta
+- Tema 3 — `exp-019-t3-mejor-ano-peor-ano.md` — Mejor año +41.4%, peor año −2.1%: el ×5 en calma, año por año

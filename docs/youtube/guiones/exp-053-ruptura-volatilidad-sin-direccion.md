@@ -99,3 +99,8 @@ Etiquetas: volatilidad, ruptura de volatilidad, breakout, machine learning, cana
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.38** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-053-ruptura-volatilidad-sin-direccion.md` — Tema 1: Predije la volatilidad. Operar el movimiento dio −0.44
+- `exp-053-t2-diversificar-amplifica-el-signo.md` — Tema 2: diversificar amplifica el signo (0.65 a 0.88 y −0.44 a −0.78)
+- `exp-053-t3-nunca-volvio-a-100000.md` — Tema 3: ni un solo día por encima de $100,000

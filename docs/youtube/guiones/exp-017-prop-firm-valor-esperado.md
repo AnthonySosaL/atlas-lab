@@ -112,3 +112,9 @@ Etiquetas: prop firm, reto de fondeo, valor esperado, simulación Monte Carlo, b
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho pone dinero en juego (500 y 429); la honestidad es 5 porque el veredicto («no sirvió») y el valor esperado se dicen tal cual, y la advertencia de la señal del mismo día queda en el video largo y en la descripción.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-017-prop-firm-valor-esperado.md` — Dinero real con filtro macro (valor esperado de un reto de prop firm) (este archivo).
+- Tema 2 — `exp-017-t2-valor-esperado-de-un-reto.md` — Valor esperado: por qué un cobro de $12,322 puede dar −$429 por intento
+- Tema 3 — `exp-017-t3-el-reloj-del-reto.md` — El reloj del reto: 30 días, 60 días y sin plazo

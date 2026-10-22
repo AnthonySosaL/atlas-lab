@@ -100,3 +100,8 @@ Etiquetas: turn-of-month, efecto calendario, cambio de mes, estacionalidad, índ
 | audio | 4 | Voz por clonar; bajo en el gancho |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-049-turn-of-month-indices.md` — Tema 1: ¿Comprar al cambio de mes funciona? Lo probé: Sharpe −1.63
+- `exp-049-t2-cambio-de-mes-5-contra-4.md` — Tema 2: ¿existe el efecto calendario? +5 puntos básicos contra +4
+- `exp-049-t3-ventana-por-ventana.md` — Tema 3: ventana por ventana, de $100,000 a $88,929 (y once años sin corte)

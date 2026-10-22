@@ -107,3 +107,9 @@ Etiquetas: efecto nocturno, overnight, intradía, petróleo Brent, oro, anomalí
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 de 4: `exp-063-efecto-nocturno.md` — Brent: +149% de noche y −72% de día. ¿Truco o patrón?
+- Tema 2 de 4: `exp-063-t2-indices-manda-el-dia.md` — S&P 500: Sharpe −0.33 de noche y 0.84 de día (2012–2024)
+- Tema 3 de 4: `exp-063-t3-artefacto-del-rollover.md` — Brent: +149% de noche y −72% de día. Antes de creerlo, hay que descartar un error de los datos
+- Tema 4 de 4: `exp-063-t4-oro-bruto-contra-costos.md` — Oro de noche: Sharpe 0.99 en bruto, −3.11 con los costos reales del broker

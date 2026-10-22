@@ -111,3 +111,8 @@ Etiquetas: XGBoost, aprendizaje residual, machine learning, balanceo de clases, 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho da dos cifras y una imagen clara (la pista); la honestidad es 5 porque el Short aclara que el 2007-2013 no prueba al modelo (85% fuera del mercado) y que la vara de 1.23 usa el cierre del mismo día.
+
+## Otros temas de este experimento
+- Tema 1: `exp-024-ia-residual-pista.md` — Régimen supervisado residual (XGBoost v2)
+- Tema 2: `exp-024-t2-pista-con-trampa.md` — la pista que tenía trampa
+- Tema 3: `exp-024-t3-85-por-ciento-fuera.md` — el Sharpe de 0.21 con el 85% de los días fuera

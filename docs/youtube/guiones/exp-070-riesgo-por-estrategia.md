@@ -137,3 +137,8 @@ Etiquetas: gestión de riesgo, volatilidad objetivo, vol targeting, drawdown, fr
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-070-riesgo-por-estrategia.md` — Gestión de riesgo por estrategia (no todo el capital)
+- Tema 2: `exp-070-t2-mismo-freno-tres-experimentos.md` — El mismo freno de riesgo en tres experimentos (el que sirvió, el parcial y el que empeoró)
+- Tema 3: `exp-070-t3-el-freno-por-dentro.md` — El freno por dentro (cinco números y el marzo de 2020, con y sin freno)

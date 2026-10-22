@@ -99,3 +99,10 @@ trading en índices, s&p 500, nasdaq 100, dax, ftse 100, comprar y mantener, bet
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: no hay script original, así que periodos y costos no son verificables; el cartel «parámetros reconstruidos» debe aparecer junto a las curvas y el Short debe dejarlo en la descripción.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-090-tiktok-en-indices.md` — Tema 1: En índices: tendencia +$14,814, comprar y esperar +$29,368
+2. `exp-090-t2-beta-contra-alfa-el-doble.md` — Tema 2: Beta contra alfa: la tendencia ganó +$14,814 en índices y comprar y esperar, el doble
+3. `exp-090-t3-misma-regla-dos-mercados.md` — Tema 3: El mismo cruce de medias: +$148,140 en índices y +$13,487 en divisas y oro
+4. `exp-090-t4-codigo-perdido-cifras-reproducidas.md` — Tema 4: Código no conservado, cifras reproducidas al dólar: ¿basta? Experimento 90

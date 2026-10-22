@@ -93,3 +93,9 @@ Etiquetas: prop firm, cuenta fondeada, FTMO, valor esperado, Monte Carlo, challe
 | **Promedio** | **4.25** | **4.00** |
 
 Notas: el gancho es una cifra positiva y atractiva; por eso la honestidad depende de que la advertencia (beta de 2019-2024 y cuenta reventada en el camino real) aparezca dentro de los primeros 40 s del Short, como está escrito. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Valor esperado real de prop firm (desafío + fondeo)
+- Tema 2: [exp-011-t2-sobrevivir-para-cobrar.md](exp-011-t2-sobrevivir-para-cobrar.md) — dos fases, dos tamaños, ×4 para pasar y ×2 para cobrar
+- Tema 3: [exp-010-t3-dos-valores-esperados.md](exp-010-t3-dos-valores-esperados.md) — dos valores esperados para el mismo negocio, $3,410 y $5,919 (cubre #10 y #11)

@@ -92,3 +92,8 @@ Etiquetas: EWMA, machine learning, volatilidad, navaja de Occam, pronóstico de 
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-055-ewma-vs-machine-learning.md` — Tema 1: Una línea de código le ganó al machine learning (R² 0.175)
+- `exp-055-t2-comparar-sin-trampa.md` — Tema 2: cómo comparar dos modelos sin trampa (mismos días, margen de 0.02)
+- `exp-055-t3-una-linea-explicada.md` — Tema 3: la línea de código que ganó, palabra por palabra

@@ -99,3 +99,10 @@ Etiquetas: trading, bot de trading, backtest, VIX, prop firm, Sharpe ratio, gest
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook es un dato propio y contraintuitivo (10%); el término φ se explica con «esquivó la mitad». Punto débil: la explicación del filtro de crédito es densa para no traders; en pantalla se resume con el checklist.
+
+## Otros temas de este experimento
+- Tema 1: `exp-031-filtro-reactivo-intradia.md` — Filtro reactivo intradía
+- Tema 2: `exp-031-t2-plan-b-regla-de-precio.md` — el plan B, una regla de precio
+- Tema 3: `exp-031-t3-medir-no-suponer-phi.md` — medir en lugar de suponer (φ)
+- Tema 4: `exp-031-t4-91292-contra-89908.md` — 91,292 contra 89,908
+- Ver también (temas de otro experimento que usan las cifras del #31): `exp-029-t3-la-vara-del-sirvio.md`, `exp-030-t2-x1-5-zona-segura.md`

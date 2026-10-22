@@ -99,3 +99,8 @@ Etiquetas: carry trade, forex, divisas, tasas de interés, backtest, bot de trad
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook plantea una paradoja (cobrar y aun así morir) con una cifra verificable (256 días). Se muestra de forma explícita el único escenario favorable (+25.7% sin reglas) con sus tres salvedades, para que la honestidad no dependa de lo que el espectador no ve.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-042-carry-divisas.md` — Cobré intereses cada día y mi cuenta murió: carry trade
+2. Tema 2 — `exp-042-t2-mejor-escenario-25-7.md` — el mejor escenario (+25.7%) y por qué no cuenta
+3. Tema 3 — `exp-042-t3-filtro-de-panico-salva-al-carry.md` — ¿puede un filtro de pánico salvar al carry?

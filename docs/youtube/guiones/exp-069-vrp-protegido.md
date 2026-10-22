@@ -130,3 +130,9 @@ Etiquetas: VRP protegido, cobertura de cola, put, vender volatilidad, VIX, S&P 5
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.13** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-069-vrp-protegido.md` — VRP protegido (cobertura de cola)
+- Tema 2: `exp-069-t2-apalancamiento-x4.md` — Apalancamiento x4 (cuando el peor día pierde más de lo que tienes)
+- Tema 3: `exp-069-t3-lo-que-no-se-midio.md` — Lo que no se midió (un Sharpe de 1.85 con cuatro de siete pruebas sin hacer)
+- Tema 4: `exp-069-t4-ano-por-ano.md` — Año por año (2022: el S&P 500 cae 19.4% y esta estrategia, en el papel, gana 6.7%)

@@ -103,3 +103,9 @@ Etiquetas: machine learning, inteligencia artificial, swing trading, RSI, MACD, 
 | audio | 4 | Voz por clonar; golpe de bajo en el gancho |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.38** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-051-swing-ml-5-dias.md` — Tema 1: IA con respuestas al azar: Sharpe 0.14. La real: 0.15
+- `exp-051-t2-con-y-sin-costos.md` — Tema 2: sin costos, el azar le ganó a la IA (0.36 contra 0.30)
+- `exp-051-t3-volatilidad-wti-brent.md` — Tema 3: la volatilidad del WTI sí se predice (0.40) y la del Brent no (−0.38)
+- `exp-051-t4-volatilidad-si-direccion-no.md` — Tema 4: la volatilidad sí se predice, la dirección no (experimentos #51 a #56)

@@ -89,3 +89,10 @@ Etiquetas: meta-labeling, meta-etiquetado, López de Prado, XGBoost, machine lea
 | **Promedio** | **4.25** | **4.00** |
 
 Notas: el concepto de meta-etiquetado exige el diagrama de las dos cajas; sin él, la claridad del largo baja a 3. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Meta-etiquetado con ML: SMA + XGBoost
+- Tema 2: [exp-003-t2-mismo-cruce-misma-ventana.md](exp-003-t2-mismo-cruce-misma-ventana.md) — ¿mejoró la IA al cruce de medias? Misma señal, misma ventana
+- Tema 3: [exp-003-t3-meta-etiquetado-explicado.md](exp-003-t3-meta-etiquetado-explicado.md) — el meta-etiquetado explicado (dos modelos, dos trabajos)
+- Tema 4: [exp-001-t4-tres-ias-perdida-por-operacion.md](exp-001-t4-tres-ias-perdida-por-operacion.md) — tres IAs, la misma pérdida por operación (cubre #1, #2 y #3)

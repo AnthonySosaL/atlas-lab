@@ -92,3 +92,9 @@ breaker block, ict, trading de noticias, backtest, reglas objetivas, estrategia 
 | Short | 4 | 4 | 4 | 4 | 4 | 5 | 4 | 4 | 4.1 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Datos justos: es el experimento más débil de la tanda (no hay prueba propia ni curva). Se sostiene por el método («sin reglas no hay backtest») y por el único dato medido, que es del #56; ese dato debe llevar siempre el cartel «no es una prueba de noticias».
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-087-tiktok-noticias-breaker-block.md` — Tema 1: Noticias + «breaker block» de TikTok: 0 pruebas mecánicas
+2. `exp-087-t2-tasa-base-61-3.md` — Tema 2: Acertar el 57% suena bien, pero la tasa base es 61.3%: qué significa
+3. `exp-087-t3-reglas-que-un-computador-entiende.md` — Tema 3: Este TikTok tiene 3 reglas exactas y 3 piezas que faltan: 0 pruebas posibles

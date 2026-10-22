@@ -89,3 +89,10 @@ Etiquetas: machine learning trading, XGBoost, triple barrera, López de Prado, E
 | **Promedio** | **4.25** | **4.00** |
 
 Notas: la explicación de la triple barrera es lo más denso del largo; el boceto de la vela con tres líneas está para sostenerla. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — ML XGBoost con triple barrera
+- Tema 2: [exp-001-t2-prueba-del-azar.md](exp-001-t2-prueba-del-azar.md) — la prueba del azar (500 barajadas y p = 0.78)
+- Tema 3: [exp-001-t3-camino-y-expectativa.md](exp-001-t3-camino-y-expectativa.md) — el camino de la cuenta y la expectativa por operación
+- Tema 4: [exp-001-t4-tres-ias-perdida-por-operacion.md](exp-001-t4-tres-ias-perdida-por-operacion.md) — tres IAs, la misma pérdida por operación (cubre #1, #2 y #3)

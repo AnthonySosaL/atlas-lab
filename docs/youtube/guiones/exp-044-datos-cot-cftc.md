@@ -84,3 +84,7 @@ Etiquetas: COT, CFTC, Commitments of Traders, especuladores, posicionamiento, fo
 
 Promedio: **4.13** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook usa el arquetipo «dato oculto y gratis» con una cifra (40 años) y una fuente oficial, pero sin conflicto propio: es el hook más débil de este grupo y el 4 es ajustado. Alternativa para A/B si la retención inicial es baja: «Hacer lo contrario de los especuladores me cortó la cuenta. Los datos son gratis.» Se recomienda no producirlo suelto o fusionarlo con #45.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-044-datos-cot-cftc.md` — 40 años de lo que apuestan los especuladores, gratis (COT)
+2. Tema 2 — `exp-044-t2-cambio-de-nombre-borra-historia.md` — un cambio de nombre y los contratos cruzados (calidad de datos)

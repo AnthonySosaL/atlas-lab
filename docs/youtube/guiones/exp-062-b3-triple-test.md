@@ -112,3 +112,8 @@ Etiquetas: Deflated Sharpe, prueba fuera de muestra, cambio de régimen, media m
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-062-b3-triple-test.md` — 7 ataques al cambio de régimen: ninguno pasó el examen
+- Tema 2 de 3: `exp-062-t2-siete-reglas-una-vara.md` — Siete reglas para detectar la crisis a tiempo, una sola vara: el Sharpe de 0.37
+- Tema 3 de 3: `exp-062-t3-protege-la-cuenta.md` — ¿Protege la cuenta? Caída máxima −8.9% contra −10.9%… y peor en otro periodo

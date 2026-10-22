@@ -104,3 +104,9 @@ Etiquetas: trading, bot de trading, backtest, retorno anual, Sharpe ratio, prop 
 
 Promedio: **4.50** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook son dos cifras propias que se contradicen; la lista de 18 años se lee agrupada (verdes / otros) para no cansar. El dato de las crisis ya se ve en el gráfico, así que la narración solo lo resume.
+
+## Otros temas de este experimento
+- Tema 1: `exp-032-validacion-18-anios.md` — Validación ejecutable-reactiva (año por año)
+- Tema 2: `exp-032-t2-consistencia-56-por-ciento.md` — 56% de años positivos
+- Tema 3: `exp-032-t3-suerte-o-ventaja.md` — ¿suerte o ventaja?
+- Ver también (temas de otro experimento que usan las cifras del #32): `exp-029-t3-la-vara-del-sirvio.md`

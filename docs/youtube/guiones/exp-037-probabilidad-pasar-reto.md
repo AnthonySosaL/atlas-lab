@@ -94,3 +94,8 @@ Etiquetas: prop firm, reto de fondeo, FTMO, simulación Monte Carlo, probabilida
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook plantea una paradoja (37.5% sin ventaja) y el Short aclara de inmediato la condición «sin límite de tiempo» y el 6.4% con plazo, para no inflar la cifra. Punto débil: remuestreo/Monte Carlo se explica en una frase.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-037-probabilidad-pasar-reto.md` — ¿Pasa un reto de fondeo una estrategia sin ventaja? 37.5%
+2. Tema 2 — `exp-037-t2-montecarlo-4000-historias.md` — Monte Carlo, 4,000 historias alternativas
+3. Tema 3 — `exp-037-t3-tres-respuestas-misma-estrategia.md` — la misma estrategia, tres respuestas

@@ -130,3 +130,8 @@ Etiquetas: efecto nocturno, overnight, oro, spread y swap, costos de trading, De
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.50** | **4.38** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-071-nocturno-costos-reales.md` — Efecto nocturno con costos reales + validación fuera de muestra
+- Tema 2: `exp-071-t2-curva-bruta-contra-neta.md` — La curva casi perfecta (el oro de noche: −2.3% de caída en bruto, −53.7% con costos reales)
+- Tema 3: `exp-071-t3-el-muro-de-costos.md` — El muro de los costos (dos ventajas reales que el costo entierra: +0.20 → −1.99 y +0.99 → −3.11)

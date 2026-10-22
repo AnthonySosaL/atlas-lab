@@ -97,3 +97,8 @@ Etiquetas: curva de tasas, curva invertida, bot de trading, backtest, prop firm,
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook son dos años que chocan (2016 vs 2019), verificables en los datos. Punto débil: el concepto de «curva invertida» ocupa un bloque entero; en el Short se resume en una frase.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-035-curva-de-tasas-filtro.md` — Mi bot murió en 2016; la curva de tasas se invirtió en 2019
+2. Tema 2 — `exp-035-t2-prueba-ab-regla-extra.md` — la prueba A/B de una regla extra
+3. Tema 3 — `exp-035-t3-dato-que-pesa-no-es-regla.md` — un dato que pesa en un modelo no es una regla

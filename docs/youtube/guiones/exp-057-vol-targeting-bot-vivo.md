@@ -114,3 +114,8 @@ Etiquetas: volatilidad objetivo, vol targeting, apalancamiento, paridad de riesg
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-057-vol-targeting-bot-vivo.md` — Vol-targeting en mi bot: COVID de −10.3% a −9.0%
+- Tema 2 de 3: `exp-057-t2-vol-targeting-explicado.md` — Mismo apalancamiento medio (2.0 y 1.96), distinta caída en 2022: −13.9% contra −10.9%
+- Tema 3 de 3: `exp-057-t3-dos-veredictos-misma-idea.md` — Volatilidad objetivo: de −40.3% a −19.2% en un experimento, de −17.8% a −17.3% en otro

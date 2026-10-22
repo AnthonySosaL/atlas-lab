@@ -115,3 +115,8 @@ Etiquetas: lead-lag, correlación rezagada, petróleo y dólar canadiense, oro y
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-067-lead-lag-petroleo-cad.md` — ¿El petróleo mueve al dólar canadiense? Correlación 0.007
+- Tema 2 de 3: `exp-067-t2-oro-y-dolar-australiano.md` — Oro → dólar australiano: correlación −0.005 y Sharpe −0.11 (2012–2024)
+- Tema 3 de 3: `exp-067-t3-lo-obvio-ya-esta-en-el-precio.md` — La relación que todos conocen no deja dinero: −$3,844 por cada $100,000 (petróleo y dólar canadiense)

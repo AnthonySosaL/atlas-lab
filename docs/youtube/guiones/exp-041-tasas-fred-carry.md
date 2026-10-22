@@ -87,3 +87,7 @@ Etiquetas: carry trade, tasas de interés, FRED, forex, datos económicos, divis
 
 Promedio: **4.13** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook usa una promesa atractiva (te paga por cambiar de moneda) y el Short la resuelve con un resultado real de #42 (256 días), rotulado como dato de otro experimento. Es uno de los dos guiones con datos más justos: sin ese resultado, un Short solo de «descargué datos» tendría un hook de 3. Alternativa para A/B: «Probé el carry con tasas desde 1956: la cuenta murió a los 256 días.» Se recomienda publicarlo junto al de #42 o dentro de ese video.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-041-tasas-fred-carry.md` — Bajé las tasas de interés de 8 monedas desde 1956 (gratis)
+2. Tema 2 — `exp-041-t2-como-bajar-tasas-fred-gratis.md` — cómo bajar datos macro gratis, paso a paso

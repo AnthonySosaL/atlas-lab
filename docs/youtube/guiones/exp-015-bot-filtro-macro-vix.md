@@ -98,3 +98,10 @@ Etiquetas: VIX, filtro de régimen, HYG LQD, crédito, bot de trading, backtest,
 | **Promedio** | **4.25** | **4.00** |
 
 Notas: la honestidad exige que «NO EJECUTABLE» aparezca en pantalla desde el segundo 0 del Short; el hook es una cifra atractiva y se desactiva a sí mismo en 3 s. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-015-bot-filtro-macro-vix.md` — Bot + filtro de régimen macro (este archivo).
+- Tema 2 — `exp-015-t2-prueba-del-dia-de-retraso.md` — Un día de retraso: la prueba que desinfla un backtest
+- Tema 3 — `exp-015-t3-vix-y-credito-termometros.md` — VIX y crédito: los dos termómetros del miedo detrás del filtro
+- Tema 4 — `exp-015-t4-elegir-el-mejor-de-tres.md` — Elegir el mejor de tres: el apalancamiento escogido en la misma muestra

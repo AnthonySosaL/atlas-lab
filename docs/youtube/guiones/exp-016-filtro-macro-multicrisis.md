@@ -108,3 +108,9 @@ Etiquetas: bot de trading, filtro macro, VIX, backtest, Sharpe ratio, prop firm,
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 5 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.50 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho da número y el giro en 3 s; la honestidad es 5 porque las cifras salen tal cual de `experiments.json` y el veredicto («no sirvió») se dice en voz y en pantalla.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-016-filtro-macro-multicrisis.md` — Validación del filtro macro en múltiples crisis (este archivo).
+- Tema 2 — `exp-016-t2-nueve-de-diez-anos.md` — 9 de 10 años positivos: el desglose año por año de un bot con filtro de pánico
+- Tema 3 — `exp-016-t3-la-vara-sharpe-1-23.md` — La vara de medir: por qué cuatro ideas se compararon contra un Sharpe de 1.23

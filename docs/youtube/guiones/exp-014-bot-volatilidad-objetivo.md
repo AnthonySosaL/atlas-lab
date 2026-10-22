@@ -90,3 +90,9 @@ Etiquetas: volatilidad objetivo, vol targeting, bot de trading, COVID 2020, apal
 | **Promedio** | **4.13** | **4.00** |
 
 Notas: «apalancamiento ×3.9» exige el medidor visual para no traders. El dial del boceto es solo ilustrativo (sin valores intermedios inventados). El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-014-bot-volatilidad-objetivo.md` — Bot ATLAS con volatilidad objetivo (simulación) (este archivo).
+- Tema 2 — `exp-014-t2-volatilidad-objetivo-explicada.md` — Volatilidad objetivo explicada: la fórmula que debía mantener el riesgo constante
+- Tema 3 — `exp-014-t3-sharpe-contra-palanca.md` — Sharpe −0.95 contra −0.91: cuando la palanca cambia el dolor pero no el Sharpe

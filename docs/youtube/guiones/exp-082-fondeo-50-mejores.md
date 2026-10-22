@@ -91,3 +91,9 @@ fondeo, prop firm, ftmo, challenge de fondeo, cuenta fondeada, apalancamiento, d
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: sin curva ni script, el visual depende de barras y medidores; hay que mostrar la nota «sin script: resultado registrado».
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-082-fondeo-50-mejores.md` — Tema 1: Fondeo: la mejor estrategia pasa 3.5% y revienta 4.7%
+2. `exp-082-t2-las-50-mejores-no-son-aptas.md` — Tema 2: Las 50 mejores de 33,363 estrategias: 0.0% pasan un challenge de fondeo
+3. `exp-082-t3-apalancamiento-x5-paradoja.md` — Tema 3: Apalancamiento x5: el 99% sigue sin llegar a +10% en 3 meses

@@ -106,3 +106,10 @@ Etiquetas: trading, bot de trading, backtest, VIX, filtro de pánico, prop firm,
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook usa un resultado contraintuitivo (0 de 6) en 8 palabras; el loop es de frase abierta. Punto débil: «φ» y «piso» requieren el bloque de contexto; en el Short se reduce a «0.94» sin explicarlo a fondo.
+
+## Otros temas de este experimento
+- Tema 1: `exp-033-disparo-temprano-filtro.md` — Activación temprana del filtro (disparo temprano)
+- Tema 2: `exp-033-t2-falsas-alarmas.md` — el filtro más sensible murió primero
+- Tema 3: `exp-033-t3-por-poco-89358.md` — 89,358 contra 90,000
+- Tema 4: `exp-033-t4-dos-epocas-6-y-0.md` — dos épocas, 6 de 6 y 0 de 6
+- Ver también (temas de otro experimento que usan las cifras del #33): `exp-027-t3-cinco-cuentas-un-maximo.md`, `exp-029-t3-la-vara-del-sirvio.md`, `exp-030-t2-x1-5-zona-segura.md`

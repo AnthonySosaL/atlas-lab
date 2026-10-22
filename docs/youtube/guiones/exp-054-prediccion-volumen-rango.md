@@ -92,3 +92,8 @@ Etiquetas: predicción de volatilidad, rango diario, volumen de ticks, machine l
 | audio | 4 | Voz por clonar; un solo golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-054-prediccion-volumen-rango.md` — Tema 1: El volumen no se predice; el rango sí: R² 0.15 en 10 activos
+- `exp-054-t2-que-activos-se-dejan-predecir.md` — Tema 2: ¿qué activos se dejan predecir? Índices y energía sí, oro no (−0.04)
+- `exp-054-t3-volumen-de-ticks.md` — Tema 3: el volumen de tu plataforma no es dinero negociado (R² −0.003)

@@ -95,3 +95,8 @@ Etiquetas: arbitraje estadístico, stat arb, Avellaneda y Lee, fondos cuantitati
 | audio | 4 | Voz por clonar; un solo golpe de bajo al inicio |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-047-stat-arb-pca.md` — Tema 1: La técnica institucional por excelencia, probada: −10.1%
+- `exp-047-t2-statarb-paso-a-paso.md` — Tema 2: la técnica de los fondos, paso a paso con el código real
+- `exp-047-t3-sin-corte-12661.md` — Tema 3: la línea sin corte, de $102,404 a $12,661

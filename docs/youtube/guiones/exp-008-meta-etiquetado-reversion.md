@@ -97,3 +97,9 @@ Etiquetas: meta-labeling, XGBoost, reversión de sesión, machine learning tradi
 | **Promedio** | **4.25** | **4.00** |
 
 Notas: la claridad es el punto flojo (Sharpe bruto por año + meta-etiquetado); se apoya en los gráficos de barras. Recomendado verlo después del #7. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Meta-etiquetado de reversión de sesión
+- Tema 2: [exp-008-t2-comparacion-justa-elegidas-contra-todas.md](exp-008-t2-comparacion-justa-elegidas-contra-todas.md) — la comparación justa, elegidas contra todas (−4.14 contra −4.00)
+- Tema 3: [exp-008-t3-las-siete-variables.md](exp-008-t3-las-siete-variables.md) — las siete variables de una IA (y la regla de no mirar al futuro)

@@ -129,3 +129,8 @@ Etiquetas: Faber GTAA, Meb Faber, asignación táctica de activos, media móvil 
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.38** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-073-faber-gtaa.md` — Faber GTAA, timing con MA200 (Meb Faber)
+- Tema 2: `exp-073-t2-faber-contra-turtle.md` — Faber contra Turtle (dos sistemas famosos de tendencia, el mismo dinero final)
+- Tema 3: `exp-073-t3-dos-versiones-mismo-resultado.md` — Faber en dos versiones (decidir cada día o cada mes: +2.7% al año las dos)

@@ -93,3 +93,10 @@ Etiquetas: machine learning trading, XGBoost, filtro de convicción, umbral de p
 | **Promedio** | **4.25** | **4.13** |
 
 Notas: el gancho funciona mejor si el espectador ya vio el #1; por eso el Short repite en una frase qué era el modelo. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — ML XGBoost + filtro de convicción
+- Tema 2: [exp-002-t2-confianza-no-es-acierto.md](exp-002-t2-confianza-no-es-acierto.md) — la confianza de un modelo no es lo mismo que su acierto
+- Tema 3: [exp-002-t3-sharpe-contra-retorno.md](exp-002-t3-sharpe-contra-retorno.md) — perder menos y tener peor Sharpe (cómo leer un panel de números)
+- Tema 4: [exp-001-t4-tres-ias-perdida-por-operacion.md](exp-001-t4-tres-ias-perdida-por-operacion.md) — tres IAs, la misma pérdida por operación (cubre #1, #2 y #3)

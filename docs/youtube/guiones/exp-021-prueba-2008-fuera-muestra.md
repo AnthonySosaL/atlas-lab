@@ -6,7 +6,7 @@ Datos usados: `experiments.json` (v=21: kpis, metrics, params, params_view, verd
 
 ## Títulos
 1. Dejé a mi bot atravesar la crisis de 2008 sin tocar nada: Sharpe 1.06
-2. Prueba anti-sobreajuste en 2007-2013: +84.6% y 100% de años positivos
+2. Prueba anti-sobreajuste en 2007-2013: +84.6% y 6 de 7 años positivos
 3. Una prueba fuera de muestra no lo salva todo: Sharpe 1.06 y −0.46
 
 ## Miniatura
@@ -34,12 +34,12 @@ Las reglas son idénticas a las del experimento 16: VIX por encima de 28, salto 
 > Boceto: tarjeta con candado «reglas congeladas»; los ocho símbolos (EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, USDCHF, NZDUSD, XAUUSD) entrando en la cesta; marcas de 2008 y 2011 sobre el eje de tiempo.
 
 **[1:44 — Resultados]** (pantalla: tarjetas de KPI)
-Sharpe de 1.06, frente a 1.23 en 2014–2024: una caída razonable. Retorno total, más 84.6%. Drawdown máximo, la peor caída desde un máximo de la cuenta, de menos 10.8%. Años positivos: 100%. Y sobrevive a 2008.
-> Boceto: tarjetas con tick (1.06 · +84.6% · −10.8% · 100%); la curva con la banda de 2008 resaltada y el sello verde «sobrevive».
+Sharpe de 1.06, frente a 1.23 en 2014–2024: una caída razonable. Retorno total, más 84.6%. Drawdown máximo, la peor caída desde un máximo de la cuenta, de menos 10.8%. : 6 de 7 (86%). Y sobrevive a 2008.
+> Boceto: tarjetas con tick (1.06 · +84.6% · −10.8% · 6 de 7 años); la curva con la banda de 2008 resaltada y el sello verde «sobrevive».
 
-**[2:00 — Cómo leer un 100% de años positivos]** (pantalla: calendario de años)
-Un 100% de años positivos significa que cada uno de los años de 2007 a 2013, incluyendo 2008, cerró en positivo. Es una marca llamativa, pero hay que leerla con cuidado: un año positivo puede ser pequeño, y la cuenta depende de que no haya una pérdida diaria fuerte. Por eso se mira junto con el Sharpe y con la caída máxima.
-> Boceto: siete casillas de años (2007 a 2013) que se pintan de verde una a una; debajo, dos medidores pequeños: Sharpe 1.06 y caída máxima −10.8%.
+**[2:00 — Cómo leer 6 de 7 años positivos]** (pantalla: calendario de años)
+Seis de siete años positivos significa que de 2007 a 2013, incluyendo 2008, todos los años cerraron en positivo salvo 2013, que quedó plano en −0.02%. Es una marca llamativa, pero hay que leerla con cuidado: un año positivo puede ser pequeño, y la cuenta depende de que no haya una pérdida diaria fuerte. Por eso se mira junto con el Sharpe y con la caída máxima.
+> Boceto: siete casillas de años (2007 a 2013): seis se pintan de verde y 2013 queda gris con «−0.02%»; debajo, dos medidores pequeños: Sharpe 1.06 y caída máxima −10.8%.
 
 **[2:26 — Los dos periodos lado a lado]** (pantalla: tabla comparativa)
 Pongamos los dos periodos lado a lado. En 2014 a 2024: Sharpe de 1.23, más 267.3% y caída máxima de menos 12.5%. En 2007 a 2013: Sharpe de 1.06, más 84.6% y caída máxima de menos 10.8%. Parecidos en forma, que es lo que haría una prueba fuera de muestra bien superada: que el resultado no dependa del periodo.
@@ -85,7 +85,7 @@ Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternan
 **[7-12 s]** "Las apliqué a 2007 a 2013, datos que nunca vio, con la crisis de 2008."
 > Boceto: el candado se desplaza al tramo 2007–2013; marca roja en 2008.
 **[12-15 s]** "Sharpe 1.06. Todos los años positivos. Caída máxima de 10.8%."
-> Boceto: tres tarjetas con tick (1.06 · 100% · −10.8%).
+> Boceto: tres tarjetas con tick (1.06 · 6 de 7 años · −10.8%).
 **[15-21 s]** "Sin el filtro, a ×3, la cuenta perdía 11%. Comprar y esperar esa cesta: más 6.2%."
 > Boceto: curva roja sin filtro que cae y se corta; barra gris pequeña «+6.2%».
 **[21-29 s]** "Pero el filtro decide con el cierre de hoy. Con la señal de ayer, el Sharpe es menos 0.46 y la cuenta no sobrevive."
@@ -96,16 +96,22 @@ Fórmula visual: b-roll Pexels vertical + overlay oscuro 0.6, Ken Burns alternan
 > Boceto: logo ATLAS; corte directo al inicio (loop).
 
 ## Descripción (YouTube)
-Congelé las reglas del filtro macro (fijadas con datos de 2014–2024) y las apliqué a 2007–2013, con la crisis de 2008 y la del euro de 2011, sobre 7 pares de divisas más oro: +84.6%, Sharpe 1.06, 100% de años positivos.
+Congelé las reglas del filtro macro (fijadas con datos de 2014–2024) y las apliqué a 2007–2013, con la crisis de 2008 y la del euro de 2011, sobre 7 pares de divisas más oro: +84.6%, Sharpe 1.06, 6 de 7 años positivos (2013 quedó en −0.02%).
 Sin el filtro, a ×3, perdía −11%.
 Pero con la señal de un día antes, la base da Sharpe −0.46 y no sobrevive.
 Todos los datos: https://atlas-lab-one.vercel.app (experimento #21)
 Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 
-Capítulos: 0:00 Gancho · 0:29 Dónde encaja en la serie · 0:51 Qué es el sobreajuste · 1:13 La prueba · 1:44 Resultados · 2:00 Cómo leer un 100% de años positivos · 2:26 Los dos periodos lado a lado · 2:51 Contra qué se compara · 3:13 La lista de pruebas · 3:36 El detalle de siempre · 4:05 Con tu capital · 4:30 Qué haría falta para creerle · 4:50 Conclusión · 5:10 Cierre
+Capítulos: 0:00 Gancho · 0:29 Dónde encaja en la serie · 0:51 Qué es el sobreajuste · 1:13 La prueba · 1:44 Resultados · 2:00 Cómo leer un 6 de 7 años positivos (2013 quedó en −0.02%) · 2:26 Los dos periodos lado a lado · 2:51 Contra qué se compara · 3:13 La lista de pruebas · 3:36 El detalle de siempre · 4:05 Con tu capital · 4:30 Qué haría falta para creerle · 4:50 Conclusión · 5:10 Cierre
 
 Etiquetas: fuera de muestra, sobreajuste, crisis de 2008, backtest, bot de trading, Sharpe ratio, VIX, prop firm, trading con datos, ATLAS Lab, validación de estrategias, trading algorítmico
 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.38 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho promete un resultado en una crisis conocida y el Short cumple con el giro del −0.46; la honestidad es 5 porque el veredicto y la limitación (señal del mismo día) se dicen en voz.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-021-prueba-2008-fuera-muestra.md` — Fuera de muestra temporal 2007-2013 (anti-sobreajuste) (este archivo).
+- Tema 2 — `exp-021-t2-seis-pruebas-para-creerle.md` — Seis pruebas para creerle a un bot: este pasó dos, falló una y tres ni se aplicaron
+- Tema 3 — `exp-021-t3-2008-tres-curvas.md` — 2008 sin tocar nada: con filtro +84.6%, sin filtro −11% y comprar y esperar +6.2%

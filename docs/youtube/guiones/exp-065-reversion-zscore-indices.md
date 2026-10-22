@@ -109,3 +109,8 @@ Etiquetas: reversión a la media, z-score, comprar la caída, índices bursátil
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.25** | **4.13** |
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-065-reversion-zscore-indices.md` — Comprar la caída, vender la subida: 4 índices, 4 derrotas
+- Tema 2 de 3: `exp-065-t2-ganar-dinero-no-es-ganar.md` — Ganó +$220,005 con $100,000 y aun así perdió: el costo de oportunidad
+- Tema 3 de 3: `exp-065-t3-la-prueba-barata-primero.md` — La prueba más barata primero: si pierde sin costos, no pasa con costos

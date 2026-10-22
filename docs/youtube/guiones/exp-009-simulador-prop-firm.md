@@ -98,3 +98,10 @@ Etiquetas: prop firm, FTMO, challenge de fondeo, cuenta fondeada, Monte Carlo, a
 | **Promedio** | **4.13** | **4.00** |
 
 Notas: el hook usa jerga («examen de fondeo»); el texto en pantalla «SIN NINGUNA VENTAJA» y el gráfico plano lo sostienen. Los límites (periodo alcista, sin costos) se dicen en el propio Short. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Simulador de prop firm (cartera)
+- Tema 2: [exp-009-t2-el-examen-contra-el-covid.md](exp-009-t2-el-examen-contra-el-covid.md) — el examen de fondeo contra el COVID (−24.2% frente a un límite de 10%)
+- Tema 3: [exp-009-t3-cuatro-mil-examenes-bootstrap.md](exp-009-t3-cuatro-mil-examenes-bootstrap.md) — cómo se fabrican 4,000 exámenes con una sola historia (remuestreo por bloques)
+- Tema 4: [exp-009-t4-un-mal-dia-o-una-caida-lenta.md](exp-009-t4-un-mal-dia-o-una-caida-lenta.md) — reventar de dos maneras, un mal día o una caída lenta (cubre #9 y #10)

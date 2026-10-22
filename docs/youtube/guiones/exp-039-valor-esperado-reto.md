@@ -95,3 +95,8 @@ Etiquetas: prop firm, reto de fondeo, valor esperado, FTMO, bot de trading, back
 
 Promedio: **4.50** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook junta dos cifras que parecen contradecirse (37.5% y −$500) y el Short lo resuelve con una cuenta de una línea. Punto débil: el bloque del contraste con el cierre del mismo día (~82%) puede recortarse si el video se alarga.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-039-valor-esperado-reto.md` — Pagas $500 por el reto de fondeo: valor esperado, −$500
+2. Tema 2 — `exp-039-t2-menos-500-es-el-piso.md` — −$500 es el piso de la fórmula
+3. Tema 3 — `exp-039-t3-la-vara-antes-de-medir.md` — poner la vara antes de medir

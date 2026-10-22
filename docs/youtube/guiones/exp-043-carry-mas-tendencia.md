@@ -105,3 +105,9 @@ Etiquetas: carry trade, tendencia, momentum, forex, backtest, bot de trading, pr
 
 Promedio: **4.25** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook es una paradoja corta; la tabla de sensibilidad ofrece un bloque visual fuerte. Punto débil: «swap» y «puntos básicos» se mencionan sin explicación detallada en el Short (en el largo se enuncian como costos).
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-043-carry-mas-tendencia.md` — Carry + tendencia: la cuenta murió el 25 de enero de 2017
+2. Tema 2 — `exp-043-t2-siete-escenarios-misma-muerte.md` — siete escenarios, casi la misma muerte
+3. Tema 3 — `exp-043-t3-phi-el-6-por-ciento.md` — φ, el 6% del día de pánico que sí se esquiva
+4. Tema 4 — `exp-043-t4-tres-fechas-de-muerte.md` — tres fechas de muerte, cada capa compra tiempo

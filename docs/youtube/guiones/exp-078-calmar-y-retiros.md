@@ -92,3 +92,8 @@ calmar ratio, retiro del 4%, turtle trading, faber gtaa, drawdown, comprar y man
 | Short | 5 | 4 | 5 | 4 | 4 | 5 | 4 | 4 | 4.4 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: «Calmar» y «orden de los retornos» exigen una explicación rápida; el B3 se muestra sin costos y debe llevar la nota ámbar.
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-078-calmar-y-retiros.md` — Calmar y retiros: ¿mejor que comprar y mantener para ingreso?
+- Tema 2: `exp-078-t2-tres-metricas-tres-ganadores.md` — Tres métricas, tres ganadores (Turtle gana en Sharpe y en Calmar, y pierde en dinero)
+- Tema 3: `exp-078-t3-b3-casi-todo-el-retorno.md` — B3, casi todo el retorno con menos caída (+5.0% contra +5.2% y −25% contra −30%), y la letra pequeña

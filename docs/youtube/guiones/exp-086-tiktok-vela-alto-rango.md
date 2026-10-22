@@ -102,3 +102,9 @@ estrategia de tiktok, media de 200 días, vela de alto volumen, reversión a la 
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: la pirámide y el ratio 1:3 del TikTok no se probaron; el video lo dice dos veces y rotula como «razonamiento» lo que no se midió.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-086-tiktok-vela-alto-rango.md` — Tema 1: El TikTok de «+30% al año»: probé 10 versiones, 0 pasan
+2. `exp-086-t2-vela-grande-dos-veces.md` — Tema 2: Vela de 2.0 veces su promedio: la única versión con Sharpe positivo (0.08)
+3. `exp-086-t3-treinta-anos-de-backtest.md` — Tema 3: Misma regla, tres épocas: 0.08, −1.00 y −0.32. Lo que esconde un backtest largo

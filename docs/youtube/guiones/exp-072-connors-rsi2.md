@@ -126,3 +126,8 @@ Etiquetas: Connors RSI, RSI(2), Larry Connors, reversión a la media, estrategia
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.50** | **4.38** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-072-connors-rsi2.md` — Connors RSI(2), variante de salida rápida (Larry Connors)
+- Tema 2: `exp-072-t2-dos-formulas-del-rsi.md` — Dos fórmulas del RSI, dos veredictos (−0.23 o 0.40 con la misma regla de Connors)
+- Tema 3: `exp-072-t3-comprar-la-caida-tres-famosas.md` — Comprar la caída, tres estrategias famosas contra quedarse quieto (RSI(2), IBS y Double Seven)

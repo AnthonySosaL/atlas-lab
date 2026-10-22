@@ -93,3 +93,10 @@ Etiquetas: reversión a la media, contratendencia, fade, rango asiático, EUR/US
 | **Promedio** | **4.38** | **4.13** |
 
 Notas: el gancho exige el rótulo en pantalla «Sharpe = ganancia por unidad de riesgo» para quien no es trader; sin él, el hook baja a 3. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Reversión de sesión (contratendencia)
+- Tema 2: [exp-007-t2-la-goma-elastica.md](exp-007-t2-la-goma-elastica.md) — la goma elástica, vender en el techo y comprar en el piso
+- Tema 3: [exp-006-t3-dos-monedas-con-comision.md](exp-006-t3-dos-monedas-con-comision.md) — dos monedas con comisión, la ruptura y su espejo (cubre #6 y #7)
+- Tema 4: [exp-006-t4-anio-por-anio-uno-de-doce.md](exp-006-t4-anio-por-anio-uno-de-doce.md) — año por año, solo uno de doce en positivo (cubre #6 y #7)

@@ -115,3 +115,8 @@ Etiquetas: estacionalidad, turn-of-month, efecto calendario, día de la semana, 
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.25** | **4.13** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-068-estacionalidad-calendario.md` — Estacionalidad (día de la semana, cambio de mes)
+- Tema 2: `exp-068-t2-domingos-fantasma.md` — 484 domingos en una serie de bolsa (revisar los datos antes de la estadística)
+- Tema 3: `exp-068-t3-de-la-tabla-a-la-cuenta.md` — De la tabla a la cuenta (el cambio de mes, operado en el experimento 49)

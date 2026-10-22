@@ -100,3 +100,8 @@ Etiquetas: sentimiento del mercado, VIX, índice del miedo, VIX3M, S&P 500, SPY,
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.5** (≥ 4.0). Hook del Short 5 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-056-sentimiento-4-formas.md` — Tema 1: El sentimiento acierta 57%. Decir «sube» siempre: 61.3%
+- `exp-056-t2-termometros-del-miedo.md` — Tema 2: los cuatro termómetros del miedo, y por qué ninguno adivina la dirección
+- `exp-056-t3-vix-ayuda-con-la-volatilidad.md` — Tema 3: lo único que aportó el VIX, ayudar con la volatilidad (0.378 a 0.395)

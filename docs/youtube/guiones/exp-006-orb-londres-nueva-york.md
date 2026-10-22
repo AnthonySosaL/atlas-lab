@@ -90,3 +90,10 @@ Etiquetas: ORB, opening range breakout, ruptura de rango, sesión de Londres, se
 | **Promedio** | **4.38** | **3.88** |
 
 Notas: el largo queda por debajo de 4.0 porque el experimento no reporta el Sharpe bruto ni la prueba de azar; recomendación: producir primero el Short y unir el largo con el del #7 («ORB y su espejo») en una sola pieza. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — ORB de la sesión Londres-Nueva York
+- Tema 2: [exp-006-t2-un-dia-de-orb-paso-a-paso.md](exp-006-t2-un-dia-de-orb-paso-a-paso.md) — un día de ORB, paso a paso (una caja, una ruptura, una operación)
+- Tema 3: [exp-006-t3-dos-monedas-con-comision.md](exp-006-t3-dos-monedas-con-comision.md) — dos monedas con comisión, la ruptura y su espejo (cubre #6 y #7)
+- Tema 4: [exp-006-t4-anio-por-anio-uno-de-doce.md](exp-006-t4-anio-por-anio-uno-de-doce.md) — año por año, solo uno de doce en positivo (cubre #6 y #7)

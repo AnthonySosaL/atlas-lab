@@ -99,3 +99,9 @@ Etiquetas: backtest, triple test, Deflated Sharpe, fuera de muestra, fondos cuan
 | audio | 4 | Voz por clonar; un solo golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.5** (≥ 4.0). Hook del Short 5 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-050-cierre-11-clases.md` — Tema 1: 49 experimentos, 11 clases de estrategia, 0 pasaron
+- `exp-050-t2-senal-de-hoy-o-de-ayer.md` — Tema 2: el mismo cálculo con la señal de hoy (+49.4%) o la de ayer (−7.1%)
+- `exp-050-t3-catorce-anos-bajo-el-agua.md` — Tema 3: la curva de 2007 a 2024 y más de 14 años sin volver al máximo
+- `exp-050-t4-deflated-sharpe-0-010.md` — Tema 4: Deflated Sharpe 0.010, la prueba que descuenta la suerte

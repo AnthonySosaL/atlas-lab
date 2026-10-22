@@ -116,3 +116,9 @@ Etiquetas: media móvil 200, MA200, seguimiento de tendencia, trend following, m
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.38** (≥ 4.0). Hook del Short 5 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- Tema 1 de 4: `exp-059-tendencia-ma200-trend-flat.md` — MA200: +30.3% dentro de muestra, −0.09 fuera de ella
+- Tema 2 de 4: `exp-059-t2-seis-ventanas-sin-ganadora.md` — Seis versiones de la media móvil, seis Sharpe negativos (MA50 a MA300)
+- Tema 3 de 4: `exp-059-t3-mas-dolares-peor-sharpe.md` — Ganó más dinero que comprar y esperar (+$30,275 contra +$23,098) y era peor estrategia
+- Tema 4 de 4: `exp-059-t4-fuera-de-muestra-2008.md` — La regla de la media de 200 días en 2007–2013, con la crisis de 2008: retorno −5.6%, Sharpe −0.09

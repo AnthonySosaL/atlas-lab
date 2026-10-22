@@ -94,3 +94,9 @@ Etiquetas: bot de trading, cuenta fondeada, prop firm, COVID 2020, paridad de ri
 | **Promedio** | **4.50** | **4.13** |
 
 Notas: el gancho «313 días» es narrativo y numérico a la vez (se entiende sin jerga). Se publica mejor tras #11 y #12. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-013-bot-cuenta-fondeada.md` — Bot ATLAS: simulación en cuenta fondeada (este archivo).
+- Tema 2 — `exp-013-t2-paridad-de-riesgo-15-mercados.md` — Paridad de riesgo: cómo reparte el bot su dinero entre 15 mercados
+- Tema 3 — `exp-013-t3-curva-sin-corte.md` — La curva que no existió: qué habría pasado si nadie apagaba la cuenta

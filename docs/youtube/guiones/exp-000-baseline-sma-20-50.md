@@ -89,3 +89,9 @@ Etiquetas: trading con datos, backtest, cruce de medias móviles, SMA 20 50, EUR
 | **Promedio** | **4.38** | **4.00** |
 
 Notas: el gancho es un par de números en tensión (+7.9% y $1,273), no un resultado extremo; por eso 4 y no 5. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — Línea base SMA 20/50
+- Tema 2: [exp-000-t2-porcentaje-aciertos.md](exp-000-t2-porcentaje-aciertos.md) — el porcentaje de aciertos no dice nada
+- Tema 3: [exp-000-t3-camino-de-10000.md](exp-000-t3-camino-de-10000.md) — el camino de 10,000 dólares (12,461 y luego 10,789)

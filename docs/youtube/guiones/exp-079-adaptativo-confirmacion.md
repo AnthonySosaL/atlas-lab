@@ -88,3 +88,8 @@ régimen de mercado, histéresis, efficiency ratio, estrategia adaptativa, segui
 | Short | 4 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.4 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: es una continuación; para quien no vio el #77 hay que dejar claro en 20 s qué es el «régimen». Mejor publicarlo después del #77.
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-079-adaptativo-confirmacion.md` — Régimen adaptativo: histéresis, confirmación y mezcla
+- Tema 2: `exp-079-t2-la-regla-de-una-linea.md` — La regla de una línea (solo tendencia saca 0.59; la estrategia con detector, 0.60)
+- Tema 3: `exp-079-t3-senales-falsas-tres-remedios.md` — Señales falsas y tres remedios (histéresis, confirmación y mezcla: de 0.36 a 0.60)

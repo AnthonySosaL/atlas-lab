@@ -109,3 +109,9 @@ Etiquetas: prima de riesgo de volatilidad, VRP, VIX, vender volatilidad, riesgo 
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.50** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 de 4: `exp-064-vrp-prima-volatilidad.md` — Gana el 82% de los días: la estrategia que esconde un riesgo
+- Tema 2 de 4: `exp-064-t2-que-es-el-vix-y-la-prima.md` — ¿Qué es el VIX? El mercado se movió menos de lo que anunciaba el 82% de los días
+- Tema 3 de 4: `exp-064-t3-sharpe-48-04-43.md` — Sharpe 4.8, luego 0.4, luego 4.3: la ventaja que cambia de un periodo a otro
+- Tema 4 de 4: `exp-064-t4-la-cola-y-el-millon.md` — +$1,624,827 con $100,000 y una caída de −61.9%: lo que no cuenta esa curva

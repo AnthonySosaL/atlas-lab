@@ -101,3 +101,10 @@ orb, opening range breakout, nasdaq 100, estrategia de tiktok, ruptura del rango
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: bloque de resultados denso (4 periodos); el cartel del orden desfavorable por vela debe verse junto a cada curva, y el «+214%» es una promesa del TikTok, no un dato nuestro.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-088-tiktok-orb-nasdaq.md` — Tema 1: La estrategia ORB del Nasdaq, probada en 32 formas: 0 pasan
+2. `exp-088-t2-ventaja-2-1-contra-6.md` — Tema 2: Sin costos, positiva fuera de muestra (+0.6 a +1.5). Con costos, −1.73: el ORB del Nasdaq
+3. `exp-088-t3-stop-y-objetivo-32-formas.md` — Tema 3: La peor de 32 versiones del ORB del Nasdaq: Sharpe de −18.57
+4. `exp-088-t4-orden-en-la-vela-peor-y-mejor-caso.md` — Tema 4: Peor caso y mejor caso: 0 de 32 formas del ORB pasan en los dos

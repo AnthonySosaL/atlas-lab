@@ -100,3 +100,9 @@ medias exponenciales, ema, golden cross, cruce de medias, seguimiento de tendenc
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: el bloque «Más allá del backtest» toca a una persona real; debe quedar neutro, sin nombre ni imagen, y revisarse antes de aprobar.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-083-emas-tendencia-tiktok.md` — Tema 1: EMAs «nivel excelente» en TikTok: 8 formas, 0 sobreviven
+2. `exp-083-t2-golden-cross-50-200.md` — Tema 2: El golden cross 50/200: 0.36 de Sharpe en 2007–2013 y −0.16 en 2021–2024
+3. `exp-083-t3-ema-lenta-contra-rapida.md` — Tema 3: Media lenta o rápida: de −0.50 a +0.10 en el diseño, y al revés en 2021–2024

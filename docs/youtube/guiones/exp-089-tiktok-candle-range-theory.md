@@ -100,3 +100,9 @@ candle range theory, barrida de liquidez, falso rompimiento, fvg, estrategia de 
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: el hook se apoya en haber visto los TikToks 1 y 4; el Short lo resume en una frase. Solo se prueba el núcleo diario; el quiebre de estructura y el FVG son intradía y discrecionales.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-089-tiktok-candle-range-theory.md` — Tema 1: «Candle Range Theory» de TikTok: 8 formas, ninguna pasa
+2. `exp-089-t2-ruptura-contra-barrida.md` — Tema 2: Compré la ruptura: −$25,460. Compré lo contrario: −$21,472. Con $100,000
+3. `exp-089-t3-barrida-de-liquidez-que-es.md` — Tema 3: Barrida de liquidez explicada: la regla más simple da un Sharpe de −1.67

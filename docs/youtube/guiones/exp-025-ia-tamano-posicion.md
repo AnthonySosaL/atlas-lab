@@ -111,3 +111,8 @@ Etiquetas: machine learning, tamaño de posición, XGBoost, apalancamiento, inte
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es una comparación con dos números casi iguales (la sorpresa es que la IA no gane); la honestidad es 5 porque se dice que supera al mercado en el papel pero no al ×3 fijo, y que el filtro usa el cierre del mismo día.
+
+## Otros temas de este experimento
+- Tema 1: `exp-025-ia-tamano-posicion.md` — Tamaño de posición con ML y protección manual
+- Tema 2: `exp-025-t2-ia-contra-x3-fijo.md` — la IA contra el ×3 fijo
+- Tema 3: `exp-025-t3-pasa-tres-filtros.md` — pasa 3 filtros de 6 y no sirve

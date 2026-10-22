@@ -107,3 +107,9 @@ Etiquetas: kill-switch, stop de emergencia, gestión de riesgo, bot de trading, 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho contradice una intuición común (el freno de emergencia debería salvar la cuenta); la honestidad es 5 porque se dicen las tres cifras de Sharpe tal cual y que ninguna cuenta sobrevive.
+
+## Otros temas de este experimento
+- Tema 1: `exp-028-kill-switch-lag1.md` — Retraso de 1 día + interruptor de emergencia (kill-switch)
+- Tema 2: `exp-028-t2-freno-con-realismo.md` — cómo se simula un freno con realismo
+- Tema 3: `exp-028-t3-sin-reglas-41902.md` — aunque no existieran las reglas
+- Ver también (temas de otro experimento que usan las cifras del #28): `exp-027-t3-cinco-cuentas-un-maximo.md`, `exp-030-t2-x1-5-zona-segura.md`

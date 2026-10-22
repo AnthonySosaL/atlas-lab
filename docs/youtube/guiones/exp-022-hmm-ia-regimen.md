@@ -111,3 +111,10 @@ Etiquetas: HMM, modelo oculto de Markov, inteligencia artificial, régimen de me
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho da dos cifras y deja la pregunta («¿por qué cuenta tan poco?»); la honestidad es 5 porque el Short no vende la IA ni la condena: dice «no concluyente» y explica el calentamiento de 500 días.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-022-hmm-ia-regimen.md` — Detección de régimen con HMM (IA) (este archivo).
+- Tema 2 — `exp-022-t2-que-es-un-hmm.md` — Qué es un modelo oculto de Markov (HMM): una IA que aprende sola si el mercado está en calma o en pánico
+- Tema 3 — `exp-022-t3-resultado-identico.md` — Dos estrategias, el mismo resultado: −10.37%, Sharpe −2.314 y 81 días
+- Tema 4 — `exp-022-t4-2007-2013-y-la-comparacion.md` — 2007-2013: la IA activa solo desde agosto de 2008 y una comparación que parte con desventaja

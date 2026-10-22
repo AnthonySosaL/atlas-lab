@@ -111,3 +111,8 @@ Etiquetas: sesgo de mirar el futuro, demasiado bueno para ser verdad, VIX, bot d
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 5 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.50 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho combina una cifra enorme con la negación inmediata («es imposible»), sin promesa falsa; la honestidad es 5 porque se explican las dos sospechas (mismo día y mejor de seis) y se dice el veredicto.
+
+## Otros temas de este experimento
+- Tema 1: `exp-026-reentrada-panico-2-12.md` — Reentrada cuando el pánico se enfría
+- Tema 2: `exp-026-t2-la-mejor-de-seis.md` — la mejor de seis
+- Tema 3: `exp-026-t3-volver-cuando-el-miedo-baja.md` — volver cuando el miedo baja

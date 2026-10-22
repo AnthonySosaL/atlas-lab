@@ -93,3 +93,9 @@ Etiquetas: prueba de estrés, stress test, crisis 2008, COVID 2020, mercado baji
 | **Promedio** | **4.38** | **4.00** |
 
 Notas: el gancho comparte historia con #11 y #13, por lo que conviene publicarlos en secuencia o con una lista de reproducción. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-012-prueba-estres-regimen.md` — Prueba de estrés por régimen (este archivo).
+- Tema 2 — `exp-012-t2-remuestreo-por-bloques.md` — Cómo se fabrica un valor esperado: el remuestreo por bloques, paso a paso
+- Tema 3 — `exp-012-t3-ventana-debil-2014-15.md` — La ventana débil: 2014-15, dólar y materias primas, y los +$122

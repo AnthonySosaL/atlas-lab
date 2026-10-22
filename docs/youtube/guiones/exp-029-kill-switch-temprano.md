@@ -111,3 +111,9 @@ Etiquetas: kill-switch, stop diario, gestión de riesgo, bot de trading, prop fi
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 4 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.13 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es débil frente a otros de la tanda porque el experimento no tiene Sharpe ni retornos por variante; la honestidad es 5 porque se dice qué se publicó (supervivencia) y se evita inventar cifras que no existen.
+
+## Otros temas de este experimento
+- Tema 1: `exp-029-kill-switch-temprano.md` — Interruptor de emergencia con disparo temprano
+- Tema 2: `exp-029-t2-frenar-antes-17432.md` — frenar antes sale más caro
+- Tema 3: `exp-029-t3-la-vara-del-sirvio.md` — la vara de «sirvió»
+- Ver también (temas de otro experimento que usan las cifras del #29): `exp-027-t3-cinco-cuentas-un-maximo.md`

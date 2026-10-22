@@ -108,3 +108,9 @@ Etiquetas: kill-switch, apalancamiento bajo, sobrevivir, gestión de riesgo, bot
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 4 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.13 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho contrapone «sobrevive» con «gana casi cero» y da un número (0.03); es el experimento con menos material, por eso la promesa cumplida y el potencial de loop quedan en 4. La honestidad es 5 porque no se inventa ninguna cifra de retorno ni de capital.
+
+## Otros temas de este experimento
+- Tema 1: `exp-030-kill-switch-leverage-bajo.md` — Interruptor de emergencia + apalancamiento bajo
+- Tema 2: `exp-030-t2-x1-5-zona-segura.md` — ×1.5, la zona segura
+- Tema 3: `exp-030-t3-escala-del-sharpe.md` — cómo leer un Sharpe de 0.03
+- Ver también (temas de otro experimento que usan las cifras del #30): `exp-029-t3-la-vara-del-sirvio.md`

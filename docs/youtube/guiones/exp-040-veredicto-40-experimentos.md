@@ -109,3 +109,8 @@ Etiquetas: prop firm, reto de fondeo, FTMO, bot de trading, backtest, Deflated S
 
 Promedio: **4.25** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook es una pregunta con respuesta («Cero») y cinco cifras reales; es un video-resumen, por lo que el Short compite menos por novedad que por claridad. Punto débil: depende de que la audiencia conozca el término «reto de fondeo»; el Short lo menciona sin explicarlo (el largo sí recuerda sus reglas).
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-040-veredicto-40-experimentos.md` — 40 experimentos, una conclusión: $0 en retos de fondeo
+2. Tema 2 — `exp-040-t2-leccion-de-los-relojes.md` — la lección de los dos relojes
+3. Tema 3 — `exp-040-t3-matematica-no-solo-disciplina.md` — matemática, no solo disciplina

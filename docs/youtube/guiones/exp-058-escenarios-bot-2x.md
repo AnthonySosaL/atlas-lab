@@ -105,3 +105,8 @@ Etiquetas: bot de trading, simulación, what-if, COVID 2020, mercado bajista 202
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-058-escenarios-bot-2x.md` — ¿Cuánto daría mi bot? +13.1% en 2020, −17.0% en 2022
+- Tema 2 de 3: `exp-058-t2-precios-originales-perdidos.md` — +6.7% o +6.2%: el resultado de mi bot que ya no se puede repetir con los precios originales
+- Tema 3 de 3: `exp-058-t3-costos-192-riesgo-real.md` — $192 de costos en 6 meses: el riesgo de un bot a 2x no está en las comisiones

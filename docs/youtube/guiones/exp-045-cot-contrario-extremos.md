@@ -97,3 +97,8 @@ Etiquetas: COT, CFTC, posicionamiento, especuladores, estrategia contraria, fore
 
 Promedio: **4.25** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook es una cifra concreta ligada a una idea que el público trader conoce; se aclara el periodo en pantalla («2007–2013») para que la cifra no parezca de otro contexto. Punto débil: «percentil» se explica con la frase de las 104 semanas en el largo; en el Short solo con el gráfico.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-045-cot-contrario-extremos.md` — Hacer lo contrario de los especuladores (COT): Sharpe −1.37
+2. Tema 2 — `exp-045-t2-cuenta-aguanto-2560-dias.md` — la cuenta que aguantó 2,560 días
+3. Tema 3 — `exp-045-t3-pares-invertidos-percentil.md` — la trampa de los pares invertidos

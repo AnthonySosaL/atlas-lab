@@ -92,3 +92,8 @@ double seven, larry connors, estrategia de trading, backtest, sharpe ratio, draw
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: el esquema de la regla es ilustrativo (no una curva real) y debe rotularse así; el 77% es una cifra anunciada, no medida.
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-076-double-seven-connors.md` — Double Seven (Larry Connors)
+- Tema 2: `exp-076-t2-seis-ante-datos-nuevos.md` — Seis estrategias ante datos nuevos (la mejor del periodo de prueba fue la peor fuera de muestra)
+- Tema 3: `exp-076-t3-misma-caida-menos-dinero.md` — La misma caída, mucho menos dinero (Double Seven: −35.5% contra −36.1%)

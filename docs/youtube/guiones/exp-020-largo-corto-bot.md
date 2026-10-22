@@ -114,3 +114,9 @@ Etiquetas: ventas en corto, largo y corto, momentum, bot de trading, backtest, S
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho cruza una intuición («en la caída, apuesta a la baja») con dos Sharpe; la honestidad es 5 porque se dice el veredicto, la fecha del corte y la comparación completa, incluido que el número final supera a comprar y esperar en el video largo.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-020-largo-corto-bot.md` — Tendencia largo-corto con filtro (este archivo).
+- Tema 2 — `exp-020-t2-momentum-y-cortos.md` — Momentum y ventas en corto: comprar lo que sube y vender lo que baja
+- Tema 3 — `exp-020-t3-el-dia-2529.md` — El día 2,529: más de ocho años vivo y un solo día de −5.2%

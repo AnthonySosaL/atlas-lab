@@ -101,3 +101,8 @@ Etiquetas: Deflated Sharpe, Sharpe ratio, backtest, overfitting, múltiples prue
 
 Promedio: **4.38** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook son dos cifras opuestas y verificables (0.46 vs −0.03); funciona mejor con audiencia que ya conoce el Sharpe. Punto débil: «Deflated Sharpe» es un término técnico; se resuelve con la analogía de las 40 monedas y con el medidor en pantalla.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-038-deflated-sharpe-bot.md` — 40 intentos: el azar da Sharpe 0.46; mi bot, −0.03
+2. Tema 2 — `exp-038-t2-deflated-sharpe-paso-a-paso.md` — el cálculo paso a paso
+3. Tema 3 — `exp-038-t3-liston-030-contra-azar-046.md` — el listón de 0.30 contra el azar de 0.46

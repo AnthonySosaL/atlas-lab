@@ -108,3 +108,8 @@ Etiquetas: captura de anomalías, z-score, reversión a la media, extremos estad
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.50** | **4.25** |
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-066-captura-anomalias.md` — Apostar a que lo extremo regresa: Sharpe −0.21 sin costos
+- Tema 2 de 3: `exp-066-t2-caida-de-57-por-ciento.md` — −57.0% de caída máxima: lo que cuesta apostar a que lo extremo regresa
+- Tema 3 de 3: `exp-066-t3-61-por-ciento-de-los-dias.md` — 61% de los días con señal: cuando operar mucho es el problema

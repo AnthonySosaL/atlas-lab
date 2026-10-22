@@ -129,3 +129,8 @@ Etiquetas: IBS, Internal Bar Strength, porcentaje de aciertos, estrategias famos
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.63** | **4.38** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-075-ibs.md` — IBS, fuerza interna de la barra
+- Tema 2: `exp-075-t2-promesa-contra-medicion.md` — La promesa contra la medición (13% anual anunciado, ¿y lo medido?)
+- Tema 3: `exp-075-t3-once-anios-de-trece.md` — 11 años positivos de 13 (la estrategia regular que pierde contra quedarse quieto)

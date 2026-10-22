@@ -106,3 +106,8 @@ Etiquetas: XGBoost, machine learning, walk-forward, crashes de mercado, intelige
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 4 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.25 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es un dato contraintuitivo (solo ~2 ejemplos) y el Short cumple explicando por qué; la honestidad es 5 porque dice «no concluyente» y que no se puede deducir que la IA no pueda aprender.
+
+## Otros temas de este experimento
+- Tema 1: `exp-023-xgboost-crashes-raros.md` — Régimen supervisado con XGBoost (walk-forward)
+- Tema 2: `exp-023-t2-walk-forward-embargo.md` — walk-forward y embargo
+- Tema 3: `exp-023-t3-dos-ias-mismo-resultado.md` — dos IAs, el mismo resultado

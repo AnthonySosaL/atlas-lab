@@ -111,3 +111,8 @@ Etiquetas: sesgo de mirar el futuro, look-ahead bias, backtest, bot de trading, 
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 5 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.50 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es una comparación de dos cifras con una sola variable cambiada (un día); la honestidad es 5 porque se dice qué no demuestra (no es que ningún filtro funcione) y no se oculta que la base también muere.
+
+## Otros temas de este experimento
+- Tema 1: `exp-027-prueba-de-fuego-lag1.md` — Prueba de fuego: reentrada con retraso de 1 día
+- Tema 2: `exp-027-t2-una-linea-de-codigo.md` — la línea de código que cambia el Sharpe
+- Tema 3: `exp-027-t3-cinco-cuentas-un-maximo.md` — cinco cuentas, un mismo máximo

@@ -102,3 +102,11 @@ Contenido educativo. No es asesoría financiera ni recomendación de inversión.
 | Short | 5 | 5 | 5 | 5 | 4 | 5 | 4 | 4 | 4.6 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: el largo de 10 min concentra muchos conceptos (Sharpe, fuera de muestra, Deflated Sharpe, Monte Carlo); la cuenta 33,016 + 1,735 = 34,751 y los 1,388 que casi no operaron debe quedar clara en pantalla para no sugerir que todo ocurrió en una noche.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-081-laboratorio-33363.md` — Tema 1: Probé 33,363 estrategias de trading. Sobrevivieron 0
+2. `exp-081-t2-deflated-sharpe-mata.md` — Tema 2: El filtro que ninguna de 33,363 estrategias pasó: Deflated Sharpe 0.31 de 0.95
+3. `exp-081-t3-real-pero-inutil.md` — Tema 3: 49 de las 50 mejores ganan dinero en 18 años… y no sirven
+4. `exp-081-t4-gauntlet-5-puertas.md` — Tema 4: Cinco filtros, 33,363 estrategias, 0 sobrevivientes: qué atrapa cada puerta
+5. `exp-081-t5-1388-casi-sin-operar.md` — Tema 5: 34,751 estrategias generadas, 33,363 probadas: ¿y las 1,388 que faltan?

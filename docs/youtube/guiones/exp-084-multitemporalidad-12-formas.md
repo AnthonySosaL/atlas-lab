@@ -97,3 +97,10 @@ multitemporalidad, media móvil, filtro de tendencia, rsi, ibs, donchian, estrat
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: es la versión diaria de una idea de varias temporalidades; el cartel «no intradía» debe verse siempre, para no prometer más de lo que se probó.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-084-multitemporalidad-12-formas.md` — Tema 1: Filtro de varias temporalidades: 12 formas, 0 sobreviven
+2. `exp-084-t2-la-mejor-del-pasado.md` — Tema 2: La mejor de 12 en el pasado (Sharpe 0.36) cae a −0.68 en 2021–2024
+3. `exp-084-t3-comprar-caida-o-tendencia.md` — Tema 3: Comprar caídas contra seguir la tendencia: −1.01 contra −0.31 en 2021–2024
+4. `exp-084-t4-monte-carlo-ibs.md` — Tema 4: Pasó el Monte Carlo con p = 0.01… y su Sharpe fue 0.07, −0.29 y −0.33

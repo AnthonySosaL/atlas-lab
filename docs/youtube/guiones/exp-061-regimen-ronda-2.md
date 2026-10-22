@@ -119,3 +119,8 @@ Etiquetas: cambio de régimen, estrategia neutral, long short, media móvil 200,
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.25** | **4.13** |
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-061-regimen-ronda-2.md` — Probé 3 formas de adivinar el mercado: ninguna le ganó a 1x
+- Tema 2 de 3: `exp-061-t2-neutral-en-dolares-b1.md` — Neutral en dólares: −10.6% antes de costos, −28.0% después (15 activos, 2014–2024)
+- Tema 3 de 3: `exp-061-t3-capa-que-envenena-b2.md` — De +23.1% a −9.6%: cómo una capa sin ventaja arruina una buena cartera

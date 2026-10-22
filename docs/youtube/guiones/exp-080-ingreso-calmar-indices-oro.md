@@ -89,3 +89,10 @@ calmar ratio, retiro sostenible, vivir de inversiones, exposición por tendencia
 | Short | 4 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.4 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: muchos conceptos (Calmar, retiro sostenible, B3); el cartel ámbar de «sin costos ni financiamiento» es obligatorio en toda escena que muestre la curva de B3.
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-080-ingreso-calmar-indices-oro.md` — Tema 1: Mismo retorno, menos caída: +11.2% contra +11.0% (¿ventaja?)
+2. `exp-080-t2-turtle-calmar-pero-poco-retiro.md` — Tema 2: Calmar 0.56 con caída de solo −7%: ¿sirve para vivir de retiros?
+3. `exp-080-t3-letra-pequena-del-2x.md` — Tema 3: +$297,399 con $100,000… en una curva que no paga costos
+4. `exp-080-t4-calmar-contra-sharpe.md` — Tema 4: La misma estrategia gana en 3 medidas y pierde en 2: Calmar contra Sharpe

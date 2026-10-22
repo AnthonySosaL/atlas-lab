@@ -121,3 +121,9 @@ Etiquetas: volatilidad objetivo, vol targeting, gestión de riesgo, drawdown, ap
 | audio | 4 | Voz por clonar; un golpe de bajo en el gancho |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.5** (≥ 4.0). Hook del Short 5 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-052-vol-targeting-unico-que-sirvio.md` — Tema 1: De 91 experimentos, solo 1 sirvió (y no gana más dinero)
+- `exp-052-t2-x2-fijo-446193.md` — Tema 2: el x2 fijo ganó más dinero ($446,193) y perdió 22.7% en un día
+- `exp-052-t3-sin-ia-20-dias.md` — Tema 3: sin inteligencia artificial, la desviación de 20 días recorta más la caída
+- `exp-052-t4-ano-por-ano-2022.md` — Tema 4: año por año, el único que sirvió también perdió en 2022

@@ -131,3 +131,8 @@ Etiquetas: Turtle Trading, Richard Dennis, canal de Donchian, seguimiento de ten
 | audio | 4 | 4 |
 | cta | 4 | 4 |
 | **Promedio** | **4.25** | **4.13** |
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-074-turtle-donchian.md` — Turtle Trading, ruptura de Donchian (Richard Dennis)
+- Tema 2: `exp-074-t2-ano-por-ano-la-tortuga.md` — La tortuga año por año (le ganó al mercado en 5 de 13 años, cuatro de ellos en años de caída)
+- Tema 3: `exp-074-t3-una-sola-combinacion.md` — Una sola combinación (20 y 10) contra 33,363 intentos

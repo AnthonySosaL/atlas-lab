@@ -93,3 +93,10 @@ Etiquetas: p-valor, Monte Carlo trading, momentum, TSMOM, volatilidad objetivo, 
 | **Promedio** | **4.13** | **4.00** |
 
 Notas: la claridad es el punto débil del Short (p-valor en 46 s); el largo la sube a 4 solo si la animación del histograma de versiones barajadas queda clara. El Short cumple hook ≥ 4 y honestidad 5.
+
+## Otros temas de este experimento
+Cada tema = video largo + Short, con su propia ficha del experimento. Todos en estado BORRADOR — pendiente de aprobación.
+- Tema 1: este archivo — TSMOM cartera de 15 activos
+- Tema 2: [exp-005-t2-covid-protegio-pero-no-gano.md](exp-005-t2-covid-protegio-pero-no-gano.md) — en el crash del COVID subió +4.0%, y aun así perdió
+- Tema 3: [exp-005-t3-volatilidad-objetivo-explicada.md](exp-005-t3-volatilidad-objetivo-explicada.md) — ajustar el tamaño por volatilidad (qué hace y qué no hace)
+- Tema 4: [exp-004-t4-uno-o-quince-mercados.md](exp-004-t4-uno-o-quince-mercados.md) — un mercado o quince, el mismo −4% (cubre #4 y #5)

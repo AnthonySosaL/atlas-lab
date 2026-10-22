@@ -112,3 +112,8 @@ Etiquetas: prop firm, reglas de fondeo, apalancamiento, bot de trading, backtest
 
 Promedio: **4.50** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook es una sola cifra extrema (−97.8%) y verificable; el loop es pregunta-respuesta. Punto débil: «caída máxima» y «Sharpe» se explican en el largo; en el Short se confía en el rótulo en pantalla.
+
+## Otros temas de este experimento
+1. Tema 1 (este archivo) — `exp-036-sin-reglas-prop-firm.md` — Quité las reglas de fondeo a mi bot: con ×4 se hunde 97.8%
+2. Tema 2 — `exp-036-t2-contra-comprar-y-esperar.md` — contra comprar y esperar
+3. Tema 3 — `exp-036-t3-apalancamiento-x2-x3-x4.md` — apalancamiento ×2, ×3 y ×4

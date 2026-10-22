@@ -85,3 +85,8 @@ régimen de mercado, estrategia adaptativa, efficiency ratio, reversión a la me
 | Short | 4 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.4 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: el hook depende de entender «Sharpe»; el Short lo explica en una frase a los 14 s.
+
+## Otros temas de este experimento
+- Tema 1 (este archivo): `exp-077-regimen-adaptativo.md` — Régimen adaptativo (reversión en rango, tendencia en tendencia)
+- Tema 2: `exp-077-t2-trece-anos-2179-dolares.md` — Trece años para ganar $2,179 (la estrategia adaptativa con tu capital)
+- Tema 3: `exp-077-t3-27-por-ciento-en-tendencia.md` — ¿Cuánto tiempo está el mercado en tendencia? (27% de los días, medido en cuatro índices)

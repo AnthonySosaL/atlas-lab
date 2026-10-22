@@ -99,3 +99,8 @@ Etiquetas: pairs trading, trading de pares, z-score, spread, arbitraje estadíst
 | audio | 4 | Voz por clonar; bajo y whoosh en 2 momentos clave |
 | cta | 4 | Una sola petición (otra técnica de fondos) y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-046-pares-zscore-spread.md` — Tema 1: Pairs trading con 5 pares: Sharpe −1.21 y cuenta cortada
+- `exp-046-t2-fuera-de-muestra.md` — Tema 2: la prueba de los años que la estrategia nunca vio
+- `exp-046-t3-cuenta-plana-26-dias.md` — Tema 3: 484 días de cuenta, 26 con movimiento

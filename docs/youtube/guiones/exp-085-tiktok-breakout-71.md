@@ -102,3 +102,9 @@ estrategia de tiktok, 71% de aciertos, ruptura del rango, breakout, prorealalgos
 | Short | 5 | 4 | 5 | 5 | 4 | 5 | 4 | 4 | 4.5 |
 
 Hook ≥ 4 ✓ · honestidad 5 ✓. Punto débil: solo se prueba el núcleo diario; el esquema completo es intradía y discrecional, y el video lo dice dos veces (bloque 1:50 y conclusión).
+
+## Otros temas de este experimento
+Cada tema es un video largo más un Short, con el mismo formato y las mismas reglas que el tema 1; cada uno se puede ver solo.
+1. `exp-085-tiktok-breakout-71.md` — Tema 1: La estrategia de TikTok del 71% de aciertos: 0 de 6 pasan
+2. `exp-085-t2-costo-de-operar-seguido.md` — Tema 2: Sin costos, −0.10. Con costos, −1.58: lo que cuesta comprar la ruptura de ayer
+3. `exp-085-t3-filtro-ma200-recorta.md` — Tema 3: El filtro de la media de 200 días mejora la ruptura de −0.97 a −0.54… y sigue perdiendo

@@ -100,3 +100,9 @@ Etiquetas: trading, apalancamiento, bot de trading, VIX, backtest, prop firm, ge
 
 Promedio: **4.25** → cumple el corte (≥ 4.0; hook ≥ 4 y honestidad 5).
 Notas: el hook mezcla una cifra (×4) y un desenlace; la fecha precisa se deja para el segundo bloque. Punto débil: «Sharpe negativo» se explica con el rótulo en pantalla, no con más narración.
+
+## Otros temas de este experimento
+- Tema 1: `exp-034-apalancamiento-vix-14.md` — Escalonado VIX<14 ejecutable (apalancamiento graduado)
+- Tema 2: `exp-034-t2-cuanto-hay-que-esquivar.md` — cuánto habría que esquivar para sobrevivir
+- Tema 3: `exp-034-t3-calma-no-es-seguridad.md` — la calma no es seguridad
+- Ver también (temas de otro experimento que usan las cifras del #34): `exp-027-t3-cinco-cuentas-un-maximo.md`, `exp-029-t3-la-vara-del-sirvio.md`, `exp-030-t2-x1-5-zona-segura.md`

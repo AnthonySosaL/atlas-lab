@@ -92,3 +92,8 @@ Etiquetas: momentum, momentum transversal, Jegadeesh y Titman, largo y corto, es
 | audio | 4 | Voz por clonar; bajo en el gancho y whoosh en cada cambio |
 | cta | 4 | Una sola petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- `exp-048-momentum-transversal.md` — Tema 1: Largo los 3 mejores, corto los 3 peores: duró 156 días
+- `exp-048-t2-el-pico-del-dia-61.md` — Tema 2: el gráfico que se corta en el pico (día 61 de 156)
+- `exp-048-t3-neutral-no-es-sin-riesgo.md` — Tema 3: «neutral al mercado» no es «sin riesgo»

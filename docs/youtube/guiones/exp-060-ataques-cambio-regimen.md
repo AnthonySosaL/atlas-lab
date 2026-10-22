@@ -114,3 +114,8 @@ Etiquetas: media móvil 200, mercado bajista, cambio de régimen, VIX, volatilid
 | audio | 4 | Voz por clonar; un golpe de bajo |
 | cta | 4 | Una petición y remite al video completo |
 Promedio: **4.25** (≥ 4.0). Hook del Short 4 (≥ 4) y honestidad 5: no descalificado.
+
+## Otros temas de este experimento
+- Tema 1 de 3: `exp-060-ataques-cambio-regimen.md` — Ganó +6.7% en el mercado bajista, pero −24.1% en 2014–2024
+- Tema 2 de 3: `exp-060-t2-filtro-vix-envenena.md` — Añadí un filtro de VIX a una regla que daba +30.3%: quedó en −16.8%
+- Tema 3 de 3: `exp-060-t3-criterio-antes-de-probar.md` — Escribe qué tiene que pasar antes de probar: tres arreglos, cero cumplen

@@ -108,3 +108,9 @@ Etiquetas: oro, yen, activos refugio, bot de trading, prop firm, apalancamiento,
 ## Rúbrica (autoevaluación del Short)
 hook_0_3s 5 · ritmo 4 · promesa_cumplida 5 · potencial_loop 4 · claridad_no_traders 4 · honestidad_atlas 5 · audio 4 · cta 4 → promedio 4.38 (aprobado: ≥ 4.0, hook ≥ 4, honestidad 5)
 Notas: el gancho es un dato concreto y verificable (fecha, oro, yen, −5.1%); la honestidad es 5 porque se dice que es un solo episodio y que la cuenta se cortó a los 24 días.
+
+## Otros temas de este experimento
+
+- Tema 1 — `exp-018-refugio-oro-yen.md` — Rotación defensiva oro + yen (este archivo).
+- Tema 2 — `exp-018-t2-oro-yen-y-el-par-usdjpy.md` — Oro, yen y el par USD/JPY: la hipótesis del refugio, explicada
+- Tema 3 — `exp-018-t3-muestra-de-24-dias.md` — 24 días de diez años: qué se puede (y qué no) concluir de una prueba tan corta
