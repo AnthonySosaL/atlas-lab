@@ -12587,7 +12587,7 @@
    "Total Return [%]": 84.559569815447,
    "Sharpe Ratio": 1.0574086725090652,
    "Max Drawdown [%]": -10.8165085942309,
-   "Anos positivos (%)": 100.0,
+   "Anos positivos (%)": 85.7,
    "Sobrevivio": true,
    "Total Trades": 2406
   },
@@ -12633,7 +12633,7 @@
      "en": "Positive years",
      "pt": "Anos positivos"
     },
-    "value": "100%"
+    "value": "86% (6 de 7)"
    },
    {
     "label": {
