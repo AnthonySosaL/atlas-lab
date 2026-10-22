@@ -2,9 +2,9 @@
 
 Generado de `public/data/series/*.json` (curvas de capital del sitio): 81 de 91 experimentos tienen curva. Cada curva se reescala a un capital inicial de **$100,000** (resultado = 100,000 × valor final / valor inicial; la curva «Sin estrategia (comprar y esperar)» se mide en las mismas fechas que la estrategia, igual que la tarjeta «Con tu capital»). Sin impuestos ni comisiones extra a las que ya incluya cada experimento.
 
-Totales de los 91 experimentos: 1 sirvió (#52), 61 murieron y 29 quedaron en parcial o no concluyente.
+Totales de los 91 experimentos: 1 sirvió (#52), 64 murieron y 26 quedaron en parcial o no concluyente.
 
-**Cómo leerlo:** un número alto NO significa que la estrategia sirva. Ver la columna *Ojo*: varias curvas tienen información del mismo día (refutado en #27), apalancamiento, son brutas sin costos, están solo en muestra o suponen φ = 0.5 sin medir. Las cuentas cortadas por las reglas de la prop firm terminan en el día del corte.
+**Cómo leerlo:** un número alto NO significa que la estrategia sirva. Ver la columna *Ojo*: varias curvas tienen información del mismo día (refutado en #27), apalancamiento, son brutas sin costos, están solo en muestra o usan la salida medida del día de disparo (φ = 0.90–0.94). Las cuentas cortadas por las reglas de la prop firm terminan en el día del corte.
 
 | # | Estado | Periodo | Estrategia (curva principal) | Neto con $100k | Sin estrategia (comprar y esperar) con $100k | Ojo |
 |---|---|---|---|---|---|---|
@@ -38,24 +38,24 @@ Totales de los 91 experimentos: 1 sirvió (#52), 61 murieron y 29 quedaron en pa
 | 27 | murió | 2014–2015 | Prueba de fuego lag-1 re-entrada v27 | −$9,959 | −$4,428 | Cuenta cortada el 12-jul-2015: con las señales de ayer la re-entrada y la base filtrada mueren. |
 | 28 | murió | 2014–2015 | Ejecutable: lag1+killswitch grid v28 | −$10,814 | — | Curva con ×3 cortada el 29-jun-2015; ningún apalancamiento sobrevive en ambos periodos. |
 | 29 | murió | 2014–2015 | Sensibilidad kill-switch v29 | −$11,493 | — | Con disparo temprano (−2% o −2.5%) tampoco sobrevive ningún periodo. |
-| 31 | parcial | 2014–2024 | Filtro reactivo intradia v31 | +$21,644 | +$58,879 | Supone φ = 0.5 (el bot absorbe la mitad del movimiento del día de salida), sin medir; con φ = 1 el Sharpe baja a 0.02/0.05. |
-| 32 | parcial | 2014–2024 | Validacion ejecutable-reactivo v32 | +$21,644 | +$58,879 | Misma cartera que #31 (año por año); supone φ = 0.5 (el bot absorbe la mitad del movimiento del día de salida), sin medir; con φ = 1 el Sharpe baja a 0.02/0.05. |
-| 33 | parcial | 2014–2024 | Disparo temprano del filtro v33 | +$31,196 | +$58,879 | Supone φ = 0.5; sin φ (señal rezagada 1 día) la base ×2 muere el 11-nov-2016 (Sharpe −0.57). |
-| 34 | parcial | 2014–2024 | Graduado VIX<14 ejecutable v34 | +$29,369 | +$58,879 | Supone φ = 0.5; Sharpe 2007–2013 de 0.297 (< 0.30); sin φ el ×2.5 muere (Sharpe −0.65). |
+| 31 | parcial | 2014–2024 | Filtro reactivo intradia v31 | +$4,155 | +$58,879 | Salida del día de disparo medida con datos horarios (φ = 0.90: el bot evita solo ~10% del movimiento de ese día); el ×1.5 da Sharpe 0.09 y con ×2 la cuenta muere el 11-nov-2016. |
+| 32 | parcial | 2014–2024 | Validacion ejecutable-reactivo v32 | +$4,155 | +$58,879 | Misma cartera que #31 (año por año); φ medido 0.90 (el bot evita solo ~10% del movimiento del día de salida); 10 de 18 años positivos (56%). |
+| 33 | murió | 2014–2016 | Disparo temprano del filtro v33 | −$10,642 | −$5,766 | Base ×2 con φ medido 0.94: la cuenta se corta el 11-nov-2016 (−10.6% desde el capital inicial); ninguna de las 6 combinaciones sobrevive 2014–2024. |
+| 34 | murió | 2014–2016 | Graduado VIX<14 ejecutable v34 | −$10,178 | −$4,698 | ×2.5 en calma con φ medido 0.94: la cuenta se corta el 10-nov-2016 (−10.2% desde el capital inicial); ×3 y ×4 también mueren. |
 | 35 | murió | 2014–2016 | Curva de tasas como filtro v35 | −$10,368 | −$5,766 | Base ×2 con las señales de ayer: la cuenta se corta el 11-nov-2016 (−10.4% desde el capital inicial). |
 | 36 | murió | 2014–2024 | Calidad intrinseca sin reglas prop v36 | −$6,094 | +$58,879 | ×2 con las señales de ayer y sin reglas de prop firm (2014–2024): Sharpe −0.04. |
-| 37 | parcial | 2007–2024 | P(pasar) ejecutable v37 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (sin φ), 2007–2024: −7.1% con Sharpe −0.03. |
-| 38 | murió | 2007–2024 | Deflated Sharpe del ejecutable v38 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (sin φ), 2007–2024: −7.1% con Sharpe −0.03. Deflated Sharpe 0.010. |
-| 39 | murió | 2007–2024 | EV del negocio ejecutable v39 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (sin φ), 2007–2024: −7.1% con Sharpe −0.03. Valor esperado −$500 por intento. |
-| 40 | murió | 2007–2024 | VEREDICTO FINAL 40 experimentos v40 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (sin φ), 2007–2024: −7.1% con Sharpe −0.03. |
+| 37 | parcial | 2007–2024 | P(pasar) ejecutable v37 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (el día del disparo se opera completo), 2007–2024: −7.1% con Sharpe −0.03. |
+| 38 | murió | 2007–2024 | Deflated Sharpe del ejecutable v38 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (el día del disparo se opera completo), 2007–2024: −7.1% con Sharpe −0.03. Deflated Sharpe 0.010. |
+| 39 | murió | 2007–2024 | EV del negocio ejecutable v39 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (el día del disparo se opera completo), 2007–2024: −7.1% con Sharpe −0.03. Valor esperado −$500 por intento. |
+| 40 | murió | 2007–2024 | VEREDICTO FINAL 40 experimentos v40 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (el día del disparo se opera completo), 2007–2024: −7.1% con Sharpe −0.03. |
 | 42 | murió | 2014–2014 | Carry FX ejecutable v42 | −$9,924 | −$43 | Carry puro ×2 con el interés del carry sumado: la cuenta se corta el 15-dic-2014 (256 días). |
-| 43 | parcial | 2014–2024 | Carry+Trend combo v43 | +$7,338 | −$3,689 | Incluye el interés del carry; con 3 bps de costo por rotación la cuenta muere el 9-oct-2017. Sharpe 0.14 (< 0.30). |
+| 43 | murió | 2014–2017 | Carry+Trend combo v43 | −$10,098 | −$4,422 | Incluye el interés del carry; con la salida medida del día de disparo (φ = 0.94) la cuenta se corta el 25-ene-2017 (917 días, Sharpe −0.63). |
 | 45 | murió | 2014–2022 | COT contrarian extremos v45 | −$10,219 | −$5,266 |  |
 | 46 | murió | 2014–2016 | Pairs cointegracion v46 | −$10,847 | −$11,854 |  |
 | 47 | murió | 2014–2017 | Stat-arb PCA residual v47 | −$10,076 | −$99 |  |
 | 48 | murió | 2014–2015 | Momentum cross-sectional v48 | −$10,236 | −$3,608 |  |
 | 49 | murió | 2014–2015 | Turn-of-month indices v49 | −$11,071 | +$11,000 |  |
-| 50 | murió | 2007–2024 | CIERRE: 11 clases probadas v50 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (sin φ), 2007–2024: −7.1% con Sharpe −0.03. Deflated Sharpe 0.010. |
+| 50 | murió | 2007–2024 | CIERRE: 11 clases probadas v50 | −$7,102 | +$68,723 | Cartera ×2 con las señales de ayer (el día del disparo se opera completo), 2007–2024: −7.1% con Sharpe −0.03. Deflated Sharpe 0.010. |
 | 51 | murió | 2020–2025 | ML swing 5d (HGB largo/flat, conviccion 0.55) | +$21,666 | +$55,171 | Acierto de dirección 51.6% (casi azar); Sharpe 0.15 neto de costos frente a 0.37 sin estrategia. |
 | 52 | sirvió | 2020–2024 | Vol-targeting forward-looking (15% vol, tope 4x) | +$60,839 | +$129,383 | Desde el 18-mar-2020: controla riesgo (drawdown −19.2% frente a −40.3% del ×2 fijo; Sharpe 0.79 frente a 0.93), no genera ganancia extra. La referencia es la cesta equiponderada a 1x. |
 | 53 | murió | 2020–2025 | Breakout + gate de volatilidad pronosticada | −$14,168 | +$112,904 |  |

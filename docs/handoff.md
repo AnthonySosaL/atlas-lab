@@ -26,7 +26,7 @@ Console está en el repo `curricula`, en `docs/marketing/handoff.md`.
   información del mismo día, cuenta cortada por la prop firm).
 - Experimentos sin curva → gráfico de barras con sus propios datos (campo `chart`).
 - Orden ascendente por número; sin avisos de reclasificación; #25 = murió.
-  Totales vigentes: ver «Revisión final 2026-10-21» (1 sirvió, 61 murieron, 29 parciales o no concluyentes).
+  Totales vigentes: ver «Revisión final 2026-10-21» (1 sirvió, 64 murieron, 26 parciales o no concluyentes).
 - Leyendas "Buy & Hold"/"Benchmark" → "Sin estrategia (comprar y esperar)".
 - Campos nuevos en `experiments.json`: `market`, `period`, `kpis`, `params_view`, `capital`, `chart`.
 - Roadmap (`public/data/roadmap.json`) reescrito para que no contradiga los estados finales (PR #7).
@@ -63,23 +63,25 @@ Console está en el repo `curricula`, en `docs/marketing/handoff.md`.
 
 ## Revisión final 2026-10-21 (rama `claude/revision-final`)
 Hecho: los 91 experimentos se revisaron contra el código y los datos (texto, cifras, curvas y estados, en es/en/pt).
-- Totales vigentes: **1 sirvió (#52), 61 murieron, 29 parciales o no concluyentes** (#9–#12 pasan a parcial).
-- Señal rezagada 1 día: #35–#40 y #50 se re-ejecutaron sin el supuesto de reacción dentro del día (#36 muere; #50 pasa de
-  Sharpe 0.38 a −0.03, Deflated Sharpe 0.010). #42/#43 suman el interés del carry (#43 queda parcial). #52 se mide desde
+- Totales vigentes: **1 sirvió (#52), 64 murieron, 26 parciales o no concluyentes** (#9–#12 pasan a parcial).
+- Señal rezagada 1 día: #35–#40 y #50 se re-ejecutaron con la señal de ayer, operando completo el día del disparo (#36 muere; #50 pasa de
+  Sharpe 0.38 a −0.03, Deflated Sharpe 0.010). #42/#43 suman el interés del carry y usan la salida medida del día de disparo (#43 muere el 25-ene-2017 en 2014–2024). #52 se mide desde
   el 18-mar-2020 (drawdown −19.2% frente a −40.3% del ×2 fijo). Ajustes de cifras en #55, #57, #64, #72, #78, #80
   (+11.2% anual), #81 (Deflated Sharpe máximo 0.31 con el contador global), #83–#86, #88 y #90.
-- #31–#34 conservan el supuesto φ = 0.5 (sin medir) y lo dicen: sin φ, la base ×2 de #33 muere (Sharpe −0.57), el ×2.5 de #34
-  también (−0.65) y el ×1.5 de #33 queda en 0.00 / 0.08. Siguen «Parcial» porque con φ = 0.5 sobreviven ambos periodos; si se
-  prefiere el criterio estricto, #33 y #34 serían «No sirvió» (los totales pasarían a 63 murieron y 27 parciales).
+- φ, la parte del movimiento del día de disparo que el bot se come, está medido con velas horarias de Dukascopy: 0.90 (IC 95% 0.83–0.96) con el filtro VIX28/crédito 60 y 0.94 (0.87–1.00) con VIX28/crédito 40.
+  #31–#34 usan esas salidas medidas: #31 y #32 siguen «Parcial» (el ×1.5 sobrevive, Sharpe 0.09 y 0.11) y #33 y #34 son «No sirvió» (la base ×2 muere el 11-nov-2016 y el ×2.5 el 10-nov-2016).
+  #42/#43 y las cifras alternativas de #35–#40 usan el mismo modelo (#43 muere el 25-ene-2017; con las salidas medidas el Sharpe de #38 es 0.02, frente a −0.03 con la señal de ayer).
 - `roadmap.json`, `src/lib/i18n.tsx`, los guiones EP01/EP02, `plan-series.md` y la tabla de capital quedaron alineados con las fichas.
 Pendiente (código fuera de esta rama, en `D:\ATLAS\src` y `D:\ATLAS\lab`):
 1. Copiar a `D:\ATLAS\src` las versiones con años de calendario de `withdrawal_test.py` (#78) e `income_calmar.py` (#80);
-   están en `scratchpadevision	rabajo_69_90\`. Hoy el disco sigue con 252 filas por año.
+   están en `scratchpad
+evision	rabajo_69_90\`. Hoy el disco sigue con 252 filas por año.
 2. Rezagar la señal (`ro[t-1]`, sin la rama φ) en `exp_final50.py` y `exp_phaseB2_35_36.py` (y `exp_phaseC_37_39.py`), para que el
    script del repo reproduzca lo publicado en #35–#40 y #50.
 3. El motor del laboratorio guarda el Deflated Sharpe por familia; los publicados en #81 son el recálculo con el contador global
    (N = 33,363). Regenerar `lab.json` para que el campo `dsr` de cada ítem coincida.
 4. `lab/runner.py` debe exportar `tested` y `noop` (ya estaba pendiente).
+5. Copiar a `D:\ATLAS\src` los scripts de la medición de φ (`phi_engine.py`, `intraday.py`, `hybrid.py`, `rerun.py` y la variante de carry con salidas medidas, en `scratchpad\revision\phi\work\` y `scratchpad\revision\trabajo_phi2\`) y las barras horarias de Dukascopy, para que `exp_phaseA2_31_32.py`, `exp_phaseB_33_34.py` y `exp_carry_42_43.py` reproduzcan lo publicado en #31–#34 y #42/#43; hoy esos scripts siguen con φ constante (0.5).
 
 ## Pendiente (en este orden)
 1. #30: sin curva (su configuración exacta no se conserva). `lab/runner.py` debe exportar `tested` y `noop` en `lab.json`.
