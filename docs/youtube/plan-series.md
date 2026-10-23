@@ -3,6 +3,9 @@
 Fuente única de datos: `public/data/experiments.json` y `public/data/exp_details.json` (91 experimentos, #0–#90).
 Regla: ningún número fuera de esos archivos. Cada video termina con "contenido educativo, no es asesoría financiera".
 
+## Guiones
+Los 91 guiones (largo + Short, con bocetos) están en `docs/youtube/guiones/` — ver **`guiones/INDICE.md`** (orden por series y gancho de cada Short). Asignaciones añadidas: #0, #8 → D; #4–#7, #46–#48 → B; #41–#45, #59–#62 → G; #65–#67 → F; #77, #79 → A.
+
 ## Formato por tema
 
 | Pieza | Duración | Para qué |
