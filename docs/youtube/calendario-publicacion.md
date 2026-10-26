@@ -26,7 +26,7 @@ Zona horaria de referencia: **Ecuador (UTC−5)** = Colombia y Perú misma hora 
 ## Orden de publicación
 1. **Semanas 1–8: Serie A — "Probé la estrategia de TikTok"** (10 experimentos, 33 temas). Es lo más buscado y la mejor puerta de entrada. Empieza por #88 (ORB del Nasdaq), #85 (71% de aciertos) y #90 (en índices).
 2. **Semanas 9–10: Serie C — el laboratorio** (#81 y #82, 8 temas): "33,363 estrategias, 0 sobrevivieron".
-3. **Desde la semana 11, rotación**: cada semana un experimento de una serie distinta, en este ciclo: **B** (famosas) → **D** (machine learning) → **E** (riesgo) → **F** (anomalías) → **G** (bot). Dentro de cada experimento, los temas van seguidos (T1, T2, T3…) para que formen una mini-serie. Así no salen 35 videos del bot seguidos.
+3. **Desde la semana 11, rotación proporcional**: cada vez sale un experimento de la serie que lleva menos porcentaje publicado. Las series son **B** (famosas), **D** (machine learning), **E** (riesgo), **F** (anomalías) y **G** (bot). Así todas duran hasta el final (inicio de 2028) y nunca salen más de 3 experimentos del bot seguidos. Dentro de cada experimento, los temas van seguidos (T1, T2, T3…) para que formen una mini-serie. Fecha por fecha: `calendario-completo.md` (lo genera `D:\canal_atlas\tools\calendario_completo.py`).
 4. Uniones recomendadas del índice: #6+#7, #9+#10, #41→#42, #44→#45 se publican juntos o seguidos.
 
 ## Primeras 2 semanas (ejemplo)
