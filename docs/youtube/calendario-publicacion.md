@@ -14,7 +14,14 @@ Zona horaria de referencia: **Ecuador (UTC−5)** = Colombia y Perú misma hora 
 **Revisión a las 8 semanas** con los datos de `medir-trafico.md`: si los Shorts traen tráfico, subir a **5 temas/semana** (≈ 14 meses en total); si los largos retienen poco, acortar a 4–6 min.
 
 ## Fecha de inicio
-**Lunes 2 de noviembre de 2026.** Antes: elegir voz (semana del 22-oct), producir y aprobar el primer bloque de 2 semanas (8 temas), y dejar los procesos automáticos funcionando. El proceso siempre mantiene **2 semanas de colchón** ya aprobadas.
+- **Video 0, la introducción del canal:** ya hecha y aprobada (2:28, voz 2, música B). Falta que elijas cuándo sale:
+  - **A)** ya, como privada, y la publicas tú;
+  - **B)** el domingo 1-nov a las 18:00.
+- **Serie: lunes 2 de noviembre de 2026** con el #88.
+  - **Condición:** tener aprobados antes del domingo 1-nov los 4 largos y 4 Shorts de la semana 1 (#88 T1, #88 T2, #85 T1, #90 T1).
+  - **Si no se llega:** la serie empieza el lunes 9-nov con el mismo orden.
+  - **Estado al 26-oct:** voz elegida; guiones en borrador para revisión; el primer video de experimento (#88 T1) aún no está hecho.
+- **Desde ahí**, el proceso mantiene siempre **2 semanas de colchón** ya aprobadas.
 
 ## Orden de publicación
 1. **Semanas 1–8: Serie A — "Probé la estrategia de TikTok"** (10 experimentos, 33 temas). Es lo más buscado y la mejor puerta de entrada. Empieza por #88 (ORB del Nasdaq), #85 (71% de aciertos) y #90 (en índices).
