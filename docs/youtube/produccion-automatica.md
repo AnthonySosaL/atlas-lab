@@ -29,7 +29,7 @@ Por cada tema de la cola (orden de `calendario-publicacion.md`), manteniendo **2
   - **«OK»** → `aprobado`;
   - **las mejoras** → se rehace esa parte y te llega la nueva versión.
 - Un vigilante en tu PC avisa a Claude en menos de un minuto cuando escribes. **Esperar no gasta créditos**; cada respuesta tuya cuesta lo mismo que un mensaje normal.
-- Sugerencia: revisar una vez por semana (unas 8 piezas), con 2 semanas de margen.
+- Ritmo: un tema por día (largo y Short juntos a las 18:00), así que llega uno nuevo cada día para revisar antes de su hora de salida.
 
 ## 3. Subir (10:00)
 Sube los videos **aprobados** cuya fecha cae en los próximos 2 días, con `tools/subir_youtube.py`:
