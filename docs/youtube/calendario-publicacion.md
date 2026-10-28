@@ -6,7 +6,7 @@ Zona horaria de referencia: **Ecuador (UTC−5)** = Colombia y Perú misma hora 
 ## Ritmo
 | | Cuántos | Cuándo (hora Ecuador) | Por qué |
 |---|---|---|---|
-| **Tema completo** | **1 por día** | **Todos los días a las 18:00: el largo y su Short juntos** | Hora de salida del trabajo en LATAM (México 17:00, Argentina 20:00). El Short sale con su largo y lo empuja ("video completo en el canal"). |
+| **Tema completo** | **1 por día** | **Todos los días a las 18:30: el largo y su Short juntos** | Hora de salida del trabajo en LATAM (México 17:30, Argentina 20:30). El Short sale con su largo y lo empuja ("video completo en el canal"). |
 | Total | **14 piezas por semana** | | 2 subidas al día por la API, después de las tandas de los otros canales (00:05 y 06:30). |
 
 **Cuánto dura el material:** 291 temas, uno por día ≈ **42 semanas (≈ 10 meses)**: del 27-oct-2026 al 13-ago-2027. Después vienen las fases 2 (Laboratorio) y 3 (Forja) de `plan-series.md`.
@@ -14,7 +14,7 @@ Zona horaria de referencia: **Ecuador (UTC−5)** = Colombia y Perú misma hora 
 
 ## Inicio
 - **Video 0, la introducción del canal:** publicada el lunes 26-oct-2026 (largo y Short).
-- **Serie: martes 27-oct-2026** con el #88 T1 (largo y Short publicados a las 21:00). Desde el miércoles 28-oct, un tema por día a las 18:00.
+- **Serie: martes 27-oct-2026** con el #88 T1 (largo y Short publicados a las 21:00). Desde el miércoles 28-oct, un tema por día a las 18:30.
 - Cada tema se manda por Telegram (largo y Short juntos) para su aprobación antes de la hora de salida.
 
 ## Orden de publicación
@@ -27,11 +27,11 @@ Zona horaria de referencia: **Ecuador (UTC−5)** = Colombia y Perú misma hora 
 | Fecha | Hora | Tema (largo + Short) |
 |---|---|---|
 | Mar 27-oct | 21:00 | #88 T1 — La estrategia ORB del Nasdaq, probada en 32 formas: 0 pasan |
-| Mié 28-oct | 18:00 | #88 T2 — Sin costos, positiva fuera de muestra; con costos, −1.73 |
-| Jue 29-oct | 18:00 | #85 T1 |
-| Vie 30-oct | 18:00 | #90 T1 |
-| Sáb 31-oct | 18:00 | #88 T3 |
-| Dom 1-nov | 18:00 | #88 T4 |
+| Mié 28-oct | 18:30 | #88 T2 — Sin costos, positiva fuera de muestra; con costos, −1.73 |
+| Jue 29-oct | 18:30 | #85 T1 |
+| Vie 30-oct | 18:30 | #90 T1 |
+| Sáb 31-oct | 18:30 | #88 T3 |
+| Dom 1-nov | 18:30 | #88 T4 |
 | … | | (continúa la Serie A según `guiones/INDICE.md`) |
 
 ## Reglas de cada publicación
