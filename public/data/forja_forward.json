@@ -53,7 +53,7 @@
    "rule": "Si pasan los 3 → despliegue real PEQUEÑO (10-20% capital, 1×, sin apalancar) y re-evaluación 3 meses después. Si falla cualquiera → investigar antes de un solo dólar real."
   }
  },
- "last_update": "2026-11-15",
+ "last_update": "2026-11-16",
  "portfolios": {
   "port_allweather": {
    "name": "Cartera all-weather (4 patas)",
@@ -167,7 +167,8 @@
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
    ],
    "navs": [
     99.94,
@@ -279,15 +280,16 @@
     97.88,
     97.94,
     97.86,
-    97.93
+    97.93,
+    97.67
    ],
-   "days": 110,
-   "expo": 0.3654,
+   "days": 111,
+   "expo": 0.366,
    "positions": {
-    "SP500": 0.4443,
-    "NAS100": 0.2918,
-    "DAX": 0.4842,
-    "FTSE100": 0.6265,
+    "SP500": 0.444,
+    "NAS100": 0.2959,
+    "DAX": 0.4893,
+    "FTSE100": 0.6273,
     "EURJPY": 0.0,
     "GBPJPY": 0.0,
     "AUDJPY": 1.0,
@@ -303,9 +305,9 @@
      "weight": 1.0,
      "entry_date": "2026-07-10",
      "entry_price": 112.42,
-     "current_price": 108.32,
-     "pnl_pct": -0.03648,
-     "days": 129,
+     "current_price": 107.46,
+     "pnl_pct": -0.044121,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1076,6 +1078,13 @@
        "high": 108.37,
        "low": 108.02,
        "close": 108.32
+      },
+      {
+       "time": "2026-11-16",
+       "open": 108.31,
+       "high": 108.34,
+       "low": 107.29,
+       "close": 107.46
       }
      ]
     },
@@ -1084,9 +1093,9 @@
      "weight": 1.0,
      "entry_date": "2026-11-12",
      "entry_price": 159.88,
-     "current_price": 159.79,
-     "pnl_pct": -0.000582,
-     "days": 4,
+     "current_price": 159.53,
+     "pnl_pct": -0.002233,
+     "days": 5,
      "candles": [
       {
        "time": "2026-11-12",
@@ -1108,6 +1117,13 @@
        "high": 159.89,
        "low": 159.52,
        "close": 159.79
+      },
+      {
+       "time": "2026-11-16",
+       "open": 159.79,
+       "high": 159.86,
+       "low": 159.35,
+       "close": 159.53
       }
      ]
     },
@@ -1117,8 +1133,8 @@
      "entry_date": "2026-07-10",
      "entry_price": 0.81,
      "current_price": 0.84,
-     "pnl_pct": 0.038053,
-     "days": 129,
+     "pnl_pct": 0.039142,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1889,17 +1905,24 @@
        "high": 0.84,
        "low": 0.84,
        "close": 0.84
+      },
+      {
+       "time": "2026-11-16",
+       "open": 0.84,
+       "high": 0.84,
+       "low": 0.84,
+       "close": 0.84
       }
      ]
     },
     {
      "symbol": "FTSE100",
-     "weight": 0.6265,
+     "weight": 0.6273,
      "entry_date": "2026-07-10",
      "entry_price": 10527.91,
-     "current_price": 10933.21,
-     "pnl_pct": 0.038497,
-     "days": 129,
+     "current_price": 10843.71,
+     "pnl_pct": 0.029997,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -2670,17 +2693,24 @@
        "high": 10935.79,
        "low": 10917.6,
        "close": 10933.21
+      },
+      {
+       "time": "2026-11-16",
+       "open": 10933.88,
+       "high": 10963.5,
+       "low": 10830.8,
+       "close": 10843.71
       }
      ]
     },
     {
      "symbol": "DAX",
-     "weight": 0.4842,
+     "weight": 0.4893,
      "entry_date": "2026-07-10",
      "entry_price": 25107.16,
-     "current_price": 26876.15,
-     "pnl_pct": 0.070458,
-     "days": 129,
+     "current_price": 26521.15,
+     "pnl_pct": 0.056318,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -3451,17 +3481,24 @@
        "high": 26891.48,
        "low": 26833.96,
        "close": 26876.15
+      },
+      {
+       "time": "2026-11-16",
+       "open": 26878.87,
+       "high": 26882.19,
+       "low": 26482.97,
+       "close": 26521.15
       }
      ]
     },
     {
      "symbol": "SP500",
-     "weight": 0.4443,
+     "weight": 0.444,
      "entry_date": "2026-07-10",
      "entry_price": 7575.8,
-     "current_price": 7590.0,
-     "pnl_pct": 0.001875,
-     "days": 129,
+     "current_price": 7424.48,
+     "pnl_pct": -0.019974,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -4232,17 +4269,24 @@
        "high": 7593.48,
        "low": 7560.9,
        "close": 7590.0
+      },
+      {
+       "time": "2026-11-16",
+       "open": 7589.61,
+       "high": 7592.38,
+       "low": 7399.85,
+       "close": 7424.48
       }
      ]
     },
     {
      "symbol": "NAS100",
-     "weight": 0.2918,
+     "weight": 0.2959,
      "entry_date": "2026-07-10",
      "entry_price": 29832.69,
-     "current_price": 28167.32,
-     "pnl_pct": -0.055824,
-     "days": 129,
+     "current_price": 27236.11,
+     "pnl_pct": -0.087038,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -5013,6 +5057,13 @@
        "high": 28189.94,
        "low": 27975.95,
        "close": 28167.32
+      },
+      {
+       "time": "2026-11-16",
+       "open": 28167.11,
+       "high": 28179.19,
+       "low": 27098.54,
+       "close": 27236.11
       }
      ]
     }
@@ -5130,7 +5181,8 @@
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
    ],
    "navs": [
     99.94,
@@ -5242,15 +5294,16 @@
     97.92,
     97.94,
     97.82,
-    97.9
+    97.9,
+    97.56
    ],
-   "days": 110,
-   "expo": 0.265,
+   "days": 111,
+   "expo": 0.2658,
    "positions": {
-    "SP500": 0.4443,
-    "NAS100": 0.2918,
-    "DAX": 0.4842,
-    "FTSE100": 0.6265,
+    "SP500": 0.444,
+    "NAS100": 0.2959,
+    "DAX": 0.4893,
+    "FTSE100": 0.6273,
     "EURJPY": 0.0,
     "GBPJPY": 0.0,
     "AUDJPY": 1.0,
@@ -5263,9 +5316,9 @@
      "weight": 1.0,
      "entry_date": "2026-07-10",
      "entry_price": 112.42,
-     "current_price": 108.32,
-     "pnl_pct": -0.03648,
-     "days": 129,
+     "current_price": 107.46,
+     "pnl_pct": -0.044121,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -6036,17 +6089,24 @@
        "high": 108.37,
        "low": 108.02,
        "close": 108.32
+      },
+      {
+       "time": "2026-11-16",
+       "open": 108.31,
+       "high": 108.34,
+       "low": 107.29,
+       "close": 107.46
       }
      ]
     },
     {
      "symbol": "FTSE100",
-     "weight": 0.6265,
+     "weight": 0.6273,
      "entry_date": "2026-07-10",
      "entry_price": 10527.91,
-     "current_price": 10933.21,
-     "pnl_pct": 0.038497,
-     "days": 129,
+     "current_price": 10843.71,
+     "pnl_pct": 0.029997,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -6817,17 +6877,24 @@
        "high": 10935.79,
        "low": 10917.6,
        "close": 10933.21
+      },
+      {
+       "time": "2026-11-16",
+       "open": 10933.88,
+       "high": 10963.5,
+       "low": 10830.8,
+       "close": 10843.71
       }
      ]
     },
     {
      "symbol": "DAX",
-     "weight": 0.4842,
+     "weight": 0.4893,
      "entry_date": "2026-07-10",
      "entry_price": 25107.16,
-     "current_price": 26876.15,
-     "pnl_pct": 0.070458,
-     "days": 129,
+     "current_price": 26521.15,
+     "pnl_pct": 0.056318,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -7598,17 +7665,24 @@
        "high": 26891.48,
        "low": 26833.96,
        "close": 26876.15
+      },
+      {
+       "time": "2026-11-16",
+       "open": 26878.87,
+       "high": 26882.19,
+       "low": 26482.97,
+       "close": 26521.15
       }
      ]
     },
     {
      "symbol": "SP500",
-     "weight": 0.4443,
+     "weight": 0.444,
      "entry_date": "2026-07-10",
      "entry_price": 7575.8,
-     "current_price": 7590.0,
-     "pnl_pct": 0.001875,
-     "days": 129,
+     "current_price": 7424.48,
+     "pnl_pct": -0.019974,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -8379,17 +8453,24 @@
        "high": 7593.48,
        "low": 7560.9,
        "close": 7590.0
+      },
+      {
+       "time": "2026-11-16",
+       "open": 7589.61,
+       "high": 7592.38,
+       "low": 7399.85,
+       "close": 7424.48
       }
      ]
     },
     {
      "symbol": "NAS100",
-     "weight": 0.2918,
+     "weight": 0.2959,
      "entry_date": "2026-07-10",
      "entry_price": 29832.69,
-     "current_price": 28167.32,
-     "pnl_pct": -0.055824,
-     "days": 129,
+     "current_price": 27236.11,
+     "pnl_pct": -0.087038,
+     "days": 130,
      "candles": [
       {
        "time": "2026-07-10",
@@ -9160,6 +9241,13 @@
        "high": 28189.94,
        "low": 27975.95,
        "close": 28167.32
+      },
+      {
+       "time": "2026-11-16",
+       "open": 28167.11,
+       "high": 28179.19,
+       "low": 27098.54,
+       "close": 27236.11
       }
      ]
     }
