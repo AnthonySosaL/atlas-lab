@@ -315,7 +315,7 @@
      "entry_price": 159.88,
      "current_price": 158.52,
      "pnl_pct": -0.0085,
-     "days": 9,
+     "days": 10,
      "candles": [
       {
        "time": "2026-11-12",
@@ -382,7 +382,7 @@
      "entry_price": 0.81,
      "current_price": 0.84,
      "pnl_pct": 0.038561,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -1198,7 +1198,7 @@
      "entry_price": 10527.91,
      "current_price": 10267.19,
      "pnl_pct": -0.024764,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -2014,7 +2014,7 @@
      "entry_price": 25107.16,
      "current_price": 24565.2,
      "pnl_pct": -0.021586,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -2830,7 +2830,7 @@
      "entry_price": 7575.8,
      "current_price": 6946.09,
      "pnl_pct": -0.083122,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -3646,7 +3646,7 @@
      "entry_price": 29832.69,
      "current_price": 25180.85,
      "pnl_pct": -0.155931,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -4714,7 +4714,7 @@
      "entry_price": 10527.91,
      "current_price": 10267.19,
      "pnl_pct": -0.024764,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -5530,7 +5530,7 @@
      "entry_price": 25107.16,
      "current_price": 24565.2,
      "pnl_pct": -0.021586,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -6346,7 +6346,7 @@
      "entry_price": 7575.8,
      "current_price": 6946.09,
      "pnl_pct": -0.083122,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
@@ -7162,7 +7162,7 @@
      "entry_price": 29832.69,
      "current_price": 25180.85,
      "pnl_pct": -0.155931,
-     "days": 134,
+     "days": 135,
      "candles": [
       {
        "time": "2026-07-10",
